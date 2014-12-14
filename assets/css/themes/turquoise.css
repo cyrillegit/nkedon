@@ -1,0 +1,126 @@
+/* CSS Document */
+
+#footer
+{
+	width:				990px;
+	height:				70px;
+	float:				left;
+	margin-left:		0px;
+}
+
+.element_footer_gauche_1 
+{
+	width:				25px;
+	height:				70px;
+	float:				left;
+	background-image:url(../../images/foot_color_template/turquoise/footer_left_turquoise.png);
+}
+	
+.element_footer_center_1
+{
+	width:				815px;
+	height:				70px;
+	float:				left;
+	background-color: 	##1c9bd3;
+	text-align: 		center;
+	line-height: 		50px;
+	font-weight:		bold;
+	color:				#fff;
+	background-image:url(../../images/foot_color_template/turquoise/footer_middle_turquoise.png);
+	background-repeat:repeat-x;
+}
+		
+.element_footer_center_1 a
+{
+	color:			#3c3c3c;
+	text-transform:	uppercase;
+	text-decoration: none;
+}
+
+
+.element_footer_droite_1
+{
+	width:				150px;
+	height:				70px;
+	float:				right;
+	background-image: url(../../images/foot_color_template/turquoise/footer_right_turquoise.png);
+}
+
+.element_menu_gauche
+{
+width:				10px;
+height:				50px;
+float:				left;
+background-image: 	url(../../images/menu_color/turquoise/menu_left_turquoise.png);
+}
+
+.element_menu_center
+{
+width:				970px;
+height:				50px;
+float:				left;
+background-image: 	url(../../images/menu_color/turquoise/menu_middle_turquoise.png);
+background-repeat:repeat-x;
+}
+
+.element_menu_droite
+{
+width:				10px;
+height:				50px;
+float:				right;
+background-image: 	url(../../images/menu_color/turquoise/menu_right_turquoise.png);
+}
+
+/**
+	Styles des différents textes.
+**/
+.Titre_page
+{
+	border-bottom: 		2px solid #1c4bd2;
+	color: 				#1c4bd2;
+}
+.TitreRubrique
+{
+	color: 				#1c4bd2;
+}
+.cadre_edit
+{
+	border: 1px solid #1c4bd2;	
+}
+.texte_alerte
+{
+	color:				#1c4bd2;
+}
+.search
+{
+	border:			1px solid #1c4bd2;
+}
+.logo_enterprise_header
+{
+	border:			1px solid #1c4bd2;
+}
+
+/** Redéfinition des styles colorés pour le reste du site Internet. **/
+.form_administration input, textarea, select 
+{
+    border: 1px solid #1c4bd2 !important;
+}
+.HomeBlocGauche .cadre_bleu, .HomeBlocDroite .cadre_bleu {
+    border: 1px solid #1c4bd2;
+}
+ul.my_account li a {
+    color: #1c4bd2;
+}
+.HomeBlocGauche span {
+    color: #1c4bd2;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #1c4bd2;
+}
+.titre_haut_page
+{
+	color: #1c4bd2;
+}
+.fond_rayure .title {
+    color: #1c4bd2;
+}

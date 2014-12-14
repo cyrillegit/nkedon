@@ -1,0 +1,25 @@
+/* CSS Document */
+
+.stock_critique
+{
+	color:					#fff !important;
+	background-color:		#dc1c17;
+	font-weight:			bold;
+	text-align:				center;
+}
+
+.stock_warning
+{
+	color:					#fff !important;
+	background-color:		#ff9000;
+	font-weight:			bold;
+	text-align:				center;
+}
+
+.stock_ok
+{
+	color:					#fff !important;
+	background-color:		#37c02c;
+	font-weight:			bold;
+	text-align:				center;
+}

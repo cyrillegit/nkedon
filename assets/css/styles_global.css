@@ -1,0 +1,1203 @@
+/**
+	Css styles.css
+	--------------
+	Ce fichier contient les informations globales du site Internet.
+		
+	Auteur : Rémi Lèbre.
+	
+	Copyright : id2tel. Tous droits réservés.
+	Version : 1.1
+	
+	Date : 30 Août 2010
+	
+	Modifié par Jérôme Perciot, le 1er avril 2011
+*/
+@CHARSET "UTF-8";
+@import "splitter.css";
+@import "tablesorter.css";
+@import "SimplyButtons.css";
+@import "jquery.safari-checkbox.css";
+@import "pagination.css";
+@import "osx.css";
+@import "dd.css";
+@import "jquery.fastconfirm.css";
+@import "ui.stepper.css";
+@import "surikat_modal.css";
+@import "autocomplete.css";
+@import "wizard.css";
+@import "jqzoom.css";
+@import "BreadCrumb.css";
+@import "jquery.weekcalendar.css";
+@import "fullcalendar.css";
+@import "jquery.tooltip.css";
+@import "jquery.confirm.css";
+@import "ui.timepickr.css";
+@import "jquery.contextmenu.css";
+@import "jquery.tree.css";
+@import "ui.multiselect.css";
+@import "tinyTips.css";
+@import "layout.css";
+@import "ui.dropslide.css";
+
+/***************************************/
+/******** Reglage background ***********/
+/***************************************/
+body
+{
+width												: 990px;
+height												: auto;
+margin												: auto;
+background-color									: #505050;
+background-image									: url(../images/backgroundDefault.png);
+background-repeat									: no-repeat;
+background-position									: center 0;
+font-family											: "Segoe UI", Arial, Verdana;
+font-size											: 12px;
+}
+
+p 
+{
+	font-family										: "Segoe UI", Arial, Verdana;
+}
+
+/***************************************/
+/************ Partie Haute *************/
+/***************************************/
+
+
+#header
+{
+width:				990px;
+height:				75px;
+float:				left;
+}
+
+.title_popup
+{
+	color:				#FFF;
+	font-size:			16px;
+	text-decoration:	underline;
+	font-weight:		bold;
+	font-style:			italic;
+	text-align:			center;
+}
+
+a
+{
+	cursor: pointer;
+	font-size:	1em;
+}
+
+ul.content li
+{
+	list-style-image:		url(../images/puce-bleu.gif);
+}
+
+	.element_header_gauche_1 
+		{
+		width:				10px;
+		height:				75px;
+		float:				left;
+		background-image:url(../images/header/bord_gauche.png);
+		background-repeat:repeat-y;
+		}
+	
+
+		
+		.element_header_center_1 /************ milieu corps *************/
+		{
+		width:				970px;
+		height:				75px;
+		float:				left;
+		background-color: 	#fff;
+		}
+
+
+		.element_header_droite_1 /************ milieu droite corps *************/
+		{
+		width:				10px;
+		height:				75px;
+		float:				right;
+		background-image: url(../images/header/bord_droite.png);
+		}
+
+
+
+		.element_logo_nettoyage
+		{
+		width:					185px;
+		height:					75px;
+		float:					left;
+		background-image:		url(../images/logo_nettoyage.png);
+		background-repeat:		no-repeat;
+		}
+		
+		.element_logo_sante
+		{
+		width:					185px;
+		height:					75px;
+		float:					left;
+		background-image:		url(../images/logo_sante.png);
+		background-repeat:		no-repeat;
+		}
+			
+		.block_header_left
+		{
+		width:	200px;
+		height:	75px;
+		float:	left;	
+		}
+		
+		.search
+		{
+		width:			auto;
+		height:			auto;
+		margin-top:		5px;
+		margin-right:	7px;
+		float:			right;
+		border:			1px solid #1c9bd3;
+		}
+		
+		.language
+		{
+		width:			auto;
+		height:			auto;
+		margin-top:		5px;
+		float:			right;
+		}
+		
+		.block_header_right
+		{
+		width:			300px;
+		height:			75px;
+		margin-top:		5px;
+		margin-right:	10px;
+		padding-top:	5px;	
+		float:			right;
+		}
+		
+		.logo_enterprise_header
+		{
+		width:			180px;
+		height:			65px;
+		margin-top:		5px;
+		margin-right:	10px;	
+		float:			right;
+		border:			1px solid #1c9bd3;
+		}
+		
+		.element_connect
+		{
+		width:				124px;
+		height:				29px;
+		margin-top:			0px;
+		margin-right:		10px;
+		float:				right;
+		background-image:	url(../images/btn_header_connection.png);
+		}
+		
+		.element_connect:hover
+		{
+			background-image:	url(../images/btn_header_connection_hover.png);
+		}
+		
+		.element_disconnect
+		{
+		width:				124px;
+		height:				29px;
+		margin-top:			0px;
+		margin-right:		10px;
+		float:				right;
+		background-image:	url(../images/btn_header_deconnection.png);
+		}
+		
+		.element_disconnect:hover
+		{
+			background-image:	url(../images/btn_header_deconnection_hover.png);
+		}
+		
+		.element_administration
+		{
+		width:				124px;
+		height:				29px;
+		margin-top:			0px;
+		margin-right:		10px;
+		float:				right;
+		background-image:	url(../images/btn_header_administration.png);
+		}
+		
+		.element_administration:hover
+		{
+			background-image:	url(../images/btn_header_administration_hover.png);
+		}
+		
+		
+/***************************************/
+/**************** Menu *****************/
+/***************************************/
+
+
+#menu
+{
+width:				990px;
+height:				50px;
+float:				left;
+margin-left:		0px;
+}
+
+
+#bloc_menu
+	{
+	width:				990px;
+	height:				auto;
+	float:				left;
+	margin-bottom:		-4px;
+	margin-top:			0px;
+	position: 			relative;
+	z-index: 			1px;
+	}
+	
+	
+.element_menu_gauche
+{
+width:				10px;
+height:				50px;
+float:				left;
+background-image: 	url(../images/menu_color/defaut/menu_left_default.png);
+}
+
+
+
+.element_menu_center
+{
+width:				970px;
+height:				50px;
+float:				left;
+background-image: 	url(../images/menu_color/defaut/menu_middle_default.png);
+background-repeat:repeat-x;
+}
+
+
+.element_menu_droite
+{
+width:				10px;
+height:				50px;
+float:				right;
+background-image: 	url(../images/menu_color/defaut/menu_right_default.png);
+}
+		
+.filter_global
+{
+width:				auto;
+height:				40px;
+margin-right:		8px;
+padding-top:		5px;
+padding-left:		5px;
+background-color:	#c8c8c8;
+}
+
+.menu_style
+{
+	width:			auto;
+	height:			20px;
+	line-height:	20px;
+ 	float: 			left;
+	padding-left:	15px;
+	font-family:Arial, Helvetica, sans-serif;
+	padding-right:	15px;
+	font-size:		12px
+}
+
+.menu_style:hover
+{
+	width:					auto;
+ 	float: 					left;
+	background-color: 		#72c3e7;
+	color:					#0c3e54;
+}
+
+
+
+/***************************************/
+/************* Corps site **************/
+/***************************************/
+
+#corps
+{
+width:				990px;
+height:				auto;
+min-height:			500px;
+float:				left;
+margin-left:		0px;
+background-image:url(../images/milieu_corps.png);
+background-repeat:repeat-y;
+}
+
+	.element_corps_gauche_1 
+		{
+		width:				10px;
+		min-height:			500px;
+		float:				left;
+		background-image:url(images/bord_gauche.png);
+		background-repeat:repeat-y;
+		}
+
+	.element_corps_center_1
+		{
+		margin-left:	30px;	
+		}
+
+	.element_corps_droite_1
+		{
+		width:				10px;
+		min-height:			500px;
+		float:				right;
+		background-image: url(images/bord_droite.png);
+		background-repeat:repeat-y;
+		}
+/***************************************/
+/************* footer ******************/
+/***************************************/
+
+
+#footer
+{
+	width:				990px;
+	height:				70px;
+	float:				left;
+	margin-left:		0px;
+}
+
+.element_footer_gauche_1 
+{
+	width:				25px;
+	height:				70px;
+	float:				left;
+	background-image:url(../../assets/images/foot_color_template/default/footer_left_default.png);
+}
+	
+.element_footer_center_1
+{
+	width:				815px;
+	height:				70px;
+	float:				left;
+	background-color: 	#1c9bd3;
+	text-align: 		center;
+	line-height: 		50px;
+	font-weight:		bold;
+	color:				#fff;
+	background-image:url(../../assets/images/foot_color_template/default/footer_middle_default.png);
+	background-repeat:repeat-x;
+}
+		
+.element_footer_center_1 a
+{
+	color:			#3c3c3c;
+	text-transform:	uppercase;
+	text-decoration: none;
+}
+
+
+.element_footer_droite_1
+{
+	width:				150px;
+	height:				70px;
+	float:				right;
+	background-image: url(../../assets/images/foot_color_template/default/footer_right_default.png);
+}
+
+
+/***************************************/
+/************ mise en page *************/
+/***************************************/
+
+
+	.Titre_page
+	{
+	width: 				inherit;
+	height: 			25px;
+	margin-top: 		10px;
+	margin-bottom:		5px;
+	border-bottom: 		2px solid #1c9bd3;
+	color: 				#1c9bd3;
+	font-family: 		Arial, Helvetica;
+	font-weight: 		bold;
+	font-size: 			16pt;
+	}
+	
+	.texte
+	{
+	width:				800px;
+	height:				350px;
+	margin-left:		30px;
+	margin-top:			20px;
+	border:				1px solid #c82b2b;
+	}
+	
+
+	.bloc_texte2
+	{
+	width:				800px;
+	height:				350px;
+	margin-left:		10px;
+	}
+	
+	.texte2
+	{
+	width:				686px;
+	height:				350px;
+	float:				left;
+	}
+	
+/**
+	Définition du style du titre des rubriques.
+*/
+.TitreRubrique
+{
+	margin-left:		29px;
+	width:				850px;
+	margin-top:			26px;
+	font-family: 		Arial;
+	font-size: 			18px;
+	font-weight: 		bold;
+	color: 				#1c9bd3;
+	background-image:	url(../images/barre_titre_rubrique.png);
+	background-repeat: 	repeat-x;
+	background-position: bottom;
+	height:				25px;
+}
+.Filtre
+{
+	width:				853px;
+	color: 				#c82b2b;
+}
+#PaveFiltre
+{
+	height:				81px;
+	width:				853px;
+}
+#CadreFiltre
+{
+	width:				853px;
+	background-image:	url(../../assets/images/rayure_1.png);
+	background-repeat:	repeat;
+	padding-top: 		30px;
+	float:				left;
+	height:				55px;
+}
+/**
+	Content est le cadre général de toutes les applications Surik@
+*/
+.Content
+{
+	width:			inherit;
+	margin-left:	10px;
+	margin-right:	30px;
+	margin-top:		10px;
+	font-size:		0.88em;	
+	margin-bottom:	20px;
+}
+
+.Rubrique
+{
+	background-image:		url(../images/SubTitleMiddle.png);
+	background-repeat:		no-repeat;
+	height:					22px;
+	line-height:			22px;
+	color:					#ffffff;
+	font-size:				12px;
+	font-weight:			bold;
+	padding-left:			7px;
+	width:					435px;
+	margin-bottom:			6px;
+}
+.zone_tabs
+{
+width: 850px;
+height: 22px;
+margin-bottom:10px;
+}
+
+a.link_add, a.link_add:hover
+{
+	width:					auto;
+	height:					22px;
+	padding:				0 0 5px 20px;
+	margin:					0 0 15px 0;
+	text-decoration:		none;
+	float:					right;
+	text-transform:			uppercase;
+	font-weight:			bold;
+	font-size:				0.95em;
+	background-image:		url(../images/iconset/page_save.png);
+	background-repeat:		no-repeat;
+	color:					#808080;
+}
+a.link_add span
+{
+	padding:				10px 0 10px 0;
+}
+
+
+/**
+	Table représentant le formulaire de saisie d'une information quelconque.
+*/
+table.formulaireSaisie
+{
+	margin:					10px 0 10px 0;
+	font-size:				12px;
+}
+table.formulaireSaisie tr
+{
+	width:					100%;
+}
+
+span.champObligatoire, tr.champObligatoire td
+{
+	color:					#e1051f;
+	font-weight:			bold;
+}
+
+/**
+	Gestion des boutons des applications dans les formulaires.
+*/
+.buttons {
+margin:10px 0;
+text-align:center;
+float: left;
+}
+.systemmonitor-state.state-no_state {
+background-color:#F8F8FF;
+border-top:4px solid #95A19F;
+}
+.systemmonitor-state.state-unknown {
+background-color:#CECFC5;
+border-top:4px solid #30302E;
+}
+.systemmonitor-state.state-ok {
+background-color:#ADFFA2;
+border-top:4px solid #23FB00;
+}
+.systemmonitor-state.state-info {
+background-color:#FDFFA2;
+border-top:4px solid #FDFF00;
+}
+.systemmonitor-state.state-warning {
+background-color:#FFDA93;
+border-top:4px solid #FFA800;
+}
+.systemmonitor-state.state-critical {
+background-color:#FFB9B9;
+border-top:4px solid #FF0000;
+}
+.systemmonitor-state.state-error {
+background-color:#FF7F7F;
+border-top:4px solid #FF0000;
+}
+.systemmonitor-device {
+background-position:12px 4px;
+background-repeat:no-repeat;
+min-height:80px;
+}
+.systemmonitor-device.device-system {
+background-image:url("../../icons/x64/network.png");
+}
+.systemmonitor-device.device-server {
+background-image:url("../../icons/x64/server.png");
+}
+.systemmonitor-content.icons32 {
+background-position:12px 4px;
+background-repeat:no-repeat;
+padding:2px 10px 2px 80px;
+}
+.systemmonitor-content.icons32.ico-no_state {
+}
+.systemmonitor-content.icons32.ico-unknown {
+background-image:url("../../icons/x32/state_unknown.png");
+}
+.systemmonitor-content.icons32.ico-ok {
+background-image:url("../../icons/x32/state_ok.png");
+}
+.systemmonitor-content.icons32.ico-info {
+background-image:url("../../icons/x32/state_info.png");
+}
+.systemmonitor-content.icons32.ico-warning {
+background-image:url("../../icons/x32/state_warning.png");
+}
+.systemmonitor-content.icons32.ico-critical {
+background-image:url("../../icons/x32/state_critical.png");
+}
+.systemmonitor-content.icons32.ico-error {
+background-image:url("../../icons/x32/state_error.png");
+}
+.systemmonitor-content table {
+border:medium none;
+margin-top:10px;
+}
+.systemmonitor-content * .online {
+background-color:#E3FFB8;
+border:1px solid #FFFFFF;
+color:#000000;
+padding:0 5px;
+}
+.systemmonitor-content * .offline {
+background-color:#D12F19;
+border:1px solid #FFFFFF;
+color:#FFFFFF;
+padding:0 5px;
+}
+.swap {
+background-repeat:no-repeat;
+}
+.swap span {
+display:none;
+height:16px;
+}
+#ir-HeaderLogo {
+background-image:url("../../images/header_logo.png");
+height:32px;
+}
+#ir-Yes {
+background-image:url("../../icons/x16/tick_circle.png");
+height:16px;
+}
+#ir-No {
+background-image:url("../../icons/x16/cross_circle.png");
+height:16px;
+}
+/**
+	Style par défaut des différents composants du site Internet.
+	Certaines valeurs pourront être changées à la volée.
+*/
+input[type=text], input[type=password], textarea {
+background-color:#F5F5F5;
+border-color:#C8C8C8 #777777 #777777 #C8C8C8;
+border-right:1px solid #777777;
+border-style:solid;
+border-width:1px;
+color:#565656;
+cursor:pointer;
+display:block;
+float:left;
+font-family:"Segoe UI","Lucida Grande",Tahoma,Arial,Verdana,sans-serif;
+font-size:100%;
+font-weight:bold;
+line-height:130%;
+margin:0 7px 0 0;
+padding:5px 10px 6px 7px;
+text-decoration:none;
+}
+select {
+background-color:#F5F5F5;
+border-color:#C8C8C8 #777777 #777777 #C8C8C8;
+border-right:1px solid #777777;
+border-style:solid;
+border-width:1px;
+color:#565656;
+cursor:pointer;
+display:block;
+float:left;
+font-family:"Segoe UI","Lucida Grande",Tahoma,Arial,Verdana,sans-serif;
+font-size:100%;
+font-weight:bold;
+line-height:130%;
+margin:0 7px 0 0;
+text-decoration:none;
+}
+input[type=text]:hover, input[type=password], textarea:hover, select:hover {
+	background-color:#E6EFC2;
+	border:1px solid #C6D880;
+	color:#529214;
+}
+/**
+	Fin de la customisation des contrôles part défaut du site Internet.
+*/
+.buttons a, .buttons button, button.buttons, input[type=submit], input[type=text], textarea, select {
+background-color:#F5F5F5;
+border-color:#C8C8C8 #777777 #777777 #C8C8C8;
+border-right:1px solid #777777;
+border-style:solid;
+border-width:1px;
+color:#565656;
+cursor:pointer;
+display:block;
+float:left;
+font-family:"Segoe UI","Lucida Grande",Tahoma,Arial,Verdana,sans-serif;
+font-size:100%;
+font-weight:bold;
+line-height:130%;
+margin:0 7px 0 0;
+padding:5px 10px 6px 7px;
+text-decoration:none;
+}
+.buttons button, button.buttons, input[type=submit] {
+overflow:visible;
+padding:4px 10px 3px 7px;
+width:auto;
+}
+.buttons button[type], button.buttons, input[type=submit] {
+line-height:17px;
+padding:5px 10px 5px 7px;
+}
+:first-child + html button[type] {
+padding:4px 10px 3px 7px;
+}
+.buttons button img, button.buttons img, .buttons input[type=submit] img, .buttons a img {
+border:medium none;
+height:16px;
+margin:0 3px -3px 0 !important;
+padding:0;
+width:16px;
+}
+button:hover, input[type=submit]:hover, .buttons a:hover {
+background-color:#DFF4FF;
+border:1px solid #C2E1EF;
+color:#336699;
+}
+.buttons a:active {
+background-color:#6299C5;
+border:1px solid #6299C5;
+color:#FFFFFF;
+}
+button.positive, .buttons a.positive {
+color:#529214;
+}
+.buttons a.positive:hover, button.positive:hover {
+background-color:#E6EFC2;
+border:1px solid #C6D880;
+color:#529214;
+}
+.buttons a.positive:active {
+background-color:#529214;
+border:1px solid #529214;
+color:#FFFFFF;
+}
+.buttons a.negative, button.negative {
+color:#D12F19;
+}
+.buttons a.negative:hover, button.negative:hover {
+background-color:#FBE3E4;
+border:1px solid #FBC2C4;
+color:#D12F19;
+}
+.buttons a.negative:active {
+background-color:#D12F19;
+border:1px solid #D12F19;
+color:#FFFFFF;
+}
+.iconstxt {
+background-position:4px 4px;
+background-repeat:no-repeat;
+}
+.iconstxt span {
+padding-left:20px;
+}
+input[type=submit].iconstxt, button.iconstxt {
+padding-left:25px;
+}
+/**
+	Gestion des icônes différentes du logiciel BackOffice.
+	------------------------------------------------------
+	On encapsule dans le style iconstxt et on crée un ico$$TYPE$$
+*/
+.iconstxt.icoCancel {
+background-image:url("../images/iconset/cancel.png");
+}
+.iconstxt.icoConnect {
+background-image:url("../images/iconset/lock_unlock.png");
+}
+.iconstxt.icoSave {
+background-image:url("../images/iconset/disk.png");
+}
+.iconstxt.icoPrevious {
+background-image:url("../images/iconset/control_rewind.png");
+background-repeat:no-repeat;
+}
+.iconstxt.icoNext {
+background-image:url("../images/iconset/control_fastforward.png");
+background-repeat:no-repeat;
+}
+.icons16 span {
+display:none;
+}
+a.icons16 {
+background-position:1px 1px;
+background-repeat:no-repeat;
+height:18px;
+padding:0;
+width:18px;
+}
+button.icons16 {
+background-position:1px 1px;
+background-repeat:no-repeat;
+height:20px;
+padding:0;
+width:20px;
+}
+/******* /BLOCS d'erreurs et de validation   ***/
+div.warnings
+{
+	width 							: 70%;
+	text-align						: center;
+	color							: Red;
+	/* Ajustement du padding pour ne pas trop le coller au reste des éléments HTML. */
+	margin							: 10px 15% 15px;
+	padding							: 5px;
+	border							: 1px solid #F00;
+	background						: #FFDDDD url(../images/Symboles_Alertes_N3.png) no-repeat scroll 40px 5px;
+	min-height						: 50px;
+}
+div.bloc_informations
+{
+	width 							: 70%;
+	text-align						: center;
+	color							: Red;
+	/* Ajustement du padding pour ne pas trop le coller au reste des éléments HTML. */
+	margin							: 10px 15% 15px;
+	padding							: 5px;
+	border							: 1px solid #F00;
+	background						: #FFDDDD url(../images/Symboles_Alertes_N1.png) no-repeat scroll 40px 5px;
+	min-height						: 50px;
+}
+div.bloc_alerts
+{
+	width 							: 70%;
+	text-align						: center;
+	color							: Red;
+	/* Ajustement du padding pour ne pas trop le coller au reste des éléments HTML. */
+	margin							: 10px 15% 15px;
+	padding							: 5px;
+	border							: 1px solid #F00;
+	background						: #FFDDDD url(../images/Symboles_Alertes_N1.png) no-repeat scroll 40px 5px;
+	min-height						: 50px;
+}
+div.success
+{
+	width 							: 70%;
+	background-color				: #D2F5D2;
+	border							: 1px solid #3A7C3A;
+	color							: #3A7C3A;
+	margin							: 10px 15% 15px;
+	padding							: 5px;
+	background						: #FFDDDD url(../images/success.png) no-repeat scroll 48% 35px;
+	text-align						: center;
+	min-height						: 60px;
+	font-weight						: bold;
+}
+
+/**
+	Table gérant le contrôles des zones, secteurs, etc.
+*/
+table.tableControleFiltres
+{
+	width:							801px;
+	height:							335px;
+	border:							solid 1px #c82b2b;
+	margin:							0 0 0 34px;
+}
+table.tableControleFiltres tr.header td
+{
+	height:							32px !important;
+	border-bottom:					solid 1px #c82b2b;
+	text-align:						center;
+	color:							#505050;
+	font-size:						18px;
+	font-weight:					bold;
+}
+
+
+
+/**
+	Style de la page de connexion des utilisateur.
+	------------------------------------------------------
+*/
+
+
+.zone_texte_connection
+{
+width:				800px;
+height:				220px;
+margin-top:			20px;
+}
+
+.texte_connection
+{
+width:				475px;
+height:				180px;
+float:				left;
+font-size:			10pt;
+}
+
+.rayure
+{
+width:				300px;
+height:				200px;	
+float:				right;
+background-image:url(../images/rayure_1.png);
+background-repeat:	repeat;
+}
+
+.logo_entreprise
+{
+width:				260px;
+height:				160px;
+margin-top:			20px;
+margin-left:		20px;
+background-color:	#FFF;
+}
+
+.cadre_edit
+{
+width: 100%;
+height: auto;
+margin-top: 20px;
+padding-left: 10px;
+padding-top: 20px;
+border: 1px solid #1c9bd3;	
+}
+
+.zone
+{
+width:				800px;
+height:				230px;
+}
+
+.zone_cadre1
+{
+width:				350px;
+height:				230px;
+float:				left;
+}
+
+.zone_cadre2
+{
+width:				350px;
+height:				230px;
+float:				right;
+}
+
+	.texte_alerte
+	{
+		width:				210px;
+		height:				20px;
+		float: 				left;
+		color:				#1c9bd3;
+	}
+
+	.message
+	{
+	width:				350px;
+	height:				182px;
+	background-color:	#f5f5f5;
+	border:				1px solid #333;	
+	}
+	
+#filAriane
+{
+width: 100%;
+color: #333;
+}
+
+/******************** Styles permettant de gérer les pages centrales. ****************************/
+.informations
+{
+width:				100%;
+height:				auto;
+/** Une petite marge pour le bas de page **/
+margin:				0 0 10px 0;
+}
+
+.trait_cadre
+{
+width:				120px;
+height:				163px;
+border:				1px solid #999;
+float:				left;
+}
+
+.cadre_photo
+{
+width: 				116px;
+height: 			159px;
+background-color: 	#333;
+margin-left:		2px;
+margin-top:			2px;
+}
+
+.btn_ajout_photo
+{
+width:				170px;
+height:				35px;
+margin-top:			10px;
+}
+
+.btn_ajout_formation
+{
+width:				270px;
+height:				35px;
+margin-top:			10px;
+}
+
+	.btn_plus
+	{
+	width:			35px;
+	height:			35px;
+	float:			left;
+	}
+	
+	.texte_ajout_photo
+	{
+	width:			115px;
+	height:			20px;
+	margin-top:		8px;
+	margin-left:	10px;
+	float:			left;
+	}
+	
+	.texte_ajout_formation
+	{
+	width:			215px;
+	height:			20px;
+	margin-top:		8px;
+	margin-left:	10px;
+	float:			left;
+	}
+
+.fond_rayure
+{
+	width:				279px;
+	height:				165px;
+	background-image:	url(../images/rayure_1.png);
+	float:				left;
+	margin-left:		5px;
+}
+
+/**
+	Le tableau de type default permet de ne mettre aucune bordure bleue ni de marge.
+*/
+table.default
+{
+	border:				none;
+	margin:				0 0 0 0;
+}
+
+table.default td, th
+{
+	border:				none !important;
+}
+table.fc-header td, th
+{
+	border:				none !important;
+}
+/**
+	Fin du tableau par défaut.
+*/
+	
+.groupe_secondaire
+{
+	width:				300px;
+	height:				234px;
+	float:				right;
+}
+
+.bouton
+{
+	width:				258px;
+	height:				30px;
+	float:				right;
+}
+
+.texte_alerte
+{
+	width:				inherit;
+	height:				20px;
+	float: 				left;
+	color:				#1c9bd3;
+}
+
+.alerte
+{
+	width:				inherit;
+	height:				143px;
+	float:				left;
+	border:				1px solid #000;	
+	background-color:	#CFF;
+}
+
+div.warnings_no_icon 
+{
+	background:none no-repeat scroll 40px 5px #FFDDDD;
+	border:1px solid #FF0000;
+	color:Red;
+	margin:10px 15% 15px;
+	min-height:50px;
+	padding:5px;
+	text-align:center;
+	width:70%;
+	font-size:		10px;
+}
+.label, .field
+{
+	font-size:			12px;
+}
+
+.paredis
+{
+	width:				130px;
+	height:				41px;
+	float:				left;
+	margin-top:			5px;
+	background-image:	url(../images/menu/elements/defaut/btn_paredis_0.png);
+}
+
+.paredis:hover
+{
+	background-image:	url(../images/menu/elements/defaut/btn_paredis_1.png);
+}
+
+.element_bouton_haut
+{
+	width:				124px;
+	height:				29px;
+	line-height:		29px;
+	color:				#FFFFFF;
+	text-align:			center;
+	font-weight:		bold;
+	margin-top:			0px;
+	cursor:				pointer;
+	margin-right:		10px;
+	float:				right;
+	background-image:	url(../images/btn_header.png);
+}
+
+a.validation_accept
+{
+	background-image:		url(../images/iconset/accept.png);
+	background-repeat:		no-repeat;
+	background-position:	left;
+	padding-left:			20px;
+}
+
+a.validation_update
+{
+	background-image:		url(../images/iconset/application_edit.png);
+	background-repeat:		no-repeat;
+	background-position:	left;
+	padding-left:			20px;
+}
+
+a.validation_reject
+{
+	background-image:		url(../images/iconset/cancel.png);
+	background-repeat:		no-repeat;
+	background-position:	left;
+	padding-left:			20px;
+}
+
+/**
+	Alignement du h1 sur le texte des mentions à gauche.
+*/
+#mentions h1
+{
+	text-align:				left;
+}

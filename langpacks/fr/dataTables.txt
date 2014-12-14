@@ -1,0 +1,17 @@
+{
+	"sProcessing": "Veuillez patienter...",
+	"sLengthMenu": "Afficher _MENU_ entrées.",
+	"sZeroRecords": "Il n'y a aucun élément disponible pour votre recherche.",
+	"sInfo": "Afficher _START_ à _END_ sur _TOTAL_ élément(s).",
+	"sInfoEmpty": "Afficher 0 à 0 sur 0 élément(s).",
+	"sInfoFiltered": "(filtré sur _MAX_ élément(s))",
+	"sInfoPostFix": "",
+	"sSearch": "Rechercher",
+	"sUrl": "",
+	"oPaginate": {
+		"sFirst":    "Premier",
+		"sPrevious": "&nbsp;",
+		"sNext":     "&nbsp;",
+		"sLast":     "Dernier"
+	}
+}

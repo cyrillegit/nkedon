@@ -1,0 +1,168 @@
+/* CSS Document */
+
+#footer
+{
+	width:				990px;
+	height:				70px;
+	float:				left;
+	margin-left:		0px;
+}
+
+.element_footer_gauche_1 
+{
+	width:				25px;
+	height:				70px;
+	float:				left;
+	background-image:url(../../images/foot_color_template/violet/footer_left_violet.png);
+}
+	
+.element_footer_center_1
+{
+	width:				815px;
+	height:				70px;
+	float:				left;
+	background-color: 	#1c9bd3;
+	text-align: 		center;
+	line-height: 		50px;
+	font-weight:		bold;
+	color:				#fff;
+	background-image:url(../../images/foot_color_template/violet/footer_middle_violet.png);
+	background-repeat:repeat-x;
+}
+		
+.element_footer_center_1 a
+{
+	color:			#3c3c3c;
+	text-transform:	uppercase;
+	text-decoration: none;
+}
+
+
+.element_footer_droite_1
+{
+	width:				150px;
+	height:				70px;
+	float:				right;
+	background-image: url(../../images/foot_color_template/violet/footer_right_violet.png);
+}
+
+.element_menu_gauche
+{
+width:				10px;
+height:				50px;
+float:				left;
+background-image: 	url(../../images/menu_color/violet/menu_left_violet.png);
+}
+
+.element_menu_center
+{
+width:				970px;
+height:				50px;
+float:				left;
+background-image: 	url(../../images/menu_color/violet/menu_middle_violet.png);
+background-repeat:repeat-x;
+}
+
+.element_menu_droite
+{
+width:				10px;
+height:				50px;
+float:				right;
+background-image: 	url(../../images/menu_color/violet/menu_right_violet.png);
+}
+
+button.actionNouvelEmploye
+{
+	background-image:				url(../../images/bouton_color_template/violet/buttonNouvel_violet.png); 
+	background-repeat: 				no-repeat; 
+	width: 							231px; 
+	height: 						46px;
+	color:							#FFFFFF;
+	font-weight:					bold;
+	font-style:						italic;
+}
+
+button.actionNouvelEmploye:hover
+{
+	background-image:				url(../../images/bouton_color_template/violet/buttonNouvel_violet_hover.png); 
+	background-repeat: 				no-repeat; 
+	width: 							233px; 
+	height: 						49px;
+	color:							#FFFFFF;
+	font-weight:					bold;
+	font-style:						italic;
+}
+
+.menu_style:hover
+{
+	background-color: 		#fba0ff;
+	color:					#330035;
+}
+
+
+td.administration_title, div.administration_title
+{
+	width:				auto;
+	height:				16px;
+	font-size:			14px;
+	border-bottom:		solid 1px #cc1cd2;
+	font-weight:		bold;
+	font-style:			italic;
+	text-transform:		uppercase;
+}
+
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #cc1cd2; text-decoration: none; }
+
+/**
+	Styles des différents textes.
+**/
+.Titre_page
+{
+	border-bottom: 		2px solid #cc1cd2;
+	color: 				#cc1cd2;
+}
+.TitreRubrique
+{
+	color: 				#cc1cd2;
+}
+.cadre_edit
+{
+	border: 1px solid #cc1cd2;	
+}
+.texte_alerte
+{
+	color:				#cc1cd2;
+}
+.search
+{
+	border:			1px solid #cc1cd2;
+}
+.logo_enterprise_header
+{
+	border:			1px solid #cc1cd2;
+}
+
+/** Redéfinition des styles colorés pour le reste du site Internet. **/
+.form_administration input, textarea, select 
+{
+    border: 1px solid #cc1cd2 !important;
+}
+.HomeBlocGauche .cadre_bleu, .HomeBlocDroite .cadre_bleu {
+    border: 1px solid #cc1cd2;
+}
+ul.my_account li a {
+    color: #cc1cd2;
+}
+.HomeBlocGauche span {
+    color: #cc1cd2;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #cc1cd2;
+}
+.titre_haut_page
+{
+	color: #cc1cd2;
+}
+.fond_rayure .title {
+    color: #cc1cd2;
+}

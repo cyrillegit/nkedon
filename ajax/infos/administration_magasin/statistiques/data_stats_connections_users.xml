@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chart caption="NKedon" subcaption="Nombre de connexions par utilisateur" xAxisName="Comptes utilisateur" yAxisName="Nombre de connexions" numberPrefix="" numberSuffix="" showValue="1">
+ <set label="MOFFO Cyrille" value="23"/>
+ <set label="FOFOU Herve" value="2"/>
+ <set label="FOFOU Gildas" value="0"/>
+ <set label="DZOUA Collins" value="0"/>
+ <set label="FOFOU Diane" value="0"/>
+ <set label="BOVARY Bovary" value="21"/>
+ <set label="EVARISTE EVARISTE" value="0"/>
+</chart>

@@ -1,0 +1,81 @@
+{include file="common/header.tpl"}
+{literal}
+<script language="javascript">
+/**
+	Rafraîchissement du tableau des chaînes de tri.
+*/
+function RefreshTableGroupesFacture()
+{
+	var responseText = $.ajax({
+			type	: "POST",
+			url		: "ajax/infos/administration_magasin/GetTableauGroupesFactures.php",
+			async	: false,
+			data	: "",
+			success	: function (msg){}
+	}).responseText;
+	$("#tableau_groupes_factures").empty ().html (responseText);
+
+	UpdateTSorter ();
+}
+/**
+	jQuery init.
+*/
+$(document).ready (function ()
+{
+	RefreshTableGroupesFacture ();
+
+    $("#date_histo_facture").datepicker({
+        beforeShow:function(input) {
+            $(input).css({
+                "position": "relative",
+                "z-index": 999999
+            });
+        }
+    });
+
+    $("#date_histo_facture").change (function ()
+    {
+        var date_histo_facture = $("#date_histo_facture").val();
+        RefreshTableHistoriqueFacture( date_histo_facture );
+    });
+});
+
+</script>
+{/literal}
+<div id="Content">
+    <div class="bloc_title">
+        <div class="alerte">&nbsp;</div><br/>
+        <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
+            <div class="ico_title"><img src="css/images/ico_42x42/menu_fdr_0.png" /></div>
+            <div class="t_titre">
+                <div class="title"><strong>Groupes </strong> <strong style="color:black;">des factures</strong></div>
+            </div>
+        </div>
+    </div>
+    <div class="intro">Dans cet écran, vous avez la possibilité de visualiser des factures classées par synthése.<br/><br/></div>
+    
+    <div style="clear: both;"></div>
+
+    <div class="bg_filter" style="line-height:50px;"> 
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                Actuellement <font color="red"><b>{$nb_groupes_factures}</b></font> groupes de factures enregistrées.
+                </td>
+
+                <td>
+                <div style="margin-left:20px; margin-right: 20px; float: right;">Afficher les historiques de factures à partir de:  <input type="text" name="date_histo_facture" id="date_histo_facture" value=""/>&nbsp;</div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br style="clear: both;" />
+
+    <div id="tableau_groupes_factures"></div>
+
+    <div style="clear: both;">&nbsp;</div>
+    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='administration_magasin.php';"></div>
+</div>
+
+{include file="common/footer.tpl"}

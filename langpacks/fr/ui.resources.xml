@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui>
+	<!--Titles, ce sont les titres des différentes rubriques du site Internet.-->
+	<Title id="main_page_not_connected">connexion [$span=title_blue$]à votre tableau de bord[$/span$]</Title>
+</ui>

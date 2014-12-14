@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="index.php" server="192.168.1.23//www/surikat/sante/" local="129550420911870791" remote="130046224200000000" Dst="1" />
+<file name="files_cleaner.php" server="192.168.1.23//www/surikat/sante/" local="129562189288325537" remote="130046224200000000" Dst="1" />
+<file name="emailer.php" server="192.168.1.23//www/surikat/sante/" local="130040176767005333" remote="130046224200000000" Dst="1" />
+<file name="geoloc_adresses.php" server="192.168.1.23//www/surikat/sante/" local="129562194434709894" remote="130046224200000000" Dst="1" />
+<file name="suivi_periodiques.php" server="192.168.1.23//www/surikat/sante/" local="129590945400000000" remote="130046224200000000" Dst="1" />
+<file name="renouvellement_formations.php" server="192.168.1.23//www/surikat/sante/" local="129609177105500248" remote="130046224200000000" Dst="1" />
+<file name="clean_graph_files.php" server="192.168.1.23//var/www/surikat/sante/" local="129906121750647386" remote="129966918830000000" Dst="1" />
+<file name="database_fixer.php" server="192.168.1.23//var/www/surikat/sante/" local="129902798102347624" remote="129966918830000000" Dst="1" />
+<file name="emailer.php" server="192.168.1.23//var/www/surikat/sante/" local="129902798101879624" remote="129966918830000000" Dst="1" />
+<file name="files_cleaner.php" server="192.168.1.23//var/www/surikat/sante/" local="129562189288325537" remote="129966918830000000" Dst="1" />
+<file name="geoloc_adresses.php" server="192.168.1.23//var/www/surikat/sante/" local="129562194434709894" remote="129966918830000000" Dst="1" />
+<file name="index.php" server="192.168.1.23//var/www/surikat/sante/" local="129550420911870791" remote="129966918830000000" Dst="1" />
+<file name="mobilisations.php" server="192.168.1.23//var/www/surikat/sante/" local="129906121750047352" remote="129966918830000000" Dst="1" />
+<file name="renouvellement_formations.php" server="192.168.1.23//var/www/surikat/sante/" local="129609177105500248" remote="129966918830000000" Dst="1" />
+<file name="suivi_periodiques.php" server="192.168.1.23//var/www/surikat/sante/" local="129590945400000000" remote="129906217640000000" Dst="1" />
+<file name="check_mobilisations.php" server="91.121.100.23//www.surikat.fr/sante/" local="129910007441236947" remote="129930342600000000" Dst="2" />
+<file name="clean_graph_files.php" server="91.121.100.23//www.surikat.fr/sante/" local="129906121750647386" remote="129930342600000000" Dst="2" />
+<file name="database_fixer.php" server="91.121.100.23//www.surikat.fr/sante/" local="129902798102347624" remote="129930342600000000" Dst="2" />
+<file name="emailer.php" server="91.121.100.23//www.surikat.fr/sante/" local="129902798101879624" remote="129930343200000000" Dst="2" />
+<file name="files_cleaner.php" server="91.121.100.23//www.surikat.fr/sante/" local="129562189288325537" remote="129930343200000000" Dst="2" />
+<file name="geoloc_adresses.php" server="91.121.100.23//www.surikat.fr/sante/" local="129562194434709894" remote="129930343200000000" Dst="2" />
+<file name="index.php" server="91.121.100.23//www.surikat.fr/sante/" local="129550420911870791" remote="129930343200000000" Dst="2" />
+<file name="mobilisations.php" server="91.121.100.23//www.surikat.fr/sante/" local="129906121750047352" remote="129930343200000000" Dst="2" />
+<file name="renouvellement_formations.php" server="91.121.100.23//www.surikat.fr/sante/" local="129609177105500248" remote="129930343200000000" Dst="2" />
+<file name="suivi_periodiques.php" server="91.121.100.23//www.surikat.fr/sante/" local="129590945400000000" remote="129930343200000000" Dst="2" />
+<file name="check_mobilisations.php" server="192.168.1.23//var/www/surikat/sante/" local="129910007441236947" remote="129966918830000000" Dst="1" />
+<file name="check_mobilisations.php" server="91.121.100.23//www.surikat-sante.fr/" local="129910007441236947" remote="129950509800000000" Dst="1" />
+<file name="clean_graph_files.php" server="91.121.100.23//www.surikat-sante.fr/" local="129906121750647386" remote="129950509800000000" Dst="1" />
+<file name="database_fixer.php" server="91.121.100.23//www.surikat-sante.fr/" local="129902798102347624" remote="129950509800000000" Dst="1" />
+<file name="emailer.php" server="91.121.100.23//www.surikat-sante.fr/" local="130040176767005333" remote="130041805200000000" Dst="1" />
+<file name="files_cleaner.php" server="91.121.100.23//www.surikat-sante.fr/" local="129562189288325537" remote="129950510400000000" Dst="1" />
+<file name="geoloc_adresses.php" server="91.121.100.23//www.surikat-sante.fr/" local="129562194434709894" remote="129950510400000000" Dst="1" />
+<file name="index.php" server="91.121.100.23//www.surikat-sante.fr/" local="129550420911870791" remote="129950510400000000" Dst="1" />
+<file name="mobilisations.php" server="91.121.100.23//www.surikat-sante.fr/" local="129906121750047352" remote="129950510400000000" Dst="1" />
+<file name="renouvellement_formations.php" server="91.121.100.23//www.surikat-sante.fr/" local="129609177105500248" remote="129950510400000000" Dst="1" />
+<file name="suivi_periodiques.php" server="91.121.100.23//www.surikat-sante.fr/" local="129590945400000000" remote="129950510400000000" Dst="1" />
+<file name="check_mobilisations.php" server="192.168.1.23//www/surikat/sante/" local="129910007441236947" remote="130046224200000000" Dst="1" />
+<file name="clean_graph_files.php" server="192.168.1.23//www/surikat/sante/" local="129906121750647386" remote="130046224200000000" Dst="1" />
+<file name="database_fixer.php" server="192.168.1.23//www/surikat/sante/" local="129902798102347624" remote="130046224200000000" Dst="1" />
+<file name="mobilisations.php" server="192.168.1.23//www/surikat/sante/" local="129906121750047352" remote="130046224200000000" Dst="1" />
+<file name="reload_fdr.php" server="192.168.1.23//www/surikat/sante/" local="130053997892423724" remote="130053997800000000" Dst="1" />
+<file name="reload_fdr.php" server="91.121.100.23//www.surikat-sante.fr/" local="130053997892423724" remote="130054000800000000" Dst="1" />
+</dwsync>

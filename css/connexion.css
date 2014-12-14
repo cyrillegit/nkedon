@@ -1,0 +1,55 @@
+/* CSS Document */
+
+table.accueil
+{
+	width:						568px;
+	font-size:					12px;
+}
+
+td.home_module
+{
+	width:						284px;
+	height:						100px;
+}
+
+td.home_infoText
+{
+	font-size:					11px;
+}
+
+span.home_title
+{
+	color:						#000;
+	font-size:					12px;
+	text-transform:				uppercase;
+	font-weight:				bold;
+}
+
+.bg_connexion
+{
+	background:					url(images/elements/bg_connexion_old.png) no-repeat;
+	width:						438px;
+	height:						238px;
+	padding:					15px 15px 15px 15px;
+	font-size:					12px;
+}
+
+.bg_connexion_client
+{
+	background:					url(images/elements/bg_connexion_client.png) no-repeat;
+	width:						438px;
+	height:						238px;
+	padding:					15px 15px 15px 15px;
+	font-size:					12px;
+}
+
+
+td.bg_connexion table tr td
+{
+	font-size:					12px;
+}
+
+td.left_50
+{
+	padding-left:				50px;
+}

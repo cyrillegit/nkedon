@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="btn_reinitialiser_mdp.png" server="192.168.1.23//www/surikat/sante/" local="129991112478976185" remote="130059358800000000" />
+<file name="btn_regenerer_mdp.png" server="192.168.1.23//www/surikat/sante/" local="129991709149419023" remote="130059358800000000" />
+<file name="btn_ajouter.png" server="192.168.1.23//www/surikat/sante/" local="129979048918648947" remote="130059358800000000" />
+<file name="btn_annuler.png" server="192.168.1.23//www/surikat/sante/" local="129979048917556945" remote="130059358800000000" />
+<file name="btn_associer.png" server="192.168.1.23//www/surikat/sante/" local="129979048914592940" remote="130059358800000000" />
+<file name="btn_basket.png" server="192.168.1.23//www/surikat/sante/" local="129979048918492947" remote="130059358800000000" />
+<file name="btn_caculer.png" server="192.168.1.23//www/surikat/sante/" local="129979048918804948" remote="130059358800000000" />
+<file name="btn_cloturer.png" server="192.168.1.23//www/surikat/sante/" local="129979048915684942" remote="130059358800000000" />
+<file name="btn_creation.png" server="192.168.1.23//www/surikat/sante/" local="129979048917400945" remote="130059358800000000" />
+<file name="btn_creation_selected.png" server="192.168.1.23//www/surikat/sante/" local="129979048915372942" remote="130059358800000000" />
+<file name="btn_decaler.png" server="192.168.1.23//www/surikat/sante/" local="129979048916620944" remote="130059358800000000" />
+<file name="btn_download.png" server="192.168.1.23//www/surikat/sante/" local="129979048913656939" remote="130059358800000000" />
+<file name="btn_enlever.png" server="192.168.1.23//www/surikat/sante/" local="129979048916620944" remote="130059358800000000" />
+<file name="btn_enregistrer.png" server="192.168.1.23//www/surikat/sante/" local="129979048920520951" remote="130059358800000000" />
+<file name="btn_envoyer.png" server="192.168.1.23//www/surikat/sante/" local="129979048920208950" remote="130059358800000000" />
+<file name="btn_fermer.png" server="192.168.1.23//www/surikat/sante/" local="129979048915372942" remote="130059358800000000" />
+<file name="btn_gerer_nc.png" server="192.168.1.23//www/surikat/sante/" local="129979048915528942" remote="130059358800000000" />
+<file name="btn_historique.png" server="192.168.1.23//www/surikat/sante/" local="129979048911784935" remote="130059358800000000" />
+<file name="btn_importer.png" server="192.168.1.23//www/surikat/sante/" local="129979048916776944" remote="130059358800000000" />
+<file name="btn_imprimer.png" server="192.168.1.23//www/surikat/sante/" local="129979048919896950" remote="130059358800000000" />
+<file name="btn_journalier.png" server="192.168.1.23//www/surikat/sante/" local="129979048918648947" remote="130059358800000000" />
+<file name="btn_modification.png" server="192.168.1.23//www/surikat/sante/" local="129979048913500938" remote="130059358800000000" />
+<file name="btn_modifier_lite.png" server="192.168.1.23//www/surikat/sante/" local="129979048918804948" remote="130059358800000000" />
+<file name="btn_modifier_plannings_salarie.png" server="192.168.1.23//www/surikat/sante/" local="129979048913656939" remote="130059358800000000" />
+<file name="btn_nouveau.png" server="192.168.1.23//www/surikat/sante/" local="129979048919272948" remote="130059358800000000" />
+<file name="btn_nouveau_tirage_aleatoire.png" server="192.168.1.23//www/surikat/sante/" local="129979048912876937" remote="130059358800000000" />
+<file name="btn_option.png" server="192.168.1.23//www/surikat/sante/" local="129979048914436940" remote="130059358800000000" />
+<file name="btn_parcourir.png" server="192.168.1.23//www/surikat/sante/" local="129979048913500938" remote="130059358800000000" />
+<file name="btn_piece_jointe.png" server="192.168.1.23//www/surikat/sante/" local="129979048912720937" remote="130059358800000000" />
+<file name="btn_precedent.png" server="192.168.1.23//www/surikat/sante/" local="129979048915372942" remote="130059358800000000" />
+<file name="btn_recalculer.png" server="192.168.1.23//www/surikat/sante/" local="129979048919116948" remote="130059358800000000" />
+<file name="btn_refuser.png" server="192.168.1.23//www/surikat/sante/" local="129979048915372942" remote="130059358800000000" />
+<file name="btn_remplacants_potentiels.png" server="192.168.1.23//www/surikat/sante/" local="129979048919116948" remote="130059358800000000" />
+<file name="btn_retour.png" server="192.168.1.23//www/surikat/sante/" local="129979048919116948" remote="130059358800000000" />
+<file name="btn_suivant.png" server="192.168.1.23//www/surikat/sante/" local="129979048915528942" remote="130059358800000000" />
+<file name="btn_supprimer.png" server="192.168.1.23//www/surikat/sante/" local="129979048920052950" remote="130059358800000000" />
+<file name="btn_supprimer_lite.png" server="192.168.1.23//www/surikat/sante/" local="129979048917244945" remote="130059358800000000" />
+<file name="btn_valider.png" server="192.168.1.23//www/surikat/sante/" local="129979048920052950" remote="130059358800000000" />
+<file name="btn_vider_panier.png" server="192.168.1.23//www/surikat/sante/" local="129979048913656939" remote="130059358800000000" />
+<file name="index.php" server="192.168.1.23//www/surikat/sante/" local="129979048917556945" remote="130059358800000000" />
+<file name="raz.png" server="192.168.1.23//www/surikat/sante/" local="129979048915684942" remote="130059358800000000" />
+</dwsync>

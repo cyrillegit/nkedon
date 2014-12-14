@@ -1,0 +1,39 @@
+/* CSS Document */
+
+/**
+	Boîte de dialogue de connexion
+*/	
+#connectDialog
+{
+	height:				200px;
+	width:				300px;
+	font-family:		Arial;
+	font-size:			12px;
+}
+#connectDialog .titre
+{
+	/* Marges gauche / droite. */
+	padding:			27px 48px 0 34px;
+}
+#connectDialog .label
+{
+	clear:				both;
+	float: 				left;
+	padding-top:		20px;
+	padding-left:		34px;
+}
+#connectDialog .field
+{
+	clear:				both;
+	float: 				left;
+	float: 				left;
+	padding-left:		34px;
+}
+#connectDialog .validation
+{
+	clear:				both;
+	float: 				left;
+	float: 				left;
+	padding-top:		20px;
+	padding-left: 		100px;
+}

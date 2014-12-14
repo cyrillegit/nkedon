@@ -1,0 +1,132 @@
+/* CSS Document */
+
+div.Annuaire
+{
+	background						: url(images/elements/bg_annuaire.png) no-repeat;
+	width							: 680px;
+	/*height							: 764px;*/
+	height							: 630px;
+}
+
+.Annuaire table.RowsContact 
+{
+	margin							: 5px 0px 0px 5px;
+	width							: 330px;
+	height							: 180px;
+	color							: #000000;
+	float							: left;
+	border-bottom					: solid 1px #000000;
+}
+
+.Annuaire table.RowsContact  .identite
+{
+	color							: #000000;
+	width							: 220px !important;
+	font-size						: 12px;
+	font-weight						: bold;
+}
+
+.Annuaire table.RowsContact  .text
+{
+	font-size						: 12px;
+	height							: 60px;
+}
+
+.Annuaire table.RowsContact  .fonction
+{
+	font-size						: 10px;
+	color							: #424242;
+	font-weight						: bold;
+}
+
+.Annuaire table.RowsContact  .date
+{
+	font-size						: 10px;
+	color							: #424242;
+	height							: 20px;
+}
+
+.Annuaire table.RowsContact  .infoLabel
+{
+	font-size						: 12px;
+	width							: 35px;
+}
+
+.Annuaire table.RowsContact  .infoLabel2
+{
+	font-size						: 12px;
+	width							: 40px;
+}
+
+.Annuaire table.RowsContact  .infoData
+{
+	font-size						: 12px;
+	width							: 110px;
+}
+
+.Annuaire table.RowsContact  .email
+{
+	color							: #1c9bd3;
+}
+
+.Annuaire table.RowsAnnotations 
+{
+	margin							: 5px 0px 0px 5px;
+	width							: 330px;
+	height							: 180px !important;
+	color							: #000000;
+	float							: left;
+	border-bottom					: solid 1px #000000;
+}
+
+.Annuaire table.RowsAnnotations  .titleAnnotations
+{
+	color							: #000000;
+	font-size						: 14px;
+	height							: 25px;
+	text-decoration					: underline;
+	font-weight						: bold;
+	padding-bottom					: 10px;
+}
+
+.Annuaire table.RowsAnnotations  .identite_reponse
+{
+	font-size						: 14px;
+}
+
+.Annuaire table.RowsAnnotations  .date
+{
+	font-size						: 10px;
+	color							: #424242;
+	height							: 30px;
+}
+
+.Annuaire table.RowsAnnotations  .text
+{
+	font-size						: 12px;
+	height							: 60px;
+}
+
+.Annuaire table.RowsAnnotations .noAnnotations
+{
+	background-image				: url(images/elements/treillis_rose.png);
+	background-repeat				: repeat;
+	font-size						: 12px;
+	text-align						: center;
+}
+
+#PaginationAnnuaire
+{
+	margin							: 10px 0px 0px 0px;
+}
+
+a.contact_email
+{
+	color							: #424242;
+	text-decoration					: none;
+}
+
+a.contact_email:hover
+{
+	color							: #424242;
+}

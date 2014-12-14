@@ -1,0 +1,69 @@
+/*
+ * SimpleModal Basic Modal Dialog
+ * http://www.ericmmartin.com/projects/simplemodal/
+ * http://code.google.com/p/simplemodal/
+ *
+ * Copyright (c) 2010 Eric Martin - http://ericmmartin.com
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+ * Revision: $Id: basic.css 242 2010-03-14 00:55:02Z emartin24 $
+ *
+ */
+
+#basic-modal-content {display:none; height: auto;}
+
+/* Overlay */
+#simplemodal-overlay 
+{
+	background-color:#4c4c4c; cursor:wait;
+}
+
+/* Container */
+#simplemodal-container 
+{
+	color:				#0b3547; 
+	background-color: 	#1c9bd3; 
+	border: 			2px solid #0b3547; 
+	background-image: 	url(../images/bg_popup.png);
+	background-repeat: 	repeat;
+	min-height:			368px;
+	min-width:			500px;
+	height:				auto !important;
+	width:				auto !important;
+}
+#simplemodal-container .content
+{
+	padding:			12px;
+}
+#simplemodal-container code 
+{
+	background:#141414; border-left:3px solid #65B43D; color:#bbb; display:block; margin-bottom:12px; padding:4px 6px 6px;
+}
+#simplemodal-container a 
+{
+	color:				#1c9bd3;
+}
+#simplemodal-container a.modalCloseImg {background:url(../images/x.png) no-repeat; width:25px; height:29px; display:inline; z-index:3200; position:absolute; top:-15px; right:-16px; cursor:pointer;}
+#simplemodal-container #basic-modal-content 
+{
+	padding:8px;
+}
+
+.popup_title
+{
+	color:			#1c9bd3;
+	font-size:		12px;
+	width:			auto;
+	height:			35px;
+	line-height:	35px;
+	background-image: url(../images/bg_title_popup.png);
+	background-repeat:	repeat-x;
+	padding-left:	12px;
+}
+
+.content tr
+{
+	height:			27px;
+}

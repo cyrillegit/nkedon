@@ -1,0 +1,762 @@
+/* CSS Document */
+
+/******* GENERAL RESET *******/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+ tfoot, thead, tr, th, td {
+border								: 0pt none;
+font-family							: inherit;
+/*
+	Rectification de la police de base pour body, tr et td.
+*/
+font-size							: 11px;/*100%;*/
+font-style							: inherit;
+font-weight							: inherit;
+margin								: 0pt;
+padding								: 0pt;
+vertical-align						: baseline;
+}
+.ui-dialog-title
+{
+	font-size						: 10px !important;
+}
+/*
+	Stylisation des HR horizontaux/verticaux d'ailleurs.
+*/
+hr
+{
+	border							: none 0; 
+	border-top						: 1px solid #ccc;
+	border-bottom					: 1px solid #efefef;
+	width							: 80%;
+	height							: 2px;
+	margin							: 10px auto 0 0;
+	text-align						: left;
+}
+body{
+	background						: #fff;
+	line-height						: 14px;
+	font-size						: 10px;
+	font-family						: Arial, Verdana, Tahoma, Helvetica, sans-serif;
+	margin							: 0pt;
+	overflow						: hidden;
+	cursor							: default !Important;
+}
+html,body{
+	height							: 100%;
+}
+input[type=text], input[type=password], textarea, select
+{
+	border							: 1px solid #888;
+	width							: 90%;
+}
+input[type=text]:hover, input[type=password]:hover, textarea:hover, select:hover
+{
+	border							: 1px solid #ddd;
+}
+input[type=file]
+{
+	background						: #fff !important;
+    color							: #888 !important;
+}
+.clear{
+	clear							: both;
+	height							: 0;
+	visibility						: hidden;
+	display							: block;
+}
+a{
+	text-decoration					: none;
+}
+/******* LOGIN  ******/
+.login{
+	background						: transparent url(images/bg_login.png) no-repeat scroll 0 0;
+	width							: 221px;
+	height							: 270px;
+	position						: relative;
+	margin							: 0 auto;
+	top								: 200px;
+	padding							: 20px 40px 20px;
+	color 							: #FFF;
+}
+.login .texte{
+	color							: #DDD;
+	margin-bottom					: 5px;
+}
+.login .pass{
+	margin-top						: 15px;
+}
+.login div#title{
+	font-size						: 22px;
+	font-weight						: bold;
+	color							: #DDD;
+	margin-bottom					: 15px;
+}
+/******* /LOGIN ******/
+/******* GENERAL RESET *******/
+/******* MAIN *******/
+#main{
+	height							: 100%;
+	background						: transparent url(images/background.jpg) no-repeat scroll center center;
+	overflow						: none;
+}
+/******* /MAIN  *******/
+/******* ICONS *******/
+#main div.icon{
+	min-width						: 48px;
+	min-height						: 48px;
+	padding							: 0px 14px 8px;
+	border							: 1px solid transparent;
+	margin							: 0pt auto;
+	text-align						: left;
+	position						: absolute;
+	display							: none;
+	cursor							: pointer;
+}
+#main div.icon:hover{
+	background-color				: #0a2c5e !Important;
+	border							: 1px solid #3b567e;
+}
+#main div.icon.active{
+	background-color				: #0a2c5e !Important;
+	border							: 1px solid #3b567e;
+}
+#main div.icon div.name{
+	margin-top						: 52px;
+	text-align						: center;
+	color							: #fff;
+}
+/******* /ICONS  *******/
+
+/******* TASKBAR  *******/
+#main #taskbar{
+	width							: 100%;
+	height							: 26px;
+	line-height						: 26px;
+	background						: #e6e6e6 url(images/minbar_bg.png) repeat-x left top;
+	position						: absolute;
+	left							: 0;
+	bottom							: 0px;
+	padding							: 2px 0 3px;
+	display							: none;
+}
+#main #taskbar #start{
+	float							: left;
+	background						: transparent url(images/start.png) no-repeat 4px -3px;
+	width							: 64px;
+	margin							: 0 4px 0 0;
+	padding							: 0 2px 0 42px;
+	font-size						: 18px;
+	font-style						: italic;
+	font-weight						: 700;
+	text-align						: center;
+}
+#main #taskbar #start:hover{
+	background-color				: #fff;
+}
+#main #taskbar #clock{
+	float							: right;
+	background						: url(images/clock.png) no-repeat 4px center;
+	padding							: 0 8px 0 40px;
+	font-size						: 11px;
+	border-left						: 1px solid #4E92C5;
+	font-weight						: 700;
+	text-align						: center;
+	color							: #0968B0;
+}
+
+.windowOnBar_Off, .windowOnBar_On {
+	cursor							: pointer;
+	display							: inline-block;
+	height							: 21px;
+	margin-left						: 3px;
+	overflow						: hidden;
+	padding-left					: 10px;
+	padding-right					: 10px;
+	padding-bottom					: 7px;
+	white-space						: nowrap;
+	width							: 137px;
+}
+
+.windowOnBar_Off{
+	background						: url(images/minbar_off.png) top center no-repeat;
+}
+
+.windowOnBar_On {
+	background						: url(images/minbar_on.png) top center no-repeat;
+}
+
+/******* /TASKBAR  *******/
+/******* TOOLBAR  ********/
+.blockbar {
+	background-color				: #EEEEEE;
+	border-bottom					: 2px ridge #FFFFFF;
+	font-size						: 20px;
+	padding-bottom					: 3px;
+	overflow						: hidden;
+	width							: 100%;
+}
+.blockbarItem:hover, .blockbarItem_right:hover, .blockbarItemPress, .blockbarItemPress_right 
+{
+	-moz-border-radius				: 5px;
+	-o-border-radius				: 5px;
+	-opera-border-radius			: 5px;
+	-webkit-border-radius			: 5px;
+	background-color				: #eeeeee;
+	border-color					: #a5a6ad;
+	border-radius					: 5px;
+	border-style					: solid;
+	border-width					: 1px;
+	cursor							: pointer;
+	margin-top						: 4px;
+	padding							: 2px 7px 5px;
+	text-align						: center;
+	width							: auto;
+}
+.blockbarText {
+	color							: #333333;
+	font-size						: 10px;
+	margin-top						: 5px;
+}
+
+.blockbarItem, .blockbarItem_right {
+	border							: 1px solid #eeeeee;
+	cursor							: pointer;
+	margin-top						: 4px;
+	padding							: 2px 7px 5px;
+	text-align						: center;
+	width							: auto;
+}
+
+.blockbarItem, .blockbarItem:hover, .blockbarItemPress {
+	margin-left						: 3px;
+	float							: left;
+}
+
+.blockbarItem_right, .blockbarItem_right:hover, .blockbarItemPress_right {
+	margin-right					: 3px;
+	float							: right;
+}
+
+.blockbarItem:hover, .blockbarItem_right:hover, .blockbarItemPress, .blockbarItemPress_right {
+	-moz-border-radius				: 5px;
+	-o-border-radius				: 5px;
+	-opera-border-radius			: 5px;
+	-webkit-border-radius			: 5px;
+	background-color				:#eeeeee;
+	border-color					: #a5a6ad;
+	border-radius					: 5px;
+	border-style					: solid;
+	border-width					: 1px;
+	cursor							: pointer;
+	margin-top						: 4px;
+	padding							: 2px 7px 5px;
+	text-align						: center;
+	width							: auto;
+}
+
+.blockbarItemPress, .blockbarItemPress_right {
+	background-color				: #e7e7e7;
+	border-color					: #84848a #909197 #a5a6ad #909197;
+	border-radius					: 5px;
+	border-style					: solid;
+	border-width					: 2px 2px 1px 2px;
+	margin-top						: 3px;
+	padding							: 2px 6px 5px;
+}
+/******* /TOOLBAR  *******/
+/******* CONTENTDIALOG  ***/
+.boxListe
+{
+	border							: 1px solid #8A8A8A;
+	float							: left;
+	width							: 25%; 
+	margin							: 10px 0 0 1%;
+}
+.boxGrid
+{
+	border							: 1px solid #8A8A8A;
+	float							: left;
+	width							: 95%; 
+	margin							: 10px 0 0 1%;
+	/* On met une police un peu plus l&eacute;g&egrave;re. */
+	font-family						: Arial;
+	font-size						: 10px;
+}
+.boxDetail
+{
+	border							: 1px solid #8A8A8A;
+	float							: right;
+	width							: 70%;
+	margin							: 10px 1% 0 0;
+}
+
+.boxDetail .titre, .boxListe .titre, .boxGrid .titre
+{
+	font-size						: 10px;
+	background-color				: #FAFAFA;
+	border-bottom					: 1px solid #E1E1E1;
+	color							: #346A98; 
+	padding							: 2px 0 3px 10px;
+}
+/******* /CONTENTDIALOG ***/
+
+/******* /FORMULAIRES   ***/
+.dialogTitle
+{
+	font-size						: 14px;
+	font-weight						: bold;
+	text-decoration					: underline;
+}
+table.formSaisie
+{
+	margin-left						: 5px;
+	margin-top						: 25px;
+	border							: solid 1px #DDD;
+	font-size:						: 10px;
+}
+table.formSaisie tr
+{
+	/* Permet de ne pas avoir un formulaire trop "touffu". */
+	height							: 27px;
+}
+table.formSaisie tr.intro
+{
+	font-weight						: bold;
+	font-size						: 10px;
+	font-family						: Helvetica;
+	border-bottom					: solid 1px #DDD !important;
+	background-color				: #6EB6D5;
+	text-align						: center;
+	line-height						: 27px;
+	color							: #FFF;
+}
+table.formSaisie td
+{
+	padding-left					: 10px !important;
+}
+/******* /BLOCS d'erreurs et de validation   ***/
+div.warnings
+{
+	width 							: 70%;
+	text-align						: center;
+	color							: Red;
+	/* Ajustement du padding pour ne pas trop le coller au reste des éléments HTML. */
+	margin							: 10px 15% 15px;
+	padding							: 5px;
+	border							: 1px solid #F00;
+	background						: #FFDDDD url(images/Symboles_Alertes_N3.png) no-repeat scroll 40px 5px;
+	min-height						: 50px;
+}
+div.informations
+{
+	width 							: 70%;
+	text-align						: center;
+	color							: Red;
+	/* Ajustement du padding pour ne pas trop le coller au reste des éléments HTML. */
+	margin							: 10px 15% 15px;
+	padding							: 5px;
+	border							: 1px solid #F00;
+	background						: #FFDDDD url(images/Symboles_Alertes_N1.png) no-repeat scroll 40px 5px;
+	min-height						: 50px;
+}
+div.alerts
+{
+	width 							: 70%;
+	text-align						: center;
+	color							: Red;
+	/* Ajustement du padding pour ne pas trop le coller au reste des éléments HTML. */
+	margin							: 10px 15% 15px;
+	padding							: 5px;
+	border							: 1px solid #F00;
+	background						: #FFDDDD url(images/Symboles_Alertes_N2.png) no-repeat scroll 40px 5px;
+	min-height						: 50px;
+}
+div.warnings_noimg
+{
+	text-align						: center;
+	color							: Red;
+	margin							: 10px 15% 0;
+	padding							: 5px;
+	border							: 1px solid #F00;
+	background						: #FFDDDD;
+	min-height						: 50px;
+}
+div.success
+{
+	background-color				: #D2F5D2;
+	border							: 1px solid #3A7C3A;
+	color							: #3A7C3A;
+	margin							: 10px 15% 0;
+	padding							: 5px;
+	text-align						: center;
+}
+/*
+	Style par d&eacute;faut permettant de designer les liens d'ajout de donn&eacute;es dans l'administration.
+*/
+span.champObligatoire
+{
+	color							: #E1051F !important;
+	font-weight 					: bold !important;
+}
+span.add
+{
+	cursor							: pointer;
+	text-decoration					: underline;
+}
+div.formulaireSaisie
+{
+	margin-left						: 15px;
+	margin-top						: 15px;
+}
+div.formulaireSaisie .title
+{
+	text-align						: center;
+	font-size						: 18px;
+	font-weight						: bold;
+	text-decoration					: underline;
+	padding-bottom					: 15px;
+}
+table.formBox
+{
+	width							: 90%;
+	border							: solid 1px #DDD;
+	margin							: 10px 2% 10px 2%;
+	align							: center;
+}
+tr.rowValidation
+{
+	text-align						: center;
+}
+/*
+	Les boutons stylis&eacute;s.
+*/
+.fg-button { 
+	outline							: 0; 
+	margin							:0 4px 0 0; 
+	padding							: .4em 1em; 
+	text-decoration					: none !important; 
+	cursor							: pointer; 
+	position						: relative; 
+	text-align						: center; 
+	zoom							: 1; 
+}
+.fg-button .ui-icon { 
+	position						: absolute; 
+	top								: 50%; 
+	margin-top						: -8px; 
+	left							: 50%; 
+	margin-left						: -8px; 
+}
+
+a.fg-button { 
+	float							: left; 
+}
+
+/* remove extra button width in IE */
+button.fg-button { 
+	width							: auto; 
+	overflow						: visible; 
+}
+.fg-button-icon-left { 
+	padding-left					: 2.1em; 
+}
+.fg-button-icon-right { 
+	padding-right					: 2.1em; 
+}
+.fg-button-icon-left .ui-icon { 
+	right							: auto; 
+	left							: .2em; 
+	margin-left						: 0; 
+}
+.fg-button-icon-right .ui-icon { 
+	left							: auto; 
+	right							: .2em; 
+	margin-left						: 0; 
+}
+.fg-button-icon-solo { 
+	display							: block; 
+	width							: 8px; 
+	text-indent						: -9999px; 
+}	 /* solo icon buttons must have block properties for the text-indent to work */	
+.fg-buttonset { 
+	float							: left; 
+}
+.fg-buttonset-text { 
+	margin-top						: 7px; 
+}
+.fg-buttonset .fg-button { 
+	float							: left; 
+}
+.fg-buttonset-single .fg-button, .fg-buttonset-multi .fg-button { 
+	margin-right					: -1px;
+}
+.fg-toolbar { 
+	padding							: .5em; 
+	margin							: 0;  
+}
+.fg-toolbar .fg-buttonset { 
+	margin-right					: 1.5em; 
+	padding-left					: 1px; 
+}
+.fg-toolbar .fg-button { 
+	font-size						: 1em;  
+}
+/*demo page css*/
+h2 { 
+	clear							: both; 
+	padding-top						: 1.5em; 
+	margin-top						: 0; 
+} 
+.strike { 
+	text-decoration					: line-through; 
+}
+/*
+	Styles de gestion du pav&eacute; de d&eacute;tail.
+*/
+#boxLeft
+{
+	float							: left;
+	width							: 100%;
+}
+#boxDetails
+{
+	float							: right;
+	width							: 50%;
+}
+span.sousMenu
+{
+	text-decoration					: underline;
+	cursor							: pointer;
+}
+div.popupTitle
+{
+	color							: #CACACA;
+	font-size						: 24px;
+	font-weight						: bold;
+	text-align						: center;
+}
+/**
+	Styles g&eacute;rants les galeries photos.
+*/
+.pikachoose
+{
+	width							: 510px;
+	margin							: 0 auto 50px auto;
+}
+/* This is the ul you have all your images in */
+.pikachoose ul
+{
+	padding-left					: 0;
+	width							: 510px;
+	height							: 180px;
+	margin							: 0;
+	overflow						: hidden;
+}
+.pikachoose ul li
+{
+	float							: left;
+	border							: 1px solid #555;
+	padding							: 2px;
+	background						: #777;
+	margin							: 0 6px 4px 0;
+	position						: relative;
+	overflow						: hidden;
+}
+.pikachoose ul li div img
+{
+	position						: relative;
+	cursor							: pointer;
+}
+/* this is the surroundner for all your elements. This is also the fake border around the main img and room for caption */
+.pika_main
+{
+	width							: 506px;
+	height							: 325px;
+	display							: block;
+	position						: relative;
+}
+/*sine we give it the fake border, you need to position the image a little. */
+.pika_main_img
+{
+	position						: absolute;
+	top								: 2px;
+	left							: 2px;
+}
+.pika_back_img
+{
+	position						: relative;
+	top								: 0px;
+}
+.pika_subdiv
+{
+	position						: relative;
+	border							: 1px solid #555;
+	background						: #777;
+	padding							: 2px;
+}
+.pika_subdiv img, .pika_subdiv a img
+{
+	border							: none;
+}
+.pika_caption
+{
+	width							: 500px;
+	height							: 24px;
+	padding-top						: 4px;
+	text-align						: center;
+	position						: absolute;
+	bottom							: 7px;
+	left							: 3px;
+	background						: url('images/pikachoose/black.png') top left;
+	color							: white;
+}
+.pika_caption a
+{
+	color							: white;
+}
+.pika_play
+{
+	position						: absolute;
+	z-index							: 1;
+	left							: 50%;
+	margin-left						: -25px;
+	width							: 50px;
+	top								: 5px;
+}
+.pika_play a
+{
+	position						: relative;
+	margin-left						: auto;
+	cursor							: pointer;
+	display							: block;
+	width							: 50px;
+	height							: 50px;
+	background						: url('images/pikachoose/play.png') top center no-repeat;
+}
+.pika_play a
+{
+	position						: relative;
+	margin-left						: auto;
+	cursor							: pointer;
+	display							: block;
+	width							: 50px;
+	height							: 50px;
+	background						: url('images/pikachoose/pause.png') top center no-repeat;
+}
+
+.pika_navigation a
+{
+	font-size						: 12px; 
+	text-decoration					: none;
+}
+.pika_navigation a:hover
+{
+	text-decoration					: underline;
+}
+.pika_navigation
+{
+	padding-top						: 10px;
+	clear							: both;
+	text-align						: center;
+}
+/* if you want to 'hide' these just make their height and width 1px */
+.pika_prev_hover
+{
+	position						: absolute;
+	top								: 5px;
+	left							: 5px;
+	height							: 456px;
+	width							: 100px;
+	background						: url('images/pikachoose/rewind.png') top left no-repeat
+}
+.pika_next_hover
+{
+	position						: absolute;
+	top								: 5px;
+	right							: 5px;
+	height							: 456px;
+	width						 	: 100px;
+	background						: url('images/pikachoose/fastf.png') top right no-repeat;
+}
+/* Styles permettant de g&eacute;rer les icônes du panneau de configuration. */
+.controlpanel_icons
+{
+	/* Groupe de 3 icônes. */
+	width							: 100%;
+	float							: left;
+}
+.controlpanel_icon_useraccount
+{
+	background						: url('images/iconset/user.png') top left no-repeat;
+	cursor 							: pointer;
+	width							: 33%;
+	float							: left;
+	height 							: 16px;
+}
+.controlpanel_icon_userpassword
+{
+	background						: url('images/iconset/key.png') top left no-repeat;
+	cursor 							: pointer;
+	width							: 33%;
+	float							: left;
+	height 							: 16px;
+}
+.controlpanel_icon_useroptions
+{
+	background						: url('images/iconset/asterisk_orange.png') top left no-repeat;
+	cursor 							: pointer;
+	width							: 33%;
+	float							: left;
+	height 							: 16px;
+}
+.controlpanel_icon_useraccount span, 
+	.controlpanel_icon_userpassword span,
+	.controlpanel_icon_useroptions span
+{
+	margin-left						: 20px;
+}
+img.button
+{
+	cursor							: pointer;
+}
+a:link.expired, a:visited.expired
+{
+	color							: #555;
+	text-decoration					: none;
+}
+a:hover.expired, a:active.expired
+{
+	text-decoration					: underline;
+}
+a.uploadifySend
+{
+	background-image				: url(images/upload.png);
+	background-repeat				: no-repeat;
+	padding-left					: 24px;
+	height							: 24px;
+}
+.statusbar
+{
+    position						: fixed;
+    bottom							: 35px;
+    left							: 0px;
+    right							: 0px;
+    height							: 16px;    
+    padding							: 5px;
+    background						: black;
+    color							: white;    
+    border							: solid 1px lightgray;
+    opacity							: .70;    
+    filter							: alpha(opacity="70");
+    z-index							: 200;
+    overflow						: hidden;
+    overflow-y						: auto; 
+}
+.statusbarhighlight
+{
+    /*font-weight						: bold;
+    background-color				: khaki;
+    color							: Maroon;
+    border							: solid 1px silver;*/
+}

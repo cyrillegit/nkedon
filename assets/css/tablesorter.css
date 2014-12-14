@@ -1,0 +1,86 @@
+/**
+	Feuille de styles tablesorter.css
+	
+	Copyright Id2tel
+*/
+@CHARSET "ISO-8859-1";
+/* tables */
+table.tablesorter {
+	background-color: #CDCDCD;
+	width: auto;
+	text-align: left;
+	font-size: 1em;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #1c9bd3;
+	color: #FFFFFF;
+	padding: 4px;
+}
+table.tablesorter thead tr .header {
+	background-image: url(../images/tablesorter/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	/* Jerome, pour aligner verticalement et centré le texte dans une cellule ! */
+	height:				auto;
+	line-height:		auto;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(../images/tablesorter/asc.gif);
+	background-repeat:		no-repeat;
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(../images/tablesorter/desc.gif);
+	background-repeat:		no-repeat;
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+	background-color: #46c7ff;
+}
+table.tablesorter tbody tr td.noresults {
+	text-align: center;
+	color:#999999;
+	font-weight:bold;
+	padding:15px 0;
+}
+table.tablesorter tr.even 
+{
+  background-color: #eee;
+}
+table.tablesorter tr.odd 
+{
+  background-color: #ddd;
+}
+.selectable .ui-selecting 
+{ 
+	background: #FECA40 !important; 
+}
+.selectable .ui-selected 
+{ 
+	background: #F39814 !important; 
+	color: white !important; 
+}
+.selectable .ui-selected a
+{
+	/* 
+		Permet d'afficher le a href en blanc quand la ligne est sélectionnée.
+	*/
+	color: white !important; 
+}
+
+/**
+	Ajout Jérôme Perciot, pour prendre en compte les dates dépassées.
+*/
+table.tablesorter tbody td.dateOverflow
+{
+	background-color: #E1051F !important;
+	color: #FFFFFF !important;
+	font-weight: bold !important;
+}

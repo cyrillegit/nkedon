@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tips>
+  <!--Gestion générale-->
+  <tip id="button_connect">Pour vous identifier sur le site Internet avec votre identifiant et votre mot de passe. Le code de la clinique est [$strong$]très important[$/strong$], il permet de rajouter une clé de sécurité à vos données.</tip>
+  <tip id="login">Saisissez votre identifiant pour vous connecter. [$span class='champObligatoire'$]Attention, [$/span$]les majuscules/minuscules sont très importants.</tip>
+  <tip id="password">Saisissez votre mot de passe pour vous connecter. [$span class='champObligatoire'$]Attention, [$/span$]les majuscules/minuscules sont très importants.</tip>
+  <tip id="code_clinique">Saisissez votre code clinique pour vous connecter. Si vous ne vous en souvenez pas, veuillez prendre contact avec votre administrateur. [$span class='champObligatoire'$]Attention, [$/span$]les majuscules/minuscules sont très importants.</tip>
+  <tip id="forgot_password">Cliquez sur ce lien pour forcer le système à vous regénérer un mot de passe afin de pouvoir le modifier vous de votre côté lors de votre prochaine connexion. Vous devrez impérativement vous munir du code de la clinique pour utiliser ce système.</tip>
+  <tip id="edit_creneau_horaire">Modifie le créneau horaire en ouvrant le formulaire dédié.</tip>
+  <tip id="delete_creneau_horaire">Supprime le créneau horaire. Une fois le créneau supprimé, les pointages ne pourront plus fonctionner sur la tablette pour cet horaire, ils seront ignorés.</tip>
+  <tip id="filtre_planning_date">Sélectionnez une date à laquelle vous voulez afficher les plannings.</tip>
+  <tip id="logo">Si vous cliquez sur ce logo, vous aurez une visiblité sur le tableau de bord.</tip>
+  <tip id="logout">Vous déconnecte en sauvegardant la date et l'heure de dernière connexion. Votre session est également enregistrée et vidée.</tip>
+  <tip id="my_account">Ouvre la page où vous pouvez modifier tous vos renseignements, votre adresse, vos adresses emails, téléphone, etc.</tip>
+  <tip id="my_alerts">Ouvre la page sur laquelle sont répertoriées l'ensemble distinct des alertes du backoffice pour tous les modules que vous utilisez.</tip>
+  <tip id="google_map">Affiche la carte de la société. Vous avez ainsi une vue directe d'où nous situés géographiquement.</tip>
+  <tip id="map">Affiche la carte de la société. Cette carte vous permet d'orienter votre personnel plus simplement.</tip>
+  <tip id="administration">Ouvre le module d'administration, où vous pourrez modifier l'intégralité des données du site, comme les salariés, les plannings, les services, zones, etc.</tip>
+  <tip id="previous_page">Cliquez sur ce lien pour retourner à la page précédente de votre historique.</tip>
+  <tip id="cancel_roadmap">Cliquez sur ce bouton pour annuler la saisie de votre feuille de route.</tip>
+  <tip id="open_tdb">Affiche la page du tableau de bord. Dans cette vue, vous aurez accès notamment aux dernières nouvelles, et aux alertes liées à votre activité.</tip>
+  <tip id="id2tel">Cliquez sur ce lien pour ouvrir dans un nouvel onglet ou une nouvelle page (selon le navigateur) vers le site Internet de la société [$strong$]Id2tel[$/strong$], éditrice du logiciel.</tip>
+  <tip id="save_your_account">Modifie les informations de votre compte dans la base de données Surik@.</tip>
+  <tip id="info_clinique">Ouvre la page de gestion de votre établissement de santé. Dans cette nouvelle fenêtre, vous aurez alors la possibilité de consulter le cahier de liaison (entre votre établissement de santé et le prestataire de nettoyage si vous avez ouvert l'accès. Vous aurez également la possibilité de gérer les éventuelles réclamations.</tip>
+  <tip id="UpdateCliniqueInfo">Ce bouton valide les modifications en vérifiant que vous ayez tout saisi, et enregistre les modifications dans la base de données.</tip>
+  <tip id="more_infos_alertes">Affiche un tableau complet des alertes du jour sur votre backoffice. Un système de recherche avancée vous permettra de choisir des alertes ciblées. Le détail de l'alerte vous affichera alors le détail dans le module concerné.</tip>
+  <tip id="send_password_forgotten">Ce bouton permet de modifier le mot de passe de manière aléatoire, et l'envoie ensuite par email au salarié concerné.</tip>
+  <tip id="change_password">Cliquer sur ce bouton pour réinitialiser le mot de passe. (Nécessite de connaître l'ancien mot de passe).</tip>
+  <tip id="post_question">Enregistre la question et envoie un mail aux services concernés. Une réponse rapide sera apportée en fonction de la complexité de votre demande.</tip>
+    
+  <!--Gestion du tableau de bord-->
+  <tip id="module_noalert">Il n'y a aucune alerte actuellement disponible pour ce module.</tip>
+  <tip id="map">Affiche le plan complet du site Internet avec tous les liens pour une navigation plus aisée.</tip>
+  <tip id="versions">Affiche l'historique des versions. Cet historique concerne tous les logiciels, le backoffice, et les applications ASH / Gouvernantes.</tip>
+  <tip id="mentions">Affiche le texte des mentions légales. Ce texte obligatoire de par la loi vous indique les personnes à contacter en cas de problèmes de données.</tip>
+  <tip id="contact">Page de contact personnalisée et complète.</tip>
+  
+  <!--Gestion des immobilisations-->
+  <tip id="print_immobilisation">Imprime le détail de l'immobilisation sous la forme d'un fichier PDF.</tip>
+  <tip id="print_incident_materiel">Imprime sous la forme d'un document PDF le détail complet de cet incident matériel. Il peut faire office de bon d'intervention pour le réparateur.</tip>
+  <tip id="detail_materiel">Cliquez sur ce bouton pour afficher tous les détails de l'immobilisation y compris l'historique des réparations qui lui sont associées.</tip>
+  <tip id="edit_materiel">Permet de modifier le matériel en ouvrant la popup de modification.</tip>
+  <tip id="delete_materiel">Cliquez sur l'icône pour supprimer cette immobilisation.[$br /$][$strong$][$u$]Attention[$/u$][$/strong$], lorsque vous supprimez une immobilisation, toutes ses éventuelles pannes seront automatiquement supprimées.</tip>
+  <tip id="delete_incident_materiel">Cliquez sur l'icône pour supprimer cet incident matériel.</tip>
+  <tip id="set_reparation">Cliquez sur ce bouton pour saisir les informations de la réparation de l'immobilisation.</tip>
+  <tip id="email_incident_materiel">Génère et envoie l'email au réparateur selon les données saisies dans votre backoffice.</tip>
+  <tip id="destroy_immobilisation">Cliquez sur ce bouton pour déclarer l'immobilisation comme détruite. Elle ne pourra plus être gérée depuis les tablettes et aucune réparation ni incident ne pourra être effectuée.</tip>
+  
+  <!--Gestion des EPI/EPC-->
+  <tip id="delete_epi">Supprime l'EPI et éventuellement les documents qui lui sont associés.</tip>
+  <tip id="detail_epi">Affiche une page contenant les informations détaillées de l'EPI, et un lien pour imprimer la fiche de l'EPI.</tip>
+  <tip id="edit_epi">Permet de modifier les informations de l'EPI sélectionné en ouvrant la popup de modification.</tip>
+  <tip id="delete_epi_from_dotation">Cliquez sur ce lien pour retirer cet EPI de la dotation.</tip>
+  
+  <!--Gestion des immobilisations-->
+  <tip id="recherche_avancee_historique_reparations">Cliquez sur ce lien pour affiner votre recherche d'historique des réparations.</tip>
+  
+  <!--Gestion du personnel-->
+  <tip id="add_salarie">Ce bouton vous permet d'ajouter un salarié dans la base de données et rafraîchit ensuite le tableau des salariés.</tip>
+  <tip id="consult_dotation">Affiche le détail de la dotation, avec l'ensemble des EPI et des références associées.</tip>
+  <tip id="edit_dotation">Permet de modifier la dotation, en y rajoutant des références, et/ou en en supprimant.</tip>
+  <tip id="consult_epi">Permet de consulter les informations des différents EPI. Vous pourrez ainsi visualiser d'un seul coup d'oeil l'ensemble des références, des tailles, des couleurs, etc.</tip>
+  <tip id="print_conge_absence">Imprime un document PDF réutilisable concernant la demande d'absence ou la demande de congé. S'il s'agit d'une demande de jours de congés, vous avez sur ce document le solde de jours de congés pour ce salarié.</tip>
+  <tip id="delete_evenement">Supprime l'évènement de votre backoffice. [$strong$][$u$]Attention[$/u$][$/strong$], vous n'aurez plus cette information disponible pour vos gouvernantes.</tip>
+  <tip id="print_evenement">Imprime l'évènement en ouvrant un document PDF en automatique.</tip>
+  <tip id="edit_evenement">Ouvre une popup avec un formulaire pour modifier l'évènement, qu'il s'agisse d'une formation ou d'une visite médicale.</tip>
+  <tip id="consult_evenement">Affiche le détail complet de l'évènement, qu'il s'agisse d'une formation ou d'une visite médicale.</tip>
+  <tip id="upload_photo_identite">Ouvre une fenêtre de chargement du fichier image correspondant à la photo d'identité du salarié. Cette photo est très utile pour certaines conditions, comme des convocations à la visite médicale, à des formations, etc.</tip>
+  <tip id="print_salarie">Exporte un fichier PDF avec le détail complet du salarié, notamment ses horaires, ses informations générales.</tip>
+  <tip id="save_employee">Enregistre les modifications du salarié dans la base de données.</tip>
+  <tip id="edit_visite_medicale">Enregistre les modifications de la visite médicale dans la base de données.</tip>
+  <tip id="vider_panier">Cette action permet d'effacer intégralement le contenu temporaire de votre commande d'EPI. [$strong$][$u$]Attention[$/u$][$/strong$], cette opération ne peut pas être annulée !</tip>
+  <tip id="view_stock_epi">Affiche une popup avec le détail du stock de l'EPI au jour de la commande. Vous avez également le suivi du stock en temps réel sur le mois en cours.</tip>
+  <tip id="view_full_basket">Affiche le détail de votre panier, avec les quantités, les EPIS commandés, et les coûts liés à cette commande.</tip>
+  <tip id="validation_dotation_current">Valide votre réservation d'EPI en l'enregistrant définitivement dans le backoffice. Suite à cette validation, vous la retrouverez dans l'historique des dotations. Si elle a été déclarée remise au salarié, vous ne la visualiserez pas sur le téléphone.</tip>
+  <tip id="regenerate_password">Regénère automatiquement le mot de passe du salarié, et lui envoie par la messagerie. Le temps d'attente peut aller jusqu'à 10 minutes avant la réception de cet email.</tip>
+  <tip id="edit_remplacant_potentiel">Ouvre une popup permettant la sélection d'un remplaçant potentiel du salarié concerné. [$strong$][$u$]Attention[$/u$][$/strong$], l'association est immédiate.</tip>
+  <tip id="delete_remplacants_potentiels">Supprime les remplaçants potentiels sélectionnés de la liste.</tip>
+  <tip id="salarie_add_absence">Ouvre une popup vous permettant d'effectuer la nouvelle demande d'absence. [$strong$][$u$]Attention[$/u$][$/strong$], cette demande étant réalisée sur le Backoffice sera immédiatement validée et effective.</tip>
+  <tip id="salarie_add_conge">Ouvre une popup vous permettant d'effectuer une nouvelle demande de jours de congés.[$strong$][$u$]Attention[$/u$][$/strong$], cette demande étant réalisée sur le Backoffice sera immédiatement validée et effective.</tip>
+  <tip id="add_poste">Ce bouton vous permet d'ajouter un poste dans la base de données et rafraïchit ensuite le tableau des postes.</tip>
+  
+  <!--Gestion du suivi des périodiques-->
+  <tip id="add_suivi_periodique">Ouvre la popup de création d'un nouveau suivi de périodique. Un suivi de périodique est une prestation effectuée selon une fréquence [$b$]non quotidienne[$/b$].</tip>
+  <tip id="consult_suivi_periodique">Ouvre la fenêtre détaillée du suivi des périodiques, avec l'ensemble des dates à laquelle le suivi a été reporté.</tip>
+  <tip id="print_suivi_periodique">Lance l'impression sur la ou les prestation(s) que vous aurez sélectionné(es) avec les cases à cocher.</tip>
+  <tip id="delete_suivi_periodique">Supprime la ou les prestation(s) que vous aurez sélectionné(es) avec les cases à cocher.</tip>
+  <tip id="decaler_suivi_periodique">Permet de modifier la date de prochain suivi concernant la ou les prestation(s) que vous aurez sélectionné(es) avec les cases à cocher.</tip>
+  <tip id="gestion_postes">La gestion des postes est une gestion particulière des salariés, dans laquelle seuls les informations de nom et de cliniques sont requis. Un poste est un regroupement de salariés non nominatif.</tip>
+  
+  <!--Gestion des stocks-->
+  <tip id="add_produit">Ce bouton vous permet d'ajouter un produit dans la base de données et rafraîchit ensuite le tableau des produits.</tip>
+  <tip id="delete_produit">Cliquez sur cette icône pour supprimer ce produit. [$strong$][$u$]Attention[$/u$][$/strong$], tout son historique de stocks sera également supprimé.</tip>
+  <tip id="detail_produit">Affiche les informations détaillées du produit, avec ses articles, ses références, etc.</tip>
+  <tip id="print_produit">Imprime le détail complet de la fiche produit avec ses éventuels articles au format Adobe PDF.</tip>
+  <tip id="edit_produit">Ouvre la page de l'administration pour modifier le produit.</tip>
+  <tip id="inventaire">Ouvre une nouvelle fenêtre de saisie pour vous aider à intégrer la nouvelle quantité de stock de ce produit/EPI, en intégrant le nombre d'articles qui composent ce produit/EPI.</tip>
+  <tip id="edit_article">Permet de modifier l'article en ouvrant la popup de modification.</tip>
+  <tip id="delete_article">Cliquez sur l'icône pour supprimer cet article. [$u$][$strong$]Attention[$/u$][$/strong$], tout le stock sera supprimé automatiquement.</tip>
+  <tip id="edit_epi">Permet de modifier la référence de l'EPI en ouvrant la popup de modification.</tip>
+  <tip id="delete_epi">Cliquez sur l'icône pour supprimer cette référence EPI. [$u$][$strong$]Attention[$/u$][$/strong$], tout le stock sera supprimé automatiquement.</tip>
+  <tip id="add_article_epi">Permet d'ajouter une référence à l'EPI sélectionné.</tip>
+  
+  <!--Gestion des feuilles de route.-->
+  <tip id="reprise_planning">Cliquez sur ce bouton pour que le planning du jour choisi soit repris en intégralité. La page se rechargera alors en mode modification sur ce même planning. [$strong$]Attention[$/strong$], l'opération peut être longue.</tip>
+  <tip id="detail_fdr">Cliquez sur ce bouton pour afficher le détail complet de la feuille de route du salarié.</tip>
+  <tip id="edit_fdr">Cliquez sur ce bouton pour modifier les informations de la feuille de route du salarié.</tip>
+  <tip id="edit_di">Cliquez sur ce bouton pour modifier les informations de la demande d'intervention.</tip>
+  <tip id="print_fdr">Cliquez sur ce bouton pour imprimer le détail complet de la feuille de route du salarié.</tip>
+  <tip id="delete_fdr">Cliquez sur ce bouton pour supprimer la feuille de route du salarié. [$strong$]Attention[$/strong$], une fois la feuille de route supprimée, l'ASH ne pourra plus la récupérer.</tip>
+  <tip id="add_fdr">Cliquez sur ce lien pour ouvrir le formulaire de saisie des feuilles de route.</tip>
+  <tip id="fdr_add_zone">Ajoute la ou les zones sélectionnées dans la liste des zones à affecter à la feuille de route que vous êtes en train de créer.</tip>
+  <tip id="fdr_remove_zone">Supprime de la liste la ou les zones préselectionnées. Pour sélectionner la ou les ones à retirer, utilisez le tableau situé sur votre droite et cliquez sur les lignes représentant les zones à supprimer.</tip>
+  <tip id="save_fdr">Ce bouton permet d'effectuer l'enregistrement de la feuille de route dans le backoffice. S'il vous manque certains éléments, comme l'heure de début et de fin de créneau, le programme vous l'indiquera.</tip>
+  <tip id="moveDownFdr">Descend la zone sélectionnée dans la liste des rangs.</tip>
+  <tip id="moveUpFdr">Monte la zone sélectionnée dans la liste des rangs.</tip>
+  
+  <!--Gestion des contrôles des prestations-->
+  <tip id="filtre_controle">Cliquez sur ce lien pour accéder aux filtres avancés. Si un filtre existe déjà, vous avez une information ([$strong$]Filtre actif[$/strong$]) affiché sur le lien. Le filtre s'efface automatiquement lorsque vous vous déconnectez ou lorsque votre session expire.</tip>
+  <tip id="consult_controle">Affiche le détail complet du contrôle, avec les prestations contrôlées, et le résultat du contrôle en pourcentage (si vous avez le contrôle bianire activé, il affichera Conforme/Non conforme).</tip>
+  <tip id="print_controle">Cliquez sur ce bouton pour imprimer ce contrôle. [$strong$][$span class='champObligatoire'$]Attention[$/span$][$/strong$], cette impression est au format Adbe PDF. Pour installer PDF, veuillez prendre contact avec votre administrateur.</tip>
+  <tip id="detail_controle">Consulter le détail du contrôle avec la liste des prestations et le résultat.</tip>
+  <tip id="edit_controle">Affiche un écran contenant le détail complet du contrôle sélectionné. Vous pourrez imprimer ce contrôle.</tip>
+	
+  
+  <!--Gestion des dotations.-->
+  <tip id="print_dotation">Cliquez sur ce bouton pour imprimer le détail de la dotation au format Adobe PDF.</tip>
+  <tip id="delete_dotation">Cliquez sur ce lien pour supprimer cette dotation. [$string]Attention{/$string$], cette dotation ne sera plus visible sur le Backoffice.</tip>
+  <tip id="reject_dotation">Cliquez sur ce lien pour refuser la demande de dotation. Celle-ci ne sera pas supprimée de la base de données, mais le document PDF de remise de dotation ne pourra pas être généré.</tip>
+  <tip id="print_visite_medicale">Cliquez sur ce bouton pour imprimer la convocation à la visite médicale au format Adobe PDF.</tip>
+  <tip id="print_formation">Cliquez sur ce bouton pour imprimer la convocation à la formation au format Adobe PDF.</tip>
+  
+  <!--Gestion de la sécurité-->
+  <tip id="print_epc">ImprimeCliquez sur ce bouton pour imprimer le résumé de l'EPC au format Adobe PDF.</tip>
+  <tip id="print_vaccin">Cliquez sur ce bouton pour imprimer la convocation à la vaccination au format Adobe PDF.</tip>
+  <tip id="print_visite_medicale">Cliquez sur ce bouton pour imprimer la convocation à la visite médicale au format Adobe PDF.</tip>
+  <tip id="remarques_vaccination">Affiche les éventuelles remarques insérées lors de la création de la vaccination dans le backoffice.</tip>
+  <tip id="edit_visite_medicale">Ouvre une fenêtre pour modifier les informations de la visite médicale à venir.</tip>
+  <tip id="edit_vaccin">Ouvre une fenêtre de modification de la date de vaccination et éventuellement du type de vaccin.</tip>
+  <tip id="edit_salarie_epc">Ouvre une fenêtre de modification de l'EPC associé au salarié, et à quelle date.</tip>
+  
+  <!--Gestion des demandes d'intervention-->
+  <tip id="detail_urgence_hygiene">Affiche une page contenant le détail de l'urgence hygiène, avec les personnes qui y sont rattachées.</tip>
+  <tip id="detail_urgence_maintenance">Affiche une page contenant le détail de l'urgence maintenance. Cette urgence contient l'ensemble des informations liées à cette urgence.</tip>
+  <tip id="print_urgence_hygiene">Imprime la demande d'urgence hygiène au format PDF.</tip>
+  <tip id="print_urgence_maintenance">Imprime la demande d'urgence maintenance au format PDF.</tip>
+  <tip id="delete_urgence_hygiene">Supprime la demande d'urgence hygiène, [$strong$]uniquement[$/strong$] si elle n'a pas encore été récupérée.</tip>
+  <tip id="delete_urgence_maintenance">Supprime la demande d'urgence maintenance, [$strong$]uniquement[$/strong$] si elle n'a pas encore été récupérée.</tip>
+  <tip id="remarques_urgence_hygiene">Indique les remarques éventuelles insérées lors de la création de l'urgence hygiène.</tip>
+  <tip id="add_urgence">Permet d'ajouter une demande d'urgence, soit de maintenance, soit d'hygiène.</tip>
+  <tip id="add_epi_epc">Permet d'ajouter un EPI / EPC.</tip>
+  <tip id="add_immobilisation">Permet d'ajouter une immobilisation dans la base de données.</tip>
+  <tip id="add_panne">Ajoute une panne dans le backoffice. Une fois la panne ajoutée, vous pourrez imprimer un document PDF faisant office de bon de réparation pour le service en charge des incidents matériels.</tip>
+  
+  <!--Médiathèque-->
+  <tip id="create_document_in_ged">Ajoute le document dans la G.E.D. Une fois ce document ajouté, les salariés sélectionnés dans la liste auront alors accès à ce document en consultation. Seul vous, y aurez accès en modification.</tip>
+  <tip id="edit_document">Edite le document de la médiathèque. Vous pouvez modifier les dates de publication et le fichier joint.</tip>
+	<tip id="delete_document">Supprime le document et le fichier physique. Une fois supprimé, il ne sera plus publié sur le backoffice.</tip>
+	<tip id="download_document">Télécharge le document au préalable chargé par le propriétaire et vous pouvez ainsi le copier dans vos dossiers personnels de votre ordinateur.</tip>
+	<tip id="remove_immobilisation_chantier">Permet de supprimer l'immobilisation du chantier, la marge brute sera alors automatiquement mise à jour si l'immobilisation n'est pas encore totalement amortie.</tip>
+	<tip id="print_synthese_site">Imprimer le document Adobe PDF du chantier sélectionné. Toutes les informations seront dans ce document, des zones, produits, immobilisations.</tip>
+	<tip id="print_fiche_prospect">Imprime la fiche détaillée d'un prospect, avec sa raison sociale, son adresse et ses différentes informations utiles à la bonne gestion de la prospection.</tip>
+	<tip id="print_rapport_rdv_prospection">Imprime le rapport de la prospection, avec le prospect, l'adresse et les commentaires éventuels liés à ce rendez-vous de prospection.</tip>
+	<tip id="add_contact">Ouvre une popup vous invitant à saisir les informations du contact, comme son nom, son prénom, son adresse email et ses éventuels numéros de téléphones. L'adresse postale est également possible mais non obligatoire.</tip>
+	<tip id="delete_contact_annotations">Supprime les annotations du contact. Cette suppression est immédiate et dispatchée à l'ensemble des cliniques si le contact est partagé entre toutes les cliniques.</tip>
+	<tip id="add_annotations_contact">Ouvre une fenêtre popup de saisie des annotations du contact. Vous pourrez écrire tout ce que vous désirez, de ses horaires de travail, à des explications autres, comme sa fonction etc.</tip>
+	<tip id="add_contact">Ouvre une popup vous invitant à saisir les informations du contact, comme son nom, son prénom, son adresse email et ses éventuels numéros de téléphones. L'adresse postale est également possible mais non obligatoire.</tip>
+	<tip id="delete_contact">Supprime le contact de votre base de données. [$strong$][$u$]Attention[$/u$][$/strong$], s'il a été synchronisé avec les téléphones, sur ces derniers, le contact restera quand même visible jusqu'à ce qu'il soit supprimé par les personnels itinérants.</tip>
+	<tip id="edit_contact">Ouvre une popup avec les informations nécessaires à la modification du contact choisi.</tip>
+	
+	
+	
+	
+  <!--Administration-->
+  <tip id="delete_taille">Cliquez sur ce bouton pour supprimer la taille.</tip>
+  <tip id="add_materiel">Ce bouton vous permet d'ajouter une immobilisation dans la base de données et rafraîchit ensuite le tableau des immobilisations.</tip>
+  <tip id="delete_pointure">Cliquez sur l'icône pour supprimer cette pointure.</tip>
+  <tip id="edit_taille">Permet de modifier les informations de la taille sélectionnée en ouvrant la popup de modification.</tip>
+  <tip id="delete_couleur">Cliquez sur l'icône pour supprimer cette couleur.</tip>
+  <tip id="delete_account_client">Supprime le compte client en supprimant tous les accès.</tip>
+  <tip id="edit_couleur">Permet de modifier les informations de la couleur sélectionnée en ouvrant la popup de modification.</tip>
+  <tip id="edit_centre">Permet de modifier le centre de médecine du travail en ouvrant la popup de modification.</tip>
+  <tip id="delete_centre">Cliquez sur l'icône pour supprimer cet organisme de formation.</tip>
+  <tip id="delete_account">Cliquez sur l'icône pour supprimer cet identifiant sur le backoffice. [$strong$][$span class='champObligatoire'$]Attention[$/span$][$/strong$], cet identifiant ne sera plus utilisable sur la tablette.</tip>
+  <tip id="edit_fournisseur">Permet de modifier le fournisseur en ouvrant la popup de modification.</tip>
+  <tip id="delete_fournisseur">Permet de supprimer le fournisseur du backoffice. [$strong$][$span class='champObligatoire'$]Attention[$/span$][$/strong$], toutes les informations le concernant (stock, produtis, articles, epi, adresses, etc) seront également supprimées.</tip>
+  <tip id="edit_tablette">Permet de modifier la tablette en ouvrant la popup de modification.</tip>
+  <tip id="delete_tablette">Cliquez sur l'icône pour supprimer cette tablette de la base. Tout son historique sera également supprimé.</tip>
+  <tip id="edit_service">Permet de modifier le nom du service en ouvrant la popup de modification.</tip>
+  <tip id="delete_service">Cliquez sur l'icône pour supprimer ce service. [$strong$][$span class='champObligatoire'$]Attention[$/span$][$/strong$], une fois supprimé, toutes les zones liées à ce service sont automatiquement supprimées !</tip>
+  <tip id="edit_zone">Permet de modifier les informations de la zone sélectionnée en ouvrant la popup de modification.</tip>
+  <tip id="delete_zone">Cliquez sur l'icône pour supprimer cette zone. [$strong$][$span class='champObligatoire'$]Attention[$/span$][$/strong$], une fois supprimée, toutes les sous-zones liées à cette zone sont automatiquement supprimées !</tip>
+  <tip id="delete_version">Cliquez sur l'icône pour supprimer cette version.[$br/$][$strong$]Attention[$/strong$], une fois la version supprimée, les tablettes ne pourront plus télécharger le programme associé.</tip>
+  <tip id="edit_version">Permet de modifier la version de l'application nomade en ouvrant la popup de modification.</tip>
+  <tip id="edit_type_sol">Permet de modifier le nom du type de revêtement en ouvrant la popup de modification.</tip>
+  <tip id="delete_type_sol">Cliquez sur l'icône pour supprimer ce type de sol.</tip>
+  <tip id="edit_conditionnement">Permet de modifier les informations du conditionnement sélectionné en ouvrant la popup de modification.</tip>
+  <tip id="delete_conditionnement">Cliquez sur l'icône pour supprimer ce conditionnement.</tip>
+  <tip id="edit_type_zone">Permet de modifier le nom du type de zone en ouvrant la popup de modification.</tip>
+  <tip id="delete_type_zone">Cliquez sur l'icône pour supprimer ce type de zone.</tip>
+  <tip id="edit_type_panne">Permet de modifier les informations du type de panne sélectionné en ouvrant la popup de modification.</tip>
+  <tip id="delete_type_panne">Cliquez sur l'icône pour supprimer ce type de panne.</tip>
+  <tip id="save_configuration">Cliquez sur ce bouton pour valider la configuration et mettre à jour le backoffice en temps réel.</tip>
+  <tip id="add_epi">Crée un nouvel EPI dans votre backoffice en ouvrant la popup.</tip>
+  <tip id="add_produit">Crée un nouveau produit dans votre backoffice en ouvrant la popup.</tip>
+  <tip id="add_compte_utilisateur">Crée un nouveau compte utilisateur.</tip>
+  <tip id="add_centre">Ajoute un nouveau centre de médecine de travail.</tip>
+  <tip id="add_organisme">Ajoute un nouvel organisme de formation.</tip>
+  <tip id="add_fournisseur">Ajoute un nouveau fournisseur dans votre backoffice.</tip>
+  <tip id="add_sous_zone">Ajoute une nouvelle sous-zone sur une zone existante.</tip>
+  <tip id="edit_sous_zone">Permet de modifier la sous-zone avec les informations nécessaires.</tip>
+  <tip id="delete_sous_zone">Cliquez sur l'icône pour supprimer cette sous-zone.</tip>
+  <tip id="edit_type_sous_zone">Ouvre une popup permettant la création et la mise à jour d'un type de sous-zone.</tip>
+  <tip id="delete_type_sous_zone">Supprime définitivement le type de sous-zone.</tip>
+  <tip id="delete_mouvement_stock">Lorsque vous aurez validé cette suppression, l'historique sera immédiatement rectifié, et le calcul du stock disponible sera remis à jour.</tip>
+  <tip id="consult_mouvement_stock">Ouvre une page permettant l'affichage détaillé du mouvement de stock. Vous saurez alors d'un coup d'oeil tout ce qui concerne ce mouvement de stock.</tip>
+  <tip id="edit_type_panne">Vous permet de modifier le type de panne en effectuant une saisie des différents paramètres, et en vous demandant de sélectionner les types de matériels associés à ce type de panne.</tip>
+  <tip id="delete_type_panne">Supprime le type de panne de votre base de données. Une fois ce type de panne supprimé, les incidents matériels liés à ce type de panne sont automatiquement supprimés.</tip>
+  <tip id="edit_clinique">Permet de modifier une clinique en ouvrant la popup de saisie des informations nécessaires. Cliquez ensuite sur le bouton Enregistrer pour valider et modifier ces informations.</tip>
+  <tip id="delete_clinique">Supprime définitivement la clinique en supprimant l'ensemble complet des données s'y rattachant. [$strong$]Attention[$/strong$], vous perdrez [$strong$][$u$]ABSOLUMENT TOUT[$/u$][$/strong$] votre historique sur cette clinique.</tip>
+  <tip id="edit_definition_protocole">Ouvre une fenêtre popup vous permettant de modifier le protocole, changer l'ordre de réalisation des prestations, etc.</tip>
+  <tip id="delete_definition_protocole">Ce bouton va supprimer l'ensemble du protocole selon les paramètres saisis dans le tableau.</tip>
+  
+  <!-- Liste des informations globales concernant les modules. -->
+  <tip id="InfoModule_FeuilleDeRoute">Il s'agit du module permettant la gestion des feuilles de route des différents agents de services affectés au service de la gouvernante connectée, ou alors du directeur général connecté.</tip>
+  <tip id="InfoModule_Controles">Il s'agit du module de contrôle des prestations de nettoyage effectués depuis les terminaux mobiles. Vous aurez ainsi la visualisation globale de ce qui a été contrôlé, et pourrez également imprimer un rapport PDF par défaut, ou un rapport personnalisé si vous le désirez.</tip>
+  <tip id="InfoModule_TableauBord">Le tableau de bord reprend l'ensemble des données importantes, les numéros de versions, les derniers évènements survenus au cours de la journée. Les évènements sont réinitialisés chaque jour à Minuit.</tip>
+  <tip id="InfoModule_Personnel">Ce module synthétise les renseignements d'un salarié, et tous ses mouvements. Si vous avez opté pour la solution du télépointage (nos boîtiers biométriques), vous aurez également la liste des pointages réalisés de manière automatique.</tip>
+  <tip id="InfoModule_Securite">Ce module reprend l'ensemble des informations utiles à la sécurité de vos employés, avec par exemple, le suivi des visites médicales, formations et évenuellement dotations en EPI / EPC.</tip>
+  <tip id="InfoModule_Immobilisations">Ce module affiche pour l'ensemble des immobilisations de votre clinique, celles qui sont actuellement en panne, et l'historique complet des réparations survenues sur ces mêmes immobilisations.</tip>
+  <tip id="InfoModule_GestionHeures">Liste les différents pointages, et mouvements d'heures, comme par exemple, les congés, les absences, etc.</tip>
+  <tip id="InfoModule_SuiviPeriodiques">Affiche le suivi des contrôles périodiques à effectuer, comme par exemple, les prestations spécifiques sur une zone sensible comme les blocs opératoires. Vous pouvez modifier la date de prochain contrôle et consulter les anciennes dates de réalisation de ces contrôles.</tip>
+  <tip id="InfoModule_Stocks">Affiche le suivi des inventaires de produit, avec les dates à laquelle l'inventaire a été effectué, et par qui.</tip>
+  <tip id="InfoModule_DemandesIntervention">Affiche le suivi des différentes demandes d'intervention, avec l'envoi en quasi temps réel des demandes d'urgences hygiène aux agents de service disponibles sur le terrain.</tip>
+  <tip id="InfoModule_Administration">Ce module permet de saisir les informations générales du Backoffice, avec par exemple, les noms des zones, les options des différentes zones à nettoyer.</tip>
+  <tip id="InfoModule_Mediatheque">Ce module synthétise l'emplacement de toutes les documentations, et éventuellement, les programmes annexes pouvant être utilisés dans votre environnement informatique.</tip>
+  <tip id="InfoModule_GestionClinique">Affiche la synthèse générale de votre établissement de santé. Si vous êtes le responsable de cet établissement de santé, vous pouvez en modifier les informations, sinon, si le compte est ouvert à l'extérieur, vous pourrez alors gérer les réclamations et le cahier de liaison.</tip>
+  <tip id="InfoModule_Synthese">Il s'agit du module de synthèse globale de votre backoffice. Vous avez dans ce module l'ensemble des informations utiles comme les courbes d'évolution des contrôles, les évolutions des pannes matériels, etc.</tip>
+  
+  <!-- Synthèse. -->
+  <tip id="export_telephone_detail">Crée un document Adobe PDF avec le détail des communications du téléphone sélectionné sur la période choisie dans le filtre.</tip>
+  
+  <!-- Liste des informations lisibles dans le tableau des "Alertes". -->
+  <tip id="ALERT_FEUILLE_DE_ROUTE">Il s'agit d'une alerte sur une feuille de route, cette alerte survient dès lors qu'une zone a été terminée, vous pourrez alors consulter le détail de la feuille de route. Attention, cette alerte ne disparaîtra qu'à la fin de la journée.</tip>
+  <tip id="ALERT_POINTAGE">Il s'agit d'une alerte de pointage. Ce pointage peut être une absence, une heure complémentaire, pour obtenir plus d'informations, cliquez simplement sur cette ligne, le programme vous affichera le détail directement.</tip>
+  <tip id="ALERT_CONTROLE">Il s'agit d'un contrôle des prestations effectué par une gouvernante sur une zone précise de votre établissement.</tip>
+  <tip id="ALERT_STOCK">Il s'agit d'une alerte de mouvement de stock. Un produit a été consommé ou réapprovisionné. Vous avez le détail visuel dans le tableau qui s'affiche.</tip>
+  <tip id="ALERT_INCIDENT_MATERIEL">Il s'agit d'un incident matériel, comme une ampoule grillée, ou un sanitaire fuyant.</tip>
+  <tip id="ALERT_URGENCE_HYGIENE">Il s'agit d'une urgence hygiène, par exemple un patient ayant vomi dans une salle particulière.</tip>
+  <tip id="ALERT_URGENCE_MAINTENANCE">Il s'agit d'une urgence maintenance, par exemple une ampoule grillée dans un couloir, un matériel en panne.</tip>
+  <tip id="ALERT_CAHIER_LIAISON">Alerte concernant le cahier de liaison. Cette alerte portera aussi bien sur une question que sur une réponse.</tip>
+  
+  <!-- Réclamations. -->
+  <tip id="add_reclamation">Ouvre une popup pour enregistrer une nouvelle réclamation dans le système. Le prestataire en sera alors immédiatement informé par une alerte et un email.</tip>
+  <tip id="accept_reclamation">Valide la réclamation du client, celui-ci le saura alors immédiatement via l'envoi d'une mail l'invitant à se connecter à sa place de marché que vous lui aurez ouvert au préalable.</tip>
+  <tip id="consult_suivi_reclamation">Affiche le détail du suivi des réclamations clients. Chacune de ces actions sera consultable par le client.</tip>
+  <tip id="valider_suivi_reclamation">Valide votre saisie et ajoute le détail dans le suivi des réclamations.</tip>
+  <tip id="delete_accreditation">Supprime l'accréditation du backoffice. Attention, la personne avec cette accréditation ne pourra plus se connecter sur le système.</tip>
+  <tip id="add_reclamation_commentaires">Ajoute un commentaire à une réclamation. Une fois que le client a effectué cet ajout, la société de nettoyage en est alors immédiatement avertie.</tip>
+	
+  <!-- Cahier de liaison -->
+  <tip id="edit_cahier_liaison">Ouvre une popup de création d'un cahier de liaison dans lequel vous indiquerez le nom et si vous désirez être prévenu quant à l'arrivée de nouveaux messages de votre prestataire.</tip>
+  <tip id="delete_question_cahier_liaison">Ce bouton va supprimer la question, et son éventuelle réponse dès lors que vous aurez validé l'action.</tip>
+  <tip id="historique_cahier_liaison">Affiche la page d'historique du cahier des liaisons avec les informations indiquant qui a écrit, à quelle heure, etc.</tip>
+  <tip id="delete_cahier_liaison">Supprime la question/réponse du cahier de liaison. Vous perdrez ainsi l'historique, et cette opération est irréversible.</tip>
+  <tip id="InfoModule_Delete">Affiche le résultat de la suppression des informations nécessaires. Si la suppression a échouée, vous avez le détail explicite du message.</tip>
+	
+</tips>
