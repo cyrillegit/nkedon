@@ -1,0 +1,287 @@
+ul.my_account#administration
+{
+	width:				875px;
+	min-height:			460px;	
+	margin-top:			7px;
+	float:				left;
+	margin-left:		0px;
+}
+
+/**
+	JP, correctif du bug d'interface sur le menu de droite.
+*/
+.filetree ul, .filetree li, .filetree span
+{
+	width:				200px;
+}
+
+div.cadre_formulaire_administration
+{
+	width:				673px;
+	min-height:			630px;
+	height:				auto;
+	margin:				0px 0px 15px 0px;
+	border:				solid 1px black;
+	float:				right;
+}
+
+table.table_datas
+{
+	margin-left:		10px;
+	/** correctif jperciot, sur le mauvais alignement à droite. **/
+	width:				98%;
+}
+
+div.cadre_formulaire_administration div.admin_content
+{
+	width:				100%;
+	height:				auto;
+}
+
+.form_administration input, textarea, select
+{
+	border:				solid 1px black;
+	width:				120px
+	height:				20px;
+	line-height:		20px;
+	color:				#000000;
+	font-style:			italic;
+}
+
+.bloc_captionImportFile
+{
+	width: 				auto;
+	height:				30px;
+	margin-right:		8px;
+}
+
+div.captionImportFile
+{
+	width: 				auto;
+	height:				30px;
+	line-height: 		30px;
+	font-style:			italic;
+	float:				left;
+	color:				#1c9bd3;
+	font-size:			12px;
+}
+
+div.captionImportFile a
+{
+	color:				#000;
+}
+
+/**
+	Définitions des tables qui permettent la saisie des informations.
+*/
+table.table_import_file
+{
+	width:				100%;
+	height:				inherit;
+	padding-top:		10px;
+	padding-left:		10px;
+}
+/**
+	Les 2 boutons :
+	Enregistrer / Imprimer.
+*/
+td.control_buttons
+{
+	width:				225px;
+	margin-right:		7px;
+}
+
+table.table_title
+{
+	padding-left:		10px;
+}
+
+td.administration_title, div.administration_title
+{
+	width:				auto;
+	height:				16px;
+	font-size:			14px;
+	border-bottom:		solid 1px #1c9bd3;
+	font-weight:		bold;
+	font-style:			italic;
+	text-transform:		uppercase;
+}
+
+td.administration_button_update
+{
+	padding-left:		4px;
+}
+
+table.table_datas
+{
+	margin-top:			20px;
+	font-size:			12px;
+	height:				auto;
+}
+
+td.row_left
+{
+	height:				auto;
+	width:				320px;
+	margin-top:			20px;
+	float:				left;
+}
+
+td.row_right
+{
+	height:				auto;
+	width:				300px;
+		margin-top:			20px;
+	/* Bug Jperciot, flottante ou se retrouve hors du champ. */
+	float:				right;
+}
+
+.field_120
+{
+	width:				120px;
+	height:				14px;
+}
+
+.field_49
+{
+	width:				49px;
+	height:				14px;
+}
+
+select.field_120
+{
+	width:				140px;
+	height:				30px;
+}
+
+td.field_label
+{
+	width:				240px;
+}
+
+input[type=submit].icoAdministrationButtonEnregistrer
+{
+	width:				100px;
+}
+
+.iconstxt.icoAdministrationButtonImprimer
+{
+width: 110px;
+height:25px;
+background-color: #093; 
+font-weight:bold;
+color: #fff;
+}
+
+ul.my_account
+{
+	color:				black;
+}
+
+ul.my_account li
+{
+	list-style-image:	url(images/li_ul_my_account_old.png);
+	font-size:			12px;
+	padding:			3px 0 3px 0;
+}
+
+ul.my_account li a
+{
+	color:				#000;
+	text-decoration:	none;
+	font-weight:		bold;
+}
+
+ul.my_account li a:hover
+{
+	color:				black;
+	text-decoration:	none;
+	font-weight:		bold;
+}
+
+.block_menu
+{
+	width: 200px;
+	height: auto;
+}
+
+
+.block_left
+{
+	width: 200px;
+	height: auto;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	background-image:url(images/block_fond.png);
+	background-repeat:repeat-y;
+	float:left;
+}
+
+.title_menu_left
+{
+	width: 195px;
+	height:20px;
+	line-height:20px;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	padding-left: 5px;
+	margin-bottom: 5px;
+	color:	#fff;
+	background-image:url(images/fond_titre_menu.png);
+	background-repeat:no-repeat;
+}
+
+.text_menu_admin
+{
+	margin-left:			10px;
+	font-weight:			bold;
+	font-style:				italic;
+}
+
+.sous_menu_left
+{
+	width: 150px;
+	height:50px;
+	background-image:url(images/btn_menu_administration_site.png);
+	background-repeat:no-repeat;
+	line-height: 30px;
+	color: #fff;
+	float:	right;
+}
+
+.sous_menu_left:hover
+{
+	background-image:url(images/btn_menu_administration_site_hover.png);
+	background-repeat:no-repeat;
+	color: #082431;
+}
+
+.adminSubtitle
+{
+	 border-bottom: solid 1px #fff;
+	 width:			100%;
+}
+
+.content_administration
+{
+	min-height:						100px !important;
+	height:							auto;
+}
+
+.content_administration .subTitle
+{
+	font-size:						12pt;
+	font-style:						italic;
+	border-bottom:					solid 1px #fff;
+}
+
+#file_upload
+{
+	width:							110px;
+}
+
+input.date_periode
+{
+	width:							60px !important;
+}

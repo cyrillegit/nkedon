@@ -1,0 +1,289 @@
+/**
+	Style des tableaux de bord
+	--------------------------
+	Ce style est utilisé dans la page d'accueil du site Internet.
+*/
+#main
+{
+	width:							100%;
+	margin-top:						20px;
+	float:							left;
+}
+
+#mainLeft
+{
+	width:							270px;
+	float:							left;
+}
+
+#mainCenter
+{
+	width:							350px;
+	float:							left;
+}
+
+#mainRight
+{
+	float:							right;
+	width:							320px;
+}
+
+.blocInfo
+{
+	border:							solid 1px #313131;
+	background-image:				url(images/bg_bloc_alertes.png);
+	background-repeat:				repeat;
+	padding:						5px 10px 10px 10px;
+	height:							200px;
+}
+
+.blocInfo .titre
+{
+	font-style:						italic;
+	border-bottom:					solid 1px #fff;
+	margin-bottom:					6px;
+}
+
+.blocInfo .row
+{
+	clear:							both;
+	float:							left;
+}
+
+.row .label
+{
+	float:							left;
+	color:							#000;
+	font-weight:					bold;
+	width:							145px;
+}
+
+.row .label_inline
+{
+	float:							left;
+	color:							#000;
+	font-weight:					bold;
+	width:							100%;
+}
+
+.row .field
+{
+	float:							right;
+	font-weight:					bold;
+	font-style:						italic;
+}
+
+a.blue
+{
+	font-style:						italic;
+	color:							#fff;
+	text-decoration:				none;
+}
+
+a.blue:hover
+{
+	color:							#009;
+}
+
+/** GESTION DES ICONES **/
+
+.module
+{
+	width:							90px;
+	height:							130px;
+	font-size:						11px;
+	font-weight:					bold;
+	text-align:						center;
+	border:							none !important;
+}
+
+.not_connected_module
+{
+	width:							260px;
+	height:							130px;
+	font-size:						11px;
+	font-weight:					bold;
+	border:							none !important;
+}
+
+.module_text
+{
+	font-size:						11px;
+	font-weight:					bold;
+	text-align:						center;
+}
+
+input.nb_alertes
+{
+	border:							solid 1px #17749d;
+	width:							30px;
+	height:							20px;
+	font-size:						10px;
+	color:							#505050;
+	text-align:						center;
+}
+
+.pictoGestionSite
+{
+	background-image:				url(images/module_gestion_site.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoPlannings
+{
+	background-image:				url(images/module_fdr.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoMediatheque
+{
+	background-image:				url(images/module_mediatheque.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoAdministration
+{
+	background-image:				url(images/module_administration.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoHeures
+{
+	background-image:				url(images/module_heure.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoPeriodiques
+{
+	background-image:				url(images/module_suivi.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoStock
+{
+	background-image:				url(images/module_stock.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoImmobilisations
+{
+	background-image:				url(images/module_immo.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoUrgences
+{
+	background-image:				url(images/module_interv.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoControles
+{
+	background-image:				url(images/module_contr.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoReclamations
+{
+	background-image:				url(images/module_reclamations.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoCahierLiaison
+{
+	background-image:				url(images/module_cahier_liaison.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoPersonnel
+{
+	background-image:				url(images/module_perso.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoRemplacements
+{
+	background-image:				url(images/module_remplacements.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoOrganisationSite
+{
+	background-image:				url(images/module_organisation_site.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoSuivis
+{
+	background-image:				url(images/module_suivi_prestations.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoProspection
+{
+	background-image:				url(images/module_prospection.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoOccasionnels
+{
+	background-image:				url(images/module_occasionnels.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoSecurite
+{
+	background-image:				url(images/module_secu.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+.pictoSynthese
+{
+	background-image:				url(images/module_synthese.png);
+	background-repeat:				no-repeat;
+	background-position:			center;
+	border:							none !important;
+}
+
+input.tTip
+{
+	cursor:							pointer;
+}

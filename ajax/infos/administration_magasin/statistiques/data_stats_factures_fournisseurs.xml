@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chart caption="NKedon" subcaption="Nombre de factures par fournisseur" xAxisName="Fournisseurs" yAxisName="Nombre de factures" numberPrefix="" numberSuffix="" showValue="0" bgColor="F1F1F1" canvasBorderThickness="1" canvasBorderColor="999999" plotFillAngle="330" plotBorderColor="999999" showAlternateVGridColor="1" divLineAlpha="0">
+ <set label="CHOCOCAM" value="0"/>
+ <set label="CAMLAIT" value="12"/>
+ <set label="CASH  SALES  INVOICE" value="3"/>
+ <set label="U  C  B" value="3"/>
+ <set label="CIGARETTE" value="11"/>
+ <set label="GOLDEN" value="12"/>
+ <set label="SAAD COLGATE" value="1"/>
+ <set label="MARCHE" value="46"/>
+ <set label="GRAND  MAGASIN DES BOISSONS" value="3"/>
+ <set label="BRASSERIE" value="19"/>
+ <set label="GUINNESS   J D  DISTRIBUTION" value="10"/>
+ <set label="SOURCE  DU  PAYS" value="8"/>
+ <set label="SAWAWA" value="3"/>
+ <set label="MUSEAU MOUKOKO" value="1"/>
+ <set label="NEGIMEX" value="1"/>
+ <set label="DOVV DISTRIBUTION  SARL" value="1"/>
+ <set label="STE  NEDIS  SARL" value="5"/>
+ <set label="PROMODIS" value="1"/>
+ <set label="T S A F DISTRIBUTION" value="1"/>
+ <set label="NIKI GRAND MAGASIN DES BOISSON" value="0"/>
+ <set label="SOTICAM" value="1"/>
+ <set label="SEMME MINERAL  WATER  PLC" value="1"/>
+ <set label="PROMED  CAMEROUN" value="1"/>
+ <set label="ROSINE  PRODUITS AIGUEBELLE" value="1"/>
+</chart>

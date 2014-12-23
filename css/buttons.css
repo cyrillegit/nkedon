@@ -1,0 +1,337 @@
+/* CSS Document */
+
+.btn_valider
+{
+	width: 				110px !important;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	border:				none;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_valider.png);	
+	background-repeat:	no-repeat;
+}
+
+.btn_basket
+{
+	width: 				110px !important;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	border:				none;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_basket.png);	
+	background-repeat:	no-repeat;
+}
+
+.btn_option
+{
+	width: 				110px !important;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	border:				none;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_option.png);	
+	background-repeat:	no-repeat;
+}
+
+.btn_download
+{
+	width: 				110px !important;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	border:				none;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_download.png);	
+	background-repeat:	no-repeat;
+}
+
+img.button
+{
+	cursor:				pointer;
+}
+
+.btn_refuser
+{
+	width: 				110px !important;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_refuser.png);	
+	background-repeat:	no-repeat;
+}
+
+.btn_nouveau
+{
+	width: 				110px !important;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_nouveau.png);	
+	background-repeat:	no-repeat;
+}
+
+.btn_gerer_nc
+{
+	width: 				220px !important;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_gerer_nc.png);	
+	background-repeat:	no-repeat;
+}
+
+.btn_vider_panier
+{
+	width: 				180px !important;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	border:				none;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_vider_panier.png);	
+	background-repeat:	no-repeat;
+}
+
+.btn_envoyer
+{
+	width: 				110px !important;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_envoyer.png);	
+	background-repeat:	no-repeat;
+}
+
+.btn_associer
+{
+	width: 				110px !important;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_associer.png);	
+	background-repeat:	no-repeat;
+}
+
+.btn_suivant
+{
+	width: 				110px !important;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_suivant.png);	
+	background-repeat:	no-repeat;
+}
+
+.btn_ajouter
+{
+	width: 				110px !important;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_ajouter.png);	
+	background-repeat:	no-repeat;
+}
+
+.btn_precedent
+{
+	width: 				110px !important;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_precedent.png);	
+	background-repeat:	no-repeat;
+}
+
+.btn_suppr
+{
+width:					30px;
+height:					30px;
+background-image:		url(images/btn_suppr.png);
+float:					left;	
+}
+
+.btn_suppr:hover
+{
+background-image:		url(images/btn_suppr_hover.png);	
+}
+
+
+.btn_captionImportFile
+{
+	width: 				auto;
+	height:				30px;
+	margin-right:		10px;
+	float:				right;
+}
+
+.btn_import
+{
+	width: 				110px;
+	height:				30px;
+	float:				left;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_parcourir.png);	
+	background-repeat:	no-repeat;
+}
+
+input.btn_save
+{
+	width:				110px;
+	border:				none;
+}
+
+.btn_save
+{
+	width: 				110px;
+	height:				30px;
+	cursor:				pointer;
+	float:				left;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_enregistrer.png);
+	background-repeat:	no-repeat;
+}
+
+.btn_annuler
+{
+	width: 				110px;
+	height:				30px;
+	cursor:				pointer;
+	float:				left;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_annuler.png);	
+	background-repeat:	no-repeat;
+}
+
+.btn_print
+{
+	width: 				110px;
+	height:				30px;
+	cursor:				pointer;
+	float:				left;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_imprimer.png);	
+}
+
+.btn_update
+{
+	width: 				110px;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_modification.png);	
+}
+
+.btn_retour
+{
+	width: 				110px;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_retour.png);	
+}
+
+.btn_calculer
+{
+	width: 				110px;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_caculer.png);	
+}
+
+.btn_recalculer
+{
+	width: 				110px;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_recaculer.png);	
+}
+
+.btn_importer
+{
+	width: 				110px;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_importer.png);	
+}
+
+.btn_new
+{
+	width: 				110px;
+	height:				30px;
+	float:				right;
+	cursor:				pointer;
+	background-color:	none;
+	background-image:		url(images/boutons/btn_creation.png);	
+}
+
+.btn_raz
+{
+	width: 				110px;
+	height:				30px;
+	float:				right;
+	cursor:				pointer;
+	background-color:	none;
+	background-image:		url(images/boutons/raz.png);	
+}
+
+.btn_delete
+{
+	width: 				110px;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	background-color:	none;
+	background-image:	url(images/boutons/btn_supprimer.png);	
+}
+
+.btn_decaler
+{
+	width: 				110px;
+	height:				30px;
+	float:				left;
+	cursor:				pointer;
+	background-color:	none;
+	background-image:	url(images/boutons/btn_decaler.png);	
+}
+
+.btn_add
+{
+	font-weight:		bold;
+	cursor:				pointer;
+	text-transform:		uppercase;
+	color:				#fff;
+	padding:			5px 0px 30px 0px;
+	width:				auto;
+	float:				left;
+	margin-top:			5px;
+}
+
+.btn_add_panne
+{
+	font-weight:		bold;
+	cursor:				pointer;
+	text-transform:		uppercase;
+	color:				#fff;
+	padding:			10px 0px 20px 0px;
+	width:				auto;
+	float:				left;
+}

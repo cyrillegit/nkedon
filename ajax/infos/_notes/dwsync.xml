@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="GetDotationDetails.php" server="192.168.1.23//www/surikat/sante/" local="129979048555792315" remote="130059358800000000" />
+<file name="GetElementsZones.php" server="192.168.1.23//www/surikat/sante/" local="129979048555948315" remote="130059358800000000" />
+<file name="GetPlanningFormOptionsSousZones.php" server="192.168.1.23//www/surikat/sante/" local="130052349839536784" remote="130059358800000000" />
+<file name="GetPlanningFormOptionsZones.php" server="192.168.1.23//www/surikat/sante/" local="130052349839692784" remote="130059358800000000" />
+<file name="GetPlanningRecapitulatif.php" server="192.168.1.23//www/surikat/sante/" local="130057521715992305" remote="130059358800000000" />
+<file name="GetPlanningRecapitulatifEditing.php" server="192.168.1.23//www/surikat/sante/" local="130057533369178829" remote="130059358800000000" />
+<file name="GetPlanningTableauOptionsSousZones.php" server="192.168.1.23//www/surikat/sante/" local="130052349839692784" remote="130059358800000000" />
+<file name="GetPlanningTableauOptionsZones.php" server="192.168.1.23//www/surikat/sante/" local="130052349839536784" remote="130059358800000000" />
+<file name="GetPlanningTableauZone.php" server="192.168.1.23//www/surikat/sante/" local="130052349839692784" remote="130059358800000000" />
+<file name="GetSalarieAbsencesConges.php" server="192.168.1.23//www/surikat/sante/" local="129979048555636314" remote="130059358800000000" />
+<file name="GetServicesClinique.php" server="192.168.1.23//www/surikat/sante/" local="130022772364469491" remote="130059358800000000" />
+<file name="GetTableauEpiDotation.php" server="192.168.1.23//www/surikat/sante/" local="129979048555480314" remote="130059358800000000" />
+<file name="GetTypesZonesByService.php" server="192.168.1.23//www/surikat/sante/" local="129979048557040317" remote="130059358800000000" />
+<file name="GetTypesZonesService.php" server="192.168.1.23//www/surikat/sante/" local="130032284900868343" remote="130059358800000000" />
+<file name="GetZonesByTypeZoneByService.php" server="192.168.1.23//www/surikat/sante/" local="129979048557040317" remote="130059358800000000" />
+<file name="GetZonesService.php" server="192.168.1.23//www/surikat/sante/" local="129979048555636314" remote="130059358800000000" />
+<file name="GetZonesTypeZone.php" server="192.168.1.23//www/surikat/sante/" local="129979048555948315" remote="130059358800000000" />
+<file name="index.php" server="192.168.1.23//www/surikat/sante/" local="129979048557040317" remote="130059358800000000" />
+</dwsync>

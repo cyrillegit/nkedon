@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="GetTableauCaracteristiquesEPI.php" server="192.168.1.23//www/surikat/sante/" local="130022772363869482" remote="130059358800000000" />
+<file name="GetTableauCentresMedecineTravail.php" server="192.168.1.23//www/surikat/sante/" local="130022772362994469" remote="130059358800000000" />
+<file name="GetTableauCliniques.php" server="192.168.1.23//www/surikat/sante/" local="130022772363319474" remote="130059358800000000" />
+<file name="GetTableauComptesUtilisateurs.php" server="192.168.1.23//www/surikat/sante/" local="130022772363244473" remote="130059358800000000" />
+<file name="GetTableauEPI.php" server="192.168.1.23//www/surikat/sante/" local="130022772362844466" remote="130059358800000000" />
+<file name="GetTableauOptionsSousZones.php" server="192.168.1.23//www/surikat/sante/" local="130046224200000000" remote="130046224200000000" />
+<file name="GetTableauOptionsZones.php" server="192.168.1.23//www/surikat/sante/" local="130022772363944483" remote="130059358800000000" />
+<file name="GetTableauPlannings.php" server="192.168.1.23//www/surikat/sante/" local="130052349835324777" remote="130059358800000000" />
+<file name="GetTableauServices.php" server="192.168.1.23//www/surikat/sante/" local="130022772363069470" remote="130059358800000000" />
+<file name="GetTableauSousZones.php" server="192.168.1.23//www/surikat/sante/" local="130022772363819481" remote="130059358800000000" />
+<file name="GetTableauTypesSousZones.php" server="192.168.1.23//www/surikat/sante/" local="130032284900118332" remote="130059358800000000" />
+<file name="GetTableauTypesZones.php" server="192.168.1.23//www/surikat/sante/" local="130052349834700775" remote="130059358800000000" />
+<file name="GetTableauZones.php" server="192.168.1.23//www/surikat/sante/" local="130022772363419475" remote="130059358800000000" />
+<file name="GetTableauSalaries.php" server="192.168.1.23//www/surikat/sante/" local="130022772363719480" remote="130059358800000000" />
+<file name="GetTableauPostes.php" server="192.168.1.23//www/surikat/sante/" local="130032284900118332" remote="130059358800000000" />
+<file name="GenerateNewPassword.php" server="192.168.1.23//www/surikat/sante/" local="129991826046575158" remote="130059358800000000" />
+<file name="GetTableauDefinitionProtocoles.php" server="192.168.1.23//www/surikat/sante/" local="130052349834544775" remote="130059358800000000" />
+<file name="GetTableauFournisseurs.php" server="192.168.1.23//www/surikat/sante/" local="130022772363769481" remote="130059358800000000" />
+<file name="GetTableauImmobilisations.php" server="192.168.1.23//www/surikat/sante/" local="130022772363494476" remote="130059358800000000" />
+<file name="GetTableauOrganismesFormation.php" server="192.168.1.23//www/surikat/sante/" local="130022772363169471" remote="130059358800000000" />
+<file name="GetTableauPrestationsControle.php" server="192.168.1.23//www/surikat/sante/" local="130052349834700775" remote="130059358800000000" />
+<file name="GetTableauProduits.php" server="192.168.1.23//www/surikat/sante/" local="130022772363894483" remote="130059358800000000" />
+<file name="GetTableauProtocoles.php" server="192.168.1.23//www/surikat/sante/" local="130038578578516781" remote="130059358800000000" />
+<file name="GetTableauTablettes.php" server="192.168.1.23//www/surikat/sante/" local="130022772363194472" remote="130059358800000000" />
+<file name="GetTableauTypesConditionnement.php" server="192.168.1.23//www/surikat/sante/" local="130022772363044469" remote="130059358800000000" />
+<file name="GetTableauTypesHeures.php" server="192.168.1.23//www/surikat/sante/" local="130022772362969468" remote="130059358800000000" />
+<file name="GetTableauTypesPannes.php" server="192.168.1.23//www/surikat/sante/" local="130022772363844482" remote="130059358800000000" />
+<file name="GetTableauTypesSols.php" server="192.168.1.23//www/surikat/sante/" local="130022772363744480" remote="130059358800000000" />
+<file name="GetTableauVersionsNomade.php" server="192.168.1.23//www/surikat/sante/" local="130022772363369474" remote="130059358800000000" />
+<file name="index.php" server="192.168.1.23//www/surikat/sante/" local="129979048556572316" remote="130059358800000000" />
+</dwsync>

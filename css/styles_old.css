@@ -1,0 +1,1716 @@
+@charset "utf-8";
+/* CSS Document */
+@import "form.css";				/* Les styles dans les formulaires. */
+@import "tablesorter.css";		/* Les tableaux triés. */
+@import "tablesorter_nosort.css";		/* Les tableaux triés. */
+@import "tdb.css";				/* La page d'accueil. */
+@import "buttons.css";			/* Les styles des boutons. */
+@import "jquery.tabs.css";		/* Style pour les jQuery UI Tabs. Doit être appelé en dernier, systématiquement. */
+@import "../assets/css/autocomplete.css";				/* Autocomplete. */
+@import "../assets/css/jquery.fastconfirm.css";			/* Fastconfirm. */
+@import "../assets/css/tinyTips.css";					/* tinyTips. */
+@import "../assets/css/pagination.css";					/* Pagination. */
+@import "../assets/css/fullcalendar.css";				/* Calendrier. */
+@import "../assets/css/colorpicker.css";					/* ColorPicker. */
+@import "../assets/css/jquery.alerts.css";				/* Alertes (prompt, messages et erreur). */
+@import "../assets/css/osx.css";				/* Alertes (prompt, messages et erreur). */
+@import "../assets/js/fancybox/jquery.fancybox.css";		/* Fancybox. */
+@import "../assets/css/jquery.safari-checkbox.css";		/* Safari checkboxes. */
+@import "administration.css";								/* Styles pour gérer l'administration générale du site Internet. */
+@import "popup.css";										/* Styles pour toutes les popups. */
+@import "planning.css";										/* Styles pour le planning. */
+@import "connexion.css";									/* Styles pour la connexion. */
+@import "personnel.css";									/* Styles pour la gestion du personnel. */
+@import "stocks.css";										/* Styles pour la gestion des stocks. Avec notamment les notations en Rouge/Orange/Vert sur le stock actuel. */
+@import "validation.css";									/* Styles pour la validation des demandes. */
+@import "synthese.css";										/* Styles pour la synthèse. */
+@import "prospection.css";									/* Styles pour la synthèse. */
+@import "controles.css";									/* Styles pour les contrôles. */
+@import "inettuts.css";										/* Spécifique client avec les sélections de blocs interchangeables. */
+@import "tab_icons.css";									/* Pour les icônes dans les $.tabs (). */
+@import "mosaic.css";										/* Styles de mosaique. Pour les news. */
+@import "cahier_liaison.css";								/* Styles de gestion du cahier de liaison. Très simple, le tableau n'est plus stylisé avec et avec un joli background. */
+@import "featurelist.css";									/* Styles pour les nouvelles versions du logiciel. */
+@import "../assets/css/ui.sexyselect.0.5.css";			/* Sexy select, très voir pas du tout utilisé. */
+@import "jPaginate.css";									/* Paginations. */
+@import "annuaire.css";										/* Annuaire des contacts de la société. */
+@import "mediatheque.css";									/* Médiathèque. */
+@import "ui.sexyselect.css";								/* UI SexySelect (MultiSelectors). */
+@import "shCore.css";
+@import "shThemeDefault.css";
+@import "ui.multiselect.css";
+@import "synthese_personnalisee.css";						/* Synthèse personnelle. Un bloc graphique sur la gauche, et des données sur la droite. Simple, mais efficace. */
+
+body
+{
+	width:				auto;
+	height:				auto;
+	margin:				auto;
+	background-color:	#627b86;
+	background-image:	url(images/elements/bg_hd.png);
+	background-position:center;
+	font-family: 		"Segoe UI", Arial, Verdana;
+	color:				#fff;
+	font-size:			11px;			/* Police de 11px pour l'ensemble du site par défaut. Utilisée dans jQuery UI css avec les .em. */
+}
+
+/* ---------------------------------------------- */
+/*  --------------  HEADER   --------------*/
+/* ---------------------------------------------- */
+
+
+#header
+{
+	width:				990px;
+	height:				110px;
+	margin:				auto;
+	padding:			10px;
+}
+
+
+.menu
+{
+	width:				768px;
+	height:				110px;
+	float:				left;
+}
+
+.tab_menu
+{
+	/* JPerciot, agrandissement de l'espace pour les textes... */
+	width:				120px;
+	height:				42px;
+	float:				left;
+	margin-left:		5px;
+	margin-top:			10px;
+}
+
+.ico_menu
+{
+	width:				42px;
+	height:				42px;
+	float:				left;
+}
+
+.text_menu
+{
+	color:				black;
+	width:				68px;
+	height:				inherit;
+	padding:			5px 0 0 5px;
+	float:				left;
+	font-size:			12px;
+}
+
+.text_menu:hover
+{
+	text-decoration:	underline;
+}
+
+.bloc_logo
+{
+	width:				220px;
+	height:				110px;
+	background-color:	#CCC;
+	float:				right;	
+	line-height:		110px;
+	text-align:			center;
+}
+
+a.link_in_table
+{
+	text-decoration:	none;
+	color:				#000;
+	cursor:				pointer;
+}
+
+/* ---------------------------------------------- */
+/*  --------------  sous menu   --------------*/
+/* ---------------------------------------------- */
+
+.s_menu
+{
+	width:				100%;
+	height:				28px;
+	background-image:	url(images/elements/bg_sm.png);
+	background-repeat:	repeat-x;
+}
+
+.home
+{
+	width:				300px;
+	float:				left;
+	height:				30px;
+	line-height:		30px;
+}
+
+a.delete_link
+{
+	cursor:				pointer;
+}
+
+.bloc_connect
+{
+	width:				990px;
+	height:				auto;
+	margin:				auto;
+	font-size:			12px;
+}
+
+.info_connect
+{
+	width:				450px;
+	height:				30px;
+	line-height:		30px;
+	text-align:			right;
+	margin-right:		10px;
+	float:				right;
+}
+
+.deco
+{
+	width:				100px;
+	line-height:		20px;
+	text-align:			center;
+	margin-top:			4px;
+	margin-left:		10px;
+	font-style:			italic;
+	font-weight:		bold;
+	float:				right;
+	box-shadow:				0px 0px 10px #000;
+	-moz-box-shadow:		0px 0px 10px #000;
+	-webkit-box-shadow:		0px 0px 10px #000;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+
+}
+
+.deco:hover
+{
+	box-shadow:				0px 0px 10px #fff;
+	-moz-box-shadow:		0px 0px 10px #fff;
+	-webkit-box-shadow:		0px 0px 10px #fff;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+}
+
+
+
+
+/* ---------------------------------------------- */
+/*  --------------  Content   --------------*/
+/* ---------------------------------------------- */
+
+a.ariane
+{
+	text-decoration:	none;
+	color:				#000;
+}
+
+#Content
+{
+	width:				990px;
+	min-height:			500px;	
+	margin:				auto;
+	font-size:			12px;
+	color:				#fff;
+}
+
+ul#Content li
+{
+	padding:			5px 0px 5px 0px;
+}
+
+/* ---------------------------------------------- */
+/*  --------------  Title   --------------*/
+/* ---------------------------------------------- */
+
+
+
+.bloc_title
+{
+	width:				990px;
+	height:				63px;
+	margin:				auto;
+}
+
+.ico_title
+{
+	width:				60px;
+	height:				60px;
+	float:				left;
+}
+
+.t_titre
+{
+	width:				920px;
+	height:				auto;
+	margin-top:			-5px;	
+	float:				left;
+}
+
+.alerte
+{
+	width:				auto;
+	height:				20px;
+	text-align:			right;
+	padding-top:		5px;
+	float:				right;
+	margin-left:		-25px;
+}
+
+.title_strong
+{
+	color:				#1c9bd3;	
+}
+
+.title
+{
+	width:				100%;
+	float:				left;
+	text-align:			left;
+	/*margin-left:		10px;*/
+	font-size:			24px;
+	font-style:			italic;
+	/*border-bottom:		1px solid #fff;*/
+	line-height:		55px;
+	text-transform:		uppercase;
+	color:				#E70D12;
+}
+
+.date_calendar
+{
+	width:				220px;
+	height:				30px;
+	float:				right;
+	font-size:			12px;
+	line-height:		80px;
+}
+
+
+/* ---------------------------------------------- */
+/*  --------------  FILTER   --------------*/
+/* ---------------------------------------------- */
+
+
+.bg_filter
+{
+	width:				980px;
+	height:				50px;
+	margin-bottom:		10px;
+	background-image:	url(images/elements/trait_filter.png);
+	background-repeat:	repeat;
+	float:				left;
+	line-height:		42px;
+	padding-left:		10px;
+	color:				#fff;
+}
+
+.bg_filter_lite
+{
+	width:				980px;
+	height:				auto;
+	margin-bottom:		10px;
+	background-image:	url(images/elements/trait_filter.png);
+	background-repeat:	repeat;
+	float:				left;
+	line-height:		32px;
+	padding-left:		10px;
+	color:				#fff;
+}
+
+.bg_filter_nowidth
+{
+	height:				50px;
+	margin-bottom:		10px;
+	background-image:	url(images/elements/trait_filter.png);
+	background-repeat:	repeat;
+	float:				left;
+	line-height:		42px;
+	padding-left:		10px;
+	color:				#fff;
+}
+
+.bg_filter_50
+{
+	width:				450px;
+	height:				auto;
+	margin-bottom:		10px;
+	background-image:	url(images/elements/trait_filter.png);
+	background-repeat:	repeat;
+	float:				left;
+	line-height:		42px;
+	padding-left:		10px;
+	color:				#fff;
+}
+
+a.default
+{
+	color:				#fff !important;
+	font-weight:		bold;
+	cursor:				pointer;
+	text-decoration:	none;
+	text-transform:		uppercase;
+}
+
+a.default_nouppercase
+{
+	color:				#fff !important;
+	font-weight:		bold;
+	cursor:				pointer;
+	text-decoration:	none;
+}
+
+a.default_synt
+{
+	color:				#fff;
+	font-weight:		bold;
+	font-size:			10px;
+	cursor:				pointer;
+	text-decoration:	none;
+	text-transform:		uppercase;
+}
+
+.td_synt
+{
+	width: 90px; 
+	height:120px; 
+	border: 1px solid #fff; 
+	border-radius: 5px; 
+	text-align:center;
+}
+
+.td_synt:hover
+{
+	background-image: url(images/elements/hover_synt.png);
+	background-repeat:repeat;
+}
+
+.td_media
+{
+	width: 140px; 
+	height:120px; 
+	border: 1px solid #fff; 
+	border-radius: 5px; 
+	text-align:center;
+}
+
+.td_media:hover
+{
+	background-image: url(images/elements/hover_synt.png);
+	background-repeat:repeat;
+}
+
+.td_log
+{
+	width: 50px; 
+	height:50px; 
+	border: 1px solid #fff; 
+	border-radius: 10px;
+	text-align:center;
+}
+
+.td_log:hover
+{
+	background-image: url(images/elements/hover_synt.png);
+	background-repeat:repeat;
+}
+
+a.std
+{
+	cursor:				pointer;
+}
+
+a.std_black
+{
+	cursor:				pointer;
+	color:				#000;
+	text-decoration:	none;
+	font-weight:		bold;
+}
+
+a.std_blue
+{
+	cursor:				pointer;
+	color:				#1c9bd3 !important;
+	text-decoration:	none;
+	font-weight:		bold;
+}
+
+
+.bg_filter a.std, .bg_filter_lite a.std
+{
+	color:				#fff;
+	cursor:				pointer;
+}
+
+/* ---------------------------------------------- */
+/*  --------------  FOOTER   --------------*/
+/* ---------------------------------------------- */
+
+#footer
+{
+	width:				990px;
+	height:				40px;
+	margin:				15px auto 20px auto;
+}
+
+.foot_top
+{
+	width:				auto;
+	height:				4px;
+	/**background-image:	url(images/elements/foot_top.png);**/
+}
+
+.foot_body
+{
+	width:				auto;
+	height:				32px;
+	font-size:			10px;
+}
+
+.foot_text_left
+{
+	width:				auto;
+	height:				inherit;
+	float:				left;
+	line-height:		32px;
+	text-transform:		uppercase;
+	font-weight:		bold;
+}
+
+.foot_text_right
+{
+	width:				auto;
+	height:				inherit;
+	float:				right;
+	line-height:		32px;
+}
+
+.foot_bottom
+{
+	width:				auto;
+	height:				4px;
+	/**background-image:	url(images/elements/foot_bottom.png);**/
+}
+
+.menu a
+{
+	color:				#fff;
+	text-decoration:	none;
+}
+
+.menu a:hover
+{
+	color:				#fff;
+}
+
+.menu_alphabet
+{
+	color:				#fff !important;
+	width:				500px;
+	float:				left;
+}
+
+.menu_alphabet .lettre_alphabet_selected
+{
+	font-weight:		bold;
+	color:				#000 !important;
+	text-decoration:	underline;
+	font-style:			italic;
+	font-size:			13.5px;
+}
+
+.menu_alphabet a
+{
+	color:				#fff !important;
+}
+
+.menu_alphabet a:hover
+{
+	color:				#000 !important;
+}
+
+.foot_text_left a
+{
+	color:				#fff;
+	text-decoration:	none;
+}
+
+.foot_text_left a:hover
+{
+	color:				#009;
+}
+
+a.versions, a.versions:hover
+{
+	color:				#F00;
+	text-decoration:	none;
+}
+
+a.std, a.std:hover
+{
+	color:				#FFF;
+	text-decoration:	none;
+}
+
+.champObligatoire, .error, td.error
+{
+	color:				#e1051f;
+}
+
+td.error
+{
+	color:				#e1051f !important;
+}
+
+.error, td.error
+{
+	font-weight:		bold;
+}
+
+div.warnings .error
+{
+	font-weight:		normal;
+}
+
+div.warnings
+{
+	width 							: 70%;
+	text-align						: center;
+	color							: Red;
+	/* Ajustement du padding pour ne pas trop le coller au reste des éléments HTML. */
+	margin							: 10px 15% 15px;
+	padding							: 5px;
+	border							: 1px solid #F00;
+	background						: #FFDDDD url(images/Symboles_Alertes_N2.png) no-repeat scroll 40px 5px;
+	min-height						: 50px;
+	font-size						: 11px;
+}
+div.bloc_informations
+{
+	width 							: 70%;
+	text-align						: center;
+	color							: Red;
+	/* Ajustement du padding pour ne pas trop le coller au reste des éléments HTML. */
+	margin							: 10px 15% 15px;
+	padding							: 5px;
+	border							: 1px solid #F00;
+	background						: #FFDDDD url(images/Symboles_Alertes_N1.png) no-repeat scroll 40px 5px;
+	min-height						: 50px;
+	font-size						: 11px;
+}
+div.bloc_alerts
+{
+	width 							: 70%;
+	text-align						: center;
+	color							: Red;
+	/* Ajustement du padding pour ne pas trop le coller au reste des éléments HTML. */
+	margin							: 10px 15% 15px;
+	padding							: 5px;
+	border							: 1px solid #F00;
+	background						: #FFDDDD url(images/Symboles_Alertes_N3.png) no-repeat scroll 40px 5px;
+	min-height						: 50px;
+	font-size						: 11px;
+}
+div.success
+{
+	width 							: 70%;
+	background-color				: #D2F5D2;
+	border							: 1px solid #3A7C3A;
+	color							: #3A7C3A;
+	margin							: 10px 15% 15px;
+	padding							: 5px;
+	background						: #FFDDDD url(images/Symboles_Alertes_N1.png) no-repeat scroll 48% 35px;
+	text-align						: center;
+	min-height						: 60px;
+	font-weight						: bold;
+	font-size						: 11px;
+}
+
+div.intro
+{
+	clear: 							both;
+	float: 							left;
+	font-style:						italic;
+	width:							100%;
+}
+
+.bg_filter td
+{
+	font-size:						11px;
+	line-height:					50px;
+	height:							50px;
+}
+
+.bg_filter_lite td
+{
+	font-size:						11px;
+	line-height:					32px;
+	height:							32px;
+}
+
+/**
+	Slider pour maintenir les sliders glissants.
+*/
+#slider ul, #slider li
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#slider, #slider li
+{ 
+	width: auto;
+	height: 8px;
+	overflow: visible; 
+}
+
+.failure
+{
+	background-image:			url(images/elements/treillis_rouge.png);
+	background-repeat:			repeat;
+	font-weight:				bold;
+	color:						#000;
+	font-size:					12px;
+	font-family:				Arial, Helvetica, sans-serif;
+}
+
+.warning
+{
+	background-image:			url(images/elements/treillis_orange.png);
+	background-repeat:			repeat;
+	font-weight:				bold;
+	color:						#000;
+	font-size:					12px;
+	font-family:				Arial, Helvetica, sans-serif;
+}
+
+.ok
+{
+	background-image:			url(images/elements/treillis_vert.png);
+	background-repeat:			repeat;
+	font-weight:				bold;
+	color:						#000;
+	font-size:					12px;
+	font-family:				Arial, Helvetica, sans-serif;
+}
+
+.ko
+{
+	background-image:			url(images/elements/treillis_rouge.png);
+	background-repeat:			repeat;
+	font-weight:				bold;
+	color:						#000;
+	font-size:					12px;
+	font-family:				Arial, Helvetica, sans-serif;
+}
+
+input.autocomplete
+{
+	width:							250px;
+}
+
+ul.options li
+{
+	list-style:						none;
+	padding:						5px 0px 5px 10px;
+	height:							15px;
+	line-height:					15px;
+}
+
+ul.opt_zones li
+{
+	margin-left:					20px !important;
+	min-height:							24px !important;
+}
+
+ul.opt_sous_zones li
+{
+	margin-left:					20px !important;
+	height:							24px !important;
+}
+
+.fast_confirm
+{
+	color:							#3c3c3c;
+}
+
+.blocSynthese
+{
+	color:							#3c3c3c !important;
+	background-color:				#fff;
+}
+
+.module
+{
+	cursor:							pointer;
+}
+
+.fil_ariane
+{
+	float:							right;
+	font-style:						italic;
+	color:							#000;
+	font-size:						14px;
+	margin-bottom:					15px;
+}
+
+.fil_ariane .droite
+{
+	color:							#fff;
+	clear:							both;
+}
+
+.pourcentage_total
+{
+	border:							solid 1px #bdbdbd;
+	background-color:				#525252;
+	color:							#35d332;
+	height:							35px;
+	line-height:					35px;
+	font-size:						20px;
+	font-weight:					bold;
+	text-align:						center;
+	width:							93px;
+}
+
+.pourcentage_total_ko
+{
+	border:							solid 1px #bdbdbd;
+	background-color:				#525252;
+	color:							#ff0000;
+	height:							50px;
+	line-height:					50px;
+	font-size:						30px;
+	font-weight:					bold;
+	text-align:						center;
+	width:							93px;
+}
+
+.contradictoire
+{
+	border-bottom:					solid 1px #fff;
+}
+
+.blocSignature
+{
+	width:							200px;
+	height:							120px;
+	border:							solid 1px #bdbdbd;
+	background-color:				#525252;
+}
+
+table.infoDetail
+{
+	font-size:						12px;
+}
+
+.ORDER
+{
+	color:							#505050;
+}
+
+.VALID
+{
+	color:							#1c9bd3;
+}
+
+.CURRENT
+{
+	background-color:				#ff0000;
+}
+
+.REJECT
+{
+	color:							#dc1c17;
+}
+
+.DELIV
+{
+	color:							#25cc28;
+}
+
+.VALID
+{
+	color:							#fff !important;
+	background-color:				#25cc28;
+}
+
+.INVALID
+{
+	color:							#fff !important;
+	background-color:				#dc1c17;
+}
+
+.CURRENT
+{
+	color:							#fff !important;
+	background-color:				#ff9000;
+}
+
+.text_immo_service
+{
+	color:				#25cc28;
+}
+
+.text_immo_detruite
+{
+	color:				#dc1c17;
+}
+
+.text_immo_panne
+{
+	color:				#ff9000;
+}
+
+hr
+{
+	color:				#fff;
+}
+
+.suivi_periodique_decalage
+{
+	color:				#dc1c17;
+	font-style:			italic;
+	font-weight:		bold;
+	cursor:				pointer;
+	margin-right:		5px;
+	float: 				right;
+}
+
+select
+{
+	border:				solid 1px #c8c8c8;
+	height:				21px;
+	line-height:		21px;
+	font-style:			normal;
+	padding-left:		5px;
+	font-size:			11px;
+	color:				#505050;
+}
+
+/*
+	Si l'image a la classe edit associée, on lui affectera le curseur POINTER.
+*/
+img.edit
+{
+	cursor:				pointer;
+}
+
+.texte
+{
+	color:				#fff;
+	padding:			10px 0 0 5px;
+}
+
+ul.stock
+{
+	list-style-image:	url(images/ico_16x16/inventaire.png);
+}
+
+span.recherche_avancee
+{
+	font-style:			italic;color: #1c9bd3;
+	font-weight: 		bold;
+	cursor:				pointer;
+}
+
+div.texteExplicatif
+{
+	color:				#fff;
+	text-align:			justify;
+}
+
+a.link_bg_filter
+{
+	color:				#fff !important;
+	text-transform:		uppercase;
+	font-weight:		bold;
+	padding-top:		5px;
+	cursor:				pointer;
+	text-decoration:	none;
+}
+
+
+ul.formations_salaries li
+{
+	list-style-image:		url(images/li_ul_my_account.png);
+}
+
+ul.tips li
+{
+	list-style-image:		url(images/li_ul_my_account.png);
+}
+
+a.download_document
+{
+	color:				#fff !important;
+	text-transform:		uppercase;
+	text-decoration:	none;
+	font-weight:		bold;
+	line-height:		32px;
+}
+
+.linkAlerteInfo
+{
+	cursor:				pointer;
+}
+
+ul li
+{
+	list-style-image:		url(images/li_ul_my_account.png);
+}
+
+/**
+	Contrib. Jperciot, hack pour Google Chrome et Safari.
+*/
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{
+	table.tablesorter tbody td
+	{
+		padding:			0 4px 0 4px;
+	}
+	
+	.module table
+	{
+		border:				none;
+	}
+}
+
+/**
+	Jérôme Perciot, le 20 déc. 2011, mise en place du champ invisible pour trier correctement les dates.
+*/
+span.hidden
+{
+	display:				none;
+}
+
+.fc-event
+{
+	font-size:				11px;
+}
+
+.gmap3
+{
+	margin: 		20px auto;
+	border: 		1px dashed #C0C0C0;
+	width: 			inherit;
+	height: 		400px;
+}
+
+div.ac_results
+{
+	width:			40% !important;
+}
+
+div.ac_results li
+{
+	font-size:		11px;
+	font-style:		italic;
+	font-family:	"Segoe UI";
+}
+
+a.noAccess
+{
+	cursor:			pointer;
+}
+
+.bleu
+{
+	color:			#1c9bd3;
+}
+
+/**
+	Cellules du tableau pour les validations et informations importantes.
+*/
+.dataCellVert, .assigne, .DOTREM, .immo_service, .done
+{
+	background-image:			url(images/elements/treillis_vert.png);
+	background-repeat:			repeat;
+	font-weight:				bold;
+	color:						#000;
+	font-size:					12px;
+	font-family:				Arial, Helvetica, sans-serif;
+}
+
+.dataCellRouge, .non_assigne, .immo_detruite
+{
+	background-image:			url(images/elements/treillis_rouge.png);
+	background-repeat:			repeat;
+	font-weight:				bold;
+	color:						#000;
+	font-size:					12px;
+	font-family:				Arial, Helvetica, sans-serif;
+}
+
+.dataCellOrange, .immo_panne, .attente
+{
+	background-image:			url(images/elements/treillis_orange.png);
+	background-repeat:			repeat;
+	font-weight:				bold;
+	color:						#000;
+	font-size:					12px;
+	font-family:				Arial, Helvetica, sans-serif;
+}
+
+.textOrange
+{
+	color:						#a36400 !important;
+	font-size:					14px;
+	font-weight:				bold;
+}
+
+.textOrangeLite
+{
+	color:						#a36400 !important;
+	font-size:					12px;
+	font-weight:				bold;
+}
+
+.treillis
+{
+	background-image:	url(images/elements/trait_filter.png);
+	background-repeat:	repeat;
+}
+
+hr
+{
+	color:						#a2a2a2;
+}
+
+.rowOK_invisible
+{
+	display:					none;
+}
+
+.cadre_photo_vide
+{
+	width:						280px;
+	height:						200px;
+	background-color:			#000;
+	color:						#fff;
+	text-align:					center;
+}
+
+/**
+	JPerciot, les effets sur les photos se font sur la balise img et pas sur le a href...
+*/
+img.photo
+{
+	border:						solid 1px #a2a2a2;
+}
+
+a.photo
+{
+	border:						none;
+}
+
+.rowBlack
+{
+	color:						#000;
+	font-weight:				bold;
+}
+
+/**
+	Lien noir très souvent utilisé dans le détail de la gestion de site.
+*/
+a.linkBlack, a.linkBlack:visited, a.linkBlack:hover
+{
+	text-decoration:			none;
+	color:						#000;
+}
+
+a.defaultBlack
+{
+	color:						#000;
+	text-decoration:			none;
+}
+
+a.defaultBlack:hover
+{
+	color:						#fff;
+}
+
+a
+{
+	cursor:						pointer;
+}
+
+
+/************************************************************************
+				ICONES BACKOFFICE - 42x42 - Menu
+************************************************************************/
+/*********Contrib Yannick: suppression des menus Surikat pour mettre les menus voirie à la place.*****/
+.menu_creer
+{
+	width:				42px;
+	height:				42px;
+	float:				left;
+	background-image:	url(images/ico_42x42/menu_fdr_0.png);
+}
+
+.menu_creer:hover
+{
+	width:				42px;
+	height:				42px;
+	float:				left;
+	background-image:	url(images/ico_42x42/menu_fdr_1.png);
+}
+
+.menu_lever
+{
+	width:				42px;
+	height:				42px;
+	float:				left;
+	background-image:	url(images/ico_42x42/menu_fdr_0.png);
+}
+
+.menu_lever:hover
+{
+	width:				42px;
+	height:				42px;
+	float:				left;
+	background-image:	url(images/ico_42x42/menu_fdr_1.png);
+}
+.menu_admin
+{
+	width:				42px;
+	height:				42px;
+	float:				left;
+	background-image:	url(images/ico_42x42/menu_fdr_0.png);
+}
+
+.menu_admin:hover
+{
+	width:				42px;
+	height:				42px;
+	float:				left;
+	background-image:	url(images/ico_42x42/menu_fdr_1.png);
+}
+.menu_synth
+{
+	width:				42px;
+	height:				42px;
+	float:				left;
+	background-image:	url(images/ico_42x42/menu_fdr_0.png);
+}
+
+.menu_synth:hover
+{
+	width:				42px;
+	height:				42px;
+	float:				left;
+	background-image:	url(images/ico_42x42/menu_fdr_1.png);
+}
+.menu_ged
+{
+	width:				42px;
+	height:				42px;
+	float:				left;
+	background-image:	url(images/ico_42x42/menu_fdr_0.png);
+}
+
+.menu_ged:hover
+{
+	width:				42px;
+	height:				42px;
+	float:				left;
+	background-image:	url(images/ico_42x42/menu_fdr_1.png);
+}
+.menu_link
+{
+	width:				42px;
+	height:				42px;
+	float:				left;
+	background-image:	url(images/ico_42x42/menu_fdr_0.png);
+}
+
+.menu_link:hover
+{
+	width:				42px;
+	height:				42px;
+	float:				left;
+	background-image:	url(images/ico_42x42/menu_fdr_1.png);
+}
+
+
+
+.info
+{
+	width:				42px;
+	height:				42px;
+	float:				left;
+	background-image:	url(images/ico_42x42/information_0.png);
+}
+
+.info:hover
+{
+	background-image:	url(images/ico_42x42/information_1.png);
+	box-shadow: 			0px 0px 5px #fff;
+	-moz-box-shadow:		0px 0px 5px #fff;
+	-webkit-box-shadow:		0px 0px 5px #fff;
+	-webkit-border-radius: 	8px;
+	-moz-border-radius: 	8px;
+	border-radius: 			8px;
+}
+
+.menu_remplacements
+{
+	width:				42px;
+	height:				42px;
+	float:				left;
+	background-image:	url(images/ico_42x42/remplacement_0.png);
+}
+
+.menu_remplacements:hover
+{
+	background-image:	url(images/ico_42x42/remplacement_1.png);
+	box-shadow: 			0px 0px 5px #fff;
+	-moz-box-shadow:		0px 0px 5px #fff;
+	-webkit-box-shadow:		0px 0px 5px #fff;
+	-webkit-border-radius: 	8px;
+	-moz-border-radius: 	8px;
+	border-radius: 			8px;
+}
+
+.menu_reclamations
+{
+	width:				42px;
+	height:				42px;
+	float:				left;
+	background-image:	url(images/ico_42x42/reclamations_0.png);
+}
+
+textarea, select, input
+{
+	font-family			: "Segoe UI", Arial, Verdana;
+	color				: #505050;
+}
+
+.menu_reclamations:hover
+{
+	background-image:	url(images/ico_42x42/reclamations_1.png);
+	box-shadow: 			0px 0px 5px #fff;
+	-moz-box-shadow:		0px 0px 5px #fff;
+	-webkit-box-shadow:		0px 0px 5px #fff;
+	-webkit-border-radius: 	8px;
+	-moz-border-radius: 	8px;
+	border-radius: 			8px;
+}
+
+.menu_modifier
+{
+	width:				42px;
+	height:				42px;
+	float:				left;
+	background-image:	url(images/ico_42x42/modifier_0.png);
+}
+
+.menu_modifier:hover
+{
+	background-image:	url(images/ico_42x42/modifier_1.png);
+	box-shadow: 			0px 0px 5px #fff;
+	-moz-box-shadow:		0px 0px 5px #fff;
+	-webkit-box-shadow:		0px 0px 5px #fff;
+	-webkit-border-radius: 	8px;
+	-moz-border-radius: 	8px;
+	border-radius: 			8px;
+}
+
+
+/************************************************************************
+				ICONES BACKOFFICE - 60x60 - Menu
+************************************************************************/
+
+
+.gestion_site_60x60
+{
+	width:				60px;
+	height:				60px;
+	float:				left;
+	background-image:url(images/ico_60x60/gestion_site_0.png);
+}
+
+.gestion_site_60x60:hover
+{
+	background-image:	url(images/ico_60x60/gestion_site_1.png);
+	box-shadow: 			0px 0px 10px #fff;
+	-moz-box-shadow:		0px 0px 10px #fff;
+	-webkit-box-shadow:		0px 0px 10px #fff;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+}
+
+
+.organisation_site_60x60
+{
+	width:				60px;
+	height:				60px;
+	float:				left;
+	background-image:	url(images/ico_60x60/organisation_site_0.png);
+}
+
+.organisation_site_60x60:hover
+{
+	background-image:	url(images/ico_60x60/organisation_site_1.png);
+	box-shadow: 			0px 0px 10px #fff;
+	-moz-box-shadow:		0px 0px 10px #fff;
+	-webkit-box-shadow:		0px 0px 10px #fff;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+}
+
+
+.gestion_personnel_60x60
+{
+	width:				60px;
+	height:				60px;
+	float:				left;
+	background-image:	url(images/ico_60x60/personnels_0.png);
+}
+
+.gestion_personnel_60x60:hover
+{
+	background-image:	url(images/ico_60x60/personnels_1.png);
+	box-shadow: 			0px 0px 10px #fff;
+	-moz-box-shadow:		0px 0px 10px #fff;
+	-webkit-box-shadow:		0px 0px 10px #fff;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+}
+
+
+.controles_60x60
+{
+	width:				60px;
+	height:				60px;
+	float:				left;
+	background-image:	url(images/ico_60x60/controles_0.png);
+}
+
+.controles_60x60:hover
+{
+	background-image:	url(images/ico_60x60/controles_1.png);
+	box-shadow: 			0px 0px 10px #fff;
+	-moz-box-shadow:		0px 0px 10px #fff;
+	-webkit-box-shadow:		0px 0px 10px #fff;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+}
+
+
+.suivi_60x60
+{
+	width:				60px;
+	height:				60px;
+	float:				left;
+	background-image:	url(images/ico_60x60/suivi_prestation_0.png);
+}
+
+.suivi_60x60:hover
+{
+	background-image:	url(images/ico_60x60/suivi_prestation_1.png);
+	box-shadow: 			0px 0px 10px #fff;
+	-moz-box-shadow:		0px 0px 10px #fff;
+	-webkit-box-shadow:		0px 0px 10px #fff;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+}
+
+
+.suivi_remplacement_60x60
+{
+	width:				60px;
+	height:				60px;
+	float:				left;
+	background-image:	url(images/ico_60x60/remplacement_0.png);
+}
+
+.suivi_remplacement_60x60:hover
+{
+	background-image:	url(images/ico_60x60/remplacement_1.png);
+	box-shadow: 			0px 0px 10px #fff;
+	-moz-box-shadow:		0px 0px 10px #fff;
+	-webkit-box-shadow:		0px 0px 10px #fff;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+}
+
+
+.parametrage_60x60
+{
+	width:				60px;
+	height:				60px;
+	float:				left;
+	background-image:	url(images/ico_60x60/parametre_0.png);
+}
+
+.parametrage_60x60:hover
+{
+	background-image:	url(images/ico_60x60/parametre_1.png);
+	box-shadow: 			0px 0px 10px #fff;
+	-moz-box-shadow:		0px 0px 10px #fff;
+	-webkit-box-shadow:		0px 0px 10px #fff;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+}
+
+
+.geolocalisation_60x60
+{
+	width:				60px;
+	height:				60px;
+	float:				left;
+	background-image:	url(images/ico_60x60/geolocalisation_0.png);
+}
+
+.geolocalisation_60x60:hover
+{
+	background-image:	url(images/ico_60x60/geolocalisation_1.png);
+	box-shadow: 			0px 0px 10px #fff;
+	-moz-box-shadow:		0px 0px 10px #fff;
+	-webkit-box-shadow:		0px 0px 10px #fff;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+}
+
+
+.prospection_60x60
+{
+	width:				60px;
+	height:				60px;
+	float:				left;
+	background-image:	url(images/ico_60x60/devis_prospections_0.png);
+}
+
+.prospection_60x60:hover
+{
+	background-image:	url(images/ico_60x60/devis_prospections_1.png);
+	box-shadow: 			0px 0px 10px #fff;
+	-moz-box-shadow:		0px 0px 10px #fff;
+	-webkit-box-shadow:		0px 0px 10px #fff;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+}
+
+
+.occasionnels_60x60
+{
+	width:				60px;
+	height:				60px;
+	float:				left;
+	background-image:	url(images/ico_60x60/occasionnels_0.png);
+}
+
+.occasionnels_60x60:hover
+{
+	background-image:	url(images/ico_60x60/occasionnels_1.png);
+	box-shadow: 			0px 0px 10px #fff;
+	-moz-box-shadow:		0px 0px 10px #fff;
+	-webkit-box-shadow:		0px 0px 10px #fff;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+}
+
+
+.securite_60x60
+{
+	width:				60px;
+	height:				60px;
+	float:				left;
+	background-image:	url(images/ico_60x60/gestion_securite_0.png);
+}
+
+.securite_60x60:hover
+{
+	background-image:	url(images/ico_60x60/gestion_securite_1.png);
+	box-shadow: 			0px 0px 10px #fff;
+	-moz-box-shadow:		0px 0px 10px #fff;
+	-webkit-box-shadow:		0px 0px 10px #fff;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+}
+
+
+.mediatheque_60x60
+{
+	width:				60px;
+	height:				60px;
+	float:				left;
+	background-image:	url(images/ico_60x60/mediatheque_0.png);
+}
+
+.mediatheque_60x60:hover
+{
+	background-image:	url(images/ico_60x60/mediatheque_1.png);
+	box-shadow: 			0px 0px 10px #fff;
+	-moz-box-shadow:		0px 0px 10px #fff;
+	-webkit-box-shadow:		0px 0px 10px #fff;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+}
+
+.reclamation_60x60
+{
+	width:				60px;
+	height:				60px;
+	float:				left;
+	background-image:	url(images/ico_60x60/reclamations_0.png);
+}
+
+.reclamation_60x60:hover
+{
+	background-image:	url(images/ico_60x60/reclamations_1.png);
+	box-shadow: 			0px 0px 10px #fff;
+	-moz-box-shadow:		0px 0px 10px #fff;
+	-webkit-box-shadow:		0px 0px 10px #fff;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+}
+
+.synthese_60x60
+{
+	width:				60px;
+	height:				60px;
+	float:				left;
+	background-image:	url(images/ico_60x60/synthese_0.png);
+}
+
+.synthese_60x60:hover
+{
+	background-image:	url(images/ico_60x60/synthese_1.png);
+	box-shadow: 			0px 0px 10px #fff;
+	-moz-box-shadow:		0px 0px 10px #fff;
+	-webkit-box-shadow:		0px 0px 10px #fff;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+}
+
+.modifier_60x60
+{
+	width:				60px;
+	height:				60px;
+	float:				left;
+	background-image:	url(images/ico_60x60/modifier_0.png);
+}
+
+.modifier_60x60:hover
+{
+	background-image:	url(images/ico_60x60/modifier_1.png);
+	box-shadow: 			0px 0px 10px #fff;
+	-moz-box-shadow:		0px 0px 10px #fff;
+	-webkit-box-shadow:		0px 0px 10px #fff;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+}
+
+.sort_button
+{
+	cursor				: pointer;
+}
+
+.info_60x60
+{
+	width:				60px;
+	height:				60px;
+	float:				left;
+	background-image:	url(images/ico_60x60/information_0.png);
+}
+
+.info_60x60:hover
+{
+	background-image:	url(images/ico_60x60/information_1.png);
+	box-shadow: 			0px 0px 10px #fff;
+	-moz-box-shadow:		0px 0px 10px #fff;
+	-webkit-box-shadow:		0px 0px 10px #fff;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+}
+
+.reclamation_60x60
+{
+	width:				60px;
+	height:				60px;
+	float:				left;
+	background-image:	url(images/ico_60x60/reclamations_0.png);
+}
+
+.reclamation_60x60:hover
+{
+	background-image:	url(images/ico_60x60/reclamations_1.png);
+	box-shadow: 			0px 0px 10px #fff;
+	-moz-box-shadow:		0px 0px 10px #fff;
+	-webkit-box-shadow:		0px 0px 10px #fff;
+	-webkit-border-radius: 	10px;
+	-moz-border-radius: 	10px;
+	border-radius: 			10px;
+}
+
+.defaultBlackSelected
+{
+	color:					#fff !important;
+	text-decoration:		none;
+	font-weight:			bold;
+	font-style:				italic;
+}
+
+.epi_no_photo
+{
+	width:					70px;
+	height:					70px;
+	background-color:		#000;
+}
+
+a.news
+{
+	color:#900; font-weight:bold;
+	text-decoration: none;
+}
+
+div.cadreMonnaie
+{
+	background:				url(images/cadre_bleu.jpg) no-repeat;
+	width:					27px;
+	height:					27px;
+	line-height:			27px;
+	color:					#fff;
+	float:					left;
+	text-align:				center;
+	font-size:				14px;
+	font-weight:			bold;
+}
+
+.boxOptions
+{
+	width:					100%;
+}
+
+/* multiselect styles */
+.multiselect {
+	width: 560px;
+	height: 100px;
+}
+
+.available, .selected
+{
+	width:		560px !important;
+}

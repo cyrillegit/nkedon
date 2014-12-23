@@ -1,0 +1,156 @@
+/**
+	Feuille de styles tablesorter.css
+	
+	Copyright Intuitive Soft
+*/
+@CHARSET "ISO-8859-1";
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables features
+ */
+
+.dataTables_wrapper {
+	position: relative;
+	min-height: auto;
+	_height: 302px;
+	clear: both;
+}
+
+.dataTables_processing {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	width: 250px;
+	margin-left: -125px;
+	border: 1px solid #ddd;
+	text-align: center;
+	color: #999;
+	font-size: 11px;
+	padding: 2px 0;
+}
+
+.dataTables_length {
+	width: 40%;
+	float: left;
+}
+
+.dataTables_filter {
+	width: 50%;
+	float: right;
+	text-align: right;
+	margin-bottom: 5px;
+}
+
+.dataTables_info {
+	width: 60%;
+	float: left;
+	margin-top: 10px;
+}
+
+.dataTables_paginate {
+	width: 44px;
+	* width: 50px;
+	float: right;
+	text-align: right;
+	margin-top: 10px;
+}
+
+/* Pagination nested */
+.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next {
+	height: 19px;
+	width: 19px;
+	margin-left: 3px;
+	float: left;
+}
+
+.paginate_disabled_previous {
+	background-image: url('images/back_disabled.jpg');
+}
+
+.paginate_enabled_previous {
+	background-image: url('images/back_enabled.jpg');
+}
+
+.paginate_disabled_next {
+	background-image: url('images/forward_disabled.jpg');
+}
+
+.paginate_enabled_next {
+	background-image: url('images/forward_enabled.jpg');
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables display
+ */
+table.tablesorter {
+	margin: 0 auto;
+	width: 100%;
+	clear: both;
+}
+
+table.tablesorter thead th {
+	padding: 3px 10px;
+	border-bottom: 1px solid black;
+	text-align:left;
+	font-weight: bold;
+	cursor: pointer;
+	* cursor: hand;
+	background-color: #1C9BD3;
+	color: #FFFFFF;
+	padding: 4px;
+}
+
+table.tablesorter tfoot th {
+	padding: 3px 10px;
+	border-top: 1px solid black;
+	font-weight: bold;
+}
+
+table.tablesorter tr.heading2 td {
+	border-bottom: 1px solid #aaa;
+}
+
+table.tablesorter td {
+	padding: 3px 10px;
+	height:				34px;
+	line-height:		auto;
+	color:				#000;
+}
+
+table.tablesorter td.center {
+	text-align: center;
+}
+
+.dataTables_empty
+{
+	line-height:		34px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables sorting
+ */
+
+.sorting_asc {
+	background: url('images/sort_asc_old.jpg') no-repeat center right;
+}
+
+.sorting_desc {
+	background: url('images/sort_desc_old.jpg') no-repeat center right;
+}
+
+.sorting {
+	background: url('images/sort_both_old.jpg') no-repeat center right;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables row classes
+ */
+tr.odd {
+	background-color: #cecece;
+}
+
+tr.even {
+	background-color: #aeaeae;
+}

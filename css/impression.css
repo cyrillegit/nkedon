@@ -1,0 +1,140 @@
+/* CSS Document */
+
+/* CSS Document */
+html
+{
+	width:								100%;
+	header:								100%;
+	background:							none;
+}
+
+body
+{
+	background-image:					none;
+	background-color:					none !important;
+	font-family:						"Segoe UI", Verdana, Arial;
+	font-size:							11px;
+}
+
+#MainPrint
+{
+	margin:								10px 10px 10px 10px;
+}
+
+#logo
+{
+	background:							url(../../assets/images/logo_sante.png) no-repeat;
+	width:								185px;
+	height:								75px;
+	float: 								left;
+}
+
+#canvas
+{
+	float:								right;
+}
+
+#MainPrint .Content
+{
+	clear:								both;
+	float:								left;
+	min-height:							400px;
+	width:								100%;
+}
+
+.title
+{
+	font-size:							24px;
+	font-style: italic;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #cdcdcd;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cecece;
+	margin-bottom: 30px;
+}
+
+.subtitle
+{
+	font-size:							16px;
+	font-style: italic;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #cdcdcd;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cecece;
+	margin-bottom: 30px;
+}
+
+.titleWord
+{
+	color:								#1c9bd3;
+}
+
+.texteExplicatif
+{
+	margin-bottom:						20px;
+}
+
+#footer
+{
+	clear:								both;
+	padding-top:						10px;
+}
+
+#footer .footer_left
+{
+	width:								25%;
+	float: 								left;
+}
+
+#footer .footer_right
+{
+	width:								25%;
+	float: 								right;
+	text-align:							right;
+}
+
+.texteExplicatif
+{
+	text-align:							center;
+}
+
+.champObligatoire
+{
+	color:								#e1051f;
+	font-weight:						bold;
+}
+
+.failure
+{
+	background-color:				#ff0000;
+	color:							#fff !important;
+	font-weight:					bold;
+}
+
+.warning
+{
+	background-color:				#ff9900;
+	color:							#fff !important;
+	font-weight:					bold;
+}
+
+.ok
+{
+	background-color:				#00cc00;
+	color:							#fff !important;
+	font-weight:					bold;
+}
+
+.canvas
+{
+	margin:								20px 0px 20px 20px;
+}
+
+.canvas table tr
+{
+	height:								20px;
+}

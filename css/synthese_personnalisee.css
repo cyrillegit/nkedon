@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+.synthePerso_Graph
+{
+	width								: 65%;
+	border								: solid 1px #505050;
+	min-height							: 320px;
+	float								: left;
+}
+
+.synthPerso_Datas
+{
+	float								: right;
+	border								: solid 1px #505050;
+	margin-left							: 10px;
+	min-height							: 320px;
+	width								: 32%;
+	padding								: 5px 5px 5px 5px;
+}

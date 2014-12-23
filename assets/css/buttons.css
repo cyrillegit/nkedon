@@ -1,0 +1,8 @@
+/* CSS Document */
+#buttonConnect
+{
+	background						: url(/img/buttons/connecter.png) no-repeat;
+	width							: 102px;
+	height							: 26px !important;	/* Le !important est très utile, ne pas le supprimer. */
+	border							: none;
+}

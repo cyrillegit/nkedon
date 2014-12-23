@@ -1,0 +1,83 @@
+/**
+	Feuille de styles tablesorter_nosort.css
+	
+	Copyright Id2tel
+*/
+@CHARSET "ISO-8859-1";
+/* tables */
+table.tablesorter_nosort {
+	width: auto;
+	text-align: left;
+	font-size: 12px;
+}
+table.tablesorter_nosort thead tr th, table.tablesorter_nosort tfoot tr th {
+	background-color: #E70D12;
+	color: #FFFFFF;
+	padding: 4px;
+}
+table.tablesorter_nosort thead tr .header {
+	background-image: url(images/tablesorter_nosort/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter_nosort tbody td 
+{
+	color: #323232;
+	padding: 4px;
+	/* Jerome, pour aligner verticalement et centré le texte dans une cellule ! */
+	height:				34px;
+	line-height:		auto;
+}
+table.tablesorter_nosort tbody tr td.noresults {
+	text-align: center;
+	color:#999999;
+	font-weight:bold;
+	padding:15px 0;
+}
+table.tablesorter_nosort tr.even 
+{
+  background-color: #aeaeae;
+}
+table.tablesorter_nosort tr.odd 
+{
+  background-color: #cecece;
+}
+table.tablesorter_nosort tr.odd 
+{
+  background-color: #cecece;
+}
+.selectable .ui-selecting 
+{ 
+	background: #FECA40 !important; 
+}
+.selectable .ui-selected 
+{ 
+	background: #F39814 !important; 
+	color: white !important; 
+}
+.selectable .ui-selected a
+{
+	/* 
+		Permet d'afficher le a href en blanc quand la ligne est sélectionnée.
+	*/
+	color: white !important; 
+}
+
+/**
+	Ajout Jérôme Perciot, pour prendre en compte les dates dépassées.
+*/
+table.tablesorter_nosort tbody td.dateOverflow
+{
+	background-color: #E1051F !important;
+	color: #FFFFFF !important;
+	font-weight: bold !important;
+}
+
+.checkAll, .checkNone
+{
+	text-transform:		uppercase;
+	color:				#FFF;
+	font-weight:		bold;
+	text-align:			center;
+}

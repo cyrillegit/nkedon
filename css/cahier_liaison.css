@@ -1,0 +1,96 @@
+/* CSS Document */
+
+div.CahierLiaison
+{
+	background						: url(images/elements/bg_cahier_liaison.png) no-repeat;
+	width							: 990px;
+	height							: 764px;
+}
+
+.CahierLiaison table.RowsQuestions 
+{
+	margin							: 25px 0px 0px 20px;
+	width							: 450px;
+	color							: #000000;
+	float							: left;
+	border-bottom					: solid 1px #000000;
+	height							: 170px;
+}
+
+.CahierLiaison table.RowsQuestions  .question
+{
+	color							: #00a204;
+	font-size						: 14px;
+	font-weight						: bold;
+	text-decoration					: underline;
+	width							: 85px;
+}
+
+.CahierLiaison table.RowsQuestions  .text
+{
+	font-size						: 12px;
+	height							: 60px;
+}
+
+.CahierLiaison table.RowsQuestions  .identite_question
+{
+	font-size						: 14px;
+}
+
+.CahierLiaison table.RowsQuestions  .date
+{
+	font-size						: 10px;
+	color							: #424242;
+	height							: 30px;
+}
+
+.CahierLiaison table.RowsReponses 
+{
+	margin							: 25px 25px -2px 30px;
+	width							: 450px;
+	color							: #000000;
+	float							: right;
+	border-bottom					: solid 1px #000000;
+	height							: 170px;
+}
+
+.CahierLiaison table.RowsReponses  .reponse
+{
+	color							: #de0000;
+	font-size						: 14px;
+	text-decoration					: underline;
+	font-weight						: bold;
+}
+
+.CahierLiaison table.RowsReponses  .identite_reponse
+{
+	font-size						: 14px;
+}
+
+.CahierLiaison table.RowsReponses  .date
+{
+	font-size						: 10px;
+	color							: #424242;
+	height							: 30px;
+}
+
+.CahierLiaison table.RowsReponses  .text
+{
+	font-size						: 12px;
+	height							: 60px;
+}
+
+.CahierLiaison table.RowsReponses .noResponse
+{
+	background-image				: url(images/elements/treillis_rose.png);
+	background-repeat				: repeat;
+	font-size						: 12px;
+	height							: 20px;
+	line-height						: 20px;
+	text-align						: center;
+}
+
+#PaginationCahierLiaison
+{
+	margin							: 10px 0px 0px 0px;
+}

@@ -1,0 +1,102 @@
+/* CSS Document */
+/**
+	Ce style permet de redéfinir de manière générale les jquery ui tabs.
+	Il a été redéfini par JPerciot, le 20 juillet 2011.
+*/
+
+.ui-tabs .ui-widget-header
+{
+	/* Pas de background, transparent... */
+	background:						none !important;
+	border:							none !important;
+}
+
+.ui-tabs
+{
+	/* Pas de background, transparent... */
+	background:						none !important;
+	border:							none !important;
+	margin:							0 0 0 0 !important;
+	padding:						0 0 0 0 !important;
+}
+
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited
+{
+	color:							#fff !important;
+	background-color:				#323232 !important;
+	font-style:						normal !important;
+}
+
+.ui-tabs .ui-state-hover a
+{
+	text-decoration:				underline !important;
+}
+
+li.ui-tabs-selected
+{
+	color:							#fff !important;
+}
+
+li.ui-tabs-selected a, li.ui-state-active a
+{
+	background:						url(images/tabs-selected-bg.png) repeat !important;
+	border-color:					#fff !important;
+}
+
+li.ui-state-hover a
+{
+	background:						url(images/tabs-selected-bg.png) repeat !important;
+	border-color:					#fff !important;
+}
+
+.ui-state-default a:visited
+{
+	/** Rectificatif JPerciot, mise en blanc du tabs... **/
+	color:							#fff !important;
+}
+
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl { -moz-border-radius-topleft: 0px !important; -webkit-border-top-left-radius: 0px !important; -khtml-border-top-left-radius: 0px !important; border-top-left-radius: 0px !important; }
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { -moz-border-radius-topright: 0px !important; -webkit-border-top-right-radius: 0px !important; -khtml-border-top-right-radius: 0px !important; border-top-right-radius: 0px !important; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl { -moz-border-radius-bottomleft: 0px !important; -webkit-border-bottom-left-radius: 0px !important; -khtml-border-bottom-left-radius: 0px !important; border-bottom-left-radius: 0px !important; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br { -moz-border-radius-bottomright: 0px !important; -webkit-border-bottom-right-radius: 0px !important; -khtml-border-bottom-right-radius: 0px !important; border-bottom-right-radius: 0px !important; }
+
+.ui-tabs-panel 
+{
+	font-size:						11px !important;
+	padding-left:					0px !important;
+	padding-right:					0px !important;
+	color:							#fff !important;
+}
+
+.ui-tabs .ui-tabs-nav
+{
+	border-bottom:					solid 1px #fff !important;
+	border-bottom-right-radius:		0px;
+	border-bottom-left-radius:		0px;
+	margin:							20px 0 0 0 !important;
+	padding:						0 0 0 0 !important;
+}
+
+.ui-tabs div.link
+{
+	line-height:					25px;
+	text-transform:					uppercase;
+	float:							right;
+	cursor:							pointer;
+}
+
+.ui-tabs .ui-tabs-nav li
+{
+	margin-right:					10px !important;
+}
+
+.ui-state-default
+{
+	color:							#1C94C4 !important;
+}
+
+.ui-state-hover
+{
+	font-style:						italic !important;
+	text-decoration:				none;
+}

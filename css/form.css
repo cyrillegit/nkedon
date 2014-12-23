@@ -1,0 +1,46 @@
+/* CSS Document */
+
+input, textarea
+{
+	border-bottom:				solid 1px #777777;
+	border-right:				solid 1px #777777;
+	border-top:					solid 1px #c8c8c8;
+	border-left:				solid 1px #c8c8c8;
+	font-size:					11px;
+	color:						#3c3c3c;
+	padding:					0px 0px 0px 5px;
+	height:						21px;
+	font-style:					normal !important;
+}
+
+select.inline
+{
+	border-bottom:				solid 1px #777777;
+	border-right:				solid 1px #777777;
+	border-top:					solid 1px #c8c8c8;
+	border-left:				solid 1px #c8c8c8;
+	font-size:					11px;
+	color:						#3c3c3c;
+	height:						21px;
+	font-style:					normal !important;
+	padding:					0px 0px 0px 5px;
+}
+
+select.bloc
+{
+	border:						solid 1px #000;
+	font-size:					11px;
+	font-style:					normal;
+	padding:					5px 5px 5px 5px;
+}
+
+#Content table.formulaire
+{
+	font-size:					11px;
+}
+
+input[type=checkbox]
+{
+	border:						solid 1px #8e8f8f;
+	background-image:			url(images/checkbox_default.png);
+}
