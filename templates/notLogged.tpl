@@ -40,6 +40,7 @@ function connect ()
 
 		$.unblockUI ();
 		response = eval(response);
+
 		if (response.connected)
 		{
 			// Si la connexion a fonctionné, on sort sur la page d'accueil.
