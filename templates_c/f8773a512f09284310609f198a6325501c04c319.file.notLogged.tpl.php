@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-04 19:50:09
+<?php /* Smarty version Smarty-3.1.14, created on 2014-12-30 15:22:09
          compiled from ".\templates\notLogged.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2188252eba7c69be9b7-97408979%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f8773a512f09284310609f198a6325501c04c319' => 
     array (
       0 => '.\\templates\\notLogged.tpl',
-      1 => 1391543407,
+      1 => 1419330286,
       2 => 'file',
     ),
   ),
@@ -62,6 +62,7 @@ function connect ()
 
 		$.unblockUI ();
 		response = eval(response);
+
 		if (response.connected)
 		{
 			// Si la connexion a fonctionné, on sort sur la page d'accueil.

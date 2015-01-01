@@ -1,6 +1,6 @@
 <?php
 	@session_start();
-//	@require_once("./config/config.php");
+	@require_once("./config/config.php");
 	@require_once("./include/function.php");
 //	@require_once("./include/ClassTemplate.php");
 	@require_once("./include/ClassUser.php");
