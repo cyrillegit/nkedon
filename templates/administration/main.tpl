@@ -28,10 +28,10 @@ $(document).ready (function ()
         <div>
             <br />
             <ul class="my_account">
-                <li><a href="administration.php?sub=comptes_utilisateurs" style="color:white; list-style-image:     url(css/images/li_ul_my_account_old.png);">Ajouter / Modifer un compte utilisateur.</a></li>
-                <li><a href="administration.php?sub=types_comptes_utilisateurs" style="color:white;">Ajouter / Modifier un profil utilisateur.</a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration.php?sub=comptes_utilisateurs" style="color:white; list-style-image:     url(css/images/li_ul_my_account_old.png);"><div class="btn_add_contact"></div><div style="text-align: center">Ajouter / Modifer un compte utilisateur</div></a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration.php?sub=types_comptes_utilisateurs" style="color:white;"><div class="btn_users"></div><div>Ajouter / Modifier un profil utilisateur</div></a></li>
                 {if {$smarty.session.infoUser.id_type_user eq 1} or {$smarty.session.infoUser.id_type_user eq 2}}
-                <li><a href="administration.php?sub=password_oublie" style="color:white;">Mot de passe oublié.</a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration.php?sub=password_oublie" style="color:white;"><div class="btn_password"></div><div>Mot de passe oublié</div></a></li>
                 {/if}
             </ul>
         </div>

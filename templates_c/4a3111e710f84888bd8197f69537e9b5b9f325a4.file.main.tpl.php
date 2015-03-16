@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-07-16 21:03:22
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-16 21:51:36
          compiled from ".\templates\administration_magasin\main.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:244052ebaf4403b577-83190040%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4a3111e710f84888bd8197f69537e9b5b9f325a4' => 
     array (
       0 => '.\\templates\\administration_magasin\\main.tpl',
-      1 => 1405544551,
+      1 => 1426542680,
       2 => 'file',
     ),
   ),
@@ -50,14 +50,16 @@ $(document).ready (function ()
         <div>
             <br />
             <ul class="my_account">
-                <li><a href="administration_magasin.php?sub=produits" style="color:white;">Ajouter / Modifer un produit.</a></li>
-                <li><a href="administration_magasin.php?sub=factures" style="color:white;">Ajouter / Modifier une facture.</a></li>
-                <li><a href="administration_magasin.php?sub=fournisseurs" style="color:white;">Ajouter / modifier un fournisseur.</a></li>
-                <li><a href="administration_magasin.php?sub=inventaire" style="color:white;">Réaliser l'inventaire du magasin.</a></li>
-                <li><a href="administration_magasin.php?sub=groupes_factures" style="color:white;">Historiques des factures</a></li>
-                <li><a href="administration_magasin.php?sub=historique_syntheses" style="color:white;">Afficher l'historique des synthéses.</a></li>  
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=produits" style="color:white;"><div class="btn_produit"></div><div>Ajouter / Modifer un produit</div></a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=fournisseurs" style="color:white;"><div class="btn_fournisseur"></div><div>Ajouter / modifier un fournisseur</div></a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=factures" style="color:white;"><div class="btn_facture"></div><div>Ajouter / Modifier une facture</div></a></li><br/>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=journal" style="color:white;"><div class="btn_inventaire"></div><div>Réaliser le journal</div></a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=inventaire" style="color:white;"><div class="btn_inventaire"></div><div>Réaliser l'inventaire du magasin</div></a></li><br/>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=groupes_factures" style="color:white;"><div class="btn_histo_facture"></div><div>Historiques des factures</div></a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=groupes_factures" style="color:white;"><div class="btn_histo_facture"></div><div>Historiques des journaux</div></a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=historique_syntheses" style="color:white;"><div class="btn_histo_synthese"></div><div>Historiques des synthéses</div></a></li><br/>
                 <?php if ($_SESSION['infoUser']['id_type_user']<=4){?>
-                <li><a href="administration_magasin.php?sub=statistiques" style="color:white;">Afficher les statistiques.</a></li> 
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=statistiques" style="color:white;"><div class="btn_statistique"></div><div>Afficher les statistiques</div></a></li>
                 <?php }?>              
             </ul>
         </div>

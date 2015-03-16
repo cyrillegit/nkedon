@@ -8,7 +8,7 @@
 	cursor:				pointer;
 	border:				none;
 	background-color:	none;
-	background-image:		url(images/boutons/btn_valider.png);	
+	background-image:		url(images/boutons/btn_valider.png);
 	background-repeat:	no-repeat;
 }
 
@@ -20,7 +20,7 @@
 	cursor:				pointer;
 	border:				none;
 	background-color:	none;
-	background-image:		url(images/boutons/btn_basket.png);	
+	background-image:		url(images/boutons/btn_basket.png);
 	background-repeat:	no-repeat;
 }
 
@@ -32,7 +32,7 @@
 	cursor:				pointer;
 	border:				none;
 	background-color:	none;
-	background-image:		url(images/boutons/btn_option.png);	
+	background-image:		url(images/boutons/btn_option.png);
 	background-repeat:	no-repeat;
 }
 
@@ -138,7 +138,7 @@ img.button
 	float:				left;
 	cursor:				pointer;
 	background-color:	none;
-	background-image:		url(images/boutons/btn_ajouter.png);	
+	background-image:		url(images/boutons/btn_ajouter.jpg);
 	background-repeat:	no-repeat;
 }
 
@@ -334,4 +334,125 @@ input.btn_save
 	padding:			10px 0px 20px 0px;
 	width:				auto;
 	float:				left;
+}
+
+.button {
+    display: inline-block;
+    padding: 5em;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    width: 200px;
+    margin: 2px;
+}
+
+.btn_add_contact
+{
+    width: 				64px;
+    height:				64px;
+    margin-left:        2px;
+    float:				left;
+    cursor:				pointer;
+    background-color:	none;
+    background-image:	url(images/boutons/add_contact.png);
+}
+
+.btn_users
+{
+    width: 				64px;
+    height:				64px;
+    margin-left:        2px;
+    float:				left;
+    cursor:				pointer;
+    background-color:	none;
+    background-image:	url(images/boutons/Users.png);
+}
+
+.btn_password
+ {
+     width: 				64px;
+     height:				64px;
+     margin-left:        2px;
+     float:				left;
+     cursor:				pointer;
+     background-color:	none;
+     background-image:	url(images/boutons/locked.png);
+ }
+
+.btn_produit
+{
+    width: 				64px;
+    height:				64px;
+    margin-left:        2px;
+    float:				left;
+    cursor:				pointer;
+    background-color:	none;
+    background-image:	url(images/boutons/locked.png);
+}
+
+.btn_facture
+{
+    width: 				64px;
+    height:				64px;
+    margin-left:        2px;
+    float:				left;
+    cursor:				pointer;
+    background-color:	none;
+    background-image:	url(images/boutons/locked.png);
+}
+
+.btn_fournisseur
+{
+    width: 				64px;
+    height:				64px;
+    margin-left:        2px;
+    float:				left;
+    cursor:				pointer;
+    background-color:	none;
+    background-image:	url(images/boutons/locked.png);
+}
+
+.btn_inventaire
+{
+    width: 				64px;
+    height:				64px;
+    margin-left:        2px;
+    float:				left;
+    cursor:				pointer;
+    background-color:	none;
+    background-image:	url(images/boutons/locked.png);
+}
+
+.btn_histo_facture
+{
+    width: 				64px;
+    height:				64px;
+    margin-left:        2px;
+    float:				left;
+    cursor:				pointer;
+    background-color:	none;
+    background-image:	url(images/boutons/locked.png);
+}
+
+.btn_histo_synthese
+{
+    width: 				64px;
+    height:				64px;
+    margin-left:        2px;
+    float:				left;
+    cursor:				pointer;
+    background-color:	none;
+    background-image:	url(images/boutons/locked.png);
+}
+
+.btn_statistique
+{
+    width: 				64px;
+    height:				64px;
+    margin-left:        2px;
+    float:				left;
+    cursor:				pointer;
+    background-color:	none;
+    background-image:	url(images/boutons/locked.png);
 }

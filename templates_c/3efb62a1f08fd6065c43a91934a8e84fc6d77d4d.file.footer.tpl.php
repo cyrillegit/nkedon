@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-31 13:40:01
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-16 17:22:59
          compiled from ".\templates\common\footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2397352eba7b19b89e7-98980603%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3efb62a1f08fd6065c43a91934a8e84fc6d77d4d' => 
     array (
       0 => '.\\templates\\common\\footer.tpl',
-      1 => 1386540608,
+      1 => 1426526077,
       2 => 'file',
     ),
   ),
@@ -15,16 +15,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52eba7b1a43845_31799958',
   'variables' => 
   array (
     'parametrage' => 0,
     'Globals' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52eba7b1a43845_31799958',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52eba7b1a43845_31799958')) {function content_52eba7b1a43845_31799958($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include 'C:\\wamp\\www\\Nkedon\\Smarty\\libs\\plugins\\modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_52eba7b1a43845_31799958')) {function content_52eba7b1a43845_31799958($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include 'C:\\wamp\\www\\nkedon\\Smarty\\libs\\plugins\\modifier.date_format.php';
 ?><div style="clear: both;"></div>
 <div id="footer">
     <div class="foot_top"></div>

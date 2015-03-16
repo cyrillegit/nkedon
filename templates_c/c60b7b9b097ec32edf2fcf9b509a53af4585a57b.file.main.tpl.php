@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-13 13:43:09
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-16 21:31:35
          compiled from ".\templates\administration\main.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:884252ebac1fc1a369-24141186%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c60b7b9b097ec32edf2fcf9b509a53af4585a57b' => 
     array (
       0 => '.\\templates\\administration\\main.tpl',
-      1 => 1392298980,
+      1 => 1426541491,
       2 => 'file',
     ),
   ),
@@ -50,12 +50,12 @@ $(document).ready (function ()
         <div>
             <br />
             <ul class="my_account">
-                <li><a href="administration.php?sub=comptes_utilisateurs" style="color:white; list-style-image:     url(css/images/li_ul_my_account_old.png);">Ajouter / Modifer un compte utilisateur.</a></li>
-                <li><a href="administration.php?sub=types_comptes_utilisateurs" style="color:white;">Ajouter / Modifier un profil utilisateur.</a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration.php?sub=comptes_utilisateurs" style="color:white; list-style-image:     url(css/images/li_ul_my_account_old.png);"><div class="btn_add_contact"></div><div style="text-align: center">Ajouter / Modifer un compte utilisateur</div></a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration.php?sub=types_comptes_utilisateurs" style="color:white;"><div class="btn_users"></div><div>Ajouter / Modifier un profil utilisateur</div></a></li>
                 <?php ob_start();?><?php echo $_SESSION['infoUser']['id_type_user']==1;?>
 <?php $_tmp1=ob_get_clean();?><?php ob_start();?><?php echo $_SESSION['infoUser']['id_type_user']==2;?>
 <?php $_tmp2=ob_get_clean();?><?php if ($_tmp1||$_tmp2){?>
-                <li><a href="administration.php?sub=password_oublie" style="color:white;">Mot de passe oublié.</a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration.php?sub=password_oublie" style="color:white;"><div class="btn_password"></div><div>Mot de passe oublié</div></a></li>
                 <?php }?>
             </ul>
         </div>

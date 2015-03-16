@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-07-16 21:03:22
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-16 22:10:20
          compiled from ".\templates\common\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:399652eba7b1708760-69883461%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '14a35e64d31f6f39c819ba645103d1de351d1aea' => 
     array (
       0 => '.\\templates\\common\\header.tpl',
-      1 => 1405544597,
+      1 => 1426543779,
       2 => 'file',
     ),
   ),
@@ -334,6 +334,52 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   #cssmenu ul.open #menu-button::before {
     border-color: #fff;
   }
+}
+
+/* Bounce To Right */
+.has-sub {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.has-sub:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2098d1;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.has-sub:hover, .has-sub:focus, .has-sub:active {
+    color: white;
+}
+.has-sub:hover:before, .has-sub:focus:before, .has-sub:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 </style>
 
@@ -700,7 +746,7 @@ $(document).ready (function ()
 				   <?php if ($_SESSION['infoUser']['id_type_user']<=2){?>
 				   <li class='has-sub'><a href="administration.php"><span>Administration</span></a>
 				      <ul>
-				         <li class='has-sub'><a href="administration.php?sub=comptes_utilisateurs"><span>Ajouter / Modifer un compte utilisateur</span></a>
+				         <li class="has-sub hvr-bounce-to-right"><a href="administration.php?sub=comptes_utilisateurs"><span>Ajouter / Modifer un compte utilisateur</span></a>
 				         </li>
 				         <li class='has-sub'><a href="administration.php?sub=types_comptes_utilisateurs"><span>Ajouter / Modifier un profil utilisateur</span></a>
 				         </li>
@@ -717,6 +763,8 @@ $(document).ready (function ()
 				         </li>
 				         <li class='has-sub'><a href="administration_magasin.php?sub=fournisseurs"><span>Ajouter / modifier un fournisseur</span></a>
 				         </li>
+                          <li class='has-sub'><a href="administration_magasin.php?sub=journal"><span>Réaliser le journal</span></a>
+                          </li>
 				         <li class='has-sub'><a href="administration_magasin.php?sub=inventaire"><span>Réaliser l'inventaire du magasin</span></a>
 				         </li>
                  <li class='has-sub'><a href="administration_magasin.php?sub=groupes_factures"><span>Historiques des factures</span></a>
