@@ -2,10 +2,10 @@
 	/**
 		Fichier index.php
 		-----------------
-		Page d'index du site Internet, il permet d'initialiser les pages de connexion, et de données
+		Page d'index du site Internet, il permet d'initialiser les pages de connexion, et de donnï¿½es
 		communes dans le milieu de la page.
 		
-		On teste si on est connecté, en vérifiant $smarty.session.connected en booléen.
+		On teste si on est connectï¿½, en vï¿½rifiant $smarty.session.connected en boolï¿½en.
 	*/
 	
 	@session_start();
@@ -73,7 +73,7 @@
 			if( $db->Execute ( $sql ) )
 			{
 				$db->commit ();
-				// On récupère donc toutes les informations utiles ici.
+				// On rï¿½cupï¿½re donc toutes les informations utiles ici.
 				$_SESSION["wasConnected"] = true;
 				$db->fixEncodingArray($_SESSION);
 			}
