@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-16 17:51:07
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-24 14:36:52
          compiled from ".\templates\administration\gestion_users\types_comptes_utilisateurs.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:548052ebac3a82cfd2-94116775%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6ec02f468a1bf6ea51c71a893e013a924691dfaa' => 
     array (
       0 => '.\\templates\\administration\\gestion_users\\types_comptes_utilisateurs.tpl',
-      1 => 1426526077,
+      1 => 1427207808,
       2 => 'file',
     ),
   ),
@@ -48,13 +48,78 @@ function RefreshTableTypesUtilisateurs ()
 */
 $(document).ready (function ()
 {
+    $("#editTypeUser").hide();
 	RefreshTableTypesUtilisateurs ();
 
-	$("#addTypeUser").click (function ()
-	{
-		update_content ("ajax/popups/edit_type_user.php", "popup", "id_type_user=0");
-		ShowPopupHeight (550);
-	});
+    var i = 0;
+
+    $("#addTypeUser").click (function ()
+    {
+        i++;
+        $("#editTypeUser").slideToggle("fast");
+
+    });
+
+    $("#btnAnnuler").click (function ()
+    {
+        i++;
+        $("#nom_type_user").val("");
+        $("#warnings_popup").css("display", "none");
+        $("#editTypeUser").slideToggle("fast");
+
+    });
+
+    $("#btnValider").click (function ()
+    {
+        var ok = false;
+        if ( $("#nom_type_user").val () == "" )
+        {
+            ShowPopupError  ("Veuillez saisir le nom du profil utilisateur.");
+
+            $("#nom_type_user").focus ();
+            ok = false;
+        }
+        else
+        {
+            ok = true;
+        }
+
+        if (ok)
+        {
+            var param = $("#form_popup").serialize ();
+
+            var responseText = Serialize (param);
+            if (responseText != "")
+            {
+                response = eval (responseText);
+                if (response.result == "SUCCESS")
+                {
+
+                    ShowSuccess ("Le profil utilisateur (<strong>" + $("#nom_type_user").val () + "</strong>) a bien été enregistré.");
+                    $.modal.close ();
+                    document.location.href="administration.php?sub=types_comptes_utilisateurs";
+                }
+                else
+                {
+                    ShowPopupError  (response.result);
+
+                }
+            }
+            else
+            {
+                ShowPopupError  ("Une erreur est survenue. Veuillez contacter le service technique");
+            }
+        }
+        else
+        {
+        }
+    });
+
+//	$("#addTypeUser").click (function ()
+//	{
+//		update_content ("ajax/popups/edit_type_user.php", "popup", "id_type_user=0");
+//		ShowPopupHeight (550);
+//	});
 });
 
 </script>
@@ -92,6 +157,54 @@ $(document).ready (function ()
         </table>
     </div>
     <br style="clear: both;" />
+
+    <div id="editTypeUser" class="content">
+        <div class="TitrePopup">ajouter/modifier <strong style="color:black;">un profil utilisateur</strong></div>
+        <div class="subTitlePopup" style="color: #ffffff; text-decoration: none; font-size: 12px;">Veuillez saisir les informations du profil utilisateur en remplissant les champs obligatoires.</div>
+        <br style="clear: both; " />
+        <div style="width: 100%;">
+            <form name="form_popup" id="form_popup" method="post">
+                <table width="100%">
+                    <tr>
+                        <td colspan="2">
+                            <div class="warnings" id="warnings_popup" style="display: none;">
+                                <b>Certains champs n'ont pas &eacute;t&eacute; remplis correctement :</b>
+                                <div></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!--PARTIE GAUCHE-->
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>Nom du profil utilisateur :<span class="champObligatoire">*</span></td>
+                                    <td><input type="text" name="nom_type_user" id="nom_type_user" value="" /></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <!--PARTIE DROITE-->
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+                <input type="hidden" id="target" name="target" value="types_users" />
+                <input type="hidden" id="id_type_user" name="id_type_user" value="<<?php ?>?=$id_type_user;?<?php ?>>" />
+            </form>
+        </div>
+        <hr size="1" style="margin-top: 25px;" />
+        <div style="float: left; text-align: left;"><span class="champObligatoire">*</span> : Champs obligatoires.</div>
+        <div style="float: right; text-align: right; padding-bottom: 10px;">
+            <table border="0" cellspacing="0" cellpadding="0" align="right">
+                <tr>
+                    <td><div id="btnAnnuler"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
+                    <td>&nbsp;</td>
+                    <td><div id="btnValider"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOK" height="30" /></div></td>
+                </tr>
+            </table>
+        </div>
+        <hr size="5" style="margin-top: 50px; background-color: #ff0000;"/>
+    </div>
 
     <div id="tableau_types_users"></div>
 

@@ -27,7 +27,7 @@ $(document).ready (function ()
 	$("#addCompteUtilisateur").click (function ()
 	{
 		update_content ("ajax/popups/edit_compte_utilisateur.php", "popup", "id_compte=0");
-		ShowPopupHeight (550);
+		ShowPopupHeight (300);
 	});
 });
 

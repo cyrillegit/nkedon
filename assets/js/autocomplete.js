@@ -112,6 +112,5 @@
                 selectedResult = -1; // On remet la sélection à "zéro" à chaque caractère écrit
 
             }
-
         };
     })();

@@ -146,8 +146,8 @@ $(document).ready (function ()
                                     <td class="blocTitreId">Enregistrée par : <br/><strong><?php echo $_SESSION ["infoUser"]["nom_user"]." ".$_SESSION ["infoUser"]["prenom_user"];?></strong></td>
                                     <td style="float:right;">
                                         <?php if($_SESSION ["infoUser"]["idt_types_users"] <= 2){?>                   
-                                            <img src="css/images/page_white_edit.png" title="modifier la facture" border="0" class="edit_facture" style="cursor: pointer;" id_facture="<?=$obj["idt_factures"];?>" numero_facture="<?=$obj["numero_facture"];?>" id_fournisseur="<?=$obj["id_fournisseur"];?>" nom_fournisseur="<?=$obj["nom_fournisseur"];?>" date_facture="<?=SQLDateToFrenchDate($obj["date_facture"]);?>"/>
-                                            <a class="delete_link" title="supprimer la facture" url="delete.php?target=facture&id=<?=$obj["idt_factures"]; ?>"><img src="css/images/supprimer.png" border="0" /></a>
+                                            <img src="css/images/edit.png" title="modifier la facture" border="0" class="edit_facture" style="cursor: pointer; margin: 1px;" id_facture="<?=$obj["idt_factures"];?>" numero_facture="<?=$obj["numero_facture"];?>" id_fournisseur="<?=$obj["id_fournisseur"];?>" nom_fournisseur="<?=$obj["nom_fournisseur"];?>" date_facture="<?=SQLDateToFrenchDate($obj["date_facture"]);?>"/>
+                                            <a class="delete_link" style="margin: 1px;" title="supprimer la facture" url="delete.php?target=facture&id=<?=$obj["idt_factures"]; ?>"><img src="css/images/delete.png" border="0" /></a>
                                         <?php }?>
                                     </td>                                       
                                 </tr>
@@ -179,7 +179,7 @@ $(document).ready (function ()
                                 ?>
                                 
                                 <tr>    
-                                    <td align="left" valign="middle"><a class="links" filename="filename"><img src="assets/images/tick.jpg" alt="" width="16" height="16" /> Téléchargez la facture</a></td>  
+                                    <td align="left" valign="middle"><a class="links" filename="filename"><img src="css/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez la facture</a></td>
                                     <td class="blocTitre"></td>
                                     <td class="blocTitre"></td>
                                     <td class="blocTitre"></td>

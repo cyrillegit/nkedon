@@ -262,9 +262,9 @@ $(document).ready (function ()
 <div style="float: right; text-align: right; margin-right: 200px;">
     <table border="0" cellspacing="0" cellpadding="0" align="right">
         <tr>
-            <td><div id="btnAnnuler"><img src="css/images/boutons/btn_annuler.png" class="button" width="110" height="30" /></div></td>
+            <td><div id="btnAnnuler"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
             <td>&nbsp;</td>
-            <td><div id="btnValider"><img src="css/images/boutons/btn_valider.png" class="button" width="110" id="btnOK" height="30" /></div></td>
+            <td><div id="btnValider"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOK" height="30" /></div></td>
         </tr>
     </table>        
 </div>

@@ -53,7 +53,7 @@ $(document).ready (function ()
                     <td align="center"><?php echo $infosUser["login"]; ?></td>
                     <td align="center">
                     <?php if($_SESSION ["infoUser"]["idt_types_users"] == 1 || $_SESSION ["infoUser"]["idt_types_users"] == 2){?>
-                        <img src="css/images/page_white_edit.png" title="modifier le mot de passe" border="0" class="edit_compte_utilisateur_password" style="cursor: pointer;" id_compte="<?=$obj ["idt_users"]; ?>" />
+                        <img src="css/images/edit.png" title="modifier le mot de passe" border="0" class="edit_compte_utilisateur_password" style="cursor: pointer;" id_compte="<?=$obj ["idt_users"]; ?>" />
                     <?php }?>
                     </td>
                 </tr>

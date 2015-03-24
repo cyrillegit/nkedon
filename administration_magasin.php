@@ -75,6 +75,14 @@
 
 				$target = "gestion_fournisseurs/fournisseurs";
 			}
+            else if( $target == "operations_journal" )
+            {
+                $nb_operations = $db->getNbOperationsInDB ();
+                if(!isset($nb_operations)) $nb_operations = 0;
+                $tpl_index->assign("nb_operations", $nb_operations);
+
+                $target = "gestion_journal/operations_journal";
+            }
 			else if( $target == "edit_facture" )
 			{
 				$id_facture = $_GET["id_facture"];

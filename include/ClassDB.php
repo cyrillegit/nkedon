@@ -2,20 +2,20 @@
 	/**********************************************************************
 	*
 	* Auteur 				: Cyrille MOFFO (developpement@nemand-soft.com)
-	* Date de création 		: 07/12/2013
+	* Date de crï¿½ation 		: 07/12/2013
 	* Version 				: 1.0
 	*
 	***********************************************************************
-	* Classe gérant les accès à la base de données et les requêtes.
+	* Classe gï¿½rant les accï¿½s ï¿½ la base de donnï¿½es et les requï¿½tes.
 	*
 	* Gestion des FetchRow et FetchRows.
-	* Les logs stockent les requêtes en erreur.
+	* Les logs stockent les requï¿½tes en erreur.
 	*
 	* Database
 	* ********
 	*	- Connection.
-	*	- Logs tracées.
-	*	- Synthèse généralisée.
+	*	- Logs tracï¿½es.
+	*	- Synthï¿½se gï¿½nï¿½ralisï¿½e.
 	* 
 	**********************************************************************/
 	
@@ -26,16 +26,16 @@
 	
 	class Database extends PDO
 	{
-		// Année par défaut pour les filtres.
+		// Annï¿½e par dï¿½faut pour les filtres.
 		protected $Annee;
 		
-		// Mois par défaut pour les filtres.
+		// Mois par dï¿½faut pour les filtres.
 		protected $Mois;
 		
-		// Requête SQL.
+		// Requï¿½te SQL.
 		protected $Sql;
 		
-		// Pointeur vers la base de données centrale. Celle qui sera installée en local sur le serveur central.
+		// Pointeur vers la base de donnï¿½es centrale. Celle qui sera installï¿½e en local sur le serveur central.
 	//	protected $MasterDB;
 		
 		protected $LastErrorString;
@@ -54,48 +54,48 @@
 		{
 			setlocale(LC_TIME, "fr_FR.UTF-8");
 
-			// $hostname = "localhost";
-			// $dbname = "nkedon_db";
-			// $username = "root";
-			// $password = "";
-			// try 
-			// {
-			// 	$connectionString = "mysql:host=".$hostname.";dbname=".$dbname;
+			 $hostname = "localhost";
+			 $dbname = "nkedon_db";
+			 $username = "root";
+			 $password = "";
+			 try
+			 {
+			 	$connectionString = "mysql:host=".$hostname.";dbname=".$dbname;
 				
-			// 	parent::__construct(
-			// 		$connectionString,
-			// 		$username,
-			// 		$password
-			// 	);
-			// }
-			// catch (PDOException $dbex) 
-			// {
-			// 	echo "({'connected': 'false', 'message': 'Impossible de vous connecter à la base de données de Nkedon.'})";
-			// }	
+			 	parent::__construct(
+			 		$connectionString,
+			 		$username,
+			 		$password
+			 	);
+			 }
+			 catch (PDOException $dbex)
+			 {
+			 	echo "({'connected': 'false', 'message': 'Impossible de vous connecter ï¿½ la base de donnï¿½es de Nkedon.'})";
+			 }
 
-			$this->Connection = array ();
-			$this->Sql = "";
-			
-			try 
-			{
-				$connectionString = "mysql:host=".Configuration::getValue('common_host').";dbname=".Configuration::getValue('common_dbname');
-				
-				parent::__construct(
-					$connectionString,
-					Configuration::getValue('common_user'),
-					Configuration::getValue('common_password')
-				);
-			}
-			catch (PDOException $dbex) {
-				echo 'Impossible de vous connecter à la base de données centrale du BackOffice.';
-				throw_error($dbex);
-			}	
+//			$this->Connection = array ();
+//			$this->Sql = "";
+//
+//			try
+//			{
+//				$connectionString = "mysql:host=".Configuration::getValue('common_host').";dbname=".Configuration::getValue('common_dbname');
+//
+//				parent::__construct(
+//					$connectionString,
+//					Configuration::getValue('common_user'),
+//					Configuration::getValue('common_password')
+//				);
+//			}
+//			catch (PDOException $dbex) {
+//				echo 'Impossible de vous connecter ï¿½ la base de donnï¿½es centrale du BackOffice.';
+//				throw_error($dbex);
+//			}
 		}
 
 		/**
 		 * Fonction fixEncoding
 		 * --------------------
-		 * Cette fonction résoud l'encodage UTF-8 en ISO pour gérer correctement les accents.
+		 * Cette fonction rï¿½soud l'encodage UTF-8 en ISO pour gï¿½rer correctement les accents.
 		 *
 		 * @param string $in_str
 		 * @return string
@@ -107,7 +107,7 @@
 			$buffer = mb_convert_encoding($in_str, 'ISO-8859-1',
 						  mb_detect_encoding($in_str, 'UTF-8, ISO-8859-1', true)); 
 						  
-			// En même temps, ça gagne un temps précieux.
+			// En mï¿½me temps, ï¿½a gagne un temps prï¿½cieux.
 			$buffer = utf8_encode ($buffer);
 			return $buffer;
 		}
@@ -115,8 +115,8 @@
 		/**
 		 * Fonction fixEncodingArray
 		 * -------------------------
-		 * Cette fonction résoud l'encodage UTF-8 en ISO pour gérer correctement les accents.
-		 * Elle est récursive, attention.
+		 * Cette fonction rï¿½soud l'encodage UTF-8 en ISO pour gï¿½rer correctement les accents.
+		 * Elle est rï¿½cursive, attention.
 		 *
 		 * @param Array $array
 		 * @return array
@@ -143,8 +143,8 @@
 		/**
 		 * Fonction FetchRow
 		 * -----------------
-		 * Récupération d'une ligne dans la base de données avec this->Sql déjà initialisé.
-		 * Le mode PDO est en option et par défaut, il retourne tout le tableau.
+		 * Rï¿½cupï¿½ration d'une ligne dans la base de donnï¿½es avec this->Sql dï¿½jï¿½ initialisï¿½.
+		 * Le mode PDO est en option et par dï¿½faut, il retourne tout le tableau.
 		 * 
 		 * @return Array or Null
 		 */
@@ -169,7 +169,7 @@
 		/**
 		 * Fonction FetchAllRows
 		 * ---------------------
-		 * Récupération de toutes les informations disponibles dans le tableau.
+		 * Rï¿½cupï¿½ration de toutes les informations disponibles dans le tableau.
 		 * 
 		 * @return Array or Null
 		 */
@@ -195,9 +195,9 @@
 		 * Fonction Execute
 		 * ----------------
 		 * Retourne 0 en cas d'erreur et 1 en cas de succ&egrave;s. 
-		 * ATTENTION, uniquement des requêtes INSERT, UPDATE ou DELETE ici.
+		 * ATTENTION, uniquement des requï¿½tes INSERT, UPDATE ou DELETE ici.
 		 * 
-		 * Si aucune donn&eacute;e n'a &eacute;t&eacute; &eacute;crite, si la requête n'est pas bonne, on sort False.  
+		 * Si aucune donn&eacute;e n'a &eacute;t&eacute; &eacute;crite, si la requï¿½te n'est pas bonne, on sort False.  
 		 *
 		 * @param string $this->Sql
 		 * @return int
@@ -223,7 +223,7 @@
 					</head>
 					<body>
 					<b><h2>Nkedon</h2></b><br />
-					Requête SQL ex&eacute;cut&eacute;e : <b>".$this->Sql."</b><br />
+					Requï¿½te SQL ex&eacute;cut&eacute;e : <b>".$this->Sql."</b><br />
 					Code de l'erreur :<br />
 					".$errorInfo [1]."
 					</br /></br />Description de l'erreur :<br />
@@ -270,11 +270,11 @@
 		/**
 		 * Fonction authenticate
 		 * ---------------------
-		 * Cette fonction effectue le test en base de données par rapport au login et au
-		 * mot de passe envoyés en paramètre.
+		 * Cette fonction effectue le test en base de donnï¿½es par rapport au login et au
+		 * mot de passe envoyï¿½s en paramï¿½tre.
 		 *
 		 * @param string $login.
-		 * @param string $password  Il est envoyé déjà crypté.
+		 * @param string $password  Il est envoyï¿½ dï¿½jï¿½ cryptï¿½.
 		 * @return boolean
 		 */
 		function authenticate ( $login, $password )
@@ -306,7 +306,7 @@
 		/**
 		 * Fonction GetInfoAllUsers
 		 * --------------------
-		 * On envoie les informations de tous les utilisateurs en base de données.
+		 * On envoie les informations de tous les utilisateurs en base de donnï¿½es.
 		 * 
 		 * @return Array
 		 */
@@ -322,7 +322,7 @@
 		/**
 		 * Fonction GetIdUserFromLogin
 		 * -------------------
-		 * Retourne l'id user de t_users depuis le login de la personne connecté
+		 * Retourne l'id user de t_users depuis le login de la personne connectï¿½
 		 *
 		 * @param string $login
 		 * @return int
@@ -337,7 +337,7 @@
 		/**
 		 * Fonction getNbComptesUtilisateursInDB
 		 * -------------------
-		 * Retourne le nombre de compte utilisateurs enregistrés dans la base de données.
+		 * Retourne le nombre de compte utilisateurs enregistrï¿½s dans la base de donnï¿½es.
 		 *
 		 * @return int
 		 */
@@ -351,7 +351,7 @@
 		/**
 		 * Fonction getAllComptesUtilisateurs
 		 * -------------------
-		 * Retourne les comptes utilisateurs présents en base de données
+		 * Retourne les comptes utilisateurs prï¿½sents en base de donnï¿½es
 		 *
 		 * @return int
 		 */
@@ -367,7 +367,7 @@
 		/**
 		 * Fonction getAllComptesUtilisateursWithoutAdmin
 		 * -------------------
-		 * Retourne les comptes utilisateurs présents en base de données
+		 * Retourne les comptes utilisateurs prï¿½sents en base de donnï¿½es
 		 *
 		 * @return int
 		 */
@@ -403,7 +403,7 @@
 		/**
 		 * Fonction getAllTypesComptesUtilisateurs
 		 * -------------------
-		 * Retourne les types de comptes utilisateurs présent en base de données
+		 * Retourne les types de comptes utilisateurs prï¿½sent en base de donnï¿½es
 		 *
 		 * @return int
 		 */
@@ -418,7 +418,7 @@
 		/**
 		 * Fonction getAllTypesUsersWithoutAdmin
 		 * -------------------
-		 * Retourne les types d'utilisateurs en base de données qui ne sont pas "Administrateur" ou "Super Administrateur".
+		 * Retourne les types d'utilisateurs en base de donnï¿½es qui ne sont pas "Administrateur" ou "Super Administrateur".
 		 *
 		 * @return Array
 		 */
@@ -434,7 +434,7 @@
 		/**
 		 * Fonction getNbTypesUsersInDB
 		 * -------------------
-		 * Retourne le nombre de type de profils utilisateurs présents en base de données.
+		 * Retourne le nombre de type de profils utilisateurs prï¿½sents en base de donnï¿½es.
 		 *
 		 * @return int
 		 */
@@ -476,7 +476,7 @@
 		/**
 		 * Fonction getInfoTypeUser
 		 * -------------------
-		 * Retourne les types d'utilisateurs en base de données qui ne sont pas "Administrateur" ou "Super Administrateur".
+		 * Retourne les types d'utilisateurs en base de donnï¿½es qui ne sont pas "Administrateur" ou "Super Administrateur".
 		 *
 		 * @return Array
 		 */
@@ -491,7 +491,7 @@
 		/**
 		 * Fonction getNbProduitsInDB
 		 * -------------------
-		 * Retourne le nombre de type de produits présents en base de données.
+		 * Retourne le nombre de type de produits prï¿½sents en base de donnï¿½es.
 		 *
 		 * @return int
 		 */
@@ -505,7 +505,7 @@
 		/**
 		 * Fonction getNbFournisseursInDB
 		 * -------------------
-		 * Retourne le nombre de type de fournisseurs présents en base de données.
+		 * Retourne le nombre de type de fournisseurs prï¿½sents en base de donnï¿½es.
 		 *
 		 * @return int
 		 */
@@ -514,12 +514,26 @@
 			$this->Sql = "SELECT COUNT(*) AS nb_fournisseurs FROM t_fournisseurs";
 			$res = $this->FetchRow();
 			return $res ["nb_fournisseurs"];
-		}	
+		}
+
+        /**
+         * Fonction getNbOperationsInDB
+         * -------------------
+         * Retourne le nombre de type d'operations prï¿½sents en base de donnï¿½es.
+         *
+         * @return int
+         */
+        public function getNbOperationsInDB ()
+        {
+            $this->Sql = "SELECT COUNT(*) AS nb_operations FROM t_produits_operations";
+            $res = $this->FetchRow();
+            return $res ["nb_operations"];
+        }
 
 		/**
 		 * Fonction getNbFacturesInDB
 		 * -------------------
-		 * Retourne le nombre de type de fournisseurs présents en base de données.
+		 * Retourne le nombre de type de fournisseurs prï¿½sents en base de donnï¿½es.
 		 *
 		 * @return int
 		 */
@@ -533,7 +547,7 @@
 		/**
 		 * Fonction getNbHistoriqueSyntheseInDB
 		 * -------------------
-		 * Retourne le nombre d'historique de syntheses en base de données.
+		 * Retourne le nombre d'historique de syntheses en base de donnï¿½es.
 		 *
 		 * @return int
 		 */
@@ -547,7 +561,7 @@
 		/**
 		 * Fonction getNbHistoriquesFacturesInDB
 		 * -------------------
-		 * Retourne le nombre d'historique de factures en base de données.
+		 * Retourne le nombre d'historique de factures en base de donnï¿½es.
 		 *
 		 * @return int
 		 */
@@ -561,7 +575,7 @@
 		/**
 		 * Fonction getNbHistoriquesFacturesByGroupInDB
 		 * -------------------
-		 * Retourne le nombre d'historique de factures par groupe en base de données.
+		 * Retourne le nombre d'historique de factures par groupe en base de donnï¿½es.
 		 *
 		 * @return int
 		 */
@@ -575,7 +589,7 @@
 		/**
 		 * Fonction getNbGroupesFacturesInDB
 		 * -------------------
-		 * Retourne le nombre de groupe de factures en base de données.
+		 * Retourne le nombre de groupe de factures en base de donnï¿½es.
 		 *
 		 * @return int
 		 */
@@ -605,7 +619,7 @@
 		/**
 		 * Fonction getAllProduits
 		 * -------------------
-		 * Retourne les produits présents en base de données
+		 * Retourne les produits prï¿½sents en base de donnï¿½es
 		 *
 		 * @return array
 		 */
@@ -619,7 +633,7 @@
 		/**
 		 * Fonction getAllProduitsWithAchats
 		 * -------------------
-		 * Retourne les produits présents et les quantité correspondantes en base de données
+		 * Retourne les produits prï¿½sents et les quantitï¿½ correspondantes en base de donnï¿½es
 		 *
 		 * @return array
 		 */
@@ -636,7 +650,7 @@
 		/**
 		 * Fonction getAutoCompleteProduits
 		 * -------------------
-		 * Retourne les produits présents en base de données
+		 * Retourne les produits prï¿½sents en base de donnï¿½es
 		 *
 		 * @return array
 		 */
@@ -653,7 +667,7 @@
 		/**
 		 * Fonction getAllFactures
 		 * -------------------
-		 * Retourne les factures présentes en base de données
+		 * Retourne les factures prï¿½sentes en base de donnï¿½es
 		 *
 		 * @return array
 		 */
@@ -670,7 +684,7 @@
 		/**
 		 * Fonction getAllRecapitulatif
 		 * -------------------
-		 * Retourne les recapituatifs d'inventaire présents en base de données
+		 * Retourne les recapituatifs d'inventaire prï¿½sents en base de donnï¿½es
 		 *
 		 * @return array
 		 */
@@ -704,7 +718,7 @@
 		/**
 		 * Fonction getAllAchatsVentesMois
 		 * -------------------
-		 * Retourne le total des achats et ventes du mois present en base de données
+		 * Retourne le total des achats et ventes du mois present en base de donnï¿½es
 		 *
 		 * @return array
 		 */
@@ -721,7 +735,7 @@
 		/**
 		 * Fonction getAllProduitsAssocToFactures
 		 * -------------------
-		 * Retourne les produits d'une facture présents en base de données
+		 * Retourne les produits d'une facture prï¿½sents en base de donnï¿½es
 		 *
 		 * @return array
 		 */
@@ -740,7 +754,7 @@
 		/**
 		 * Fonction getAllFournisseurs
 		 * -------------------
-		 * Retourne les fournisseurs présents en base de données
+		 * Retourne les fournisseurs prï¿½sents en base de donnï¿½es
 		 *
 		 * @return array
 		 */
@@ -757,7 +771,7 @@
 		/**
 		 * Fonction getAllProduitsAchetes
 		 * -------------------
-		 * Retourne tous les produits achetés d'une facture
+		 * Retourne tous les produits achetï¿½s d'une facture
 		 *
 		 * @return array
 		 */
@@ -771,7 +785,7 @@
 		/**
 		 * Fonction getInfosFactureEnCours
 		 * -------------------
-		 * Retourne les informations des produits presentements eregistrés sur une facture
+		 * Retourne les informations des produits presentements eregistrï¿½s sur une facture
 		 *
 		 * @return array
 		 */
@@ -804,7 +818,7 @@
 		/**
 		 * Fonction getInfoProduit
 		 * -------------------
-		 * Retourne les informations d'un produit en base de données.
+		 * Retourne les informations d'un produit en base de donnï¿½es.
 		 *
 		 * @return Array
 		 */
@@ -815,10 +829,24 @@
 			return $res;
 		}
 
+        /**
+         * Fonction getInfoProduitByNom
+         * -------------------
+         * Retourne les informations d'un produit en base de donnï¿½es connaissant le nom du produit.
+         *
+         * @return Array
+         */
+        public function getInfoProduitByNom ( $id )
+        {
+            $this->Sql = "SELECT * FROM t_produits WHERE nom_produit = '$id'";
+            $res = $this->FetchRow();
+            return $res[0];
+        }
+
 		/**
 		 * Fonction getInfoFournisseur
 		 * -------------------
-		 * Retourne les informations d'un fournisseur en base de données.
+		 * Retourne les informations d'un fournisseur en base de donnï¿½es.
 		 *
 		 * @return Array
 		 */
@@ -1098,6 +1126,24 @@
 			return $res;
 		}
 
+        /**
+         * Fonction getInfoProduitOperation
+         * -------------------
+         * Retourne les informations d'une operation
+         *
+         * @return array
+         */
+        public function getInfoProduitOperation( $id )
+        {
+            $this->Sql = "SELECT *
+							FROM t_produits_operations AS po
+							JOIN t_produits AS p ON po.id_produit = p.idt_produits
+							WHERE po.idt_produits_operations = $id";
+
+            $res = $this->FetchRow();
+            return $res;
+        }
+
 		/**
 		 * Fonction getIdProduitByNom
 		 * -------------------
@@ -1341,7 +1387,7 @@
 		/**
 		 * Fonction getProduitWithAchat
 		 * -------------------
-		 * Retourne les produits et les achats de ce produit en base de données
+		 * Retourne les produits et les achats de ce produit en base de donnï¿½es
 		 *
 		 * @return array
 		 */
@@ -1359,7 +1405,7 @@
 		/**
 		 * Fonction getAllComptesUtilisateursCaissier
 		 * -------------------
-		 * Retourne les comptes utilisateurs caissier présents en base de données
+		 * Retourne les comptes utilisateurs caissier prï¿½sents en base de donnï¿½es
 		 *
 		 * @return int
 		 */
@@ -1376,7 +1422,7 @@
 		/**
 		 * Fonction getAllAchatsByFacture
 		 * -------------------
-		 * Retourne tous les achats d'une facture en base de données
+		 * Retourne tous les achats d'une facture en base de donnï¿½es
 		 *
 		 * @return array
 		 */
@@ -1407,7 +1453,7 @@
 		/**
 		 * Fonction getAllHistoriquesAchatsByFacture
 		 * -------------------
-		 * Retourne tous les historiques des achats d'une facture en base de données
+		 * Retourne tous les historiques des achats d'une facture en base de donnï¿½es
 		 *
 		 * @return array
 		 */
@@ -1424,7 +1470,7 @@
 		/**
 		 * Fonction getAllquantiteProduitsAchetesByPeriode
 		 * -------------------
-		 * Retourne les quantités de produits achetés
+		 * Retourne les quantitï¿½s de produits achetï¿½s
 		 *
 		 * @return array
 		 */
@@ -1442,7 +1488,7 @@
 		/**
 		 * Fonction getAllHistoriqueQuantiteProduitsByPeriode
 		 * -------------------
-		 * Retourne les quantités de produits vendus
+		 * Retourne les quantitï¿½s de produits vendus
 		 *
 		 * @return array
 		 */
@@ -1461,7 +1507,7 @@
 		/**
 		 * Fonction getAllCurrentQuantiteProduitsByPeriode
 		 * -------------------
-		 * Retourne les quantités de produits vendus
+		 * Retourne les quantitï¿½s de produits vendus
 		 *
 		 * @return array
 		 */
@@ -1490,6 +1536,24 @@
 							FROM t_groupes_factures";
 			$res = $this->FetchAllRows();
 			return $res;
-		}																																										
+		}
+
+        /**
+         * Fonction getProduitsOperations
+         * -------------------
+         * Retourne les operations d'un journal
+         *
+         * @return array
+         */
+        public function getProduitsOperations()
+        {
+            $this->Sql = "SELECT *
+							FROM t_produits_operations AS po
+							JOIN t_produits AS p ON po.id_produit = p.idt_produits
+							ORDER BY po.idt_produits_operations DESC";
+
+            $res = $this->FetchAllRows();
+            return $res;
+        }
 	}
 ?>

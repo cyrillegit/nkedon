@@ -22,6 +22,7 @@ if( $id != NULL )
 	{
 		if( $nom_fournisseur != NULL && $adresse_fournisseur != NULL && $telephone_fournisseur != NULL)
 		{
+        //    print_r($nom_fournisseur);
 			$ok = true;
 			$infoAllFournisseurs = $db->getAllFournisseurs();
 			foreach ($infoAllFournisseurs as $infoAllFournisseur)

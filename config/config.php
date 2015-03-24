@@ -13,12 +13,17 @@
 	Param&egrave;tres principaux du site Qualiweb. Les informations de 
 	connexion &agrave; la base de donn&eacute;es sont l&agrave;.
 	
-	On va utiliser la valeur ProductionEnvironment pour déterminer si on
-	est bien dans un environnement propice à l'utilisation des répertoires
-	spécifiques.
+	On va utiliser la valeur ProductionEnvironment pour dï¿½terminer si on
+	est bien dans un environnement propice ï¿½ l'utilisation des rï¿½pertoires
+	spï¿½cifiques.
 	
 	**************************************************************** */
-	class Configuration
+    define('DB_HOST', 'localhost');
+    define('DB_NAME', 'nkedon_db');
+    define('DB_USER','root');
+    define('DB_PASSWORD','');
+
+    class Configuration
 	{
 		private $cfg = null;
 		static private $myself;
@@ -26,10 +31,10 @@
 		private function __construct()
 		{
 			$path_root = $_SERVER ["DOCUMENT_ROOT"];
-			
+
 			$ProductionEnvironment = (($_SERVER["SERVER_NAME"] != "127.0.0.1"));
 			$Local = $_SERVER['SERVER_NAME'] == "127.0.0.1";
-			
+
 			$TestEnvironment = false;
 			$prefix = ($ProductionEnvironment ? "nkedon/" : "/nkedon/");
 			$this->cfg = array(
@@ -44,7 +49,7 @@
 				'user' 						=> $Local || !$ProductionEnvironment ? 'root' : 'root',
 				'password'					=> $Local || !$ProductionEnvironment ? '' : '',
 				// ------------------------------------------------------------------------------------- //
-				
+
 				'VersionSite'				=> "1.0",
 				'ProductionEnvironment'		=> $ProductionEnvironment,
 				'IsLocal'					=> $Local,
@@ -55,7 +60,7 @@
 				'absolute_path_root'		=> $path_root,
 				'path_root'					=> $path_root . $prefix .'',
 				'UploadsPath'				=> $path_root . $prefix . 'Documents/uploads/',
-				// La variable http_home permet de savoir sur quel serveur on est, celui de production ou celui de développement, cette partie est très importante.
+				// La variable http_home permet de savoir sur quel serveur on est, celui de production ou celui de dï¿½veloppement, cette partie est trï¿½s importante.
 				'http_home'					=> "http://".$_SERVER ["SERVER_NAME"].($ProductionEnvironment ? "/nkedon/" : "/nkedon/"),
 				'use_mail_system'			=> false,
 				'RowsToDeleteIfMax'			=> 100,
@@ -63,7 +68,7 @@
 				'ActivateEmailerLog'		=> false
 			);
 		}
-		
+
 		public static function getValue($key, $canFail = false)
 		{
 			if (array_key_exists($key, self::$myself->cfg))
@@ -73,13 +78,13 @@
 					return NULL;
 			}
 		}
-		
+
 		public static function initialize()
 		{
 			self::$myself = new Configuration();
 		}
 	}
-	
+
 	Configuration::initialize();
 
 ?>

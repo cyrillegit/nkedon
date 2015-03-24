@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-06-16 21:37:59
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-17 10:27:06
          compiled from ".\templates\administration_magasin\gestion_factures\edit_facture.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2141652ebd4f06be6f3-26729779%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e7a7bff35746525492e465fd68ae0abd1fc90e8b' => 
     array (
       0 => '.\\templates\\administration_magasin\\gestion_factures\\edit_facture.tpl',
-      1 => 1402954677,
+      1 => 1426588008,
       2 => 'file',
     ),
   ),
@@ -314,9 +314,9 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 <div style="float: right; text-align: right; margin-right: 200px;">
     <table border="0" cellspacing="0" cellpadding="0" align="right">
         <tr>
-            <td><div id="btnAnnuler"><img src="css/images/boutons/btn_annuler.png" class="button" width="110" height="30" /></div></td>
+            <td><div id="btnAnnuler"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
             <td>&nbsp;</td>
-            <td><div id="btnValider"><img src="css/images/boutons/btn_valider.png" class="button" width="110" id="btnOK" height="30" /></div></td>
+            <td><div id="btnValider"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOK" height="30" /></div></td>
         </tr>
     </table>        
 </div>

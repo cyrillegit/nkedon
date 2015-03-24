@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-04 21:55:42
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-17 09:49:29
          compiled from ".\templates\administration_magasin\gestion_magasin\historique_syntheses.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:203052ebaf5fc4fd71-66558753%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '13bccf1f6ee3c920740ee469bb37c7e9c6172b6d' => 
     array (
       0 => '.\\templates\\administration_magasin\\gestion_magasin\\historique_syntheses.tpl',
-      1 => 1391550587,
+      1 => 1426526077,
       2 => 'file',
     ),
   ),

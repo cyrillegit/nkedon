@@ -29,7 +29,7 @@ $(document).ready (function ()
 		$.modal.close ();
 	});
 
-	$("#btnOK").click (function ()
+	$("#btnValider").click (function ()
 	{
 		var ok = false;
 		if ( $("#nom_type_user").val () == "" )
@@ -47,28 +47,27 @@ $(document).ready (function ()
 		if (ok)
 		{
 			var param = $("#form_popup").serialize ();
-				
+
 			var responseText = Serialize (param);
-			
 			if (responseText != "")
 			{
 				response = eval (responseText);
 				if (response.result == "SUCCESS")
 				{
-					
+
 					ShowSuccess ("Le profil utilisateur (<strong>" + $("#nom_type_user").val () + "</strong>) a bien été enregistré.");
-					$.modal.close ();					
+					$.modal.close ();
 					document.location.href="administration.php?sub=types_comptes_utilisateurs";
 				}
 				else
 				{
 					ShowPopupError  (response.result);
-					
+
 				}
 			}
 			else
 			{
-				ShowPopupError  ("Une erreur est survenue. Veuillez contacter le service technique (technique@id2tel.com) pour avoir plus d'informations.");
+				ShowPopupError  ("Une erreur est survenue. Veuillez contacter le service technique");
 			}
 		}
 		else
@@ -106,9 +105,9 @@ $(document).ready (function ()
         <div style="float: right; text-align: right;">
             <table border="0" cellspacing="0" cellpadding="0" align="right">
                 <tr>
-                    <td><div id="btnAnnuler"><img src="css/images/boutons/btn_annuler.png" class="button" width="110" height="30" /></div></td>
+                    <td><div id="btnAnnuler"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
                     <td>&nbsp;</td>
-                    <td><div id="btnValider"><img src="css/images/boutons/btn_valider.png" class="button" width="110" id="btnOK" height="30" /></div></td>
+                    <td><div id="btnValider"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOK" height="30" /></div></td>
                 </tr>
             </table>        
         </div>

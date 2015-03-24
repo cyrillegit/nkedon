@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-31 14:12:39
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-17 10:06:55
          compiled from ".\templates\administration_magasin\gestion_fournisseurs\fournisseurs.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1767152ebaf57636ca0-42910577%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ddae0c858688a44dc1aa12beccf0e76bd5034fff' => 
     array (
       0 => '.\\templates\\administration_magasin\\gestion_fournisseurs\\fournisseurs.tpl',
-      1 => 1387715057,
+      1 => 1426526077,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52ebaf57756fa2_65389006',
   'variables' => 
   array (
     'nb_fournisseurs' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52ebaf57756fa2_65389006',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52ebaf57756fa2_65389006')) {function content_52ebaf57756fa2_65389006($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("common/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 

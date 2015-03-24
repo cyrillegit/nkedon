@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-01-31 16:59:14
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-17 16:54:21
          compiled from ".\templates\delete\result.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3244952ebd6620a84b3-73546977%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b088b3e84c5e34a33e58c72f31012b3ada7a829f' => 
     array (
       0 => '.\\templates\\delete\\result.tpl',
-      1 => 1383639892,
+      1 => 1426526077,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52ebd6621a0970_03031824',
   'variables' => 
   array (
     'error' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'show_return' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52ebd6621a0970_03031824',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52ebd6621a0970_03031824')) {function content_52ebd6621a0970_03031824($_smarty_tpl) {?><style type="text/css">
 #Content .wrapper .counters .countdown {

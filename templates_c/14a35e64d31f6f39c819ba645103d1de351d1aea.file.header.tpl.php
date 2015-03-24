@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-16 22:10:20
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-24 10:34:07
          compiled from ".\templates\common\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:399652eba7b1708760-69883461%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '14a35e64d31f6f39c819ba645103d1de351d1aea' => 
     array (
       0 => '.\\templates\\common\\header.tpl',
-      1 => 1426543779,
+      1 => 1427193100,
       2 => 'file',
     ),
   ),
@@ -29,7 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <LINK REL="SHORTCUT ICON" href="fav_icon.ico">
 <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
 
-<link type='text/css' href='css/simplemodal_basic_ie.css' rel='stylesheet' media='screen' />
+
 
 <link rel="stylesheet" href="assets/css/ui.jquery/jquery-ui.custom.css" type="text/css" /> 
 
@@ -42,15 +42,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 <script type="text/javascript" src="assets/js/gmap3.min.js"></script>
 
-<script type="text/javascript" src="assets/js/jquery.confirm.js"></script>
-<script type="text/javascript" src="assets/js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.autocomplete.js"></script>
-<script type="text/javascript" src="assets/jsjquery.ui.core.min.js"></script>
-<script type="text/javascript" src="assets/jsjquery.ui.widget.min.js"></script>
-<script type="text/javascript" src="assets/jsjquery.ui.position.min.js"></script>
-<script type="text/javascript" src="assets/jsjquery.ui.autocomplete.min.js"></script>
 
-<link rel="stylesheet" href="assets/js/jquery/smoothness/jquery-ui-1.8.16.custom.css"/>
+
+
+
+
+
+
+
+
+
 
 <style type="text/css">
 #cssmenu {
@@ -389,7 +390,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <script language="javascript">
 
 $('#cssmenu').prepend('<div id="indicatorContainer"><div id="pIndicator"><div id="cIndicator"></div></div></div>');
-	var posLeft = $('#cssmenu>ul>li.active').position().left;
+	var posLeft = $('#cssmenu>ul>li.active').position();
 	var elementWidth = $('#cssmenu>ul>li.active').width();
 	posLeft = posLeft + elementWidth/2 -6;
 	if ($('#cssmenu>ul>li.active').hasClass('has-sub')) {
@@ -675,8 +676,53 @@ function compareDate(date1, date2) {
 }
 function ShowSerializeWaitMessage ()
 {
-	$.blockUI({ message: '<h4 style="font-size:10px;margin:10px 0;">Veuillez patienter pendant l\'enregistrement de vos données...</h4><img src="assets/images/progress.gif" /><br/><br/>' });
+	$.blockUI({ message: '<h4 style="font-size:10px;margin:10px 0;">Veuillez patienter pendant l\'enregistrement de vos données ...</h4><img src="assets/images/progress.gif" /><br/><br/>' });
 }
+
+// autocomplet : this function will be executed every time we change the text
+function autocomplet() {
+    var min_length = 0; // min caracters to display the autocomplete
+    var keyword = $('#nom_produit_search').val();
+    if (keyword.length >= min_length) {
+        $.ajax({
+            url: 'search.php',
+            type: 'POST',
+            data: {keyword:keyword},
+            success:function(data){
+                $('#list_nom_produit').show();
+                $('#list_nom_produit').html(data);
+            }
+        });
+    } else {
+        $('#list_nom_produit').hide();
+    }
+}
+
+function storeOperation() {
+    var min_length = 0; // min caracters to display the autocomplete
+    var keyword = $('#nom_produit_search').val();
+    var response = "";
+    if (keyword.length >= min_length) {
+        $.ajax({
+            url: 'search.php',
+            type: 'POST',
+            data: {keyword:keyword},
+            success:function(data){
+                response = data;
+            }
+        });
+    }
+    return response;
+}
+
+// set_item : this function will be executed when we select an item
+function set_item(item) {
+    // change input value
+    $('#nom_produit_search').val(item);
+    // hide proposition list
+    $('#list_nom_produit').hide();
+}
+
 $(document).ready (function ()
 {
 	// Définition de variables globales pour le site Web.
@@ -739,14 +785,14 @@ $(document).ready (function ()
 					</td>
 				<tr/>
 			</table>
-			<div class="menu" style="margin-top: -50px;width: 760px; margin-left: 230px;">
+			<div class="menu" style="margin-top: -50px;width: 770px; margin-left: 230px;">
 				<div id='cssmenu'>
 				<ul>
-				   <li class='active'><a href='index.php'><span>Accueil</span></a></li>
+				   <li class='active has-sub'><a href='index.php'><span>Accueil</span></a></li>
 				   <?php if ($_SESSION['infoUser']['id_type_user']<=2){?>
 				   <li class='has-sub'><a href="administration.php"><span>Administration</span></a>
 				      <ul>
-				         <li class="has-sub hvr-bounce-to-right"><a href="administration.php?sub=comptes_utilisateurs"><span>Ajouter / Modifer un compte utilisateur</span></a>
+				         <li class="has-sub"><a href="administration.php?sub=comptes_utilisateurs"><span>Ajouter / Modifer un compte utilisateur</span></a>
 				         </li>
 				         <li class='has-sub'><a href="administration.php?sub=types_comptes_utilisateurs"><span>Ajouter / Modifier un profil utilisateur</span></a>
 				         </li>
@@ -763,7 +809,7 @@ $(document).ready (function ()
 				         </li>
 				         <li class='has-sub'><a href="administration_magasin.php?sub=fournisseurs"><span>Ajouter / modifier un fournisseur</span></a>
 				         </li>
-                          <li class='has-sub'><a href="administration_magasin.php?sub=journal"><span>Réaliser le journal</span></a>
+                          <li class='has-sub'><a href="administration_magasin.php?sub=operations_journal"><span>Réaliser le journal</span></a>
                           </li>
 				         <li class='has-sub'><a href="administration_magasin.php?sub=inventaire"><span>Réaliser l'inventaire du magasin</span></a>
 				         </li>
@@ -780,8 +826,8 @@ $(document).ready (function ()
 
 				   <li class='has-sub'><a href="administration_production.php"><span>Production</span></a>
 				   </li>							   							   
-				   <li><a href="about.php"><span>About</span></a></li>
-				   <li class='last'><a href="contact.php"><span>Contact</span></a></li>
+				   <li class='has-sub'><a href="about.php"><span>About</span></a></li>
+				   <li class='last has-sub'><a href="contact.php"><span>Contact</span></a></li>
 				</ul>
 				</div>
 			</div>

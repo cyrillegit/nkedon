@@ -66,9 +66,9 @@ $(document).ready (function ()
                     <td align="center"><span class="floatAndMarginLeft"><?php echo number_format( $obj["prix_achat"], 2, ',', ' '); ?></span></td>
                     <td align="center"><span class="floatAndMarginLeft"><?php echo number_format( $obj["prix_vente"], 2, ',', ' '); ?></span></td>
                     <td align="center">
-                        <img src="css/images/consult.png" title="réaliser un inventaire" border="0" class="consult_produit" style="cursor: pointer;" id_produit="<?=$obj ["idt_produits"]; ?>" />
+                        <img src="css/images/bullseye.png" title="réaliser un inventaire" border="0" class="consult_produit" style="cursor: pointer; margin: 1px;" id_produit="<?=$obj ["idt_produits"]; ?>" />
                     <?php if($_SESSION ["infoUser"]["idt_types_users"] <= 3){?>
-                        <img src="css/images/page_white_edit.png" title="modifier un inventaire" border="0" class="edit_produit" style="cursor: pointer;" id_produit="<?=$obj ["idt_produits"]; ?>" />
+                        <img src="css/images/edit.png" title="modifier un inventaire" border="0" class="edit_produit" style="cursor: pointer; margin: 1px;" id_produit="<?=$obj ["idt_produits"]; ?>" />
                     <?php }?>
                     </td>
                 </tr>

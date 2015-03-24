@@ -9,7 +9,6 @@
 @require_once("../../../include/ClassDB.php");
 
 @session_start();
-$output = "";
 $db = new Database ();
 
 $datas = $db->getAllTypesUsersWithoutAdmin ();
@@ -21,8 +20,11 @@ $(document).ready (function ()
 	{
 		$(this).click (function ()
 		{
-			update_content ("ajax/popups/edit_type_user.php", "popup", "id_type_user=" + $(this).attr ("id_type_user"));
-			ShowPopupHeight (550);
+            $("#id_type_user").val($(this).attr ("id_type_user"));
+            $("#nom_type_user").val( $(this).attr ("nom_type_user") );
+            $("#editTypeUser").slideToggle("fast");
+//			update_content ("ajax/popups/edit_type_user.php", "popup", "id_type_user=" + $(this).attr ("id_type_user"));
+//			ShowPopupHeight (300);
 		});
 	});
 });
@@ -46,8 +48,8 @@ $(document).ready (function ()
                     <td align="center"><?php echo $nom_type_user; ?></td>
                     <td align="center">
                     <?php if($_SESSION ["infoUser"]["idt_types_users"] == 1 || $_SESSION ["infoUser"]["idt_types_users"] == 2){?>
-                        <img src="css/images/page_white_edit.png" border="0" title="modifier" class="edit_type_user" style="cursor: pointer;" id_type_user="<?=$obj ["idt_types_users"]; ?>" />
-                        <a class="delete_link" title="supprimer" url="delete.php?target=type_user&id=<?=$obj["idt_types_users"]; ?>"><img src="css/images/supprimer.png" border="0" /></a>
+                        <img src="css/images/edit.png" border="0" title="modifier" class="edit_type_user" style="cursor: pointer; margin: 1px;" id_type_user="<?=$obj ["idt_types_users"]; ?>" nom_type_user="<?=$obj ["nom_type_user"]; ?>"/>
+                        <a class="delete_link" style="margin: 1px;" title="supprimer" url="delete.php?target=type_user&id=<?=$obj["idt_types_users"]; ?>"><img src="css/images/delete.png" border="0" /></a>
                     <?php }?>
                     </td>
                 </tr>

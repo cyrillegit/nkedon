@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-07-16 20:14:32
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-17 10:41:04
          compiled from ".\templates\administration_magasin\gestion_magasin\groupes_factures.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2209753c6c54290dd55-80626935%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b0de3e8550b3468ead5669b7ac3d1fe52db8b172' => 
     array (
       0 => '.\\templates\\administration_magasin\\gestion_magasin\\groupes_factures.tpl',
-      1 => 1405541657,
+      1 => 1426526077,
       2 => 'file',
     ),
   ),

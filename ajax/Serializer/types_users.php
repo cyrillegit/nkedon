@@ -31,12 +31,12 @@ if( isset( $_POST ["id_type_user"] ) )
 				$db->rollBack();
 				echo "({'result': 'Une erreur est survenue lors de l \'insertion du profil utilisateur en base de données... ";
 			}
-		} 
+		}
 		else
 		{
 			$db->rollBack();
 			echo "({'result': 'Une erreur est survenue lors de l \'insertion du profil utilisateur en base de données, car certaines values sont nulles.";
-		}			
+		}
 	}
 	//Mode édition.
 	else 
@@ -54,7 +54,7 @@ if( isset( $_POST ["id_type_user"] ) )
 				$db->rollBack();
 				echo "({'result': 'Une erreur est survenue lors de la mise à jour du profil utilisateur en base de données... )";
 			}
-		} 
+		}
 		else
 		{
 			$db->rollBack();

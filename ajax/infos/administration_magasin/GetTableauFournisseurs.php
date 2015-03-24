@@ -60,8 +60,8 @@ $(document).ready (function ()
                     <td align="center"><span class="floatAndMarginLeft"><?php echo getElaspedDateTime( $obj["date_insertion_facture"], setLocalTime() ); ?></span></td>
                     <td align="center">
                     <?php if( $_SESSION ["infoUser"]["idt_types_users"] <= 3 ){?>
-                        <img src="css/images/page_white_edit.png" title="modifier" border="0" class="edit_fournisseur" style="cursor: pointer;" id_fournisseur="<?=$obj ["idt_fournisseurs"]; ?>" />
-                        <a class="delete_link" title="supprimer" url="delete.php?target=fournisseur&id=<?=$obj["idt_fournisseurs"]; ?>"><img src="css/images/supprimer.png" border="0" /></a>
+                        <img src="css/images/edit.png" title="modifier" border="0" class="edit_fournisseur" style="cursor: pointer; margin: 1px;" id_fournisseur="<?=$obj ["idt_fournisseurs"]; ?>" />
+                        <a class="delete_link" style="margin: 1px;" title="supprimer" url="delete.php?target=fournisseur&id=<?=$obj["idt_fournisseurs"]; ?>"><img src="css/images/delete.png" border="0" /></a>
                     <?php }?>
                     </td>
                 </tr>

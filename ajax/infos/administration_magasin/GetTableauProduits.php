@@ -78,8 +78,8 @@ $(document).ready (function ()
                         <td align="center"><span class='floatAndMarginLeft'><?php echo number_format( $obj["prix_vente"], 2, ',', ' '); ?></span></td>
                         <td align="center">
                         <?php if($_SESSION ["infoUser"]["idt_types_users"] <= 3){?>
-                            <img src="css/images/page_white_edit.png" title="modifier" border="0" class="edit_produit" style="cursor: pointer;" id_produit="<?=$obj ["idt_produits"]; ?>" />
-                            <a class="delete_link" title="supprimer" url="delete.php?target=produit&id=<?=$obj["idt_produits"]; ?>"><img src="css/images/supprimer.png" border="0" /></a>
+                            <img src="css/images/edit.png" title="modifier" border="0" class="edit_produit" style="cursor: pointer; margin: 1px;" id_produit="<?=$obj ["idt_produits"]; ?>" />
+                            <a class="delete_link" style="margin: 1px; cursor: pointer;" title="supprimer" url="delete.php?target=produit&id=<?=$obj["idt_produits"]; ?>"><img src="css/images/delete.png" border="0" /></a>
                         <?php }?>
                         </td>
                     </tr>

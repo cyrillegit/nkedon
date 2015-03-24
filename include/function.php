@@ -790,9 +790,9 @@
 	}
 
 	/**
-	 * Fonction SQLDateToFrenchDate
+	 * Fonction getDateFromDatetime
 	 * ----------------------------
-	 * Transforme la date 2010-11-15 12:25:58 en 15/11/2010 12:25:58
+	 * Transforme la date 2010-11-15 12:25:58 en 15/11/2010
 	 */
 	//*
 	function getDateFromDatetime ($date)
@@ -810,6 +810,28 @@
 		}
 		return $new_date;
 	}
+
+    /**
+     * Fonction getDateWithUnderscrore
+     * ----------------------------
+     * Transforme la date 2010-11-15 12:25:58 en 2010_11_15
+     */
+    //*
+    function getDateWithUnderscrore ($date)
+    {
+        $date_split = explode(" ", $date);
+
+        if($date_split[0] != "0000-00-00")
+        {
+            $arr = explode ("-", $date_split[0]);
+            $new_date = $arr [0]."_".$arr [1]."_".$arr [2];
+        }
+        else
+        {
+            $new_date = "";
+        }
+        return $new_date;
+    }
 
 	function output_file($file, $name, $mime_type='')
 	{

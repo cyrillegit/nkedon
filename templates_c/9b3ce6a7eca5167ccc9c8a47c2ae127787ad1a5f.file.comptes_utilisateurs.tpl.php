@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-16 17:25:06
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-17 10:46:34
          compiled from ".\templates\administration\gestion_users\comptes_utilisateurs.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2892352ebac2dad3b68-18198693%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9b3ce6a7eca5167ccc9c8a47c2ae127787ad1a5f' => 
     array (
       0 => '.\\templates\\administration\\gestion_users\\comptes_utilisateurs.tpl',
-      1 => 1426526077,
+      1 => 1426589192,
       2 => 'file',
     ),
   ),
@@ -53,7 +53,7 @@ $(document).ready (function ()
 	$("#addCompteUtilisateur").click (function ()
 	{
 		update_content ("ajax/popups/edit_compte_utilisateur.php", "popup", "id_compte=0");
-		ShowPopupHeight (550);
+		ShowPopupHeight (300);
 	});
 });
 

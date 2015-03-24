@@ -388,7 +388,7 @@ input.btn_save
     float:				left;
     cursor:				pointer;
     background-color:	none;
-    background-image:	url(images/boutons/locked.png);
+    background-image:	url(images/boutons/barcode.png);
 }
 
 .btn_facture
@@ -399,7 +399,7 @@ input.btn_save
     float:				left;
     cursor:				pointer;
     background-color:	none;
-    background-image:	url(images/boutons/locked.png);
+    background-image:	url(images/boutons/page_writing.png);
 }
 
 .btn_fournisseur
@@ -410,7 +410,18 @@ input.btn_save
     float:				left;
     cursor:				pointer;
     background-color:	none;
-    background-image:	url(images/boutons/locked.png);
+    background-image:	url(images/boutons/baggage_trolley.png);
+}
+
+.btn_journal
+{
+    width: 				64px;
+    height:				64px;
+    margin-left:        2px;
+    float:				left;
+    cursor:				pointer;
+    background-color:	none;
+    background-image:	url(images/boutons/diary_add.png);
 }
 
 .btn_inventaire
@@ -421,7 +432,7 @@ input.btn_save
     float:				left;
     cursor:				pointer;
     background-color:	none;
-    background-image:	url(images/boutons/locked.png);
+    background-image:	url(images/boutons/layout_rows.png);
 }
 
 .btn_histo_facture
@@ -432,7 +443,7 @@ input.btn_save
     float:				left;
     cursor:				pointer;
     background-color:	none;
-    background-image:	url(images/boutons/locked.png);
+    background-image:	url(images/boutons/database.png);
 }
 
 .btn_histo_synthese
@@ -443,7 +454,7 @@ input.btn_save
     float:				left;
     cursor:				pointer;
     background-color:	none;
-    background-image:	url(images/boutons/locked.png);
+    background-image:	url(images/boutons/database.png);
 }
 
 .btn_statistique

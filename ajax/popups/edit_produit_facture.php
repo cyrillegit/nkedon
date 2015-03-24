@@ -47,7 +47,7 @@ $(document).ready (function ()
 		$.modal.close ();
 	});
 	
-	$("#btnOKProduit").click (function ()
+	$("#btnValiderProduit").click (function ()
 	{
 		var ok = false;
 		if ( $("#nom_produit").val () == "" )
@@ -154,9 +154,9 @@ $(document).ready (function ()
     <div style="float: right; text-align: right;">
         <table border="0" cellspacing="0" cellpadding="0" align="right">
             <tr>
-                <td><div id="btnAnnuler"><img src="css/images/boutons/btn_annuler.png" class="button" width="110" height="30" /></div></td>
+                <td><div id="btnAnnuler"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
                 <td>&nbsp;</td>
-                <td><div id="btnValiderProduit"><img src="css/images/boutons/btn_valider.png" class="button" width="110" id="btnOKProduit" height="30" /></div></td>
+                <td><div id="btnValiderProduit"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOKProduit" height="30" /></div></td>
             </tr>
         </table>        
     </div>

@@ -6,6 +6,7 @@
 @import "tdb.css";				/* La page d'accueil. */
 @import "buttons.css";			/* Les styles des boutons. */
 @import "hover-min.css";			/* Les styles en hover. */
+@import "patterns.css";			/* Les styles de patterns. */
 @import "jquery.tabs.css";		/* Style pour les jQuery UI Tabs. Doit être appelé en dernier, systématiquement. */
 @import "../assets/css/autocomplete.css";				/* Autocomplete. */
 @import "../assets/css/jquery.fastconfirm.css";			/* Fastconfirm. */

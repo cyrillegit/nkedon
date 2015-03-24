@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-03-09 01:51:14
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-17 10:08:28
          compiled from ".\templates\administration_magasin\gestion_magasin\inventaire.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1674552ebaf5bc937c2-10831535%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0057fb38afcb59aecaa55fa6f6e866babcc5067d' => 
     array (
       0 => '.\\templates\\administration_magasin\\gestion_magasin\\inventaire.tpl',
-      1 => 1394329872,
+      1 => 1426526077,
       2 => 'file',
     ),
   ),
