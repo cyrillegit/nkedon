@@ -459,6 +459,20 @@
 			return $res ["nb_produits"];
 		}
 
+        /**
+         * Fonction getNbOperationsJournal
+         * -------------------
+         * Retourne le nombre d'operation d'un journal.
+         *
+         * @return int
+         */
+        public function getNbOperationsJournal ()
+        {
+            $this->Sql = "SELECT COUNT(*) AS nb_operations FROM t_produits_operations";
+            $res = $this->FetchRow();
+            return $res ["nb_operations"];
+        }
+
 		/**
 		 * Fonction getNbRecapitulatifInventaireInDB
 		 * -------------------
@@ -780,7 +794,21 @@
 			$this->Sql = "SELECT * FROM t_produits_factures";
 			$res = $this->FetchAllRows();
 			return $res;
-		}		
+		}
+
+        /**
+         * Fonction getAllOperationsJournal
+         * -------------------
+         * Retourne tous les operations du journal
+         *
+         * @return array
+         */
+        public function getAllOperationsJournal ()
+        {
+            $this->Sql = "SELECT * FROM t_produits_operations";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
 
 		/**
 		 * Fonction getInfosFactureEnCours
@@ -1552,6 +1580,70 @@
 							JOIN t_produits AS p ON po.id_produit = p.idt_produits
 							ORDER BY po.idt_produits_operations DESC";
 
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+         /**
+         * Fonction getOperationByIdOperation
+         * -------------------
+         * Retourne une operation connaissant l'id
+         *
+         * @return array
+         */
+        public function getOperationByIdOperation ( $id )
+        {
+            $this->Sql = "SELECT *
+                            FROM t_produits_operations AS po
+                            WHERE po.idt_produits_operations = $id";
+            $res = $this->FetchRow();
+            return $res;
+        }
+
+        /**
+         * Fonction getAllProduitsOperationsJournal
+         * -------------------
+         * Retourne tous les produits des operations deja enegistrées
+         *
+         * @return array
+         */
+        public function getAllProduitsOperationsJournal()
+        {
+            $this->Sql = "SELECT *
+                                FROM t_produits_operations AS po
+                                JOIN t_produits AS p
+                                ON p.idt_produits = po.id_produit";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getAllProduitsOperationsFacture
+         * -------------------
+         * Retourne tous les produits d'un facture en cours d'enregistrement
+         *
+         * @return Array
+         */
+        public function getAllProduitsOperationsFacture()
+        {
+            $this->Sql = "SELECT *
+                                FROM t_produits_factures AS pf
+                                JOIN t_produits AS p
+                                ON p.idt_produits = pf.id_produit";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getAllJournal
+         * -------------------
+         * Retourne tous les journaux
+         *
+         * @return Array
+         */
+        public function getAllJournal()
+        {
+            $this->Sql = "SELECT * FROM t_journal";
             $res = $this->FetchAllRows();
             return $res;
         }

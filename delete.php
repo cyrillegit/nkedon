@@ -99,12 +99,12 @@
 			$ok &= $db->Execute ( $sql );
 			if( $ok )
 			{
-				$tpl_index->assign ("message", $db->fixEncoding("La suppression du produit a bien �t� r�alis�e."));
+				$tpl_index->assign ("message", $db->fixEncoding("La suppression du produit a bien été réalisée."));
 				$tpl_index->assign ("error", 0);
 			}
 			else
 			{
-				$tpl_index->assign ("message", $db->fixEncoding("La suppression du produit a �chou�e."));
+				$tpl_index->assign ("message", $db->fixEncoding("La suppression du produit a échouée."));
 				$tpl_index->assign ("error", 1);
 			}
 		}
@@ -185,7 +185,37 @@
 				$tpl_index->assign ("message", $db->fixEncoding("La suppression de la facture a échouée."));
 				$tpl_index->assign ("error", 1);
 			}
-		}				
+		}
+        else if ( $_GET ["target"] == "produit_operation" )
+        {
+            $sql = "DELETE FROM t_produits_operations WHERE idt_produits_operations = $id";
+            $ok &= $db->Execute ( $sql );
+            if( $ok )
+            {
+                $tpl_index->assign ("message", $db->fixEncoding("La suppression de l'opération a bien été réalisée."));
+                $tpl_index->assign ("error", 0);
+            }
+            else
+            {
+                $tpl_index->assign ("message", $db->fixEncoding("La suppression de l'opération a échouée."));
+                $tpl_index->assign ("error", 1);
+            }
+        }
+        else if($_GET ["target"] == "delete_operations_journal")
+        {
+            $sql = "DELETE FROM t_produits_operations";
+            $ok &= $db->Execute ( $sql );
+            if( $ok )
+            {
+                $tpl_index->assign ("message", $db->fixEncoding("La suppression des opérations de vente a bien été réalisée."));
+                $tpl_index->assign ("error", 0);
+            }
+            else
+            {
+                $tpl_index->assign ("message", $db->fixEncoding("La suppression des opérations de vente a échouée."));
+                $tpl_index->assign ("error", 1);
+            }
+        }
 		else
 		{
 

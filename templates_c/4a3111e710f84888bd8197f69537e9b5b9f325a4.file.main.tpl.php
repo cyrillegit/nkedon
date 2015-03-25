@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-25 15:31:52
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-25 17:03:23
          compiled from ".\templates\administration_magasin\main.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:244052ebaf4403b577-83190040%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4a3111e710f84888bd8197f69537e9b5b9f325a4' => 
     array (
       0 => '.\\templates\\administration_magasin\\main.tpl',
-      1 => 1427297477,
+      1 => 1427302937,
       2 => 'file',
     ),
   ),
@@ -53,7 +53,7 @@ $(document).ready (function ()
                 <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=produits" style="color:white;"><div class="btn_produit"></div><div>Ajouter / Modifer un produit</div></a></li>
                 <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=fournisseurs" style="color:white;"><div class="btn_fournisseur"></div><div>Ajouter / modifier un fournisseur</div></a></li>
                 <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=edit_facture" style="color:white;"><div class="btn_facture"></div><div>Ajouter / Modifier une facture</div></a></li><br/>
-                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=operations_journal" style="color:white;"><div class="btn_journal"></div><div>Réaliser le journal</div></a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=edit_operations_journal" style="color:white;"><div class="btn_journal"></div><div>Réaliser le journal</div></a></li>
                 <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=inventaire" style="color:white;"><div class="btn_inventaire"></div><div>Réaliser l'inventaire du magasin</div></a></li><br/>
                 <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=groupes_factures" style="color:white;"><div class="btn_histo_facture"></div><div>Historiques des factures</div></a></li>
                 <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=groupes_factures" style="color:white;"><div class="btn_histo_facture"></div><div>Historiques des journaux</div></a></li>

@@ -2,16 +2,16 @@
 {literal}
 <script language="javascript" xmlns="http://www.w3.org/1999/html">
 
-function RefreshTableProduitsFacture ()
+function RefreshTableOperationsJournal ()
 {
 	var responseText = $.ajax({
 			type	: "POST",
-			url		: "ajax/infos/administration_magasin/GetTableauProduitsFacture.php",
+			url		: "ajax/infos/administration_magasin/GetTableauProduitsOperation.php",
 			async	: false,
 			data	: "",
 			success	: function (msg){}
 	}).responseText;
-	$("#tableau_produits_facture").empty ().html (responseText);
+	$("#tableau_operations_journal").empty ().html (responseText);
 
 	UpdateTSorter ();
 }
@@ -41,9 +41,7 @@ function setRegisterPopup(){
 function resetInputs(){
 
     $("#nom_produit_search").val("");
-    $("#quantite_achat").val("");
-    $("#date_fabrication").val("");
-    $("#date_peremption").val("");
+    $("#quantite_vendue").val("");
 
     $("#warnings_popup").css("display", "none");
     $("#succes_register").css("display", "none");
@@ -52,53 +50,26 @@ function resetInputs(){
 $(document).ready (function ()
 {
     setRegisterPopup();
-    $("#editProduitFacture").hide();
-	RefreshTableProduitsFacture ();
+    $("#editOperationJournal").hide();
+    RefreshTableOperationsJournal ();
 
-	$("#addProduitFacture").click (function ()
+	$("#addOperation").click (function ()
 	{
         resetInputs();
         $('html, body').animate({ scrollTop: 0 }, 'slow');
-        $("#editProduitFacture").show("slow");
+        $("#editOperationJournal").show("slow");
 
 //		update_content ("ajax/popups/edit_produit_facture.php", "popup", "id_produit_facture=0");
 //		ShowPopupHeight (550);
 	});
 
-	$("#date_fabrication").datepicker({
-	    beforeShow:function(input) {
-	        $(input).css({
-	            "position": "relative",
-	            "z-index": 999999
-	        });
-	    }
-	});
-
-	$("#date_peremption").datepicker({
-	    beforeShow:function(input) {
-	        $(input).css({
-	            "position": "relative",
-	            "z-index": 999999
-	        });
-	    }
-	});
-
-	$("#date_facture").datepicker({
-	    beforeShow:function(input) {
-	        $(input).css({
-	            "position": "relative",
-	            "z-index": 999999
-	        });
-	    }
-	});
-
-    $("#btnAnnulerProduit").click (function ()
+    $("#btnAnnulerOperation").click (function ()
     {
         resetInputs();
-        $("#editProduitFacture").hide('slow');
+        $("#editOperationJournal").hide('slow');
     });
 
-    $("#btnValiderProduit").click (function ()
+    $("#btnValiderOperation").click (function ()
     {
         var ok = false;
         if ( $("#nom_produit_search").val () == "" )
@@ -108,11 +79,11 @@ $(document).ready (function ()
             $("#nom_produit_search").focus ();
             ok = false;
         }
-        else if ( $("#quantite_achat").val () == "" )
+        else if ( $("#quantite_vendue").val () == "" )
         {
-            ShowPopupError  ("Veuillez saisir la quantité achetée.");
+            ShowPopupError  ("Veuillez saisir la quantité vendue.");
 
-            $("#quantite_achat").focus ();
+            $("#quantite_vendue").focus ();
             ok = false;
         }
         else
@@ -122,8 +93,8 @@ $(document).ready (function ()
 
         if (ok)
         {
+            var param = $("#form_popup_operation").serialize ();
 
-            var param = $("#form_popup_produit").serialize ();
             var responseText = Serialize (param);
 
             if (responseText != "")
@@ -133,7 +104,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le produit (<strong>" + $("#nom_produit").val () + "</strong>) a bien été enregistré dans la facture.");
                     $.modal.close ();
-                    document.location.href="administration_magasin.php?sub=produits_facture";
+                    document.location.href="administration_magasin.php?sub=edit_operations_journal";
                 }
                 else
                 {
@@ -152,70 +123,37 @@ $(document).ready (function ()
 
 	$("#btnAnnuler").click (function ()
 	{
-		var didConfirm = confirm("Voulez-vous vraiment supprimer tous les produits déja enregistrés?");
+		var didConfirm = confirm("Voulez-vous vraiment supprimer tous les opérations de vente déja enregistrées?");
 		  if (didConfirm == true) {
-		    document.location.href="delete.php?target=delete_produits_facture&id=0";
+		    document.location.href="delete.php?target=delete_operations_journal&id=0";
 		  }
 	});
 
 	$("#btnValider").click(function ()
 	{
-		var ok = false;
-		if ( $("#numero_facture").val () == "" )
-		{
-			ShowPopupError  ("Veuillez saisir le numéro de la facture.");			
-			
-			$("#numero_facture").focus ();
-			ok = false;
-		}
-		else if ( $("#id_fournisseur").val () == "" )
-		{
-			ShowPopupError  ("Veuillez choisir un fournisseur.");			
-			
-			$("#id_fournisseur").focus ();
-			ok = false;
-		}
-		else if ( $("#date_facture").val () == "" )
-		{
-			ShowPopupError  ("Veuillez choisir la date de la facture.");			
-			
-			$("#date_facture").focus ();
-			ok = false;
-		}		
-		else
-		{
-			ok = true;
-		}
 
-		if (ok)
-		{
-			var param = $("#form_popup").serialize ();
-				
-			var responseText = Serialize (param);
-			
-			if (responseText != "")
-			{
-				response = eval (responseText);
-				if (response.result == "SUCCESS")
-				{	
-					ShowSuccess ("La facture (<strong>" + $("#numero_facture").val () + "</strong>) a bien été enregistrée.");
-					$.modal.close ();					
-					document.location.href="administration_magasin.php?sub=edit_facture&status=register";
-				}
-				else
-				{
-					ShowPopupError  (response.result);
-				}
-			}
-			else
-			{
-				ShowPopupError  ("Une erreur est survenue.");
-			}
-		}
-		else
-		{
-			alert("Veuillez saisir : \n -le numéro de la facture. \n -le fournisseur. \n -la date de la facture.");
-		}
+        var param = $("#form_popup_journal").serialize ();
+
+        var responseText = Serialize (param);
+
+        if (responseText != "")
+        {
+            response = eval (responseText);
+            if (response.result == "SUCCESS")
+            {
+                ShowSuccess ("Le journal a bien été enregistrée.");
+                $.modal.close ();
+                document.location.href="administration_magasin.php?sub=edit_operations_journal&status=register";
+            }
+            else
+            {
+                ShowPopupError  (response.result);
+            }
+        }
+        else
+        {
+            ShowPopupError  ("Une erreur est survenue.");
+        }
 	});
 });
 
@@ -267,7 +205,7 @@ $(document).ready (function ()
 {/literal}
 <div id="Content">
     <div class="success" id="succes_register" style="display: block;">
-        <b>La facture a bien été enregistrée. </br> Vous pouvez enregistrer une nouvelle facture.</b>
+        <b>Le journal a bien été enregistrée.</b>
         <div></div>
     </div>
 	<div class="bloc_title">
@@ -275,12 +213,12 @@ $(document).ready (function ()
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
 			<div class="ico_title"><img src="css/images/ico_42x42/menu_consult.png" /></div>
             <div class="t_titre">
-                <div class="title"><strong>Ajouter/Modifier</strong> <strong style="color:black;">des produits dans une facture</strong></div>
+                <div class="title"><strong>Réaliser </strong> <strong style="color:black;">le journal</strong></div>
             </div>
         </div>
   	</div>
 	<div class="intro">
-	Dans cet écran, vous avez la possibilité de créer/modifier les produits d'une facture. Veuillez remplir les champs obligatoires, et appuyez sur le bouton "Valider".
+        Dans cet écran, vous avez la possibilité de réaliser le journal. Veuillez remplir les champs obligatoires, et appuyez sur le bouton "Valider".
 	</div>
 	<br/><br/>
 	{include file="common/messages_boxes.tpl"}
@@ -289,23 +227,23 @@ $(document).ready (function ()
             <table width="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                     <td>
-                    Actuellement <font color="red"><b>{$nb_produits}</b></font> produits enregistrés dans la facture.
+                    Actuellement <font color="red"><b>{$nb_produits}</b></font> opérations enregistrées pour le journal.
                     </td>
                     <td>
-                    <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addProduitFacture"></div></div>
-                    <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter un produit dans la facture :&nbsp;</div>
+                    <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addOperation"></div></div>
+                    <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter une opération :&nbsp;</div>
                     </td>
                 </tr>
             </table>
         </div>
         <br style="clear: both;" />
 
-        <div id="editProduitFacture" class="content">
-            <div class="TitrePopup">ajouter/modifier <strong style="color:#1c9bd3">un produit de la facture</strong></div>
-            <div class="subTitlePopup" style="color: #ffffff; text-decoration: none; font-size: 12px;">Veuillez saisir les informations du produit en remplissant les champs obligatoires.</div>
+        <div id="editOperationJournal" class="content">
+            <div class="TitrePopup">ajouter/modifier <strong style="color:#1c9bd3">une opération du journal</strong></div>
+            <div class="subTitlePopup" style="color: #ffffff; text-decoration: none; font-size: 12px;">Veuillez saisir les informations de l'opération en remplissant les champs obligatoires.</div>
             <br style="clear: both; " />
             <div style="width: 100%;">
-                <form name="form_popup_produit" id="form_popup_produit" method="post" >
+                <form name="form_popup_operation" id="form_popup_operation" method="post" >
                     <table width="100%">
                         <tr>
                             <td colspan="2">
@@ -321,33 +259,23 @@ $(document).ready (function ()
                                 <table>
                                     <tr>
                                         <td>Nom du produit :<span class="champObligatoire">*</span></td>
-                                        <td class="input_container" ><input type="text" name="nom_produit_search" id="nom_produit_search" value="" onkeyup="autocomplet()"/>
+                                        <td class="input_container" ><input type="text" name="nom_produit_search" id="nom_produit_search" value=""  onkeyup="autocomplet()"/>
                                             <ul id="list_nom_produit" style="list-style-type: none;"></ul>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Quantité achetée :<span class="champObligatoire">*</span></td>
-                                        <td class="input_container" ><input type="text" name="quantite_achat" id="quantite_achat" value=""/></td>
+                                        <td>Quantité vendue :<span class="champObligatoire">*</span></td>
+                                        <td class="input_container" ><input type="text" name="quantite_vendue" id="quantite_vendue" value=""/></td>
                                     </tr>
                                 </table>
                             </td>
                             <!--PARTIE DROITE-->
                             <td>
-                                <table>
-                                    <tr>
-                                        <td>Date de fabrication : </td>
-                                        <td><input type="text" name="date_fabrication" id="date_fabrication" value=""/></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Date de peremption : </td>
-                                        <td><input type="text" name="date_peremption" id="date_peremption" value=""/></td>
-                                    </tr>
-                                </table>
                             </td>
                         </tr>
                     </table>
-                    <input type="hidden" id="target" name="target" value="produits_facture" />
-                    <input type="hidden" id="id_produit_facture" name="id_produit_facture" value="0" />
+                    <input type="hidden" id="target" name="target" value="operations_journal" />
+                    <input type="hidden" id="id_operation_journal" name="id_operation_journal" value="0" />
                 </form>
             </div>
             <hr size="1" style="margin-top: 50px;" />
@@ -355,18 +283,18 @@ $(document).ready (function ()
             <div style="float: right; text-align: right;">
                 <table border="0" cellspacing="0" cellpadding="0" align="right">
                     <tr>
-                        <td><div id="btnAnnulerProduit"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
+                        <td><div id="btnAnnulerOperation"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
                         <td>&nbsp;</td>
-                        <td><div id="btnValiderProduit"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOKProduit" height="30" /></div></td>
+                        <td><div id="btnValiderOperation"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOKOperation" height="30" /></div></td>
                     </tr>
                 </table>
             </div>
             <hr size="5" style="margin-top: 50px; background-color: #ff0000;" />
         </div>
 
-		<div id="tableau_produits_facture"></div>
+		<div id="tableau_operations_journal"></div>
 
-    <form name="form_popup" id="form_popup" method="post">
+    <form name="form_popup_journal" id="form_popup_journal" method="post">
 		<table style="float:left;" cellspacing="2" cellpadding="5">
 			<tr>
 	        	<td colspan="2">
@@ -384,53 +312,26 @@ $(document).ready (function ()
 							<td colspan="2" width="100%">
 								<div class="titre">
 									<b>
-										<i><u>INFORMATIONS DE LA FACTURE:</u></i> <span style="margin-left:260px;">Prix total de la facture : <strong>{$montant_facture}</strong> FCFA</span>
+										<i><u>INFORMATIONS DU JOURNAL:</u></i> <span style="margin-left:260px;">Montant du journal : <strong>{$montant_operation}</strong> FCFA</span>
 										<hr/>
 									</b>
 								</div>
 							</td>
 						</tr>
+                        <tr>
 							<td>
-								Numéro de la facture :<span class="champObligatoire">*</span>
+								Commentaire :
 							</td>
-							<td>
-								<input type="text" id="numero_facture" name="numero_facture" value="{if $id_facture neq 0}{$numero_facture}{/if}"/>
+							<td width="100%">
+                                <textarea name="commentaire" id="commentaire" cols="30" rows="10" style="height: 100px; width: 100%;"></textarea>
 							</td>
-						</tr>
-						<tr>
-							<td>
-								Raison sociale du fournisseur :<span class="champObligatoire">*</span>
-							</td>
-							<td>
-								<select name="id_fournisseur" id="id_fournisseur">
-										<option value="">Sélectionner un fournisseur</option>
-											{foreach from=$fournisseurs item=item key=key}
-												{if $id_fournisseur eq 0}
-													<option value="{$item.idt_fournisseurs}">{$item.nom_fournisseur}</option>
-												{else}
-													{if $item.idt_fournisseurs eq $id_fournisseur}
-														{assign var="opt" value="selected='selected'"}
-													{else}
-														{assign var="opt" value=""}
-													{/if}
-													<option value="{$item.idt_fournisseurs}" {$opt} >{$item.nom_fournisseur}</option>
-												{/if}
-										{/foreach}
-								</select>
-							</td>
-						</tr>
-						<tr>
-							<td>Date de la facture :<span class="champObligatoire">*</span></td>
-            				<td>
-            					<input type="text" name="date_facture" id="date_facture" value="{if $id_facture neq 0}{$date_facture}{/if}"/>
-            				</td>
 						</tr>
 					</table>
 				</td>
 			</tr>
 		</table>
-		<input type="hidden" name="target" id="target" value="factures"/>
-		<input type="hidden" name="id_facture" id="id_facture" value="{if $id_facture neq 0}{$id_facture}{else}{0}{/if}"/>
+		<input type="hidden" name="target" id="target" value="journal"/>
+		<input type="hidden" name="id_journal" id="id_journal" value="0"/>
 	</form>
 </div>
 <hr size="1" style="margin-top: 5px;" />

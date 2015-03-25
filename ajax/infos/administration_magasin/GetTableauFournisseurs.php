@@ -20,8 +20,16 @@ $(document).ready (function ()
 	{
 		$(this).click (function ()
 		{
-			update_content ("ajax/popups/edit_fournisseur.php", "popup", "id_fournisseur=" + $(this).attr ("id_fournisseur"));
-			ShowPopupHeight (550);
+            $("#id_fournisseur").val($(this).attr("id_fournisseur"));
+            $("#nom_fournisseur").val($(this).attr ("nom_fournisseur"));
+            $("#adresse_fournisseur").val( $(this).attr ("adresse_fournisseur") );
+            $("#telephone_fournisseur").val($(this).attr ("telephone_fournisseur"));
+
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+            $("#editFournisseur").show("slow");
+
+//			update_content ("ajax/popups/edit_fournisseur.php", "popup", "id_fournisseur=" + $(this).attr ("id_fournisseur"));
+//			ShowPopupHeight (550);
 		});
 	});
 });
@@ -60,7 +68,7 @@ $(document).ready (function ()
                     <td align="center"><span class="floatAndMarginLeft"><?php echo getElaspedDateTime( $obj["date_insertion_facture"], setLocalTime() ); ?></span></td>
                     <td align="center">
                     <?php if( $_SESSION ["infoUser"]["idt_types_users"] <= 3 ){?>
-                        <img src="css/images/edit.png" title="modifier" border="0" class="edit_fournisseur" style="cursor: pointer; margin: 1px;" id_fournisseur="<?=$obj ["idt_fournisseurs"]; ?>" />
+                        <img src="css/images/edit.png" title="modifier" border="0" class="edit_fournisseur" style="cursor: pointer; margin: 1px;" id_fournisseur="<?=$obj ["idt_fournisseurs"]; ?>" nom_fournisseur="<?=$obj ["nom_fournisseur"]; ?>" adresse_fournisseur="<?=$obj ["adresse_fournisseur"]; ?>" telephone_fournisseur="<?=$obj ["telephone_fournisseur"]; ?>"/>
                         <a class="delete_link" style="margin: 1px;" title="supprimer" url="delete.php?target=fournisseur&id=<?=$obj["idt_fournisseurs"]; ?>"><img src="css/images/delete.png" border="0" /></a>
                     <?php }?>
                     </td>

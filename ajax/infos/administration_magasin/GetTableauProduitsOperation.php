@@ -20,8 +20,15 @@ $(document).ready (function ()
 	{
 		$(this).click (function ()
 		{
-			update_content ("ajax/popups/edit_operation.php", "popup", "id_produit_operation=" + $(this).attr ("id_produit_facture"));
-			ShowPopupHeight (550);
+            $("#id_operation_journal").val($(this).attr("id_operation_journal"));
+            $("#nom_produit_search").val($(this).attr ("nom_produit"));
+            $("#quantite_vendue").val( $(this).attr ("quantite_vendue") );
+
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+            $("#editOperationJournal").show("slow");
+
+//			update_content ("ajax/popups/edit_operation.php", "popup", "id_produit_operation=" + $(this).attr ("id_produit_facture"));
+//			ShowPopupHeight (550);
 		});
 	});
 });
@@ -58,7 +65,7 @@ $(document).ready (function ()
                     <td><span class='floatAndMarginLeft'><?php echo number_format( $obj["prix_vente"] * $obj["quantite_vendue"], 2, ',', ' '); ?></span></td>
                     <td align="center">
                     <?php if($_SESSION ["infoUser"]["idt_types_users"] <= 4){?>
-                        <img src="css/images/edit.png" title="modifier" border="0" class="id_produit_operation" style="cursor: pointer; margin: 1px;" id_operation="<?=$obj ["idt_produits_operations"]; ?>" />
+                        <img src="css/images/edit.png" title="modifier" border="0" class="edit_produit_operation" style="cursor: pointer; margin: 1px;" id_operation_journal="<?=$obj ["idt_produits_operations"]; ?>" nom_produit="<?=$obj ["nom_produit"]; ?>" quantite_vendue="<?=$obj ["quantite_vendue"]; ?>" />
                         <a class="delete_link" style="margin: 1px;" title="supprimer" url="delete.php?target=produit_operation&id=<?=$obj["idt_produits_operations"]; ?>"><img src="css/images/delete.png" border="0" /></a>
                     <?php }?>
                     </td>

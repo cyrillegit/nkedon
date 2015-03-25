@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-25 16:31:39
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-25 22:10:14
          compiled from ".\templates\administration_magasin\gestion_factures\edit_facture.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2141652ebd4f06be6f3-26729779%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e7a7bff35746525492e465fd68ae0abd1fc90e8b' => 
     array (
       0 => '.\\templates\\administration_magasin\\gestion_factures\\edit_facture.tpl',
-      1 => 1427301078,
+      1 => 1427321407,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'nb_produits' => 0,
-    'prix_total_produits' => 0,
+    'montant_facture' => 0,
     'id_facture' => 0,
     'numero_facture' => 0,
     'fournisseurs' => 0,
@@ -420,7 +420,7 @@ $(document).ready (function ()
 							<td colspan="2" width="100%">
 								<div class="titre">
 									<b>
-										<i><u>INFORMATIONS DE LA FACTURE:</u></i> <span style="margin-left:260px;">Prix total de la facture : <strong><?php echo $_smarty_tpl->tpl_vars['prix_total_produits']->value;?>
+										<i><u>INFORMATIONS DE LA FACTURE:</u></i> <span style="margin-left:260px;">Prix total de la facture : <strong><?php echo $_smarty_tpl->tpl_vars['montant_facture']->value;?>
 </strong> FCFA</span>
 										<hr/>
 									</b>
