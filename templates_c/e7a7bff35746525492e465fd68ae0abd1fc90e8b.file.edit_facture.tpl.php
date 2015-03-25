@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-17 10:27:06
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-25 16:31:39
          compiled from ".\templates\administration_magasin\gestion_factures\edit_facture.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2141652ebd4f06be6f3-26729779%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e7a7bff35746525492e465fd68ae0abd1fc90e8b' => 
     array (
       0 => '.\\templates\\administration_magasin\\gestion_factures\\edit_facture.tpl',
-      1 => 1426588008,
+      1 => 1427301078,
       2 => 'file',
     ),
   ),
@@ -34,7 +34,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_52ebd4f084c6a5_08494855')) {function content_52ebd4f084c6a5_08494855($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
-<script language="javascript">
+<script language="javascript" xmlns="http://www.w3.org/1999/html">
 
 function RefreshTableProduitsFacture ()
 {
@@ -50,14 +50,53 @@ function RefreshTableProduitsFacture ()
 	UpdateTSorter ();
 }
 
+function getUrlParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++)
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam)
+        {
+            return sParameterName[1];
+        }
+    }
+}
+
+function setRegisterPopup(){
+    if(getUrlParameter("status") == "register" ){
+        $("#succes_register").show();
+    }else{
+        $("#succes_register").hide();
+    }
+}
+
+function resetInputs(){
+
+    $("#nom_produit_search").val("");
+    $("#quantite_achat").val("");
+    $("#date_fabrication").val("");
+    $("#date_peremption").val("");
+
+    $("#warnings_popup").css("display", "none");
+    $("#succes_register").css("display", "none");
+}
+
 $(document).ready (function ()
 {
+    setRegisterPopup();
+    $("#editProduitFacture").hide();
 	RefreshTableProduitsFacture ();
 
 	$("#addProduitFacture").click (function ()
 	{
-		update_content ("ajax/popups/edit_produit_facture.php", "popup", "id_produit_facture=0");
-		ShowPopupHeight (550);
+        resetInputs();
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+        $("#editProduitFacture").show("slow");
+
+//		update_content ("ajax/popups/edit_produit_facture.php", "popup", "id_produit_facture=0");
+//		ShowPopupHeight (550);
 	});
 
 	$("#date_fabrication").datepicker({
@@ -87,15 +126,73 @@ $(document).ready (function ()
 	    }
 	});
 
+    $("#btnAnnulerProduit").click (function ()
+    {
+        resetInputs();
+        $("#editProduitFacture").hide('slow');
+    });
+
+    $("#btnValiderProduit").click (function ()
+    {
+        var ok = false;
+        if ( $("#nom_produit_search").val () == "" )
+        {
+            ShowPopupError  ("Veuillez saisir le nom du produit.");
+
+            $("#nom_produit_search").focus ();
+            ok = false;
+        }
+        else if ( $("#quantite_achat").val () == "" )
+        {
+            ShowPopupError  ("Veuillez saisir la quantité achetée.");
+
+            $("#quantite_achat").focus ();
+            ok = false;
+        }
+        else
+        {
+            ok = true;
+        }
+
+        if (ok)
+        {
+
+            var param = $("#form_popup_produit").serialize ();
+            var responseText = Serialize (param);
+
+            if (responseText != "")
+            {
+                response = eval (responseText);
+                if (response.result == "SUCCESS")
+                {
+                    ShowSuccess ("Le produit (<strong>" + $("#nom_produit").val () + "</strong>) a bien été enregistré dans la facture.");
+                    $.modal.close ();
+                    document.location.href="administration_magasin.php?sub=produits_facture";
+                }
+                else
+                {
+                    ShowPopupError  (response.result);
+                }
+            }
+            else
+            {
+                ShowPopupError  ("Une erreur est survenue.");
+            }
+        }
+        else
+        {
+        }
+    });
+
 	$("#btnAnnuler").click (function ()
 	{
-		var didConfirm = confirm("Voulez-vous vraiment supprimer tous les achats déja enregistrés?");
+		var didConfirm = confirm("Voulez-vous vraiment supprimer tous les produits déja enregistrés?");
 		  if (didConfirm == true) {
 		    document.location.href="delete.php?target=delete_produits_facture&id=0";
 		  }
 	});
 
-	$("#btnOK").click(function ()
+	$("#btnValider").click(function ()
 	{
 		var ok = false;
 		if ( $("#numero_facture").val () == "" )
@@ -137,7 +234,7 @@ $(document).ready (function ()
 				{	
 					ShowSuccess ("La facture (<strong>" + $("#numero_facture").val () + "</strong>) a bien été enregistrée.");
 					$.modal.close ();					
-					document.location.href="administration_magasin.php?sub=factures";
+					document.location.href="administration_magasin.php?sub=edit_facture&status=register";
 				}
 				else
 				{
@@ -157,8 +254,56 @@ $(document).ready (function ()
 });
 
 </script>
+<style type="text/css">
+    .blocInfoBis
+    {
+        background-image: url("css/images/bg_bloc_alertes.png");
+        background-repeat: repeat;
+        border: 1px solid #313131;
+        padding: 15px 25px 15px;
+    }
+    .blocAddAchat
+    {
+        background-image: url("css/images/bg_bloc_alertes.png");
+        background-repeat: repeat;
+        border: 1px solid #313131;
+        padding: 15px 25px 15px;
+    }
+
+    .input_container input {
+        height: 13px;
+        width: 200px;
+        padding: 3px;
+        border: 1px solid #cccccc;
+        border-radius: 0;
+    }
+    .input_container ul {
+        width: 206px;
+        border: 1px solid #eaeaea;
+        position: absolute;
+        z-index: 9;
+        list-style: none;
+        list-style-type: none;
+    }
+    .input_container ul li {
+        padding: 2px;
+    }
+    .input_container ul li:hover {
+        background: #eaeaea;
+        color: #000000;
+    }
+    #list_nom_produit {
+        display: none;
+        background-color: slategrey;
+    }
+
+</style>
 
 <div id="Content">
+    <div class="success" id="succes_register" style="display: block;">
+        <b>La facture a bien été enregistrée. </br> Vous pouvez enregistrer une nouvelle facture.</b>
+        <div></div>
+    </div>
 	<div class="bloc_title">
         <div class="alerte">&nbsp;</div><br/>
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
@@ -174,59 +319,90 @@ $(document).ready (function ()
 	<br/><br/>
 	<?php echo $_smarty_tpl->getSubTemplate ("common/messages_boxes.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-	<form name="form_popup" id="form_popup" method="post">
-		<style type="text/css">
-			.blocInfoBis
-			{
-				background-image: url("css/images/bg_bloc_alertes.png");
-				background-repeat: repeat;
-				border: 1px solid #313131;
-				padding: 15px 25px 15px;
-			}
-			.blocAddAchat
-			{
-				background-image: url("css/images/bg_bloc_alertes.png");
-				background-repeat: repeat;
-				border: 1px solid #313131;
-				padding: 15px 25px 15px;
-			}
 
-			#results{
-				display:none;
-				width:228px;
-				border:1px solid #AAA;
-				border-top-width:0;
-				margin-left: 80px;
-			}
-
-			#results div{
-				width:220px;
-				padding:2px 4px;
-				text-align:left;
-				border:0;
-			}
-
-			#results div:hover,.result_focus{
-				background-color:#DDD!important;
-				color: black;
-			}
-		</style>
-	<div class="bg_filter" style="line-height:50px;"> 
-        <table width="100%" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-                <td>
-                Actuellement <font color="red"><b><?php echo $_smarty_tpl->tpl_vars['nb_produits']->value;?>
+        <div class="bg_filter" style="line-height:50px;">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                    Actuellement <font color="red"><b><?php echo $_smarty_tpl->tpl_vars['nb_produits']->value;?>
 </b></font> produits enregistrés dans la facture.
-                </td>
-                <td>
-                <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addProduitFacture"></div></div>
-                <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter un produit dans la facture :&nbsp;</div>
-                </td>
-            </tr>
-        </table>
-    </div>
+                    </td>
+                    <td>
+                    <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addProduitFacture"></div></div>
+                    <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter un produit dans la facture :&nbsp;</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br style="clear: both;" />
+
+        <div id="editProduitFacture" class="content">
+            <div class="TitrePopup">ajouter/modifier <strong style="color:#1c9bd3">un produit de la facture</strong></div>
+            <div class="subTitlePopup" style="color: #ffffff; text-decoration: none; font-size: 12px;">Veuillez saisir les informations du produit en remplissant les champs obligatoires.</div>
+            <br style="clear: both; " />
+            <div style="width: 100%;">
+                <form name="form_popup_produit" id="form_popup_produit" method="post" >
+                    <table width="100%">
+                        <tr>
+                            <td colspan="2">
+                                <div class="warnings" id="warnings_popup" style="display: none;">
+                                    <b>Certains champs n'ont pas &eacute;t&eacute; remplis correctement :</b>
+                                    <div></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!--PARTIE GAUCHE-->
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>Nom du produit :<span class="champObligatoire">*</span></td>
+                                        <td class="input_container" ><input type="text" name="nom_produit_search" id="nom_produit_search" value="" onkeyup="autocomplet()"/>
+                                            <ul id="list_nom_produit" style="list-style-type: none;"></ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quantité achetée :<span class="champObligatoire">*</span></td>
+                                        <td class="input_container" ><input type="text" name="quantite_achat" id="quantite_achat" value=""/></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <!--PARTIE DROITE-->
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>Date de fabrication : </td>
+                                        <td><input type="text" name="date_fabrication" id="date_fabrication" value=""/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Date de peremption : </td>
+                                        <td><input type="text" name="date_peremption" id="date_peremption" value=""/></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="hidden" id="target" name="target" value="produits_facture" />
+                    <input type="hidden" id="id_produit_facture" name="id_produit_facture" value="0" />
+                </form>
+            </div>
+            <hr size="1" style="margin-top: 50px;" />
+            <div style="float: left; text-align: left;"><span class="champObligatoire">*</span> : Champs obligatoires.</div>
+            <div style="float: right; text-align: right;">
+                <table border="0" cellspacing="0" cellpadding="0" align="right">
+                    <tr>
+                        <td><div id="btnAnnulerProduit"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
+                        <td>&nbsp;</td>
+                        <td><div id="btnValiderProduit"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOKProduit" height="30" /></div></td>
+                    </tr>
+                </table>
+            </div>
+            <hr size="5" style="margin-top: 50px; background-color: #ff0000;" />
+        </div>
+
 		<div id="tableau_produits_facture"></div>
 
+    <form name="form_popup" id="form_popup" method="post">
 		<table style="float:left;" cellspacing="2" cellpadding="5">
 			<tr>
 	        	<td colspan="2">
@@ -320,6 +496,5 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
         </tr>
     </table>        
 </div>
-<script src="assets/js/autocomplete.js"></script>
 <?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>

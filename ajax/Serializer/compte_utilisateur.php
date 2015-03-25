@@ -26,51 +26,58 @@ if( $id != NULL )
 	{
 		if( $id_type_user != NULL && $nom != NULL && $prenom != NULL && $login != NULL && $password != NULL && $email != NULL && $adresse != NULL )
 		{
-			$ok = true;
-			$ok &= isEmail($email);
-			$infoAllUsers = $db->GetInfoAllUsers();
-			foreach ($infoAllUsers as $infoUser)
-			{
-				if($infoUser["email_user"] == $email || $infoUser["login"] == $login)
-				{
-					$ok &=false;
-				}
-			}
+            if($id_type_user > 0 )
+            {
+                $ok = true;
+                $ok &= isEmail($email);
+                $infoAllUsers = $db->GetInfoAllUsers();
+                foreach ($infoAllUsers as $infoUser)
+                {
+                    if($infoUser["email_user"] == $email || $infoUser["login"] == $login)
+                    {
+                        $ok &=false;
+                    }
+                }
 
-			$sql = "INSERT INTO t_users
-							(nom_user,
-							 prenom_user,
-							 adresse_user,
-							 email_user,
-							 login,
-							 password,
-							 id_type_user)
-			VALUES ('$nom',
-					'$prenom',
-					'$adresse',
-					'$email',
-					'$login',
-					'$password',
-					$id_type_user)";
+                $sql = "INSERT INTO t_users
+                                (nom_user,
+                                 prenom_user,
+                                 adresse_user,
+                                 email_user,
+                                 login,
+                                 password,
+                                 id_type_user)
+                VALUES ('$nom',
+                        '$prenom',
+                        '$adresse',
+                        '$email',
+                        '$login',
+                        '$password',
+                        $id_type_user)";
 
-			if( $ok )
-			{
-				if( $db->Execute ( $sql ) )
-				{
-					$db->commit ();
-					echo "({'result': 'SUCCESS'})";
-				}
-				else
-				{
-					$db->rollBack();
-					echo "({'result': 'Une erreur est survenue lors de l \'insertion de l \'utilisateur en base de données...'})";
-				}
-			}
-			else
-			{
-				$db->rollBack();
-				echo "({'result': 'Une erreur est survenue car ce login et/ou ce mot de passe existe déjà en base de données...'})";
-			}				
+                if( $ok )
+                {
+                    if( $db->Execute ( $sql ) )
+                    {
+                        $db->commit ();
+                        echo "({'result': 'SUCCESS'})";
+                    }
+                    else
+                    {
+                        $db->rollBack();
+                        echo "({'result': 'Une erreur est survenue lors de l \'insertion de l \'utilisateur en base de données...'})";
+                    }
+                }
+                else
+                {
+                    $db->rollBack();
+                    echo "({'result': 'Une erreur est survenue car ce login et/ou ce mot de passe existe déjà en base de données...'})";
+                }
+            }
+            else
+            {
+                echo "({'result': 'Une erreur est survenue. Veuillez choisir un type utilisateur '})";
+            }
 		}
 		else
 		{
@@ -84,35 +91,42 @@ if( $id != NULL )
 	{
 		if( $id_type_user != NULL && $nom != NULL && $prenom != NULL && $login != NULL && $email != NULL && $adresse != NULL)
 		{
-			$ok = true;
-			$ok &= isEmail($email);
+            if($id_type_user > 0 )
+            {
+                $ok = true;
+                $ok &= isEmail($email);
 
-			$sql = "UPDATE t_users
-					SET nom_user = '$nom',
-						prenom_user ='$prenom',
-						adresse_user = '$adresse',
-						email_user = '$email',
-						login = '$login',
-						id_type_user = '$id_type_user' 
-					WHERE idt_users = $id";
-			if($ok)
-			{
-				if( $db->Execute ( $sql ) )
-				{
-					$db->commit ();
-					echo "({'result': 'SUCCESS'})";
-				}
-				else
-				{
-					$db->rollBack();
-					echo "({'result': 'Une erreur est survenue lors de la mise à jour de l \'utilisateur en base de données... '})";
-				}
-			}
-			else
-			{
-				$db->rollBack();
-				echo "({'result': 'Une erreur est survenue lors de la mise à jour de l \'utilisateur en base de données, car certaines valeurs sont invalides... '})";
-			}
+                $sql = "UPDATE t_users
+                        SET nom_user = '$nom',
+                            prenom_user ='$prenom',
+                            adresse_user = '$adresse',
+                            email_user = '$email',
+                            login = '$login',
+                            id_type_user = '$id_type_user'
+                        WHERE idt_users = $id";
+                if($ok)
+                {
+                    if( $db->Execute ( $sql ) )
+                    {
+                        $db->commit ();
+                        echo "({'result': 'SUCCESS'})";
+                    }
+                    else
+                    {
+                        $db->rollBack();
+                        echo "({'result': 'Une erreur est survenue lors de la mise à jour de l \'utilisateur en base de données... '})";
+                    }
+                }
+                else
+                {
+                    $db->rollBack();
+                    echo "({'result': 'Une erreur est survenue lors de la mise à jour de l \'utilisateur en base de données, car certaines valeurs sont invalides... '})";
+                }
+            }
+            else
+            {
+                echo "({'result': 'Une erreur est survenue. Veuillez choisir un type utilisateur '})";
+            }
 		}
 		else
 		{

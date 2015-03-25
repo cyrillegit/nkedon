@@ -627,7 +627,7 @@ div.success
 	color							: #3A7C3A;
 	margin							: 10px 15% 15px;
 	padding							: 5px;
-	background						: #FFDDDD url(images/Symboles_Alertes_N1.png) no-repeat scroll 48% 35px;
+	background						: #FFDDDD url(images/Symboles_Alertes_N1.png) no-repeat scroll 10% 20px;
 	text-align						: center;
 	min-height						: 60px;
 	font-weight						: bold;

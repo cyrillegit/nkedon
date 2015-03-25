@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-24 14:36:52
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-25 08:41:40
          compiled from ".\templates\administration\gestion_users\types_comptes_utilisateurs.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:548052ebac3a82cfd2-94116775%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6ec02f468a1bf6ea51c71a893e013a924691dfaa' => 
     array (
       0 => '.\\templates\\administration\\gestion_users\\types_comptes_utilisateurs.tpl',
-      1 => 1427207808,
+      1 => 1427272899,
       2 => 'file',
     ),
   ),
@@ -51,21 +51,16 @@ $(document).ready (function ()
     $("#editTypeUser").hide();
 	RefreshTableTypesUtilisateurs ();
 
-    var i = 0;
-
     $("#addTypeUser").click (function ()
     {
-        i++;
-        $("#editTypeUser").slideToggle("fast");
-
+        $("#editTypeUser").show("slow");
     });
 
     $("#btnAnnuler").click (function ()
     {
-        i++;
         $("#nom_type_user").val("");
         $("#warnings_popup").css("display", "none");
-        $("#editTypeUser").slideToggle("fast");
+        $("#editTypeUser").hide("slow");
 
     });
 

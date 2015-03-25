@@ -664,9 +664,9 @@ function autocomplet() {
     var keyword = $('#nom_produit_search').val();
     if (keyword.length >= min_length) {
         $.ajax({
-            url: 'search.php',
+            url: 'ajax/populate.php',
             type: 'POST',
-            data: {keyword:keyword},
+            data: {target:'produits', keyword:keyword},
             success:function(data){
                 $('#list_nom_produit').show();
                 $('#list_nom_produit').html(data);
@@ -675,23 +675,6 @@ function autocomplet() {
     } else {
         $('#list_nom_produit').hide();
     }
-}
-
-function storeOperation() {
-    var min_length = 0; // min caracters to display the autocomplete
-    var keyword = $('#nom_produit_search').val();
-    var response = "";
-    if (keyword.length >= min_length) {
-        $.ajax({
-            url: 'search.php',
-            type: 'POST',
-            data: {keyword:keyword},
-            success:function(data){
-                response = data;
-            }
-        });
-    }
-    return response;
 }
 
 // set_item : this function will be executed when we select an item
@@ -767,7 +750,6 @@ $(document).ready (function ()
 			<div class="menu" style="margin-top: -50px;width: 770px; margin-left: 230px;">
 				<div id='cssmenu'>
 				<ul>
-				   <li class='active has-sub'><a href='index.php'><span>Accueil</span></a></li>
 				   {if $smarty.session.infoUser.id_type_user <= 2}
 				   <li class='has-sub'><a href="administration.php"><span>Administration</span></a>
 				      <ul>
@@ -782,30 +764,33 @@ $(document).ready (function ()
 				   {/if}
 				   <li class='has-sub'><a href="administration_magasin.php"><span>Magasin</span></a>
 				      <ul>
-				         <li class='has-sub'><a href="administration_magasin.php?sub=produits"><span>Ajouter / Modifer un produit</span></a>
-				         </li>
-				         <li class='has-sub'><a href="administration_magasin.php?sub=factures"><span>Ajouter / Modifier une facture</span></a>
-				         </li>
-				         <li class='has-sub'><a href="administration_magasin.php?sub=fournisseurs"><span>Ajouter / modifier un fournisseur</span></a>
-				         </li>
-                          <li class='has-sub'><a href="administration_magasin.php?sub=operations_journal"><span>Réaliser le journal</span></a>
-                          </li>
-				         <li class='has-sub'><a href="administration_magasin.php?sub=inventaire"><span>Réaliser l'inventaire du magasin</span></a>
-				         </li>
-                 <li class='has-sub'><a href="administration_magasin.php?sub=groupes_factures"><span>Historiques des factures</span></a>
-                 </li>
-				         <li class='has-sub'><a href="administration_magasin.php?sub=historiques_syntheses"><span>Historiques des synthéses</span></a>
-				         </li>
+				         <li class='has-sub'><a href="administration_magasin.php?sub=produits"><span>Ajouter / Modifer un produit</span></a></li>
+				         <li class='has-sub'><a href="administration_magasin.php?sub=edit_facture"><span>Ajouter / Modifier une facture</span></a></li>
+				         <li class='has-sub'><a href="administration_magasin.php?sub=fournisseurs"><span>Ajouter / modifier un fournisseur</span></a></li>
+                          <li class='has-sub'><a href="administration_magasin.php?sub=operations_journal"><span>Réaliser le journal</span></a></li>
+				         <li class='has-sub'><a href="administration_magasin.php?sub=inventaire"><span>Réaliser l'inventaire du magasin</span></a></li>
+                            <li class='has-sub'><a href="administration_magasin.php?sub=groupes_factures"><span>Historiques des factures</span></a></li>
+				         <li class='has-sub'><a href="administration_magasin.php?sub=historiques_syntheses"><span>Historiques des synthéses</span></a></li>
 				         {if $smarty.session.infoUser.id_type_user <= 4}
-				         <li class='has-sub'><a href="administration_magasin.php?sub=statistiques"><span>Statistiques du magasin</span></a>
-				         </li>
+				         <li class='has-sub'><a href="administration_magasin.php?sub=statistiques"><span>Statistiques du magasin</span></a></li>
 				         {/if}				         							         
 				      </ul>
 				   </li>
 
 				   <li class='has-sub'><a href="administration_production.php"><span>Production</span></a>
-				   </li>							   							   
-				   <li class='has-sub'><a href="about.php"><span>About</span></a></li>
+				   </li>
+                    {if $smarty.session.infoUser.id_type_user <= 2}
+                        <li class='has-sub'><a href="historiques.php"><span>Historiques</span></a>
+                            <ul>
+                                <li class="has-sub"><a href="administration_magasin.php?sub=factures"><span>Historiques des factures</span></a>
+                                </li>
+                                <li class='has-sub'><a href="historiques.php?sub=historiques_journal"><span>Historiques des journaux</span></a>
+                                </li>
+                                <li class='has-sub'><a href="historiques.php?sub=historiques_syntheses"><span>Historiques des synthèse</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    {/if}
 				   <li class='last has-sub'><a href="contact.php"><span>Contact</span></a></li>
 				</ul>
 				</div>

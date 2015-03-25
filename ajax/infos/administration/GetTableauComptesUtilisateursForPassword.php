@@ -20,8 +20,15 @@ $(document).ready (function ()
 	{
 		$(this).click (function ()
 		{
-			update_content ("ajax/popups/edit_compte_utilisateur_password.php", "popup", "id_compte=" + $(this).attr ("id_compte"));
-			ShowPopupHeight (550);
+            $("#id_compte").val($(this).attr ("id_compte"));
+            $("#nom").val($(this).attr ("nom_user"));
+            $("#prenom").val( $(this).attr ("prenom_user") );
+            $("#email").val($(this).attr ("email_user"));
+            $("#login").val( $(this).attr ("login") );
+
+            $("#editPasswordCompteUtilisateur").show("slow");
+//			update_content ("ajax/popups/edit_compte_utilisateur_password.php", "popup", "id_compte=" + $(this).attr ("id_compte"));
+//			ShowPopupHeight (550);
 		});
 	});
 });
@@ -53,7 +60,7 @@ $(document).ready (function ()
                     <td align="center"><?php echo $infosUser["login"]; ?></td>
                     <td align="center">
                     <?php if($_SESSION ["infoUser"]["idt_types_users"] == 1 || $_SESSION ["infoUser"]["idt_types_users"] == 2){?>
-                        <img src="css/images/edit.png" title="modifier le mot de passe" border="0" class="edit_compte_utilisateur_password" style="cursor: pointer;" id_compte="<?=$obj ["idt_users"]; ?>" />
+                        <img src="css/images/edit.png" title="modifier le mot de passe" border="0" class="edit_compte_utilisateur_password" style="cursor: pointer;" id_compte="<?=$obj ["idt_users"]; ?>" nom_user="<?=$obj ["nom_user"];?>" prenom_user="<?=$obj ["prenom_user"];?>" email_user="<?=$obj ["email_user"];?>" login="<?=$obj ["login"];?>" />
                     <?php }?>
                     </td>
                 </tr>

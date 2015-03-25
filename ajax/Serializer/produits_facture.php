@@ -11,9 +11,11 @@ $db = new Database ();
 $db->beginTransaction ();
 
 isset( $_POST ["id_produit_facture"] ) ? $id = $_POST ["id_produit_facture"] : $id = NULL;
+//echo "({'result': 'SUCCESS'})";
+//print_r( "print anything" );
 if( $id != NULL )
 {
-	isset( $_POST ["nom_produit"] ) ? $nom_produit = strtoupper(addslashes(htmlspecialchars($_POST ["nom_produit"]))) : $nom_produit = "";
+	isset( $_POST ["nom_produit_search"] ) ? $nom_produit = strtoupper(addslashes(htmlspecialchars($_POST ["nom_produit_search"]))) : $nom_produit = "";
 	isset( $_POST ["quantite_achat"] ) ? $quantite_achat = addslashes(htmlspecialchars($_POST ["quantite_achat"])) : $quantite_achat = "";
 	isset( $_POST ["date_fabrication"] ) ? $date_fabrication = addslashes(htmlspecialchars($_POST ["date_fabrication"])) : $date_fabrication = "";
 	isset( $_POST ["date_peremption"] ) ? $date_peremption = addslashes(htmlspecialchars($_POST ["date_peremption"])) : $date_peremption = "";
@@ -25,22 +27,16 @@ if( $id != NULL )
 		{
 			$ok = true;
 
-			$id_produit = $db->getIdProduitByNom( $nom_produit );
-
-			$prix_achat_produit = $db->getPrixAchatProduitByNom( $nom_produit );
-
+            $produit = $db->getInfoProduitByNom( $nom_produit );
+            $id_produit = $produit["idt_produits"];
 
 			if( $id_produit != NULL )
 			{
 				$ok &= true;
 			}
 
-			if( $prix_achat_produit != NULL )
-			{
-				$ok &= true;
-			}
-
 			$ok &= isNumber( $quantite_achat );
+
 			if( $date_fabrication != "" )
 			{
 				$ok &= validateDate( $date_fabrication );
@@ -63,17 +59,14 @@ if( $id != NULL )
 			{
 				$date_fabrication = FrenchDateToSQLDate( $date_fabrication );
 				$date_peremption = FrenchDateToSQLDate( $date_peremption );
-				$prix_total_produits = $quantite_achat * $prix_achat_produit;
 
 				$sql = "INSERT INTO t_produits_factures
 							(id_produit,
 							 quantite_achat,
-							 prix_total_produits,
 							 date_fabrication,
 							 date_peremption)
 				VALUES ('$id_produit',
 						'$quantite_achat',
-						'$prix_total_produits',
 						'$date_fabrication',
 						'$date_peremption')";
 
@@ -92,14 +85,14 @@ if( $id != NULL )
 			{
 				$db->rollBack();
 				echo "({'result': 'Une erreur est survenue car certaines valeurs de ce produit sont invalides.'})";
-			}			
+			}
 		}
 		else
 		{
 			$db->rollBack();
 			echo "({'result': 'Une erreur est survenue car certaines values du produit sont nulles. '})";
 		}
-		
+
 	}
 	//Mode mise à jour (post:update)
 	else
@@ -133,7 +126,7 @@ if( $id != NULL )
 			{
 				$date_fabrication = FrenchDateToSQLDate( $date_fabrication );
 				$date_peremption = FrenchDateToSQLDate( $date_peremption );
-				
+
 				$sql = "UPDATE t_produits_factures
 						SET id_produit = '$id_produit',
 							quantite_achat = '$quantite_achat',

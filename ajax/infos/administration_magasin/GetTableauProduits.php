@@ -34,8 +34,16 @@ $(document).ready (function ()
 	{
 		$(this).click (function ()
 		{
-			update_content ("ajax/popups/edit_produit.php", "popup", "id_produit=" + $(this).attr ("id_produit"));
-			ShowPopupHeight (550);
+            $("#id_produit").val($(this).attr("id_produit"));
+            $("#nom_produit").val($(this).attr ("nom_produit"));
+            $("#prix_vente").val( $(this).attr ("prix_vente") );
+            $("#prix_achat").val($(this).attr ("prix_achat"));
+
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+            $("#editProduit").show("slow");
+
+//			update_content ("ajax/popups/edit_produit.php", "popup", "id_produit=" + $(this).attr ("id_produit"));
+//			ShowPopupHeight (550);
 		});
 	});
 });
@@ -78,7 +86,7 @@ $(document).ready (function ()
                         <td align="center"><span class='floatAndMarginLeft'><?php echo number_format( $obj["prix_vente"], 2, ',', ' '); ?></span></td>
                         <td align="center">
                         <?php if($_SESSION ["infoUser"]["idt_types_users"] <= 3){?>
-                            <img src="css/images/edit.png" title="modifier" border="0" class="edit_produit" style="cursor: pointer; margin: 1px;" id_produit="<?=$obj ["idt_produits"]; ?>" />
+                            <img src="css/images/edit.png" title="modifier" border="0" class="edit_produit" style="cursor: pointer; margin: 1px;" id_produit="<?=$obj ["idt_produits"]; ?>" nom_produit="<?=$obj ["nom_produit"]; ?>" prix_vente="<?=$obj ["prix_vente"]; ?>" prix_achat="<?=$obj ["prix_achat"]; ?>"/>
                             <a class="delete_link" style="margin: 1px; cursor: pointer;" title="supprimer" url="delete.php?target=produit&id=<?=$obj["idt_produits"]; ?>"><img src="css/images/delete.png" border="0" /></a>
                         <?php }?>
                         </td>

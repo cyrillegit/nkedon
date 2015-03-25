@@ -840,7 +840,7 @@
         {
             $this->Sql = "SELECT * FROM t_produits WHERE nom_produit = '$id'";
             $res = $this->FetchRow();
-            return $res[0];
+            return $res;
         }
 
 		/**

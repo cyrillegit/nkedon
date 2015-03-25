@@ -177,12 +177,12 @@
 			$ok &= $db->Execute ( $sql );
 			if( $ok )
 			{
-				$tpl_index->assign ("message", $db->fixEncoding("La suppression de la facture a bien �t� r�alis�e."));
+				$tpl_index->assign ("message", $db->fixEncoding("La suppression de la facture a bien été réalisée."));
 				$tpl_index->assign ("error", 0);
 			}
 			else
 			{
-				$tpl_index->assign ("message", $db->fixEncoding("La suppression de la facture a �chou�e."));
+				$tpl_index->assign ("message", $db->fixEncoding("La suppression de la facture a échouée."));
 				$tpl_index->assign ("error", 1);
 			}
 		}				

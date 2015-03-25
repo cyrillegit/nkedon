@@ -25,21 +25,16 @@ $(document).ready (function ()
     $("#editTypeUser").hide();
 	RefreshTableTypesUtilisateurs ();
 
-    var i = 0;
-
     $("#addTypeUser").click (function ()
     {
-        i++;
-        $("#editTypeUser").slideToggle("fast");
-
+        $("#editTypeUser").show("slow");
     });
 
     $("#btnAnnuler").click (function ()
     {
-        i++;
         $("#nom_type_user").val("");
         $("#warnings_popup").css("display", "none");
-        $("#editTypeUser").slideToggle("fast");
+        $("#editTypeUser").hide("slow");
 
     });
 

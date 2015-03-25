@@ -22,7 +22,7 @@ $(document).ready (function ()
 		{
             $("#id_type_user").val($(this).attr ("id_type_user"));
             $("#nom_type_user").val( $(this).attr ("nom_type_user") );
-            $("#editTypeUser").slideToggle("fast");
+            $("#editTypeUser").show("slow");
 //			update_content ("ajax/popups/edit_type_user.php", "popup", "id_type_user=" + $(this).attr ("id_type_user"));
 //			ShowPopupHeight (300);
 		});

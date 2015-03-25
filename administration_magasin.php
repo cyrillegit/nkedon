@@ -87,7 +87,7 @@
 			{
 				$id_facture = $_GET["id_facture"];
 				
-				if( $id_facture =! 0 )
+				if( $id_facture != 0 )
 				{
 					$_SESSION["GET"] = $_GET;
 

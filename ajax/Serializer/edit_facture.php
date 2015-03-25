@@ -25,6 +25,7 @@ if( $id_facture != NULL )
 			$ok = true;
 			$okFacture = true;
 
+            // check unicity of the bill
 			$infoAllFactures = $db->getAllFactures();
 			foreach ( $infoAllFactures as $infoFacture ) 
 			{
@@ -34,7 +35,7 @@ if( $id_facture != NULL )
 				}
 			}
 
-
+            // get the number of products of this bill
 			$nombre_produit = $db->getNbProduitsDistintsAchetes();
 
 			if( $date_facture != "" )
@@ -48,6 +49,7 @@ if( $id_facture != NULL )
 
 			if( $ok )
 			{
+                // get all products of this bill
 				$infoAllProduitsAchetes = $db->getAllProduitsAchetes();
 				$date_facture = FrenchDateToSQLDate( $date_facture );
 				$date_insertion_facture = setLocalTime();
@@ -135,7 +137,7 @@ if( $id_facture != NULL )
 		else
 		{
 			$db->rollBack();
-			echo "({'result': 'Une erreur est survenue car certaines values de la facture sont nulles. '})";
+			echo "({'result': 'Une erreur est survenue car certaines valeurs de la facture sont nulles. '})";
 		}
 		
 	}
