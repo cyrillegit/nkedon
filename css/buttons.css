@@ -467,3 +467,14 @@ input.btn_save
     background-color:	none;
     background-image:	url(images/boutons/locked.png);
 }
+
+.btn_folder
+{
+    width: 				64px;
+    height:				64px;
+    margin-left:        2px;
+    float:				left;
+    cursor:				pointer;
+    background-color:	none;
+    background-image:	url(images/boutons/folder.png);
+}

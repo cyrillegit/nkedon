@@ -789,6 +789,67 @@
 		return $new_date;
 	}
 
+    /**
+     * Fonction getLitterateMonth
+     * ----------------------------
+     * Transforme la date 2010-11-15 en Novembre
+     */
+    //*
+    function getLitterateMonth ( $date )
+    {
+        if( $date != NULL && $date != "" )
+        {
+            switch ( trim( $date ) )
+            {
+                case '01':
+                    $new_date = "Janvier";
+                    break;
+                case '02':
+                    $new_date = "Février";
+                    break;
+                case '03':
+                    $new_date = "Mars";
+                    break;
+                case '04':
+                    $new_date = "Avril";
+                    break;
+                case '05':
+                    $new_date = "Mai";
+                    break;
+                case '06':
+                    $new_date = "Juin";
+                    break;
+                case '07':
+                    $new_date = "Juillet";
+                    break;
+                case '08':
+                    $new_date = "Août";
+                    break;
+                case '09':
+                    $new_date = "Septembre";
+                    break;
+                case '10':
+                    $new_date = "Octobre";
+                    break;
+                case '11':
+                    $new_date = "Novembre";
+                    break;
+                case '12':
+                    $new_date = "Décembre";
+                    break;
+                default:
+                    $new_date = "Inconnu";
+                    break;
+            }
+        }
+        else
+        {
+            $new_date = "Moi inconnu";
+        }
+        return $new_date;
+    }
+
+
 	/**
 	 * Fonction getDateFromDatetime
 	 * ----------------------------
@@ -810,6 +871,28 @@
 		}
 		return $new_date;
 	}
+
+    /**
+     * Fonction getYearFromDate
+     * ----------------------------
+     * Transforme la date 2010-11-15 en 2010
+     */
+    //*
+    function getYearFromDate ($date)
+    {
+        return explode("-", $date)[0];
+    }
+
+    /**
+ * Fonction getMonthFromDate
+ * ----------------------------
+ * Transforme la date 2010-11-15 en 11
+ */
+//*
+function getMonthFromDate ($date)
+{
+    return explode("-", $date)[1];
+}
 
     /**
      * Fonction getDateWithUnderscrore

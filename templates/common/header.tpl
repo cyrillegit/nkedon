@@ -765,15 +765,10 @@ $(document).ready (function ()
 				   <li class='has-sub'><a href="administration_magasin.php"><span>Magasin</span></a>
 				      <ul>
 				         <li class='has-sub'><a href="administration_magasin.php?sub=produits"><span>Ajouter / Modifer un produit</span></a></li>
+                          <li class='has-sub'><a href="administration_magasin.php?sub=fournisseurs"><span>Ajouter / modifier un fournisseur</span></a></li>
 				         <li class='has-sub'><a href="administration_magasin.php?sub=edit_facture"><span>Ajouter / Modifier une facture</span></a></li>
-				         <li class='has-sub'><a href="administration_magasin.php?sub=fournisseurs"><span>Ajouter / modifier un fournisseur</span></a></li>
                           <li class='has-sub'><a href="administration_magasin.php?sub=edit_operations_journal"><span>Réaliser le journal</span></a></li>
 				         <li class='has-sub'><a href="administration_magasin.php?sub=inventaire"><span>Réaliser l'inventaire du magasin</span></a></li>
-                            <li class='has-sub'><a href="administration_magasin.php?sub=groupes_factures"><span>Historiques des factures</span></a></li>
-				         <li class='has-sub'><a href="administration_magasin.php?sub=historiques_syntheses"><span>Historiques des synthéses</span></a></li>
-				         {if $smarty.session.infoUser.id_type_user <= 4}
-				         <li class='has-sub'><a href="administration_magasin.php?sub=statistiques"><span>Statistiques du magasin</span></a></li>
-				         {/if}				         							         
 				      </ul>
 				   </li>
 
@@ -782,12 +777,12 @@ $(document).ready (function ()
                     {if $smarty.session.infoUser.id_type_user <= 2}
                         <li class='has-sub'><a href="historiques.php"><span>Historiques</span></a>
                             <ul>
-                                <li class="has-sub"><a href="administration_magasin.php?sub=factures"><span>Historiques des factures</span></a>
-                                </li>
-                                <li class='has-sub'><a href="historiques.php?sub=historiques_journal"><span>Historiques des journaux</span></a>
-                                </li>
-                                <li class='has-sub'><a href="historiques.php?sub=historiques_syntheses"><span>Historiques des synthèse</span></a>
-                                </li>
+                                <li class="has-sub"><a href="historiques.php?sub=historiques_factures"><span>Historiques des factures</span></a></li>
+                                <li class='has-sub'><a href="historiques.php?sub=historiques_journal"><span>Historiques des journaux</span></a></li>
+                                <li class='has-sub'><a href="historiques.php?sub=historiques_syntheses"><span>Historiques des synthèse</span></a></li>
+                                {if $smarty.session.infoUser.id_type_user <= 4}
+                                    <li class='has-sub'><a href="historiques.php?sub=statistiques"><span>Statistiques</span></a></li>
+                                {/if}
                             </ul>
                         </li>
                     {/if}

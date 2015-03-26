@@ -45,24 +45,24 @@ $(document).ready (function ()
         <br />
         <ul class="my_account">
         <?php
-        if( count( $histo_annee ) > 0)
-        {
-            $count = 0;
-            foreach( $histo_annee as $index => $value )
-            {
-                $count++;
-        ?>
-                <li class="button hvr-buzz-out hvr-bounce-to-right histo_annee" annee="<?=$index; ?>">
-                    <a style="color:white;">
-                        <div class="btn_folder"></div>
-                        <div style="margin: 10px;">
-                            <b><?php echo $index."<br/><br/>";?></b>
-                            <b style="color: #ff0000;"><?php echo $value." factures";?></b>
-                        </div>
-                    </a>
-                </li>
-                <?php if($count >= 4){ $count = 0; echo "<br/>";}?>
-        <?php
+        if(isset($histo_annee)) {
+            if (count($histo_annee) > 0) {
+                $count = 0;
+                foreach ($histo_annee as $index => $value) {
+                    $count++;
+                    ?>
+                    <li class="button hvr-buzz-out hvr-bounce-to-right histo_annee" annee="<?= $index; ?>">
+                        <a style="color:white;">
+                            <div class="btn_folder"></div>
+                            <div style="margin: 10px;">
+                                <b><?php echo $index . "<br/><br/>"; ?></b>
+                                <b style="color: #000000;"><?php echo $value . " factures"; ?></b>
+                            </div>
+                        </a>
+                    </li>
+                    <?php if ($count % 4 == 0) { echo "<br/>"; } ?>
+                <?php
+                }
             }
         }
         ?>

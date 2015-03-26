@@ -52,7 +52,7 @@ $(document).ready (function ()
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
                 <td>
-                Actuellement <font color="red"><b>{$nb_factures}</b></font> factures enregistrés.
+                Actuellement <font color="black"><b>{$nb_factures}</b></font> factures enregistrés.
                 </td>
                 <td>
                 {if {$smarty.session.infoUser.id_type_user eq 1} or {$smarty.session.infoUser.id_type_user eq 2} or {$smarty.session.infoUser.id_type_user eq 3} or {$smarty.session.infoUser.id_type_user eq 4}}

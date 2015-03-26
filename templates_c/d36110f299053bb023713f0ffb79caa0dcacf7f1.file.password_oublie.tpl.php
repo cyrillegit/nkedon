@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-24 17:35:33
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-26 22:42:26
          compiled from ".\templates\administration\gestion_users\password_oublie.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:838552ebae6f7989b4-81320616%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd36110f299053bb023713f0ffb79caa0dcacf7f1' => 
     array (
       0 => '.\\templates\\administration\\gestion_users\\password_oublie.tpl',
-      1 => 1427218478,
+      1 => 1427409692,
       2 => 'file',
     ),
   ),
@@ -64,9 +64,7 @@ $(document).ready (function ()
 
     $("#btnAnnuler").click (function ()
     {
-    //    resetInputs();
-        $("#editPasswordCompteUtilisateur").slideToggle("slow");
-
+        $("#editPasswordCompteUtilisateur").hide("slow");
     });
 
     $("#btnValider").click (function ()
@@ -124,7 +122,7 @@ $(document).ready (function ()
     <div class="bloc_title">
         <div class="alerte">&nbsp;</div><br/>
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
-            <div class="ico_title"><img src="css/images/ico_42x42/menu_fdr_0.png" /></div>
+            <div class="ico_title"><img src="css/images/ico_42x42/menu_consult.png" /></div>
             <div class="t_titre">
                 <div class="title"><strong>Modifier le mot de passe</strong> <strong style="color:black;">pour un compte utilisateur</strong></div>
             </div>
@@ -138,8 +136,8 @@ $(document).ready (function ()
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
                 <td>
-                Actuellement <font color="red"><b><?php echo $_smarty_tpl->tpl_vars['nb_comptes_utilisateurs']->value;?>
-</b></font> comptes utilisateurs enregistrés, dont <font color="red"><b>2</b></font> comptes utilisateurs administrateurs non visibles.
+                Actuellement <font color="black"><b><?php echo $_smarty_tpl->tpl_vars['nb_comptes_utilisateurs']->value;?>
+</b></font> comptes utilisateurs enregistrés, dont <font color="black"><b>2</b></font> comptes utilisateurs administrateurs non visibles.
                 </td>
             </tr>
         </table>

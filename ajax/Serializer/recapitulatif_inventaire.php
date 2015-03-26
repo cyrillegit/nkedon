@@ -11,7 +11,7 @@ $db = new Database ();
 $db->beginTransaction ();
 
 	isset( $_POST ["id_recapitulatif"] ) ? $id_recapitulatif = $_POST ["id_recapitulatif"] : $id_recapitulatif = NULL;
-	isset( $_POST ["id_user"] ) ? $id_user = $_POST ["id_user"] : $id_user = NULL;
+	isset( $_POST ["user_select"] ) ? $id_user = $_POST ["user_select"] : $id_user = NULL;
 	isset( $_POST ["ration"] ) ? $ration = addslashes(htmlspecialchars($_POST ["ration"])) : $ration = "";
 	isset( $_POST ["dette_fournisseur"] ) ? $dette_fournisseur = addslashes(htmlspecialchars($_POST ["dette_fournisseur"])) : $dette_fournisseur = "";
 	isset( $_POST ["depenses_diverses"] ) ? $depenses_diverses = addslashes(htmlspecialchars($_POST ["depenses_diverses"])) : $depenses_diverses = "";

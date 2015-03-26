@@ -68,11 +68,8 @@ $(document).ready (function ()
     $("#editCompteUtilisateur").hide();
     RefreshTableComptesUtilisateurs ();
 
-    var i = 0;
-
     $("#addCompteUtilisateur").click (function ()
     {
-        i++;
         resetInputs();
         $("#password_label").show();
         $("#password").show();
@@ -81,10 +78,8 @@ $(document).ready (function ()
 
     $("#btnAnnuler").click (function ()
     {
-        i++;
         resetInputs();
         $("#editCompteUtilisateur").hide("slow");
-
     });
 
     $("#btnValider").click (function ()
@@ -181,7 +176,7 @@ $(document).ready (function ()
     <div class="bloc_title">
         <div class="alerte">&nbsp;</div><br/>
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
-            <div class="ico_title"><img src="css/images/ico_42x42/menu_fdr_0.png" /></div>
+            <div class="ico_title"><img src="css/images/ico_42x42/menu_consult.png" /></div>
             <div class="t_titre">
                 <div class="title"><strong>Ajouter / Modifier</strong> <strong style="color:black;">un compte utilisateur</strong></div>
             </div>
@@ -195,7 +190,7 @@ $(document).ready (function ()
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
                 <td>
-                Actuellement <font color="red"><b>{$nb_comptes_utilisateurs}</b></font> comptes utilisateurs enregistrés, dont <font color="red"><b>2</b></font>  comptes adminitrateurs non visibles.
+                Actuellement <font color="black"><b>{$nb_comptes_utilisateurs}</b></font> comptes utilisateurs enregistrés, dont <font color="black"><b>2</b></font>  comptes adminitrateurs non visibles.
                 </td>
                 <td>
                 {if {$smarty.session.infoUser.id_type_user eq 1} or {$smarty.session.infoUser.id_type_user eq 2}}

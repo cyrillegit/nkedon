@@ -9,7 +9,7 @@ $pdo = connect();
 
 $target = $_POST["target"];
 
-if($target == "types_users"){
+if($target == "types_users") {
     $result = array();
     $sql = "SELECT * FROM t_types_users WHERE idt_types_users > 2";
     $query = $pdo->prepare($sql);
@@ -23,6 +23,21 @@ if($target == "types_users"){
     }
 
     echo json_encode($result);
+
+}elseif($target == "users"){
+        $result = array();
+        $sql = "SELECT * FROM t_users";
+        $query = $pdo->prepare($sql);
+        $query->execute();
+        $list = $query->fetchAll();
+        foreach ($list as $row) {
+            $result[] = array(
+                'id' => $row['idt_users'],
+                'name' => $row['nom_user']."  ".$row['prenom_user'],
+            );
+        }
+
+        echo json_encode($result);
 
 }elseif($target == "produits"){
     $keyword = '%'.$_POST['keyword'].'%';

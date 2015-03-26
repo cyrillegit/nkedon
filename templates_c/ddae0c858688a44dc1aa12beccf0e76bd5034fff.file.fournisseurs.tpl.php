@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-25 16:53:24
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-26 22:54:08
          compiled from ".\templates\administration_magasin\gestion_fournisseurs\fournisseurs.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1767152ebaf57636ca0-42910577%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ddae0c858688a44dc1aa12beccf0e76bd5034fff' => 
     array (
       0 => '.\\templates\\administration_magasin\\gestion_fournisseurs\\fournisseurs.tpl',
-      1 => 1427302349,
+      1 => 1427410446,
       2 => 'file',
     ),
   ),
@@ -154,7 +154,7 @@ $(document).ready (function ()
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
                 <td>
-                Actuellement <font color="red"><b><?php echo $_smarty_tpl->tpl_vars['nb_fournisseurs']->value;?>
+                Actuellement <font color="black"><b><?php echo $_smarty_tpl->tpl_vars['nb_fournisseurs']->value;?>
 </b></font> fournisseurs enregistrés.
                 </td>
                 <td>

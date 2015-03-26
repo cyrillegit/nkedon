@@ -2,25 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="624981b3-8f83-4c5b-a3cf-c77a5949c79f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajax/Serializer/edit_journal.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/administration_magasin/gestion_journal/edit_operations_journal.tpl" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\gestion_factures\edit_facture_old.tpl" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\gestion_journal\operations_journal.tpl" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFactures.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesAnnee.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesMoisAnnee.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/historiques/historiques_factures/factures_annee.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/historiques/historiques_factures/factures_mois.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/historiques.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/historiques/historiques_factures/historiques_factures.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/historiques/historiques_syntheses/historiques_syntheses.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/historiques/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/historiques/main.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/historiques/statistiques/statistiques.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/historiques/statistiques/stats_connections_users.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/historiques/statistiques/stats_fournisseurs_factures.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/historiques/statistiques/stats_fournisseurs_factures_archivees.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/historiques/statistiques/stats_graphes_progression.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/historiques/statistiques/stats_produits.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/historiques/statistiques/stats_produits_achetes_vendus.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/historiques/statistiques/stats_users_types_users.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/0057fb38afcb59aecaa55fa6f6e866babcc5067d.file.inventaire.tpl.php" afterPath="$PROJECT_DIR$/templates_c/0057fb38afcb59aecaa55fa6f6e866babcc5067d.file.inventaire.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/13bccf1f6ee3c920740ee469bb37c7e9c6172b6d.file.historique_syntheses.tpl.php" afterPath="$PROJECT_DIR$/templates_c/13bccf1f6ee3c920740ee469bb37c7e9c6172b6d.file.historique_syntheses.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/14a35e64d31f6f39c819ba645103d1de351d1aea.file.header.tpl.php" afterPath="$PROJECT_DIR$/templates_c/14a35e64d31f6f39c819ba645103d1de351d1aea.file.header.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/4a3111e710f84888bd8197f69537e9b5b9f325a4.file.main.tpl.php" afterPath="$PROJECT_DIR$/templates_c/4a3111e710f84888bd8197f69537e9b5b9f325a4.file.main.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/6ec02f468a1bf6ea51c71a893e013a924691dfaa.file.types_comptes_utilisateurs.tpl.php" afterPath="$PROJECT_DIR$/templates_c/6ec02f468a1bf6ea51c71a893e013a924691dfaa.file.types_comptes_utilisateurs.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/79b691200654f1704fad2fb1ee7d8c71ab6ea40c.file.produits.tpl.php" afterPath="$PROJECT_DIR$/templates_c/79b691200654f1704fad2fb1ee7d8c71ab6ea40c.file.produits.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/9b3ce6a7eca5167ccc9c8a47c2ae127787ad1a5f.file.comptes_utilisateurs.tpl.php" afterPath="$PROJECT_DIR$/templates_c/9b3ce6a7eca5167ccc9c8a47c2ae127787ad1a5f.file.comptes_utilisateurs.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/ClassDB.php" afterPath="$PROJECT_DIR$/include/ClassDB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauFournisseurs.php" afterPath="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauFournisseurs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduitsOperation.php" afterPath="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduitsOperation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauHistoriquesFactures.php" afterPath="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauHistoriquesFactures.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/a6334d06c0bd039e04c3bca76454a4450c946262.file.stats_users_types_users.tpl.php" afterPath="$PROJECT_DIR$/templates_c/a6334d06c0bd039e04c3bca76454a4450c946262.file.stats_users_types_users.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administration_magasin.php" afterPath="$PROJECT_DIR$/administration_magasin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/b0de3e8550b3468ead5669b7ac3d1fe52db8b172.file.groupes_factures.tpl.php" afterPath="$PROJECT_DIR$/templates_c/b0de3e8550b3468ead5669b7ac3d1fe52db8b172.file.groupes_factures.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/buttons.css" afterPath="$PROJECT_DIR$/css/buttons.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/c444731ac674871a88c38b67c762332dfe40d234.file.generate_synthese.tpl.php" afterPath="$PROJECT_DIR$/templates_c/c444731ac674871a88c38b67c762332dfe40d234.file.generate_synthese.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/c60b7b9b097ec32edf2fcf9b509a53af4585a57b.file.main.tpl.php" afterPath="$PROJECT_DIR$/templates_c/c60b7b9b097ec32edf2fcf9b509a53af4585a57b.file.main.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/administration/gestion_users/comptes_utilisateurs.tpl" afterPath="$PROJECT_DIR$/templates/administration/gestion_users/comptes_utilisateurs.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/d36110f299053bb023713f0ffb79caa0dcacf7f1.file.password_oublie.tpl.php" afterPath="$PROJECT_DIR$/templates_c/d36110f299053bb023713f0ffb79caa0dcacf7f1.file.password_oublie.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/administration_magasin/statistiques/data_stats_users_types_users.xml" afterPath="$PROJECT_DIR$/ajax/infos/administration_magasin/statistiques/data_stats_users_types_users.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/ddae0c858688a44dc1aa12beccf0e76bd5034fff.file.fournisseurs.tpl.php" afterPath="$PROJECT_DIR$/templates_c/ddae0c858688a44dc1aa12beccf0e76bd5034fff.file.fournisseurs.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/delete.php" afterPath="$PROJECT_DIR$/delete.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/e7a7bff35746525492e465fd68ae0abd1fc90e8b.file.edit_facture.tpl.php" afterPath="$PROJECT_DIR$/templates_c/e7a7bff35746525492e465fd68ae0abd1fc90e8b.file.edit_facture.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/e87cc5c3952e078b19863ada84abac90e08e4ac2.file.recapitulatif_inventaire.tpl.php" afterPath="$PROJECT_DIR$/templates_c/e87cc5c3952e078b19863ada84abac90e08e4ac2.file.recapitulatif_inventaire.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/administration_magasin/gestion_factures/edit_facture.tpl" afterPath="$PROJECT_DIR$/templates/administration_magasin/gestion_factures/edit_facture.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/administration_magasin/gestion_journal/edit_operations_journal.tpl" afterPath="$PROJECT_DIR$/templates/administration_magasin/gestion_journal/edit_operations_journal.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/administration_magasin/gestion_factures/factures.tpl" afterPath="$PROJECT_DIR$/templates/administration_magasin/gestion_factures/factures.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/administration_magasin/gestion_fournisseurs/fournisseurs.tpl" afterPath="$PROJECT_DIR$/templates/administration_magasin/gestion_fournisseurs/fournisseurs.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/function.php" afterPath="$PROJECT_DIR$/include/function.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/generate_synthese.tpl" afterPath="$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/generate_synthese.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/common/header.tpl" afterPath="$PROJECT_DIR$/templates/common/header.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/inventaire.tpl" afterPath="$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/inventaire.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/administration/main.tpl" afterPath="$PROJECT_DIR$/templates/administration/main.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/administration_magasin/main.tpl" afterPath="$PROJECT_DIR$/templates/administration_magasin/main.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/Serializer/operations_journal.php" afterPath="$PROJECT_DIR$/ajax/Serializer/operations_journal.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/serializer.php" afterPath="$PROJECT_DIR$/ajax/serializer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/administration/gestion_users/password_oublie.tpl" afterPath="$PROJECT_DIR$/templates/administration/gestion_users/password_oublie.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/populate.php" afterPath="$PROJECT_DIR$/ajax/populate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/administration_magasin/gestion_produits/produits.tpl" afterPath="$PROJECT_DIR$/templates/administration_magasin/gestion_produits/produits.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/Serializer/recapitulatif_inventaire.php" afterPath="$PROJECT_DIR$/ajax/Serializer/recapitulatif_inventaire.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/recapitulatif_inventaire.tpl" afterPath="$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/recapitulatif_inventaire.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/administration/gestion_users/types_comptes_utilisateurs.tpl" afterPath="$PROJECT_DIR$/templates/administration/gestion_users/types_comptes_utilisateurs.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Nkedon.iws" />
@@ -45,192 +81,7 @@
     <favorites_list name="Nkedon" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="edit_operations_journal.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_journal/edit_operations_journal.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.774194" vertical-offset="2680" max-vertical-offset="7766">
-              <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-              <folding>
-                <element signature="e#11432#11467#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serializer.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ajax/serializer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.6324787" vertical-offset="0" max-vertical-offset="2596">
-              <caret line="106" column="42" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit_facture.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ajax/Serializer/edit_facture.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.774194" vertical-offset="132" max-vertical-offset="5830">
-              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="23" />
-              <folding>
-                <marker date="1427298257540" expanded="true" signature="1802:2112" placeholder="INSERT INTO ..." />
-                <marker date="1427298257540" expanded="true" signature="2460:2742" placeholder="INSERT INTO ..." />
-                <marker date="1427298257540" expanded="true" signature="2928:2959" placeholder="DELETE FROM ..." />
-                <marker date="1427298257540" expanded="true" signature="4448:4735" placeholder="UPDATE t_fac..." />
-                <marker date="1427298257540" expanded="true" signature="4790:4843" placeholder="DELETE FROM ..." />
-                <marker date="1427298257540" expanded="true" signature="5159:5453" placeholder="INSERT INTO ..." />
-                <marker date="1427298257540" expanded="true" signature="5654:5685" placeholder="DELETE FROM ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit_journal.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ajax/Serializer/edit_journal.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.870968" vertical-offset="792" max-vertical-offset="5192">
-              <caret line="64" column="47" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
-              <folding>
-                <marker date="1427322275804" expanded="true" signature="1259:1409" placeholder="INSERT INTO ..." />
-                <marker date="1427322275804" expanded="true" signature="1710:1948" placeholder="INSERT INTO ..." />
-                <marker date="1427322275804" expanded="true" signature="2162:2195" placeholder="DELETE FROM ..." />
-                <marker date="1427322275804" expanded="true" signature="3527:3814" placeholder="UPDATE t_fac..." />
-                <marker date="1427322275804" expanded="true" signature="3869:3922" placeholder="DELETE FROM ..." />
-                <marker date="1427322275804" expanded="true" signature="4238:4532" placeholder="INSERT INTO ..." />
-                <marker date="1427322275804" expanded="true" signature="4733:4764" placeholder="DELETE FROM ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="function.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/function.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.338983" vertical-offset="12086" max-vertical-offset="20416">
-              <caret line="573" column="16" selection-start-line="573" selection-start-column="13" selection-end-line="573" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="administration_magasin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/administration_magasin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.870968" vertical-offset="1140" max-vertical-offset="5610">
-              <caret line="77" column="56" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="56" />
-              <folding>
-                <marker date="1427316487399" expanded="true" signature="3617:3648" placeholder="DELETE FROM ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassDB.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/ClassDB.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.440678" vertical-offset="34262" max-vertical-offset="36036">
-              <caret line="1598" column="34" selection-start-line="1598" selection-start-column="34" selection-end-line="1598" selection-end-column="34" />
-              <folding>
-                <marker date="1427323583511" expanded="true" signature="5271:5613" placeholder="..." />
-                <marker date="1427323583511" expanded="true" signature="5283:5296" placeholder="..." />
-                <marker date="1427323583511" expanded="true" signature="5308:5600" placeholder="..." />
-                <marker date="1427323583511" expanded="true" signature="6034:6319" placeholder="..." />
-                <marker date="1427323583511" expanded="true" signature="6045:6057" placeholder="..." />
-                <marker date="1427323583511" expanded="true" signature="6068:6307" placeholder="..." />
-                <marker date="1427323583511" expanded="true" signature="6769:6881" placeholder="SELECT COUNT..t_users..." />
-                <marker date="1427323583511" expanded="true" signature="7559:7587" placeholder="SELECT * FRO..t_users..." />
-                <marker date="1427323583511" expanded="true" signature="7907:7959" placeholder="SELECT idt_u..t_users..." />
-                <marker date="1427323583511" expanded="true" signature="8273:8314" placeholder="SELECT COUNT..t_users..." />
-                <marker date="1427323583511" expanded="true" signature="8616:8716" placeholder="SELECT * FRO..t_users..." />
-                <marker date="1427323583511" expanded="true" signature="9031:9196" placeholder="SELECT * FRO..t_users..." />
-                <marker date="1427323583511" expanded="true" signature="9496:9620" placeholder="SELECT * FRO..t_users..." />
-                <marker date="1427323583511" expanded="true" signature="9936:9971" placeholder="SELECT * FRO..t_types_users..." />
-                <marker date="1427323583511" expanded="true" signature="10322:10419" placeholder="SELECT * FRO..t_types_users..." />
-                <marker date="1427323583511" expanded="true" signature="10716:10764" placeholder="SELECT COUNT..t_types_users..." />
-                <marker date="1427323583511" expanded="true" signature="11067:11122" placeholder="SELECT COUNT..t_produits_factures..." />
-                <marker date="1427323583511" expanded="true" signature="11465:11524" placeholder="SELECT COUNT..t_produits_operations..." />
-                <marker date="1427323583511" expanded="true" signature="11855:11911" placeholder="SELECT COUNT..t_recapitulatif..." />
-                <marker date="1427323583511" expanded="true" signature="12261:12313" placeholder="SELECT * FRO..t_types_users..." />
-                <marker date="1427323583511" expanded="true" signature="12594:12640" placeholder="SELECT COUNT..t_produits..." />
-                <marker date="1427323583511" expanded="true" signature="12945:12999" placeholder="SELECT COUNT..t_fournisseurs..." />
-                <marker date="1427323583511" expanded="true" signature="13364:13423" placeholder="SELECT COUNT..t_produits_operations..." />
-                <marker date="1427323583511" expanded="true" signature="13746:13792" placeholder="SELECT COUNT..t_factures..." />
-                <marker date="1427323583511" expanded="true" signature="14102:14168" placeholder="SELECT COUNT..t_historiques_syntheses..." />
-                <marker date="1427323583511" expanded="true" signature="14486:14550" placeholder="SELECT COUNT..t_historiques_factures..." />
-                <marker date="1427323583511" expanded="true" signature="14898:14991" placeholder="SELECT COUNT..t_historiques_factures..." />
-                <marker date="1427323583511" expanded="true" signature="15301:15363" placeholder="SELECT COUNT..t_groupes_factures..." />
-                <marker date="1427323583511" expanded="true" signature="15664:15783" placeholder="SELECT COUNT..t_historiques_factures..." />
-                <marker date="1427323583511" expanded="true" signature="16066:16090" placeholder="SELECT * FRO..t_produits..." />
-                <marker date="1427323583511" expanded="true" signature="16401:16664" placeholder="SELECT p.idt..t_produits..." />
-                <marker date="1427323583511" expanded="true" signature="16951:17058" placeholder="SELECT * FRO..t_produits..." />
-                <marker date="1427323583511" expanded="true" signature="17318:17464" placeholder="SELECT * FRO..t_factures..." />
-                <marker date="1427323583511" expanded="true" signature="17750:17844" placeholder="SELECT * FRO..t_recapitulatif..." />
-                <marker date="1427323583511" expanded="true" signature="18078:18346" placeholder="SELECT p.nom..t_produits..." />
-                <marker date="1427323583511" expanded="true" signature="18646:18900" placeholder="SELECT p.nom..t_produits..." />
-                <marker date="1427323583511" expanded="true" signature="19206:19425" placeholder="SELECT * FRO..t_achats..." />
-                <marker date="1427323583511" expanded="true" signature="19696:20075" placeholder="SELECT COUNT..t_fournisseurs..." />
-                <marker date="1427323583511" expanded="true" signature="20347:20380" placeholder="SELECT * FRO..t_produits_factures..." />
-                <marker date="1427323583511" expanded="true" signature="20710:20745" placeholder="SELECT * FRO..t_produits_operations..." />
-                <marker date="1427323583511" expanded="true" signature="21074:21183" placeholder="SELECT * FRO..t_produits..." />
-                <marker date="1427323583511" expanded="true" signature="21438:21584" placeholder="SELECT * FRO..t_factures..." />
-                <marker date="1427323583511" expanded="true" signature="21863:21909" placeholder="SELECT * FRO..t_produits..." />
-                <marker date="1427323583511" expanded="true" signature="22284:22334" placeholder="SELECT * FRO..t_produits..." />
-                <marker date="1427323583511" expanded="true" signature="22639:22693" placeholder="SELECT * FRO..t_fournisseurs..." />
-                <marker date="1427323583511" expanded="true" signature="22991:23081" placeholder="SELECT idt_p..t_produits..." />
-                <marker date="1427323583511" expanded="true" signature="23412:23481" placeholder="SELECT * FRO..t_achats..." />
-                <marker date="1427323583511" expanded="true" signature="23781:23933" placeholder="SELECT * FRO..." />
-                <marker date="1427323583511" expanded="true" signature="24192:24216" placeholder="SELECT * FRO..t_produits..." />
-                <marker date="1427323583511" expanded="true" signature="24472:24494" placeholder="SELECT * FRO..t_achats..." />
-                <marker date="1427323583511" expanded="true" signature="24756:24780" placeholder="SELECT * FRO..t_factures..." />
-                <marker date="1427323583511" expanded="true" signature="25054:25082" placeholder="SELECT * FRO..t_fournisseurs..." />
-                <marker date="1427323583511" expanded="true" signature="25358:25387" placeholder="SELECT * FRO..t_recapitulatif..." />
-                <marker date="1427323583511" expanded="true" signature="25656:25683" placeholder="SELECT * FRO..t_types_users..." />
-                <marker date="1427323583511" expanded="true" signature="25936:25957" placeholder="SELECT * FRO..t_users..." />
-                <marker date="1427323583511" expanded="true" signature="26214:26358" placeholder="SELECT * FRO..t_historiques_syntheses..." />
-                <marker date="1427323583511" expanded="true" signature="26637:26786" placeholder="SELECT * FRO..t_historiques_syntheses..." />
-                <marker date="1427323583511" expanded="true" signature="27081:27243" placeholder="SELECT * FRO..t_historiques_syntheses..." />
-                <marker date="1427323583511" expanded="true" signature="27958:28090" placeholder="SELECT * FRO..t_historiques_factures..." />
-                <marker date="1427323583511" expanded="true" signature="28374:28529" placeholder="SELECT * FRO..t_produits_factures..." />
-                <marker date="1427323583511" expanded="true" signature="28808:28958" placeholder="SELECT * FRO..t_produits_factures..." />
-                <marker date="1427323583511" expanded="true" signature="29294:29447" placeholder="SELECT * FRO..t_produits_operations..." />
-                <marker date="1427323583511" expanded="true" signature="29717:29778" placeholder="SELECT idt_p..t_produits..." />
-                <marker date="1427323583511" expanded="true" signature="30048:30107" placeholder="SELECT prix_..t_produits..." />
-                <marker date="1427323583511" expanded="true" signature="30405:30484" placeholder="SELECT SUM(p..t_produits_factures..." />
-                <marker date="1427323583511" expanded="true" signature="30751:30801" placeholder="SELECT * FRO..t_produits..." />
-                <marker date="1427323583511" expanded="true" signature="31074:31129" placeholder="SELECT COUNT..t_produits_factures..." />
-                <marker date="1427323583511" expanded="true" signature="31403:31527" placeholder="SELECT * FRO..t_achats..." />
-                <marker date="1427323583511" expanded="true" signature="31847:31921" placeholder="SELECT MAX( ..t_historiques_syntheses..." />
-                <marker date="1427323583511" expanded="true" signature="32226:32290" placeholder="SELECT MAX( ..t_groupes_factures..." />
-                <marker date="1427323583511" expanded="true" signature="32608:32680" placeholder="SELECT MAX( ..t_historiques_factures..." />
-                <marker date="1427323583511" expanded="true" signature="32969:33210" placeholder="SELECT tu.no..t_types_users..." />
-                <marker date="1427323583511" expanded="true" signature="33489:33517" placeholder="SELECT * FRO..t_users..." />
-                <marker date="1427323583511" expanded="true" signature="33815:34067" placeholder="SELECT COUNT..t_fournisseurs..." />
-                <marker date="1427323583511" expanded="true" signature="34389:34617" placeholder="SELECT COUNT..t_fournisseurs..." />
-                <marker date="1427323583511" expanded="true" signature="34900:34994" placeholder="SELECT * FRO..t_historiques_syntheses..." />
-                <marker date="1427323583511" expanded="true" signature="35430:35672" placeholder="SELECT * FRO..t_produits..." />
-                <marker date="1427323583511" expanded="true" signature="35981:36278" placeholder="SELECT p.idt..t_produits..." />
-                <marker date="1427323583511" expanded="true" signature="36594:36730" placeholder="SELECT * FRO..t_users..." />
-                <marker date="1427323583511" expanded="true" signature="37016:37079" placeholder="SELECT * FRO..t_achats..." />
-                <marker date="1427323583511" expanded="true" signature="37341:37465" placeholder="SELECT * FRO..t_historiques_factures..." />
-                <marker date="1427323583511" expanded="true" signature="37788:37928" placeholder="SELECT * FRO..t_historiques_achats..." />
-                <marker date="1427323583511" expanded="true" signature="38257:38511" placeholder="SELECT SUM(h..t_historiques_achats..." />
-                <marker date="1427323583511" expanded="true" signature="38843:39240" placeholder="SELECT SUM(h..t_historiques_achats..." />
-                <marker date="1427323583511" expanded="true" signature="39562:39923" placeholder="SELECT SUM(h..t_achats..." />
-                <marker date="1427323583511" expanded="true" signature="40174:40214" placeholder="SELECT * FRO..t_groupes_factures..." />
-                <marker date="1427323583511" expanded="true" signature="40536:40694" placeholder="SELECT * FRO..t_produits_operations..." />
-                <marker date="1427323583511" expanded="true" signature="41059:41192" placeholder="SELECT * FRO..t_produits_operations..." />
-                <marker date="1427323583511" expanded="true" signature="41579:41685" placeholder="SELECT * FRO..t_produits_operations..." />
-                <marker date="1427323583511" expanded="true" signature="41579:41771" placeholder="SELECT * FRO..t_produits_operations..." />
-                <marker date="1427323583511" expanded="true" signature="42166:42173" placeholder="SELECT SUM(p..t_produits_factures..." />
-                <marker date="1427323583511" expanded="true" signature="42166:42356" placeholder="SELECT * FRO..t_produits_factures..." />
-                <marker date="1427323583511" expanded="true" signature="42676:42699" placeholder="SELECT * FRO..t_journal..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -243,57 +94,57 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/ajax/popups/recapitulatif_inventaire.php" />
-        <option value="$PROJECT_DIR$/ajax/popups/edit_produit_inventaire.php" />
-        <option value="$PROJECT_DIR$/ajax/popups/consult_recapitulatif.php" />
-        <option value="$PROJECT_DIR$/ajax/popups/consult_produit.php" />
-        <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduitsForInventaire.php" />
-        <option value="$PROJECT_DIR$/about.php" />
-        <option value="$PROJECT_DIR$/contact.php" />
-        <option value="$PROJECT_DIR$/ajax/popups/edit_compte_utilisateur.php" />
-        <option value="$PROJECT_DIR$/ajax/popups/edit_produit.php" />
-        <option value="$PROJECT_DIR$/ajax/popups/edit_type_user.php" />
-        <option value="$PROJECT_DIR$/ajax/Serializer/types_users.php" />
-        <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauFactures.php" />
-        <option value="$PROJECT_DIR$/include/function.php" />
-        <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_journal/journal.tpl" />
-        <option value="$PROJECT_DIR$/ajax/Serializer/operation.php" />
-        <option value="$PROJECT_DIR$/ajax/popups/edit_produit_facture.php" />
-        <option value="$PROJECT_DIR$/ajax/Serializer/edit_fournisseur.php" />
-        <option value="$PROJECT_DIR$/ajax/popups/edit_operation.php" />
-        <option value="$PROJECT_DIR$/assets/js/autocomplete.js" />
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/css/patterns.css" />
         <option value="$PROJECT_DIR$/ajax/Serializer/compte_utilisateur.php" />
-        <option value="$PROJECT_DIR$/ajax/populate.php" />
-        <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_produits/produits.tpl" />
-        <option value="$PROJECT_DIR$/templates/administration/gestion_users/password_oublie.tpl" />
         <option value="$PROJECT_DIR$/ajax/infos/administration/GetTableauComptesUtilisateurs.php" />
         <option value="$PROJECT_DIR$/ajax/infos/administration/GetTableauComptesUtilisateursForPassword.php" />
         <option value="$PROJECT_DIR$/ajax/infos/administration/GetTableauTypesUtilisateurs.php" />
-        <option value="$PROJECT_DIR$/templates/administration/gestion_users/types_comptes_utilisateurs.tpl" />
-        <option value="$PROJECT_DIR$/templates/administration/gestion_users/comptes_utilisateurs.tpl" />
         <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduits.php" />
         <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduitsFacture.php" />
         <option value="$PROJECT_DIR$/ajax/Serializer/edit_facture.php" />
         <option value="$PROJECT_DIR$/ajax/Serializer/produits_facture.php" />
         <option value="$PROJECT_DIR$/css/styles.css" />
-        <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_fournisseurs/fournisseurs.tpl" />
         <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauFournisseurs.php" />
         <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_journal/operations_journal.tpl" />
-        <option value="$PROJECT_DIR$/templates/administration_magasin/main.tpl" />
-        <option value="$PROJECT_DIR$/templates/common/header.tpl" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduitsOperation.php" />
-        <option value="$PROJECT_DIR$/administration_magasin.php" />
         <option value="$PROJECT_DIR$/delete.php" />
         <option value="$PROJECT_DIR$/ajax/serializer.php" />
-        <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_factures/edit_facture.tpl" />
         <option value="$PROJECT_DIR$/ajax/Serializer/edit_journal.php" />
-        <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_journal/edit_operations_journal.tpl" />
-        <option value="$PROJECT_DIR$/include/ClassDB.php" />
         <option value="$PROJECT_DIR$/ajax/Serializer/operations_journal.php" />
+        <option value="$PROJECT_DIR$/ajax/populate.php" />
+        <option value="$PROJECT_DIR$/ajax/Serializer/recapitulatif_inventaire.php" />
+        <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/recapitulatif_inventaire.tpl" />
+        <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/generate_synthese.tpl" />
+        <option value="$PROJECT_DIR$/templates/historiques/historiques_syntheses/historiques_syntheses.tpl" />
+        <option value="$PROJECT_DIR$/templates/historiques/statistiques/statistiques.tpl" />
+        <option value="$PROJECT_DIR$/templates/historiques/main.tpl" />
+        <option value="$PROJECT_DIR$/css/buttons.css" />
+        <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauHistoriquesFactures.php" />
+        <option value="$PROJECT_DIR$/include/function.php" />
+        <option value="$PROJECT_DIR$/templates/historiques/historiques_factures/historiques_factures.tpl" />
+        <option value="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesMoisAnnee.php" />
+        <option value="$PROJECT_DIR$/historiques.php" />
+        <option value="$PROJECT_DIR$/include/ClassDB.php" />
+        <option value="$PROJECT_DIR$/templates/historiques/historiques_factures/factures_annee.tpl" />
+        <option value="$PROJECT_DIR$/templates/historiques/historiques_factures/factures_mois.tpl" />
+        <option value="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFactures.php" />
+        <option value="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesAnnee.php" />
+        <option value="$PROJECT_DIR$/templates/administration/gestion_users/comptes_utilisateurs.tpl" />
+        <option value="$PROJECT_DIR$/templates/administration/gestion_users/password_oublie.tpl" />
+        <option value="$PROJECT_DIR$/templates/administration/gestion_users/types_comptes_utilisateurs.tpl" />
+        <option value="$PROJECT_DIR$/templates/administration/main.tpl" />
+        <option value="$PROJECT_DIR$/templates/administration_magasin/main.tpl" />
+        <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_produits/produits.tpl" />
+        <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_factures/factures.tpl" />
+        <option value="$PROJECT_DIR$/templates/common/header.tpl" />
+        <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_fournisseurs/fournisseurs.tpl" />
+        <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_factures/edit_facture.tpl" />
+        <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_journal/edit_operations_journal.tpl" />
+        <option value="$PROJECT_DIR$/administration_magasin.php" />
+        <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/inventaire.tpl" />
       </list>
     </option>
   </component>
@@ -372,244 +223,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administration_magasin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administration_magasin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gestion_produits" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administration_magasin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gestion_journal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administration_magasin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gestion_fournisseurs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administration_magasin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gestion_factures" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="include" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ajax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ajax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Serializer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ajax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="infos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ajax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="infos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administration_magasin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -622,11 +235,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\nkedon\ajax\Serializer" />
-      <recent name="C:\wamp\www\nkedon\templates\administration_magasin\gestion_journal" />
-      <recent name="C:\wamp\www\nkedon\ajax" />
-      <recent name="C:\wamp\www\nkedon\assets\js" />
-      <recent name="C:\wamp\www\nkedon\css" />
+      <recent name="C:\wamp\www\nkedon\ajax\infos\historiques" />
+      <recent name="C:\wamp\www\nkedon\templates\historiques\historiques_factures" />
+      <recent name="C:\wamp\www\nkedon\templates\historiques" />
+      <recent name="C:\wamp\www\nkedon\templates\historiques\historiques_syntheses" />
+      <recent name="C:\wamp\www\nkedon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp\www\nkedon\css" />
@@ -708,7 +321,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427301342586</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add description file">
+      <created>1427324224251</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1427324224251</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -723,7 +342,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18671875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.190625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -782,392 +401,12 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/js/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/autocomplete.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1857" max-vertical-offset="2684">
-          <caret line="113" column="13" selection-start-line="113" selection-start-column="13" selection-end-line="113" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/popups/edit_operation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="3190">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0728643" vertical-offset="0" max-vertical-offset="2090">
-          <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/patterns.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
-          <caret line="12" column="82" selection-start-line="12" selection-start-column="82" selection-end-line="12" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/popups/edit_type_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.12820514" vertical-offset="1029" max-vertical-offset="2640">
-          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/popups/edit_compte_utilisateur_password.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34920636" vertical-offset="440" max-vertical-offset="3366">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="78" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/Serializer/password_oublie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8058608" vertical-offset="0" max-vertical-offset="1100">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-          <folding>
-            <marker date="1426526064525" expanded="true" signature="-1:-1" placeholder="UPDATE t_use..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/popups/edit_produit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-56.225807" vertical-offset="171" max-vertical-offset="3322">
-          <caret line="87" column="7" selection-start-line="24" selection-start-column="0" selection-end-line="87" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/populate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.387096" vertical-offset="0" max-vertical-offset="1078">
-          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-          <folding>
-            <marker date="1427271925011" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_types_users..." />
-            <marker date="1427271925011" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/popups/edit_produit_facture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.45054945" vertical-offset="2459" max-vertical-offset="3718">
-          <caret line="95" column="9" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/administration/gestion_users/password_oublie.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5301508" vertical-offset="458" max-vertical-offset="4378">
-          <caret line="40" column="57" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/infos/administration/GetTableauComptesUtilisateurs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53724056" vertical-offset="506" max-vertical-offset="1980">
-          <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/infos/administration/GetTableauComptesUtilisateursForPassword.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26862028" vertical-offset="330" max-vertical-offset="1694">
-          <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/administration/gestion_users/types_comptes_utilisateurs.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5641026" vertical-offset="286" max-vertical-offset="4092">
-          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/infos/administration/GetTableauTypesUtilisateurs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46275946" vertical-offset="149" max-vertical-offset="1452">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/administration/gestion_users/comptes_utilisateurs.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4029304" vertical-offset="2772" max-vertical-offset="6952">
-          <caret line="141" column="54" selection-start-line="141" selection-start-column="54" selection-end-line="141" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/Serializer/compte_utilisateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-86.58064" vertical-offset="0" max-vertical-offset="3234">
-          <caret line="122" column="65" selection-start-line="122" selection-start-column="65" selection-end-line="122" selection-end-column="65" />
-          <folding>
-            <marker date="1427213529256" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1427213529256" expanded="true" signature="-1:-1" placeholder="UPDATE t_use..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/administration.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5344828" vertical-offset="28" max-vertical-offset="6424">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/form.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56157637" vertical-offset="28" max-vertical-offset="1122">
-          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/impression.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.543179" vertical-offset="28" max-vertical-offset="3190">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/popup.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.035043806" vertical-offset="28" max-vertical-offset="1144">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60826033" vertical-offset="13352" max-vertical-offset="37950">
-          <caret line="629" column="104" selection-start-line="629" selection-start-column="104" selection-end-line="629" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/Serializer/produits_facture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42979243" vertical-offset="704" max-vertical-offset="3740">
-          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
-          <folding>
-            <marker date="1427298518223" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1427298518223" expanded="true" signature="-1:-1" placeholder="UPDATE t_pro..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_factures/factures.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5579976" vertical-offset="0" max-vertical-offset="1738">
-          <caret line="58" column="120" selection-start-line="58" selection-start-column="110" selection-end-line="58" selection-end-column="120" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/popups/edit_fournisseur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.2580647" vertical-offset="374" max-vertical-offset="3278">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="86" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/popups/edit_compte_utilisateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.7667887" vertical-offset="0" max-vertical-offset="5060">
-          <caret line="103" column="13" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_produits/produits.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.612904" vertical-offset="330" max-vertical-offset="4664">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="38" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduits.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.903226" vertical-offset="392" max-vertical-offset="2310">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="42" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/Serializer/edit_fournisseur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72527474" vertical-offset="242" max-vertical-offset="2970">
-          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
-          <folding>
-            <marker date="1426693745218" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1426693745218" expanded="true" signature="-1:-1" placeholder="UPDATE t_fou..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_fournisseurs/fournisseurs.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7789988" vertical-offset="3366" max-vertical-offset="4642">
-          <caret line="182" column="87" selection-start-line="182" selection-start-column="87" selection-end-line="182" selection-end-column="87" />
-          <folding>
-            <element signature="e#2989#3067#0#HTML" expanded="true" />
-            <element signature="e#3275#3295#0#HTML" expanded="true" />
-            <element signature="e#3508#3528#0#HTML" expanded="true" />
-            <element signature="e#3564#3589#0#HTML" expanded="true" />
-            <element signature="e#4082#4141#0#HTML" expanded="true" />
-            <element signature="e#4221#4280#0#HTML" expanded="true" />
-            <element signature="e#4421#4441#0#HTML" expanded="true" />
-            <element signature="e#4550#4571#0#HTML" expanded="true" />
-            <element signature="e#4636#4699#0#HTML" expanded="true" />
-            <element signature="e#4802#4823#0#HTML" expanded="true" />
-            <element signature="e#4840#4860#0#HTML" expanded="true" />
-            <element signature="e#5102#5124#0#HTML" expanded="true" />
-            <element signature="e#5752#5773#0#HTML" expanded="true" />
-            <element signature="e#6085#6106#0#HTML" expanded="true" />
-            <element signature="e#6419#6440#0#HTML" expanded="true" />
-            <element signature="e#6943#6968#0#HTML" expanded="true" />
-            <element signature="e#6985#7023#0#HTML" expanded="true" />
-            <element signature="e#7106#7168#0#HTML" expanded="true" />
-            <element signature="e#7368#7392#0#HTML" expanded="true" />
-            <element signature="e#7567#7591#0#HTML" expanded="true" />
-            <element signature="e#7720#7772#0#HTML" expanded="true" />
-            <element signature="e#7840#7860#0#HTML" expanded="true" />
-            <element signature="e#7904#7925#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/main.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5970696" vertical-offset="237" max-vertical-offset="1122">
-          <caret line="33" column="132" selection-start-line="33" selection-start-column="109" selection-end-line="33" selection-end-column="132" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/common/header.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16605617" vertical-offset="16672" max-vertical-offset="18062">
-          <caret line="769" column="109" selection-start-line="769" selection-start-column="109" selection-end-line="769" selection-end-column="109" />
-          <folding>
-            <marker date="1427302977035" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1427302977035" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1427302977035" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1427302977035" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauFournisseurs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.096774" vertical-offset="171" max-vertical-offset="1892">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="28" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduitsFacture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5967337" vertical-offset="1087" max-vertical-offset="1914">
-          <caret line="71" column="430" selection-start-line="71" selection-start-column="430" selection-end-line="71" selection-end-column="430" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduitsOperation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.032258" vertical-offset="810" max-vertical-offset="1738">
-          <caret line="62" column="131" selection-start-line="62" selection-start-column="131" selection-end-line="62" selection-end-column="131" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/delete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8618091" vertical-offset="4022" max-vertical-offset="5280">
-          <caret line="214" column="103" selection-start-line="214" selection-start-column="103" selection-end-line="214" selection-end-column="103" />
-          <folding>
-            <marker date="1427318646287" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427318646287" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427318646287" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427318646287" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427318646287" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427318646287" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427318646287" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427318646287" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427318646287" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427318646287" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427318646287" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/Serializer/edit_facture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.774194" vertical-offset="132" max-vertical-offset="5830">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="23" />
-          <folding>
-            <marker date="1427298257540" expanded="true" signature="1802:2112" placeholder="INSERT INTO ..." />
-            <marker date="1427298257540" expanded="true" signature="2460:2742" placeholder="INSERT INTO ..." />
-            <marker date="1427298257540" expanded="true" signature="2928:2959" placeholder="DELETE FROM ..." />
-            <marker date="1427298257540" expanded="true" signature="4448:4735" placeholder="UPDATE t_fac..." />
-            <marker date="1427298257540" expanded="true" signature="4790:4843" placeholder="DELETE FROM ..." />
-            <marker date="1427298257540" expanded="true" signature="5159:5453" placeholder="INSERT INTO ..." />
-            <marker date="1427298257540" expanded="true" signature="5654:5685" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ajax/Serializer/inventaire_produit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1426526064519" expanded="true" signature="-1:-1" placeholder="UPDATE t_pro..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/Serializer/recapitulatif_inventaire.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.3241205" vertical-offset="5034" max-vertical-offset="5830">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1426526064534" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1426526064534" expanded="true" signature="-1:-1" placeholder="ALTER TABLE t_recapitulatif..." />
-            <marker date="1426526064534" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1426526064534" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -1180,167 +419,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.338983" vertical-offset="12086" max-vertical-offset="20416">
-          <caret line="573" column="16" selection-start-line="573" selection-start-column="13" selection-end-line="573" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_factures/edit_facture.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3040201" vertical-offset="6864" max-vertical-offset="9944">
-          <caret line="323" column="146" selection-start-line="323" selection-start-column="146" selection-end-line="323" selection-end-column="146" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ajax/Serializer/edit_journal.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.870968" vertical-offset="792" max-vertical-offset="5192">
           <caret line="64" column="47" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
           <folding>
-            <marker date="1427322275804" expanded="true" signature="1259:1409" placeholder="INSERT INTO ..." />
-            <marker date="1427322275804" expanded="true" signature="1710:1948" placeholder="INSERT INTO ..." />
-            <marker date="1427322275804" expanded="true" signature="2162:2195" placeholder="DELETE FROM ..." />
-            <marker date="1427322275804" expanded="true" signature="3527:3814" placeholder="UPDATE t_fac..." />
-            <marker date="1427322275804" expanded="true" signature="3869:3922" placeholder="DELETE FROM ..." />
-            <marker date="1427322275804" expanded="true" signature="4238:4532" placeholder="INSERT INTO ..." />
-            <marker date="1427322275804" expanded="true" signature="4733:4764" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administration_magasin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.870968" vertical-offset="1140" max-vertical-offset="5610">
-          <caret line="77" column="56" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="56" />
-          <folding>
-            <marker date="1427316487399" expanded="true" signature="3617:3648" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_journal/edit_operations_journal.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.774194" vertical-offset="2680" max-vertical-offset="7766">
-          <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-          <folding>
-            <element signature="e#11432#11467#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/ClassDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.440678" vertical-offset="34262" max-vertical-offset="36036">
-          <caret line="1598" column="34" selection-start-line="1598" selection-start-column="34" selection-end-line="1598" selection-end-column="34" />
-          <folding>
-            <marker date="1427323583511" expanded="true" signature="5271:5613" placeholder="..." />
-            <marker date="1427323583511" expanded="true" signature="5283:5296" placeholder="..." />
-            <marker date="1427323583511" expanded="true" signature="5308:5600" placeholder="..." />
-            <marker date="1427323583511" expanded="true" signature="6034:6319" placeholder="..." />
-            <marker date="1427323583511" expanded="true" signature="6045:6057" placeholder="..." />
-            <marker date="1427323583511" expanded="true" signature="6068:6307" placeholder="..." />
-            <marker date="1427323583511" expanded="true" signature="6769:6881" placeholder="SELECT COUNT..t_users..." />
-            <marker date="1427323583511" expanded="true" signature="7559:7587" placeholder="SELECT * FRO..t_users..." />
-            <marker date="1427323583511" expanded="true" signature="7907:7959" placeholder="SELECT idt_u..t_users..." />
-            <marker date="1427323583511" expanded="true" signature="8273:8314" placeholder="SELECT COUNT..t_users..." />
-            <marker date="1427323583511" expanded="true" signature="8616:8716" placeholder="SELECT * FRO..t_users..." />
-            <marker date="1427323583511" expanded="true" signature="9031:9196" placeholder="SELECT * FRO..t_users..." />
-            <marker date="1427323583511" expanded="true" signature="9496:9620" placeholder="SELECT * FRO..t_users..." />
-            <marker date="1427323583511" expanded="true" signature="9936:9971" placeholder="SELECT * FRO..t_types_users..." />
-            <marker date="1427323583511" expanded="true" signature="10322:10419" placeholder="SELECT * FRO..t_types_users..." />
-            <marker date="1427323583511" expanded="true" signature="10716:10764" placeholder="SELECT COUNT..t_types_users..." />
-            <marker date="1427323583511" expanded="true" signature="11067:11122" placeholder="SELECT COUNT..t_produits_factures..." />
-            <marker date="1427323583511" expanded="true" signature="11465:11524" placeholder="SELECT COUNT..t_produits_operations..." />
-            <marker date="1427323583511" expanded="true" signature="11855:11911" placeholder="SELECT COUNT..t_recapitulatif..." />
-            <marker date="1427323583511" expanded="true" signature="12261:12313" placeholder="SELECT * FRO..t_types_users..." />
-            <marker date="1427323583511" expanded="true" signature="12594:12640" placeholder="SELECT COUNT..t_produits..." />
-            <marker date="1427323583511" expanded="true" signature="12945:12999" placeholder="SELECT COUNT..t_fournisseurs..." />
-            <marker date="1427323583511" expanded="true" signature="13364:13423" placeholder="SELECT COUNT..t_produits_operations..." />
-            <marker date="1427323583511" expanded="true" signature="13746:13792" placeholder="SELECT COUNT..t_factures..." />
-            <marker date="1427323583511" expanded="true" signature="14102:14168" placeholder="SELECT COUNT..t_historiques_syntheses..." />
-            <marker date="1427323583511" expanded="true" signature="14486:14550" placeholder="SELECT COUNT..t_historiques_factures..." />
-            <marker date="1427323583511" expanded="true" signature="14898:14991" placeholder="SELECT COUNT..t_historiques_factures..." />
-            <marker date="1427323583511" expanded="true" signature="15301:15363" placeholder="SELECT COUNT..t_groupes_factures..." />
-            <marker date="1427323583511" expanded="true" signature="15664:15783" placeholder="SELECT COUNT..t_historiques_factures..." />
-            <marker date="1427323583511" expanded="true" signature="16066:16090" placeholder="SELECT * FRO..t_produits..." />
-            <marker date="1427323583511" expanded="true" signature="16401:16664" placeholder="SELECT p.idt..t_produits..." />
-            <marker date="1427323583511" expanded="true" signature="16951:17058" placeholder="SELECT * FRO..t_produits..." />
-            <marker date="1427323583511" expanded="true" signature="17318:17464" placeholder="SELECT * FRO..t_factures..." />
-            <marker date="1427323583511" expanded="true" signature="17750:17844" placeholder="SELECT * FRO..t_recapitulatif..." />
-            <marker date="1427323583511" expanded="true" signature="18078:18346" placeholder="SELECT p.nom..t_produits..." />
-            <marker date="1427323583511" expanded="true" signature="18646:18900" placeholder="SELECT p.nom..t_produits..." />
-            <marker date="1427323583511" expanded="true" signature="19206:19425" placeholder="SELECT * FRO..t_achats..." />
-            <marker date="1427323583511" expanded="true" signature="19696:20075" placeholder="SELECT COUNT..t_fournisseurs..." />
-            <marker date="1427323583511" expanded="true" signature="20347:20380" placeholder="SELECT * FRO..t_produits_factures..." />
-            <marker date="1427323583511" expanded="true" signature="20710:20745" placeholder="SELECT * FRO..t_produits_operations..." />
-            <marker date="1427323583511" expanded="true" signature="21074:21183" placeholder="SELECT * FRO..t_produits..." />
-            <marker date="1427323583511" expanded="true" signature="21438:21584" placeholder="SELECT * FRO..t_factures..." />
-            <marker date="1427323583511" expanded="true" signature="21863:21909" placeholder="SELECT * FRO..t_produits..." />
-            <marker date="1427323583511" expanded="true" signature="22284:22334" placeholder="SELECT * FRO..t_produits..." />
-            <marker date="1427323583511" expanded="true" signature="22639:22693" placeholder="SELECT * FRO..t_fournisseurs..." />
-            <marker date="1427323583511" expanded="true" signature="22991:23081" placeholder="SELECT idt_p..t_produits..." />
-            <marker date="1427323583511" expanded="true" signature="23412:23481" placeholder="SELECT * FRO..t_achats..." />
-            <marker date="1427323583511" expanded="true" signature="23781:23933" placeholder="SELECT * FRO..." />
-            <marker date="1427323583511" expanded="true" signature="24192:24216" placeholder="SELECT * FRO..t_produits..." />
-            <marker date="1427323583511" expanded="true" signature="24472:24494" placeholder="SELECT * FRO..t_achats..." />
-            <marker date="1427323583511" expanded="true" signature="24756:24780" placeholder="SELECT * FRO..t_factures..." />
-            <marker date="1427323583511" expanded="true" signature="25054:25082" placeholder="SELECT * FRO..t_fournisseurs..." />
-            <marker date="1427323583511" expanded="true" signature="25358:25387" placeholder="SELECT * FRO..t_recapitulatif..." />
-            <marker date="1427323583511" expanded="true" signature="25656:25683" placeholder="SELECT * FRO..t_types_users..." />
-            <marker date="1427323583511" expanded="true" signature="25936:25957" placeholder="SELECT * FRO..t_users..." />
-            <marker date="1427323583511" expanded="true" signature="26214:26358" placeholder="SELECT * FRO..t_historiques_syntheses..." />
-            <marker date="1427323583511" expanded="true" signature="26637:26786" placeholder="SELECT * FRO..t_historiques_syntheses..." />
-            <marker date="1427323583511" expanded="true" signature="27081:27243" placeholder="SELECT * FRO..t_historiques_syntheses..." />
-            <marker date="1427323583511" expanded="true" signature="27958:28090" placeholder="SELECT * FRO..t_historiques_factures..." />
-            <marker date="1427323583511" expanded="true" signature="28374:28529" placeholder="SELECT * FRO..t_produits_factures..." />
-            <marker date="1427323583511" expanded="true" signature="28808:28958" placeholder="SELECT * FRO..t_produits_factures..." />
-            <marker date="1427323583511" expanded="true" signature="29294:29447" placeholder="SELECT * FRO..t_produits_operations..." />
-            <marker date="1427323583511" expanded="true" signature="29717:29778" placeholder="SELECT idt_p..t_produits..." />
-            <marker date="1427323583511" expanded="true" signature="30048:30107" placeholder="SELECT prix_..t_produits..." />
-            <marker date="1427323583511" expanded="true" signature="30405:30484" placeholder="SELECT SUM(p..t_produits_factures..." />
-            <marker date="1427323583511" expanded="true" signature="30751:30801" placeholder="SELECT * FRO..t_produits..." />
-            <marker date="1427323583511" expanded="true" signature="31074:31129" placeholder="SELECT COUNT..t_produits_factures..." />
-            <marker date="1427323583511" expanded="true" signature="31403:31527" placeholder="SELECT * FRO..t_achats..." />
-            <marker date="1427323583511" expanded="true" signature="31847:31921" placeholder="SELECT MAX( ..t_historiques_syntheses..." />
-            <marker date="1427323583511" expanded="true" signature="32226:32290" placeholder="SELECT MAX( ..t_groupes_factures..." />
-            <marker date="1427323583511" expanded="true" signature="32608:32680" placeholder="SELECT MAX( ..t_historiques_factures..." />
-            <marker date="1427323583511" expanded="true" signature="32969:33210" placeholder="SELECT tu.no..t_types_users..." />
-            <marker date="1427323583511" expanded="true" signature="33489:33517" placeholder="SELECT * FRO..t_users..." />
-            <marker date="1427323583511" expanded="true" signature="33815:34067" placeholder="SELECT COUNT..t_fournisseurs..." />
-            <marker date="1427323583511" expanded="true" signature="34389:34617" placeholder="SELECT COUNT..t_fournisseurs..." />
-            <marker date="1427323583511" expanded="true" signature="34900:34994" placeholder="SELECT * FRO..t_historiques_syntheses..." />
-            <marker date="1427323583511" expanded="true" signature="35430:35672" placeholder="SELECT * FRO..t_produits..." />
-            <marker date="1427323583511" expanded="true" signature="35981:36278" placeholder="SELECT p.idt..t_produits..." />
-            <marker date="1427323583511" expanded="true" signature="36594:36730" placeholder="SELECT * FRO..t_users..." />
-            <marker date="1427323583511" expanded="true" signature="37016:37079" placeholder="SELECT * FRO..t_achats..." />
-            <marker date="1427323583511" expanded="true" signature="37341:37465" placeholder="SELECT * FRO..t_historiques_factures..." />
-            <marker date="1427323583511" expanded="true" signature="37788:37928" placeholder="SELECT * FRO..t_historiques_achats..." />
-            <marker date="1427323583511" expanded="true" signature="38257:38511" placeholder="SELECT SUM(h..t_historiques_achats..." />
-            <marker date="1427323583511" expanded="true" signature="38843:39240" placeholder="SELECT SUM(h..t_historiques_achats..." />
-            <marker date="1427323583511" expanded="true" signature="39562:39923" placeholder="SELECT SUM(h..t_achats..." />
-            <marker date="1427323583511" expanded="true" signature="40174:40214" placeholder="SELECT * FRO..t_groupes_factures..." />
-            <marker date="1427323583511" expanded="true" signature="40536:40694" placeholder="SELECT * FRO..t_produits_operations..." />
-            <marker date="1427323583511" expanded="true" signature="41059:41192" placeholder="SELECT * FRO..t_produits_operations..." />
-            <marker date="1427323583511" expanded="true" signature="41579:41685" placeholder="SELECT * FRO..t_produits_operations..." />
-            <marker date="1427323583511" expanded="true" signature="41579:41771" placeholder="SELECT * FRO..t_produits_operations..." />
-            <marker date="1427323583511" expanded="true" signature="42166:42173" placeholder="SELECT SUM(p..t_produits_factures..." />
-            <marker date="1427323583511" expanded="true" signature="42166:42356" placeholder="SELECT * FRO..t_produits_factures..." />
-            <marker date="1427323583511" expanded="true" signature="42676:42699" placeholder="SELECT * FRO..t_journal..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/Serializer/edit_produit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9070352" vertical-offset="1518" max-vertical-offset="2838">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1426526064503" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1426526064503" expanded="true" signature="-1:-1" placeholder="UPDATE t_pro..." />
+            <marker date="1427322275804" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1427322275804" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1427322275804" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1427322275804" expanded="true" signature="-1:-1" placeholder="UPDATE t_fac..." />
+            <marker date="1427322275804" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1427322275804" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1427322275804" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
@@ -1370,9 +460,577 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ajax/serializer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.6324787" vertical-offset="0" max-vertical-offset="2596">
-          <caret line="106" column="42" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
+        <state vertical-scroll-proportion="-4.338983" vertical-offset="1592" max-vertical-offset="2596">
+          <caret line="92" column="67" selection-start-line="92" selection-start-column="43" selection-end-line="92" selection-end-column="67" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/popups/recapitulatif_inventaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.32258" vertical-offset="2306" max-vertical-offset="5016">
+          <caret line="125" column="7" selection-start-line="20" selection-start-column="0" selection-end-line="125" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/Serializer/recapitulatif_inventaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-38.322582" vertical-offset="2310" max-vertical-offset="5830">
+          <caret line="159" column="17" selection-start-line="159" selection-start-column="17" selection-end-line="159" selection-end-column="17" />
+          <folding>
+            <marker date="1427379231794" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1427379231794" expanded="true" signature="-1:-1" placeholder="ALTER TABLE t_recapitulatif..." />
+            <marker date="1427379231794" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1427379231794" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/recapitulatif_inventaire.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-38.451614" vertical-offset="106" max-vertical-offset="1760">
+          <caret line="59" column="128" selection-start-line="59" selection-start-column="110" selection-end-line="59" selection-end-column="128" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/generate_synthese.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.709677" vertical-offset="396" max-vertical-offset="1980">
+          <caret line="50" column="78" selection-start-line="50" selection-start-column="78" selection-end-line="50" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauGenerateSynthese.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.774194" vertical-offset="1056" max-vertical-offset="15554">
+          <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
+          <folding>
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="UPDATE t_pro..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="UPDATE t_gro..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1426526064827" expanded="true" signature="-1:-1" placeholder="UPDATE t_his..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/historiques/historiques_syntheses/historiques_syntheses.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.225806" vertical-offset="792" max-vertical-offset="1914">
+          <caret line="49" column="78" selection-start-line="49" selection-start-column="78" selection-end-line="49" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/historiques_factures.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.806452" vertical-offset="0" max-vertical-offset="1914">
+          <caret line="11" column="86" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/historiques/statistiques/statistiques.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4193548" vertical-offset="1188" max-vertical-offset="2024">
+          <caret line="52" column="45" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/groupes_factures.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-52.51613" vertical-offset="0" max-vertical-offset="1892">
+          <caret line="74" column="37" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/historiques/main.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.225806" vertical-offset="162" max-vertical-offset="1012">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="38" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/buttons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="9742" max-vertical-offset="10670">
+          <caret line="470" column="11" selection-start-line="470" selection-start-column="1" selection-end-line="470" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauFournisseurs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.967742" vertical-offset="237" max-vertical-offset="1892">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauHistoriquesFactures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.354838" vertical-offset="480" max-vertical-offset="1716">
+          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#1;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1427397093648" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427397093648" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427397093648" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427397093648" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427397093648" expanded="true" signature="-1:-1" placeholder="//..." />
+            <marker date="1427397093648" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1427397093648" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427397093648" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427397093648" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427397093648" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/historique_syntheses.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.677419" vertical-offset="0" max-vertical-offset="1914">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauHistoriqueSyntheses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4070">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduitsFacture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.9623115" vertical-offset="0" max-vertical-offset="1914">
+          <caret line="71" column="430" selection-start-line="71" selection-start-column="430" selection-end-line="71" selection-end-column="430" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauGroupesFactures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.516129" vertical-offset="84" max-vertical-offset="2464">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="150" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/Serializer/edit_produit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41457286" vertical-offset="1518" max-vertical-offset="2838">
+          <caret line="84" column="12" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="41" />
+          <folding>
+            <marker date="1426526064503" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1426526064503" expanded="true" signature="-1:-1" placeholder="UPDATE t_pro..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/populate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.161291" vertical-offset="392" max-vertical-offset="1408">
+          <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="18" />
+          <folding>
+            <marker date="1427378079612" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_types_users..." />
+            <marker date="1427378079612" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_users..." />
+            <marker date="1427378079612" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauDatePeremptionProduits.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.064516" vertical-offset="132" max-vertical-offset="2046">
+          <caret line="23" column="46" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="46" />
+          <folding>
+            <marker date="1426526064753" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064753" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064753" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1426526064753" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesAnnee.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.4838705" vertical-offset="924" max-vertical-offset="1782">
+          <caret line="61" column="56" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
+          <folding>
+            <marker date="1427409318703" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427409318703" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427409318703" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427409318703" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427409318703" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427409318703" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427409318703" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427409318703" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427409318703" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427409318703" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427409318703" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427409318703" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427409318703" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427409318703" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesMoisAnnee.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5979899" vertical-offset="1624" max-vertical-offset="3300">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="48" />
+          <folding>
+            <element signature="e#2419#2460#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/historiques/historiques_factures/factures_mois.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53724056" vertical-offset="1320" max-vertical-offset="2288">
+          <caret line="80" column="47" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
+          <folding>
+            <element signature="e#2574#2633#0#HTML" expanded="false" />
+            <element signature="e#2854#2874#0#HTML" expanded="false" />
+            <element signature="e#2950#2970#0#HTML" expanded="false" />
+            <element signature="e#3014#3035#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/historiques/historiques_factures/factures_annee.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6495727" vertical-offset="1162" max-vertical-offset="2222">
+          <caret line="77" column="72" selection-start-line="77" selection-start-column="72" selection-end-line="77" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/historiques.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6715507" vertical-offset="1188" max-vertical-offset="2750">
+          <caret line="79" column="63" selection-start-line="79" selection-start-column="52" selection-end-line="79" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3034134" vertical-offset="17294" max-vertical-offset="22506">
+          <caret line="797" column="30" selection-start-line="797" selection-start-column="13" selection-end-line="797" selection-end-column="30" />
+          <folding>
+            <element signature="e#6#216#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administration/gestion_users/password_oublie.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.741936" vertical-offset="1914" max-vertical-offset="4378">
+          <caret line="112" column="147" selection-start-line="112" selection-start-column="147" selection-end-line="112" selection-end-column="147" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFactures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.32258" vertical-offset="726" max-vertical-offset="1716">
+          <caret line="56" column="40" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#b#1;n#div#1;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administration/main.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9120603" vertical-offset="0" max-vertical-offset="990">
+          <caret line="33" column="217" selection-start-line="33" selection-start-column="217" selection-end-line="33" selection-end-column="217" />
+          <folding>
+            <element signature="e#1425#1466#0#HTML" expanded="true" />
+            <element signature="e#1706#1747#0#HTML" expanded="true" />
+            <element signature="e#2094#2135#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administration/gestion_users/types_comptes_utilisateurs.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6984127" vertical-offset="1914" max-vertical-offset="4092">
+          <caret line="113" column="138" selection-start-line="113" selection-start-column="138" selection-end-line="113" selection-end-column="138" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administration/gestion_users/comptes_utilisateurs.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6984127" vertical-offset="3652" max-vertical-offset="6842">
+          <caret line="192" column="147" selection-start-line="192" selection-start-column="147" selection-end-line="192" selection-end-column="147" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/historiques/historiques_factures/historiques_factures.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6776557" vertical-offset="831" max-vertical-offset="1914">
+          <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_produits/produits.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.129032" vertical-offset="2112" max-vertical-offset="4664">
+          <caret line="130" column="47" selection-start-line="130" selection-start-column="47" selection-end-line="130" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_factures/factures.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.67742" vertical-offset="888" max-vertical-offset="1738">
+          <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_fournisseurs/fournisseurs.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34920636" vertical-offset="2574" max-vertical-offset="4642">
+          <caret line="130" column="47" selection-start-line="130" selection-start-column="47" selection-end-line="130" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/common/header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51526254" vertical-offset="16342" max-vertical-offset="17952">
+          <caret line="767" column="155" selection-start-line="767" selection-start-column="155" selection-end-line="767" selection-end-column="155" />
+          <folding>
+            <marker date="1427410404561" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427410404561" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427410404561" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427410404561" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/main.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.419355" vertical-offset="84" max-vertical-offset="990">
+          <caret line="34" column="222" selection-start-line="34" selection-start-column="222" selection-end-line="34" selection-end-column="222" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/infos/administration/GetTableauTypesUtilisateurs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1452">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/Serializer/compte_utilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.645162" vertical-offset="0" max-vertical-offset="3234">
+          <caret line="15" column="106" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="106" />
+          <folding>
+            <marker date="1427213529256" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1427213529256" expanded="true" signature="-1:-1" placeholder="UPDATE t_use..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/infos/administration/GetTableauComptesUtilisateurs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4095477" vertical-offset="1122" max-vertical-offset="1980">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_factures/edit_facture.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.903226" vertical-offset="5940" max-vertical-offset="9944">
+          <caret line="291" column="69" selection-start-line="291" selection-start-column="69" selection-end-line="291" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/inventaire.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73015875" vertical-offset="3868" max-vertical-offset="6886">
+          <caret line="203" column="47" selection-start-line="203" selection-start-column="47" selection-end-line="203" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administration_magasin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7774968" vertical-offset="2465" max-vertical-offset="5720">
+          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding>
+            <marker date="1427411455540" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_journal/edit_operations_journal.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7032967" vertical-offset="4462" max-vertical-offset="7766">
+          <caret line="229" column="51" selection-start-line="229" selection-start-column="51" selection-end-line="229" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/ClassDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3324905" vertical-offset="36983" max-vertical-offset="38038">
+          <caret line="1693" column="51" selection-start-line="1693" selection-start-column="20" selection-end-line="1693" selection-end-column="51" />
+          <folding>
+            <element signature="e#7#593#0#PHP" expanded="true" />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_users..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_users..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT idt_u..t_users..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_users..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_users..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_users..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_users..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_types_users..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_types_users..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_types_users..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_produits_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_produits_operations..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_recapitulatif..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_types_users..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_produits..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_fournisseurs..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_produits_operations..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_historiques_syntheses..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_historiques_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_historiques_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_groupes_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_historiques_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT p.idt..t_produits..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_recapitulatif..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT p.nom..t_produits..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT p.nom..t_produits..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_achats..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_fournisseurs..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits_operations..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_fournisseurs..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT idt_p..t_produits..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_achats..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_achats..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_fournisseurs..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_recapitulatif..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_types_users..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_users..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_historiques_syntheses..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_historiques_syntheses..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_historiques_syntheses..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_historiques_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits_operations..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT idt_p..t_produits..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT prix_..t_produits..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT SUM(p..t_produits_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_produits_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_achats..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT MAX( ..t_historiques_syntheses..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT MAX( ..t_groupes_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT MAX( ..t_historiques_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT tu.no..t_types_users..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_users..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_fournisseurs..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..t_fournisseurs..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_historiques_syntheses..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT p.idt..t_produits..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_users..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_achats..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_historiques_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_achats..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT SUM(h..t_historiques_achats..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT SUM(h..t_historiques_achats..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT SUM(h..t_achats..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_groupes_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits_operations..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits_operations..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits_operations..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_produits_factures..." />
+            <marker date="1427409119728" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..t_journal..." />
+          </folding>
         </state>
       </provider>
     </entry>

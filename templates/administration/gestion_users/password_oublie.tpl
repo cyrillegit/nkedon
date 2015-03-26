@@ -96,7 +96,7 @@ $(document).ready (function ()
     <div class="bloc_title">
         <div class="alerte">&nbsp;</div><br/>
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
-            <div class="ico_title"><img src="css/images/ico_42x42/menu_fdr_0.png" /></div>
+            <div class="ico_title"><img src="css/images/ico_42x42/menu_consult.png" /></div>
             <div class="t_titre">
                 <div class="title"><strong>Modifier le mot de passe</strong> <strong style="color:black;">pour un compte utilisateur</strong></div>
             </div>
@@ -110,7 +110,7 @@ $(document).ready (function ()
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
                 <td>
-                Actuellement <font color="red"><b>{$nb_comptes_utilisateurs}</b></font> comptes utilisateurs enregistrés, dont <font color="red"><b>2</b></font> comptes utilisateurs administrateurs non visibles.
+                Actuellement <font color="black"><b>{$nb_comptes_utilisateurs}</b></font> comptes utilisateurs enregistrés, dont <font color="black"><b>2</b></font> comptes utilisateurs administrateurs non visibles.
                 </td>
             </tr>
         </table>

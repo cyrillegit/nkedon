@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-25 09:00:30
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-26 22:40:30
          compiled from ".\templates\administration\gestion_users\comptes_utilisateurs.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2892352ebac2dad3b68-18198693%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9b3ce6a7eca5167ccc9c8a47c2ae127787ad1a5f' => 
     array (
       0 => '.\\templates\\administration\\gestion_users\\comptes_utilisateurs.tpl',
-      1 => 1427274003,
+      1 => 1427409627,
       2 => 'file',
     ),
   ),
@@ -94,11 +94,8 @@ $(document).ready (function ()
     $("#editCompteUtilisateur").hide();
     RefreshTableComptesUtilisateurs ();
 
-    var i = 0;
-
     $("#addCompteUtilisateur").click (function ()
     {
-        i++;
         resetInputs();
         $("#password_label").show();
         $("#password").show();
@@ -107,10 +104,8 @@ $(document).ready (function ()
 
     $("#btnAnnuler").click (function ()
     {
-        i++;
         resetInputs();
         $("#editCompteUtilisateur").hide("slow");
-
     });
 
     $("#btnValider").click (function ()
@@ -207,7 +202,7 @@ $(document).ready (function ()
     <div class="bloc_title">
         <div class="alerte">&nbsp;</div><br/>
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
-            <div class="ico_title"><img src="css/images/ico_42x42/menu_fdr_0.png" /></div>
+            <div class="ico_title"><img src="css/images/ico_42x42/menu_consult.png" /></div>
             <div class="t_titre">
                 <div class="title"><strong>Ajouter / Modifier</strong> <strong style="color:black;">un compte utilisateur</strong></div>
             </div>
@@ -221,8 +216,8 @@ $(document).ready (function ()
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
                 <td>
-                Actuellement <font color="red"><b><?php echo $_smarty_tpl->tpl_vars['nb_comptes_utilisateurs']->value;?>
-</b></font> comptes utilisateurs enregistrés, dont <font color="red"><b>2</b></font>  comptes adminitrateurs non visibles.
+                Actuellement <font color="black"><b><?php echo $_smarty_tpl->tpl_vars['nb_comptes_utilisateurs']->value;?>
+</b></font> comptes utilisateurs enregistrés, dont <font color="black"><b>2</b></font>  comptes adminitrateurs non visibles.
                 </td>
                 <td>
                 <?php ob_start();?><?php echo $_SESSION['infoUser']['id_type_user']==1;?>

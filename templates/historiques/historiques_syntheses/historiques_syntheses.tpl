@@ -4,17 +4,17 @@
 /**
 	Rafraîchissement du tableau des chaînes de tri.
 */
-function RefreshTableGenerateSynthese(date_histo_synthese)
+function RefreshTableHistoriqueSynthese(date_histo_synthese)
 {
     var param = "date_histo_synthese="+date_histo_synthese;
 	var responseText = $.ajax({
 			type	: "POST",
-			url		: "ajax/infos/administration_magasin/GetTableauGenerateSynthese.php",
+			url		: "ajax/infos/administration_magasin/GetTableauHistoriqueSyntheses.php",
 			async	: false,
 			data	: param,
 			success	: function (msg){}
 	}).responseText;
-	$("#tableau_generate_synthese").empty ().html (responseText);
+	$("#tableau_histo_syntheses").empty ().html (responseText);
 
 	UpdateTSorter ();
 }
@@ -23,23 +23,22 @@ function RefreshTableGenerateSynthese(date_histo_synthese)
 */
 $(document).ready (function ()
 {
-	RefreshTableGenerateSynthese ("");
+	RefreshTableHistoriqueSynthese ("");
 
-   $('#histoSynthese').click(function() 
-    {
-        document.location.href="administration_magasin.php?sub=historiques_syntheses";
+    $("#date_histo_synthese").datepicker({
+        beforeShow:function(input) {
+            $(input).css({
+                "position": "relative",
+                "z-index": 999999
+            });
+        }
     });
-//*
-    $(".links").each (function ()
+
+    $("#date_histo_synthese").change (function ()
     {
-        $(this).click (function ()
-        {
-            var filename = $(this).attr("filename");
-            alert("Bientot disponible");
-        //    document.location.href="ajax/download.php?filename="+filename;
-        });
+        var date_histo_synthese = $("#date_histo_synthese").val();
+        RefreshTableHistoriqueSynthese (date_histo_synthese);
     });
-    //*/
 });
 
 </script>
@@ -50,11 +49,11 @@ $(document).ready (function ()
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
             <div class="ico_title"><img src="css/images/ico_42x42/menu_consult.png" /></div>
             <div class="t_titre">
-                <div class="title"><strong>Génération</strong> <strong style="color:black;">de la synthèse</strong></div>
+                <div class="title"><strong>Historique</strong> <strong style="color:black;">des synthèses</strong></div>
             </div>
         </div>
     </div>
-    <div class="intro">Dans cet écran, vous avez la possibilité de générer la synthèse de l'inventaire.<br/><br/></div>
+    <div class="intro">Dans cet écran, vous avez la possibilité de visualiser l'historique des synthèses.<br/><br/></div>
     
     <div style="clear: both;"></div>
 
@@ -66,17 +65,15 @@ $(document).ready (function ()
                 </td>
 
                 <td>
-                {if $smarty.session.infoUser.id_type_user <= 5}
-                <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_valider" id="histoSynthese"></div></div>
-                <div style="margin-left:20px; margin-right: 20px; float: right;">Afficher l'historique des synthèses:&nbsp;</div>
-                {/if}
+                <div style="margin-left:20px; margin-right: 20px; float: right;">Afficher les historiques de syntése à partir de:  <input type="text" name="date_histo_synthese" id="date_histo_synthese" value=""/>&nbsp;</div>
+
                 </td>
             </tr>
         </table>
     </div>
     <br style="clear: both;" />
 
-    <div id="tableau_generate_synthese"></div>
+    <div id="tableau_histo_syntheses"></div>
 
     <div style="clear: both;">&nbsp;</div>
     <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='administration_magasin.php';"></div>

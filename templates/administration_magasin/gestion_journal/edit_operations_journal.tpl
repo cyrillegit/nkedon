@@ -227,7 +227,7 @@ $(document).ready (function ()
             <table width="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                     <td>
-                    Actuellement <font color="red"><b>{$nb_produits}</b></font> opérations enregistrées pour le journal.
+                    Actuellement <font color="black"><b>{$nb_operations}</b></font> opérations enregistrées pour le journal.
                     </td>
                     <td>
                     <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addOperation"></div></div>

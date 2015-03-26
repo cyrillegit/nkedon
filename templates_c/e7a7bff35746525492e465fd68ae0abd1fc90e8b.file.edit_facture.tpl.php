@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-25 22:10:14
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-26 22:51:56
          compiled from ".\templates\administration_magasin\gestion_factures\edit_facture.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2141652ebd4f06be6f3-26729779%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e7a7bff35746525492e465fd68ae0abd1fc90e8b' => 
     array (
       0 => '.\\templates\\administration_magasin\\gestion_factures\\edit_facture.tpl',
-      1 => 1427321407,
+      1 => 1427410238,
       2 => 'file',
     ),
   ),
@@ -324,7 +324,7 @@ $(document).ready (function ()
             <table width="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                     <td>
-                    Actuellement <font color="red"><b><?php echo $_smarty_tpl->tpl_vars['nb_produits']->value;?>
+                    Actuellement <font color="black"><b><?php echo $_smarty_tpl->tpl_vars['nb_produits']->value;?>
 </b></font> produits enregistrés dans la facture.
                     </td>
                     <td>

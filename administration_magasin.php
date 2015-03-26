@@ -79,7 +79,6 @@
             {
                 $nb_operations = $db->getNbOperationsInDB ();
                 if(!isset($nb_operations)) $nb_operations = 0;
-                $tpl_index->assign("nb_operations", $nb_operations);
 
                 $produits_operation = $db->getAllProduitsOperationsJournal();
                 $montant_operation = 0;
@@ -87,6 +86,7 @@
                     $montant_operation += $po["quantite_vendue"] * $po["prix_vente"];
                 }
 
+                $tpl_index->assign("nb_operations", $nb_operations);
                 $tpl_index->assign( "montant_operation", number_format( $montant_operation, 2, ',', ' ') );
 
                 $target = "gestion_journal/edit_operations_journal";
@@ -94,6 +94,7 @@
 			else if( $target == "edit_facture" )
 			{
 				$id_facture = $_GET["id_facture"];
+                $nb_produits = 0;
 				
 				if( $id_facture != 0 )
 				{
@@ -107,11 +108,13 @@
 
 					$produits_factures = $db->getAllProduitsOperationsFacture();
                     $montant_facture = 0;
+
                     foreach( $produits_factures as $pf ){
+                        $nb_produits++;
                         $montant_facture += $pf["quantite_achat"] * $pf["prix_achat"];
                     }
 
-					$tpl_index->assign( "numero_facture", $numero_facture );
+                    $tpl_index->assign( "numero_facture", $numero_facture );
 					$tpl_index->assign( "id_fournisseur", $id_fournisseur );
 					$tpl_index->assign( "nom_fournisseur", $nom_fournisseur );
 					$tpl_index->assign( "date_facture", $date_facture );
@@ -130,10 +133,12 @@
 					}
 				}
 
-
 				$fournisseurs = $db->getAllFournisseurs ();
+
+                $tpl_index->assign( "nb_produits", $nb_produits );
 				$tpl_index->assign( "id_facture", $id_facture );
 				$tpl_index->assign( "fournisseurs", $fournisseurs );
+
 				$target = "gestion_factures/edit_facture";
 			}
 			else if( $target == "inventaire" )

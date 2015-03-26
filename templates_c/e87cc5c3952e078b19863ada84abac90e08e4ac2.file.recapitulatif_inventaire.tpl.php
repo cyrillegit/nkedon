@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-12 21:16:49
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-26 14:44:17
          compiled from ".\templates\administration_magasin\gestion_magasin\recapitulatif_inventaire.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1768852ebec69712655-88900947%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e87cc5c3952e078b19863ada84abac90e08e4ac2' => 
     array (
       0 => '.\\templates\\administration_magasin\\gestion_magasin\\recapitulatif_inventaire.tpl',
-      1 => 1392238863,
+      1 => 1427381055,
       2 => 'file',
     ),
   ),
@@ -65,7 +65,7 @@ $(document).ready (function ()
     <div class="bloc_title">
         <div class="alerte">&nbsp;</div><br/>
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
-            <div class="ico_title"><img src="css/images/ico_42x42/menu_fdr_0.png" /></div>
+            <div class="ico_title"><img src="css/images/ico_42x42/menu_consult.png" /></div>
             <div class="t_titre">
                 <div class="title"><strong>Recapitulatifs</strong> <strong style="color:black;">des inventaires du magasin</strong></div>
             </div>

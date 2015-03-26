@@ -12,7 +12,7 @@ $(document).ready (function ()
 	<div class="bloc_title">
         <div class="alerte">&nbsp;</div><br/>
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
-			<div class="ico_title"><img src="css/images/ico_42x42/menu_fdr_0.png" /></div>
+			<div class="ico_title"><img src="css/images/ico_42x42/menu_consult.png" /></div>
             <div class="t_titre">
                 <div class="title"><strong>Paramétrage</strong> <strong style="color:black;">général du backoffice</strong></div>
             </div>
@@ -28,10 +28,10 @@ $(document).ready (function ()
         <div>
             <br />
             <ul class="my_account">
-                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration.php?sub=comptes_utilisateurs" style="color:white; list-style-image:     url(css/images/li_ul_my_account_old.png);"><div class="btn_add_contact"></div><div style="text-align: center">Ajouter / Modifer un compte utilisateur</div></a></li>
-                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration.php?sub=types_comptes_utilisateurs" style="color:white;"><div class="btn_users"></div><div>Ajouter / Modifier un profil utilisateur</div></a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration.php?sub=comptes_utilisateurs" style="color:white; list-style-image:     url(css/images/li_ul_my_account_old.png);"><div class="btn_add_contact"></div><div style="text-align: center; margin: 15px;">Ajouter / Modifer un compte utilisateur</div></a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration.php?sub=types_comptes_utilisateurs" style="color:white;"><div class="btn_users"></div><div style="text-align: center; margin: 15px;">Ajouter / Modifier un profil utilisateur</div></a></li>
                 {if {$smarty.session.infoUser.id_type_user eq 1} or {$smarty.session.infoUser.id_type_user eq 2}}
-                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration.php?sub=password_oublie" style="color:white;"><div class="btn_password"></div><div>Mot de passe oublié</div></a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration.php?sub=password_oublie" style="color:white;"><div class="btn_password"></div><div style="text-align: center; margin: 15px;">Mot de passe oublié</div></a></li>
                 {/if}
             </ul>
         </div>

@@ -2,6 +2,7 @@
 <chart caption="NKedon" subcaption="Nombre utilisateur par profil utilisateur" xAxisName="Types compte utilisateur" yAxisName="Nombre utilisateur" numberPrefix="" numberSuffix="" showValue="1">
  <set label="Inspecteur" value="1"/>
  <set label="Inventoriste" value="1"/>
- <set label="Caissier" value="2"/>
+ <set label="Caissier" value="1"/>
  <set label="Visiteur" value="0"/>
+ <set label="Visiteurs urgents" value="0"/>
 </chart>

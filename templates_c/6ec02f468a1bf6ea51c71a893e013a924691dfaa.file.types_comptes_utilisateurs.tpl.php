@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-25 08:41:40
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-26 22:42:14
          compiled from ".\templates\administration\gestion_users\types_comptes_utilisateurs.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:548052ebac3a82cfd2-94116775%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6ec02f468a1bf6ea51c71a893e013a924691dfaa' => 
     array (
       0 => '.\\templates\\administration\\gestion_users\\types_comptes_utilisateurs.tpl',
-      1 => 1427272899,
+      1 => 1427409721,
       2 => 'file',
     ),
   ),
@@ -123,7 +123,7 @@ $(document).ready (function ()
     <div class="bloc_title">
         <div class="alerte">&nbsp;</div><br/>
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
-            <div class="ico_title"><img src="css/images/ico_42x42/menu_fdr_0.png" /></div>
+            <div class="ico_title"><img src="css/images/ico_42x42/menu_consult.png" /></div>
             <div class="t_titre">
                 <div class="title"><strong>Ajouter / Modifier</strong> <strong style="color:black;">un profil utilisateur</strong></div>
             </div>
@@ -137,8 +137,8 @@ $(document).ready (function ()
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
                 <td>
-                Actuellement <font color="red"><b><?php echo $_smarty_tpl->tpl_vars['nb_types_users']->value;?>
-</b></font> profils utilisateurs enregistrés, dont <font color="red"><b>2</b></font> profils utilisateurs administrateurs non visibles .
+                Actuellement <font color="black"><b><?php echo $_smarty_tpl->tpl_vars['nb_types_users']->value;?>
+</b></font> profils utilisateurs enregistrés, dont <font color="black"><b>2</b></font> profils utilisateurs administrateurs non visibles .
                 </td>
                 <td>
                 <?php ob_start();?><?php echo $_SESSION['infoUser']['id_type_user']==1;?>

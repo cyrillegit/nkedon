@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-24 17:51:04
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-26 22:50:08
          compiled from ".\templates\administration_magasin\gestion_produits\produits.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1206552ebaf4c5b8346-00584196%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '79b691200654f1704fad2fb1ee7d8c71ab6ea40c' => 
     array (
       0 => '.\\templates\\administration_magasin\\gestion_produits\\produits.tpl',
-      1 => 1427219441,
+      1 => 1427410205,
       2 => 'file',
     ),
   ),
@@ -62,7 +62,7 @@ $(document).ready (function ()
 	$("#addProduit").click (function ()
 	{
         resetInputs();
-        $("#editProduit").slideToggle("slow");
+        $("#editProduit").show("slow");
 
 //		update_content ("ajax/popups/edit_produit.php", "popup", "id_produit=0");
 //		ShowPopupHeight (550);
@@ -71,7 +71,7 @@ $(document).ready (function ()
     $("#btnAnnuler").click (function ()
     {
         resetInputs();
-        $("#editProduit").slideToggle("slow");
+        $("#editProduit").hide("slow");
     });
 
     $("#btnValider").click (function ()
@@ -140,7 +140,7 @@ $(document).ready (function ()
     <div class="bloc_title">
         <div class="alerte">&nbsp;</div><br/>
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
-            <div class="ico_title"><img src="css/images/ico_42x42/menu_fdr_0.png" /></div>
+            <div class="ico_title"><img src="css/images/ico_42x42/menu_consult.png" /></div>
             <div class="t_titre">
                 <div class="title"><strong>Ajouter / Modifier</strong> <strong style="color:black;">un produit</strong></div>
             </div>
@@ -154,7 +154,7 @@ $(document).ready (function ()
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
                 <td>
-                Actuellement <font color="red"><b><?php echo $_smarty_tpl->tpl_vars['nb_produits']->value;?>
+                Actuellement <font color="black"><b><?php echo $_smarty_tpl->tpl_vars['nb_produits']->value;?>
 </b></font> produits enregistrés.
                 </td>
                 <td>

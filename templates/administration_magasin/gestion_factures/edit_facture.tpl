@@ -289,7 +289,7 @@ $(document).ready (function ()
             <table width="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                     <td>
-                    Actuellement <font color="red"><b>{$nb_produits}</b></font> produits enregistrés dans la facture.
+                    Actuellement <font color="black"><b>{$nb_produits}</b></font> produits enregistrés dans la facture.
                     </td>
                     <td>
                     <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addProduitFacture"></div></div>

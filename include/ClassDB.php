@@ -695,6 +695,30 @@
 			return $res;
 		}
 
+        /**
+         * Fonction getAllFacturesByAnnee
+         * -------------------
+         * Retourne les factures pr�sentes en base de donn�es pour une annee donnée
+         *
+         * @return array
+         */
+        public function getAllFacturesByAnnee ($annee)
+        {
+            if( $annee != "" ) {
+                $date_debut = $annee."-01-01";
+                $date_fin = $annee."-12-31";
+                $sql_where = "WHERE date_facture BETWEEN '$date_debut' AND '$date_fin'";
+            }else {
+                $sql_where = "";
+            }
+            $this->Sql = "SELECT *
+							FROM t_factures AS fa
+							".$sql_where."
+							ORDER BY fa.idt_factures";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
 		/**
 		 * Fonction getAllRecapitulatif
 		 * -------------------
@@ -1116,7 +1140,56 @@
 
 			$res = $this->FetchAllRows();
 			return $res;
-		}		
+		}
+
+        /**
+         * Fonction getAllFacturesByMoisAnnee
+         * -------------------
+         * Retourne les factures correspondant a un mois et une annee precise
+         *
+         * @return array
+         */
+        public function getAllFacturesByMoisAnnee( $mois, $annee )
+        {
+            if( $annee != "" ) {
+                $date_debut = $annee."-".$mois."-01";
+                $date_fin = $annee."-".$mois."-31";
+                $sql_where = "WHERE date_facture BETWEEN '$date_debut' AND '$date_fin'";
+            }else {
+                $sql_where = "";
+            }
+            $this->Sql = "SELECT *
+							FROM t_factures AS fa
+							JOIN t_fournisseurs AS f ON fa.id_fournisseur = f.idt_fournisseurs
+							".$sql_where."
+							ORDER BY fa.idt_factures";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getNbFacturesByMoisAnnee
+         * -------------------
+         * Retourne le nombre de  factures correspondant a un mois et une annee precise
+         *
+         * @return array
+         */
+        public function getNbFacturesByMoisAnnee( $mois, $annee )
+        {
+            if( $annee != "" ) {
+                $date_debut = $annee."-".$mois."-01";
+                $date_fin = $annee."-".$mois."-31";
+                $sql_where = "WHERE date_facture BETWEEN '$date_debut' AND '$date_fin'";
+            }else {
+                $sql_where = "";
+            }
+            $this->Sql = "SELECT COUNT(*) AS nb
+							FROM t_factures AS fa
+							".$sql_where."
+							ORDER BY fa.idt_factures";
+            $res = $this->FetchRow();
+            return $res ["nb"];
+        }
 
 		/**
 		 * Fonction getAllProduitsFacture
@@ -1488,9 +1561,9 @@
 		public function getAllHistoriquesAchatsByFacture ( $id )
 		{
 			$this->Sql = "SELECT *
-							FROM t_historiques_achats AS ha 
-							JOIN t_produits AS p ON ha.id_produit = p.idt_produits
-							WHERE ha.id_facture = $id";
+							FROM t_achats AS a
+							JOIN t_produits AS p ON a.id_produit = p.idt_produits
+							WHERE a.id_facture = $id";
 			$res = $this->FetchAllRows();
 			return $res;
 		}
