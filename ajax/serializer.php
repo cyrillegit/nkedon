@@ -90,9 +90,9 @@ else
 			{
 				include ("Serializer/inventaire_produit.php");
 			}
-			else if ($_POST ["target"] == "recapitulatif_inventaire")
+			else if ($_POST ["target"] == "inventaire")
 			{
-				include ("Serializer/recapitulatif_inventaire.php");
+				include ("Serializer/inventaire.php");
 			}
 			else if ($_POST ["target"] == "produits_facture")
 			{

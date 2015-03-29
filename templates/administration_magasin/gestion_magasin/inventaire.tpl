@@ -49,6 +49,7 @@ function resetInputs(){
     $("#fonds").val("");
     $("#capsules").val("");
     $("#recettes_percues").val("");
+    $("#commentaire").val("");
 
     fetchAllUsers();
 
@@ -60,26 +61,26 @@ function resetInputs(){
 */
 $(document).ready (function ()
 {
-    $("#editRecapitulatif").hide();
+    $("#editInventaire").hide();
     fetchAllUsers();
 	RefreshTableProduits ();
 
-	$("#addRecapitulatif").click (function ()
+	$("#addInventaire").click (function ()
 	{
         resetInputs();
-        $("#editRecapitulatif").show("slow");
-//		update_content ("ajax/popups/recapitulatif_inventaire.php", "popup", "id_recapitulatif=1");
+        $("#editInventaire").show("slow");
+//		update_content ("ajax/popups/inventaire.php", "popup", "id_recapitulatif=1");
 //		ShowPopupHeight (550);
 	});
 
-    $("#btnAnnulerRecapitulatif").click (function ()
+    $("#btnAnnulerInventaire").click (function ()
     {
         // On ferme la boîte de dialogue affichée juste avant.
         resetInputs();
-        $("#editRecapitulatif").hide("slow");
+        $("#editInventaire").hide("slow");
     });
 
-    $("#btnValiderRecapitulatif").click (function ()
+    $("#btnValiderInventaire").click (function ()
     {
         var ok = false;
         if ( $("#user_select").val () == "" )
@@ -152,7 +153,7 @@ $(document).ready (function ()
 
         if (ok)
         {
-            var param = $("#form_popup_recapitulatif").serialize ();
+            var param = $("#form_popup_inventaire").serialize ();
 
             var responseText = Serialize (param);
 
@@ -205,7 +206,7 @@ $(document).ready (function ()
                 </td>
                 <td>
                 {if $smarty.session.infoUser.id_type_user <= 5}
-                <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_valider" id="addRecapitulatif"></div></div>
+                <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_valider" id="addInventaire"></div></div>
                 <div style="margin-left:20px; margin-right: 20px; float: right;">Pour valider l'inventaire :&nbsp;</div>
                 {/if}
                 </td>
@@ -214,12 +215,12 @@ $(document).ready (function ()
     </div>
     <br style="clear: both;" />
 
-    <div id="editRecapitulatif" class="content">
+    <div id="editInventaire" class="content">
         <div class="TitrePopup">Récapitulatif <strong style="color:#1c9bd3">de l'invantaire</strong></div>
         <div class="subTitlePopup" style="color: #ffffff; text-decoration: none; font-size: 12px;">Veuillez saisir les informations du recapitulatif de l'inventaire en remplissant les champs obligatoires.</div>
         <br style="clear: both; " />
         <div style="width: 100%;">
-            <form name="form_popup_recapitulatif" id="form_popup_recapitulatif" method="post">
+            <form name="form_popup_inventaire" id="form_popup_inventaire" method="post">
                 <table width="100%">
                     <tr>
                         <td colspan="2">
@@ -252,15 +253,15 @@ $(document).ready (function ()
                                     <td>Dépenses diverses :<span class="champObligatoire">*</span></td>
                                     <td><input type="text" name="depenses_diverses" id="depenses_diverses" value=""/></td>
                                 </tr>
-                                <tr>
-                                    <td>Avaries :<span class="champObligatoire">*</span></td>
-                                    <td><input type="text" name="avaries" id="avaries" value=""/></td>
-                                </tr>
                             </table>
                         </td>
                         <!--PARTIE DROITE-->
                         <td>
                             <table>
+                                <tr>
+                                    <td>Avaries :<span class="champObligatoire">*</span></td>
+                                    <td><input type="text" name="avaries" id="avaries" value=""/></td>
+                                </tr>
                                 <tr>
                                     <td>Crédit client :<span class="champObligatoire">*</span></td>
                                     <td><input type="text" name="credit_client" id="credit_client" value=""/></td>
@@ -281,8 +282,14 @@ $(document).ready (function ()
                         </td>
                     </tr>
                 </table>
-                <input type="hidden" id="target" name="target" value="recapitulatif_inventaire" />
-                <input type="hidden" id="id_recapitulatif" name="id_recapitulatif" value="0" />
+                <table>
+                    <tr>
+                        <td>Commenatire :</td>
+                        <td><textarea name="commentaire" id="commentaire" cols="30" rows="10" style="height: 100px; width: 400px; margin-left: 40px;"></textarea></td>
+                    </tr>
+                </table>
+                <input type="hidden" id="target" name="target" value="inventaire" />
+                <input type="hidden" id="id_inventaire" name="id_inventaire" value="0" />
             </form>
         </div>
         <hr size="1" style="margin-top: 25px;" />
@@ -290,9 +297,9 @@ $(document).ready (function ()
         <div style="float: right; text-align: right; padding-bottom: 10px;">
             <table border="0" cellspacing="0" cellpadding="0" align="right">
                 <tr>
-                    <td><div id="btnAnnulerRecapitulatif"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
+                    <td><div id="btnAnnulerInventaire"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
                     <td>&nbsp;</td>
-                    <td><div id="btnValiderRecapitulatif"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOK" height="30" /></div></td>
+                    <td><div id="btnValiderInventaire"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOK" height="30" /></div></td>
                 </tr>
             </table>
         </div>

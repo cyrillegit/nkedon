@@ -474,17 +474,17 @@
         }
 
 		/**
-		 * Fonction getNbRecapitulatifInventaireInDB
+		 * Fonction getMaxIdInventaire
 		 * -------------------
-		 * Retourne le nombre de recapitulatif d'inventaire.
+		 * Retourne le dernier recapitulatif d'inventaire.
 		 *
 		 * @return int
 		 */
-		public function getNbRecapitulatifInventaireInDB ()
+		public function getMaxIdInventaire ()
 		{
-			$this->Sql = "SELECT COUNT(*) AS nb_recapitulatif FROM t_recapitulatif";
+			$this->Sql = "SELECT MAX(idt_inventaires) AS id_inventaire FROM t_inventaires";
 			$res = $this->FetchRow();
-			return $res ["nb_recapitulatif"];
+			return $res ["id_inventaire"];
 		}				
 
 		/**
@@ -720,17 +720,18 @@
         }
 
 		/**
-		 * Fonction getAllRecapitulatif
+		 * Fonction getRecapitulatifInventaire
 		 * -------------------
-		 * Retourne les recapituatifs d'inventaire pr�sents en base de donn�es
+		 * Retourne le recapituatif d'inventaire présents en base de données
 		 *
 		 * @return array
 		 */
-		public function getAllRecapitulatif()
+		public function getRecapitulatifInventaire( $id )
 		{
 			$this->Sql = "SELECT * 
-							FROM t_recapitulatif AS r
-							JOIN t_users AS u ON r.id_user = u.idt_users";
+							FROM t_inventaires AS i
+							JOIN t_users AS u ON i.id_user = u.idt_users
+							WHERE idt_inventaires = $id";
 			$res = $this->FetchRow();
 			return $res;
 		}
@@ -754,17 +755,19 @@
 		}		
 
 		/**
-		 * Fonction getAllAchatsVentesMois
+		 * Fonction getAllAchatsInventaire
 		 * -------------------
-		 * Retourne le total des achats et ventes du mois present en base de donn�es
+		 * Retourne le total des achats presents d'un inventaire en base de donn�es
 		 *
 		 * @return array
 		 */
-		public function getAllAchatsVentesMois()
+		public function getAllAchatsInventaire( $id )
 		{
 			$this->Sql = "SELECT p.nom_produit, p.idt_produits, p.stock_initial, SUM(a.quantite_achat) AS achat, p.stock_physique, p.prix_vente, p.prix_achat
 							FROM t_produits AS p
 							LEFT JOIN t_achats AS a ON p.idt_produits = a.id_produit
+							JOIN t_factures AS f ON a.id_facture = f.idt_factures
+							WHERE f.id_inventaire = $id
 							GROUP BY p.idt_produits";
 			$res = $this->FetchAllRows();
 			return $res;
@@ -1161,6 +1164,7 @@
             $this->Sql = "SELECT *
 							FROM t_factures AS fa
 							JOIN t_fournisseurs AS f ON fa.id_fournisseur = f.idt_fournisseurs
+							JOIN t_users AS u ON fa.id_user = u.idt_users
 							".$sql_where."
 							ORDER BY fa.idt_factures";
             $res = $this->FetchAllRows();
@@ -1551,6 +1555,7 @@
 			$res = $this->FetchAllRows();
 			return $res;
 		}
+
 		/**
 		 * Fonction getAllHistoriquesAchatsByFacture
 		 * -------------------
@@ -1716,7 +1721,97 @@
          */
         public function getAllJournal()
         {
-            $this->Sql = "SELECT * FROM t_journal";
+            $this->Sql = "SELECT * FROM t_journal ORDER BY idt_journal";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getAllJournalByAnnee
+         * -------------------
+         * Retourne les journaux présents en base de données pour une annee donnée
+         *
+         * @return array
+         */
+        public function getAllJournalByAnnee ($annee)
+        {
+            if( $annee != "" ) {
+                $date_debut = $annee."-01-01";
+                $date_fin = $annee."-12-31";
+                $sql_where = "WHERE date_journal BETWEEN '$date_debut' AND '$date_fin'";
+            }else {
+                $sql_where = "";
+            }
+            $this->Sql = "SELECT *
+                                FROM t_journal AS j
+                                ".$sql_where."
+                                ORDER BY j.idt_journal";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getNbJournalByMoisAnnee
+         * -------------------
+         * Retourne le nombre de journaux correspondant a un mois et une annee precise
+         *
+         * @return array
+         */
+        public function getNbJournalByMoisAnnee( $mois, $annee )
+        {
+            if( $annee != "" ) {
+                $date_debut = $annee."-".$mois."-01";
+                $date_fin = $annee."-".$mois."-31";
+                $sql_where = "WHERE date_journal BETWEEN '$date_debut' AND '$date_fin'";
+            }else {
+                $sql_where = "";
+            }
+            $this->Sql = "SELECT COUNT(*) AS nb
+                                FROM t_journal AS j
+                                ".$sql_where."
+                                ORDER BY j.idt_journal";
+            $res = $this->FetchRow();
+            return $res ["nb"];
+        }
+
+        /**
+         * Fonction getAllJournalByMoisAnnee
+         * -------------------
+         * Retourne les journaux correspondants a un mois et une annee precise
+         *
+         * @return array
+         */
+        public function getAllJournalByMoisAnnee( $mois, $annee )
+        {
+            if( $annee != "" ) {
+                $date_debut = $annee."-".$mois."-01";
+                $date_fin = $annee."-".$mois."-31";
+                $sql_where = "WHERE j.date_journal BETWEEN '$date_debut' AND '$date_fin'";
+            }else {
+                $sql_where = "";
+            }
+            $this->Sql = "SELECT *
+                                FROM t_journal AS j
+                                JOIN t_users AS u ON j.id_user = u.idt_users
+                                ".$sql_where."
+                                ORDER BY j.idt_journal";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getAllHistoriquesOperationsByJournal
+         * -------------------
+         * Retourne tous les historiques des operations d'un journal en base de données
+         *
+         * @return array
+         */
+        public function getAllHistoriquesOperationsByJournal ( $id )
+        {
+            $this->Sql = "SELECT *
+                                FROM t_operations AS o
+                                JOIN t_produits AS p ON o.id_produit = p.idt_produits
+                                WHERE o.id_journal = $id";
             $res = $this->FetchAllRows();
             return $res;
         }

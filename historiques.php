@@ -56,10 +56,32 @@
 		{
 			if( $target == "historiques_journal" )
 			{
-				$nb_produits = $db->getNbProduitsInDB ();
-				$tpl_index->assign("nb_produits", $nb_produits);
+                if(isset($_GET["annee"])) {
+                    $annee = $_GET["annee"];
 
-				$target = "historiques_journal/historiques_journal";
+                    if ($annee == "") {
+                        $target = "main";
+                    } else {
+                        if(isset($_GET["mois"])){
+                            $mois = $_GET["mois"];
+
+                            if ($mois == "") {
+                                $target = "main";
+                            } else {
+                                $nb_journal = $db->getNbJournalByMoisAnnee( $mois, $annee );
+
+                                $tpl_index->assign("nb_journal", $nb_journal );
+                                $tpl_index->assign("mois_annee", getLitterateMonth( $mois )." ".$annee);
+                                $target = "historiques_journal/journal_mois";
+                            }
+                        }else{
+                            $tpl_index->assign("annee", $annee);
+                            $target = "historiques_journal/journal_annee";
+                        }
+                    }
+                }else{
+                    $target = "historiques_journal/historiques_journal";
+                }
 			}
             else if( $target == "historiques_factures" )
             {
@@ -90,17 +112,11 @@
                     $target = "historiques_factures/historiques_factures";
                 }
             }
-            else if( $target == "groupes_factures" )
-            {
-                $nb_groupes_factures = $db->getNbGroupesFacturesInDB ();
-                $tpl_index->assign("nb_groupes_factures", $nb_groupes_factures);
-                $target = "gestion_magasin/groupes_factures";
-            }
-            else if( $target == "historiques_syntheses" )
+            else if( $target == "historiques_inventaires" )
             {
                 $nb_histo_syntheses = $db->getNbHistoriqueSyntheseInDB ();
                 $tpl_index->assign("nb_histo_syntheses", $nb_histo_syntheses);
-                $target = "historiques_syntheses/historiques_syntheses";
+                $target = "historiques_inventaires/historiques_inventaires";
             }
             else if( $target == "statistiques" )
             {

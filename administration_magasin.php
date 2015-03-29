@@ -149,8 +149,8 @@
 			}
 			else if( $target == "recapitulatif_inventaire" )
 			{
-				$nb_recapitulatif = $db->getNbRecapitulatifInventaireInDB ();
-				$tpl_index->assign("nb_recapitulatif", $nb_recapitulatif);
+			//	$nb_recapitulatif = $db->getNbRecapitulatifInventaireInDB ();
+			//	$tpl_index->assign("nb_recapitulatif", $nb_recapitulatif);
 				$target = "gestion_magasin/recapitulatif_inventaire";
 			}
 			else if( $target == "generate_synthese" )
@@ -173,7 +173,7 @@
 				$tpl_index->assign("nb_groupes_factures", $nb_groupes_factures);
 				$target = "gestion_magasin/groupes_factures";
 			}					
-			else if( $target == "historiques_syntheses" )
+			else if( $target == "historiques_inventaires" )
 			{
 				$nb_histo_syntheses = $db->getNbHistoriqueSyntheseInDB ();
 				$tpl_index->assign("nb_histo_syntheses", $nb_histo_syntheses);

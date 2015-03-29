@@ -16,13 +16,13 @@ isset( $_POST ["mois"] ) ? $mois = addslashes(htmlspecialchars($_POST ["mois"]))
 // get the type of the current user
 $id_type_user = $_SESSION["infoUser"]["idt_types_users"];
 
-$histo_factures = $db->getAllFacturesByMoisAnnee( $mois, $annee );
-if( COUNT($histo_factures) > 0 )
+$histo_journal = $db->getAllJournalByMoisAnnee( $mois, $annee );
+if( COUNT($histo_journal) > 0 )
 {
-    foreach ( $histo_factures as &$facture ) 
+    foreach ( $histo_journal as &$journal )
     {
-        $produitsFacture = $db->getAllHistoriquesAchatsByFacture( $facture["idt_factures"] );
-        $facture["produits_associes"] = $produitsFacture;
+        $operationJournal = $db->getAllHistoriquesOperationsByJournal( $journal["idt_journal"] );
+        $journal["operations_associees"] = $operationJournal;
     }
 }
 
@@ -74,79 +74,75 @@ $(document).ready (function ()
         .blocTitreId{
             color: white;
             font-weight: bold;
-            width: 17%;
+            width: 20%;
         }
         .blocTitre{
             color: black;
             font-weight: bold;
-            width: 17%;
+            width: 20%;
         }
         .blocValue{
             color: white;
             font-weight: bold;
-            width: 17%;
+            width: 20%;
         }
     </style>
 <?php
-    if( count( $histo_factures ) > 0)
+    if( count( $histo_journal ) > 0)
     {
         $count = 0;
-        foreach( $histo_factures as $obj ) 
+        foreach( $histo_journal as $obj )
         {
             $count++;
-            $prix_total_facture = 0;
+            $montant_journal = 0;
 ?>
             <div class="hvr-bounce-to-right" style="width: 100%; margin-bottom: 10px;">
                 <form name="form_popup" id="form_popup" method="post">
 
-                    <table cellspacing="3" cellpadding="3" class="blocInfoBis" width="100%">
+                    <table cellspacing="2" cellpadding="2" class="blocInfoBis" width="100%">
                         <tr>
                             <td>
                                 <tr class="blocInfoBis">
-                                    <td class="blocTitreId">Numéro facture : <br/><strong><?php  echo $obj["numero_facture"]; ?></strong></td>
-                                    <td class="blocTitreId">Nom fournisseur : <br/><strong><?php  echo $obj["nom_fournisseur"]; ?></strong></td>  
-                                    <td class="blocTitreId">Date facture : <br/><strong><?php  echo SQLDateToFrenchDate( $obj["date_facture"] ); ?></strong></td>
-                                    <td class="blocTitreId">Enregistrée le : <br/><strong><?php  echo SQLDateTimeToFrenchDateTime( $obj["date_insertion_facture"] ); ?></strong></td>
+                                    <td class="blocTitreId">Enregistrée le : <br/><strong><?php  echo SQLDateTimeToFrenchDateTime( $obj["date_journal"] ); ?></strong></td>
                                     <td class="blocTitreId">Enregistrée par : <br/><strong><?php  echo $obj["nom_user"]."  ".$obj["prenom_user"]; ?></strong></td>
-                                    <td class="blocTitreId"></td>
+                                    <td class="blocTitreId">Commentaire : </strong></td>
+                                    <td class="blocTitreId" colspan="2" >
+                                        <textarea style="height: 50px; width: 100%;" readonly="readonly">
+                                            <?php  echo $obj["commentaire"]; ?>
+                                        </textarea>
+                                    </td>
                                 </tr>
                                 <tr height="5px;"></tr>
                                 <tr class="blocInfoBis">
+                                    <td class="blocTitre">Numéro de l'opération </td>
                                     <td class="blocTitre">Nom produit </td>
-                                    <td class="blocTitre">Quantité achétée </td>
-                                    <td class="blocTitre">Prix d'achat (FCFA)</td>
-                                    <td class="blocTitre">Montant de l'achat (FCFA)</td>
-                                    <td class="blocTitre">Date fabrication </td>  
-                                    <td class="blocTitre">Date péremption </strong></td>
+                                    <td class="blocTitre">Quantité vendue </td>
+                                    <td class="blocTitre">Prix de vente (FCFA)</td>
+                                    <td class="blocTitre">Montant de l'opération (FCFA)</td>
                                 </tr>
                                 <tr height="5px;"></tr>
                                 <?php
-                                foreach ( $obj["produits_associes"] as $value ) 
+                                foreach ( $obj["operations_associees"] as $value )
                                 {
-                                    $prix_total_facture += $value["quantite_achat"] * $value["prix_achat"];
+                                    $montant_journal += $value["quantite_vendue"] * $value["prix_vente"];
                                 ?>
                                 <tr class="blocInfoBis">
+                                    <td class="blocValue"><?php  echo $value["numero_operation"]; ?></td>
                                     <td class="blocValue"><?php  echo $value["nom_produit"]; ?></td>
-                                    <td class="blocValue"><?php  echo $value["quantite_achat"]; ?></td>
-                                    <td class="blocValue"><?php  echo number_format($value["prix_achat"], 2, ',', ' '); ?></td>
-                                    <td class="blocValue"><?php  echo number_format($value["quantite_achat"] * $value["prix_achat"], 2, ',', ' '); ?></td>
-                                    <td class="blocValue"><?php  echo SQLDateToFrenchDate( $value["date_fabrication"] ); ?></td>  
-                                    <td class="blocValue"><?php  echo SQLDateToFrenchDate( $value["date_peremption"] ); ?></td>
+                                    <td class="blocValue"><?php  echo $value["quantite_vendue"]; ?></td>
+                                    <td class="blocValue"><?php  echo number_format($value["prix_vente"], 2, ',', ' '); ?></td>
+                                    <td class="blocValue"><?php  echo number_format($value["quantite_vendue"] * $value["prix_vente"], 2, ',', ' '); ?></td>
                                 </tr>
                                 <?php
                                 }
                                 ?>
                                 
                                 <tr>    
-                                    <td align="left" valign="middle"><a class="download_links" filename="filename"><img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez la facture</a></td>
-                                    <td class="blocTitre"><?php  if( $id_type_user <= 2 ){; ?><a class="edit_links"><img src="assets/images/edit.png" alt="" width="16" height="16" /> Modifier la facture</a><?php  } ?></td>
-                                    <td class="blocTitre">Montant de la facture : </td>
-                                    <td class="blocTitre"><?php echo number_format($prix_total_facture, 2, ',', ' ');?> FCFA</td>
-                                    <td class="blocTitreId" colspan="2" >
-                                        <textarea style="height: 30px; width: 100%;" readonly="readonly">
-                                            <?php  echo $obj["commentaire"]; ?>
-                                        </textarea>
-                                    </td>
+                                    <td align="left" valign="middle"><a class="download_links" filename="filename"><img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez le journal</a></td>
+                                    <td class="blocTitre"><?php  if( $id_type_user <= 2 ){; ?><a class="edit_links"><img src="assets/images/edit.png" alt="" width="16" height="16" /> Modifier le journal</a><?php  } ?></td>
+                                    <td class="blocTitre"></td>
+                                    <td class="blocTitre">Montant du journal : </td>
+                                    <td class="blocTitre"><?php echo number_format($montant_journal, 2, ',', ' ');?> FCFA</td>
                                 </tr>                                                                                                                                  
                             </td>
                         </tr>

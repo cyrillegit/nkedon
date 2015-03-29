@@ -774,12 +774,12 @@ $(document).ready (function ()
 
 				   <li class='has-sub'><a href="administration_production.php"><span>Production</span></a>
 				   </li>
-                    {if $smarty.session.infoUser.id_type_user <= 2}
+                    {if $smarty.session.infoUser.id_type_user <= 5}
                         <li class='has-sub'><a href="historiques.php"><span>Historiques</span></a>
                             <ul>
                                 <li class="has-sub"><a href="historiques.php?sub=historiques_factures"><span>Historiques des factures</span></a></li>
                                 <li class='has-sub'><a href="historiques.php?sub=historiques_journal"><span>Historiques des journaux</span></a></li>
-                                <li class='has-sub'><a href="historiques.php?sub=historiques_syntheses"><span>Historiques des synthèse</span></a></li>
+                                <li class='has-sub'><a href="historiques.php?sub=historiques_inventaires"><span>Historiques des inventaires</span></a></li>
                                 {if $smarty.session.infoUser.id_type_user <= 4}
                                     <li class='has-sub'><a href="historiques.php?sub=statistiques"><span>Statistiques</span></a></li>
                                 {/if}

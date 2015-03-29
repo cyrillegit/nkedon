@@ -27,7 +27,7 @@ $(document).ready (function ()
 
    $('#histoSynthese').click(function() 
     {
-        document.location.href="administration_magasin.php?sub=historiques_syntheses";
+        document.location.href="administration_magasin.php?sub=historiques_inventaires";
     });
 //*
     $(".links").each (function ()
@@ -43,6 +43,31 @@ $(document).ready (function ()
 });
 
 </script>
+<style type="text/css">
+    .blocInfoBis
+    {
+        background-image: url("css/images/bg_bloc_alertes.png");
+        background-repeat: repeat;
+        border: 1px solid #313131;
+        padding: 5px 5px 5px;
+    }
+    .maindiv{
+        width:690px;
+        margin:0 auto;
+        padding:20px;
+        background:#CCC;
+    }
+    .innerbg{
+        padding:6px;
+        background:#FFF;
+    }
+    .link{
+        font-weight:bold;
+        color:#ff0000;
+        text-decoration:none;
+        font-size:12px;
+    }
+</style>
 {/literal}
 <div id="Content">
     <div class="bloc_title">

@@ -11,8 +11,9 @@
 @session_start();
 $db = new Database ();
 
-$recap = $db->getAllRecapitulatif();
-$infos = $db->getAllAchatsVentesMois();
+$id_inventaire = $db->getMaxIdInventaire();
+$recap = $db->getRecapitulatifInventaire( $id_inventaire );
+$infos = $db->getAllAchatsInventaire( $id_inventaire );
 
 $ventes_totales = 0;
 $achats_totales = 0;
@@ -49,7 +50,12 @@ $capsules = $recap["capsules"];
 <script language="javascript">
 $(document).ready (function ()
 {
-
+    $('#downloadLink').click(function()
+    {
+        var filename = $(this).attr("filename");
+        alert(filename);
+    //    document.location.href="download.php?filename="+filename;
+    });
 });
 </script>
 <?php
@@ -74,87 +80,97 @@ $(document).ready (function ()
                 <tr>
                     <!--PARTIE GAUCHE-->
                     <td>
-                        <table cellspacing="5" cellpadding="2" width="60%">
+                        <table cellspacing="5" cellpadding="2" width="100%">
                             <tr class="blocInfoBis">
                                 <td>Nom du caissier :<span class="champObligatoire">*</span></td>
                                 <td><strong><?php  echo $recap["nom_user"]." ".$recap["prenom_user"]; ?></strong></td>
                             </tr>
                             <tr class="blocInfoBis">
                                 <td>Achats mensuels :<span class="champObligatoire">*</span></td>
-                                <td><strong><?php  echo $achats_totales; ?></strong></td>
+                                <td><strong><?php  echo number_format( $achats_totales, 2, ',', ' '); ?> <span style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                             </tr>
                             <tr class="blocInfoBis">
                                 <td>Ventes mensuelles :<span class="champObligatoire">*</span></td>
-                                <td><strong><?php echo $ventes_totales; ?></strong></td>
+                                <td><strong><?php echo number_format( $ventes_totales, 2, ',', ' '); ?><span style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                             </tr>
                             <tr class="blocInfoBis">
                                 <td>Montant marchandises en stock :<span class="champObligatoire">*</span></td>
-                                <td><strong><?php echo $montant_en_stock; ?></strong></td>
+                                <td><strong><?php echo number_format( $montant_en_stock, 2, ',', ' '); ?><span style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                             </tr>
                             <tr class="blocInfoBis">
                                 <td>Montant charges diverses  :<span class="champObligatoire">*</span></td>
-                                <td><strong><?php echo $montant_charges_diverses; ?></strong></td>
+                                <td><strong><?php echo number_format( $montant_charges_diverses, 2, ',', ' '); ?><span style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                             </tr>
                             <tr class="blocInfoBis">
                                 <td>Ration :<span class="champObligatoire">*</span></td>
-                                <td><strong><?php echo $ration; ?></strong></td>
+                                <td><strong><?php echo number_format( $ration, 2, ',', ' '); ?><span style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                             </tr>
                             <tr class="blocInfoBis">
                                 <td>Dette fournisseur :<span class="champObligatoire">*</span></td>
-                                <td><strong><?php echo $dette_fournisseur; ?></strong></td>
+                                <td><strong><?php echo number_format( $dette_fournisseur, 2, ',', ' '); ?><span style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                             </tr>
-                            <tr class="blocInfoBis">
-                                <td>Dépenses diverses  :<span class="champObligatoire">*</span></td>
-                                <td><strong><?php echo $depenses_diverses; ?></strong></td>
-                            </tr>                            
                             <tr class="blocInfoBis">
                                 <td>Date inventaire :<span class="champObligatoire">*</span></td>
                                 <td><strong><?php echo SQLDateTimeToFrenchDateTime($recap["date_inventaire"]); ?></strong></td>
-                            </tr>                                                                                    
+                            </tr>
+                            <tr class="blocInfoBis">
+                                <td style="width: 200px;">Commentaire :</td>
+                                <td><textarea style="height: 100%; width: 100%;" readonly="readonly"><?php echo $recap["commentaire"]; ?></textarea></td>
+                            </tr>
+                            <tr id="downloadLink">
+                                <td align="left" valign="middle">
+                                    <a class="download_links" filename="filename">
+                                        <img src="assets/images/arrow_down.png" alt="" width="16" height="16" filename="<?=$recap["filepath"]; ?>" /> Téléchargez la synthèse</a>
+                                </td>
+                            </tr>
                         </table>
                     </td>
                     <!--PARTIE DROITE-->
                     <td>
-                        <table cellspacing="5" cellpadding="2" width="80%">
+                        <table cellspacing="5" cellpadding="2" width="100%">
+                            <tr class="blocInfoBis">
+                                <td>Dépenses diverses  :<span class="champObligatoire">*</span></td>
+                                <td><strong><?php echo number_format( $depenses_diverses, 2, ',', ' '); ?><span style="float: right; margin-right: 10px;">FCFA</span></strong></td>
+                            </tr>
                             <tr class="blocInfoBis">
                                 <td>Fonds en espéces :<span class="champObligatoire">*</span></td>
-                                <td><strong><?php echo $fonds_especes; ?></strong></td>
+                                <td><strong><?php echo number_format( $fonds_especes, 2, ',', ' '); ?><span style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                             </tr>
                             <tr class="blocInfoBis">
                                 <td>Patrimoine :<span class="champObligatoire">*</span></td>
-                                <td><strong><?php echo $patrimoine; ?></strong></td>
+                                <td><strong><?php echo number_format( $patrimoine, 2, ',', ' '); ?><span style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                             </tr>
                             <tr class="blocInfoBis">
                                 <td>Recettes perçues :<span class="champObligatoire">*</span></td>
-                                <td><strong><?php echo $recap["recettes_percues"]; ?></strong></td>
+                                <td><strong><?php echo number_format( $recap["recettes_percues"], 2, ',', ' '); ?><span style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                             </tr>
                             <tr class="blocInfoBis">
                                 <td>Bénéfice brut :<span class="champObligatoire">*</span></td>
-                                <td><strong><?php echo $benefice_brut; ?></strong></td>
+                                <td><strong><?php echo number_format( $benefice_brut, 2, ',', ' '); ?><span style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                             </tr>
                             <tr class="blocInfoBis">
                                 <td>Bénéfice net  :<span class="champObligatoire">*</span></td>
-                                <td><strong><?php echo $benefice_net; ?></strong></td>
+                                <td><strong><?php echo number_format( $benefice_net, 2, ',', ' '); ?><span style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                             </tr>
                             <tr class="blocInfoBis">
                                 <td>Avaries :<span class="champObligatoire">*</span></td>
-                                <td><strong><?php echo $avaries; ?></strong></td>
+                                <td><strong><?php echo number_format( $avaries, 2, ',', ' '); ?><span style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                             </tr>
                             <tr class="blocInfoBis">
                                 <td>Crédit client :<span class="champObligatoire">*</span></td>
-                                <td><strong><?php echo $credit_client; ?></strong></td>
+                                <td><strong><?php echo number_format( $credit_client, 2, ',', ' '); ?><span style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                             </tr>
                             <tr class="blocInfoBis">
                                 <td>Capsules :<span class="champObligatoire">*</span></td>
-                                <td><strong><?php echo $capsules; ?></strong></td>
+                                <td><strong><?php echo number_format( $capsules, 2, ',', ' '); ?><span style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                             </tr>                          
                             <tr class="blocInfoBis">
                                 <td>Ecart :<span class="champObligatoire">*</span></td>
-                                <td><strong><?php echo $ecart; ?></strong></td>
+                                <td><strong><?php echo number_format( $ecart, 2, ',', ' '); ?><span style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                             </tr> 
                             <tr class="blocInfoBis">
                                 <td>Solde  :<span class="champObligatoire">*</span></td>
-                                <td><strong><?php echo $solde; ?></strong></td>
+                                <td><strong><?php echo number_format( $solde, 2, ',', ' '); ?><span style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                             </tr>                                                                                    
                         </table>
                     </td>

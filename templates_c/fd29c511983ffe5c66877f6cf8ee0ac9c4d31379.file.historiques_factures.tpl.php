@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.14, created on 2014-07-16 21:01:09
-         compiled from ".\templates\administration_magasin\gestion_magasin\historiques_factures.tpl" */ ?>
+         compiled from ".\templates\administration_magasin\gestion_magasin\historiques_journal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4961531c6de0ceb624-48460298%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'fd29c511983ffe5c66877f6cf8ee0ac9c4d31379' => 
     array (
-      0 => '.\\templates\\administration_magasin\\gestion_magasin\\historiques_factures.tpl',
+      0 => '.\\templates\\administration_magasin\\gestion_magasin\\historiques_journal.tpl',
       1 => 1405544454,
       2 => 'file',
     ),

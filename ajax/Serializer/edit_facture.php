@@ -16,7 +16,8 @@ if( $id_facture != NULL )
 	isset( $_POST ["numero_facture"] ) ? $numero_facture = addslashes(htmlspecialchars($_POST ["numero_facture"])) : $numero_facture = "";
 	isset( $_POST ["id_fournisseur"] ) ? $id_fournisseur = addslashes(htmlspecialchars($_POST ["id_fournisseur"])) : $id_fournisseur = "";
 	isset( $_POST ["date_facture"] ) ? $date_facture = addslashes(htmlspecialchars($_POST ["date_facture"])) : $date_facture = "";
-
+    isset( $_POST ["commentaire"] ) ? $commentaire = addslashes(htmlspecialchars($_POST ["commentaire"])) : $commentaire = "";
+    $id_user = $_SESSION["infoUser"]["idt_users"];
 	//Mode création (post:insert)
 	if( $id_facture == 0 )
 	{
@@ -60,12 +61,16 @@ if( $id_facture != NULL )
 							 id_fournisseur,
 							 date_facture,
 							 date_insertion_facture,
-							 status)
+							 id_user,
+							 commentaire,
+							 id_inventaire)
 				VALUES ('$numero_facture',
 						'$nombre_produit',
 						'$id_fournisseur',
 						'$date_facture',
 						'$date_insertion_facture',
+						'$id_user',
+						'$commentaire',
 						0)";
 
 				if( $db->Execute ( $sql ) )
@@ -170,7 +175,9 @@ if( $id_facture != NULL )
 							nombre_produit = '$nombre_produit',
 							id_fournisseur = '$id_fournisseur',
 							date_facture = '$date_facture',
-							date_insertion_facture = '$date_insertion_facture'
+							date_insertion_facture = '$date_insertion_facture',
+							id_user = '$id_user',
+							commentaire = '$commentaire'
 						WHERE idt_factures = '$id_facture'";
 
 				if( $db->Execute ( $sql ) )

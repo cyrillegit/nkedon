@@ -143,6 +143,5 @@ class BackupDatabase
  
         return true;
     }
-
 }
 ?>

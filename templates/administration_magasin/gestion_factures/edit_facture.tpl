@@ -390,6 +390,7 @@ $(document).ready (function ()
 								</div>
 							</td>
 						</tr>
+                        <tr>
 							<td>
 								Numéro de la facture :<span class="champObligatoire">*</span>
 							</td>
@@ -425,6 +426,14 @@ $(document).ready (function ()
             					<input type="text" name="date_facture" id="date_facture" value="{if $id_facture neq 0}{$date_facture}{/if}"/>
             				</td>
 						</tr>
+                        <tr>
+                            <td>
+                                Commentaire :
+                            </td>
+                            <td>
+                                <textarea name="commentaire" id="commentaire" cols="30" rows="10" style="height: 70px; width: 100%;"></textarea>
+                            </td>
+                        </tr>
 					</table>
 				</td>
 			</tr>
@@ -433,7 +442,7 @@ $(document).ready (function ()
 		<input type="hidden" name="id_facture" id="id_facture" value="{if $id_facture neq 0}{$id_facture}{else}{0}{/if}"/>
 	</form>
 </div>
-<hr size="1" style="margin-top: 5px;" />
+<hr size="1" style="margin-top: 5px; margin-top: 80px;" />
 <div style="float: left; text-align: left; margin-left: 200px;"><span class="champObligatoire">*</span> : Champs obligatoires.</div>
 <div style="float: right; text-align: right; margin-right: 200px;">
     <table border="0" cellspacing="0" cellpadding="0" align="right">
