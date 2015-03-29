@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-28 14:31:11
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-29 16:09:28
          compiled from ".\templates\administration_magasin\gestion_magasin\inventaire.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1674552ebaf5bc937c2-10831535%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0057fb38afcb59aecaa55fa6f6e866babcc5067d' => 
     array (
       0 => '.\\templates\\administration_magasin\\gestion_magasin\\inventaire.tpl',
-      1 => 1427550425,
+      1 => 1427645352,
       2 => 'file',
     ),
   ),
@@ -88,8 +88,64 @@ function resetInputs(){
 $(document).ready (function ()
 {
     $("#editInventaire").hide();
+    $("#editStockPhysique").hide();
     fetchAllUsers();
 	RefreshTableProduits ();
+
+    $("#btnAnnulerStockPhysique").click (function ()
+    {
+        // On ferme la boîte de dialogue affichée juste avant.
+        $("#addInventaire").show();
+        $("#msgInventaire").show();
+        $("#editStockPhysique").hide("slow");
+    });
+
+    $("#btnValiderStockPhysique").click (function ()
+    {
+        var ok = false;
+        if ( $("#stock_physique").val () == "" )
+        {
+            ShowPopupError  ("Veuillez saisir le stock physique.");
+
+            $("#stock_physique").focus ();
+            ok = false;
+        }
+        else
+        {
+            ok = true;
+        }
+
+        if (ok)
+        {
+            var param = $("#form_popup_stock_physique").serialize ();
+
+            var responseText = Serialize (param);
+
+            if (responseText != "")
+            {
+                response = eval (responseText);
+                if (response.result == "SUCCESS")
+                {
+                    ShowSuccess ("Le produit (<strong>" + $("#nom_produit").val () + "</strong>) a bien été enregistré.");
+                    $.modal.close ();
+                    document.location.href="administration_magasin.php?sub=inventaire";
+                }
+                else
+                {
+                    ShowPopupError  (response.result);
+                }
+            }
+            else
+            {
+                ShowPopupError  ("Une erreur est survenue.");
+            }
+        }
+        else
+        {
+        }
+        $("#msgInventaire").show();
+        $("#addInventaire").show();
+    });
 
 	$("#addInventaire").click (function ()
 	{
@@ -234,7 +290,7 @@ $(document).ready (function ()
                 <td>
                 <?php if ($_SESSION['infoUser']['id_type_user']<=5){?>
                 <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_valider" id="addInventaire"></div></div>
-                <div style="margin-left:20px; margin-right: 20px; float: right;">Pour valider l'inventaire :&nbsp;</div>
+                <div id="msgInventaire" style="margin-left:20px; margin-right: 20px; float: right;">Pour valider l'inventaire :&nbsp;</div>
                 <?php }?>
                 </td>
             </tr>
@@ -327,6 +383,59 @@ $(document).ready (function ()
                     <td><div id="btnAnnulerInventaire"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
                     <td>&nbsp;</td>
                     <td><div id="btnValiderInventaire"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOK" height="30" /></div></td>
+                </tr>
+            </table>
+        </div>
+        <hr size="5" style="margin-top: 50px; background-color: #ff0000;" />
+    </div>
+
+    <div class="content" id="editStockPhysique">
+        <div class="TitrePopup">Modifier l'inventaire <strong style="color:#1c9bd3">d'un produit</strong></div>
+        <div class="subTitlePopup" style="color: #ffffff; text-decoration: none; font-size: 12px;">Veuillez saisir les informations du produit en remplissant les champs obligatoires.</div>
+        <br style="clear: both; " />
+        <div style="width: 100%;">
+            <form name="form_popup_stock_physique" id="form_popup_stock_physique" method="post">
+                <table width="100%">
+                    <tr>
+                        <td colspan="2">
+                            <div class="warnings" id="warnings_popup" style="display: none;">
+                                <b>Certains champs n'ont pas &eacute;t&eacute; remplis correctement :</b>
+                                <div></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!--PARTIE GAUCHE-->
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>Nom du produit :<span class="champObligatoire">*</span></td>
+                                    <td><strong><input type="text" name="nom_produit" id="nom_produit" readonly="readonly" style="width: 200px;"/></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Stock physique :<span class="champObligatoire">*</span></td>
+                                    <td><input type="text" name="stock_physique" id="stock_physique" style="width: 200px;"/></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <!--PARTIE DROITE-->
+                        <td>
+
+                        </td>
+                    </tr>
+                </table>
+                <input type="hidden" id="target" name="target" value="inventaire_produit" />
+                <input type="hidden" id="id_produit" name="id_produit" value="0" />
+            </form>
+        </div>
+        <hr size="1" style="margin-top: 25px;" />
+        <div style="float: left; text-align: left;"><span class="champObligatoire">*</span> : Champs obligatoires.</div>
+        <div style="float: right; text-align: right;">
+            <table border="0" cellspacing="0" cellpadding="0" align="right">
+                <tr>
+                    <td><div id="btnAnnulerStockPhysique"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
+                    <td>&nbsp;</td>
+                    <td><div id="btnValiderStockPhysique"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOK" height="30" /></div></td>
                 </tr>
             </table>
         </div>

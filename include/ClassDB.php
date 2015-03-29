@@ -1195,6 +1195,30 @@
             return $res ["nb"];
         }
 
+        /**
+         * Fonction getNbInventairesAnnee
+         * -------------------
+         * Retourne le nombre de  inventaires correspondant a une annee precise
+         *
+         * @return array
+         */
+        public function getNbInventairesAnnee( $annee )
+        {
+            if( $annee != "" ) {
+                $date_debut = $annee."-01-01";
+                $date_fin = $annee."-12-31";
+                $sql_where = "WHERE i.date_inventaire BETWEEN '$date_debut' AND '$date_fin'";
+            }else {
+                $sql_where = "";
+            }
+            $this->Sql = "SELECT COUNT(*) AS nb
+							FROM t_inventaires AS i
+							".$sql_where."
+							ORDER BY i.idt_inventaires";
+            $res = $this->FetchRow();
+            return $res ["nb"];
+        }
+
 		/**
 		 * Fonction getAllProduitsFacture
 		 * -------------------
@@ -1727,6 +1751,20 @@
         }
 
         /**
+         * Fonction getAllInventaires
+         * -------------------
+         * Retourne tous les inventaires
+         *
+         * @return Array
+         */
+        public function getAllInventaires()
+        {
+            $this->Sql = "SELECT * FROM t_inventaires ORDER BY idt_inventaires";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+    /**
          * Fonction getAllJournalByAnnee
          * -------------------
          * Retourne les journaux présents en base de données pour une annee donnée
@@ -1762,7 +1800,7 @@
             if( $annee != "" ) {
                 $date_debut = $annee."-".$mois."-01";
                 $date_fin = $annee."-".$mois."-31";
-                $sql_where = "WHERE date_journal BETWEEN '$date_debut' AND '$date_fin'";
+                $sql_where = "WHERE j.date_journal BETWEEN '$date_debut' AND '$date_fin'";
             }else {
                 $sql_where = "";
             }
@@ -1795,6 +1833,31 @@
                                 JOIN t_users AS u ON j.id_user = u.idt_users
                                 ".$sql_where."
                                 ORDER BY j.idt_journal";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getAllInventairesAnnee
+         * -------------------
+         * Retourne les inventaires correspondants a un mois et une annee precise
+         *
+         * @return array
+         */
+        public function getAllInventairesAnnee( $annee )
+        {
+            if( $annee != "" ) {
+                $date_debut = $annee."-01-01";
+                $date_fin = $annee."-12-31";
+                $sql_where = "WHERE i.date_inventaire BETWEEN '$date_debut' AND '$date_fin'";
+            }else {
+                $sql_where = "";
+            }
+            $this->Sql = "SELECT *
+                                    FROM t_inventaires AS i
+                                    JOIN t_users AS u ON i.id_user = u.idt_users
+                                    ".$sql_where."
+                                    ORDER BY i.idt_inventaires";
             $res = $this->FetchAllRows();
             return $res;
         }

@@ -334,7 +334,7 @@ $(document).ready (function ()
 		<input type="hidden" name="id_journal" id="id_journal" value="0"/>
 	</form>
 </div>
-<hr size="1" style="margin-top: 5px;" />
+<hr size="1" style="margin-top: 15px;" />
 <div style="float: left; text-align: left; margin-left: 200px;"><span class="champObligatoire">*</span> : Champs obligatoires.</div>
 <div style="float: right; text-align: right; margin-right: 200px;">
     <table border="0" cellspacing="0" cellpadding="0" align="right">

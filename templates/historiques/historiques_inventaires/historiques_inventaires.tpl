@@ -2,19 +2,18 @@
 {literal}
 <script language="javascript">
 /**
-	Rafraîchissement du tableau des chaînes de tri.
+	Rafraîchissement du tableau des inventaires
 */
-function RefreshTableHistoriqueSynthese(date_histo_synthese)
+function RefreshTableHistoriquesInventaires()
 {
-    var param = "date_histo_synthese="+date_histo_synthese;
 	var responseText = $.ajax({
 			type	: "POST",
-			url		: "ajax/infos/administration_magasin/GetTableauHistoriqueSyntheses.php",
+			url		: "ajax/infos/historiques/GetTableauHistoriquesInventaires.php",
 			async	: false,
-			data	: param,
+			data	: "",
 			success	: function (msg){}
 	}).responseText;
-	$("#tableau_histo_syntheses").empty ().html (responseText);
+	$("#tableau_historiques_inventaires").empty ().html (responseText);
 
 	UpdateTSorter ();
 }
@@ -23,7 +22,7 @@ function RefreshTableHistoriqueSynthese(date_histo_synthese)
 */
 $(document).ready (function ()
 {
-	RefreshTableHistoriqueSynthese ("");
+    RefreshTableHistoriquesInventaires ();
 
     $("#date_histo_synthese").datepicker({
         beforeShow:function(input) {
@@ -37,7 +36,7 @@ $(document).ready (function ()
     $("#date_histo_synthese").change (function ()
     {
         var date_histo_synthese = $("#date_histo_synthese").val();
-        RefreshTableHistoriqueSynthese (date_histo_synthese);
+        RefreshTableHistoriquesInventaires ();
     });
 });
 
@@ -49,11 +48,11 @@ $(document).ready (function ()
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
             <div class="ico_title"><img src="css/images/ico_42x42/menu_consult.png" /></div>
             <div class="t_titre">
-                <div class="title"><strong>Historique</strong> <strong style="color:black;">des synthèses</strong></div>
+                <div class="title"><strong>Historiques </strong> <strong style="color:black;">des inventaires</strong></div>
             </div>
         </div>
     </div>
-    <div class="intro">Dans cet écran, vous avez la possibilité de visualiser l'historique des synthèses.<br/><br/></div>
+    <div class="intro">Dans cet écran, vous avez la possibilité de visualiser l'historique des inventaires.<br/><br/></div>
     
     <div style="clear: both;"></div>
 
@@ -61,11 +60,11 @@ $(document).ready (function ()
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
                 <td>
-                Actuellement <font color="red"><b>{$nb_histo_syntheses}</b></font> synthèses effectuées.
+                Les différentes années des inventaires.
                 </td>
 
                 <td>
-                <div style="margin-left:20px; margin-right: 20px; float: right;">Afficher les historiques de syntése à partir de:  <input type="text" name="date_histo_synthese" id="date_histo_synthese" value=""/>&nbsp;</div>
+                <div style="margin-left:20px; margin-right: 20px; float: right;">Afficher les historiques des inventaires à partir de:  <input type="text" name="date_histo_synthese" id="date_histo_synthese" value=""/>&nbsp;</div>
 
                 </td>
             </tr>
@@ -73,10 +72,10 @@ $(document).ready (function ()
     </div>
     <br style="clear: both;" />
 
-    <div id="tableau_histo_syntheses"></div>
+    <div id="tableau_historiques_inventaires"></div>
 
     <div style="clear: both;">&nbsp;</div>
-    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='administration_magasin.php';"></div>
+    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='historiques.php';"></div>
 </div>
 
 {include file="common/footer.tpl"}

@@ -34,9 +34,9 @@ $(document).ready (function ()
     {
         $(this).click (function ()
         {
-        //    var filename = $(this).attr("filename");
+            var filename = $(this).attr("filename");
         //    document.location.href="download.php?filename="+filename;
-            alert("Téléchargement bientot disponible");
+            alert("Téléchargement bientot disponible  : " + filename);
         });
     });
 
@@ -44,9 +44,9 @@ $(document).ready (function ()
     {
         $(this).click (function ()
         {
-            //    var filename = $(this).attr("filename");
+                var id_facture = $(this).attr("id_facture");
             //    document.location.href="download.php?filename="+filename;
-            alert("Edition bientot disponible");
+            alert("Edition bientot disponible  : "+id_facture);
         });
     });
 });
@@ -138,13 +138,13 @@ $(document).ready (function ()
                                 ?>
                                 
                                 <tr>    
-                                    <td align="left" valign="middle"><a class="download_links" filename="filename"><img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez la facture</a></td>
-                                    <td class="blocTitre"><?php  if( $id_type_user <= 2 ){; ?><a class="edit_links"><img src="assets/images/edit.png" alt="" width="16" height="16" /> Modifier la facture</a><?php  } ?></td>
+                                    <td align="left" valign="middle"><a class="download_links" filename="<?=$obj["numero_facture"]; ?>"><img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez la facture</a></td>
+                                    <td class="blocTitre"><?php  if( $id_type_user <= 2 ){; ?><a class="edit_links" id_facture="<?=$obj["idt_factures"]; ?>"><img src="assets/images/edit.png" alt="" width="16" height="16" /> Modifier la facture</a><?php  } ?></td>
                                     <td class="blocTitre">Montant de la facture : </td>
                                     <td class="blocTitre"><?php echo number_format($prix_total_facture, 2, ',', ' ');?> FCFA</td>
                                     <td class="blocTitreId" colspan="2" >
-                                        <textarea style="height: 30px; width: 100%;" readonly="readonly">
-                                            <?php  echo $obj["commentaire"]; ?>
+                                        <textarea style="height: 100%; width: 100%; text-align: left;" readonly="readonly">
+                                            <?php  echo trim(stripslashes(htmlentities($obj["commentaire"]))); ?>
                                         </textarea>
                                     </td>
                                 </tr>                                                                                                                                  

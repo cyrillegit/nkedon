@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-17 11:44:10
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-29 17:04:16
          compiled from ".\templates\contact\contact.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1043952fbbe95486398-72333348%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0c7fea85c7114e6bb620b58dc6a29c12531d08a2' => 
     array (
       0 => '.\\templates\\contact\\contact.tpl',
-      1 => 1426526077,
+      1 => 1427648653,
       2 => 'file',
     ),
   ),
@@ -34,7 +34,7 @@ $(document).ready (function ()
     <div class="bloc_title">
         <div class="alerte">&nbsp;</div><br/>
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
-            <div class="ico_title"><img src="css/images/ico_42x42/menu_fdr_0.png" /></div>
+            <div class="ico_title"><img src="css/images/ico_42x42/menu_consult.png" /></div>
             <div class="t_titre">
                 <div class="title"><strong>Contacts</strong> <strong style="color:black;">utiles</strong></div>
             </div>

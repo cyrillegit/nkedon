@@ -16,23 +16,24 @@ $datas = $db->getAllProduitsWithAchats ();
 <script language="javascript">
 $(document).ready (function ()
 {
-	$(".edit_produit").each (function ()
+	$(".consult_produit").each (function ()
 	{
 		$(this).click (function ()
 		{
-			update_content ("ajax/popups/edit_produit_inventaire.php", "popup", "id_produit=" + $(this).attr ("id_produit"));
-			ShowPopupHeight (550);
+            $("#id_produit").val($(this).attr("id_produit"));
+            $("#nom_produit").val($(this).attr("nom_produit"));
+            $("#stock_physique").val($(this).attr ("stock_physique"));
+
+            $("#addInventaire").hide();
+            $("#msgInventaire").hide();
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+            $("#editStockPhysique").show("slow");
+
+//			update_content ("ajax/popups/edit_produit_inventaire.php", "popup", "id_produit=" + $(this).attr ("id_produit"));
+//			ShowPopupHeight (550);
 		});
 	});
 
-    $(".consult_produit").each (function ()
-    {
-        $(this).click (function ()
-        {
-            update_content ("ajax/popups/consult_produit.php", "popup", "id_produit=" + $(this).attr ("id_produit"));
-            ShowPopupHeight (550);
-        });
-    });
 });
 </script>
 <style type="text/css">
@@ -66,10 +67,7 @@ $(document).ready (function ()
                     <td align="center"><span class="floatAndMarginLeft"><?php echo number_format( $obj["prix_achat"], 2, ',', ' '); ?></span></td>
                     <td align="center"><span class="floatAndMarginLeft"><?php echo number_format( $obj["prix_vente"], 2, ',', ' '); ?></span></td>
                     <td align="center">
-                        <img src="css/images/bullseye.png" title="réaliser un inventaire" border="0" class="consult_produit" style="cursor: pointer; margin: 1px;" id_produit="<?=$obj ["idt_produits"]; ?>" />
-                    <?php if($_SESSION ["infoUser"]["idt_types_users"] <= 3){?>
-                        <img src="css/images/edit.png" title="modifier un inventaire" border="0" class="edit_produit" style="cursor: pointer; margin: 1px;" id_produit="<?=$obj ["idt_produits"]; ?>" />
-                    <?php }?>
+                        <img src="css/images/bullseye.png" title="réaliser un inventaire" border="0" class="consult_produit" style="cursor: pointer; margin: 1px;" id_produit="<?=$obj ["idt_produits"]; ?>" stock_physique="<?=$obj ["stock_physique"]; ?>" nom_produit="<?=$obj ["nom_produit"]; ?>" />
                     </td>
                 </tr>
                 <?php

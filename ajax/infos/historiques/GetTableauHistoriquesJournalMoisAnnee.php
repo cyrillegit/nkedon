@@ -34,9 +34,9 @@ $(document).ready (function ()
     {
         $(this).click (function ()
         {
-        //    var filename = $(this).attr("filename");
+            var filename = $(this).attr("filename");
         //    document.location.href="download.php?filename="+filename;
-            alert("Téléchargement bientot disponible");
+            alert("Téléchargement bientot disponible : "+ filename);
         });
     });
 
@@ -44,9 +44,9 @@ $(document).ready (function ()
     {
         $(this).click (function ()
         {
-            //    var filename = $(this).attr("filename");
+                var id_journal = $(this).attr("id_journal");
             //    document.location.href="download.php?filename="+filename;
-            alert("Edition bientot disponible");
+            alert("Edition bientot disponible : "+id_journal);
         });
     });
 });
@@ -90,10 +90,8 @@ $(document).ready (function ()
 <?php
     if( count( $histo_journal ) > 0)
     {
-        $count = 0;
         foreach( $histo_journal as $obj )
         {
-            $count++;
             $montant_journal = 0;
 ?>
             <div class="hvr-bounce-to-right" style="width: 100%; margin-bottom: 10px;">
@@ -138,8 +136,8 @@ $(document).ready (function ()
                                 ?>
                                 
                                 <tr>    
-                                    <td align="left" valign="middle"><a class="download_links" filename="filename"><img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez le journal</a></td>
-                                    <td class="blocTitre"><?php  if( $id_type_user <= 2 ){; ?><a class="edit_links"><img src="assets/images/edit.png" alt="" width="16" height="16" /> Modifier le journal</a><?php  } ?></td>
+                                    <td align="left" valign="middle"><a class="download_links" filename="<?=$obj["idt_journal"]; ?>"><img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez le journal</a></td>
+                                    <td class="blocTitre"><?php  if( $id_type_user <= 2 ){; ?><a class="edit_links" id_journal="<?=$obj["idt_journal"]; ?>"><img src="assets/images/edit.png" alt="" width="16" height="16" /> Modifier le journal</a><?php  } ?></td>
                                     <td class="blocTitre"></td>
                                     <td class="blocTitre">Montant du journal : </td>
                                     <td class="blocTitre"><?php echo number_format($montant_journal, 2, ',', ' ');?> FCFA</td>

@@ -114,9 +114,20 @@
             }
             else if( $target == "historiques_inventaires" )
             {
-                $nb_histo_syntheses = $db->getNbHistoriqueSyntheseInDB ();
-                $tpl_index->assign("nb_histo_syntheses", $nb_histo_syntheses);
-                $target = "historiques_inventaires/historiques_inventaires";
+                if(isset($_GET["annee"])) {
+                    $annee = $_GET["annee"];
+
+                    if ($annee == "") {
+                        $target = "main";
+                    } else {
+                        $nb_inventaires = $db->getNbInventairesAnnee( $annee );
+                        $tpl_index->assign("annee", $annee);
+                        $tpl_index->assign("nb_inventaires", $nb_inventaires );
+                        $target = "historiques_inventaires/inventaires_annee";
+                    }
+                }else{
+                    $target = "historiques_inventaires/historiques_inventaires";
+                }
             }
             else if( $target == "statistiques" )
             {
