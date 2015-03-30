@@ -824,6 +824,20 @@
 		}
 
         /**
+         * Fonction getAllProduitsVendus
+         * -------------------
+         * Retourne tous les produits vendus d'une facture
+         *
+         * @return array
+         */
+        public function getAllProduitsVendus ()
+        {
+            $this->Sql = "SELECT * FROM t_produits_ventes";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
          * Fonction getAllOperationsJournal
          * -------------------
          * Retourne tous les operations du journal
@@ -1236,6 +1250,24 @@
 			$res = $this->FetchAllRows();
 			return $res;
 		}
+
+        /**
+         * Fonction getAllProduitsFactureVente
+         * -------------------
+         * Retourne les produits contenus dans une facture
+         *
+         * @return array
+         */
+        public function getAllProduitsFactureVente()
+        {
+            $this->Sql = "SELECT *
+							FROM t_produits_ventes AS pv
+							JOIN t_produits AS p ON pv.id_produit = p.idt_produits
+							ORDER BY pv.idt_produits_ventes DESC";
+
+            $res = $this->FetchAllRows();
+            return $res;
+        }
 
 		/**
 		 * Fonction getInfoProduitFacture
@@ -1732,6 +1764,23 @@
                                 FROM t_produits_factures AS pf
                                 JOIN t_produits AS p
                                 ON p.idt_produits = pf.id_produit";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getAllProduitsVendusFacture
+         * -------------------
+         * Retourne tous les produits d'une facture de vente
+         *
+         * @return Array
+         */
+        public function getAllProduitsVendusFacture()
+        {
+            $this->Sql = "SELECT *
+                                    FROM t_produits_ventes AS pv
+                                    JOIN t_produits AS p
+                                    ON p.idt_produits = pv.id_produit";
             $res = $this->FetchAllRows();
             return $res;
         }

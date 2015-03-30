@@ -98,13 +98,13 @@
 				
 				if( $id_facture != 0 )
 				{
-					$_SESSION["GET"] = $_GET;
-
-					$id_facture = $_GET["id_facture"];
-					$numero_facture = $_GET["numero_facture"];
-					$id_fournisseur = $_GET["id_fournisseur"];
-					$nom_fournisseur = $_GET["nom_fournisseur"];
-					$date_facture = $_GET["date_facture"];
+//					$_SESSION["GET"] = $_GET;
+//
+//					$id_facture = $_GET["id_facture"];
+//					$numero_facture = $_GET["numero_facture"];
+//					$id_fournisseur = $_GET["id_fournisseur"];
+//					$nom_fournisseur = $_GET["nom_fournisseur"];
+//					$date_facture = $_GET["date_facture"];
 
 					$produits_factures = $db->getAllProduitsOperationsFacture();
                     $montant_facture = 0;
@@ -114,10 +114,10 @@
                         $montant_facture += $pf["quantite_achat"] * $pf["prix_achat"];
                     }
 
-                    $tpl_index->assign( "numero_facture", $numero_facture );
-					$tpl_index->assign( "id_fournisseur", $id_fournisseur );
-					$tpl_index->assign( "nom_fournisseur", $nom_fournisseur );
-					$tpl_index->assign( "date_facture", $date_facture );
+//                    $tpl_index->assign( "numero_facture", $numero_facture );
+//					$tpl_index->assign( "id_fournisseur", $id_fournisseur );
+//					$tpl_index->assign( "nom_fournisseur", $nom_fournisseur );
+//					$tpl_index->assign( "date_facture", $date_facture );
 					$tpl_index->assign( "montant_facture", number_format( $montant_facture, 2, ',', ' ') );
 				}
 				else
@@ -141,6 +141,20 @@
 
 				$target = "gestion_factures/edit_facture";
 			}
+            else if( $target == "edit_facture_vente" )
+            {
+                $produits_factures = $db->getAllProduitsVendusFacture();
+                $montant_facture = 0;
+
+                foreach( $produits_factures as $pf ){
+                    $nb_produits++;
+                    $montant_facture += $pf["quantite_vendue"] * $pf["prix_vente"];
+                }
+
+                $tpl_index->assign("montant_facture", number_format( $montant_facture, 2, ',', ' '));
+
+                $target = "gestion_factures/edit_facture_vente";
+            }
 			else if( $target == "inventaire" )
 			{
 				$nb_produits = $db->getNbProduitsInDB ();
@@ -149,8 +163,6 @@
 			}
 			else if( $target == "recapitulatif_inventaire" )
 			{
-			//	$nb_recapitulatif = $db->getNbRecapitulatifInventaireInDB ();
-			//	$tpl_index->assign("nb_recapitulatif", $nb_recapitulatif);
 				$target = "gestion_magasin/recapitulatif_inventaire";
 			}
 			else if( $target == "generate_synthese" )
@@ -166,13 +178,7 @@
 				$nb_histo_factures = $db->getNbHistoriquesFacturesByGroupInDB( $id_groupe );
 				$tpl_index->assign("nb_histo_factures", $nb_histo_factures);
 				$target = "gestion_magasin/historiques_factures";
-			}	
-			else if( $target == "groupes_factures" )
-			{
-				$nb_groupes_factures = $db->getNbGroupesFacturesInDB ();
-				$tpl_index->assign("nb_groupes_factures", $nb_groupes_factures);
-				$target = "gestion_magasin/groupes_factures";
-			}					
+			}
 			else if( $target == "historiques_inventaires" )
 			{
 				$nb_histo_syntheses = $db->getNbHistoriqueSyntheseInDB ();

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-28 12:46:06
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-30 12:56:13
          compiled from ".\templates\common\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:399652eba7b1708760-69883461%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '14a35e64d31f6f39c819ba645103d1de351d1aea' => 
     array (
       0 => '.\\templates\\common\\header.tpl',
-      1 => 1427546646,
+      1 => 1427720159,
       2 => 'file',
     ),
   ),
@@ -787,7 +787,8 @@ $(document).ready (function ()
 				      <ul>
 				         <li class='has-sub'><a href="administration_magasin.php?sub=produits"><span>Ajouter / Modifer un produit</span></a></li>
                           <li class='has-sub'><a href="administration_magasin.php?sub=fournisseurs"><span>Ajouter / modifier un fournisseur</span></a></li>
-				         <li class='has-sub'><a href="administration_magasin.php?sub=edit_facture"><span>Ajouter / Modifier une facture</span></a></li>
+				         <li class='has-sub'><a href="administration_magasin.php?sub=edit_facture"><span>Enregistrer une facture d'achat</span></a></li>
+                          <li class='has-sub'><a href="administration_magasin.php?sub=edit_facture_vente"><span>Etablir une facture de vente</span></a></li>
                           <li class='has-sub'><a href="administration_magasin.php?sub=edit_operations_journal"><span>Réaliser le journal</span></a></li>
 				         <li class='has-sub'><a href="administration_magasin.php?sub=inventaire"><span>Réaliser l'inventaire du magasin</span></a></li>
 				      </ul>

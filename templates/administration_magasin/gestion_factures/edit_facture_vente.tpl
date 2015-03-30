@@ -1,46 +1,12 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-30 13:24:02
-         compiled from ".\templates\administration_magasin\gestion_factures\edit_facture.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2141652ebd4f06be6f3-26729779%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-$_valid = $_smarty_tpl->decodeProperties(array (
-  'file_dependency' => 
-  array (
-    'e7a7bff35746525492e465fd68ae0abd1fc90e8b' => 
-    array (
-      0 => '.\\templates\\administration_magasin\\gestion_factures\\edit_facture.tpl',
-      1 => 1427721841,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '2141652ebd4f06be6f3-26729779',
-  'function' => 
-  array (
-  ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52ebd4f084c6a5_08494855',
-  'variables' => 
-  array (
-    'nb_produits' => 0,
-    'montant_facture' => 0,
-    'id_facture' => 0,
-    'numero_facture' => 0,
-    'fournisseurs' => 0,
-    'id_fournisseur' => 0,
-    'item' => 0,
-    'opt' => 0,
-    'date_facture' => 0,
-  ),
-  'has_nocache_code' => false,
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52ebd4f084c6a5_08494855')) {function content_52ebd4f084c6a5_08494855($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
-
+{include file='common/header.tpl'}
+{literal}
 <script language="javascript" xmlns="http://www.w3.org/1999/html">
 
-function RefreshTableProduitsFacture ()
+function RefreshTableProduitsFactureVente ()
 {
 	var responseText = $.ajax({
 			type	: "POST",
-			url		: "ajax/infos/administration_magasin/GetTableauProduitsFacture.php",
+			url		: "ajax/infos/administration_magasin/GetTableauProduitsFactureVente.php",
 			async	: false,
 			data	: "",
 			success	: function (msg){}
@@ -76,8 +42,6 @@ function resetInputs(){
 
     $("#nom_produit_search").val("");
     $("#quantite_achat").val("");
-    $("#date_fabrication").val("");
-    $("#date_peremption").val("");
 
     $("#warnings_popup").css("display", "none");
     $("#succes_register").css("display", "none");
@@ -87,7 +51,7 @@ $(document).ready (function ()
 {
     setRegisterPopup();
     $("#editProduitFacture").hide();
-	RefreshTableProduitsFacture ();
+	RefreshTableProduitsFactureVente ();
 
 	$("#addProduitFacture").click (function ()
 	{
@@ -142,11 +106,11 @@ $(document).ready (function ()
             $("#nom_produit_search").focus ();
             ok = false;
         }
-        else if ( $("#quantite_achat").val () == "" )
+        else if ( $("#quantite_vendue").val () == "" )
         {
-            ShowPopupError  ("Veuillez saisir la quantité achetée.");
+            ShowPopupError  ("Veuillez saisir la quantité vendue.");
 
-            $("#quantite_achat").focus ();
+            $("#quantite_vendue").focus ();
             ok = false;
         }
         else
@@ -167,7 +131,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le produit (<strong>" + $("#nom_produit").val () + "</strong>) a bien été enregistré dans la facture.");
                     $.modal.close ();
-                    document.location.href="administration_magasin.php?sub=produits_facture";
+                    document.location.href="administration_magasin.php?sub=edit_facture_vente";
                 }
                 else
                 {
@@ -188,41 +152,13 @@ $(document).ready (function ()
 	{
 		var didConfirm = confirm("Voulez-vous vraiment supprimer tous les produits déja enregistrés?");
 		  if (didConfirm == true) {
-		    document.location.href="delete.php?target=delete_produits_facture&id=0";
+		    document.location.href="delete.php?target=delete_produits_ventes&id=0";
 		  }
 	});
 
 	$("#btnValider").click(function ()
 	{
-		var ok = false;
-		if ( $("#numero_facture").val () == "" )
-		{
-			ShowPopupError  ("Veuillez saisir le numéro de la facture.");			
-			
-			$("#numero_facture").focus ();
-			ok = false;
-		}
-		else if ( $("#id_fournisseur").val () == "" )
-		{
-			ShowPopupError  ("Veuillez choisir un fournisseur.");			
-			
-			$("#id_fournisseur").focus ();
-			ok = false;
-		}
-		else if ( $("#date_facture").val () == "" )
-		{
-			ShowPopupError  ("Veuillez choisir la date de la facture.");			
-			
-			$("#date_facture").focus ();
-			ok = false;
-		}		
-		else
-		{
-			ok = true;
-		}
 
-		if (ok)
-		{
 			var param = $("#form_popup").serialize ();
 				
 			var responseText = Serialize (param);
@@ -234,7 +170,7 @@ $(document).ready (function ()
 				{	
 					ShowSuccess ("La facture (<strong>" + $("#numero_facture").val () + "</strong>) a bien été enregistrée.");
 					$.modal.close ();					
-					document.location.href="administration_magasin.php?sub=edit_facture&status=register";
+					document.location.href="administration_magasin.php?sub=edit_facture_vente&status=register";
 				}
 				else
 				{
@@ -245,11 +181,6 @@ $(document).ready (function ()
 			{
 				ShowPopupError  ("Une erreur est survenue.");
 			}
-		}
-		else
-		{
-			alert("Veuillez saisir : \n -le numéro de la facture. \n -le fournisseur. \n -la date de la facture.");
-		}
 	});
 });
 
@@ -298,10 +229,10 @@ $(document).ready (function ()
     }
 
 </style>
-
+{/literal}
 <div id="Content">
     <div class="success" id="succes_register" style="display: block;">
-        <b>La facture a bien été enregistrée. </br> Vous pouvez enregistrer une nouvelle facture.</b>
+        <b>La facture a bien été réalisée. </br> Vous pouvez réaliser une nouvelle facture.</b>
         <div></div>
     </div>
 	<div class="bloc_title">
@@ -309,23 +240,21 @@ $(document).ready (function ()
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
 			<div class="ico_title"><img src="css/images/ico_42x42/menu_consult.png" /></div>
             <div class="t_titre">
-                <div class="title"><strong>Enregistrer</strong> <strong style="color:black;"> une facture d'achat</strong></div>
+                <div class="title"><strong>Etablir</strong> <strong style="color:black;"> une facture de vente</strong></div>
             </div>
         </div>
   	</div>
 	<div class="intro">
-	Dans cet écran, vous avez la possibilité de d'enregistrer les produits d'une facture d'achat. Veuillez remplir les champs obligatoires, et appuyez sur le bouton "Valider".
+	Dans cet écran, vous avez la possibilité d'enregistrer les produits d'une facture de vente. Veuillez remplir les champs obligatoires, et appuyez sur le bouton "Valider".
 	</div>
 	<br/><br/>
-	<?php echo $_smarty_tpl->getSubTemplate ("common/messages_boxes.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
+	{include file="common/messages_boxes.tpl"}
 
         <div class="bg_filter" style="line-height:50px;">
             <table width="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                     <td>
-                    Actuellement <font color="black"><b><?php echo $_smarty_tpl->tpl_vars['nb_produits']->value;?>
-</b></font> produits enregistrés dans la facture.
+                    Actuellement <font color="black"><b>{$nb_produits}</b></font> produits enregistrés dans la facture.
                     </td>
                     <td>
                     <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addProduitFacture"></div></div>
@@ -337,7 +266,7 @@ $(document).ready (function ()
         <br style="clear: both;" />
 
         <div id="editProduitFacture" class="content">
-            <div class="TitrePopup">ajouter/modifier <strong style="color:#1c9bd3">un produit de la facture</strong></div>
+            <div class="TitrePopup">ajouter / modifier <strong style="color:#1c9bd3">un produit de la facture</strong></div>
             <div class="subTitlePopup" style="color: #ffffff; text-decoration: none; font-size: 12px;">Veuillez saisir les informations du produit en remplissant les champs obligatoires.</div>
             <br style="clear: both; " />
             <div style="width: 100%;">
@@ -362,28 +291,19 @@ $(document).ready (function ()
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Quantité achetée :<span class="champObligatoire">*</span></td>
-                                        <td class="input_container" ><input type="text" name="quantite_achat" id="quantite_achat" value=""/></td>
+                                        <td>Quantité vendue :<span class="champObligatoire">*</span></td>
+                                        <td class="input_container" ><input type="text" name="quantite_vendue" id="quantite_vendue" value=""/></td>
                                     </tr>
                                 </table>
                             </td>
                             <!--PARTIE DROITE-->
                             <td>
-                                <table>
-                                    <tr>
-                                        <td>Date de fabrication : </td>
-                                        <td><input type="text" name="date_fabrication" id="date_fabrication" value=""/></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Date de peremption : </td>
-                                        <td><input type="text" name="date_peremption" id="date_peremption" value=""/></td>
-                                    </tr>
-                                </table>
+
                             </td>
                         </tr>
                     </table>
-                    <input type="hidden" id="target" name="target" value="produits_facture" />
-                    <input type="hidden" id="id_produit_facture" name="id_produit_facture" value="0" />
+                    <input type="hidden" id="target" name="target" value="produits_vente" />
+                    <input type="hidden" id="id_produit_vente" name="id_produit_vente" value="0" />
                 </form>
             </div>
             <hr size="1" style="margin-top: 50px;" />
@@ -420,61 +340,11 @@ $(document).ready (function ()
 							<td colspan="2" width="100%">
 								<div class="titre">
 									<b>
-										<i><u>INFORMATIONS DE LA FACTURE:</u></i> <span style="margin-left:260px;">Prix total de la facture : <strong><?php echo $_smarty_tpl->tpl_vars['montant_facture']->value;?>
-</strong> FCFA</span>
+										<i><u>INFORMATIONS DE LA FACTURE:</u></i> <span style="margin-left:260px;">Montant de la facture : <strong>{$montant_facture}</strong> FCFA</span>
 										<hr/>
 									</b>
 								</div>
 							</td>
-						</tr>
-                        <tr>
-							<td>
-								Numéro de la facture :<span class="champObligatoire">*</span>
-							</td>
-							<td>
-								<input type="text" id="numero_facture" name="numero_facture" value="<?php if ($_smarty_tpl->tpl_vars['id_facture']->value!=0){?><?php echo $_smarty_tpl->tpl_vars['numero_facture']->value;?>
-<?php }?>"/>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								Raison sociale du fournisseur :<span class="champObligatoire">*</span>
-							</td>
-							<td>
-								<select name="id_fournisseur" id="id_fournisseur">
-										<option value="">Sélectionner un fournisseur</option>
-											<?php  $_smarty_tpl->tpl_vars['item'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['item']->_loop = false;
- $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['fournisseurs']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['item']->key => $_smarty_tpl->tpl_vars['item']->value){
-$_smarty_tpl->tpl_vars['item']->_loop = true;
- $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['item']->key;
-?>
-												<?php if ($_smarty_tpl->tpl_vars['id_fournisseur']->value==0){?>
-													<option value="<?php echo $_smarty_tpl->tpl_vars['item']->value['idt_fournisseurs'];?>
-"><?php echo $_smarty_tpl->tpl_vars['item']->value['nom_fournisseur'];?>
-</option>
-												<?php }else{ ?>
-													<?php if ($_smarty_tpl->tpl_vars['item']->value['idt_fournisseurs']==$_smarty_tpl->tpl_vars['id_fournisseur']->value){?>
-														<?php $_smarty_tpl->tpl_vars["opt"] = new Smarty_variable("selected='selected'", null, 0);?>
-													<?php }else{ ?>
-														<?php $_smarty_tpl->tpl_vars["opt"] = new Smarty_variable('', null, 0);?>
-													<?php }?>
-													<option value="<?php echo $_smarty_tpl->tpl_vars['item']->value['idt_fournisseurs'];?>
-" <?php echo $_smarty_tpl->tpl_vars['opt']->value;?>
- ><?php echo $_smarty_tpl->tpl_vars['item']->value['nom_fournisseur'];?>
-</option>
-												<?php }?>
-										<?php } ?>
-								</select>
-							</td>
-						</tr>
-						<tr>
-							<td>Date de la facture :<span class="champObligatoire">*</span></td>
-            				<td>
-            					<input type="text" name="date_facture" id="date_facture" value="<?php if ($_smarty_tpl->tpl_vars['id_facture']->value!=0){?><?php echo $_smarty_tpl->tpl_vars['date_facture']->value;?>
-<?php }?>"/>
-            				</td>
 						</tr>
                         <tr>
                             <td>
@@ -488,13 +358,11 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 				</td>
 			</tr>
 		</table>
-		<input type="hidden" name="target" id="target" value="factures"/>
-		<input type="hidden" name="id_facture" id="id_facture" value="<?php if ($_smarty_tpl->tpl_vars['id_facture']->value!=0){?><?php echo $_smarty_tpl->tpl_vars['id_facture']->value;?>
-<?php }else{ ?><?php echo 0;?>
-<?php }?>"/>
+		<input type="hidden" name="target" id="target" value="facture_vente"/>
+		<input type="hidden" name="id_facture_vente" id="id_facture_vente" value="0"/>
 	</form>
 </div>
-<hr size="1" style="margin-top: 5px; margin-top: 80px;" />
+<hr size="1" style="margin-top: 5px; margin-top: 0px;" />
 <div style="float: left; text-align: left; margin-left: 200px;"><span class="champObligatoire">*</span> : Champs obligatoires.</div>
 <div style="float: right; text-align: right; margin-right: 200px;">
     <table border="0" cellspacing="0" cellpadding="0" align="right">
@@ -505,5 +373,4 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
         </tr>
     </table>        
 </div>
-<?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-<?php }} ?>
+{include file='common/footer.tpl'}

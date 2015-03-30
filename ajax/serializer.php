@@ -98,6 +98,14 @@ else
 			{
 				include ("Serializer/produits_facture.php");
 			}
+            else if ($_POST ["target"] == "produits_vente")
+            {
+                include ("Serializer/produits_vente.php");
+            }
+            else if ($_POST ["target"] == "facture_vente")
+            {
+                include ("Serializer/edit_facture_vente.php");
+            }
             else if ($_POST ["target"] == "operations_journal")
             {
                 include ("Serializer/operations_journal.php");

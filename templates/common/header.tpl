@@ -766,7 +766,8 @@ $(document).ready (function ()
 				      <ul>
 				         <li class='has-sub'><a href="administration_magasin.php?sub=produits"><span>Ajouter / Modifer un produit</span></a></li>
                           <li class='has-sub'><a href="administration_magasin.php?sub=fournisseurs"><span>Ajouter / modifier un fournisseur</span></a></li>
-				         <li class='has-sub'><a href="administration_magasin.php?sub=edit_facture"><span>Ajouter / Modifier une facture</span></a></li>
+				         <li class='has-sub'><a href="administration_magasin.php?sub=edit_facture"><span>Enregistrer une facture d'achat</span></a></li>
+                          <li class='has-sub'><a href="administration_magasin.php?sub=edit_facture_vente"><span>Etablir une facture de vente</span></a></li>
                           <li class='has-sub'><a href="administration_magasin.php?sub=edit_operations_journal"><span>Réaliser le journal</span></a></li>
 				         <li class='has-sub'><a href="administration_magasin.php?sub=inventaire"><span>Réaliser l'inventaire du magasin</span></a></li>
 				      </ul>

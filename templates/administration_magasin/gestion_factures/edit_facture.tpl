@@ -275,12 +275,12 @@ $(document).ready (function ()
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
 			<div class="ico_title"><img src="css/images/ico_42x42/menu_consult.png" /></div>
             <div class="t_titre">
-                <div class="title"><strong>Ajouter/Modifier</strong> <strong style="color:black;">des produits dans une facture</strong></div>
+                <div class="title"><strong>Enregistrer</strong> <strong style="color:black;"> une facture d'achat</strong></div>
             </div>
         </div>
   	</div>
 	<div class="intro">
-	Dans cet écran, vous avez la possibilité de créer/modifier les produits d'une facture. Veuillez remplir les champs obligatoires, et appuyez sur le bouton "Valider".
+	Dans cet écran, vous avez la possibilité de d'enregistrer les produits d'une facture d'achat. Veuillez remplir les champs obligatoires, et appuyez sur le bouton "Valider".
 	</div>
 	<br/><br/>
 	{include file="common/messages_boxes.tpl"}

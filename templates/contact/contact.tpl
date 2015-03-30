@@ -7,6 +7,31 @@ $(document).ready (function ()
 });
 
 </script>
+    <style type="text/css">
+        .blocInfoBis
+        {
+            background-image: url("css/images/bg_bloc_alertes.png");
+            background-repeat: repeat;
+            border: 1px solid #313131;
+            padding: 5px 5px 5px;
+        }
+        .maindiv{
+            width:690px;
+            margin:0 auto;
+            padding:20px;
+            background:#CCC;
+        }
+        .innerbg{
+            padding:6px;
+            background:#FFF;
+        }
+        .link{
+            font-weight:bold;
+            color:#ff0000;
+            text-decoration:none;
+            font-size:12px;
+        }
+    </style>
 {/literal}
 <div id="Content">
     <div class="bloc_title">
@@ -37,32 +62,6 @@ $(document).ready (function ()
 
     <div style="width: 100%;">
         <form name="form_popup" id="form_popup" method="post">
-
-            <style type="text/css">
-                .blocInfoBis
-                {
-                    background-image: url("css/images/bg_bloc_alertes.png");
-                    background-repeat: repeat;
-                    border: 1px solid #313131;
-                    padding: 5px 5px 5px;
-                }
-                .maindiv{ 
-                    width:690px; 
-                    margin:0 auto; 
-                    padding:20px; 
-                    background:#CCC;
-                }
-                .innerbg{ 
-                    padding:6px; 
-                    background:#FFF;
-                }
-                .link{ 
-                    font-weight:bold; 
-                    color:#ff0000; 
-                    text-decoration:none; 
-                    font-size:12px;
-                }
-            </style>
             <div style="clear: both;">&nbsp;</div>
             <table cellspacing="2" cellpadding="2" class="blocInfoBis" width="100%">
                 <tr>

@@ -171,6 +171,21 @@
 				$tpl_index->assign ("error", 1);
 			}
 		}
+        else if($_GET ["target"] == "produit_facture_vente")
+        {
+            $sql = "DELETE FROM t_produits_ventes WHERE idt_produits_ventes = $id";
+            $ok &= $db->Execute ( $sql );
+            if( $ok )
+            {
+                $tpl_index->assign ("message", $db->fixEncoding("Le produit a bien été supprimé de la facture."));
+                $tpl_index->assign ("error", 0);
+            }
+            else
+            {
+                $tpl_index->assign ("message", $db->fixEncoding("La suppression du produit dans la facture a échouée."));
+                $tpl_index->assign ("error", 1);
+            }
+        }
 		else if($_GET ["target"] == "delete_produits_facture")
 		{
 			$sql = "DELETE FROM t_produits_factures";
@@ -186,6 +201,21 @@
 				$tpl_index->assign ("error", 1);
 			}
 		}
+        else if($_GET ["target"] == "delete_produits_ventes")
+        {
+            $sql = "DELETE FROM t_produits_ventes";
+            $ok &= $db->Execute ( $sql );
+            if( $ok )
+            {
+                $tpl_index->assign ("message", $db->fixEncoding("La suppression de la facture a bien été réalisée."));
+                $tpl_index->assign ("error", 0);
+            }
+            else
+            {
+                $tpl_index->assign ("message", $db->fixEncoding("La suppression de la facture a échouée."));
+                $tpl_index->assign ("error", 1);
+            }
+        }
         else if ( $_GET ["target"] == "produit_operation" )
         {
             $sql = "DELETE FROM t_produits_operations WHERE idt_produits_operations = $id";
