@@ -98,14 +98,6 @@
 				
 				if( $id_facture != 0 )
 				{
-//					$_SESSION["GET"] = $_GET;
-//
-//					$id_facture = $_GET["id_facture"];
-//					$numero_facture = $_GET["numero_facture"];
-//					$id_fournisseur = $_GET["id_fournisseur"];
-//					$nom_fournisseur = $_GET["nom_fournisseur"];
-//					$date_facture = $_GET["date_facture"];
-
 					$produits_factures = $db->getAllProduitsOperationsFacture();
                     $montant_facture = 0;
 
@@ -113,12 +105,6 @@
                         $nb_produits++;
                         $montant_facture += $pf["quantite_achat"] * $pf["prix_achat"];
                     }
-
-//                    $tpl_index->assign( "numero_facture", $numero_facture );
-//					$tpl_index->assign( "id_fournisseur", $id_fournisseur );
-//					$tpl_index->assign( "nom_fournisseur", $nom_fournisseur );
-//					$tpl_index->assign( "date_facture", $date_facture );
-					$tpl_index->assign( "montant_facture", number_format( $montant_facture, 2, ',', ' ') );
 				}
 				else
 				{
@@ -135,23 +121,196 @@
 
 				$fournisseurs = $db->getAllFournisseurs ();
 
+                $tpl_index->assign( "montant_facture", number_format( $montant_facture, 2, ',', ' ') );
                 $tpl_index->assign( "nb_produits", $nb_produits );
 				$tpl_index->assign( "id_facture", $id_facture );
 				$tpl_index->assign( "fournisseurs", $fournisseurs );
 
 				$target = "gestion_factures/edit_facture";
 			}
-            else if( $target == "edit_facture_vente" )
+            else if( $target == "edit_historique_facture_achat" )
             {
-                $produits_factures = $db->getAllProduitsVendusFacture();
+                $okFacture = true;
+                $nb_produits = 0;
                 $montant_facture = 0;
 
-                foreach( $produits_factures as $pf ){
-                    $nb_produits++;
+                if(isset($_GET["id_facture_achat"])) {
+                    $id_facture = $_GET["id_facture_achat"];
+                    $_SESSION["id_facture"] = $id_facture;
+                    $produits = $db->getAllProduitsAchetesByFacture($id_facture);
+
+                    $numero_facture = $produits[0]["numero_facture"];
+                    $date_facture = SQLDateToFrenchDate($produits[0]["date_facture"]);
+                    $commentaire = $produits[0]["commentaire"];
+                    $id_fournisseur = $produits[0]["id_fournisseur"];
+
+                    // si on est en mode suppression, on ne reinitialise pas la table tampon courante
+                    if( !isset($_SESSION["delete"])) {
+
+                        $sql = "DELETE FROM t_produits_factures";
+                        if ($db->Execute($sql)) {
+                            foreach ($produits as $info) {
+                                $id_produit = $info["id_produit"];
+                                $quantite_achat = $info["quantite_achat"];
+                                $date_fabrication = $info["date_fabrication"];
+                                $date_peremption = $info["date_peremption"];
+                            //    $id_fournisseur = $info["id_fournisseur"];
+
+
+                                $sql = "INSERT INTO t_produits_factures
+                                                (id_produit,
+                                                 quantite_achat,
+                                                 date_fabrication,
+                                                 date_peremption)
+                                        VALUES ('$id_produit',
+                                                '$quantite_achat',
+                                                '$date_fabrication',
+                                                '$date_peremption')";
+
+                                if ($db->Execute($sql)) {
+                                    $okFacture &= true;
+                                } else {
+                                    $okFacture &= false;
+                                }
+                            }
+                        } else {
+                            $db->rollBack();
+                        }
+                    }
+
+                    if($okFacture)
+                    {
+                        $db->commit ();
+                        $produits_factures = $db->getAllProduitsOperationsFacture();
+
+                        foreach( $produits_factures as $pf ){
+                            $nb_produits++;
+                            $montant_facture += $pf["quantite_achat"] * $pf["prix_achat"];
+                        }
+                    }
+                    else
+                    {
+                        $db->rollBack();
+                    }
+                }
+
+                $fournisseurs = $db->getAllFournisseurs ();
+
+                $tpl_index->assign( "montant_facture", number_format( $montant_facture, 2, ',', ' ') );
+                $tpl_index->assign( "nb_produits", $nb_produits );
+                $tpl_index->assign( "id_facture", $id_facture );
+                $tpl_index->assign( "numero_facture", $numero_facture );
+                $tpl_index->assign( "date_facture", $date_facture );
+                $tpl_index->assign( "fournisseurs", $fournisseurs );
+                $tpl_index->assign( "id_fournisseur", $id_fournisseur );
+                $tpl_index->assign( "commentaire", $commentaire );
+
+                $target = "gestion_factures/edit_facture";
+            }
+            else if( $target == "edit_historique_facture_vente" )
+            {
+                $okFacture = true;
+                $nb_produits = 0;
+                $montant_facture = 0;
+
+                if(isset($_GET["id_facture_vente"])) {
+                    $id_facture = $_GET["id_facture_vente"];
+                    $_SESSION["id_facture"] = $id_facture;
+                    $produits = $db->getAllProduitsVendusByFacture($id_facture);
+
+                    $numero_facture = $produits[0]["numero_facture"];
+                    $date_facture = SQLDateToFrenchDate($produits[0]["date_facture"]);
+                    $commentaire = $produits[0]["commentaire"];
+
+                    // si on est en mode suppression, on ne reinitialise pas la table tampon courante
+                    if( !isset($_SESSION["delete"])) {
+
+                        $sql = "DELETE FROM t_produits_ventes";
+                        if ($db->Execute($sql)) {
+                            foreach ($produits as $info) {
+                                $id_produit = $info["id_produit"];
+                                $quantite_vendue = $info["quantite_vendue"];
+
+                                $sql = "INSERT INTO t_produits_ventes
+                                                (id_produit,
+                                                 quantite_vendue)
+                                        VALUES ('$id_produit',
+                                                '$quantite_vendue')";
+
+                                if ($db->Execute($sql)) {
+                                    $okFacture &= true;
+                                } else {
+                                    $okFacture &= false;
+                                }
+                            }
+                        } else {
+                            $db->rollBack();
+                        }
+                    }
+
+                    if($okFacture)
+                    {
+                        $db->commit ();
+                        $produits_factures = $db->getAllProduitsOperationsVentesFacture();
+
+                        foreach( $produits_factures as $pf ){
+                            $nb_produits++;
+                            $montant_facture += $pf["quantite_vendue"] * $pf["prix_vente"];
+                        }
+                    }
+                    else
+                    {
+                        $db->rollBack();
+                    }
+                }
+
+                $tpl_index->assign( "montant_facture", number_format( $montant_facture, 2, ',', ' ') );
+                $tpl_index->assign( "id_facture", $id_facture );
+                $tpl_index->assign( "numero_facture", $numero_facture );
+                $tpl_index->assign( "date_facture", $date_facture );
+                $tpl_index->assign( "commentaire", $commentaire );
+
+                $target = "gestion_factures/edit_facture_vente";
+            }
+            else if( $target == "edit_facture_vente" )
+            {
+//                $produits_factures = $db->getAllProduitsVendusFacture();
+//                $montant_facture = 0;
+//
+//                foreach( $produits_factures as $pf ){
+//                    $nb_produits++;
+//                    $montant_facture += $pf["quantite_vendue"] * $pf["prix_vente"];
+//                }
+//
+//                $tpl_index->assign("montant_facture", number_format( $montant_facture, 2, ',', ' '));
+//
+//                $target = "gestion_factures/edit_facture_vente";
+
+                $nb_produits = 0;
+                $montant_facture = 0;
+                $id_facture = 0;
+                $montant_facture = 0;
+
+                if(isset($_SESSION["id_facture"])) {
+                    $id_facture = $_SESSION["id_facture"];
+                    $produits = $db->getAllProduitsVendusByFacture($id_facture);
+
+                    $numero_facture = $produits[0]["numero_facture"];
+                    $date_facture = SQLDateToFrenchDate($produits[0]["date_facture"]);
+                    $commentaire = $produits[0]["commentaire"];
+                }
+
+                $produits_factures = $db->getAllProduitsOperationsVentesFacture();
+
+                foreach ($produits_factures as $pf) {
                     $montant_facture += $pf["quantite_vendue"] * $pf["prix_vente"];
                 }
 
-                $tpl_index->assign("montant_facture", number_format( $montant_facture, 2, ',', ' '));
+                $tpl_index->assign( "id_facture", $id_facture );
+                $tpl_index->assign( "numero_facture", $numero_facture );
+                $tpl_index->assign( "commentaire", $commentaire );
+                $tpl_index->assign( "date_facture", $date_facture );
+                $tpl_index->assign( "montant_facture", number_format( $montant_facture, 2, ',', ' ') );
 
                 $target = "gestion_factures/edit_facture_vente";
             }
@@ -165,55 +324,41 @@
 			{
 				$target = "gestion_magasin/recapitulatif_inventaire";
 			}
-			else if( $target == "generate_synthese" )
-			{
-				$nb_histo_syntheses = $db->getNbHistoriqueSyntheseInDB ();
-				$tpl_index->assign("nb_histo_syntheses", $nb_histo_syntheses);
-				$target = "gestion_magasin/generate_synthese";
-			}
-			else if( $target == "historiques_factures" )
-			{
-				$id_groupe = $_GET ["id_groupe"];
-				$_SESSION["id_groupe"] = $id_groupe;
-				$nb_histo_factures = $db->getNbHistoriquesFacturesByGroupInDB( $id_groupe );
-				$tpl_index->assign("nb_histo_factures", $nb_histo_factures);
-				$target = "gestion_magasin/historiques_factures";
-			}
-			else if( $target == "historiques_inventaires" )
-			{
-				$nb_histo_syntheses = $db->getNbHistoriqueSyntheseInDB ();
-				$tpl_index->assign("nb_histo_syntheses", $nb_histo_syntheses);
-				$target = "gestion_magasin/historique_syntheses";
-			}
-			else if( $target == "statistiques" )
-			{
-				$target = "statistiques/statistiques";
-			}
 			else if( $target == "produits_facture" )
 			{
-				$_GET = $_SESSION["GET"];
+                $nb_produits = 0;
+                $montant_facture = 0;
+                $id_facture = 0;
+                $id_fournisseur = 0;
+                $montant_facture = 0;
 
-				$id_facture = $_GET["id_facture"];
-				$numero_facture = $_GET["numero_facture"];
-				$id_fournisseur = $_GET["id_fournisseur"];
-				$nom_fournisseur = $_GET["nom_fournisseur"];
-				$date_facture = $_GET["date_facture"];
+                if(isset($_SESSION["id_facture"])) {
+                    $id_facture = $_SESSION["id_facture"];
+                    $produits = $db->getAllProduitsAchetesByFacture($id_facture);
 
-				$nb_produits = $db->getNbProduitsInFacture ();
-				$fournisseurs = $db->getAllFournisseurs();
+                    $numero_facture = $produits[0]["numero_facture"];
+                    $date_facture = SQLDateToFrenchDate($produits[0]["date_facture"]);
+                    $commentaire = $produits[0]["commentaire"];
+                    $id_fournisseur = $produits[0]["id_fournisseur"];
+                }
+
+                $nb_produits = $db->getNbProduitsInFacture();
+
                 $produits_factures = $db->getAllProduitsOperationsFacture();
 
-                $montant_facture = 0;
-                foreach( $produits_factures as $pf ){
+                foreach ($produits_factures as $pf) {
                     $montant_facture += $pf["quantite_achat"] * $pf["prix_achat"];
                 }
+
+
+                $fournisseurs = $db->getAllFournisseurs();
 
 				$tpl_index->assign( "nb_produits", $nb_produits );
 				$tpl_index->assign( "fournisseurs", $fournisseurs );
 				$tpl_index->assign( "id_facture", $id_facture );
 				$tpl_index->assign( "numero_facture", $numero_facture );
 				$tpl_index->assign( "id_fournisseur", $id_fournisseur );
-				$tpl_index->assign( "nom_fournisseur", $nom_fournisseur );
+				$tpl_index->assign( "commentaire", $commentaire );
 				$tpl_index->assign( "date_facture", $date_facture );
 				$tpl_index->assign( "montant_facture", number_format( $montant_facture, 2, ',', ' ') );
 

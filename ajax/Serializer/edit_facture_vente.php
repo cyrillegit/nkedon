@@ -10,7 +10,10 @@
 $db = new Database ();
 $db->beginTransaction ();
 
-isset( $_POST ["id_facture_vente"] ) ? $id = $_POST ["id_facture_vente"] : $id = NULL;
+if(isset($_SESSION["id_facture"])) unset( $_SESSION["id_facture"] );
+
+isset( $_POST ["id_facture"] ) ? $id = $_POST ["id_facture"] : $id = NULL;
+
 if( $id != NULL )
 {
    isset( $_POST ["commentaire"] ) ? $commentaire = addslashes(htmlspecialchars($_POST ["commentaire"])) : $commentaire = "";
@@ -115,54 +118,62 @@ if( $id != NULL )
 				$sql = "UPDATE t_factures_ventes
 						SET numero_facture = '$numero_facture',
 							date_facture = '$date_facture',
-							commentaire = '$commentaire'
-							id_inventaire = 0,
+							commentaire = '$commentaire',
 							id_user = '$id_user'
 						WHERE idt_factures_ventes = '$id'";
 
 					if( $db->Execute ( $sql ) )
 					{
-						foreach ($infoAllProduitsVendus as $info)
-						{
-							$id_produit = $info["id_produit"];
-							$quantite_vendue = $info["quantite_vendue"];
+                        $sql = "DELETE FROM t_ventes WHERE id_facture_vente = '$id'";
+                        if( $db->Execute ( $sql ) )
+                        {
+                            foreach ($infoAllProduitsVendus as $info)
+                            {
+                                $id_produit = $info["id_produit"];
+                                $quantite_vendue = $info["quantite_vendue"];
 
-                            $sql = "UPDATE t_ventes
-                                    SET id_produit = '$id_produit',
-                                        id_facture_vente = '$id',
-                                        quantite_vendue = '$quantite_vendue'
-                                    WHERE id_facture_vente = '$id'";
-							
-							if($db->Execute($sql))
-							{
-								$okFacture &= true;
-							}
-							else
-							{
-								$okFacture &= false;
-							}
-						}
+                                $sql = "UPDATE t_ventes
+                                        SET id_produit = '$id_produit',
+                                            id_facture_vente = '$id',
+                                            quantite_vendue = '$quantite_vendue'
+                                        WHERE id_facture_vente = '$id'";
 
-						if( $okFacture )
-						{
-							$sql = "DELETE FROM t_produits_ventes";
+                                if($db->Execute($sql))
+                                {
+                                    $okFacture &= true;
+                                }
+                                else
+                                {
+                                    $okFacture &= false;
+                                }
+                            }
 
-							if($db->Execute($sql))
-							{
-								$db->commit ();
-								echo "({'result': 'SUCCESS'})";
-							}
-							else
-							{
-								$db->rollBack();
-								echo "({'result': 'Une erreur est survenue lors de l \'insertion de la facture en base de données.'})";
-							}
-						}
-						else
-						{
-							$db->rollBack();
-							echo "({'result': 'Une erreur est survenue lors de l \'insertion de la facture en base de données.'})";
-						}
+                            if( $okFacture )
+                            {
+                                $sql = "DELETE FROM t_produits_ventes";
+
+                                if($db->Execute($sql))
+                                {
+                                    $db->commit ();
+                                    echo "({'result': 'SUCCESS'})";
+                                }
+                                else
+                                {
+                                    $db->rollBack();
+                                    echo "({'result': 'Une erreur est survenue lors de l \'insertion de la facture en base de données.'})";
+                                }
+                            }
+                            else
+                            {
+                                $db->rollBack();
+                                echo "({'result': 'Une erreur est survenue lors de l \'insertion de la facture en base de données.'})";
+                            }
+                        }
+                        else
+                        {
+                            $db->rollBack();
+                            echo "({'result': 'Une erreur est survenue lors de la mise à jour de la facture en base de données.'})";
+                        }
 					}
 					else
 					{

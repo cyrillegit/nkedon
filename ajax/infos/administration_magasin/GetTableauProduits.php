@@ -14,18 +14,21 @@ $db = new Database ();
 // $datas = $db->getAllProduitsWithAchats ();
 
 $produits = $db->getAllProduits();
-if( COUNT( $produits ) > 0 )
-{
-    foreach ( $produits as &$produit ) 
-    {
-        $produitsAchats = $db->getProduitWithAchat( $produit["idt_produits"] );
-        $produit["produits_achats"] = $produitsAchats;
-    }
-}
-else
-{
+//$datasAchats = $db->getAllProduitsAchetesNonInventories();
+//$datasVentes = $db->getAllProduitsVendusNonInventories();
 
-}
+//if( COUNT( $produits ) > 0 )
+//{
+//    foreach ( $produits as &$produit )
+//    {
+//        $produitsAchats = $db->getProduitWithAchat( $produit["idt_produits"] );
+//        $produit["produits_achats"] = $produitsAchats;
+//    }
+//}
+//else
+//{
+//
+//}
 ?>
 <script language="javascript">
 $(document).ready (function ()
@@ -71,17 +74,29 @@ $(document).ready (function ()
         <?php
         if( count( $produits ) > 0)
         {
-            foreach( $produits as &$objs )
+            foreach( $produits as &$obj )
             {
-                foreach ( $objs["produits_achats"] as $obj ) 
-                {
+                $quantite_achetee = 0;
+                $quantite_vendue = 0;
+
+                $dataAchat = $db->getProduitAcheteNonInventorie( $obj["idt_produits"]);
+                $dataVente = $db->getProduitVenduNonInventorie( $obj["idt_produits"] );
+
+                if( count( $dataAchat ) > 0 ){
+                    $quantite_achetee = $dataAchat[0]["quantite_achetee"];
+                }
+
+                if( count( $dataVente ) > 0 ){
+                    $quantite_vendue = $dataVente[0]["quantite_vente"];
+                }
+
                     ?>
                     <tr>
                         <td align="center"><span class='floatAndMarginLeft'><?php echo $obj["nom_produit"]; ?></span></td>
                         <td align="center"><span class='floatAndMarginLeft'><?php echo $obj["stock_initial"]; ?></span></td>
-                        <td align="center"><span class='floatAndMarginLeft'><?php echo $obj["stock_initial"] + $obj["quantite_achat"]; ?></span></td>
-                        <td align="center"><span class='floatAndMarginLeft'><?php if( $obj["quantite_achat"] != NULL ) echo $obj["quantite_achat"]; else echo 0; ?></span></td>
-                        <td align="center"><span class='floatAndMarginLeft'><?php echo $obj["stock_initial"] + $obj["quantite_achat"] - $obj["stock_physique"]; ?></span></td>
+                        <td align="center"><span class='floatAndMarginLeft'><?php echo $obj["stock_initial"] + $quantite_achetee - $quantite_vendue; ?></span></td>
+                        <td align="center"><span class='floatAndMarginLeft'><?php echo $quantite_achetee; ?></span></td>
+                        <td align="center"><span class='floatAndMarginLeft'><?php echo $quantite_vendue; ?></span></td>
                         <td align="center"><span class='floatAndMarginLeft'><?php echo number_format( $obj["prix_achat"], 2, ',', ' ' ); ?></span></td>
                         <td align="center"><span class='floatAndMarginLeft'><?php echo number_format( $obj["prix_vente"], 2, ',', ' '); ?></span></td>
                         <td align="center">
@@ -92,7 +107,6 @@ $(document).ready (function ()
                         </td>
                     </tr>
                     <?php
-                }
             }
         }
         ?>

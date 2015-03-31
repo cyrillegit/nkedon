@@ -1,6 +1,6 @@
 <?php
 /**
-	Fichier GetTableauHistoriquesFactures.php
+	Fichier GetTableauHistoriquesFacturesVentes.php
 	-----------------------------------
 	Ce fichier crée un tableau contenant les informations des factures en base de données.
 */
@@ -11,7 +11,7 @@
 @session_start();
 $db = new Database ();
 
-$factures = $db->getAllFactures();
+$factures = $db->getAllFacturesVentes();
 if( COUNT($factures) > 0 )
 {
     foreach ( $factures as &$facture )
@@ -33,13 +33,13 @@ $(document).ready (function ()
     {
         $(this).click (function ()
         {
-            document.location.href="historiques.php?sub=historiques_factures&annee="+$(this).attr("annee");
+            document.location.href="historiques.php?sub=historiques_factures_ventes&annee="+$(this).attr("annee");
         });
     });
 });
 </script>
 
-<div style="float: left; width: 100%; font-size: 16px; padding-left: 30px; padding-top: 30px;"><em><strong><span class="adminSubtitle">Accedez à l'historique des factures d'une année en cliquant sur un des liens ci-dessous :</span></strong></em>
+<div style="float: left; width: 100%; font-size: 16px; padding-left: 30px; padding-top: 30px;"><em><strong><span class="adminSubtitle">Accedez à l'historique des factures de ventes d'une année en cliquant sur un des liens ci-dessous :</span></strong></em>
     <div>
         <br />
         <ul class="my_account">

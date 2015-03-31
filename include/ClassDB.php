@@ -645,21 +645,80 @@
 		}
 
 		/**
-		 * Fonction getAllProduitsWithAchats
+		 * Fonction getAllProduitsAchetesNonInventories
 		 * -------------------
-		 * Retourne les produits pr�sents et les quantit� correspondantes en base de donn�es
+		 * Retourne les produits achetés et non deja inventaorés
 		 *
 		 * @return array
 		 */
-		public function getAllProduitsWithAchats ()
+		public function getAllProduitsAchetesNonInventories ()
 		{
-			$this->Sql = "SELECT p.idt_produits, p.nom_produit, p.stock_initial, p.stock_physique, p.prix_achat, p.prix_vente, SUM(a.quantite_achat) AS quantite_achat
-							FROM t_produits AS p
-							LEFT JOIN t_achats AS a ON p.idt_produits = a.id_produit
-							GROUP BY p.idt_produits";
+			$this->Sql = "SELECT *, SUM(quantite_achat) AS quantite_achetee
+                            FROM t_achats AS a
+                            JOIN t_factures AS f
+                            ON a.id_facture = f.idt_factures
+                            WHERE f.id_inventaire = 0
+                            GROUP BY a.id_produit";
 			$res = $this->FetchAllRows();
 			return $res;
-		}		
+		}
+
+        /**
+         * Fonction getProduitAcheteNonInventorie
+         * -------------------
+         * Retourne le produit acheté et non deja inventorié
+         *
+         * @return array
+         */
+        public function getProduitAcheteNonInventorie ( $id )
+        {
+            $this->Sql = "SELECT *, SUM(quantite_achat) AS quantite_achetee
+                            FROM t_achats AS a
+                            JOIN t_factures AS f
+                            ON a.id_facture = f.idt_factures
+                            WHERE f.id_inventaire = 0 AND a.id_produit = $id
+                            GROUP BY a.id_produit";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getProduitVenduNonInventorie
+         * -------------------
+         * Retourne le produit vendu et non deja inventorié
+         *
+         * @return array
+         */
+        public function getProduitVenduNonInventorie ( $id )
+        {
+            $this->Sql = "SELECT *, SUM(v.quantite_vendue) AS quantite_vente
+                            FROM t_ventes AS v
+                            JOIN t_factures_ventes AS fv
+                            ON v.id_facture_vente = fv.idt_factures_ventes
+                            WHERE fv.id_inventaire = 0 AND v.id_produit = $id
+                            GROUP BY v.id_produit";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getAllProduitsVendusNonInventories
+         * -------------------
+         * Retourne les produits vendus et non deja inventoriés
+         *
+         * @return array
+         */
+        public function getAllProduitsVendusNonInventories ( )
+        {
+            $this->Sql = "SELECT *, SUM(v.quantite_vendue) AS quantite_vente
+                            FROM t_ventes AS v
+                            JOIN t_factures_ventes AS fv
+                            ON v.id_facture_vente = fv.idt_factures_ventes
+                            WHERE fv.id_inventaire = 0
+                            GROUP BY v.id_produit";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
 
 		/**
 		 * Fonction getAutoCompleteProduits
@@ -696,6 +755,22 @@
 		}
 
         /**
+         * Fonction getAllFacturesVentes
+         * -------------------
+         * Retourne les factures de ventes présentes en base de donn�es
+         *
+         * @return array
+         */
+        public function getAllFacturesVentes ()
+        {
+            $this->Sql = "SELECT *
+							FROM t_factures_ventes AS fv
+							ORDER BY fv.idt_factures_ventes";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
          * Fonction getAllFacturesByAnnee
          * -------------------
          * Retourne les factures pr�sentes en base de donn�es pour une annee donnée
@@ -715,6 +790,30 @@
 							FROM t_factures AS fa
 							".$sql_where."
 							ORDER BY fa.idt_factures";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getAllFacturesVentesByAnnee
+         * -------------------
+         * Retourne les factures de ventes presentes en base de données pour une annee donnée
+         *
+         * @return array
+         */
+        public function getAllFacturesVentesByAnnee ($annee)
+        {
+            if( $annee != "" ) {
+                $date_debut = $annee."-01-01";
+                $date_fin = $annee."-12-31";
+                $sql_where = "WHERE fv.date_facture BETWEEN '$date_debut' AND '$date_fin'";
+            }else {
+                $sql_where = "";
+            }
+            $this->Sql = "SELECT *
+							FROM t_factures_ventes AS fv
+							".$sql_where."
+							ORDER BY fv.idt_factures_ventes";
             $res = $this->FetchAllRows();
             return $res;
         }
@@ -792,6 +891,43 @@
 			return $res;
 		}
 
+        /**
+         * Fonction getAllProduitsAssocToFactures
+         * -------------------
+         * Retourne les produits d'une facture d'achat pr�sents en base de donn�es
+         *
+         * @return array
+         */
+        public function getAllProduitsAchetesByFacture ($id)
+        {
+            $this->Sql = "SELECT *
+							FROM t_achats AS a
+							JOIN t_factures AS f ON a.id_facture = f.idt_factures
+							JOIN t_produits AS p ON a.id_produit = p.idt_produits
+							WHERE f.idt_factures = $id
+							ORDER BY a.idt_achats";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getAllProduitsVendusByFacture
+         * -------------------
+         * Retourne les produits d'une facture de vente présents en base de données
+         *
+         * @return array
+         */
+        public function getAllProduitsVendusByFacture ($id)
+        {
+            $this->Sql = "SELECT *
+							FROM t_ventes AS v
+							JOIN t_factures_ventes AS fv ON v.id_facture_vente = fv.idt_factures_ventes
+							JOIN t_produits AS p ON v.id_produit = p.idt_produits
+							WHERE fv.idt_factures_ventes = $id
+							ORDER BY v.idt_ventes";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
 		/**
 		 * Fonction getAllFournisseurs
 		 * -------------------
@@ -1127,38 +1263,6 @@
 			return $res;
 		}
 
-		/**
-		 * Fonction getHistoriquesFacturesByDate
-		 * -------------------
-		 * Retourne l'historique des synthese
-		 *
-		 * @return array
-		 */
-		public function getHistoriquesFacturesByDate( $date_histo_facture, $id_groupe )
-		{
-			if( $date_histo_facture != "" ){ 
-				if ( $id_groupe != "" ) {
-					$sql_where = "WHERE hf.id_groupes_factures = $id_groupe AND  hf.date_facture <= '$date_histo_facture'";
-				}else{
-					$sql_where = "WHERE hf.date_facture <= '$date_histo_facture'";
-				}
-			}else{
-				if ( $id_groupe != "" ) {
-					$sql_where = "WHERE hf.id_groupes_factures = $id_groupe";
-				}else{
-					$sql_where = "";
-				}	
-			}
-
-			$this->Sql = "SELECT * 
-							FROM t_historiques_factures AS hf
-							JOIN t_fournisseurs AS f ON hf.id_fournisseur = f.idt_fournisseurs
-							".$sql_where;
-
-			$res = $this->FetchAllRows();
-			return $res;
-		}
-
         /**
          * Fonction getAllFacturesByMoisAnnee
          * -------------------
@@ -1169,8 +1273,8 @@
         public function getAllFacturesByMoisAnnee( $mois, $annee )
         {
             if( $annee != "" ) {
-                $date_debut = $annee."-".$mois."-01";
-                $date_fin = $annee."-".$mois."-31";
+                $date_debut = $annee."-".$mois."-01 00:00:00";
+                $date_fin = $annee."-".$mois."-31 23:59:59";
                 $sql_where = "WHERE date_facture BETWEEN '$date_debut' AND '$date_fin'";
             }else {
                 $sql_where = "";
@@ -1180,7 +1284,32 @@
 							JOIN t_fournisseurs AS f ON fa.id_fournisseur = f.idt_fournisseurs
 							JOIN t_users AS u ON fa.id_user = u.idt_users
 							".$sql_where."
-							ORDER BY fa.idt_factures";
+							ORDER BY fa.idt_factures DESC";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getAllFacturesVentesByMoisAnnee
+         * -------------------
+         * Retourne les factures de ventes correspondant a un mois et une annee precise
+         *
+         * @return array
+         */
+        public function getAllFacturesVentesByMoisAnnee( $mois, $annee )
+        {
+            if( $annee != "" ) {
+                $date_debut = $annee."-".$mois."-01 00:00:00";
+                $date_fin = $annee."-".$mois."-31 23:59:59";
+                $sql_where = "WHERE fv.date_facture BETWEEN '$date_debut' AND '$date_fin'";
+            }else {
+                $sql_where = "";
+            }
+            $this->Sql = "SELECT *
+							FROM t_factures_ventes AS fv
+							JOIN t_users AS u ON fv.id_user = u.idt_users
+							".$sql_where."
+							ORDER BY fv.idt_factures_ventes";
             $res = $this->FetchAllRows();
             return $res;
         }
@@ -1195,8 +1324,8 @@
         public function getNbFacturesByMoisAnnee( $mois, $annee )
         {
             if( $annee != "" ) {
-                $date_debut = $annee."-".$mois."-01";
-                $date_fin = $annee."-".$mois."-31";
+                $date_debut = $annee."-".$mois."-01 00:00:00";
+                $date_fin = $annee."-".$mois."-31 23:59:59";
                 $sql_where = "WHERE date_facture BETWEEN '$date_debut' AND '$date_fin'";
             }else {
                 $sql_where = "";
@@ -1205,6 +1334,31 @@
 							FROM t_factures AS fa
 							".$sql_where."
 							ORDER BY fa.idt_factures";
+            $res = $this->FetchRow();
+            return $res ["nb"];
+        }
+
+        /**
+         * Fonction getNbFacturesVentesByMoisAnnee
+         * -------------------
+         * Retourne le nombre de  factures de ventes correspondant a un mois et une annee precise
+         *
+         * @return array
+         */
+        public function getNbFacturesVentesByMoisAnnee( $mois, $annee )
+        {
+            if( $annee != "" ) {
+                $date_debut = $annee."-".$mois."-01 00:00:00";
+                $date_fin = $annee."-".$mois."-31 23:59:59";
+                $sql_where = "WHERE fv.date_facture BETWEEN '$date_debut' AND '$date_fin'";
+            //    $sql_where = "WHERE fv.date_facture >= '$date_debut' AND fv.date_facture <= '$date_fin'";
+            }else {
+                $sql_where = "";
+            }
+            $this->Sql = "SELECT COUNT(*) AS nb
+							FROM t_factures_ventes AS fv
+							".$sql_where."
+							ORDER BY fv.idt_factures_ventes";
             $res = $this->FetchRow();
             return $res ["nb"];
         }
@@ -1219,8 +1373,8 @@
         public function getNbInventairesAnnee( $annee )
         {
             if( $annee != "" ) {
-                $date_debut = $annee."-01-01";
-                $date_fin = $annee."-12-31";
+                $date_debut = $annee."-01-01 00:00:00";
+                $date_fin = $annee."-12-31 23:59:59";
                 $sql_where = "WHERE i.date_inventaire BETWEEN '$date_debut' AND '$date_fin'";
             }else {
                 $sql_where = "";
@@ -1629,6 +1783,23 @@
 			return $res;
 		}
 
+        /**
+         * Fonction getAllHistoriquesVentesByFacture
+         * -------------------
+         * Retourne tous les historiques des ventes d'une facture en base de donn�es
+         *
+         * @return array
+         */
+        public function getAllHistoriquesVentesByFacture ( $id )
+        {
+            $this->Sql = "SELECT *
+                                FROM t_ventes AS v
+                                JOIN t_produits AS p ON v.id_produit = p.idt_produits
+                                WHERE v.id_facture_vente = $id";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
 		/**
 		 * Fonction getAllquantiteProduitsAchetesByPeriode
 		 * -------------------
@@ -1754,7 +1925,7 @@
         /**
          * Fonction getAllProduitsOperationsFacture
          * -------------------
-         * Retourne tous les produits d'un facture en cours d'enregistrement
+         * Retourne tous les produits d'un facture d'achat en cours d'enregistrement
          *
          * @return Array
          */
@@ -1764,6 +1935,23 @@
                                 FROM t_produits_factures AS pf
                                 JOIN t_produits AS p
                                 ON p.idt_produits = pf.id_produit";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getAllProduitsOperationsVentesFacture
+         * -------------------
+         * Retourne tous les produits d'un facture de vente en cours d'enregistrement
+         *
+         * @return Array
+         */
+        public function getAllProduitsOperationsVentesFacture()
+        {
+            $this->Sql = "SELECT *
+                                    FROM t_produits_ventes AS pv
+                                    JOIN t_produits AS p
+                                    ON p.idt_produits = pv.id_produit";
             $res = $this->FetchAllRows();
             return $res;
         }

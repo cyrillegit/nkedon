@@ -384,7 +384,7 @@ $(document).ready (function ()
 							<td colspan="2" width="100%">
 								<div class="titre">
 									<b>
-										<i><u>INFORMATIONS DE LA FACTURE:</u></i> <span style="margin-left:260px;">Prix total de la facture : <strong>{$montant_facture}</strong> FCFA</span>
+										<i><u>INFORMATIONS DE LA FACTURE:</u></i> <span style="margin-left:260px;">Montant de la facture : <strong>{$montant_facture}</strong> FCFA</span>
 										<hr/>
 									</b>
 								</div>
@@ -431,7 +431,7 @@ $(document).ready (function ()
                                 Commentaire :
                             </td>
                             <td>
-                                <textarea name="commentaire" id="commentaire" cols="30" rows="10" style="height: 70px; width: 100%;"></textarea>
+                                <textarea name="commentaire" id="commentaire" cols="30" rows="10" value="" style="height: 70px; width: 100%;">{if $id_facture neq 0}{$commentaire}{/if}</textarea>
                             </td>
                         </tr>
 					</table>

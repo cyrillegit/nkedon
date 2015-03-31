@@ -348,10 +348,10 @@ $(document).ready (function ()
 						</tr>
                         <tr>
                             <td>
-                                Commentaire :
+                                Commentaire : {$id_facture}
                             </td>
                             <td>
-                                <textarea name="commentaire" id="commentaire" cols="30" rows="10" style="height: 70px; width: 100%;"></textarea>
+                                <textarea name="commentaire" id="commentaire" cols="30" rows="10" style="height: 70px; width: 100%;">{if $id_facture neq 0}{$commentaire}{/if}</textarea>
                             </td>
                         </tr>
 					</table>
@@ -359,7 +359,7 @@ $(document).ready (function ()
 			</tr>
 		</table>
 		<input type="hidden" name="target" id="target" value="facture_vente"/>
-		<input type="hidden" name="id_facture_vente" id="id_facture_vente" value="0"/>
+		<input type="hidden" name="id_facture" id="id_facture" value="{if $id_facture neq 0}{$id_facture}{else}{0}{/if}"/>
 	</form>
 </div>
 <hr size="1" style="margin-top: 5px; margin-top: 0px;" />

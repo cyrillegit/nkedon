@@ -11,7 +11,7 @@
 @require_once("../../../include/ClassBackupDatabase.php");
 
 $html2pdf = new HTML2PDF('L','A4','fr', false, 'ISO-8859-15', array(5, 5, 5, 5));
-$buildHtml = new BuildHtml();
+//$buildHtml = new BuildHtml();
 
 @session_start ();
 $db = new Database ();
@@ -75,29 +75,29 @@ else
                 $db->rollBack();
             }
 
-            // directory for pdf file
-            $directoryInventaire = "../../../downloads/Inventaire";
-            if( !file_exists( $directoryInventaire ) )
-            {
-                mkdir( $directoryInventaire, 0777, true );
-            }
-
-            // directory for sql file
-            $directoryBackupDB = "../../../downloads/BackupDB";
-            if(!file_exists( $directoryBackupDB ))
-            {
-                mkdir( $directoryBackupDB, 0777, true);
-            }
-
-            $file_inventaire = "inventaire_".str_replace("-", "", explode(" ", setLocalTime())[0])."_".str_replace(":", "", explode(" ", setLocalTime())[1]);
-            $filename = $directoryInventaire."/".$file_inventaire.".html";
-
-            if(file_exists($filename))
-            {
-                unlink($filename);
-            }
-
-            $htmlContent = $buildHtml->generateContent();
+//            // directory for pdf file
+//            $directoryInventaire = "../../../downloads/Inventaire";
+//            if( !file_exists( $directoryInventaire ) )
+//            {
+//                mkdir( $directoryInventaire, 0777, true );
+//            }
+//
+//            // directory for sql file
+//            $directoryBackupDB = "../../../downloads/BackupDB";
+//            if(!file_exists( $directoryBackupDB ))
+//            {
+//                mkdir( $directoryBackupDB, 0777, true);
+//            }
+//
+//            $file_inventaire = "inventaire_".str_replace("-", "", explode(" ", setLocalTime())[0])."_".str_replace(":", "", explode(" ", setLocalTime())[1]);
+//            $filename = $directoryInventaire."/".$file_inventaire.".html";
+//
+//            if(file_exists($filename))
+//            {
+//                unlink($filename);
+//            }
+//
+//            $htmlContent = $buildHtml->generateContent();
 
 //            $head = "<!DOCTYPE html>
 //                    <html>
@@ -330,9 +330,9 @@ else
                     $idt_produits = $produit["idt_produits"];
                     $stock_physique = $produit["stock_physique"];
                     $sql = "UPDATE t_produits
-                            SET stock_initial = $stock_physique,
+                            SET stock_initial = '$stock_physique',
                                 stock_physique = 0
-                            WHERE idt_produits = $idt_produits";
+                            WHERE idt_produits = '$idt_produits'";
 
                     if($db->Execute ( $sql ))
                     {

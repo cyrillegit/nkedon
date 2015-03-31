@@ -778,7 +778,8 @@ $(document).ready (function ()
                     {if $smarty.session.infoUser.id_type_user <= 5}
                         <li class='has-sub'><a href="historiques.php"><span>Historiques</span></a>
                             <ul>
-                                <li class="has-sub"><a href="historiques.php?sub=historiques_factures"><span>Historiques des factures</span></a></li>
+                                <li class="has-sub"><a href="historiques.php?sub=historiques_factures"><span>Historiques des factures d'achats</span></a></li>
+                                <li class="has-sub"><a href="historiques.php?sub=historiques_factures_ventes"><span>Historiques des factures de ventes</span></a></li>
                                 <li class='has-sub'><a href="historiques.php?sub=historiques_journal"><span>Historiques des journaux</span></a></li>
                                 <li class='has-sub'><a href="historiques.php?sub=historiques_inventaires"><span>Historiques des inventaires</span></a></li>
                                 {if $smarty.session.infoUser.id_type_user <= 4}

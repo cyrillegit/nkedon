@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-30 13:24:02
+<?php /* Smarty version Smarty-3.1.14, created on 2015-03-31 17:15:14
          compiled from ".\templates\administration_magasin\gestion_factures\edit_facture.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2141652ebd4f06be6f3-26729779%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e7a7bff35746525492e465fd68ae0abd1fc90e8b' => 
     array (
       0 => '.\\templates\\administration_magasin\\gestion_factures\\edit_facture.tpl',
-      1 => 1427721841,
+      1 => 1427822110,
       2 => 'file',
     ),
   ),
@@ -28,6 +28,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'item' => 0,
     'opt' => 0,
     'date_facture' => 0,
+    'commentaire' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -420,7 +421,7 @@ $(document).ready (function ()
 							<td colspan="2" width="100%">
 								<div class="titre">
 									<b>
-										<i><u>INFORMATIONS DE LA FACTURE:</u></i> <span style="margin-left:260px;">Prix total de la facture : <strong><?php echo $_smarty_tpl->tpl_vars['montant_facture']->value;?>
+										<i><u>INFORMATIONS DE LA FACTURE:</u></i> <span style="margin-left:260px;">Montant de la facture : <strong><?php echo $_smarty_tpl->tpl_vars['montant_facture']->value;?>
 </strong> FCFA</span>
 										<hr/>
 									</b>
@@ -481,7 +482,8 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
                                 Commentaire :
                             </td>
                             <td>
-                                <textarea name="commentaire" id="commentaire" cols="30" rows="10" style="height: 70px; width: 100%;"></textarea>
+                                <textarea name="commentaire" id="commentaire" cols="30" rows="10" value="" style="height: 70px; width: 100%;"><?php if ($_smarty_tpl->tpl_vars['id_facture']->value!=0){?><?php echo $_smarty_tpl->tpl_vars['commentaire']->value;?>
+<?php }?></textarea>
                             </td>
                         </tr>
 					</table>

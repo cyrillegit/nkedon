@@ -47,7 +47,7 @@ $(document).ready (function ()
         	<th>Désignation du produit</th>
             <th>Prix d'achat (FCFA)</th>
         	<th>Quantité achetée</th>
-            <th>Prix total (FCFA)</th>
+            <th>Montant (FCFA)</th>
             <th>Date fabrication</th>
             <th>Date peremption</th>
             <th>Actions</th>

@@ -10,6 +10,8 @@
 $db = new Database ();
 $db->beginTransaction ();
 
+if(isset($_SESSION["id_facture"])) unset( $_SESSION["id_facture"] );
+
 isset( $_POST ["id_facture"] ) ? $id_facture = $_POST ["id_facture"] : $id_facture = NULL;
 if( $id_facture != NULL )
 {

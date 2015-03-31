@@ -18,12 +18,12 @@ $id_type_user = $_SESSION["infoUser"]["idt_types_users"];
 // unset deletion mode
 unset( $_SESSION["delete"] );
 
-$histo_factures = $db->getAllFacturesByMoisAnnee( $mois, $annee );
+$histo_factures = $db->getAllFacturesVentesByMoisAnnee( $mois, $annee );
 if( COUNT($histo_factures) > 0 )
 {
     foreach ( $histo_factures as &$facture ) 
     {
-        $produitsFacture = $db->getAllHistoriquesAchatsByFacture( $facture["idt_factures"] );
+        $produitsFacture = $db->getAllHistoriquesVentesByFacture( $facture["idt_factures_ventes"] );
         $facture["produits_associes"] = $produitsFacture;
     }
 }
@@ -47,7 +47,8 @@ $(document).ready (function ()
         $(this).click (function ()
         {
             var id_facture = $(this).attr("id_facture");
-            document.location.href="administration_magasin.php?sub=edit_historique_facture_achat&id_facture_achat="+$(this).attr("id_facture");
+            document.location.href="administration_magasin.php?sub=edit_historique_facture_vente&id_facture_vente="+$(this).attr("id_facture");
+        //    alert("Edition bientot disponible  : "+id_facture);
         });
     });
 });
@@ -105,34 +106,32 @@ $(document).ready (function ()
                             <td>
                                 <tr class="blocInfoBis">
                                     <td class="blocTitreId">Numéro facture : <br/><strong><?php  echo $obj["numero_facture"]; ?></strong></td>
-                                    <td class="blocTitreId">Nom fournisseur : <br/><strong><?php  echo $obj["nom_fournisseur"]; ?></strong></td>  
-                                    <td class="blocTitreId">Date facture : <br/><strong><?php  echo SQLDateToFrenchDate( $obj["date_facture"] ); ?></strong></td>
-                                    <td class="blocTitreId">Enregistrée le : <br/><strong><?php  echo SQLDateTimeToFrenchDateTime( $obj["date_insertion_facture"] ); ?></strong></td>
+                                    <td class="blocTitreId">Enregistrée le : <br/><strong><?php  echo SQLDateTimeToFrenchDateTime( $obj["date_facture"] ); ?></strong></td>
                                     <td class="blocTitreId">Enregistrée par : <br/><strong><?php  echo $obj["nom_user"]."  ".$obj["prenom_user"]; ?></strong></td>
-                                    <td class="blocTitreId"></td>
+                                    <td class="blocTitreId">
+                                        <textarea style="height: 100%; width: 100%; text-align: left;" readonly="readonly">
+                                            <?php  echo trim(stripslashes(htmlentities($obj["commentaire"]))); ?>
+                                        </textarea>
+                                    </td>
                                 </tr>
                                 <tr height="5px;"></tr>
                                 <tr class="blocInfoBis">
                                     <td class="blocTitre">Nom produit </td>
-                                    <td class="blocTitre">Quantité achétée </td>
-                                    <td class="blocTitre">Prix d'achat (FCFA)</td>
-                                    <td class="blocTitre">Montant de l'achat (FCFA)</td>
-                                    <td class="blocTitre">Date fabrication </td>  
-                                    <td class="blocTitre">Date péremption </strong></td>
+                                    <td class="blocTitre">Quantité vendue </td>
+                                    <td class="blocTitre">Prix de vente (FCFA)</td>
+                                    <td class="blocTitre">Montant de la vente (FCFA)</td>
                                 </tr>
                                 <tr height="5px;"></tr>
                                 <?php
                                 foreach ( $obj["produits_associes"] as $value ) 
                                 {
-                                    $prix_total_facture += $value["quantite_achat"] * $value["prix_achat"];
+                                    $prix_total_facture += $value["quantite_vendue"] * $value["prix_vente"];
                                 ?>
                                 <tr class="blocInfoBis">
                                     <td class="blocValue"><?php  echo $value["nom_produit"]; ?></td>
-                                    <td class="blocValue"><?php  echo $value["quantite_achat"]; ?></td>
-                                    <td class="blocValue"><?php  echo number_format($value["prix_achat"], 2, ',', ' '); ?></td>
-                                    <td class="blocValue"><?php  echo number_format($value["quantite_achat"] * $value["prix_achat"], 2, ',', ' '); ?></td>
-                                    <td class="blocValue"><?php  echo SQLDateToFrenchDate( $value["date_fabrication"] ); ?></td>  
-                                    <td class="blocValue"><?php  echo SQLDateToFrenchDate( $value["date_peremption"] ); ?></td>
+                                    <td class="blocValue"><?php  echo $value["quantite_vendue"]; ?></td>
+                                    <td class="blocValue"><?php  echo number_format($value["prix_vente"], 2, ',', ' '); ?></td>
+                                    <td class="blocValue"><?php  echo number_format($value["quantite_vendue"] * $value["prix_vente"], 2, ',', ' '); ?></td>
                                 </tr>
                                 <?php
                                 }
@@ -140,14 +139,9 @@ $(document).ready (function ()
                                 
                                 <tr>    
                                     <td align="left" valign="middle"><a class="download_links" filename="<?=$obj["numero_facture"]; ?>"><img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez la facture</a></td>
-                                    <td class="blocTitre"><?php  if( $id_type_user <= 2 ){; ?><a class="edit_links" id_facture="<?=$obj["idt_factures"]; ?>"><img src="assets/images/edit.png" alt="" width="16" height="16" /> Modifier la facture</a><?php  } ?></td>
+                                    <td class="blocTitre"><?php  if( $id_type_user <= 2 ){; ?><a class="edit_links" id_facture="<?=$obj["idt_factures_ventes"]; ?>"><img src="assets/images/edit.png" alt="" width="16" height="16" /> Modifier la facture</a><?php  } ?></td>
                                     <td class="blocTitre">Montant de la facture : </td>
                                     <td class="blocTitre"><?php echo number_format($prix_total_facture, 2, ',', ' ');?> FCFA</td>
-                                    <td class="blocTitreId" colspan="2" >
-                                        <textarea style="height: 100%; width: 100%; text-align: left;" readonly="readonly">
-                                            <?php  echo trim(stripslashes(htmlentities($obj["commentaire"]))); ?>
-                                        </textarea>
-                                    </td>
                                 </tr>                                                                                                                                  
                             </td>
                         </tr>
