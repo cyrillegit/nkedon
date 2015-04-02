@@ -12,8 +12,8 @@ $db->beginTransaction ();
 
 if(isset($_SESSION["id_facture"])) unset( $_SESSION["id_facture"] );
 
-isset( $_POST ["id_facture"] ) ? $id_facture = $_POST ["id_facture"] : $id_facture = NULL;
-if( $id_facture != NULL )
+isset( $_POST ["id_facture"] ) ? $id = $_POST ["id_facture"] : $id = NULL;
+if( $id != NULL )
 {
 	isset( $_POST ["numero_facture"] ) ? $numero_facture = addslashes(htmlspecialchars($_POST ["numero_facture"])) : $numero_facture = "";
 	isset( $_POST ["id_fournisseur"] ) ? $id_fournisseur = addslashes(htmlspecialchars($_POST ["id_fournisseur"])) : $id_fournisseur = "";
@@ -21,7 +21,7 @@ if( $id_facture != NULL )
     isset( $_POST ["commentaire"] ) ? $commentaire = addslashes(htmlspecialchars($_POST ["commentaire"])) : $commentaire = "";
     $id_user = $_SESSION["infoUser"]["idt_users"];
 	//Mode création (post:insert)
-	if( $id_facture == 0 )
+	if( $id == 0 )
 	{
 		if( $numero_facture != NULL && $id_fournisseur != NULL && $date_facture != NULL)
 		{
@@ -180,11 +180,11 @@ if( $id_facture != NULL )
 							date_insertion_facture = '$date_insertion_facture',
 							id_user = '$id_user',
 							commentaire = '$commentaire'
-						WHERE idt_factures = '$id_facture'";
+						WHERE idt_factures = '$id'";
 
 				if( $db->Execute ( $sql ) )
 				{
-					$sql = "DELETE FROM t_achats WHERE id_facture = '$id_facture' ";
+					$sql = "DELETE FROM t_achats WHERE id_facture = '$id' ";
 					if( $db->Execute ( $sql ) )
 					{
 						foreach ($infoAllProduitsAchetes as $info) 
@@ -201,7 +201,7 @@ if( $id_facture != NULL )
 								 		 date_fabrication,
 								 		 date_peremption)
 							VALUES ('$id_produit',
-									'$id_facture',
+									'$id',
 									'$quantite_achat',
 									'$date_fabrication',
 									'$date_peremption')";

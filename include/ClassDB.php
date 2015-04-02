@@ -804,8 +804,8 @@
         public function getAllFacturesVentesByAnnee ($annee)
         {
             if( $annee != "" ) {
-                $date_debut = $annee."-01-01";
-                $date_fin = $annee."-12-31";
+                $date_debut = $annee."-01-01 00:00:00";
+                $date_fin = $annee."-12-31 23:59:59";
                 $sql_where = "WHERE fv.date_facture BETWEEN '$date_debut' AND '$date_fin'";
             }else {
                 $sql_where = "";
@@ -925,6 +925,25 @@
 							JOIN t_produits AS p ON v.id_produit = p.idt_produits
 							WHERE fv.idt_factures_ventes = $id
 							ORDER BY v.idt_ventes";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getAllProduitsOperationsByJournal
+         * -------------------
+         * Retourne les produits d'un journal donné
+         *
+         * @return array
+         */
+        public function getAllProduitsOperationsByJournal ($id)
+        {
+            $this->Sql = "SELECT *
+							FROM t_operations AS o
+							JOIN t_journal AS j ON o.id_journal = j.idt_journal
+							JOIN t_produits AS p ON o.id_produit = p.idt_produits
+							WHERE j.idt_journal = $id
+							ORDER BY o.idt_operations";
             $res = $this->FetchAllRows();
             return $res;
         }
@@ -2069,7 +2088,7 @@
                                 FROM t_journal AS j
                                 JOIN t_users AS u ON j.id_user = u.idt_users
                                 ".$sql_where."
-                                ORDER BY j.idt_journal";
+                                ORDER BY j.idt_journal DESC";
             $res = $this->FetchAllRows();
             return $res;
         }

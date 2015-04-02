@@ -104,7 +104,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le produit (<strong>" + $("#nom_produit").val () + "</strong>) a bien été enregistré dans la facture.");
                     $.modal.close ();
-                    document.location.href="administration_magasin.php?sub=edit_operations_journal";
+                    document.location.href="administration_magasin.php?sub=operation_journal";
                 }
                 else
                 {
@@ -227,7 +227,7 @@ $(document).ready (function ()
             <table width="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                     <td>
-                    Actuellement <font color="black"><b>{$nb_operations}</b></font> opérations enregistrées pour le journal.
+                    Actuellement <font color="black"><b>{$nb_produits}</b></font> opérations enregistrées pour le journal.
                     </td>
                     <td>
                     <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addOperation"></div></div>
@@ -312,7 +312,7 @@ $(document).ready (function ()
 							<td colspan="2" width="100%">
 								<div class="titre">
 									<b>
-										<i><u>INFORMATIONS DU JOURNAL:</u></i> <span style="margin-left:260px;">Montant du journal : <strong>{$montant_operation}</strong> FCFA</span>
+										<i><u>INFORMATIONS DU JOURNAL:</u></i> <span style="margin-left:260px;">Montant du journal : <strong>{$montant_journal}</strong> FCFA</span>
 										<hr/>
 									</b>
 								</div>
@@ -323,7 +323,7 @@ $(document).ready (function ()
 								Commentaire :
 							</td>
 							<td width="100%">
-                                <textarea name="commentaire" id="commentaire" cols="30" rows="10" style="height: 100px; width: 100%;"></textarea>
+                                <textarea name="commentaire" id="commentaire" cols="30" rows="10" style="height: 100px; width: 100%;">{$commentaire}</textarea>
 							</td>
 						</tr>
 					</table>
@@ -331,7 +331,7 @@ $(document).ready (function ()
 			</tr>
 		</table>
 		<input type="hidden" name="target" id="target" value="journal"/>
-		<input type="hidden" name="id_journal" id="id_journal" value="0"/>
+		<input type="hidden" name="id_journal" id="id_journal" value="{if $id_journal neq 0}{$id_journal}{else}{0}{/if}"/>
 	</form>
 </div>
 <hr size="1" style="margin-top: 15px;" />

@@ -77,17 +77,36 @@
 			}
             else if( $target == "edit_operations_journal" )
             {
-                $nb_operations = $db->getNbOperationsInDB ();
-                if(!isset($nb_operations)) $nb_operations = 0;
-
-                $produits_operation = $db->getAllProduitsOperationsJournal();
+                $id_journal = $_GET["id_journal"];
                 $montant_operation = 0;
-                foreach( $produits_operation as $po ){
-                    $montant_operation += $po["quantite_vendue"] * $po["prix_vente"];
+                $nb_produits = 0;
+
+                if( $id_journal != 0 )
+                {
+//                    $nb_operations = $db->getNbOperationsInDB ();
+//                    if(!isset($nb_operations)) $nb_operations = 0;
+
+                    $produits_operation = $db->getAllProduitsOperationsJournal();
+                    foreach( $produits_operation as $po ){
+                        $nb_produits++;
+                        $montant_operation += $po["quantite_vendue"] * $po["prix_vente"];
+                    }
+                }
+                else
+                {
+                    $sql = "DELETE FROM t_produits_operations";
+                    if( $db->Execute( $sql ))
+                    {
+                        $db->commit ();
+                    }
+                    else
+                    {
+                        $db->rollBack();
+                    }
                 }
 
-                $tpl_index->assign("nb_operations", $nb_operations);
-                $tpl_index->assign( "montant_operation", number_format( $montant_operation, 2, ',', ' ') );
+                $tpl_index->assign("nb_produits", $nb_produits);
+                $tpl_index->assign( "montant_journal", number_format( $montant_operation, 2, ',', ' ') );
 
                 $target = "gestion_journal/edit_operations_journal";
             }
@@ -128,6 +147,38 @@
 
 				$target = "gestion_factures/edit_facture";
 			}
+            else if( $target == "edit_facture_vente" )
+            {
+                $id_facture = $_GET["id_facture"];
+
+                if( $id_facture != 0 )
+                {
+                    $produits_factures = $db->getAllProduitsOperationsVentesFacture();
+                    $montant_facture = 0;
+
+                    foreach( $produits_factures as $pf ){
+                        $nb_produits++;
+                        $montant_facture += $pf["quantite_vendue"] * $pf["prix_vente"];
+                    }
+                }
+                else
+                {
+                    $sql = "DELETE FROM t_produits_ventes";
+                    if( $db->Execute( $sql ))
+                    {
+                        $db->commit ();
+                    }
+                    else
+                    {
+                        $db->rollBack();
+                    }
+                }
+
+                $tpl_index->assign( "montant_facture", number_format( $montant_facture, 2, ',', ' ') );
+                $tpl_index->assign( "id_facture", $id_facture );
+
+                $target = "gestion_factures/edit_facture_vente";
+            }
             else if( $target == "edit_historique_facture_achat" )
             {
                 $okFacture = true;
@@ -272,20 +323,73 @@
 
                 $target = "gestion_factures/edit_facture_vente";
             }
-            else if( $target == "edit_facture_vente" )
+            else if( $target == "edit_historique_journal" )
             {
-//                $produits_factures = $db->getAllProduitsVendusFacture();
-//                $montant_facture = 0;
-//
-//                foreach( $produits_factures as $pf ){
-//                    $nb_produits++;
-//                    $montant_facture += $pf["quantite_vendue"] * $pf["prix_vente"];
-//                }
-//
-//                $tpl_index->assign("montant_facture", number_format( $montant_facture, 2, ',', ' '));
-//
-//                $target = "gestion_factures/edit_facture_vente";
+                $okFacture = true;
+                $nb_produits = 0;
+                $montant_journal = 0;
 
+                if(isset($_GET["id_journal"])) {
+                    $id_journal = $_GET["id_journal"];
+                    $_SESSION["id_journal"] = $id_journal;
+                    $produits = $db->getAllProduitsOperationsByJournal($id_journal);
+
+                    $commentaire = $produits[0]["commentaire"];
+
+                    // si on est en mode suppression, on ne reinitialise pas la table tampon courante
+                    if( !isset($_SESSION["delete"])) {
+
+                        $sql = "DELETE FROM t_produits_operations";
+                        if ($db->Execute($sql)) {
+                            foreach ($produits as $info) {
+                                $id_produit = $info["id_produit"];
+                                $quantite_vendue = $info["quantite_vendue"];
+                                $numero_operation = $info["numero_operation"];
+
+                                $sql = "INSERT INTO t_produits_operations
+                                                (id_produit,
+                                                 quantite_vendue,
+                                                 numero_operation)
+                                        VALUES ('$id_produit',
+                                                '$quantite_vendue',
+                                                '$numero_operation')";
+
+                                if ($db->Execute($sql)) {
+                                    $okFacture &= true;
+                                } else {
+                                    $okFacture &= false;
+                                }
+                            }
+                        } else {
+                            $db->rollBack();
+                        }
+                    }
+
+                    if($okFacture)
+                    {
+                        $db->commit ();
+                        $produits_journal = $db->getAllProduitsOperationsJournal();
+
+                        foreach( $produits_journal as $pj ){
+                            $nb_produits++;
+                            $montant_journal += $pj["quantite_vendue"] * $pj["prix_vente"];
+                        }
+                    }
+                    else
+                    {
+                        $db->rollBack();
+                    }
+                }
+
+                $tpl_index->assign( "montant_journal", number_format( $montant_journal, 2, ',', ' ') );
+                $tpl_index->assign( "id_journal", $id_journal );
+                $tpl_index->assign( "nb_produits", $nb_produits );
+                $tpl_index->assign( "commentaire", $commentaire );
+
+                $target = "gestion_journal/edit_operations_journal";
+            }
+            else if( $target == "facture_vente" )
+            {
                 $nb_produits = 0;
                 $montant_facture = 0;
                 $id_facture = 0;
@@ -313,6 +417,33 @@
                 $tpl_index->assign( "montant_facture", number_format( $montant_facture, 2, ',', ' ') );
 
                 $target = "gestion_factures/edit_facture_vente";
+            }
+            else if( $target == "operation_journal" )
+            {
+                $nb_produits = 0;
+                $id_journal = 0;
+                $montant_journal = 0;
+
+                if(isset($_SESSION["id_journal"])) {
+                    $id_journal= $_SESSION["id_journal"];
+                    $produits = $db->getAllProduitsOperationsByJournal($id_journal);
+
+                    $date_journal = SQLDateToFrenchDate($produits[0]["date_journal"]);
+                    $commentaire = $produits[0]["commentaire"];
+                }
+
+                $produits_operations = $db->getProduitsOperations();
+
+                foreach ($produits_operations as $po) {
+                    $montant_journal += $po["quantite_vendue"] * $po["prix_vente"];
+                }
+
+                $tpl_index->assign( "id_journal", $id_journal);
+                $tpl_index->assign( "commentaire", $commentaire );
+                $tpl_index->assign( "date_journal", $date_journal );
+                $tpl_index->assign( "montant_journal", number_format( $montant_journal, 2, ',', ' ') );
+
+                $target = "gestion_journal/edit_operations_journal";
             }
 			else if( $target == "inventaire" )
 			{

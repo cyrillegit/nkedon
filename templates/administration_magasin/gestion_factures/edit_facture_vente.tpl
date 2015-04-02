@@ -131,7 +131,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le produit (<strong>" + $("#nom_produit").val () + "</strong>) a bien été enregistré dans la facture.");
                     $.modal.close ();
-                    document.location.href="administration_magasin.php?sub=edit_facture_vente";
+                    document.location.href="administration_magasin.php?sub=facture_vente";
                 }
                 else
                 {
@@ -348,7 +348,7 @@ $(document).ready (function ()
 						</tr>
                         <tr>
                             <td>
-                                Commentaire : {$id_facture}
+                                Commentaire :
                             </td>
                             <td>
                                 <textarea name="commentaire" id="commentaire" cols="30" rows="10" style="height: 70px; width: 100%;">{if $id_facture neq 0}{$commentaire}{/if}</textarea>

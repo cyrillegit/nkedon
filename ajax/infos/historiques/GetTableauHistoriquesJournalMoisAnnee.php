@@ -15,6 +15,8 @@ isset( $_POST ["annee"] ) ? $annee = addslashes(htmlspecialchars($_POST ["annee"
 isset( $_POST ["mois"] ) ? $mois = addslashes(htmlspecialchars($_POST ["mois"])) : $mois = "";
 // get the type of the current user
 $id_type_user = $_SESSION["infoUser"]["idt_types_users"];
+// unset deletion mode
+unset( $_SESSION["delete"] );
 
 $histo_journal = $db->getAllJournalByMoisAnnee( $mois, $annee );
 if( COUNT($histo_journal) > 0 )
@@ -44,9 +46,9 @@ $(document).ready (function ()
     {
         $(this).click (function ()
         {
-                var id_journal = $(this).attr("id_journal");
-            //    document.location.href="download.php?filename="+filename;
-            alert("Edition bientot disponible : "+id_journal);
+            var id_journal = $(this).attr("id_journal");
+            document.location.href="administration_magasin.php?sub=edit_historique_journal&id_journal="+$(this).attr("id_journal");
+        //    alert("Edition bientot disponible : "+id_journal);
         });
     });
 });

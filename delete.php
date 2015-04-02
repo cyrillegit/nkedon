@@ -224,6 +224,7 @@
             $ok &= $db->Execute ( $sql );
             if( $ok )
             {
+                $_SESSION["delete"] = true;
                 $tpl_index->assign ("message", $db->fixEncoding("La suppression de l'opération a bien été réalisée."));
                 $tpl_index->assign ("error", 0);
             }

@@ -132,11 +132,13 @@ if( $id != NULL )
                                 $id_produit = $info["id_produit"];
                                 $quantite_vendue = $info["quantite_vendue"];
 
-                                $sql = "UPDATE t_ventes
-                                        SET id_produit = '$id_produit',
-                                            id_facture_vente = '$id',
-                                            quantite_vendue = '$quantite_vendue'
-                                        WHERE id_facture_vente = '$id'";
+                                $sql = "INSERT INTO t_ventes
+										(id_produit,
+										 id_facture_vente,
+										 quantite_vendue)
+                                    VALUES ('$id_produit',
+                                            '$id',
+                                            '$quantite_vendue')";
 
                                 if($db->Execute($sql))
                                 {
