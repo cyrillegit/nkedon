@@ -1819,6 +1819,26 @@
             return $res;
         }
 
+        /**
+         * Fonction getInfosFactureAchatById
+         * -------------------
+         * Retourne tous les infos sur une facture d'achat
+         *
+         * @return array
+         */
+        public function getInfosFactureAchatById( $id )
+        {
+            $this->Sql = "SELECT *
+                            FROM t_factures AS f
+                            JOIN t_achats AS a ON a.id_facture = f.idt_factures
+                            JOIN t_fournisseurs AS fo ON fo.idt_fournisseurs = f.id_fournisseur
+                            JOIN t_users AS u ON f.id_user = u.idt_users
+                            JOIN t_produits AS p ON a.id_produit = p.idt_produits
+                            WHERE f.idt_factures = $id";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
 		/**
 		 * Fonction getAllquantiteProduitsAchetesByPeriode
 		 * -------------------
