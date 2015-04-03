@@ -2,19 +2,824 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="624981b3-8f83-4c5b-a3cf-c77a5949c79f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/images/nkedon_logo.png" afterPath="$PROJECT_DIR$/assets/images/nkedon_logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/4a3111e710f84888bd8197f69537e9b5b9f325a4.file.main.tpl.php" afterPath="$PROJECT_DIR$/templates_c/4a3111e710f84888bd8197f69537e9b5b9f325a4.file.main.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/ClassBackupDatabase.php" afterPath="$PROJECT_DIR$/include/ClassBackupDatabase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/ClassDownloadSyntheseInventaire.php" afterPath="$PROJECT_DIR$/include/ClassDownloadSyntheseInventaire.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauGenerateSynthese.php" afterPath="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauGenerateSynthese.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesInventairesAnnee.php" afterPath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesInventairesAnnee.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesJournalMoisAnnee.php" afterPath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesJournalMoisAnnee.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauRecapitulatifInventaire.php" afterPath="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauRecapitulatifInventaire.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administration_magasin.php" afterPath="$PROJECT_DIR$/administration_magasin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/downloads.php" afterPath="$PROJECT_DIR$/downloads.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/e87cc5c3952e078b19863ada84abac90e08e4ac2.file.recapitulatif_inventaire.tpl.php" afterPath="$PROJECT_DIR$/templates_c/e87cc5c3952e078b19863ada84abac90e08e4ac2.file.recapitulatif_inventaire.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/Serializer/inventaire.php" afterPath="$PROJECT_DIR$/ajax/Serializer/inventaire.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/recapitulatif_inventaire.tpl" afterPath="$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/recapitulatif_inventaire.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/AboriginalSansREGULAR.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Abyssinica_SIL.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Aegean.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Aegyptus.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Akkadian.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/BGR-Red-Ducati_WCS-Test-TriState.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/ColorGammaGradient.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DBSILBR.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSans-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSans-BoldOblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSans-Oblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSans.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSansCondensed-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSansCondensed-BoldOblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSansCondensed-Oblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSansCondensed.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSansMono-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSansMono-BoldOblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSansMono-Oblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSansMono.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSerif-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSerif-BoldItalic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSerif-Italic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSerif.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSerifCondensed-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSerifCondensed-BoldItalic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSerifCondensed-Italic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuSerifCondensed.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Dhyana-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Dhyana-Regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/FreeMono.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/FreeMonoBold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/FreeMonoBoldOblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/FreeMonoOblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/FreeSans.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/FreeSansBold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/FreeSansBoldOblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/FreeSansOblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/FreeSerif.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/FreeSerifBold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/FreeSerifBoldItalic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/FreeSerifItalic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Garuda-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Garuda-BoldOblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Garuda-Oblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Garuda.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Jomolhari.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/KhmerOS.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/LateefRegOT.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Lohit-Kannada.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/Lower_Left.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/Lower_Right.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Padauk-book.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Pothana2000.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Quivira.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/iccprofiles/SWOP2006_Coated5v2.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Sun-ExtA.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Sun-ExtB.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/SundaneseUnicode-1.0.5.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/SyrCOMEdessa.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/TaameyDavidCLM-Medium.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/TaiHeritagePro.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Tharlon-Regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/UnBatang_0613.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/Upper_Left.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/Upper_Right.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Uthman.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/XB Riyaz.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/XB RiyazBd.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/XB RiyazBdIt.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/XB RiyazIt.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/ZawgyiOne.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/alpha09.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/alpha3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/alpha36.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/arrow_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/arrow_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/ayar.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/bach1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/boutons/baggage_trolley.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/boutons/bar_chart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/bayeux1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/bayeux2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/bgan6a16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/bgan6a162.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/bgbarcode.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/bgrock.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/borders2FF.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/borders2IE.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/borders3FF.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/borders3IE.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/borders4FF.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/borders4IE.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/bordersFF.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/bordersIE.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/bullseye.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/butterfly_ProPhoto.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/butterfly_ProPhoto.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/cc9900.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/cc9900.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/cc9900_002.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/cc9900_003.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/cc9900_004.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/cc9900_005.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/clematis.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/colourTestFakeBRG.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/damase_v.2.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/boutons/database.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensed.GSUBGPOStables.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensed.cw.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensed.gid.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensedB.GSUBGPOStables.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensedB.cw.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensedB.gid.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavuserifcondensed.cw.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavuserifcondensed.gid.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavuserifcondensedB.cw.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavuserifcondensedB.gid.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/boutons/diary_add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/flowers-pattern.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/boutons/folder.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/goto.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/goto2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/goto2rtl.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/img1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/img2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/img3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/img4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/img5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/kaputaunicode.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/klematis.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/lannaalif-v1-03.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/layers_tab.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/boutons/layout_rows.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/includes/linebrdictK.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/includes/linebrdictL.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/includes/linebrdictT.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/ico_42x42/menu_consult.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele10.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele11.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele12.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele13.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele14.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele15.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele16.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele17.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele18.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele19.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele20.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele21.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele22.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele23.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele24.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele25.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele26.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele27.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele28.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele29.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele30.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele31.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele32.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele33.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele34.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele35.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele36.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele37.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele38.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele39.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele4.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele40.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele5.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele6.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele7.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele8.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/modele9.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/includes/no_image.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/ocrb10.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/boutons/page_writing.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/boutons/pie_chart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv10_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv10_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv10_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv10_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv11_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv11_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv11_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv11_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv12_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv12_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv12_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv12_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv13_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv13_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv13_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv13_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv14_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv14_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv14_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv14_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv15_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv15_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv15_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv15_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv16_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv16_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv16_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv16_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv17_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv17_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv17_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv17_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv18_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv18_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv18_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv18_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv19_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv19_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv19_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv19_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv1_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv1_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv1_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv1_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv20_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv20_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv20_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv20_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv21_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv21_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv21_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv21_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv22_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv22_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv22_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv23_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv23_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv23_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv24_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv24_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv24_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv25_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv25_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv26_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv26_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv27_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv27_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv28_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv28_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv28_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv28_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv29_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv29_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv29_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv29_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv2_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv2_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv2_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv2_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv30_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv30_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv30_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv30_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv31_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv31_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv31_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv31_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv32_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv32_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv32_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv32_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv33_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv33_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv33_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv33_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv34_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv34_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv34_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv34_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv35_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv35_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv35_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv35_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv36_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv36_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv36_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv36_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv37_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv37_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv37_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv37_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv38_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv38_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv38_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv38_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv39_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv39_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv39_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv39_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv3_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv3_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv3_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv3_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv40_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv40_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv40_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv40_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv4_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv4_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv4_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv4_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv5_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv5_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv5_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv5_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv6_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv6_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv6_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv6_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv7_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv7_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv7_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv7_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv8_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv8_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv8_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv8_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv9_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv9_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv9_2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv9_3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc10.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc13.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc15.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc16.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc17.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc18.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc20.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc22.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc24.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc26.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc28.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc30.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc32.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc34.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc36.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc40.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc42.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc44.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc46.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc48.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc50.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc52.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc54.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc56.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc58.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc60.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc62.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc64.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc66.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc68.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/rsc7.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/iccprofiles/sRGB_IEC61966-2-1.icc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/sample_basic.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/sample_logoheader2.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/sample_orientation2.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/sample_orientation3.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/sunset.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/test.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/tiger.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/tiger.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/tiger.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/tiger.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/tiger.wmf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/tiger2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/tiger2.wmf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/tiger24trns.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/tiger300px300dpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/tiger300px96dpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/tiger8trns.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/tigercmyk.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/windmill.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/017ea203869b1ad0feb61689e6632571bc8ba908.file.factures_annee.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/13d1781ec3cf329c64e77392f9ecea72a14ab7db.file.factures_mois.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/29dbbf672e364286a1ba288622014a07667dfc7d.file.historiques_inventaires.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/3045ad40f4945a783d325bdb94b8f8ebb2f86dec.file.historiques_factures_ventes.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/82a8f209c361b03000a594e6e0f3649d713137fa.file.operations_journal.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/90621457dbaa28f2a5a65daeb9bf15841db408d0.file.journal.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/957312092d4172157f166ce60be3971645a15115.file.historiques_factures.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Afrikaans_South_Africa.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Albanian_Albania.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Alsatian_France.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Arabic_Algeria.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Arabic_Bahrain.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Arabic_Egypt.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Arabic_Iraq.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Arabic_Jordan.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Arabic_Kuwait.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Arabic_Lebanon.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Arabic_Libya.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Arabic_Morocco.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Arabic_Oman.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Arabic_Pseudo_RTL.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Arabic_Qatar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Arabic_Saudi_Arabia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Arabic_Syria.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Arabic_Tunisia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Arabic_Yemen.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Azeri_(Cyrillic)_Azerbaijan.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Azeri_(Latin)_Azerbaijan.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Bashkir_Russia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Basque_Spain.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Belarusian_Belarus.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Bosnian_(Cyrillic)_Bosnia_and_Herzegovina.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Bosnian_(Latin)_Bosnia_and_Herzegovina.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Breton_France.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Bulgarian_Bulgaria.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/CHANGELOG.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/includes/CJKdata.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/CREDITS.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Catalan_Spain.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Corsican_France.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Croatian_(Latin)_Bosnia_and_Herzegovina.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Croatian_Croatia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Czech_Czech_Republic.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Danish_Denmark.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Dari_Afghanistan.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DejaVuinfo.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/DhyanaOFL.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Dutch_Belgium.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Dutch_Netherlands.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/English_Australia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/English_Belize.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/English_Canada.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/English_Caribbean.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/English_India.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/English_Ireland.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/English_Jamaica.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/English_Malaysia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/English_New_Zealand.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/English_Republic_of_the_Philippines.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/English_Singapore.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/English_South_Africa.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/English_Trinidad_and_Tobago.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/English_United_Kingdom.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/English_United_States.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/English_Zimbabwe.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Estonian_Estonia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Faroese_Faroe_Islands.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Filipino_Philippines.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/mpdfi/filters/FilterASCII85.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/mpdfi/filters/FilterLZW.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Finnish_Finland.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/French_Belgium.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/French_Canada.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/French_France.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/French_Luxembourg.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/French_Principality_of_Monaco.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/French_Switzerland.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Frisian_Netherlands.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/GNUFreeFontinfo.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Galician_Spain.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/German_Austria.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/German_Germany.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/German_Liechtenstein.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/German_Luxembourg.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/German_Switzerland.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Greek_Greece.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Greenlandic_Greenland.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Hausa_(Latin)_Nigeria.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Hebrew_Israel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Hungarian_Hungary.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Icelandic_Iceland.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Igbo_Nigeria.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Indonesian_Indonesia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Inuktitut_(Latin)_Canada.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Invariant_Language_Invariant_Country.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Irish_Ireland.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Italian_Italy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Italian_Switzerland.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Jomolhari-OFL.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/KhmerOFL.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Kinyarwanda_Rwanda.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Kiswahili_Kenya.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Kyrgyz_Kyrgyzstan.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/Lateef font OFL.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Latvian_Latvia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Lithuanian_Lithuania.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/LohitKannadaOFL.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Lower_Sorbian_Germany.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Luxembourgish_Luxembourg.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Macedonian_(FYROM)_Macedonia_(FYROM).php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Malay_Brunei_Darussalam.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Malay_Malaysia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Mapudungun_Chile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/MathJaxProcess.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/MathJaxSample.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Mohawk_Canada.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Mongolian_(Cyrillic)_Mongolia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/patterns/NOTES.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Norwegian_(Nynorsk)_Norway.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Occitan_France.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Persian_Iran.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Polish_Poland.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Portuguese_Brazil.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Portuguese_Portugal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Quechua_Bolivia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Quechua_Ecuador.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Quechua_Peru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/README.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Romanian_Romania.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Romansh_Switzerland.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Russian_Russia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Sami_(Inari)_Finland.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Sami_(Lule)_Norway.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Sami_(Lule)_Sweden.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Sami_(Northern)_Finland.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Sami_(Northern)_Norway.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Sami_(Northern)_Sweden.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Sami_(Skolt)_Finland.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Sami_(Southern)_Norway.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Sami_(Southern)_Sweden.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Serbian_(Cyrillic)_Bosnia_and_Herzegovina.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Serbian_(Cyrillic)_Serbia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Serbian_(Latin)_Bosnia_and_Herzegovina.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Serbian_(Latin)_Serbia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Sesotho_sa_Leboa_South_Africa.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Setswana_South_Africa.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Slovak_Slovakia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Slovenian_Slovenia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_Argentina.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_Bolivia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_Chile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_Colombia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_Costa_Rica.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_Dominican_Republic.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_Ecuador.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_El_Salvador.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_Guatemala.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_Honduras.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_Mexico.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_Nicaragua.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_Panama.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_Paraguay.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_Peru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_Puerto_Rico.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_Spain.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_United_States.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_Uruguay.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Spanish_Venezuela.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Swedish_Finland.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Swedish_Sweden.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/SyrCOMEdessa_license.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/TaameyDavidCLM-LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Tajik_(Cyrillic)_Tajikistan.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Tamazight_(Latin)_Algeria.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Tatar_Russia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/TharlonOFL.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Turkish_Turkey.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Turkmen_Turkmenistan.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Ukrainian_Ukraine.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/utils/UnicodeData.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/utils/UnicodeRanges.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Upper_Sorbian_Germany.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Urdu_Islamic_Republic_of_Pakistan.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Uzbek_(Cyrillic)_Uzbekistan.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Uzbek_(Latin)_Uzbekistan.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Vietnamese_Vietnam.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Welsh_United_Kingdom.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Wolof_Senegal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/XW Zar Font Info.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Yakut_Russia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/Yoruba_Nigeria.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/_LGPL.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/_lisez_moi.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/adedca381b80799c99bd8e78f728f695404fbc82.file.historiques_journal.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/b42f63afc82748540c1fce7676d795ec366d166a.file.inventaires_annee.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/barcode.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/bmp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/c515d40f99136b1780750ce9edd7f2e339a7da20.file.journal_mois.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/c9a08fce85b770487594c1ab16df47933fd4e2ad.file.main.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/font/ccourier.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/font/ccourierb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/font/ccourierbi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/font/ccourieri.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/font/chelvetica.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/font/chelveticab.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/font/chelveticabi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/font/chelveticai.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/compress.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/config_fonts-distr-without-OTL.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/config_fonts.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/config_lang2fonts.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/config_script2lang.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/cssmgr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/font/csymbol.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/font/ctimes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/font/ctimesb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/font/ctimesbi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/font/ctimesi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/font/czapfdingbats.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/d632d00546f05ea90cf80045eb21d301fda120e9.file.factures_ventes_mois.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/d825a07f14370fe9cb85473bf1905cddffad4d93.file.statistiques.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/d88cdcc1bd965e095563e9e2aba8361f36e5d1c4.file.edit_operations_journal.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/downloads/BackupDB/db-backup-nkedon_db-20150328-235324.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/downloads/BackupDB/db-backup-nkedon_db-20150331-075148.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/downloads/databases/db-backup-nkedon_db-20150403-132434.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/downloads/databases/db-backup-nkedon_db-20150403-133140.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/downloads/databases/db-backup-nkedon_db-20150403-133529.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/downloads/databases/db-backup-nkedon_db-20150403-133954.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/downloads/databases/db-backup-nkedon_db-20150403-134107.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/downloads/databases/db-backup-nkedon_db-20150403-135054.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/patterns/de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/de2d96013a5a03631a4d7e95c7d24137b95021b8.file.journal_annee.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensed.GDEFdata.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensed.GPOSdata.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensed.GSUB.arab.DFLT.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensed.GSUB.arab.KUR .php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensed.GSUB.arab.SND .php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensed.GSUB.arab.URD .php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensed.GSUB.nko .DFLT.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensed.GSUBdata.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensed.cw127.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensed.mtx.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensedB.GDEFdata.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensedB.GPOSdata.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensedB.GSUB.arab.DFLT.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensedB.GSUB.arab.KUR .php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensedB.GSUB.arab.SND .php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensedB.GSUB.arab.URD .php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensedB.GSUB.nko .DFLT.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensedB.GSUBdata.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavusanscondensedB.mtx.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavuserifcondensed.cw127.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavuserifcondensed.mtx.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dejavuserifcondensedB.mtx.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/desktop.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/patterns/dictionary.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/directw.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/graph_cache/dummy.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/tmp/dummy.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfontdata/dummy.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/e2a93903a8ea8838ec48ea46f88d8a44fe62267d.file.factures_ventes_annee.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/patterns/en.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/patterns/es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example01_basic.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example02_CSS_styles.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example03_backgrounds_and_borders.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example04_images.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example05_tables.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example06_tables_nested.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example07_tables_borders.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example08_lists.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example09_forms.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example10_floating_and_fixed_position_elements.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example11_overflow_auto.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example12_paging_html.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example13_paging_css.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example14_page_numbers_ToC_Index_Bookmarks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example16_headers_method_2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example18_headers_method_4.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example19_page_sizes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example20_justify.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example21_hyphenation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example22_columns.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example23_orientation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example24_orientation_2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example26_RTL.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example27_CJK_using_Adobe_fonts.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example28_CJK_using_embedded_fonts.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example29_multilingual_autofont.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example32_indic.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example33_unicode_supplementary_planes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example34_invoice_example.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example35_watermarks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example36_annotations_and_Attached_files.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example37_barcodes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example38_dot_tab.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example39_PDFA_compliance.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example40_MPDFI_thumbnails.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example41_MPDFI_template.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example42_MPDFI_templatedoc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example43_MPDFI_booklet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example44_MPDFI_yearbook.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example46_progress_bars_simple.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example47_progress_bars_simple_custom.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example48_progress_bars_advanced.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example52_lineheight.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example52_new_mPDF_4-2_features.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example54_new_mPDF_v5-1_features_gradients_and_images.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example55_new_mPDF_v5-1_color_and_other_features.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example56_new_mPDF_v5-1_features_grayscale.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example57_new_mPDF_v5-3_active_forms.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example58_new_mPDF_v5-4_features.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example59_new_mPDF_v5-6_features.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example60_new_mPDF_v5-7_features.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example61_new_mPDF_v6-0_features.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example62_new_mPDF_v6-0_features Multilingual.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example63_new_mPDF_v6-0_features Images.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/example_test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/f552ac384055cfc90c54734ec5b9e2df5f71f58d.file.historiques_syntheses.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/f82b03419ee00d74b7704d1ba4842e205a88a7e1.file.edit_facture_vente.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/patterns/fi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/utils/font_collections.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/utils/font_coverage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/utils/font_dump.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/utils/font_dump_OTL.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/utils/font_names.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/fonts-elem-01-t.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/formsubmit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/mpdfi/fpdi_pdf_parser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/patterns/fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/includes/functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/gif.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/grad.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/graph.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/image.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/utils/image_details.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/utils/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/indic.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/isiXhosa_South_Africa.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/collations/isiZulu_South_Africa.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/patterns/it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/lang2fonts.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/meter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/mpdf.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/mpdf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/mpdfform.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/mpdfstyleA4.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/mpdfstylePaged.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/mpdfstyletables.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/myanmar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/patterns/nl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/ttfonts/ocrbinfo.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/otl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/otl_dump.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/includes/out.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/mpdfi/pdf_context.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/mpdfi/pdf_parser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/patterns/pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/progbar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/qrcode.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv22_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv23_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv24_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv25_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv25_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv26_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv26_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv27_0.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrv27_1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr1.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr10.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr11.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr12.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr13.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr14.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr15.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr16.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr17.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr18.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr19.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr2.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr20.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr21.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr22.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr23.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr24.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr25.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr26.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr27.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr28.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr29.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr3.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr30.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr31.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr32.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr33.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr34.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr35.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr36.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr37.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr38.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr39.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr4.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr40.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr5.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr6.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr7.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr8.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/qrcode/data/qrvfr9.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/patterns/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/sea.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/includes/subs_core.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/includes/subs_win-1252.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/patterns/sv.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/svg.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/tiger.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/tiger.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/tocontents.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/ttfontsuni.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/ttfontsuni_analysis.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/examples/tux.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/ucdn.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/includes/upperCase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mpdf/classes/wmf.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Nkedon.iws" />
@@ -43,7 +848,7 @@
       <file leaf-file-name="ClassDB.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/ClassDB.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.576271" vertical-offset="17058" max-vertical-offset="47674">
+            <state vertical-scroll-proportion="0.0" vertical-offset="17058" max-vertical-offset="47674">
               <caret line="827" column="50" selection-start-line="827" selection-start-column="24" selection-end-line="827" selection-end-column="50" />
               <folding>
                 <element signature="e#1762#1796#0#PHP" expanded="false" />
@@ -173,7 +978,7 @@
       <file leaf-file-name="downloads.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/downloads.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-32.774193" vertical-offset="920" max-vertical-offset="2860">
+            <state vertical-scroll-proportion="0.0" vertical-offset="920" max-vertical-offset="2860">
               <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
               <folding />
             </state>
@@ -183,11 +988,9 @@
       <file leaf-file-name="recapitulatif_inventaire.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/recapitulatif_inventaire.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.23728813" vertical-offset="1614" max-vertical-offset="3938">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1614" max-vertical-offset="3938">
               <caret line="74" column="34" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
-              <folding>
-                <element signature="e#5039#5101#0#HTML" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -195,7 +998,7 @@
       <file leaf-file-name="GetTableauRecapitulatifInventaire.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauRecapitulatifInventaire.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.645162" vertical-offset="920" max-vertical-offset="4158">
+            <state vertical-scroll-proportion="0.0" vertical-offset="920" max-vertical-offset="4158">
               <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="57" selection-end-column="10" />
               <folding />
             </state>
@@ -205,8 +1008,8 @@
       <file leaf-file-name="GetTableauHistoriquesInventairesAnnee.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesInventairesAnnee.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6545925" vertical-offset="3432" max-vertical-offset="5720">
-              <caret line="179" column="107" selection-start-line="179" selection-start-column="107" selection-end-line="179" selection-end-column="107" />
+            <state vertical-scroll-proportion="0.73997414" vertical-offset="3432" max-vertical-offset="5720">
+              <caret line="182" column="2" selection-start-line="182" selection-start-column="2" selection-end-line="182" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -215,7 +1018,7 @@
       <file leaf-file-name="administration_magasin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/administration_magasin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.694915" vertical-offset="11748" max-vertical-offset="13772">
+            <state vertical-scroll-proportion="0.0" vertical-offset="11748" max-vertical-offset="13772">
               <caret line="560" column="22" selection-start-line="560" selection-start-column="22" selection-end-line="560" selection-end-column="22" />
               <folding>
                 <marker date="1428069102659" expanded="true" signature="2741:2774" placeholder="DELETE FROM ..." />
@@ -239,7 +1042,7 @@
       <file leaf-file-name="ClassDownloadSyntheseInventaire.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/ClassDownloadSyntheseInventaire.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.83871" vertical-offset="5606" max-vertical-offset="6402">
+            <state vertical-scroll-proportion="0.0" vertical-offset="5606" max-vertical-offset="6402">
               <caret line="248" column="37" selection-start-line="248" selection-start-column="37" selection-end-line="248" selection-end-column="37" />
               <folding>
                 <marker date="1428068448900" expanded="true" signature="2119:5697" placeholder="..." />
@@ -299,7 +1102,7 @@
       <file leaf-file-name="GetTableauHistoriquesJournalMoisAnnee.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesJournalMoisAnnee.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.193548" vertical-offset="700" max-vertical-offset="3542">
+            <state vertical-scroll-proportion="0.0" vertical-offset="700" max-vertical-offset="3542">
               <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="58" />
               <folding />
             </state>
@@ -429,6 +1232,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -457,85 +1261,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="downloads" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ajax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ajax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Serializer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ajax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="infos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nkedon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ajax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="infos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="historiques" />
+              <option name="myItemId" value="mpdf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -578,15 +1309,15 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="1">
@@ -687,7 +1418,13 @@
       <option name="project" value="LOCAL" />
       <updated>1428019631202</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="download synthese files, but not yet working well">
+      <created>1428069370624</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1428069370624</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -700,20 +1437,20 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25390625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25390625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -733,9 +1470,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16484375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -757,7 +1494,8 @@
     <MESSAGE value="developpement de l'edition des historiques des factures d'achats et de ventes, et historiques des journaux" />
     <MESSAGE value="generer des pdf des factures d'achats" />
     <MESSAGE value="generer des pdf de synthese des inventaires : debut" />
-    <option name="LAST_COMMIT_MESSAGE" value="generer des pdf de synthese des inventaires : debut" />
+    <MESSAGE value="download synthese files, but not yet working well" />
+    <option name="LAST_COMMIT_MESSAGE" value="download synthese files, but not yet working well" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -766,6 +1504,72 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/include/ClassDownloadSyntheseInventaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5606" max-vertical-offset="6402">
+          <caret line="248" column="37" selection-start-line="248" selection-start-column="37" selection-end-line="248" selection-end-column="37" />
+          <folding>
+            <marker date="1428068448900" expanded="true" signature="2119:5697" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="2181:2537" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="2276:2493" placeholder="{...}" />
+            <marker date="1428068448900" expanded="true" signature="2580:2818" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="2861:5697" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="2927:2944" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="2946:3137" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="3042:3059" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="3262:4185" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="3311:3543" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="3592:3857" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="3906:4136" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="4250:4267" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="4403:4429" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="4430:5697" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="4479:4585" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="4532:4585" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="4611:5619" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="7471:8262" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="9248:9274" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="9275:11464" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="9346:10173" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="10244:11415" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="10330:10362" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="10476:10508" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="10622:10654" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="10758:10790" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="10900:10932" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="11034:11066" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="11171:11203" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="11316:11348" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="11617:11643" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="11644:14239" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="11715:12031" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="11932:11964" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="12102:12420" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="12321:12353" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="12491:12776" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="12677:12709" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="12847:13138" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="13039:13071" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="13209:13498" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="13399:13431" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="13569:13844" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="13745:13777" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="13915:14190" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="14091:14123" placeholder="..." />
+            <marker date="1428068448900" expanded="false" signature="14340:14366" placeholder="..." />
+            <marker date="1428068448900" expanded="true" signature="14505:14733" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesJournalMoisAnnee.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="700" max-vertical-offset="3542">
+          <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/include/function.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.8305087" vertical-offset="6718" max-vertical-offset="22506">
@@ -934,7 +1738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="35.35484" vertical-offset="2042" max-vertical-offset="2838">
           <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,7 +1759,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.225806" vertical-offset="589" max-vertical-offset="3520">
           <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -971,7 +1773,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37606838" vertical-offset="2772" max-vertical-offset="4114">
           <caret line="140" column="34" selection-start-line="140" selection-start-column="34" selection-end-line="140" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -979,7 +1780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2954823" vertical-offset="594" max-vertical-offset="3674">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="41" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1008,7 +1808,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8467337" vertical-offset="1658" max-vertical-offset="2772">
           <caret line="114" column="45" selection-start-line="114" selection-start-column="45" selection-end-line="114" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1016,11 +1815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.612904" vertical-offset="528" max-vertical-offset="3432">
           <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
-          <folding>
-            <marker date="1428057334025" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..table..." />
-            <marker date="1428057334025" expanded="true" signature="-1:-1" placeholder="DROP TABLE I..." />
-            <marker date="1428057334025" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1028,9 +1822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.580645" vertical-offset="1012" max-vertical-offset="2398">
           <caret line="86" column="71" selection-start-line="86" selection-start-column="71" selection-end-line="86" selection-end-column="71" />
-          <folding>
-            <element signature="e#566#596#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1038,12 +1829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4874372" vertical-offset="15650" max-vertical-offset="17996">
           <caret line="734" column="0" selection-start-line="734" selection-start-column="0" selection-end-line="734" selection-end-column="0" />
-          <folding>
-            <marker date="1427794900374" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1427794900374" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1427794900374" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1427794900374" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1051,13 +1836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.4838705" vertical-offset="612" max-vertical-offset="2816">
           <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="46" selection-end-column="49" />
-          <folding>
-            <element signature="e#3555#3615#0#PHP" expanded="false" />
-            <marker date="1428054116861" expanded="true" signature="-1:-1" placeholder="UPDATE t_jou..." />
-            <marker date="1428054116861" expanded="true" signature="-1:-1" placeholder="UPDATE t_fac..." />
-            <marker date="1428054116861" expanded="true" signature="-1:-1" placeholder="UPDATE t_pro..." />
-            <marker date="1428054116861" expanded="true" signature="-1:-1" placeholder="UPDATE t_inv..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1065,7 +1843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04522613" vertical-offset="360" max-vertical-offset="7766">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="38" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1073,13 +1850,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="9438">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesJournalMoisAnnee.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.193548" vertical-offset="700" max-vertical-offset="3542">
+        <state vertical-scroll-proportion="0.0" vertical-offset="700" max-vertical-offset="3542">
           <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="58" />
           <folding />
         </state>
@@ -1087,7 +1863,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/include/ClassDB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.576271" vertical-offset="17058" max-vertical-offset="47674">
+        <state vertical-scroll-proportion="0.0" vertical-offset="17058" max-vertical-offset="47674">
           <caret line="827" column="50" selection-start-line="827" selection-start-column="24" selection-end-line="827" selection-end-column="50" />
           <folding>
             <element signature="e#1762#1796#0#PHP" expanded="false" />
@@ -1215,7 +1991,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/downloads.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-32.774193" vertical-offset="920" max-vertical-offset="2860">
+        <state vertical-scroll-proportion="0.0" vertical-offset="920" max-vertical-offset="2860">
           <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
           <folding />
         </state>
@@ -1223,17 +1999,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/recapitulatif_inventaire.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.23728813" vertical-offset="1614" max-vertical-offset="3938">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1614" max-vertical-offset="3938">
           <caret line="74" column="34" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
-          <folding>
-            <element signature="e#5039#5101#0#HTML" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/ClassDownloadSyntheseInventaire.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.83871" vertical-offset="5606" max-vertical-offset="6402">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5606" max-vertical-offset="6402">
           <caret line="248" column="37" selection-start-line="248" selection-start-column="37" selection-end-line="248" selection-end-column="37" />
           <folding>
             <marker date="1428068448900" expanded="true" signature="2119:5697" placeholder="..." />
@@ -1293,16 +2067,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5527638" vertical-offset="1386" max-vertical-offset="4136">
           <caret line="159" column="52" selection-start-line="159" selection-start-column="52" selection-end-line="159" selection-end-column="52" />
-          <folding>
-            <element signature="e#2759#2782#0#PHP" expanded="false" />
-            <marker date="1428069028720" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/administration_magasin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.694915" vertical-offset="11748" max-vertical-offset="13772">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11748" max-vertical-offset="13772">
           <caret line="560" column="22" selection-start-line="560" selection-start-column="22" selection-end-line="560" selection-end-column="22" />
           <folding>
             <marker date="1428069102659" expanded="true" signature="2741:2774" placeholder="DELETE FROM ..." />
@@ -1324,7 +2094,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauRecapitulatifInventaire.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.645162" vertical-offset="920" max-vertical-offset="4158">
+        <state vertical-scroll-proportion="0.0" vertical-offset="920" max-vertical-offset="4158">
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="57" selection-end-column="10" />
           <folding />
         </state>
@@ -1332,8 +2102,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesInventairesAnnee.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6545925" vertical-offset="3432" max-vertical-offset="5720">
-          <caret line="179" column="107" selection-start-line="179" selection-start-column="107" selection-end-line="179" selection-end-column="107" />
+        <state vertical-scroll-proportion="0.73997414" vertical-offset="3432" max-vertical-offset="5720">
+          <caret line="182" column="2" selection-start-line="182" selection-start-column="2" selection-end-line="182" selection-end-column="2" />
           <folding />
         </state>
       </provider>
