@@ -5,7 +5,9 @@
 	@require_once("./include/function.php");
 //	@require_once("./include/ClassTemplate.php");
 	@require_once("./include/ClassUser.php");
-	@require_once("./include/ClassFactureAchat.php");
+	@require_once("./include/ClassDownloadFactureAchat.php");
+    @require_once("./include/ClassDownloadFactureVente.php");
+    @require_once("./include/ClassDownloadJournal.php");
 	@require_once("./include/ClassDB.php");	
 	@require_once("Smarty/libs/Smarty.class.php");
 
@@ -62,18 +64,31 @@
                     $html = new FactureAchat( $id_facture );
                     $htmlContent = $html->buildHtml();
                     $html->buildPdf( $htmlContent );
-                    echo $htmlContent;
                 }else{
                     echo "Facture introuvable";
                 }
 			}
-            else if( $target == "historiques_factures" )
+            else if( $target == "facture_vente" )
             {
-
+                isset($_GET ["id_facture"]) ? $id_facture = addslashes(htmlspecialchars($_GET ["id_facture"])) : $id_facture = "";
+                if( $id_facture != "" ){
+                    $html = new FactureVente( $id_facture );
+                    $htmlContent = $html->buildHtml();
+                    $html->buildPdf( $htmlContent );
+                }else{
+                    echo "Facture introuvable";
+                }
             }
-            else if( $target == "historiques_factures_ventes" )
+            else if( $target == "journal" )
             {
-
+                isset($_GET ["id_journal"]) ? $id_journal = addslashes(htmlspecialchars($_GET ["id_journal"])) : $id_journal = "";
+                if( $id_journal != "" ){
+                    $html = new Journal( $id_journal );
+                    $htmlContent = $html->buildHtml();
+                    $html->buildPdf( $htmlContent );
+                }else{
+                    echo "Journal introuvable";
+                }
             }
             else if( $target == "historiques_inventaires" )
             {

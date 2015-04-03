@@ -670,15 +670,15 @@
          *
          * @return array
          */
-        public function getProduitAcheteNonInventorie ( $id )
+        public function getInfosProduitAcheteByInventaire ( $id_produits, $id_inventaire )
         {
             $this->Sql = "SELECT *, SUM(quantite_achat) AS quantite_achetee
                             FROM t_achats AS a
                             JOIN t_factures AS f
                             ON a.id_facture = f.idt_factures
-                            WHERE f.id_inventaire = 0 AND a.id_produit = $id
+                            WHERE f.id_inventaire = $id_inventaire AND a.id_produit = $id_produits
                             GROUP BY a.id_produit";
-            $res = $this->FetchAllRows();
+            $res = $this->FetchRow();
             return $res;
         }
 
@@ -689,15 +689,15 @@
          *
          * @return array
          */
-        public function getProduitVenduNonInventorie ( $id )
+        public function getInfosProduitVenduByInventaire ( $id_produit, $id_inventaire )
         {
             $this->Sql = "SELECT *, SUM(v.quantite_vendue) AS quantite_vente
                             FROM t_ventes AS v
                             JOIN t_factures_ventes AS fv
                             ON v.id_facture_vente = fv.idt_factures_ventes
-                            WHERE fv.id_inventaire = 0 AND v.id_produit = $id
+                            WHERE fv.id_inventaire = $id_inventaire AND v.id_produit = $id_produit
                             GROUP BY v.id_produit";
-            $res = $this->FetchAllRows();
+            $res = $this->FetchRow();
             return $res;
         }
 
@@ -862,7 +862,7 @@
 		 */
 		public function getAllAchatsInventaire( $id )
 		{
-			$this->Sql = "SELECT p.nom_produit, p.idt_produits, p.stock_initial, SUM(a.quantite_achat) AS achat, p.stock_physique, p.prix_vente, p.prix_achat
+			$this->Sql = "SELECT *, SUM(a.quantite_achat) AS quantite_achat
 							FROM t_produits AS p
 							LEFT JOIN t_achats AS a ON p.idt_produits = a.id_produit
 							JOIN t_factures AS f ON a.id_facture = f.idt_factures
@@ -1835,6 +1835,44 @@
                             JOIN t_users AS u ON f.id_user = u.idt_users
                             JOIN t_produits AS p ON a.id_produit = p.idt_produits
                             WHERE f.idt_factures = $id";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getInfosFactureAchatById
+         * -------------------
+         * Retourne tous les infos sur une facture de vente
+         *
+         * @return array
+         */
+        public function getInfosFactureVenteyId( $id )
+        {
+            $this->Sql = "SELECT *
+                                FROM t_factures_ventes AS fv
+                                JOIN t_ventes AS v ON v.id_facture_vente = fv.idt_factures_ventes
+                                JOIN t_users AS u ON fv.id_user = u.idt_users
+                                JOIN t_produits AS p ON v.id_produit = p.idt_produits
+                                WHERE fv.idt_factures_ventes = $id";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getInfosFactureAchatById
+         * -------------------
+         * Retourne tous les infos sur un journal
+         *
+         * @return array
+         */
+        public function getInfosJournalById( $id )
+        {
+            $this->Sql = "SELECT *
+                                FROM t_journal AS j
+                                JOIN t_operations AS o ON o.id_journal = j.idt_journal
+                                JOIN t_users AS u ON j.id_user = u.idt_users
+                                JOIN t_produits AS p ON o.id_produit = p.idt_produits
+                                WHERE j.idt_journal = $id";
             $res = $this->FetchAllRows();
             return $res;
         }

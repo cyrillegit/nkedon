@@ -41,7 +41,7 @@ class BackupDatabase
     public function backupTables()
     {
         $tables = "*";
-        $outputDir = "../../../downloads/BackupDB";
+        $outputDir = "../../../downloads/databases";
 
         try
         {

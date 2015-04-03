@@ -79,15 +79,16 @@ $(document).ready (function ()
                 $quantite_achetee = 0;
                 $quantite_vendue = 0;
 
-                $dataAchat = $db->getProduitAcheteNonInventorie( $obj["idt_produits"]);
-                $dataVente = $db->getProduitVenduNonInventorie( $obj["idt_produits"] );
+                // recuperer les infos du produit non inventorié; donc id_inventaire = 0
+                $dataAchat = $db->getInfosProduitAcheteByInventaire( $obj["idt_produits"], 0);
+                $dataVente = $db->getInfosProduitVenduByInventaire( $obj["idt_produits"], 0 );
 
                 if( count( $dataAchat ) > 0 ){
-                    $quantite_achetee = $dataAchat[0]["quantite_achetee"];
+                    $quantite_achetee = $dataAchat["quantite_achetee"];
                 }
 
                 if( count( $dataVente ) > 0 ){
-                    $quantite_vendue = $dataVente[0]["quantite_vente"];
+                    $quantite_vendue = $dataVente["quantite_vente"];
                 }
 
                     ?>

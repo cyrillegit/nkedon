@@ -36,13 +36,10 @@ $(document).ready (function ()
     {
         $(this).click (function ()
         {
-        //    var filename = $(this).attr("filename");
-        //    document.location.href="buildHtml.php?filename="+filename;
             window.open(
                 'downloads.php?sub=facture_achat&id_facture='+$(this).attr("id_facture"),
                 '_blank'
             );
-        //    alert("Téléchargement bientot disponible  : " + filename);
         });
     });
 

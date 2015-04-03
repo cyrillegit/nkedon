@@ -36,9 +36,10 @@ $(document).ready (function ()
     {
         $(this).click (function ()
         {
-            var filename = $(this).attr("filename");
-        //    document.location.href="download.php?filename="+filename;
-            alert("Téléchargement bientot disponible : "+ filename);
+            window.open(
+                'downloads.php?sub=journal&id_journal='+$(this).attr("id_journal"),
+                '_blank'
+            );
         });
     });
 
@@ -48,7 +49,6 @@ $(document).ready (function ()
         {
             var id_journal = $(this).attr("id_journal");
             document.location.href="administration_magasin.php?sub=edit_historique_journal&id_journal="+$(this).attr("id_journal");
-        //    alert("Edition bientot disponible : "+id_journal);
         });
     });
 });
@@ -138,7 +138,7 @@ $(document).ready (function ()
                                 ?>
                                 
                                 <tr>    
-                                    <td align="left" valign="middle"><a class="download_links" filename="<?=$obj["idt_journal"]; ?>"><img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez le journal</a></td>
+                                    <td align="left" valign="middle"><a class="download_links" id_journal="<?=$obj["idt_journal"]; ?>"><img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez le journal</a></td>
                                     <td class="blocTitre"><?php  if( $id_type_user <= 2 ){; ?><a class="edit_links" id_journal="<?=$obj["idt_journal"]; ?>"><img src="assets/images/edit.png" alt="" width="16" height="16" /> Modifier le journal</a><?php  } ?></td>
                                     <td class="blocTitre"></td>
                                     <td class="blocTitre">Montant du journal : </td>

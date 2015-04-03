@@ -28,8 +28,12 @@ function RefreshTableGenerateSynthese()
         url		: "ajax/infos/administration_magasin/GetTableauGenerateSynthese.php",
         async	: false,
         data	: "",
-        success	: function (msg){}
+        success	: function (msg){
+            alert(msg);
+        }
     }).responseText;
+
+    alert( responseText );
 }
 
 /**
@@ -60,11 +64,12 @@ $(document).ready (function ()
     {
         var didConfirm = confirm("Vous êtes sur le point de générer la synthèse de l'inventaire. \n cet action est irréversible");
       if (didConfirm == true) {
-          RefreshTableGenerateSynthese();
-          RefreshTableRecapitulatifInventaire ();
-          $("#downloadLink").show();
-          $("#btnAnnulerValider").hide();
-          $("#succes_register").show();
+          alert( "valider" );
+//          RefreshTableGenerateSynthese();
+//          RefreshTableRecapitulatifInventaire ();
+//          $("#downloadLink").show();
+//          $("#btnAnnulerValider").hide();
+//          $("#succes_register").show();
       }
     });
 

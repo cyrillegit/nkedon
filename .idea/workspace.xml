@@ -2,286 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="624981b3-8f83-4c5b-a3cf-c77a5949c79f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/include/ClassFactureAchat.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/downloads.php" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_LGPL.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_changelog.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_class\exception.class.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_class\locale.class.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_class\myPdf.class.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_class\parsingCss.class.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_class\parsingHtml.class.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_class\tcpdfConfig.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_lisez_moi.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_read_me.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\2dbarcodes.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\CHANGELOG.TXT" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\LICENSE.TXT" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\README.TXT" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\barcodes.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\cache\chapter_demo_1.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\cache\chapter_demo_2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\cache\table_data_demo.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\cache\utf8test.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\config\lang\bra.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\config\lang\eng.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\config\lang\ger.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\config\lang\ita.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\config\tcpdf_config.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\config\tcpdf_config_alt.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\doc\read_me.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\examples\read_me.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\README.TXT" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\ZarBold.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\ZarBold.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\almohanad.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\almohanad.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\almohanad.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\arialunicid0.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\courier.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavu-fonts-ttf-2.30\AUTHORS" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavu-fonts-ttf-2.30\BUGS" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavu-fonts-ttf-2.30\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavu-fonts-ttf-2.30\NEWS" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavu-fonts-ttf-2.30\README" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavu-fonts-ttf-2.30\langcover.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavu-fonts-ttf-2.30\status.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavu-fonts-ttf-2.30\unicover.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusans.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusans.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusans.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansb.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansb.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansb.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansbi.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansbi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansbi.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusanscondensed.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusanscondensed.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusanscondensed.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusanscondensedb.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusanscondensedb.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusanscondensedb.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusanscondensedbi.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusanscondensedbi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusanscondensedbi.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusanscondensedi.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusanscondensedi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusanscondensedi.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansi.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansi.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansmono.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansmono.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansmono.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansmonob.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansmonob.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansmonob.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansmonobi.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansmonobi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansmonobi.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansmonoi.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansmonoi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavusansmonoi.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserif.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserif.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserif.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifb.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifb.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifb.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifbi.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifbi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifbi.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifcondensed.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifcondensed.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifcondensed.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifcondensedb.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifcondensedb.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifcondensedb.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifcondensedbi.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifcondensedbi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifcondensedbi.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifcondensedi.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifcondensedi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifcondensedi.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifi.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\dejavuserifi.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freefont-20090104\AUTHORS" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freefont-20090104\COPYING" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freefont-20090104\CREDITS" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freefont-20090104\ChangeLog" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freefont-20090104\INSTALL" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freefont-20090104\README" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freemono.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freemono.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freemono.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freemonob.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freemonob.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freemonob.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freemonobi.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freemonobi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freemonobi.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freemonoi.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freemonoi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freemonoi.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freesans.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freesans.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freesans.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freesansb.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freesansb.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freesansb.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freesansbi.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freesansbi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freesansbi.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freesansi.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freesansi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freesansi.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freeserif.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freeserif.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freeserif.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freeserifb.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freeserifb.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freeserifb.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freeserifbi.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freeserifbi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freeserifbi.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freeserifi.ctg.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freeserifi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\freeserifi.z" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\helvetica.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\helveticab.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\helveticabi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\helveticai.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\hysmyeongjostdmedium.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\kozgopromedium.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\kozminproregular.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\msungstdlight.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\stsongstdlight.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\symbol.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\times.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\timesb.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\timesbi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\timesi.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\uni2cid_ac15.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\uni2cid_ag15.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\uni2cid_aj16.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\uni2cid_ak12.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\README.TXT" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\cp1250.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\cp1251.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\cp1252.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\cp1253.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\cp1254.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\cp1255.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\cp1257.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\cp1258.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\cp874.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\iso-8859-1.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\iso-8859-11.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\iso-8859-15.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\iso-8859-16.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\iso-8859-2.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\iso-8859-4.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\iso-8859-5.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\iso-8859-7.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\iso-8859-9.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\koi8-r.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\enc\koi8-u.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\freetype6.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\makeallttffonts.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\makefont.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\pfm2afm" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\pfm2afm.exe" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\src\pfm2afm-src.tar.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\src\readme.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\src\ttf2ufm-src.tar.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\ttf2ufm" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\ttf2ufm.exe" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\utils\zlib1.dll" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\zapfdingbats.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\fonts\zarbold.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\htmlcolors.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\images\read_me.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\qrcode.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\tcpdf.crt" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\tcpdf.fdf" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\tcpdf.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\_tcpdf_5.0.002\unicode_data.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\about.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\bookmark.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\exemple00.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\exemple01.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\exemple02.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\exemple03.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\exemple04.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\exemple05.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\exemple06.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\exemple07.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\exemple08.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\exemple09.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\exemple10.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\exemple11.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\exemple12.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\exemple13.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\forms.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\groups.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\js1.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\js2.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\js3.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\qrcode.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\radius.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\regle.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\about.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\bas_page.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple00.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple01.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple02.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple03.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple04.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple05.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple06.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple06.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple07a.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple07b.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple08.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple09.png.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple10.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple10a.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple10b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple10c.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple11.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple12.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\exemple13.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\forms.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\logo.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\logo.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\off.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\puce.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\puce2.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\regle.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\svg.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\res\tcpdf_logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\svg.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\svg_tiger.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\svg_tree.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\ticket.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\examples\utf8.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\html2pdf.class.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\locale\ca.csv" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\locale\cs.csv" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\locale\da.csv" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\locale\de.csv" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\locale\en.csv" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\locale\es.csv" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\locale\fr.csv" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\locale\it.csv" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\locale\nl.csv" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\locale\pt.csv" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\html2pdf\locale\tr.csv" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\include\ClassBuildHtml.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/include/ClassDownloadFactureVente.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/include/ClassDownloadJournal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/include/ClassDownloadSyntheseInventaire.php" />
+      <change type="DELETED" beforePath="C:\wamp\www\nkedon\downloads\Inventaire\inventaire_20140705_080402.pdf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\nkedon\downloads\Inventaire\inventaire_20140716_222118.pdf" afterPath="" />
+      <change type="MOVED" beforePath="C:\wamp\www\nkedon\include\ClassFactureAchat.php" afterPath="$PROJECT_DIR$/include/ClassDownloadFactureAchat.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/ClassBackupDatabase.php" afterPath="$PROJECT_DIR$/include/ClassBackupDatabase.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/ClassDB.php" afterPath="$PROJECT_DIR$/include/ClassDB.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauGenerateSynthese.php" afterPath="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauGenerateSynthese.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesMoisAnnee.php" afterPath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesMoisAnnee.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesVentesMoisAnnee.php" afterPath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesVentesMoisAnnee.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesJournalMoisAnnee.php" afterPath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesJournalMoisAnnee.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduits.php" afterPath="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduits.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduitsForInventaire.php" afterPath="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduitsForInventaire.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/downloads.php" afterPath="$PROJECT_DIR$/downloads.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/e87cc5c3952e078b19863ada84abac90e08e4ac2.file.recapitulatif_inventaire.tpl.php" afterPath="$PROJECT_DIR$/templates_c/e87cc5c3952e078b19863ada84abac90e08e4ac2.file.recapitulatif_inventaire.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/recapitulatif_inventaire.tpl" afterPath="$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/recapitulatif_inventaire.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Nkedon.iws" />
@@ -307,152 +44,132 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GetTableauHistoriquesFacturesMoisAnnee.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesMoisAnnee.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.903226" vertical-offset="2816" max-vertical-offset="3740">
-              <caret line="149" column="60" selection-start-line="149" selection-start-column="60" selection-end-line="149" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ClassDB.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/ClassDB.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.338983" vertical-offset="7444" max-vertical-offset="46838">
-              <caret line="384" column="31" selection-start-line="384" selection-start-column="20" selection-end-line="384" selection-end-column="31" />
+            <state vertical-scroll-proportion="-5.4576273" vertical-offset="13978" max-vertical-offset="47674">
+              <caret line="684" column="11" selection-start-line="684" selection-start-column="11" selection-end-line="684" selection-end-column="11" />
               <folding>
                 <element signature="e#1762#1796#0#PHP" expanded="false" />
-                <marker date="1427969288767" expanded="true" signature="5271:5613" placeholder="..." />
-                <marker date="1427969288767" expanded="true" signature="5283:5296" placeholder="..." />
-                <marker date="1427969288767" expanded="true" signature="5308:5600" placeholder="..." />
-                <marker date="1427969288767" expanded="true" signature="6034:6319" placeholder="..." />
-                <marker date="1427969288767" expanded="true" signature="6045:6057" placeholder="..." />
-                <marker date="1427969288767" expanded="true" signature="6068:6307" placeholder="..." />
-                <marker date="1427969288767" expanded="true" signature="6769:6881" placeholder="SELECT COUNT..t_users..." />
-                <marker date="1427969288767" expanded="true" signature="7559:7587" placeholder="SELECT * FRO..t_users..." />
-                <marker date="1427969288767" expanded="true" signature="7907:7959" placeholder="SELECT idt_u..t_users..." />
-                <marker date="1427969288767" expanded="true" signature="8273:8314" placeholder="SELECT COUNT..t_users..." />
-                <marker date="1427969288767" expanded="true" signature="8616:8716" placeholder="SELECT * FRO..t_users..." />
-                <marker date="1427969288767" expanded="true" signature="9031:9196" placeholder="SELECT * FRO..t_users..." />
-                <marker date="1427969288767" expanded="true" signature="9496:9620" placeholder="SELECT * FRO..t_users..." />
-                <marker date="1427969288767" expanded="true" signature="9936:9971" placeholder="SELECT * FRO..t_types_users..." />
-                <marker date="1427969288767" expanded="true" signature="10322:10419" placeholder="SELECT * FRO..t_types_users..." />
-                <marker date="1427969288767" expanded="true" signature="10716:10764" placeholder="SELECT COUNT..t_types_users..." />
-                <marker date="1427969288767" expanded="true" signature="11067:11122" placeholder="SELECT COUNT..t_produits_factures..." />
-                <marker date="1427969288767" expanded="true" signature="11465:11524" placeholder="SELECT COUNT..t_produits_operations..." />
-                <marker date="1427969288767" expanded="true" signature="11825:11888" placeholder="SELECT MAX(i..t_inventaires..." />
-                <marker date="1427969288767" expanded="true" signature="12235:12287" placeholder="SELECT * FRO..t_types_users..." />
-                <marker date="1427969288767" expanded="true" signature="12568:12614" placeholder="SELECT COUNT..t_produits..." />
-                <marker date="1427969288767" expanded="true" signature="12919:12973" placeholder="SELECT COUNT..t_fournisseurs..." />
-                <marker date="1427969288767" expanded="true" signature="13338:13397" placeholder="SELECT COUNT..t_produits_operations..." />
-                <marker date="1427969288767" expanded="true" signature="13720:13766" placeholder="SELECT COUNT..t_factures..." />
-                <marker date="1427969288767" expanded="true" signature="14076:14142" placeholder="SELECT COUNT..t_historiques_syntheses..." />
-                <marker date="1427969288767" expanded="true" signature="14460:14524" placeholder="SELECT COUNT..t_historiques_factures..." />
-                <marker date="1427969288767" expanded="true" signature="14872:14965" placeholder="SELECT COUNT..t_historiques_factures..." />
-                <marker date="1427969288767" expanded="true" signature="15275:15337" placeholder="SELECT COUNT..t_groupes_factures..." />
-                <marker date="1427969288767" expanded="true" signature="15638:15757" placeholder="SELECT COUNT..t_historiques_factures..." />
-                <marker date="1427969288767" expanded="true" signature="16040:16064" placeholder="SELECT * FRO..t_produits..." />
-                <marker date="1427969288767" expanded="true" signature="16369:16679" placeholder="SELECT *, SU..t_achats..." />
-                <marker date="1427969288767" expanded="true" signature="17036:17369" placeholder="SELECT *, SU..t_achats..." />
-                <marker date="1427969288767" expanded="true" signature="17747:18104" placeholder="SELECT *, SU..t_ventes..." />
-                <marker date="1427969288767" expanded="true" signature="18494:18828" placeholder="SELECT *, SU..t_ventes..." />
-                <marker date="1427969288767" expanded="true" signature="19137:19244" placeholder="SELECT * FRO..t_produits..." />
-                <marker date="1427969288767" expanded="true" signature="19504:19650" placeholder="SELECT * FRO..t_factures..." />
-                <marker date="1427969288767" expanded="true" signature="19995:20078" placeholder="SELECT * FRO..t_factures_ventes..." />
-                <marker date="1427969288767" expanded="true" signature="20748:20839" placeholder="SELECT * FRO..t_factures..." />
-                <marker date="1427969288767" expanded="true" signature="21552:21657" placeholder="SELECT * FRO..t_factures_ventes..." />
-                <marker date="1427969288767" expanded="true" signature="21984:22108" placeholder="SELECT * FRO..t_inventaires..." />
-                <marker date="1427969288767" expanded="true" signature="22345:22613" placeholder="SELECT p.nom..t_produits..." />
-                <marker date="1427969288767" expanded="true" signature="22917:23267" placeholder="SELECT p.nom..t_produits..." />
-                <marker date="1427969288767" expanded="true" signature="23573:23792" placeholder="SELECT * FRO..t_achats..." />
-                <marker date="1427969288767" expanded="true" signature="24170:24389" placeholder="SELECT * FRO..t_achats..." />
-                <marker date="1427969288767" expanded="true" signature="24791:25040" placeholder="SELECT * FRO..t_ventes..." />
-                <marker date="1427969288767" expanded="true" signature="25418:25642" placeholder="SELECT * FRO..t_operations..." />
-                <marker date="1427969288767" expanded="true" signature="25936:26315" placeholder="SELECT COUNT..t_fournisseurs..." />
-                <marker date="1427969288767" expanded="true" signature="26587:26620" placeholder="SELECT * FRO..t_produits_factures..." />
-                <marker date="1427969288767" expanded="true" signature="26952:26983" placeholder="SELECT * FRO..t_produits_ventes..." />
-                <marker date="1427969288767" expanded="true" signature="27337:27372" placeholder="SELECT * FRO..t_produits_operations..." />
-                <marker date="1427969288767" expanded="true" signature="27701:27810" placeholder="SELECT * FRO..t_produits..." />
-                <marker date="1427969288767" expanded="true" signature="28065:28211" placeholder="SELECT * FRO..t_factures..." />
-                <marker date="1427969288767" expanded="true" signature="28490:28536" placeholder="SELECT * FRO..t_produits..." />
-                <marker date="1427969288767" expanded="true" signature="28911:28961" placeholder="SELECT * FRO..t_produits..." />
-                <marker date="1427969288767" expanded="true" signature="29266:29320" placeholder="SELECT * FRO..t_fournisseurs..." />
-                <marker date="1427969288767" expanded="true" signature="29618:29708" placeholder="SELECT idt_p..t_produits..." />
-                <marker date="1427969288767" expanded="true" signature="30039:30108" placeholder="SELECT * FRO..t_achats..." />
-                <marker date="1427969288767" expanded="true" signature="30408:30560" placeholder="SELECT * FRO..." />
-                <marker date="1427969288767" expanded="true" signature="30819:30843" placeholder="SELECT * FRO..t_produits..." />
-                <marker date="1427969288767" expanded="true" signature="31099:31121" placeholder="SELECT * FRO..t_achats..." />
-                <marker date="1427969288767" expanded="true" signature="31383:31407" placeholder="SELECT * FRO..t_factures..." />
-                <marker date="1427969288767" expanded="true" signature="31681:31709" placeholder="SELECT * FRO..t_fournisseurs..." />
-                <marker date="1427969288767" expanded="true" signature="31985:32014" placeholder="SELECT * FRO..t_recapitulatif..." />
-                <marker date="1427969288767" expanded="true" signature="32283:32310" placeholder="SELECT * FRO..t_types_users..." />
-                <marker date="1427969288767" expanded="true" signature="32563:32584" placeholder="SELECT * FRO..t_users..." />
-                <marker date="1427969288767" expanded="true" signature="32841:32985" placeholder="SELECT * FRO..t_historiques_syntheses..." />
-                <marker date="1427969288767" expanded="true" signature="33264:33413" placeholder="SELECT * FRO..t_historiques_syntheses..." />
-                <marker date="1427969288767" expanded="true" signature="33708:33870" placeholder="SELECT * FRO..t_historiques_syntheses..." />
-                <marker date="1427969288767" expanded="true" signature="34559:34782" placeholder="SELECT * FRO..t_factures..." />
-                <marker date="1427969288767" expanded="true" signature="35519:35677" placeholder="SELECT * FRO..t_factures_ventes..." />
-                <marker date="1427969288767" expanded="true" signature="36397:36501" placeholder="SELECT COUNT..t_factures..." />
-                <marker date="1427969288767" expanded="true" signature="37357:37475" placeholder="SELECT COUNT..t_factures_ventes..." />
-                <marker date="1427969288767" expanded="true" signature="38168:38276" placeholder="SELECT COUNT..t_inventaires..." />
-                <marker date="1427969288767" expanded="true" signature="38573:38728" placeholder="SELECT * FRO..t_produits_factures..." />
-                <marker date="1427969288767" expanded="true" signature="39072:39222" placeholder="SELECT * FRO..t_produits_ventes..." />
-                <marker date="1427969288767" expanded="true" signature="39525:39675" placeholder="SELECT * FRO..t_produits_factures..." />
-                <marker date="1427969288767" expanded="true" signature="40011:40164" placeholder="SELECT * FRO..t_produits_operations..." />
-                <marker date="1427969288767" expanded="true" signature="40434:40495" placeholder="SELECT idt_p..t_produits..." />
-                <marker date="1427969288767" expanded="true" signature="40765:40824" placeholder="SELECT prix_..t_produits..." />
-                <marker date="1427969288767" expanded="true" signature="41122:41201" placeholder="SELECT SUM(p..t_produits_factures..." />
-                <marker date="1427969288767" expanded="true" signature="41468:41518" placeholder="SELECT * FRO..t_produits..." />
-                <marker date="1427969288767" expanded="true" signature="41791:41846" placeholder="SELECT COUNT..t_produits_factures..." />
-                <marker date="1427969288767" expanded="true" signature="42120:42244" placeholder="SELECT * FRO..t_achats..." />
-                <marker date="1427969288767" expanded="true" signature="42564:42638" placeholder="SELECT MAX( ..t_historiques_syntheses..." />
-                <marker date="1427969288767" expanded="true" signature="42943:43007" placeholder="SELECT MAX( ..t_groupes_factures..." />
-                <marker date="1427969288767" expanded="true" signature="43325:43397" placeholder="SELECT MAX( ..t_historiques_factures..." />
-                <marker date="1427969288767" expanded="true" signature="43686:43927" placeholder="SELECT tu.no..t_types_users..." />
-                <marker date="1427969288767" expanded="true" signature="44206:44234" placeholder="SELECT * FRO..t_users..." />
-                <marker date="1427969288767" expanded="true" signature="44532:44784" placeholder="SELECT COUNT..t_fournisseurs..." />
-                <marker date="1427969288767" expanded="true" signature="45106:45334" placeholder="SELECT COUNT..t_fournisseurs..." />
-                <marker date="1427969288767" expanded="true" signature="45617:45711" placeholder="SELECT * FRO..t_historiques_syntheses..." />
-                <marker date="1427969288767" expanded="true" signature="46147:46389" placeholder="SELECT * FRO..t_produits..." />
-                <marker date="1427969288767" expanded="true" signature="46698:46995" placeholder="SELECT p.idt..t_produits..." />
-                <marker date="1427969288767" expanded="true" signature="47311:47447" placeholder="SELECT * FRO..t_users..." />
-                <marker date="1427969288767" expanded="true" signature="47733:47796" placeholder="SELECT * FRO..t_achats..." />
-                <marker date="1427969288767" expanded="true" signature="48058:48182" placeholder="SELECT * FRO..t_historiques_factures..." />
-                <marker date="1427969288767" expanded="true" signature="48506:48630" placeholder="SELECT * FRO..t_achats..." />
-                <marker date="1427969288767" expanded="true" signature="49020:49225" placeholder="SELECT * FRO..t_ventes..." />
-                <marker date="1427969288767" expanded="true" signature="49596:49605" placeholder="SELECT * FRO..t_ventes..." />
-                <marker date="1427969288767" expanded="true" signature="49596:50036" placeholder="SELECT * FRO..t_factures..." />
-                <marker date="1427969288767" expanded="true" signature="49596:50037" placeholder="SELECT * FRO..t_factures..." />
-                <marker date="1427969288767" expanded="true" signature="50389:50643" placeholder="SELECT SUM(h..t_historiques_achats..." />
-                <marker date="1427969288767" expanded="true" signature="50975:51372" placeholder="SELECT SUM(h..t_historiques_achats..." />
-                <marker date="1427969288767" expanded="true" signature="51694:52055" placeholder="SELECT SUM(h..t_achats..." />
-                <marker date="1427969288767" expanded="true" signature="52306:52346" placeholder="SELECT * FRO..t_groupes_factures..." />
-                <marker date="1427969288767" expanded="true" signature="52668:52826" placeholder="SELECT * FRO..t_produits_operations..." />
-                <marker date="1427969288767" expanded="true" signature="53191:53324" placeholder="SELECT * FRO..t_produits_operations..." />
-                <marker date="1427969288767" expanded="true" signature="53711:53903" placeholder="SELECT * FRO..t_produits_operations..." />
-                <marker date="1427969288767" expanded="true" signature="54306:54496" placeholder="SELECT * FRO..t_produits_factures..." />
-                <marker date="1427969288767" expanded="true" signature="54912:55112" placeholder="SELECT * FRO..t_produits_ventes..." />
-                <marker date="1427969288767" expanded="true" signature="55483:55683" placeholder="SELECT * FRO..t_produits_ventes..." />
-                <marker date="1427969288767" expanded="true" signature="56003:56047" placeholder="SELECT * FRO..t_journal..." />
-                <marker date="1427969288767" expanded="true" signature="56378:56430" placeholder="SELECT * FRO..t_inventaires..." />
-                <marker date="1427969288767" expanded="true" signature="57093:57255" placeholder="SELECT * FRO..t_journal..." />
-                <marker date="1427969288767" expanded="true" signature="57956:58131" placeholder="SELECT COUNT..t_journal..." />
-                <marker date="1427969288767" expanded="true" signature="58829:59073" placeholder="SELECT * FRO..t_journal..." />
-                <marker date="1427969288767" expanded="true" signature="59749:60012" placeholder="SELECT * FRO..t_inventaires..." />
-                <marker date="1427969288767" expanded="true" signature="60434:60637" placeholder="SELECT * FRO..t_operations..." />
+                <marker date="1428014781545" expanded="true" signature="5271:5613" placeholder="..." />
+                <marker date="1428014781545" expanded="true" signature="5283:5296" placeholder="..." />
+                <marker date="1428014781545" expanded="true" signature="5308:5600" placeholder="..." />
+                <marker date="1428014781545" expanded="true" signature="6034:6319" placeholder="..." />
+                <marker date="1428014781545" expanded="true" signature="6045:6057" placeholder="..." />
+                <marker date="1428014781545" expanded="true" signature="6068:6307" placeholder="..." />
+                <marker date="1428014781545" expanded="true" signature="6769:6881" placeholder="SELECT COUNT..t_users..." />
+                <marker date="1428014781545" expanded="true" signature="7559:7587" placeholder="SELECT * FRO..t_users..." />
+                <marker date="1428014781545" expanded="true" signature="7907:7959" placeholder="SELECT idt_u..t_users..." />
+                <marker date="1428014781545" expanded="true" signature="8273:8314" placeholder="SELECT COUNT..t_users..." />
+                <marker date="1428014781545" expanded="true" signature="8616:8716" placeholder="SELECT * FRO..t_users..." />
+                <marker date="1428014781545" expanded="true" signature="9031:9196" placeholder="SELECT * FRO..t_users..." />
+                <marker date="1428014781545" expanded="true" signature="9496:9620" placeholder="SELECT * FRO..t_users..." />
+                <marker date="1428014781545" expanded="true" signature="9936:9971" placeholder="SELECT * FRO..t_types_users..." />
+                <marker date="1428014781545" expanded="true" signature="10322:10419" placeholder="SELECT * FRO..t_types_users..." />
+                <marker date="1428014781545" expanded="true" signature="10716:10764" placeholder="SELECT COUNT..t_types_users..." />
+                <marker date="1428014781545" expanded="true" signature="11067:11122" placeholder="SELECT COUNT..t_produits_factures..." />
+                <marker date="1428014781545" expanded="true" signature="11465:11524" placeholder="SELECT COUNT..t_produits_operations..." />
+                <marker date="1428014781545" expanded="true" signature="11825:11888" placeholder="SELECT MAX(i..t_inventaires..." />
+                <marker date="1428014781545" expanded="true" signature="12235:12287" placeholder="SELECT * FRO..t_types_users..." />
+                <marker date="1428014781545" expanded="true" signature="12568:12614" placeholder="SELECT COUNT..t_produits..." />
+                <marker date="1428014781545" expanded="true" signature="12919:12973" placeholder="SELECT COUNT..t_fournisseurs..." />
+                <marker date="1428014781545" expanded="true" signature="13338:13397" placeholder="SELECT COUNT..t_produits_operations..." />
+                <marker date="1428014781545" expanded="true" signature="13720:13766" placeholder="SELECT COUNT..t_factures..." />
+                <marker date="1428014781545" expanded="true" signature="14076:14142" placeholder="SELECT COUNT..t_historiques_syntheses..." />
+                <marker date="1428014781545" expanded="true" signature="14460:14524" placeholder="SELECT COUNT..t_historiques_factures..." />
+                <marker date="1428014781545" expanded="true" signature="14872:14965" placeholder="SELECT COUNT..t_historiques_factures..." />
+                <marker date="1428014781545" expanded="true" signature="15275:15337" placeholder="SELECT COUNT..t_groupes_factures..." />
+                <marker date="1428014781545" expanded="true" signature="15638:15757" placeholder="SELECT COUNT..t_historiques_factures..." />
+                <marker date="1428014781545" expanded="true" signature="16040:16064" placeholder="SELECT * FRO..t_produits..." />
+                <marker date="1428014781545" expanded="true" signature="16369:16679" placeholder="SELECT *, SU..t_achats..." />
+                <marker date="1428014781545" expanded="true" signature="17065:17420" placeholder="SELECT *, SU..t_achats..." />
+                <marker date="1428014781545" expanded="true" signature="17822:18200" placeholder="SELECT *, SU..t_ventes..." />
+                <marker date="1428014781545" expanded="true" signature="18586:18920" placeholder="SELECT *, SU..t_ventes..." />
+                <marker date="1428014781545" expanded="true" signature="19229:19336" placeholder="SELECT * FRO..t_produits..." />
+                <marker date="1428014781545" expanded="true" signature="19596:19742" placeholder="SELECT * FRO..t_factures..." />
+                <marker date="1428014781545" expanded="true" signature="20087:20170" placeholder="SELECT * FRO..t_factures_ventes..." />
+                <marker date="1428014781545" expanded="true" signature="20840:20931" placeholder="SELECT * FRO..t_factures..." />
+                <marker date="1428014781545" expanded="true" signature="21644:21749" placeholder="SELECT * FRO..t_factures_ventes..." />
+                <marker date="1428014781545" expanded="true" signature="22076:22200" placeholder="SELECT * FRO..t_inventaires..." />
+                <marker date="1428014781545" expanded="true" signature="22437:22705" placeholder="SELECT p.nom..t_produits..." />
+                <marker date="1428014781545" expanded="true" signature="23009:23277" placeholder="SELECT *, SU..t_produits..." />
+                <marker date="1428014781545" expanded="true" signature="23583:23802" placeholder="SELECT * FRO..t_achats..." />
+                <marker date="1428014781545" expanded="true" signature="24180:24399" placeholder="SELECT * FRO..t_achats..." />
+                <marker date="1428014781545" expanded="true" signature="24801:25050" placeholder="SELECT * FRO..t_ventes..." />
+                <marker date="1428014781545" expanded="true" signature="25428:25652" placeholder="SELECT * FRO..t_operations..." />
+                <marker date="1428014781545" expanded="true" signature="25946:26325" placeholder="SELECT COUNT..t_fournisseurs..." />
+                <marker date="1428014781545" expanded="true" signature="26597:26630" placeholder="SELECT * FRO..t_produits_factures..." />
+                <marker date="1428014781545" expanded="true" signature="26962:26993" placeholder="SELECT * FRO..t_produits_ventes..." />
+                <marker date="1428014781545" expanded="true" signature="27347:27382" placeholder="SELECT * FRO..t_produits_operations..." />
+                <marker date="1428014781545" expanded="true" signature="27711:27820" placeholder="SELECT * FRO..t_produits..." />
+                <marker date="1428014781545" expanded="true" signature="28075:28221" placeholder="SELECT * FRO..t_factures..." />
+                <marker date="1428014781545" expanded="true" signature="28500:28546" placeholder="SELECT * FRO..t_produits..." />
+                <marker date="1428014781545" expanded="true" signature="28921:28971" placeholder="SELECT * FRO..t_produits..." />
+                <marker date="1428014781545" expanded="true" signature="29276:29330" placeholder="SELECT * FRO..t_fournisseurs..." />
+                <marker date="1428014781545" expanded="true" signature="29628:29718" placeholder="SELECT idt_p..t_produits..." />
+                <marker date="1428014781545" expanded="true" signature="30049:30118" placeholder="SELECT * FRO..t_achats..." />
+                <marker date="1428014781545" expanded="true" signature="30418:30570" placeholder="SELECT * FRO..." />
+                <marker date="1428014781545" expanded="true" signature="30829:30853" placeholder="SELECT * FRO..t_produits..." />
+                <marker date="1428014781545" expanded="true" signature="31109:31131" placeholder="SELECT * FRO..t_achats..." />
+                <marker date="1428014781545" expanded="true" signature="31393:31417" placeholder="SELECT * FRO..t_factures..." />
+                <marker date="1428014781545" expanded="true" signature="31691:31719" placeholder="SELECT * FRO..t_fournisseurs..." />
+                <marker date="1428014781545" expanded="true" signature="31995:32024" placeholder="SELECT * FRO..t_recapitulatif..." />
+                <marker date="1428014781545" expanded="true" signature="32293:32320" placeholder="SELECT * FRO..t_types_users..." />
+                <marker date="1428014781545" expanded="true" signature="32573:32594" placeholder="SELECT * FRO..t_users..." />
+                <marker date="1428014781545" expanded="true" signature="32851:32995" placeholder="SELECT * FRO..t_historiques_syntheses..." />
+                <marker date="1428014781545" expanded="true" signature="33274:33423" placeholder="SELECT * FRO..t_historiques_syntheses..." />
+                <marker date="1428014781545" expanded="true" signature="33718:33880" placeholder="SELECT * FRO..t_historiques_syntheses..." />
+                <marker date="1428014781545" expanded="true" signature="34569:34792" placeholder="SELECT * FRO..t_factures..." />
+                <marker date="1428014781545" expanded="true" signature="35529:35687" placeholder="SELECT * FRO..t_factures_ventes..." />
+                <marker date="1428014781545" expanded="true" signature="36407:36511" placeholder="SELECT COUNT..t_factures..." />
+                <marker date="1428014781545" expanded="true" signature="37367:37485" placeholder="SELECT COUNT..t_factures_ventes..." />
+                <marker date="1428014781545" expanded="true" signature="38178:38286" placeholder="SELECT COUNT..t_inventaires..." />
+                <marker date="1428014781545" expanded="true" signature="38583:38738" placeholder="SELECT * FRO..t_produits_factures..." />
+                <marker date="1428014781545" expanded="true" signature="39082:39232" placeholder="SELECT * FRO..t_produits_ventes..." />
+                <marker date="1428014781545" expanded="true" signature="39535:39685" placeholder="SELECT * FRO..t_produits_factures..." />
+                <marker date="1428014781545" expanded="true" signature="40021:40174" placeholder="SELECT * FRO..t_produits_operations..." />
+                <marker date="1428014781545" expanded="true" signature="40444:40505" placeholder="SELECT idt_p..t_produits..." />
+                <marker date="1428014781545" expanded="true" signature="40775:40834" placeholder="SELECT prix_..t_produits..." />
+                <marker date="1428014781545" expanded="true" signature="41132:41211" placeholder="SELECT SUM(p..t_produits_factures..." />
+                <marker date="1428014781545" expanded="true" signature="41478:41528" placeholder="SELECT * FRO..t_produits..." />
+                <marker date="1428014781545" expanded="true" signature="41801:41856" placeholder="SELECT COUNT..t_produits_factures..." />
+                <marker date="1428014781545" expanded="true" signature="42130:42254" placeholder="SELECT * FRO..t_achats..." />
+                <marker date="1428014781545" expanded="true" signature="42574:42648" placeholder="SELECT MAX( ..t_historiques_syntheses..." />
+                <marker date="1428014781545" expanded="true" signature="42953:43017" placeholder="SELECT MAX( ..t_groupes_factures..." />
+                <marker date="1428014781545" expanded="true" signature="43335:43407" placeholder="SELECT MAX( ..t_historiques_factures..." />
+                <marker date="1428014781545" expanded="true" signature="43696:43937" placeholder="SELECT tu.no..t_types_users..." />
+                <marker date="1428014781545" expanded="true" signature="44216:44244" placeholder="SELECT * FRO..t_users..." />
+                <marker date="1428014781545" expanded="true" signature="44542:44794" placeholder="SELECT COUNT..t_fournisseurs..." />
+                <marker date="1428014781545" expanded="true" signature="45116:45344" placeholder="SELECT COUNT..t_fournisseurs..." />
+                <marker date="1428014781545" expanded="true" signature="45627:45721" placeholder="SELECT * FRO..t_historiques_syntheses..." />
+                <marker date="1428014781545" expanded="true" signature="46157:46399" placeholder="SELECT * FRO..t_produits..." />
+                <marker date="1428014781545" expanded="true" signature="46708:47005" placeholder="SELECT p.idt..t_produits..." />
+                <marker date="1428014781545" expanded="true" signature="47321:47457" placeholder="SELECT * FRO..t_users..." />
+                <marker date="1428014781545" expanded="true" signature="47743:47806" placeholder="SELECT * FRO..t_achats..." />
+                <marker date="1428014781545" expanded="true" signature="48068:48192" placeholder="SELECT * FRO..t_historiques_factures..." />
+                <marker date="1428014781545" expanded="true" signature="48516:48640" placeholder="SELECT * FRO..t_achats..." />
+                <marker date="1428014781545" expanded="true" signature="49030:49235" placeholder="SELECT * FRO..t_ventes..." />
+                <marker date="1428014781545" expanded="true" signature="49606:50046" placeholder="SELECT * FRO..t_factures..." />
+                <marker date="1428014781545" expanded="true" signature="50417:50812" placeholder="SELECT * FRO..t_factures_ventes..." />
+                <marker date="1428014781545" expanded="true" signature="51169:51534" placeholder="SELECT * FRO..t_journal..." />
+                <marker date="1428014781545" expanded="true" signature="51887:52141" placeholder="SELECT SUM(h..t_historiques_achats..." />
+                <marker date="1428014781545" expanded="true" signature="52473:52870" placeholder="SELECT SUM(h..t_historiques_achats..." />
+                <marker date="1428014781545" expanded="true" signature="53192:53553" placeholder="SELECT SUM(h..t_achats..." />
+                <marker date="1428014781545" expanded="true" signature="53804:53844" placeholder="SELECT * FRO..t_groupes_factures..." />
+                <marker date="1428014781545" expanded="true" signature="54166:54324" placeholder="SELECT * FRO..t_produits_operations..." />
+                <marker date="1428014781545" expanded="true" signature="54689:54822" placeholder="SELECT * FRO..t_produits_operations..." />
+                <marker date="1428014781545" expanded="true" signature="55209:55401" placeholder="SELECT * FRO..t_produits_operations..." />
+                <marker date="1428014781545" expanded="true" signature="55804:55994" placeholder="SELECT * FRO..t_produits_factures..." />
+                <marker date="1428014781545" expanded="true" signature="56410:56610" placeholder="SELECT * FRO..t_produits_ventes..." />
+                <marker date="1428014781545" expanded="true" signature="56981:57181" placeholder="SELECT * FRO..t_produits_ventes..." />
+                <marker date="1428014781545" expanded="true" signature="57501:57545" placeholder="SELECT * FRO..t_journal..." />
+                <marker date="1428014781545" expanded="true" signature="57876:57928" placeholder="SELECT * FRO..t_inventaires..." />
+                <marker date="1428014781545" expanded="true" signature="58591:58753" placeholder="SELECT * FRO..t_journal..." />
+                <marker date="1428014781545" expanded="true" signature="59454:59629" placeholder="SELECT COUNT..t_journal..." />
+                <marker date="1428014781545" expanded="true" signature="60327:60571" placeholder="SELECT * FRO..t_journal..." />
+                <marker date="1428014781545" expanded="true" signature="61247:61510" placeholder="SELECT * FRO..t_inventaires..." />
+                <marker date="1428014781545" expanded="true" signature="61932:62135" placeholder="SELECT * FRO..t_operations..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassUser.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/ClassUser.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="35.35484" vertical-offset="2042" max-vertical-offset="2838">
-              <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -460,103 +177,18 @@
       <file leaf-file-name="downloads.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/downloads.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.387097" vertical-offset="0" max-vertical-offset="2332">
-              <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+            <state vertical-scroll-proportion="-18.451612" vertical-offset="1298" max-vertical-offset="2662">
+              <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="87" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="download.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/download.php">
+      <file leaf-file-name="recapitulatif_inventaire.tpl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/recapitulatif_inventaire.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.1290324" vertical-offset="0" max-vertical-offset="3058">
-              <caret line="3" column="20" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassFactureAchat.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/include/ClassFactureAchat.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.082914576" vertical-offset="0" max-vertical-offset="4532">
-              <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-              <folding>
-                <marker date="1427990796964" expanded="true" signature="1719:5666" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="1781:1782" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="1781:1943" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="1781:1975" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="1781:2778" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="2146:2308" placeholder="{...}" />
-                <marker date="1427990796964" expanded="true" signature="2359:2521" placeholder="{...}" />
-                <marker date="1427990796964" expanded="true" signature="2572:2734" placeholder="{...}" />
-                <marker date="1427990796964" expanded="true" signature="2821:3050" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3093:3145" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3093:3147" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3093:3156" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3093:3175" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3093:3179" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3093:3232" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3093:3273" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3093:3285" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3093:3304" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3093:3313" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3093:3318" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3093:3328" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3093:3333" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3093:4587" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3093:4590" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3093:4599" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3093:4618" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3093:5666" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3178:3179" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3288:3305" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3378:3383" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3508:4532" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3508:4537" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3557:3651" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3557:3850" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="3854:3904" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="4194:4244" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="4602:4619" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="4755:4781" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="4782:5666" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="4831:4832" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="4831:4832" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="4831:4937" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="4884:4937" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="4963:5588" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="6446:6939" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="7103:7179" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="7103:7393" placeholder="..." />
-                <marker date="1427990796964" expanded="true" signature="7581:7635" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/common/header.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.483871" vertical-offset="15650" max-vertical-offset="17996">
-              <caret line="741" column="0" selection-start-line="741" selection-start-column="0" selection-end-line="745" selection-end-column="30" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1427794900374" expanded="false" signature="11677:11706" placeholder="..." />
-                <marker date="1427794900374" expanded="false" signature="15966:15995" placeholder="..." />
-                <marker date="1427794900374" expanded="false" signature="17149:17178" placeholder="..." />
-                <marker date="1427794900374" expanded="false" signature="18700:18729" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit_facture_vente.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_factures/edit_facture_vente.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.67742" vertical-offset="6290" max-vertical-offset="8382">
-              <caret line="308" column="12" selection-start-line="308" selection-start-column="12" selection-end-line="308" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.16582915" vertical-offset="1320" max-vertical-offset="3454">
+              <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -565,14 +197,74 @@
       <file leaf-file-name="GetTableauGenerateSynthese.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauGenerateSynthese.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8305087" vertical-offset="2340" max-vertical-offset="8338">
-              <caret line="144" column="38" selection-start-line="144" selection-start-column="38" selection-end-line="144" selection-end-column="64" />
+            <state vertical-scroll-proportion="-6.516129" vertical-offset="458" max-vertical-offset="1980">
+              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
               <folding>
-                <element signature="e#2057#2096#0#PHP" expanded="false" />
-                <marker date="1427788254648" expanded="true" signature="1574:1663" placeholder="UPDATE t_jou..." />
-                <marker date="1427788254648" expanded="true" signature="1688:1778" placeholder="UPDATE t_fac..." />
-                <marker date="1427788254648" expanded="true" signature="14935:15135" placeholder="UPDATE t_pro..." />
-                <marker date="1427788254648" expanded="true" signature="16357:16457" placeholder="UPDATE t_inv..." />
+                <element signature="e#1788#1869#0#PHP" expanded="false" />
+                <element signature="e#2008#2054#0#PHP" expanded="false" />
+                <element signature="e#2057#2088#0#PHP" expanded="false" />
+                <element signature="e#3472#3532#0#PHP" expanded="false" />
+                <marker date="1428019366869" expanded="true" signature="1057:1146" placeholder="UPDATE t_jou..." />
+                <marker date="1428019366869" expanded="true" signature="1171:1261" placeholder="UPDATE t_fac..." />
+                <marker date="1428019366869" expanded="true" signature="2420:2626" placeholder="UPDATE t_pro..." />
+                <marker date="1428019366869" expanded="true" signature="3547:3651" placeholder="UPDATE t_inv..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetTableauProduits.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduits.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.677419" vertical-offset="1474" max-vertical-offset="2398">
+              <caret line="86" column="71" selection-start-line="86" selection-start-column="71" selection-end-line="86" selection-end-column="71" />
+              <folding>
+                <element signature="e#566#596#0#PHP" expanded="false" />
+                <element signature="n#style#0;n#img#0;n#td#7;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#td#7;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClassDownloadSyntheseInventaire.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/ClassDownloadSyntheseInventaire.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.451612" vertical-offset="4770" max-vertical-offset="6336">
+              <caret line="240" column="40" selection-start-line="240" selection-start-column="40" selection-end-line="240" selection-end-column="40" />
+              <folding>
+                <marker date="1428018099542" expanded="true" signature="2119:5711" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="2181:2537" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="2276:2493" placeholder="{...}" />
+                <marker date="1428018099542" expanded="true" signature="2580:2818" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="2861:5711" placeholder="..." />
+                <marker date="1428018099542" expanded="false" signature="2927:2944" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="2946:3151" placeholder="..." />
+                <marker date="1428018099542" expanded="false" signature="3056:3073" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="3276:4199" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="3325:3552" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="3556:3606" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="3870:3920" placeholder="..." />
+                <marker date="1428018099542" expanded="false" signature="4264:4281" placeholder="..." />
+                <marker date="1428018099542" expanded="false" signature="4417:4443" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="4444:5711" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="4493:4599" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="4546:4599" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="4625:5633" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="7485:8276" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="9235:10907" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="9284:10106" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="10110:10160" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="10858:10859" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="10858:10899" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="10981:13010" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="11030:11282" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="11286:11336" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="11594:11644" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="11919:12146" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="12150:12200" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="12429:12479" placeholder="..." />
+                <marker date="1428018099542" expanded="true" signature="13148:13359" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -591,13 +283,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/generate_synthese.tpl" />
-        <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauFactures.php" />
-        <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauRecapitulatifInventaire.php" />
         <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauAnnulerSynthese.php" />
-        <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/recapitulatif_inventaire.tpl" />
         <option value="$PROJECT_DIR$/ajax/Serializer/inventaire.php" />
-        <option value="$PROJECT_DIR$/include/ClassBackupDatabase.php" />
         <option value="$PROJECT_DIR$/include/ClassBuildHtml.php" />
         <option value="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesInventaires.php" />
         <option value="$PROJECT_DIR$/templates/historiques/historiques_inventaires/inventaires_annee.tpl" />
@@ -608,7 +295,6 @@
         <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduitsFactureVente.php" />
         <option value="$PROJECT_DIR$/ajax/serializer.php" />
         <option value="$PROJECT_DIR$/ajax/Serializer/produits_vente.php" />
-        <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauGenerateSynthese.php" />
         <option value="$PROJECT_DIR$/templates/common/header.tpl" />
         <option value="$PROJECT_DIR$/templates/historiques/main.tpl" />
         <option value="$PROJECT_DIR$/templates/historiques/historiques_factures/historiques_factures_ventes.tpl" />
@@ -623,25 +309,31 @@
         <option value="$PROJECT_DIR$/historiques.php" />
         <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_factures/edit_facture.tpl" />
         <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduitsFacture.php" />
-        <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduits.php" />
-        <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduitsForInventaire.php" />
-        <option value="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesVentesMoisAnnee.php" />
         <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/getTableauProduitsAchetesForEdit.php" />
         <option value="$PROJECT_DIR$/templates/administration_magasin/main.tpl" />
         <option value="$PROJECT_DIR$/ajax/Serializer/edit_facture.php" />
         <option value="$PROJECT_DIR$/ajax/Serializer/edit_facture_vente.php" />
         <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_factures/edit_facture_vente.tpl" />
         <option value="$PROJECT_DIR$/delete.php" />
-        <option value="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesJournalMoisAnnee.php" />
         <option value="$PROJECT_DIR$/ajax/Serializer/edit_journal.php" />
         <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_journal/edit_operations_journal.tpl" />
         <option value="$PROJECT_DIR$/administration_magasin.php" />
-        <option value="$PROJECT_DIR$/include/ClassDB.php" />
-        <option value="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesMoisAnnee.php" />
         <option value="$PROJECT_DIR$/buildHtml.php" />
         <option value="$PROJECT_DIR$/include/ClassHtmlFactureAchat.php" />
-        <option value="$PROJECT_DIR$/downloads.php" />
         <option value="$PROJECT_DIR$/include/ClassFactureAchat.php" />
+        <option value="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesMoisAnnee.php" />
+        <option value="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesVentesMoisAnnee.php" />
+        <option value="$PROJECT_DIR$/include/ClassFactureVente.php" />
+        <option value="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesJournalMoisAnnee.php" />
+        <option value="$PROJECT_DIR$/include/ClassDownloadJournal.php" />
+        <option value="$PROJECT_DIR$/include/ClassDB.php" />
+        <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduits.php" />
+        <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduitsForInventaire.php" />
+        <option value="$PROJECT_DIR$/include/ClassBackupDatabase.php" />
+        <option value="$PROJECT_DIR$/downloads.php" />
+        <option value="$PROJECT_DIR$/include/ClassDownloadSyntheseInventaire.php" />
+        <option value="$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauGenerateSynthese.php" />
+        <option value="$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/recapitulatif_inventaire.tpl" />
       </list>
     </option>
   </component>
@@ -701,7 +393,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -720,8 +411,135 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nkedon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nkedon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nkedon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nkedon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="administration_magasin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nkedon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nkedon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="administration_magasin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gestion_magasin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nkedon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nkedon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ajax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nkedon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nkedon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ajax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Serializer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nkedon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nkedon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ajax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="infos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nkedon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nkedon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ajax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="infos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="administration_magasin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -732,11 +550,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\nkedon\include" />
       <recent name="C:\wamp\www\nkedon" />
       <recent name="C:\wamp\www\nkedon\ajax\infos\historiques" />
       <recent name="C:\wamp\www\nkedon\templates\historiques\historiques_factures" />
       <recent name="C:\wamp\www\nkedon\ajax\Serializer" />
-      <recent name="C:\wamp\www\nkedon\ajax\infos\administration_magasin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp\www\nkedon\include" />
@@ -764,15 +582,15 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="1">
@@ -861,33 +679,39 @@
       <option name="project" value="LOCAL" />
       <updated>1427959964904</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="generer des pdf des factures d'achats">
+      <created>1427990920843</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1427990920843</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -907,9 +731,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16484375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -929,7 +753,8 @@
     </option>
     <MESSAGE value="add description file" />
     <MESSAGE value="developpement de l'edition des historiques des factures d'achats et de ventes, et historiques des journaux" />
-    <option name="LAST_COMMIT_MESSAGE" value="developpement de l'edition des historiques des factures d'achats et de ventes, et historiques des journaux" />
+    <MESSAGE value="generer des pdf des factures d'achats" />
+    <option name="LAST_COMMIT_MESSAGE" value="generer des pdf des factures d'achats" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -938,53 +763,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesJournal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.4838705" vertical-offset="889" max-vertical-offset="1716">
-          <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="137" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/Serializer/inventaire.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1384218" vertical-offset="176" max-vertical-offset="5786">
-          <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
-          <folding>
-            <marker date="1427569938365" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/historiques/historiques_factures/factures_ventes_annee.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.516129" vertical-offset="40" max-vertical-offset="2222">
-          <caret line="11" column="81" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/historiques/historiques_factures/historiques_factures.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.0" vertical-offset="792" max-vertical-offset="1914">
-          <caret line="67" column="126" selection-start-line="67" selection-start-column="126" selection-end-line="67" selection-end-column="126" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/historiques/historiques_factures/factures_annee.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.774194" vertical-offset="1386" max-vertical-offset="2222">
-          <caret line="81" column="126" selection-start-line="81" selection-start-column="126" selection-end-line="81" selection-end-column="126" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/historiques/historiques_factures/factures_mois.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.774194" vertical-offset="1452" max-vertical-offset="2288">
           <caret line="84" column="126" selection-start-line="84" selection-start-column="126" selection-end-line="84" selection-end-column="126" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -992,7 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.1550672" vertical-offset="1188" max-vertical-offset="2288">
           <caret line="11" column="81" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1000,7 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.903226" vertical-offset="330" max-vertical-offset="1694">
           <caret line="36" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1018,18 +798,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1298">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduits.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.516129" vertical-offset="1272" max-vertical-offset="2376">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="90" selection-end-column="17" />
-          <folding>
-            <element signature="e#566#596#0#PHP" expanded="false" />
-            <element signature="n#style#0;n#img#0;n#td#7;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1037,7 +805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="4.835165" vertical-offset="0" max-vertical-offset="5346">
           <caret line="180" column="29" selection-start-line="180" selection-start-column="29" selection-end-line="180" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1045,9 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.036458332" vertical-offset="28" max-vertical-offset="2090">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1426526064540" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1055,10 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.036458332" vertical-offset="28" max-vertical-offset="3036">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1426526064511" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1426526064511" expanded="true" signature="-1:-1" placeholder="UPDATE t_fac..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1066,10 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22135417" vertical-offset="2404" max-vertical-offset="3740">
           <caret line="117" column="56" selection-start-line="117" selection-start-column="56" selection-end-line="117" selection-end-column="56" />
-          <folding>
-            <marker date="1427298518223" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1427298518223" expanded="true" signature="-1:-1" placeholder="UPDATE t_pro..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1077,7 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="2780" max-vertical-offset="4312">
           <caret line="138" column="111" selection-start-line="138" selection-start-column="102" selection-end-line="138" selection-end-column="111" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1085,9 +840,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5130208" vertical-offset="2290" max-vertical-offset="3058">
           <caret line="122" column="38" selection-start-line="122" selection-start-column="29" selection-end-line="122" selection-end-column="38" />
-          <folding>
-            <marker date="1426526064997" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1095,17 +847,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34114584" vertical-offset="838" max-vertical-offset="1606">
           <caret line="50" column="21" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="21" />
-          <folding>
-            <marker date="1427843397479" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduitsForInventaire.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47916666" vertical-offset="160" max-vertical-offset="2222">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1113,7 +854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.036458332" vertical-offset="28" max-vertical-offset="4136">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1121,7 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.709677" vertical-offset="84" max-vertical-offset="1012">
           <caret line="33" column="127" selection-start-line="33" selection-start-column="109" selection-end-line="33" selection-end-column="127" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1129,7 +868,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-23.419355" vertical-offset="528" max-vertical-offset="1694">
           <caret line="57" column="59" selection-start-line="57" selection-start-column="59" selection-end-line="57" selection-end-column="137" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1137,7 +875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.096774" vertical-offset="132" max-vertical-offset="1782">
           <caret line="16" column="44" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1145,23 +882,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49051833" vertical-offset="3902" max-vertical-offset="6028">
           <caret line="195" column="0" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
-          <folding>
-            <marker date="1427906455616" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1427906455616" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1427906455616" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427906455616" expanded="true" signature="-1:-1" placeholder="UPDATE t_fac..." />
-            <marker date="1427906455616" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427906455616" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1427906455616" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesVentesMoisAnnee.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7936507" vertical-offset="2569" max-vertical-offset="3520">
-          <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1169,7 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="6.8229547" vertical-offset="3960" max-vertical-offset="10142">
           <caret line="434" column="33" selection-start-line="434" selection-start-column="33" selection-end-line="434" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1177,21 +896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.870968" vertical-offset="4418" max-vertical-offset="6006">
           <caret line="226" column="41" selection-start-line="226" selection-start-column="41" selection-end-line="226" selection-end-column="41" />
-          <folding>
-            <marker date="1427910882573" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427910882573" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427910882573" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427910882573" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427910882573" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427910882573" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427910882573" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427910882573" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427910882573" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427910882573" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427910882573" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427910882573" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427910882573" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1199,7 +903,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.8241206" vertical-offset="0" max-vertical-offset="1782">
           <caret line="66" column="109" selection-start-line="66" selection-start-column="109" selection-end-line="66" selection-end-column="109" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1207,7 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.9346733" vertical-offset="0" max-vertical-offset="1914">
           <caret line="70" column="38" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1215,7 +917,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.32258" vertical-offset="858" max-vertical-offset="1738">
           <caret line="66" column="38" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1223,15 +924,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.451612" vertical-offset="358" max-vertical-offset="4444">
           <caret line="31" column="66" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="66" />
-          <folding>
-            <marker date="1427908300877" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1427908300877" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1427908300877" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427908300877" expanded="true" signature="-1:-1" placeholder="UPDATE t_fac..." />
-            <marker date="1427908300877" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427908300877" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1427908300877" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1239,17 +931,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.423729" vertical-offset="1828" max-vertical-offset="11924">
           <caret line="103" column="40" selection-start-line="103" selection-start-column="40" selection-end-line="103" selection-end-column="40" />
-          <folding>
-            <marker date="1427959127990" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427959127990" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427959127990" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427959127990" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427959127990" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1427959127990" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427959127990" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1427959127990" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427959127990" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1257,16 +938,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.575377" vertical-offset="1052" max-vertical-offset="4752">
           <caret line="141" column="25" selection-start-line="141" selection-start-column="25" selection-end-line="141" selection-end-column="25" />
-          <folding>
-            <marker date="1427915194357" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1427915194357" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1427915194357" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427915194357" expanded="true" signature="-1:-1" placeholder="UPDATE t_jou..." />
-            <marker date="1427915194357" expanded="true" signature="-1:-1" placeholder="UPDATE t_fac..." />
-            <marker date="1427915194357" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1427915194357" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1427915194357" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1274,10 +945,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.316583" vertical-offset="1844" max-vertical-offset="2970">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1427323921873" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1427323921873" expanded="true" signature="-1:-1" placeholder="UPDATE t_pro..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1285,26 +952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5527638" vertical-offset="1386" max-vertical-offset="2640">
           <caret line="83" column="43" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
-          <folding>
-            <marker date="1427746034361" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1427746034361" expanded="true" signature="-1:-1" placeholder="UPDATE t_pro..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/serializer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6809045" vertical-offset="1790" max-vertical-offset="2772">
-          <caret line="114" column="45" selection-start-line="114" selection-start-column="45" selection-end-line="114" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesJournalMoisAnnee.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2954823" vertical-offset="198" max-vertical-offset="3542">
-          <caret line="20" column="46" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1312,7 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.9115045" vertical-offset="3990" max-vertical-offset="7766">
           <caret line="322" column="45" selection-start-line="322" selection-start-column="45" selection-end-line="322" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1320,135 +966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1452">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/ClassDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.338983" vertical-offset="7444" max-vertical-offset="46838">
-          <caret line="384" column="31" selection-start-line="384" selection-start-column="20" selection-end-line="384" selection-end-column="31" />
-          <folding>
-            <element signature="e#1762#1796#0#PHP" expanded="false" />
-            <marker date="1427969288767" expanded="true" signature="5271:5613" placeholder="..." />
-            <marker date="1427969288767" expanded="true" signature="5283:5296" placeholder="..." />
-            <marker date="1427969288767" expanded="true" signature="5308:5600" placeholder="..." />
-            <marker date="1427969288767" expanded="true" signature="6034:6319" placeholder="..." />
-            <marker date="1427969288767" expanded="true" signature="6045:6057" placeholder="..." />
-            <marker date="1427969288767" expanded="true" signature="6068:6307" placeholder="..." />
-            <marker date="1427969288767" expanded="true" signature="6769:6881" placeholder="SELECT COUNT..t_users..." />
-            <marker date="1427969288767" expanded="true" signature="7559:7587" placeholder="SELECT * FRO..t_users..." />
-            <marker date="1427969288767" expanded="true" signature="7907:7959" placeholder="SELECT idt_u..t_users..." />
-            <marker date="1427969288767" expanded="true" signature="8273:8314" placeholder="SELECT COUNT..t_users..." />
-            <marker date="1427969288767" expanded="true" signature="8616:8716" placeholder="SELECT * FRO..t_users..." />
-            <marker date="1427969288767" expanded="true" signature="9031:9196" placeholder="SELECT * FRO..t_users..." />
-            <marker date="1427969288767" expanded="true" signature="9496:9620" placeholder="SELECT * FRO..t_users..." />
-            <marker date="1427969288767" expanded="true" signature="9936:9971" placeholder="SELECT * FRO..t_types_users..." />
-            <marker date="1427969288767" expanded="true" signature="10322:10419" placeholder="SELECT * FRO..t_types_users..." />
-            <marker date="1427969288767" expanded="true" signature="10716:10764" placeholder="SELECT COUNT..t_types_users..." />
-            <marker date="1427969288767" expanded="true" signature="11067:11122" placeholder="SELECT COUNT..t_produits_factures..." />
-            <marker date="1427969288767" expanded="true" signature="11465:11524" placeholder="SELECT COUNT..t_produits_operations..." />
-            <marker date="1427969288767" expanded="true" signature="11825:11888" placeholder="SELECT MAX(i..t_inventaires..." />
-            <marker date="1427969288767" expanded="true" signature="12235:12287" placeholder="SELECT * FRO..t_types_users..." />
-            <marker date="1427969288767" expanded="true" signature="12568:12614" placeholder="SELECT COUNT..t_produits..." />
-            <marker date="1427969288767" expanded="true" signature="12919:12973" placeholder="SELECT COUNT..t_fournisseurs..." />
-            <marker date="1427969288767" expanded="true" signature="13338:13397" placeholder="SELECT COUNT..t_produits_operations..." />
-            <marker date="1427969288767" expanded="true" signature="13720:13766" placeholder="SELECT COUNT..t_factures..." />
-            <marker date="1427969288767" expanded="true" signature="14076:14142" placeholder="SELECT COUNT..t_historiques_syntheses..." />
-            <marker date="1427969288767" expanded="true" signature="14460:14524" placeholder="SELECT COUNT..t_historiques_factures..." />
-            <marker date="1427969288767" expanded="true" signature="14872:14965" placeholder="SELECT COUNT..t_historiques_factures..." />
-            <marker date="1427969288767" expanded="true" signature="15275:15337" placeholder="SELECT COUNT..t_groupes_factures..." />
-            <marker date="1427969288767" expanded="true" signature="15638:15757" placeholder="SELECT COUNT..t_historiques_factures..." />
-            <marker date="1427969288767" expanded="true" signature="16040:16064" placeholder="SELECT * FRO..t_produits..." />
-            <marker date="1427969288767" expanded="true" signature="16369:16679" placeholder="SELECT *, SU..t_achats..." />
-            <marker date="1427969288767" expanded="true" signature="17036:17369" placeholder="SELECT *, SU..t_achats..." />
-            <marker date="1427969288767" expanded="true" signature="17747:18104" placeholder="SELECT *, SU..t_ventes..." />
-            <marker date="1427969288767" expanded="true" signature="18494:18828" placeholder="SELECT *, SU..t_ventes..." />
-            <marker date="1427969288767" expanded="true" signature="19137:19244" placeholder="SELECT * FRO..t_produits..." />
-            <marker date="1427969288767" expanded="true" signature="19504:19650" placeholder="SELECT * FRO..t_factures..." />
-            <marker date="1427969288767" expanded="true" signature="19995:20078" placeholder="SELECT * FRO..t_factures_ventes..." />
-            <marker date="1427969288767" expanded="true" signature="20748:20839" placeholder="SELECT * FRO..t_factures..." />
-            <marker date="1427969288767" expanded="true" signature="21552:21657" placeholder="SELECT * FRO..t_factures_ventes..." />
-            <marker date="1427969288767" expanded="true" signature="21984:22108" placeholder="SELECT * FRO..t_inventaires..." />
-            <marker date="1427969288767" expanded="true" signature="22345:22613" placeholder="SELECT p.nom..t_produits..." />
-            <marker date="1427969288767" expanded="true" signature="22917:23267" placeholder="SELECT p.nom..t_produits..." />
-            <marker date="1427969288767" expanded="true" signature="23573:23792" placeholder="SELECT * FRO..t_achats..." />
-            <marker date="1427969288767" expanded="true" signature="24170:24389" placeholder="SELECT * FRO..t_achats..." />
-            <marker date="1427969288767" expanded="true" signature="24791:25040" placeholder="SELECT * FRO..t_ventes..." />
-            <marker date="1427969288767" expanded="true" signature="25418:25642" placeholder="SELECT * FRO..t_operations..." />
-            <marker date="1427969288767" expanded="true" signature="25936:26315" placeholder="SELECT COUNT..t_fournisseurs..." />
-            <marker date="1427969288767" expanded="true" signature="26587:26620" placeholder="SELECT * FRO..t_produits_factures..." />
-            <marker date="1427969288767" expanded="true" signature="26952:26983" placeholder="SELECT * FRO..t_produits_ventes..." />
-            <marker date="1427969288767" expanded="true" signature="27337:27372" placeholder="SELECT * FRO..t_produits_operations..." />
-            <marker date="1427969288767" expanded="true" signature="27701:27810" placeholder="SELECT * FRO..t_produits..." />
-            <marker date="1427969288767" expanded="true" signature="28065:28211" placeholder="SELECT * FRO..t_factures..." />
-            <marker date="1427969288767" expanded="true" signature="28490:28536" placeholder="SELECT * FRO..t_produits..." />
-            <marker date="1427969288767" expanded="true" signature="28911:28961" placeholder="SELECT * FRO..t_produits..." />
-            <marker date="1427969288767" expanded="true" signature="29266:29320" placeholder="SELECT * FRO..t_fournisseurs..." />
-            <marker date="1427969288767" expanded="true" signature="29618:29708" placeholder="SELECT idt_p..t_produits..." />
-            <marker date="1427969288767" expanded="true" signature="30039:30108" placeholder="SELECT * FRO..t_achats..." />
-            <marker date="1427969288767" expanded="true" signature="30408:30560" placeholder="SELECT * FRO..." />
-            <marker date="1427969288767" expanded="true" signature="30819:30843" placeholder="SELECT * FRO..t_produits..." />
-            <marker date="1427969288767" expanded="true" signature="31099:31121" placeholder="SELECT * FRO..t_achats..." />
-            <marker date="1427969288767" expanded="true" signature="31383:31407" placeholder="SELECT * FRO..t_factures..." />
-            <marker date="1427969288767" expanded="true" signature="31681:31709" placeholder="SELECT * FRO..t_fournisseurs..." />
-            <marker date="1427969288767" expanded="true" signature="31985:32014" placeholder="SELECT * FRO..t_recapitulatif..." />
-            <marker date="1427969288767" expanded="true" signature="32283:32310" placeholder="SELECT * FRO..t_types_users..." />
-            <marker date="1427969288767" expanded="true" signature="32563:32584" placeholder="SELECT * FRO..t_users..." />
-            <marker date="1427969288767" expanded="true" signature="32841:32985" placeholder="SELECT * FRO..t_historiques_syntheses..." />
-            <marker date="1427969288767" expanded="true" signature="33264:33413" placeholder="SELECT * FRO..t_historiques_syntheses..." />
-            <marker date="1427969288767" expanded="true" signature="33708:33870" placeholder="SELECT * FRO..t_historiques_syntheses..." />
-            <marker date="1427969288767" expanded="true" signature="34559:34782" placeholder="SELECT * FRO..t_factures..." />
-            <marker date="1427969288767" expanded="true" signature="35519:35677" placeholder="SELECT * FRO..t_factures_ventes..." />
-            <marker date="1427969288767" expanded="true" signature="36397:36501" placeholder="SELECT COUNT..t_factures..." />
-            <marker date="1427969288767" expanded="true" signature="37357:37475" placeholder="SELECT COUNT..t_factures_ventes..." />
-            <marker date="1427969288767" expanded="true" signature="38168:38276" placeholder="SELECT COUNT..t_inventaires..." />
-            <marker date="1427969288767" expanded="true" signature="38573:38728" placeholder="SELECT * FRO..t_produits_factures..." />
-            <marker date="1427969288767" expanded="true" signature="39072:39222" placeholder="SELECT * FRO..t_produits_ventes..." />
-            <marker date="1427969288767" expanded="true" signature="39525:39675" placeholder="SELECT * FRO..t_produits_factures..." />
-            <marker date="1427969288767" expanded="true" signature="40011:40164" placeholder="SELECT * FRO..t_produits_operations..." />
-            <marker date="1427969288767" expanded="true" signature="40434:40495" placeholder="SELECT idt_p..t_produits..." />
-            <marker date="1427969288767" expanded="true" signature="40765:40824" placeholder="SELECT prix_..t_produits..." />
-            <marker date="1427969288767" expanded="true" signature="41122:41201" placeholder="SELECT SUM(p..t_produits_factures..." />
-            <marker date="1427969288767" expanded="true" signature="41468:41518" placeholder="SELECT * FRO..t_produits..." />
-            <marker date="1427969288767" expanded="true" signature="41791:41846" placeholder="SELECT COUNT..t_produits_factures..." />
-            <marker date="1427969288767" expanded="true" signature="42120:42244" placeholder="SELECT * FRO..t_achats..." />
-            <marker date="1427969288767" expanded="true" signature="42564:42638" placeholder="SELECT MAX( ..t_historiques_syntheses..." />
-            <marker date="1427969288767" expanded="true" signature="42943:43007" placeholder="SELECT MAX( ..t_groupes_factures..." />
-            <marker date="1427969288767" expanded="true" signature="43325:43397" placeholder="SELECT MAX( ..t_historiques_factures..." />
-            <marker date="1427969288767" expanded="true" signature="43686:43927" placeholder="SELECT tu.no..t_types_users..." />
-            <marker date="1427969288767" expanded="true" signature="44206:44234" placeholder="SELECT * FRO..t_users..." />
-            <marker date="1427969288767" expanded="true" signature="44532:44784" placeholder="SELECT COUNT..t_fournisseurs..." />
-            <marker date="1427969288767" expanded="true" signature="45106:45334" placeholder="SELECT COUNT..t_fournisseurs..." />
-            <marker date="1427969288767" expanded="true" signature="45617:45711" placeholder="SELECT * FRO..t_historiques_syntheses..." />
-            <marker date="1427969288767" expanded="true" signature="46147:46389" placeholder="SELECT * FRO..t_produits..." />
-            <marker date="1427969288767" expanded="true" signature="46698:46995" placeholder="SELECT p.idt..t_produits..." />
-            <marker date="1427969288767" expanded="true" signature="47311:47447" placeholder="SELECT * FRO..t_users..." />
-            <marker date="1427969288767" expanded="true" signature="47733:47796" placeholder="SELECT * FRO..t_achats..." />
-            <marker date="1427969288767" expanded="true" signature="48058:48182" placeholder="SELECT * FRO..t_historiques_factures..." />
-            <marker date="1427969288767" expanded="true" signature="48506:48630" placeholder="SELECT * FRO..t_achats..." />
-            <marker date="1427969288767" expanded="true" signature="49020:49225" placeholder="SELECT * FRO..t_ventes..." />
-            <marker date="1427969288767" expanded="true" signature="49596:49605" placeholder="SELECT * FRO..t_ventes..." />
-            <marker date="1427969288767" expanded="true" signature="49596:50036" placeholder="SELECT * FRO..t_factures..." />
-            <marker date="1427969288767" expanded="true" signature="49596:50037" placeholder="SELECT * FRO..t_factures..." />
-            <marker date="1427969288767" expanded="true" signature="50389:50643" placeholder="SELECT SUM(h..t_historiques_achats..." />
-            <marker date="1427969288767" expanded="true" signature="50975:51372" placeholder="SELECT SUM(h..t_historiques_achats..." />
-            <marker date="1427969288767" expanded="true" signature="51694:52055" placeholder="SELECT SUM(h..t_achats..." />
-            <marker date="1427969288767" expanded="true" signature="52306:52346" placeholder="SELECT * FRO..t_groupes_factures..." />
-            <marker date="1427969288767" expanded="true" signature="52668:52826" placeholder="SELECT * FRO..t_produits_operations..." />
-            <marker date="1427969288767" expanded="true" signature="53191:53324" placeholder="SELECT * FRO..t_produits_operations..." />
-            <marker date="1427969288767" expanded="true" signature="53711:53903" placeholder="SELECT * FRO..t_produits_operations..." />
-            <marker date="1427969288767" expanded="true" signature="54306:54496" placeholder="SELECT * FRO..t_produits_factures..." />
-            <marker date="1427969288767" expanded="true" signature="54912:55112" placeholder="SELECT * FRO..t_produits_ventes..." />
-            <marker date="1427969288767" expanded="true" signature="55483:55683" placeholder="SELECT * FRO..t_produits_ventes..." />
-            <marker date="1427969288767" expanded="true" signature="56003:56047" placeholder="SELECT * FRO..t_journal..." />
-            <marker date="1427969288767" expanded="true" signature="56378:56430" placeholder="SELECT * FRO..t_inventaires..." />
-            <marker date="1427969288767" expanded="true" signature="57093:57255" placeholder="SELECT * FRO..t_journal..." />
-            <marker date="1427969288767" expanded="true" signature="57956:58131" placeholder="SELECT COUNT..t_journal..." />
-            <marker date="1427969288767" expanded="true" signature="58829:59073" placeholder="SELECT * FRO..t_journal..." />
-            <marker date="1427969288767" expanded="true" signature="59749:60012" placeholder="SELECT * FRO..t_inventaires..." />
-            <marker date="1427969288767" expanded="true" signature="60434:60637" placeholder="SELECT * FRO..t_operations..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1460,128 +977,384 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/downloads/FacturesAchats/facture_achat__20150402.html.html">
+    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_factures/edit_facture_vente.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1848">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.6105528" vertical-offset="6290" max-vertical-offset="8382">
+          <caret line="308" column="12" selection-start-line="308" selection-start-column="12" selection-end-line="308" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/download.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1290324" vertical-offset="0" max-vertical-offset="3058">
+        <state vertical-scroll-proportion="0.082914576" vertical-offset="0" max-vertical-offset="3058">
           <caret line="3" column="20" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_factures/edit_facture_vente.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.67742" vertical-offset="6290" max-vertical-offset="8382">
-          <caret line="308" column="12" selection-start-line="308" selection-start-column="12" selection-end-line="308" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/common/header.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.483871" vertical-offset="15650" max-vertical-offset="17996">
-          <caret line="741" column="0" selection-start-line="741" selection-start-column="0" selection-end-line="745" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.4874372" vertical-offset="15650" max-vertical-offset="17996">
+          <caret line="734" column="0" selection-start-line="734" selection-start-column="0" selection-end-line="734" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesVentesMoisAnnee.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.225806" vertical-offset="589" max-vertical-offset="3520">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/ClassDownloadFactureVente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8618091" vertical-offset="1360" max-vertical-offset="4026">
+          <caret line="93" column="62" selection-start-line="93" selection-start-column="62" selection-end-line="93" selection-end-column="62" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1427794900374" expanded="false" signature="11677:11706" placeholder="..." />
-            <marker date="1427794900374" expanded="false" signature="15966:15995" placeholder="..." />
-            <marker date="1427794900374" expanded="false" signature="17149:17178" placeholder="..." />
-            <marker date="1427794900374" expanded="false" signature="18700:18729" placeholder="..." />
+            <marker date="1428004262860" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428004262860" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428004262860" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1428004262860" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428004262860" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428004262860" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1428004262860" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428004262860" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1428004262860" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428004262860" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428004262860" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428004262860" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428004262860" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1428004262860" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1428004262860" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428004262860" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428004262860" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428004262860" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428004262860" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428004262860" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauGenerateSynthese.php">
+    <entry file="file://$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesJournalMoisAnnee.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8305087" vertical-offset="2340" max-vertical-offset="8338">
-          <caret line="144" column="38" selection-start-line="144" selection-start-column="38" selection-end-line="144" selection-end-column="64" />
+        <state vertical-scroll-proportion="-81.77419" vertical-offset="545" max-vertical-offset="3542">
+          <caret line="140" column="105" selection-start-line="140" selection-start-column="105" selection-end-line="140" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/ClassDownloadJournal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37606838" vertical-offset="2772" max-vertical-offset="4114">
+          <caret line="140" column="34" selection-start-line="140" selection-start-column="34" selection-end-line="140" selection-end-column="34" />
           <folding>
-            <element signature="e#2057#2096#0#PHP" expanded="false" />
-            <marker date="1427788254648" expanded="true" signature="1574:1663" placeholder="UPDATE t_jou..." />
-            <marker date="1427788254648" expanded="true" signature="1688:1778" placeholder="UPDATE t_fac..." />
-            <marker date="1427788254648" expanded="true" signature="14935:15135" placeholder="UPDATE t_pro..." />
-            <marker date="1427788254648" expanded="true" signature="16357:16457" placeholder="UPDATE t_inv..." />
+            <marker date="1428011054144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1428011054144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1428011054144" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesMoisAnnee.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.903226" vertical-offset="2816" max-vertical-offset="3740">
-          <caret line="149" column="60" selection-start-line="149" selection-start-column="60" selection-end-line="149" selection-end-column="71" />
+        <state vertical-scroll-proportion="0.2954823" vertical-offset="594" max-vertical-offset="3674">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="41" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduitsForInventaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.451612" vertical-offset="1348" max-vertical-offset="2244">
+          <caret line="76" column="49" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauProduits.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.677419" vertical-offset="1474" max-vertical-offset="2398">
+          <caret line="86" column="71" selection-start-line="86" selection-start-column="71" selection-end-line="86" selection-end-column="71" />
+          <folding>
+            <element signature="e#566#596#0#PHP" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#td#7;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#7;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/ClassBackupDatabase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5251256" vertical-offset="528" max-vertical-offset="3344">
+          <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
+          <folding>
+            <marker date="1428017830180" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..table..." />
+            <marker date="1428017830180" expanded="true" signature="-1:-1" placeholder="DROP TABLE I..." />
+            <marker date="1428017830180" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/ClassDownloadFactureAchat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36557788" vertical-offset="1271" max-vertical-offset="4532">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="84" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/downloads.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.387097" vertical-offset="0" max-vertical-offset="2332">
-          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+        <state vertical-scroll-proportion="-18.451612" vertical-offset="1298" max-vertical-offset="2662">
+          <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="87" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/ClassFactureAchat.php">
+    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/generate_synthese.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.082914576" vertical-offset="0" max-vertical-offset="4532">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+        <state vertical-scroll-proportion="-0.41457286" vertical-offset="330" max-vertical-offset="2530">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/ClassDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.4576273" vertical-offset="13978" max-vertical-offset="47674">
+          <caret line="684" column="11" selection-start-line="684" selection-start-column="11" selection-end-line="684" selection-end-column="11" />
           <folding>
-            <marker date="1427990796964" expanded="true" signature="1719:5666" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="1781:1782" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="1781:1943" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="1781:1975" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="1781:2778" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="2146:2308" placeholder="{...}" />
-            <marker date="1427990796964" expanded="true" signature="2359:2521" placeholder="{...}" />
-            <marker date="1427990796964" expanded="true" signature="2572:2734" placeholder="{...}" />
-            <marker date="1427990796964" expanded="true" signature="2821:3050" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3093:3145" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3093:3147" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3093:3156" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3093:3175" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3093:3179" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3093:3232" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3093:3273" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3093:3285" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3093:3304" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3093:3313" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3093:3318" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3093:3328" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3093:3333" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3093:4587" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3093:4590" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3093:4599" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3093:4618" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3093:5666" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3178:3179" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3288:3305" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3378:3383" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3508:4532" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3508:4537" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3557:3651" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3557:3850" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="3854:3904" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="4194:4244" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="4602:4619" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="4755:4781" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="4782:5666" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="4831:4832" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="4831:4832" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="4831:4937" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="4884:4937" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="4963:5588" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="6446:6939" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="7103:7179" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="7103:7393" placeholder="..." />
-            <marker date="1427990796964" expanded="true" signature="7581:7635" placeholder="..." />
+            <element signature="e#1762#1796#0#PHP" expanded="false" />
+            <marker date="1428014781545" expanded="true" signature="5271:5613" placeholder="..." />
+            <marker date="1428014781545" expanded="true" signature="5283:5296" placeholder="..." />
+            <marker date="1428014781545" expanded="true" signature="5308:5600" placeholder="..." />
+            <marker date="1428014781545" expanded="true" signature="6034:6319" placeholder="..." />
+            <marker date="1428014781545" expanded="true" signature="6045:6057" placeholder="..." />
+            <marker date="1428014781545" expanded="true" signature="6068:6307" placeholder="..." />
+            <marker date="1428014781545" expanded="true" signature="6769:6881" placeholder="SELECT COUNT..t_users..." />
+            <marker date="1428014781545" expanded="true" signature="7559:7587" placeholder="SELECT * FRO..t_users..." />
+            <marker date="1428014781545" expanded="true" signature="7907:7959" placeholder="SELECT idt_u..t_users..." />
+            <marker date="1428014781545" expanded="true" signature="8273:8314" placeholder="SELECT COUNT..t_users..." />
+            <marker date="1428014781545" expanded="true" signature="8616:8716" placeholder="SELECT * FRO..t_users..." />
+            <marker date="1428014781545" expanded="true" signature="9031:9196" placeholder="SELECT * FRO..t_users..." />
+            <marker date="1428014781545" expanded="true" signature="9496:9620" placeholder="SELECT * FRO..t_users..." />
+            <marker date="1428014781545" expanded="true" signature="9936:9971" placeholder="SELECT * FRO..t_types_users..." />
+            <marker date="1428014781545" expanded="true" signature="10322:10419" placeholder="SELECT * FRO..t_types_users..." />
+            <marker date="1428014781545" expanded="true" signature="10716:10764" placeholder="SELECT COUNT..t_types_users..." />
+            <marker date="1428014781545" expanded="true" signature="11067:11122" placeholder="SELECT COUNT..t_produits_factures..." />
+            <marker date="1428014781545" expanded="true" signature="11465:11524" placeholder="SELECT COUNT..t_produits_operations..." />
+            <marker date="1428014781545" expanded="true" signature="11825:11888" placeholder="SELECT MAX(i..t_inventaires..." />
+            <marker date="1428014781545" expanded="true" signature="12235:12287" placeholder="SELECT * FRO..t_types_users..." />
+            <marker date="1428014781545" expanded="true" signature="12568:12614" placeholder="SELECT COUNT..t_produits..." />
+            <marker date="1428014781545" expanded="true" signature="12919:12973" placeholder="SELECT COUNT..t_fournisseurs..." />
+            <marker date="1428014781545" expanded="true" signature="13338:13397" placeholder="SELECT COUNT..t_produits_operations..." />
+            <marker date="1428014781545" expanded="true" signature="13720:13766" placeholder="SELECT COUNT..t_factures..." />
+            <marker date="1428014781545" expanded="true" signature="14076:14142" placeholder="SELECT COUNT..t_historiques_syntheses..." />
+            <marker date="1428014781545" expanded="true" signature="14460:14524" placeholder="SELECT COUNT..t_historiques_factures..." />
+            <marker date="1428014781545" expanded="true" signature="14872:14965" placeholder="SELECT COUNT..t_historiques_factures..." />
+            <marker date="1428014781545" expanded="true" signature="15275:15337" placeholder="SELECT COUNT..t_groupes_factures..." />
+            <marker date="1428014781545" expanded="true" signature="15638:15757" placeholder="SELECT COUNT..t_historiques_factures..." />
+            <marker date="1428014781545" expanded="true" signature="16040:16064" placeholder="SELECT * FRO..t_produits..." />
+            <marker date="1428014781545" expanded="true" signature="16369:16679" placeholder="SELECT *, SU..t_achats..." />
+            <marker date="1428014781545" expanded="true" signature="17065:17420" placeholder="SELECT *, SU..t_achats..." />
+            <marker date="1428014781545" expanded="true" signature="17822:18200" placeholder="SELECT *, SU..t_ventes..." />
+            <marker date="1428014781545" expanded="true" signature="18586:18920" placeholder="SELECT *, SU..t_ventes..." />
+            <marker date="1428014781545" expanded="true" signature="19229:19336" placeholder="SELECT * FRO..t_produits..." />
+            <marker date="1428014781545" expanded="true" signature="19596:19742" placeholder="SELECT * FRO..t_factures..." />
+            <marker date="1428014781545" expanded="true" signature="20087:20170" placeholder="SELECT * FRO..t_factures_ventes..." />
+            <marker date="1428014781545" expanded="true" signature="20840:20931" placeholder="SELECT * FRO..t_factures..." />
+            <marker date="1428014781545" expanded="true" signature="21644:21749" placeholder="SELECT * FRO..t_factures_ventes..." />
+            <marker date="1428014781545" expanded="true" signature="22076:22200" placeholder="SELECT * FRO..t_inventaires..." />
+            <marker date="1428014781545" expanded="true" signature="22437:22705" placeholder="SELECT p.nom..t_produits..." />
+            <marker date="1428014781545" expanded="true" signature="23009:23277" placeholder="SELECT *, SU..t_produits..." />
+            <marker date="1428014781545" expanded="true" signature="23583:23802" placeholder="SELECT * FRO..t_achats..." />
+            <marker date="1428014781545" expanded="true" signature="24180:24399" placeholder="SELECT * FRO..t_achats..." />
+            <marker date="1428014781545" expanded="true" signature="24801:25050" placeholder="SELECT * FRO..t_ventes..." />
+            <marker date="1428014781545" expanded="true" signature="25428:25652" placeholder="SELECT * FRO..t_operations..." />
+            <marker date="1428014781545" expanded="true" signature="25946:26325" placeholder="SELECT COUNT..t_fournisseurs..." />
+            <marker date="1428014781545" expanded="true" signature="26597:26630" placeholder="SELECT * FRO..t_produits_factures..." />
+            <marker date="1428014781545" expanded="true" signature="26962:26993" placeholder="SELECT * FRO..t_produits_ventes..." />
+            <marker date="1428014781545" expanded="true" signature="27347:27382" placeholder="SELECT * FRO..t_produits_operations..." />
+            <marker date="1428014781545" expanded="true" signature="27711:27820" placeholder="SELECT * FRO..t_produits..." />
+            <marker date="1428014781545" expanded="true" signature="28075:28221" placeholder="SELECT * FRO..t_factures..." />
+            <marker date="1428014781545" expanded="true" signature="28500:28546" placeholder="SELECT * FRO..t_produits..." />
+            <marker date="1428014781545" expanded="true" signature="28921:28971" placeholder="SELECT * FRO..t_produits..." />
+            <marker date="1428014781545" expanded="true" signature="29276:29330" placeholder="SELECT * FRO..t_fournisseurs..." />
+            <marker date="1428014781545" expanded="true" signature="29628:29718" placeholder="SELECT idt_p..t_produits..." />
+            <marker date="1428014781545" expanded="true" signature="30049:30118" placeholder="SELECT * FRO..t_achats..." />
+            <marker date="1428014781545" expanded="true" signature="30418:30570" placeholder="SELECT * FRO..." />
+            <marker date="1428014781545" expanded="true" signature="30829:30853" placeholder="SELECT * FRO..t_produits..." />
+            <marker date="1428014781545" expanded="true" signature="31109:31131" placeholder="SELECT * FRO..t_achats..." />
+            <marker date="1428014781545" expanded="true" signature="31393:31417" placeholder="SELECT * FRO..t_factures..." />
+            <marker date="1428014781545" expanded="true" signature="31691:31719" placeholder="SELECT * FRO..t_fournisseurs..." />
+            <marker date="1428014781545" expanded="true" signature="31995:32024" placeholder="SELECT * FRO..t_recapitulatif..." />
+            <marker date="1428014781545" expanded="true" signature="32293:32320" placeholder="SELECT * FRO..t_types_users..." />
+            <marker date="1428014781545" expanded="true" signature="32573:32594" placeholder="SELECT * FRO..t_users..." />
+            <marker date="1428014781545" expanded="true" signature="32851:32995" placeholder="SELECT * FRO..t_historiques_syntheses..." />
+            <marker date="1428014781545" expanded="true" signature="33274:33423" placeholder="SELECT * FRO..t_historiques_syntheses..." />
+            <marker date="1428014781545" expanded="true" signature="33718:33880" placeholder="SELECT * FRO..t_historiques_syntheses..." />
+            <marker date="1428014781545" expanded="true" signature="34569:34792" placeholder="SELECT * FRO..t_factures..." />
+            <marker date="1428014781545" expanded="true" signature="35529:35687" placeholder="SELECT * FRO..t_factures_ventes..." />
+            <marker date="1428014781545" expanded="true" signature="36407:36511" placeholder="SELECT COUNT..t_factures..." />
+            <marker date="1428014781545" expanded="true" signature="37367:37485" placeholder="SELECT COUNT..t_factures_ventes..." />
+            <marker date="1428014781545" expanded="true" signature="38178:38286" placeholder="SELECT COUNT..t_inventaires..." />
+            <marker date="1428014781545" expanded="true" signature="38583:38738" placeholder="SELECT * FRO..t_produits_factures..." />
+            <marker date="1428014781545" expanded="true" signature="39082:39232" placeholder="SELECT * FRO..t_produits_ventes..." />
+            <marker date="1428014781545" expanded="true" signature="39535:39685" placeholder="SELECT * FRO..t_produits_factures..." />
+            <marker date="1428014781545" expanded="true" signature="40021:40174" placeholder="SELECT * FRO..t_produits_operations..." />
+            <marker date="1428014781545" expanded="true" signature="40444:40505" placeholder="SELECT idt_p..t_produits..." />
+            <marker date="1428014781545" expanded="true" signature="40775:40834" placeholder="SELECT prix_..t_produits..." />
+            <marker date="1428014781545" expanded="true" signature="41132:41211" placeholder="SELECT SUM(p..t_produits_factures..." />
+            <marker date="1428014781545" expanded="true" signature="41478:41528" placeholder="SELECT * FRO..t_produits..." />
+            <marker date="1428014781545" expanded="true" signature="41801:41856" placeholder="SELECT COUNT..t_produits_factures..." />
+            <marker date="1428014781545" expanded="true" signature="42130:42254" placeholder="SELECT * FRO..t_achats..." />
+            <marker date="1428014781545" expanded="true" signature="42574:42648" placeholder="SELECT MAX( ..t_historiques_syntheses..." />
+            <marker date="1428014781545" expanded="true" signature="42953:43017" placeholder="SELECT MAX( ..t_groupes_factures..." />
+            <marker date="1428014781545" expanded="true" signature="43335:43407" placeholder="SELECT MAX( ..t_historiques_factures..." />
+            <marker date="1428014781545" expanded="true" signature="43696:43937" placeholder="SELECT tu.no..t_types_users..." />
+            <marker date="1428014781545" expanded="true" signature="44216:44244" placeholder="SELECT * FRO..t_users..." />
+            <marker date="1428014781545" expanded="true" signature="44542:44794" placeholder="SELECT COUNT..t_fournisseurs..." />
+            <marker date="1428014781545" expanded="true" signature="45116:45344" placeholder="SELECT COUNT..t_fournisseurs..." />
+            <marker date="1428014781545" expanded="true" signature="45627:45721" placeholder="SELECT * FRO..t_historiques_syntheses..." />
+            <marker date="1428014781545" expanded="true" signature="46157:46399" placeholder="SELECT * FRO..t_produits..." />
+            <marker date="1428014781545" expanded="true" signature="46708:47005" placeholder="SELECT p.idt..t_produits..." />
+            <marker date="1428014781545" expanded="true" signature="47321:47457" placeholder="SELECT * FRO..t_users..." />
+            <marker date="1428014781545" expanded="true" signature="47743:47806" placeholder="SELECT * FRO..t_achats..." />
+            <marker date="1428014781545" expanded="true" signature="48068:48192" placeholder="SELECT * FRO..t_historiques_factures..." />
+            <marker date="1428014781545" expanded="true" signature="48516:48640" placeholder="SELECT * FRO..t_achats..." />
+            <marker date="1428014781545" expanded="true" signature="49030:49235" placeholder="SELECT * FRO..t_ventes..." />
+            <marker date="1428014781545" expanded="true" signature="49606:50046" placeholder="SELECT * FRO..t_factures..." />
+            <marker date="1428014781545" expanded="true" signature="50417:50812" placeholder="SELECT * FRO..t_factures_ventes..." />
+            <marker date="1428014781545" expanded="true" signature="51169:51534" placeholder="SELECT * FRO..t_journal..." />
+            <marker date="1428014781545" expanded="true" signature="51887:52141" placeholder="SELECT SUM(h..t_historiques_achats..." />
+            <marker date="1428014781545" expanded="true" signature="52473:52870" placeholder="SELECT SUM(h..t_historiques_achats..." />
+            <marker date="1428014781545" expanded="true" signature="53192:53553" placeholder="SELECT SUM(h..t_achats..." />
+            <marker date="1428014781545" expanded="true" signature="53804:53844" placeholder="SELECT * FRO..t_groupes_factures..." />
+            <marker date="1428014781545" expanded="true" signature="54166:54324" placeholder="SELECT * FRO..t_produits_operations..." />
+            <marker date="1428014781545" expanded="true" signature="54689:54822" placeholder="SELECT * FRO..t_produits_operations..." />
+            <marker date="1428014781545" expanded="true" signature="55209:55401" placeholder="SELECT * FRO..t_produits_operations..." />
+            <marker date="1428014781545" expanded="true" signature="55804:55994" placeholder="SELECT * FRO..t_produits_factures..." />
+            <marker date="1428014781545" expanded="true" signature="56410:56610" placeholder="SELECT * FRO..t_produits_ventes..." />
+            <marker date="1428014781545" expanded="true" signature="56981:57181" placeholder="SELECT * FRO..t_produits_ventes..." />
+            <marker date="1428014781545" expanded="true" signature="57501:57545" placeholder="SELECT * FRO..t_journal..." />
+            <marker date="1428014781545" expanded="true" signature="57876:57928" placeholder="SELECT * FRO..t_inventaires..." />
+            <marker date="1428014781545" expanded="true" signature="58591:58753" placeholder="SELECT * FRO..t_journal..." />
+            <marker date="1428014781545" expanded="true" signature="59454:59629" placeholder="SELECT COUNT..t_journal..." />
+            <marker date="1428014781545" expanded="true" signature="60327:60571" placeholder="SELECT * FRO..t_journal..." />
+            <marker date="1428014781545" expanded="true" signature="61247:61510" placeholder="SELECT * FRO..t_inventaires..." />
+            <marker date="1428014781545" expanded="true" signature="61932:62135" placeholder="SELECT * FRO..t_operations..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/ClassDownloadSyntheseInventaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.451612" vertical-offset="4770" max-vertical-offset="6336">
+          <caret line="240" column="40" selection-start-line="240" selection-start-column="40" selection-end-line="240" selection-end-column="40" />
+          <folding>
+            <marker date="1428018099542" expanded="true" signature="2119:5711" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="2181:2537" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="2276:2493" placeholder="{...}" />
+            <marker date="1428018099542" expanded="true" signature="2580:2818" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="2861:5711" placeholder="..." />
+            <marker date="1428018099542" expanded="false" signature="2927:2944" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="2946:3151" placeholder="..." />
+            <marker date="1428018099542" expanded="false" signature="3056:3073" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="3276:4199" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="3325:3552" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="3556:3606" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="3870:3920" placeholder="..." />
+            <marker date="1428018099542" expanded="false" signature="4264:4281" placeholder="..." />
+            <marker date="1428018099542" expanded="false" signature="4417:4443" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="4444:5711" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="4493:4599" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="4546:4599" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="4625:5633" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="7485:8276" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="9235:10907" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="9284:10106" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="10110:10160" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="10858:10859" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="10858:10899" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="10981:13010" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="11030:11282" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="11286:11336" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="11594:11644" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="11919:12146" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="12150:12200" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="12429:12479" placeholder="..." />
+            <marker date="1428018099542" expanded="true" signature="13148:13359" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/Serializer/inventaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.80150753" vertical-offset="1056" max-vertical-offset="4114">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding>
+            <element signature="e#2759#2782#0#PHP" expanded="false" />
+            <marker date="1427569938365" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/serializer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8467337" vertical-offset="1658" max-vertical-offset="2772">
+          <caret line="114" column="45" selection-start-line="114" selection-start-column="45" selection-end-line="114" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/inventaire.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.527638" vertical-offset="4400" max-vertical-offset="9438">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/infos/administration_magasin/GetTableauGenerateSynthese.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.516129" vertical-offset="458" max-vertical-offset="1980">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+          <folding>
+            <element signature="e#1788#1869#0#PHP" expanded="false" />
+            <element signature="e#2008#2054#0#PHP" expanded="false" />
+            <element signature="e#2057#2088#0#PHP" expanded="false" />
+            <element signature="e#3472#3532#0#PHP" expanded="false" />
+            <marker date="1428019366869" expanded="true" signature="1057:1146" placeholder="UPDATE t_jou..." />
+            <marker date="1428019366869" expanded="true" signature="1171:1261" placeholder="UPDATE t_fac..." />
+            <marker date="1428019366869" expanded="true" signature="2420:2626" placeholder="UPDATE t_pro..." />
+            <marker date="1428019366869" expanded="true" signature="3547:3651" placeholder="UPDATE t_inv..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administration_magasin/gestion_magasin/recapitulatif_inventaire.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16582915" vertical-offset="1320" max-vertical-offset="3454">
+          <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
