@@ -64,9 +64,10 @@ if( COUNT($recaps) > 0 )
             {
                 $(this).click (function ()
                 {
-                        var filename= $(this).attr("filename");
-                    //    document.location.href="download.php?filename="+filename;
-                    alert("Téléchargement bientot disponible  : " + filename );
+                    window.open(
+                        'downloads.php?sub=inventaire&id_inventaire='+$(this).attr("id_inventaire"),
+                        '_blank'
+                    );
                 });
             });
         });
@@ -176,7 +177,7 @@ if( count( $recaps ) > 0)
                                 </tr>
                                 <tr>
                                     <td align="left" valign="middle">
-                                        <a class="download_links" filename="<?=$recap["filepath"]; ?>">
+                                        <a class="download_links" id_inventaire="<?=$recap["idt_inventaires"]; ?>">
                                             <img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez la synthèse
                                         </a>
                                     </td>

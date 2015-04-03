@@ -41,7 +41,11 @@ class BackupDatabase
     public function backupTables()
     {
         $tables = "*";
-        $outputDir = "../../../downloads/databases";
+        $outputDir = "downloads/databases";
+        if( !file_exists( $outputDir ) )
+        {
+            mkdir( $outputDir, 0777, true );
+        }
 
         try
         {

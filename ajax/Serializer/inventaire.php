@@ -157,6 +157,7 @@ if($id != NULL)
             {
                 if( $db->Execute ( $sql ) )
                 {
+                    $_SESSION["synthese"] = "synthse";
                     $db->commit ();
                     echo "({'result': 'SUCCESS'})";
                 }

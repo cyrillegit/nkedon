@@ -29,7 +29,7 @@ function RefreshTableGenerateSynthese()
         async	: false,
         data	: "",
         success	: function (msg){
-            alert(msg);
+            alert("msg : "+msg);
         }
     }).responseText;
 
@@ -50,26 +50,48 @@ function RefreshTableAnnulerSynthese()
     }).responseText;
 }
 
+function getUrlParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++)
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam)
+        {
+            return sParameterName[1];
+        }
+    }
+}
+
+function setRegisterPopup(){
+    $("#downloadLink").hide();
+    if(getUrlParameter("sub") == "synthese_inventaire" ){
+        $("#succes_register").show();
+        $("#succes_cancel").hide();
+        $("#downloadLink").show();
+        $("#btnAnnulerValider").hide();
+    }else{
+        $("#succes_register").hide();
+        $("#succes_cancel").hide();
+        $("#downloadLink").hide();
+    }
+}
+
 /**
 	jQuery init.
 */
 $(document).ready (function ()
 {
-    $("#succes_register").hide();
-    $("#succes_cancel").hide();
+    setRegisterPopup();
 	RefreshTableRecapitulatifInventaire ();
-    $("#downloadLink").hide();
+
 
     $('#btnValiderInventaire').click(function()
     {
         var didConfirm = confirm("Vous êtes sur le point de générer la synthèse de l'inventaire. \n cet action est irréversible");
       if (didConfirm == true) {
-          alert( "valider" );
-//          RefreshTableGenerateSynthese();
-//          RefreshTableRecapitulatifInventaire ();
-//          $("#downloadLink").show();
-//          $("#btnAnnulerValider").hide();
-//          $("#succes_register").show();
+          document.location.href="administration_magasin.php?sub=synthese_inventaire";
       }
     });
 

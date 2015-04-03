@@ -7,6 +7,8 @@
 //	@require_once("./include/MasterDB.php");
 	@require_once("./include/ClassDB.php");	
 	@require_once("Smarty/libs/Smarty.class.php");
+    @require_once('./include/ClassDownloadSyntheseInventaire.php');
+    @require_once("./include/ClassBackupDatabase.php");
 
 	// On d&eacute;sactive les notices dans les messages d'erreur.
 	ini_set("error_reporting",E_ALL & ~E_NOTICE);
@@ -523,14 +525,96 @@
 			{
 				$target = "statistiques/stats_produits_achetes_vendus";
 			}		
-			else if( $target == "backupdb" )
+			else if( $target == "synthese_inventaire" )
 			{
-				
-			}																										
-			else
-			{
-				$target = "main";
-			}
+                if( isset($_SESSION["synthese"]) ){
+
+                    unset($_SESSION["synthese"]);
+                    $ok = true;
+                    $id_inventaire = $db->getMaxIdInventaire();
+
+                    $sql1 = "UPDATE t_journal
+                            SET id_inventaire = '$id_inventaire'
+                            WHERE id_inventaire = 0";
+
+                    $sql2 = "UPDATE t_factures
+                            SET id_inventaire = '$id_inventaire'
+                            WHERE id_inventaire = 0";
+
+                    if( $db->Execute ( $sql1 ) && $db->Execute ( $sql2 ) )
+                    {
+                        $db->commit ();
+                    }
+                    else
+                    {
+                        $ok &= false;
+                        $db->rollBack();
+                    }
+
+                    if( $ok ){
+                        $html = new SyntheseInventaire( $id_inventaire );
+                        $htmlContent = $html->buildHtml();
+                    //    $html->buildPdf( $htmlContent );
+                        $html->storeHtml( $htmlContent );
+                        $filename = $html->getFilename();
+                    //    echo $htmlContent;
+                    //    echo $filename;
+
+                        /**
+                         * Instantiate Backup_Database and perform backup
+                         */
+                        $backupDatabase = new BackupDatabase();
+                        $status = $backupDatabase->backupTables() ? 'OK' : 'KO';
+
+                        /**
+                         * initiliaze db
+                         */
+                        $isOk = true;
+                        $produits = $db->getTableProduits();
+                        $db->beginTransaction ();
+                        foreach ($produits as $produit)
+                        {
+                            $idt_produits = $produit["idt_produits"];
+                            $stock_physique = $produit["stock_physique"];
+                            $sql = "UPDATE t_produits
+                                    SET stock_initial = '$stock_physique',
+                                        stock_physique = 0
+                                    WHERE idt_produits = '$idt_produits'";
+
+                            if($db->Execute ( $sql ))
+                            {
+                                $ok &= true;
+                            }
+                            else
+                            {
+                                $isOk &= false;
+                                $ok &= false;
+                            }
+                        }
+
+                        $filepath = $filename.".html";
+                        $sql = "UPDATE t_inventaires
+                            SET filepath = '$filepath'
+                            WHERE idt_inventaires = $id_inventaire";
+
+                        if($db->Execute ( $sql )){
+                            $db->commit();
+                        }else{
+                            $db->rollBack();
+                        }
+                    }else{
+
+                    }
+                //    echo $htmlContent;
+                    $target = "gestion_magasin/recapitulatif_inventaire";
+                }
+                else
+                {
+                    $target = "main";
+                }
+            }else{
+                $target = "main";
+            }
 		}
 		$tpl_index->display('administration_magasin/'.$target.'.tpl');
 	}

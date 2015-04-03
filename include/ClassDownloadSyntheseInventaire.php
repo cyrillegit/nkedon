@@ -65,19 +65,19 @@
                                     </head>
                                     <body>
                                         <div class=\"\" style=\"background: none;\">
-                                            <img src=\"assets/images/nkedon_logo.png\" border=\"0\" style=\"margin-top: -5px;\" width=\"275\" height=\"120\">
+                                            <img src=\"nkedon_logo.png\" border=\"0\" style=\"margin-top: -5px;\" width=\"275\" height=\"120\">
                                         </div>
                                         <br/><br/>
                                         <table class=\"\" width=\"100%\">
                                             <tr>
                                                 <td class=\"\"><br/><strong></strong></td>
                                                 <td class=\"\"><br/><strong></strong></td>
-                                            <tr>
                                             </tr>
+                                            <tr>
                                                 <td class=\"\">Date inventaire: <br/><strong>$date_inventaire</strong></td>
                                                 <td class=\"\"><br/><strong></strong></td>
-                                            <tr>
                                             </tr>
+                                            <tr>
                                                 <td class=\"\">Caissier : <br/><strong>$caissier</strong></td>
                                                 <td class=\"\"></td>
                                             </tr>
@@ -150,9 +150,9 @@
 
                                     $htmlFoot = "</td>
                                         </tr>
-                                    </table><br/>
-                                        <table class=\"\" width=\"100%\">
-                                            <tr>
+                                    </table><br/><br/>
+                                        <table rules=\"all\" class=\"\" width=\"100%\" style='border: 1px solid #313131;'>
+                                            <tr class=\"blocInfoBis\">
                                                 <td class=\"\"><strong>Ration</strong></td>
                                                 <td class=\"\"><strong>Dette fournisseur</strong></td>
                                                 <td class=\"\"><strong>Dépenses diverses</strong></td>
@@ -161,51 +161,54 @@
                                                 <td class=\"\"><strong>Fonds</strong></td>
                                                 <td class=\"\"><strong>Capsules</strong></td>
                                                 <td class=\"\"><strong>Recettes oerçues</strong></td>
-                                            <tr>
                                             </tr>
-                                                <td class=\"\">$ration</td>
-                                                <td class=\"\">$dette_fournisseur</td>
-                                                <td class=\"\">$depenses_diverses</td>
-                                                <td class=\"\">$avaries</td>
-                                                <td class=\"\">$credit_client</td>
-                                                <td class=\"\">$fonds</td>
-                                                <td class=\"\">$capsules</td>
-                                                <td class=\"\">$recettes_percues</td>
-                                            <tr>
+                                            <tr class=\"blocInfoBis\">
+                                                <td class=\"\">$ration <span style='float: right; margin-right: 5px;'>FCFA</span></td>
+                                                <td class=\"\">$dette_fournisseur <span style='float: right; margin-right: 5px;'>FCFA</span></td>
+                                                <td class=\"\">$depenses_diverses <span style='float: right; margin-right: 5px;'>FCFA</span></td>
+                                                <td class=\"\">$avaries <span style='float: right; margin-right: 5px;'>FCFA</span></td>
+                                                <td class=\"\">$credit_client <span style='float: right; margin-right: 5px;'>FCFA</span></td>
+                                                <td class=\"\">$fonds <span style='float: right; margin-right: 5px;'>FCFA</span></td>
+                                                <td class=\"\">$capsules <span style='float: right; margin-right: 5px;'>FCFA</span></td>
+                                                <td class=\"\">$recettes_percues <span style='float: right; margin-right: 5px;'>FCFA</span></td>
+                                            </tr>
                                         </table>
-                                        <table class=\"\" width=\"100%\">
-                                            <tr>
+                                        <br/>
+                                        <table rules=\"all\" class=\"blocInfoBis\" width=\"100%\" style='border: 1px solid #313131;'>
+                                            <tr class=\"blocInfoBis\">
                                                 <td class=\"\"><strong>Montant des achats mensuels</strong></td>
-                                                <td class=\"\">$montant_achat_inventaire</td>
-                                            <tr>
+                                                <td class=\"\">$montant_achat_inventaire <span style='float: right; margin-right: 5px;'>FCFA</span></td>
                                             </tr>
+                                            <tr class=\"blocInfoBis\">
                                                 <td class=\"\"><strong>Montant des ventes mensuelles</strong></td>
-                                                <td class=\"\">$montant_vente_inventaire</td>
-                                            <tr>
+                                                <td class=\"\">$montant_vente_inventaire <span style='float: right; margin-right: 5px;'>FCFA</span></td>
                                             </tr>
+                                            <tr class=\"blocInfoBis\">
                                                 <td class=\"\"><strong>Patrimoine</strong></td>
-                                                <td class=\"\">$patrimoine</td>
+                                                <td class=\"\">$patrimoine <span style='float: right; margin-right: 5px;'>FCFA</span></td>
                                             </tr>
-                                            <tr>
+                                            <tr class=\"blocInfoBis\">
                                                 <td class=\"\"><strong>Bénéfice brut</strong></td>
-                                                <td class=\"\">$benefice_brut</td>
-                                            <tr>
+                                                <td class=\"\">$benefice_brut <span style='float: right; margin-right: 5px;'>FCFA</span></td>
                                             </tr>
+                                            <tr class=\"blocInfoBis\">
                                                 <td class=\"\"><strong>Bénéfice net</strong></td>
-                                                <td class=\"\">$benefice_net</td>
-                                            <tr>
+                                                <td class=\"\">$benefice_net <span style='float: right; margin-right: 5px;'>FCFA</span></td>
                                             </tr>
+                                            <tr class=\"blocInfoBis\">
                                                 <td class=\"\"><strong>Ecart</strong></td>
-                                                <td class=\"\">$ecart</td>
+                                                <td class=\"\">$ecart <span style='float: right; margin-right: 5px;'>FCFA</span></td>
                                             </tr>
-                                            </tr>
+                                            <tr class=\"blocInfoBis\">
                                                 <td class=\"\"><strong>Solde</strong></td>
-                                                <td class=\"\">$solde</td>
+                                                <td class=\"\">$solde <span style='float: right; margin-right: 5px;'>FCFA</span></td>
                                             </tr>
                                         </table>
-                                    <div><strong>Commentaire : </strong><br/>$commentaire</div>
+                                        <br/><br/>
+                                    <div style='border: 1px solid #000000;'><strong>Commentaire : </strong><br/>$commentaire</div>
+                                    <br/>
                                     <div>
-                                        Inventaire de ".$i." produits <br />
+                                        Inventaire de <strong>".$i."</strong> produits <br />
                                         Réalisé par ".$user." le ".setLocalTime()." <br />
                                     </div>
                                 </body>
@@ -238,12 +241,12 @@
             $mpdf = new mPDF('win-1252', 'A4', '', '', 5, 5, 5, 5, 10, 10);
             $mpdf->SetDisplayMode('fullpage');
             $mpdf->WriteHTML( $htmlContent );
-            $mpdf->Output( $filename, 'F');
+            $mpdf->Output( "synthese.pdf", 'D');
         }
 
         function  getDirectory(){
             // directory for pdf file
-            $directory = "../../../downloads/Inventaires";
+            $directory = "downloads/inventaires";
             if( !file_exists( $directory ) )
             {
                 mkdir( $directory, 0777, true );
@@ -255,7 +258,7 @@
 
             $directory = $this->getDirectory();
 
-            $file_inventaire = "inventaire_".str_replace("-", "", explode(" ", setLocalTime())[0])."_".str_replace(":", "", explode(" ", setLocalTime())[1]);
+            $file_inventaire = "inventaire_".str_replace("-", "", explode(" ", setLocalTime())[0]);
             $filename = $directory."/".$file_inventaire;
 
             if(file_exists($filename.".html"))
@@ -272,8 +275,8 @@
          */
         function  storeHtml( $htmlContent ){
 
-            $filename = $this->getFilename( $this->id_facture );
-
+            $filename = $this->getFilename();
+            echo "the filename : ".$filename;
             $file = fopen($filename.".html",'a');
             fseek($file, 0);
             fputs($file, $htmlContent);

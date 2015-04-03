@@ -90,8 +90,17 @@
                     echo "Journal introuvable";
                 }
             }
-            else if( $target == "historiques_inventaires" )
+            else if( $target == "inventaire" )
             {
+                isset($_GET ["id_inventaire"]) ? $id_inventaire = addslashes(htmlspecialchars($_GET ["id_inventaire"])) : $id_inventaire = "";
+                if( $id_inventaire != "" ){
+                    $inventaire = $db->getRecapitulatifInventaire( $id_inventaire );
+                    $filepath = $inventaire["filepath"];
+                    $content = readfile( $filepath );
+                    echo $content;
+                }else{
+                    echo "synthese introuvable";
+                }
 
             }
             else if( $target == "edit_historique_facture_achat" )

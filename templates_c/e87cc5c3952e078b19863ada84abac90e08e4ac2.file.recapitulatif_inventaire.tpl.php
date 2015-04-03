@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-04-03 00:04:09
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-03 13:31:33
          compiled from ".\templates\administration_magasin\gestion_magasin\recapitulatif_inventaire.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1768852ebec69712655-88900947%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e87cc5c3952e078b19863ada84abac90e08e4ac2' => 
     array (
       0 => '.\\templates\\administration_magasin\\gestion_magasin\\recapitulatif_inventaire.tpl',
-      1 => 1428019429,
+      1 => 1428067622,
       2 => 'file',
     ),
   ),
@@ -51,7 +51,7 @@ function RefreshTableGenerateSynthese()
         async	: false,
         data	: "",
         success	: function (msg){
-            alert(msg);
+            alert("msg : "+msg);
         }
     }).responseText;
 
@@ -72,26 +72,48 @@ function RefreshTableAnnulerSynthese()
     }).responseText;
 }
 
+function getUrlParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++)
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam)
+        {
+            return sParameterName[1];
+        }
+    }
+}
+
+function setRegisterPopup(){
+    $("#downloadLink").hide();
+    if(getUrlParameter("sub") == "synthese_inventaire" ){
+        $("#succes_register").show();
+        $("#succes_cancel").hide();
+        $("#downloadLink").show();
+        $("#btnAnnulerValider").hide();
+    }else{
+        $("#succes_register").hide();
+        $("#succes_cancel").hide();
+        $("#downloadLink").hide();
+    }
+}
+
 /**
 	jQuery init.
 */
 $(document).ready (function ()
 {
-    $("#succes_register").hide();
-    $("#succes_cancel").hide();
+    setRegisterPopup();
 	RefreshTableRecapitulatifInventaire ();
-    $("#downloadLink").hide();
+
 
     $('#btnValiderInventaire').click(function()
     {
         var didConfirm = confirm("Vous êtes sur le point de générer la synthèse de l'inventaire. \n cet action est irréversible");
       if (didConfirm == true) {
-          alert( "valider" );
-//          RefreshTableGenerateSynthese();
-//          RefreshTableRecapitulatifInventaire ();
-//          $("#downloadLink").show();
-//          $("#btnAnnulerValider").hide();
-//          $("#succes_register").show();
+          document.location.href="administration_magasin.php?sub=synthese_inventaire";
       }
     });
 

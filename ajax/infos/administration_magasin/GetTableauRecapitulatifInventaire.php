@@ -50,11 +50,12 @@ $capsules = $recap["capsules"];
 <script language="javascript">
 $(document).ready (function ()
 {
-    $('#downloadLink').click(function()
+    $('#download_link').click(function()
     {
-        var filename = $(this).attr("filename");
-        alert(filename);
-    //    document.location.href="download.php?filename="+filename;
+        window.open(
+            'downloads.php?sub=inventaire&id_inventaire='+$(this).attr("id_inventaire"),
+            '_blank'
+        );
     });
 });
 </script>
@@ -119,8 +120,8 @@ $(document).ready (function ()
                             </tr>
                             <tr id="downloadLink">
                                 <td align="left" valign="middle">
-                                    <a class="download_links" filename="filename">
-                                        <img src="assets/images/arrow_down.png" alt="" width="16" height="16" filename="<?=$recap["filepath"]; ?>" /> Téléchargez la synthèse</a>
+                                    <a id="download_link" id_inventaire="<?=$recap["idt_inventaires"]; ?>">
+                                        <img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez la synthèse</a>
                                 </td>
                             </tr>
                         </table>

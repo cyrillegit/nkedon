@@ -32,7 +32,8 @@ else
     }
     else
     {
-        try
+        echo "({'result': 'SUCCESS', 'message': 'Vous etes connecté.'})";
+  /*      try
         {
             $id_inventaire = $db->getMaxIdInventaire();
             var_dump( $id_inventaire );
@@ -61,7 +62,8 @@ else
             $htmlContent = $html->buildHtml();
             $html->buildPdf( $htmlContent );
             $filename = $html->getFilename();
-            var_dump( $filename );
+            var_dump( $filename );*/
+
 
             /**
              * Instantiate Backup_Database and perform backup
@@ -105,13 +107,13 @@ else
 //            {
 //            //    header("Location:../administration_magasin.php?sub=recapitulatif_inventaire");
 //            }
-        }
+  /*      }
         catch (Exception $e)
         {
             $msg = $e->getMessage();
             $ok &= false;
             echo "({'result': 'FAILED', 'message': 'Exception : ".$msg."'})";
-        }
+        }*/
     }
 }
 
