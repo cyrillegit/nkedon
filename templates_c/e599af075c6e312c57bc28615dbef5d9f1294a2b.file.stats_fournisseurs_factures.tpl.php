@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-17 11:46:54
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-07 17:29:04
          compiled from ".\templates\administration_magasin\statistiques\stats_fournisseurs_factures.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:918052fd4606f26ee9-56942019%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e599af075c6e312c57bc28615dbef5d9f1294a2b' => 
     array (
       0 => '.\\templates\\administration_magasin\\statistiques\\stats_fournisseurs_factures.tpl',
-      1 => 1392371498,
+      1 => 1426526077,
       2 => 'file',
     ),
   ),

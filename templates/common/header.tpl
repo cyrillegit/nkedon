@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="assets/css/ui.jquery/jquery-ui.custom.css" type="text/css" /> 
 
 <script type="text/javascript" src="FusionCharts/FusionCharts.js"></script>
+<script type="text/javascript" src="highcharts/highcharts.js"></script>
 
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery.ui.js"></script>

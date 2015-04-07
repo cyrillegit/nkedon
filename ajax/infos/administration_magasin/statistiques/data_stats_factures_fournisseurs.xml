@@ -3,7 +3,7 @@
  <set label="CHOCOCAM" value="0"/>
  <set label="CAMLAIT" value="19"/>
  <set label="CASH  SALES  INVOICE" value="6"/>
- <set label="U  C  B" value="4"/>
+ <set label="U C B" value="4"/>
  <set label="CIGARETTE" value="23"/>
  <set label="GOLDEN" value="20"/>
  <set label="SAAD COLGATE" value="2"/>
@@ -29,4 +29,7 @@
  <set label="DEE_ LITE" value="1"/>
  <set label="GROUPE SOLIDARITE" value="0"/>
  <set label="DAH KEN" value="0"/>
+ <set label="PLANET" value="0"/>
+ <set label="MOT" value="0"/>
+ <set label="HUB" value="0"/>
 </chart>

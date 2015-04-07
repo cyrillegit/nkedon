@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-16 17:22:58
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-07 22:03:42
          compiled from ".\templates\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:78352eba7b1662c86-76128190%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '749422d4cfc3eb5677cf499730392b6accd4d1c7' => 
     array (
       0 => '.\\templates\\index.tpl',
-      1 => 1426526077,
+      1 => 1428444220,
       2 => 'file',
     ),
   ),
@@ -23,6 +23,30 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 
 <script language="javascript">
+
+    function RefreshXMLAchats()
+    {
+        var responseText = $.ajax({
+            type    : "POST",
+            url     : "ajax/infos/statistiques/GetXMLAchats.php",
+            async   : false,
+            data    : "",
+            success : function (msg){}
+        }).responseText;
+        $("#chartContainerAchats").empty ().html (responseText);
+    }
+
+    function RefreshXMLVentesJournal()
+    {
+        var responseText = $.ajax({
+            type    : "POST",
+            url     : "ajax/infos/statistiques/GetXMLVentesJournal.php",
+            async   : false,
+            data    : "",
+            success : function (msg){}
+        }).responseText;
+        $("#chartContainerVentes").empty ().html (responseText);
+    }
 
 	function slideSwitch() 
 	{
@@ -44,12 +68,72 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 	$(document).ready (function ()
 	{
+        RefreshXMLAchats();
+        RefreshXMLVentesJournal();
+
 		$(function() {
-		    setInterval( "slideSwitch()", 5000 );
+		//    setInterval( "slideSwitch()", 5000 );
+
+            $('#container').highcharts({
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: 'Fruit Consumption'
+                },
+                xAxis: {
+                    categories: ['Apples', 'Bananas', 'Oranges']
+                },
+                yAxis: {
+                    title: {
+                        text: 'Fruit eaten'
+                    }
+                },
+                series: [{
+                    name: 'Jane',
+                    data: [1, 0, 4]
+                }, {
+                    name: 'John',
+                    data: [5, 7, 3]
+                }]
+            });
 		});
 
 	});
 </script>
+    <style type="text/css">
+        .blocInfoBis
+        {
+            background-image: url("css/images/bg_bloc_alertes.png");
+            background-repeat: repeat;
+            border: 1px solid #313131;
+            padding: 5px 10px 10px;
+        }
+
+        #slideshow
+        {
+            position:relative;
+            height:350px;
+        }
+
+        #slideshow IMG
+        {
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:8;
+        }
+
+        #slideshow IMG.active
+        {
+            z-index:10;
+        }
+
+        #slideshow IMG.last-active
+        {
+            z-index:9;
+        }
+    </style>
 
 <div id="Content">
 	<div class="bloc_title">
@@ -66,50 +150,27 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	Bienvenue sur votre nouveau BackOffice Nkedon.
 	</div>
 	<div id="main">
-		<br/>
         <div id="mainCenter">
-			<style type="text/css">
-				.blocInfoBis 
-				{
-					background-image: url("css/images/bg_bloc_alertes.png");
-					background-repeat: repeat;
-					border: 1px solid #313131;
-					padding: 5px 10px 10px;
-				}
+        	
+            	
+				
+              	
+    				
+    				
+    				
+				
+            
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        <div id="chartContainerAchats"></div>
+                    </td>
 
-				#slideshow 
-				{
-				    position:relative;
-				    height:350px;
-				}
-
-				#slideshow IMG 
-				{
-				    position:absolute;
-				    top:0;
-				    left:0;
-				    z-index:8;
-				}
-
-				#slideshow IMG.active 
-				{
-				    z-index:10;
-				}
-
-				#slideshow IMG.last-active 
-				{
-				    z-index:9;
-				}
-			</style>
-        	<div class="blocInfoBis" style="width: 970px;">
-            	<div class="titre"><b><i>Gestion du magasin et de la production par NKEDON</i></b></div>
-				<hr/>
-              	<div id="slideshow">
-    				<img src="assets/images/slideshow_images/img1.jpg" alt="" class="active" />
-    				<img src="assets/images/slideshow_images/img2.jpg" alt="" />
-    				<img src="assets/images/slideshow_images/img3.jpg" alt="" />
-				</div>
-            </div>			
+                    <td>
+                        <div id="chartContainerVentes"></div>
+                    </td>
+                </tr>
+            </table>
 		</div>
 	</div>
 </div>

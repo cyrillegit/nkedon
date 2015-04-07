@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-02-14 10:07:52
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-07 20:12:38
          compiled from ".\templates\administration_magasin\statistiques\stats_graphes_progression.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1019252fde79eb2be89-36889924%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5a7a56bc5b4ac828f502c52d462c367128b4298b' => 
     array (
       0 => '.\\templates\\administration_magasin\\statistiques\\stats_graphes_progression.tpl',
-      1 => 1392371777,
+      1 => 1428437507,
       2 => 'file',
     ),
   ),
@@ -29,7 +29,7 @@ function RefreshXMLGraphesProgressions()
 {
     var responseText = $.ajax({
             type    : "POST",
-            url     : "ajax/infos/administration_magasin/statistiques/GetXMLGraphesProgressions.php",
+            url     : "ajax/infos/administration_magasin/statistiques/GetXMLAchatsVentesJournal.php",
             async   : false,
             data    : "",
             success : function (msg){}

@@ -720,6 +720,47 @@
             return $res;
         }
 
+        /**
+         * Fonction getAllProduitsVendusByInventaire
+         * -------------------
+         * Retourne les produits vendus par inventaire
+         *
+         * @return array
+         */
+        public function getAllProduitsVendusByInventaire ( $id )
+        {
+            $this->Sql = "SELECT *, SUM(o.quantite_vendue) AS quantite_vendue
+                            FROM t_journal AS j
+                            JOIN t_operations AS o ON j.idt_journal = o.id_journal
+                            JOIN t_produits AS p ON o.id_produit = p.idt_produits
+                            WHERE j.id_inventaire = $id
+                            GROUP BY p.idt_produits
+                            ORDER BY j.idt_journal";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+
+        /**
+         * Fonction getAllProduitsAchetesByInventaire
+         * -------------------
+         * Retourne les produits achetes par inventaire
+         *
+         * @return array
+         */
+        public function getAllProduitsAchetesByInventaire ( $id )
+        {
+            $this->Sql = "SELECT *, SUM(a.quantite_achat) AS quantite_achetee
+                            FROM t_factures AS f
+                            JOIN t_achats AS a ON f.idt_factures = a.id_facture
+                            JOIN t_produits AS p ON a.id_produit = p.idt_produits
+                            WHERE f.id_inventaire = $id
+                            GROUP BY p.idt_produits
+                            ORDER BY f.idt_factures";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
 		/**
 		 * Fonction getAutoCompleteProduits
 		 * -------------------

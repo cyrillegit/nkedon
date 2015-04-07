@@ -4,63 +4,76 @@
   <category label="13/03/2014"/>
   <category label="06/04/2014"/>
   <category label="22/04/2014"/>
+  <category label="26/03/2015"/>
  </categories>
  <dataset seriesName="Achats mensuels" color="2AD62A" anchorBorderColor="2AD62A" anchorBgColor="2AD62A">
   <set value="8617284"/>
   <set value="7896646"/>
   <set value="8107078"/>
+  <set value="6314187"/>
  </dataset>
  <dataset seriesName="Ventes mensuelles" color="DBDC25" anchorBorderColor="DBDC25" anchorBgColor="DBDC25">
   <set value="9011785"/>
   <set value="8917702"/>
   <set value="9155202"/>
+  <set value="14083201"/>
  </dataset>
  <dataset seriesName="Montant en stock" color="1D8BD1" anchorBorderColor="1D8BD1" anchorBgColor="1D8BD1">
   <set value="6130935"/>
   <set value="6632085"/>
   <set value="6634185"/>
+  <set value="0"/>
  </dataset>
  <dataset seriesName="Montant charges diverses" color="F1683C" anchorBorderColor="F1683C" anchorBgColor="F1683C">
   <set value="1071900"/>
   <set value="1224800"/>
   <set value="1224800"/>
+  <set value="0"/>
  </dataset>
  <dataset seriesName="Fonds en espéces" color="54683C" anchorBorderColor="54683C" anchorBgColor="54683C">
   <set value="0"/>
   <set value="13500"/>
   <set value="13500"/>
+  <set value="0"/>
  </dataset>
  <dataset seriesName="Patrimoine" color="54F13C" anchorBorderColor="54F13C" anchorBgColor="54F13C">
   <set value="6179535"/>
   <set value="6680185"/>
   <set value="6682285"/>
+  <set value="0"/>
  </dataset>
  <dataset seriesName="Recettes perçues" color="54F1D2" anchorBorderColor="54F1D2" anchorBgColor="54F1D2">
   <set value="7180013"/>
   <set value="8113215"/>
   <set value="8113215"/>
+  <set value="0"/>
  </dataset>
  <dataset seriesName="Bénéfice brut" color="D8F1D2" anchorBorderColor="D8F1D2" anchorBgColor="D8F1D2">
   <set value="1557385"/>
   <set value="1248990"/>
   <set value="1273838"/>
+  <set value="2467604"/>
  </dataset>
  <dataset seriesName="Bénéfice Net" color="D8C6D2" anchorBorderColor="D8C6D2" anchorBgColor="D8C6D2">
   <set value="485485"/>
   <set value="24190"/>
   <set value="49038"/>
+  <set value="2467604"/>
  </dataset>
  <dataset seriesName="Ecart" color="D8C6B9" anchorBorderColor="D8C6B9" anchorBgColor="D8C6B9">
   <set value="1831772"/>
   <set value="790987"/>
   <set value="1028487"/>
+  <set value="14083201"/>
  </dataset>
  <dataset seriesName="Ration" color="5401D2" anchorBorderColor="5401D2" anchorBgColor="5401D2">
   <set value="167750"/>
   <set value="185650"/>
   <set value="185650"/>
+  <set value="0"/>
  </dataset>
  <dataset seriesName="Dette fournisseurs" color="D0F1D2" anchorBorderColor="D0F1D2" anchorBgColor="D0F1D2">
+  <set value="0"/>
   <set value="0"/>
   <set value="0"/>
   <set value="0"/>
@@ -69,26 +82,31 @@
   <set value="868150"/>
   <set value="936900"/>
   <set value="936900"/>
+  <set value="0"/>
  </dataset>
  <dataset seriesName="Crédit client" color="D80009" anchorBorderColor="D80009" anchorBgColor="D80009">
   <set value="36000"/>
   <set value="25600"/>
   <set value="25600"/>
+  <set value="0"/>
  </dataset>
  <dataset seriesName="Avaries" color="D0F000" anchorBorderColor="D0F000" anchorBgColor="D0F000">
   <set value="0"/>
   <set value="76650"/>
   <set value="76650"/>
+  <set value="0"/>
  </dataset>
  <dataset seriesName="Capsules" color="000602" anchorBorderColor="000602" anchorBgColor="000602">
   <set value="48600"/>
   <set value="34600"/>
   <set value="34600"/>
+  <set value="0"/>
  </dataset>
  <dataset seriesName="Solde" color="D8FF09" anchorBorderColor="D8FF09" anchorBgColor="D8FF09">
   <set value="-759872"/>
   <set value="433813"/>
   <set value="196313"/>
+  <set value="-14083200"/>
  </dataset>
  <styles>
   <definition>
