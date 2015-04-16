@@ -80,14 +80,14 @@ $(document).ready (function ()
                 $quantite_vendue = 0;
 
                 // recuperer les infos du produit non inventorié; donc id_inventaire = 0
-                $dataAchat = $db->getInfosProduitAcheteByInventaire( $obj["idt_produits"], 0);
+                $dataAchat = $db->getInfosProduitAcheteByInventaire( $obj["idt_produits"], 17);
                 $dataVente = $db->getInfosProduitVenduByInventaire( $obj["idt_produits"], 0 );
 
-                if( count( $dataAchat ) > 0 ){
+                if( $dataAchat["quantite_achetee"] != null ){
                     $quantite_achetee = $dataAchat["quantite_achetee"];
                 }
 
-                if( count( $dataVente ) > 0 ){
+                if( $dataVente["quantite_vente"] != null ){
                     $quantite_vendue = $dataVente["quantite_vente"];
                 }
 

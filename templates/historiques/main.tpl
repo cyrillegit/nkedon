@@ -31,9 +31,9 @@ $(document).ready (function ()
                 <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="historiques.php?sub=historiques_factures" style="color:white;"><div class="btn_histo_facture"></div><div style="text-align: center; margin: 15px;">Historiques des factures d'achats</div></a></li>
                 <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="historiques.php?sub=historiques_factures_ventes" style="color:white;"><div class="btn_histo_facture"></div><div style="text-align: center; margin: 15px;">Historiques des factures de ventes</div></a></li>
                 <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="historiques.php?sub=historiques_journal" style="color:white;"><div class="btn_histo_facture"></div><div style="text-align: center; margin: 15px;">Historiques des journaux</div></a></li><br/>
-                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=historique_inventaires" style="color:white;"><div class="btn_histo_synthese"></div><div style="text-align: center; margin: 15px;">Historiques des inventaires</div></a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="historiques.php?sub=historiques_inventaires" style="color:white;"><div class="btn_histo_synthese"></div><div style="text-align: center; margin: 15px;">Historiques des inventaires</div></a></li>
                 {if $smarty.session.infoUser.id_type_user <= 4}
-                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=statistiques" style="color:white;"><div class="btn_statistique"></div><div style="text-align: center; margin: 15px;">Afficher les statistiques</div></a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="statistiques.php?sub=main" style="color:white;"><div class="btn_statistique"></div><div style="text-align: center; margin: 15px;">Afficher les statistiques</div></a></li>
                 {/if}              
             </ul>
         </div>

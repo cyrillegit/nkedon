@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-16 17:22:59
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-08 13:13:12
          compiled from ".\templates\common\footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2397352eba7b19b89e7-98980603%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3efb62a1f08fd6065c43a91934a8e84fc6d77d4d' => 
     array (
       0 => '.\\templates\\common\\footer.tpl',
-      1 => 1426526077,
+      1 => 1428498790,
       2 => 'file',
     ),
   ),
@@ -30,7 +30,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <div class="foot_top"></div>
     <div class="foot_body">
         <div class="foot_text_right">Design & Developpement by <a href="http://www.nemand-soft.com" target="_blank" class="std">Nemand Softwares</a>. Copyright 2013 - <?php echo smarty_modifier_date_format(time(),"%Y");?>
-. <strong><span style="color: #000;">Version : </span></strong> <strong style="color:#F00;">1.0 bêta-test.</strong></div>
+. <strong><span style="color: #000;">Version : </span></strong> <strong style="color:#F00;">2.0.</strong></div>
     </div>
     <div class="foot_bottom"></div>
 </div>

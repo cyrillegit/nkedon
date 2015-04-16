@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-04-07 17:23:11
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-14 17:19:21
          compiled from ".\templates\common\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:399652eba7b1708760-69883461%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '14a35e64d31f6f39c819ba645103d1de351d1aea' => 
     array (
       0 => '.\\templates\\common\\header.tpl',
-      1 => 1428427384,
+      1 => 1429031952,
       2 => 'file',
     ),
   ),
@@ -34,7 +34,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <link rel="stylesheet" href="assets/css/ui.jquery/jquery-ui.custom.css" type="text/css" /> 
 
 <script type="text/javascript" src="FusionCharts/FusionCharts.js"></script>
-<script type="text/javascript" src="highcharts/highcharts.js"></script>
 
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery.ui.js"></script>
@@ -805,7 +804,7 @@ $(document).ready (function ()
                                 <li class='has-sub'><a href="historiques.php?sub=historiques_journal"><span>Historiques des journaux</span></a></li>
                                 <li class='has-sub'><a href="historiques.php?sub=historiques_inventaires"><span>Historiques des inventaires</span></a></li>
                                 <?php if ($_SESSION['infoUser']['id_type_user']<=4){?>
-                                    <li class='has-sub'><a href="historiques.php?sub=statistiques"><span>Statistiques</span></a></li>
+                                    <li class='has-sub'><a href="statistiques.php?sub=main"><span>Statistiques</span></a></li>
                                 <?php }?>
                             </ul>
                         </li>
@@ -821,7 +820,7 @@ $(document).ready (function ()
 	<div class="bloc_connect">
 		<?php if (isset($_SESSION['connected'])){?>
 	    	<?php if ($_SESSION['connected']){?>
-	            <div class="deco"><a href="index.php?logout" class="std">Déconnexion</a></div>
+	            <div class="deco"><a href="index.php?logout=logout" class="std">Déconnexion</a></div>
 	            <div class="info_connect std">Bonjour, <strong><?php echo $_SESSION['infoUser']['nom_user'];?>
  <?php echo $_SESSION['infoUser']['prenom_user'];?>
 </strong>. Derniére connexion: <?php echo $_SESSION['infoUser']['datetime_last_connected'];?>
@@ -831,7 +830,7 @@ $(document).ready (function ()
         	<div class="home">
             	<table border="0" cellpadding="0" cellspacing="0">
                 	<tr>
-                    	<td><a href="index.php" class="std"><img src="css/images/home.png" border="0" style="margin-top: -3px;"" /></a></td>
+                    	<td><a href="index.php" class="std"><img src="css/images/ico_42x42/menu_tb.png" border="0" style="margin-top: -3px;"" /></a></td>
                         <td><a href="index.php" class="std">&nbsp;&nbsp;Accueil</a></td>
                     </tr>
                 </table>

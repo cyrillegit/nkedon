@@ -47,8 +47,18 @@ function resetInputs(){
     $("#succes_register").css("display", "none");
 }
 
+function confirmLogout(){
+    if( getUrlParameter( "logout" ) == "logout" ){
+        var didConfirm = confirm("Vous êtes sur le point de vous déconnecter alors que vous n'avez pas valider le journal \n Veuillez le valider avant toute deconnexion \n sinon, toutes les enregistrements seront effacées. \n Voulez-vous néanmois vous déconnecter?");
+        if (didConfirm == true) {
+            document.location.href="index.php?logout=disconnect";
+        }
+    }
+}
+
 $(document).ready (function ()
 {
+    confirmLogout();
     setRegisterPopup();
     $("#editOperationJournal").hide();
     RefreshTableOperationsJournal ();
@@ -320,7 +330,7 @@ $(document).ready (function ()
 						</tr>
                         <tr>
 							<td>
-								Commentaire :
+								Commentaire:
 							</td>
 							<td width="100%">
                                 <textarea name="commentaire" id="commentaire" cols="30" rows="10" style="height: 100px; width: 100%;">{$commentaire}</textarea>

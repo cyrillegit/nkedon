@@ -30,7 +30,7 @@ $writer->setIndent(4);
 $writer->startElement('chart');   
    $writer->writeAttribute('caption', 'Evolution des ventes');
    $writer->writeAttribute('subcaption', 'du mois courant');
-   $writer->writeAttribute('lineThickness', '1');
+   $writer->writeAttribute('lineThickness', '3');
    $writer->writeAttribute('formatNumberScale', '0');
    $writer->writeAttribute('anchorRadius', '2');
    $writer->writeAttribute('divLineAlpha', '20');

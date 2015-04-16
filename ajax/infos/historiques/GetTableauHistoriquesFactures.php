@@ -11,7 +11,14 @@
 @session_start();
 $db = new Database ();
 
-$factures = $db->getAllFactures();
+isset( $_POST ["date_histo_facture"] ) ? $date_histo_facture = addslashes(htmlspecialchars($_POST ["date_histo_facture"])) : $date_histo_facture = "";
+
+if( $date_histo_facture == "" ) {
+    $factures = $db->getAllFactures();
+}else{
+    $annee = explode( "/", $date_histo_facture )[2];
+    $factures = $db->getAllFacturesByDate("", "", $annee );
+}
 if( COUNT($factures) > 0 )
 {
     foreach ( $factures as &$facture )

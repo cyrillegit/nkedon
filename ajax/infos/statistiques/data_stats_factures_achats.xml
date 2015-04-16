@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chart caption="Evolution des achats" subcaption="du mois courant" lineThickness="3" formatNumberScale="0" anchorRadius="2" divLineAlpha="20" numvdivlines="5" chartRightMargin="35" bgColor="0000FF" bgAngle="270" bgAlpha="0" alternateHGridAlpha="5" divLineColor="CC3300" divLineIsDashed="0" shadowAlpha="90" legendPosition="BOTTOM" labelStep="2" showValues="0" canvasBgAlpha="0" legendBgAlpha="0" bgImage="" bgImageAlpha="100" yAxisName="Montant (FCFA)">
+ <categories/>
+ <dataset seriesName="Achats mensuelles" color="000000"/>
+ <styles>
+  <definition>
+   <style type="font" name="CaptionFont" size="12"/>
+  </definition>
+  <application>
+   <apply toObject="CAPTION" styles="CaptionFont"/>
+   <apply toObject="SUBCAPTION" styles="SubCaptionFont"/>
+  </application>
+ </styles>
+</chart>

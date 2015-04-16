@@ -9,7 +9,6 @@
 @require_once("../../../include/ClassDB.php");
 
 @session_start();
-$output = "";
 $db = new Database ();
 
 $datas = $db->getAllComptesUtilisateursWithoutAdmin ();

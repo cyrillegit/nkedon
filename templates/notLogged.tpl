@@ -90,7 +90,7 @@ $(document).ready (function ()
         <div class="alerte">&nbsp;</div><br/>
         
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
-            <div class="ico_title"><img src="css/images/menu_tb.png" style="float:left" /></div>
+            <div class="ico_title"><img src="css/images/menu_fdr.png" style="float:left" /></div>
             
             <div class="t_titre">
                 <div class="title"><strong>connexion</strong> <strong style="color:black;">à votre tableau de  bord</strong></div>

@@ -194,6 +194,7 @@
 			$ok &= $db->Execute ( $sql );
 			if( $ok )
 			{
+                $_SESSION["delete"] = true;
 				$tpl_index->assign ("message", $db->fixEncoding("La suppression de la facture a bien été réalisée."));
 				$tpl_index->assign ("error", 0);
 			}
@@ -209,6 +210,7 @@
             $ok &= $db->Execute ( $sql );
             if( $ok )
             {
+                $_SESSION["delete"] = true;
                 $tpl_index->assign ("message", $db->fixEncoding("La suppression de la facture a bien été réalisée."));
                 $tpl_index->assign ("error", 0);
             }
@@ -240,6 +242,7 @@
             $ok &= $db->Execute ( $sql );
             if( $ok )
             {
+                $_SESSION["delete"] = true;
                 $tpl_index->assign ("message", $db->fixEncoding("La suppression des opérations de vente a bien été réalisée."));
                 $tpl_index->assign ("error", 0);
             }

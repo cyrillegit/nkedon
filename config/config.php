@@ -19,9 +19,9 @@
 	
 	**************************************************************** */
     define('DB_HOST', 'localhost');
-    define('DB_NAME', 'nkedon_db');
-    define('DB_USER','root');
-    define('DB_PASSWORD','');
+    define('DB_NAME', 'nkedon_db_dev');
+    define('DB_USER','admin');
+    define('DB_PASSWORD','nkwetsou');
 
     class Configuration
 	{

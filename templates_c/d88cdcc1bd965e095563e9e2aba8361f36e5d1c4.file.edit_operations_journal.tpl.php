@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-04-02 07:19:18
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-16 07:12:43
          compiled from ".\templates\administration_magasin\gestion_journal\edit_operations_journal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:314005512eaa12d5d97-08631238%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd88cdcc1bd965e095563e9e2aba8361f36e5d1c4' => 
     array (
       0 => '.\\templates\\administration_magasin\\gestion_journal\\edit_operations_journal.tpl',
-      1 => 1427958914,
+      1 => 1429168355,
       2 => 'file',
     ),
   ),
@@ -76,8 +76,18 @@ function resetInputs(){
     $("#succes_register").css("display", "none");
 }
 
+function confirmLogout(){
+    if( getUrlParameter( "logout" ) == "logout" ){
+        var didConfirm = confirm("Vous êtes sur le point de vous déconnecter alors que vous n'avez pas valider le journal \n Veuillez le valider avant toute deconnexion \n sinon, toutes les enregistrements seront effacées. \n Voulez-vous néanmois vous déconnecter?");
+        if (didConfirm == true) {
+            document.location.href="index.php?logout=disconnect";
+        }
+    }
+}
+
 $(document).ready (function ()
 {
+    confirmLogout();
     setRegisterPopup();
     $("#editOperationJournal").hide();
     RefreshTableOperationsJournal ();
@@ -352,7 +362,7 @@ $(document).ready (function ()
 						</tr>
                         <tr>
 							<td>
-								Commentaire :
+								Commentaire:
 							</td>
 							<td width="100%">
                                 <textarea name="commentaire" id="commentaire" cols="30" rows="10" style="height: 100px; width: 100%;"><?php echo $_smarty_tpl->tpl_vars['commentaire']->value;?>

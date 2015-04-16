@@ -96,15 +96,15 @@
                 }
                 else
                 {
-                    $sql = "DELETE FROM t_produits_operations";
-                    if( $db->Execute( $sql ))
-                    {
-                        $db->commit ();
-                    }
-                    else
-                    {
-                        $db->rollBack();
-                    }
+//                    $sql = "DELETE FROM t_produits_operations";
+//                    if( $db->Execute( $sql ))
+//                    {
+//                        $db->commit ();
+//                    }
+//                    else
+//                    {
+//                        $db->rollBack();
+//                    }
                 }
 
                 $tpl_index->assign("nb_produits", $nb_produits);
@@ -497,34 +497,6 @@
 
 				$target = "gestion_factures/edit_facture";
 			}
-			else if( $target == "stats_users_types_users" )
-			{
-				$target = "statistiques/stats_users_types_users";
-			}
-			else if( $target == "stats_connections_users" )
-			{
-				$target = "statistiques/stats_connections_users";
-			}
-			else if( $target == "stats_fournisseurs_factures" )
-			{
-				$target = "statistiques/stats_fournisseurs_factures";
-			}
-			else if( $target == "stats_fournisseurs_factures_archivees" )
-			{
-				$target = "statistiques/stats_fournisseurs_factures_archivees";
-			}			
-			else if( $target == "stats_graphes_progression" )
-			{
-				$target = "statistiques/stats_graphes_progression";
-			}
-			else if( $target == "stats_produits" )
-			{
-				$target = "statistiques/stats_produits";
-			}
-			else if( $target == "stats_produits_achetes_vendus" )
-			{
-				$target = "statistiques/stats_produits_achetes_vendus";
-			}		
 			else if( $target == "synthese_inventaire" )
 			{
                 if( isset($_SESSION["synthese"]) ){

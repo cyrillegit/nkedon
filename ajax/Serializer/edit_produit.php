@@ -22,7 +22,7 @@ if( $id != NULL )
 	{
 		if( $nom_produit != NULL && $prix_achat != NULL && $prix_vente != NULL)
 		{
-			str_replace( "  ", " ", trim( $nom_produit ));
+            $nom_produit = trim(preg_replace('/\s+/', ' ', $nom_produit ));
 			$ok = true;
 			$infoAllProduits = $db->getAllProduits();
 			foreach ($infoAllProduits as $infoProduit)

@@ -190,7 +190,7 @@ $(document).ready (function ()
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
                 <td>
-                Actuellement <font color="black"><b>{$nb_comptes_utilisateurs}</b></font> comptes utilisateurs enregistrés, dont <font color="black"><b>2</b></font>  comptes adminitrateurs non visibles.
+                Actuellement <font color="black"><b>{$nb_comptes_utilisateurs}</b></font> comptes utilisateurs enregistrés, dont <font color="black"><b>3</b></font>  comptes adminitrateurs non visibles.
                 </td>
                 <td>
                 {if {$smarty.session.infoUser.id_type_user eq 1} or {$smarty.session.infoUser.id_type_user eq 2}}

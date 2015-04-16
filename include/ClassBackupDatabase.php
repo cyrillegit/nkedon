@@ -2,6 +2,8 @@
 
 // Report all errors
 error_reporting(E_ALL);
+@session_start();
+@require_once("./config/config.php");
 
 /**
  * The Backup_Database class
@@ -14,10 +16,10 @@ class BackupDatabase
      */
     function BackupDatabase()
     {
-        $this->host     = "localhost";
-        $this->username = "root";
-        $this->passwd   = "";
-        $this->dbName   = "nkedon_db";
+        $this->host     = DB_HOST;
+        $this->username = DB_USER;
+        $this->passwd   = DB_PASSWORD;
+        $this->dbName   = DB_NAME;
         $this->charset  = "utf8";
  
         $this->initializeDatabase();

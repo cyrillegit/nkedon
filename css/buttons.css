@@ -465,7 +465,7 @@ input.btn_save
     float:				left;
     cursor:				pointer;
     background-color:	none;
-    background-image:	url(images/boutons/locked.png);
+    background-image:	url(images/boutons/bar_chart.png);
 }
 
 .btn_folder

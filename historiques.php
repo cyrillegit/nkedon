@@ -220,14 +220,6 @@
 
                 $target = "gestion_factures/edit_facture";
             }
-            else if( $target == "statistiques" )
-            {
-                $target = "statistiques/statistiques";
-            }
-			else if( $target == "backupdb" )
-			{
-				
-			}																										
 			else
 			{
 				$target = "main";

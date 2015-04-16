@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-29 17:04:16
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-07 22:48:49
          compiled from ".\templates\contact\contact.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1043952fbbe95486398-72333348%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0c7fea85c7114e6bb620b58dc6a29c12531d08a2' => 
     array (
       0 => '.\\templates\\contact\\contact.tpl',
-      1 => 1427648653,
+      1 => 1427648842,
       2 => 'file',
     ),
   ),
@@ -29,6 +29,31 @@ $(document).ready (function ()
 });
 
 </script>
+    <style type="text/css">
+        .blocInfoBis
+        {
+            background-image: url("css/images/bg_bloc_alertes.png");
+            background-repeat: repeat;
+            border: 1px solid #313131;
+            padding: 5px 5px 5px;
+        }
+        .maindiv{
+            width:690px;
+            margin:0 auto;
+            padding:20px;
+            background:#CCC;
+        }
+        .innerbg{
+            padding:6px;
+            background:#FFF;
+        }
+        .link{
+            font-weight:bold;
+            color:#ff0000;
+            text-decoration:none;
+            font-size:12px;
+        }
+    </style>
 
 <div id="Content">
     <div class="bloc_title">
@@ -59,32 +84,6 @@ $(document).ready (function ()
 
     <div style="width: 100%;">
         <form name="form_popup" id="form_popup" method="post">
-
-            <style type="text/css">
-                .blocInfoBis
-                {
-                    background-image: url("css/images/bg_bloc_alertes.png");
-                    background-repeat: repeat;
-                    border: 1px solid #313131;
-                    padding: 5px 5px 5px;
-                }
-                .maindiv{ 
-                    width:690px; 
-                    margin:0 auto; 
-                    padding:20px; 
-                    background:#CCC;
-                }
-                .innerbg{ 
-                    padding:6px; 
-                    background:#FFF;
-                }
-                .link{ 
-                    font-weight:bold; 
-                    color:#ff0000; 
-                    text-decoration:none; 
-                    font-size:12px;
-                }
-            </style>
             <div style="clear: both;">&nbsp;</div>
             <table cellspacing="2" cellpadding="2" class="blocInfoBis" width="100%">
                 <tr>

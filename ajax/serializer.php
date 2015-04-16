@@ -8,7 +8,7 @@
 	Copyright : Nemand Softwares. 2013-2014.
 	Tous droits réservés.
 */
-//@require_once ("../config/config.php");
+@require_once ("../config/config.php");
 @require_once ("../include/function.php");
 //@require_once ("../include/MasterDB.php");
 @require_once ("../include/ClassDB.php");

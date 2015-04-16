@@ -1,47 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chart caption="Evolution des achats" subcaption="du mois courant" lineThickness="1" formatNumberScale="0" anchorRadius="2" divLineAlpha="20" numvdivlines="5" chartRightMargin="35" bgColor="0000FF" bgAngle="270" bgAlpha="0" alternateHGridAlpha="5" divLineColor="CC3300" divLineIsDashed="0" shadowAlpha="90" legendPosition="BOTTOM" labelStep="5" showValues="0" canvasBgAlpha="0" legendBgAlpha="0" bgImage="" bgImageAlpha="100">
- <categories>
-  <category label="09/04/2014"/>
-  <category label="08/04/2014"/>
-  <category label="14/04/2014"/>
-  <category label="18/04/2014"/>
-  <category label="17/04/2014"/>
-  <category label="19/04/2014"/>
-  <category label="15/04/2014"/>
-  <category label="16/04/2014"/>
-  <category label="12/04/2014"/>
-  <category label="10/04/2014"/>
-  <category label="11/04/2014"/>
-  <category label="07/04/2014"/>
-  <category label="21/04/2014"/>
-  <category label="29/04/2014"/>
-  <category label="24/04/2014"/>
-  <category label="22/04/2014"/>
-  <category label="28/04/2014"/>
-  <category label="30/04/2014"/>
-  <category label="25/03/2015"/>
- </categories>
- <dataset seriesName="Achats mensuelles" color="000000">
-  <set value="42614"/>
-  <set value="843564"/>
-  <set value="1075320"/>
-  <set value="390060"/>
-  <set value="181812"/>
-  <set value="60000"/>
-  <set value="714240"/>
-  <set value="268440"/>
-  <set value="847156"/>
-  <set value="74580"/>
-  <set value="344304"/>
-  <set value="132316"/>
-  <set value="636580"/>
-  <set value="57756"/>
-  <set value="12350"/>
-  <set value="12600"/>
-  <set value="250481"/>
-  <set value="34080"/>
-  <set value="163482"/>
- </dataset>
+<chart caption="Evolution des achats" subcaption="du mois courant" lineThickness="3" formatNumberScale="0" anchorRadius="2" divLineAlpha="20" numvdivlines="5" chartRightMargin="35" bgColor="0000FF" bgAngle="270" bgAlpha="0" alternateHGridAlpha="5" divLineColor="CC3300" divLineIsDashed="0" shadowAlpha="90" legendPosition="BOTTOM" labelStep="5" showValues="0" canvasBgAlpha="0" legendBgAlpha="0" bgImage="" bgImageAlpha="100">
+ <categories/>
+ <dataset seriesName="Achats mensuelles" color="000000"/>
  <styles>
   <definition>
    <style type="font" name="CaptionFont" size="12"/>

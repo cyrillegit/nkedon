@@ -4,7 +4,7 @@
 	-----------------------------------
 	Ce fichier crée un tableau contenant les informations des produits d'un journal.
 */
-//@require_once("../../../config/config.php");
+@require_once("../../../config/config.php");
 @require_once("../../../include/function.php");
 @require_once("../../../include/ClassDB.php");
 

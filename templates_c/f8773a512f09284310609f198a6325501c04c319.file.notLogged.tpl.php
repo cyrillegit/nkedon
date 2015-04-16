@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-16 17:29:03
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-16 07:58:21
          compiled from ".\templates\notLogged.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2188252eba7c69be9b7-97408979%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f8773a512f09284310609f198a6325501c04c319' => 
     array (
       0 => '.\\templates\\notLogged.tpl',
-      1 => 1426526077,
+      1 => 1429171099,
       2 => 'file',
     ),
   ),
@@ -112,7 +112,7 @@ $(document).ready (function ()
         <div class="alerte">&nbsp;</div><br/>
         
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
-            <div class="ico_title"><img src="css/images/menu_tb.png" style="float:left" /></div>
+            <div class="ico_title"><img src="css/images/menu_fdr.png" style="float:left" /></div>
             
             <div class="t_titre">
                 <div class="title"><strong>connexion</strong> <strong style="color:black;">à votre tableau de  bord</strong></div>

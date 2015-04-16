@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-26 22:40:30
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-13 17:01:12
          compiled from ".\templates\administration\gestion_users\comptes_utilisateurs.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2892352ebac2dad3b68-18198693%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9b3ce6a7eca5167ccc9c8a47c2ae127787ad1a5f' => 
     array (
       0 => '.\\templates\\administration\\gestion_users\\comptes_utilisateurs.tpl',
-      1 => 1427409627,
+      1 => 1428944468,
       2 => 'file',
     ),
   ),
@@ -217,7 +217,7 @@ $(document).ready (function ()
             <tr>
                 <td>
                 Actuellement <font color="black"><b><?php echo $_smarty_tpl->tpl_vars['nb_comptes_utilisateurs']->value;?>
-</b></font> comptes utilisateurs enregistrés, dont <font color="black"><b>2</b></font>  comptes adminitrateurs non visibles.
+</b></font> comptes utilisateurs enregistrés, dont <font color="black"><b>3</b></font>  comptes adminitrateurs non visibles.
                 </td>
                 <td>
                 <?php ob_start();?><?php echo $_SESSION['infoUser']['id_type_user']==1;?>

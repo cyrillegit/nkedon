@@ -16,14 +16,15 @@ isset( $_POST ["annee"] ) ? $annee = addslashes(htmlspecialchars($_POST ["annee"
 $id_type_user = $_SESSION["infoUser"]["idt_types_users"];
 
 $recaps = $db->getAllInventairesAnnee( $annee );
-if( COUNT($recaps) > 0 )
-{
-    foreach ( $recaps as &$recap )
-    {
-        $operationInventaire = $db->getAllAchatsInventaire( $recap["idt_inventaires"] );
-        $recap["operations_associees"] = $operationInventaire;
-    }
-}
+//if( COUNT($recaps) > 0 )
+//{
+//    foreach ( $recaps as &$recap )
+//    {
+//        $operationInventaire = $db->getAllAchatsInventaire( $recap["idt_inventaires"] );
+//        var_dump( $operationInventaire );
+//        $recap["operations_associees"] = $operationInventaire;
+//    }
+//}
 
 //    $ventes_totales = 0;
 //    $achats_totales = 0;
@@ -86,6 +87,9 @@ if( COUNT($recaps) > 0 )
 if( count( $recaps ) > 0)
 {
     foreach( $recaps as $recap ) {
+
+        $operationInventaire = $db->getAllAchatsInventaire( $recap["idt_inventaires"] );
+
         $ventes_totales = 0;
         $achats_totales = 0;
         $montant_en_stock = 0;
@@ -97,13 +101,13 @@ if( count( $recaps ) > 0)
         $ecart = 0;
         $filename = "";
 
-        foreach ($recap["operations_associees"] as $info)
+        foreach ( $operationInventaire as $info)
         {
-            if( $info["achat"] == NULL ) $info["achat"] = 0;
-            $ventes_totales += ($info["stock_initial"] + $info["achat"] - $info["stock_physique"]) * $info["prix_vente"];
-            $achats_totales += $info["achat"] * $info["prix_achat"];
+            if( $info["quantite_achetee"] == NULL ){ $info["quantite_achetee"] = 0;}
+            $ventes_totales += ($info["stock_initial"] + $info["quantite_achetee"] - $info["stock_physique"]) * $info["prix_vente"];
+            $achats_totales += $info["quantite_achetee"] * $info["prix_achat"];
             $montant_en_stock += $info["stock_physique"] * $info["prix_vente"];
-            $benefice_brut += ($info["prix_vente"] - $info["prix_achat"]) * ($info["stock_initial"] + $info["achat"] - $info["stock_physique"]);
+            $benefice_brut += ($info["prix_vente"] - $info["prix_achat"]) * ($info["stock_initial"] + $info["quantite_achetee"] - $info["stock_physique"]);
         }
 
         $montant_charges_diverses = $recap["ration"] + $recap["dette_fournisseur"] + $recap["depenses_diverses"] + $recap["avaries"] + $recap["credit_client"];
@@ -142,11 +146,11 @@ if( count( $recaps ) > 0)
                                     <td><strong><?php echo number_format($ventes_totales, 2, ',', ' '); ?><span
                                                 style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                                 </tr>
-                                <tr class="blocInfoBis">
-                                    <td>Montant marchandises en stock :<span class="champObligatoire">*</span></td>
-                                    <td><strong><?php echo number_format($montant_en_stock, 2, ',', ' '); ?><span
-                                                style="float: right; margin-right: 10px;">FCFA</span></strong></td>
-                                </tr>
+<!--                                <tr class="blocInfoBis">-->
+<!--                                    <td>Montant marchandises en stock :<span class="champObligatoire">*</span></td>-->
+<!--                                    <td><strong>--><?php //echo number_format($montant_en_stock, 2, ',', ' '); ?><!--<span-->
+<!--                                                style="float: right; margin-right: 10px;">FCFA</span></strong></td>-->
+<!--                                </tr>-->
                                 <tr class="blocInfoBis">
                                     <td>Montant charges diverses :<span class="champObligatoire">*</span></td>
                                     <td><strong><?php echo number_format($montant_charges_diverses, 2, ',', ' '); ?>
@@ -208,16 +212,6 @@ if( count( $recaps ) > 0)
                                             <span style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                                 </tr>
                                 <tr class="blocInfoBis">
-                                    <td>Bénéfice brut :<span class="champObligatoire">*</span></td>
-                                    <td><strong><?php echo number_format($benefice_brut, 2, ',', ' '); ?><span
-                                                style="float: right; margin-right: 10px;">FCFA</span></strong></td>
-                                </tr>
-                                <tr class="blocInfoBis">
-                                    <td>Bénéfice net :<span class="champObligatoire">*</span></td>
-                                    <td><strong><?php echo number_format($benefice_net, 2, ',', ' '); ?><span
-                                                style="float: right; margin-right: 10px;">FCFA</span></strong></td>
-                                </tr>
-                                <tr class="blocInfoBis">
                                     <td>Avaries :<span class="champObligatoire">*</span></td>
                                     <td><strong><?php echo number_format($avaries, 2, ',', ' '); ?><span
                                                 style="float: right; margin-right: 10px;">FCFA</span></strong></td>
@@ -230,6 +224,16 @@ if( count( $recaps ) > 0)
                                 <tr class="blocInfoBis">
                                     <td>Capsules :<span class="champObligatoire">*</span></td>
                                     <td><strong><?php echo number_format($capsules, 2, ',', ' '); ?><span
+                                                style="float: right; margin-right: 10px;">FCFA</span></strong></td>
+                                </tr>
+                                <tr class="blocInfoBis">
+                                    <td>Bénéfice brut :<span class="champObligatoire">*</span></td>
+                                    <td><strong><?php echo number_format($benefice_brut, 2, ',', ' '); ?><span
+                                                style="float: right; margin-right: 10px;">FCFA</span></strong></td>
+                                </tr>
+                                <tr class="blocInfoBis">
+                                    <td>Bénéfice net :<span class="champObligatoire">*</span></td>
+                                    <td><strong><?php echo number_format($benefice_net, 2, ',', ' '); ?><span
                                                 style="float: right; margin-right: 10px;">FCFA</span></strong></td>
                                 </tr>
                                 <tr class="blocInfoBis">

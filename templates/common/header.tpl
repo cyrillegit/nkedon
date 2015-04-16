@@ -13,7 +13,6 @@
 <link rel="stylesheet" href="assets/css/ui.jquery/jquery-ui.custom.css" type="text/css" /> 
 
 <script type="text/javascript" src="FusionCharts/FusionCharts.js"></script>
-<script type="text/javascript" src="highcharts/highcharts.js"></script>
 
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery.ui.js"></script>
@@ -784,7 +783,7 @@ $(document).ready (function ()
                                 <li class='has-sub'><a href="historiques.php?sub=historiques_journal"><span>Historiques des journaux</span></a></li>
                                 <li class='has-sub'><a href="historiques.php?sub=historiques_inventaires"><span>Historiques des inventaires</span></a></li>
                                 {if $smarty.session.infoUser.id_type_user <= 4}
-                                    <li class='has-sub'><a href="historiques.php?sub=statistiques"><span>Statistiques</span></a></li>
+                                    <li class='has-sub'><a href="statistiques.php?sub=main"><span>Statistiques</span></a></li>
                                 {/if}
                             </ul>
                         </li>
@@ -800,14 +799,14 @@ $(document).ready (function ()
 	<div class="bloc_connect">
 		{if isset($smarty.session.connected)}
 	    	{if $smarty.session.connected}
-	            <div class="deco"><a href="index.php?logout" class="std">Déconnexion</a></div>
+	            <div class="deco"><a href="index.php?logout=logout" class="std">Déconnexion</a></div>
 	            <div class="info_connect std">Bonjour, <strong>{$smarty.session.infoUser.nom_user} {$smarty.session.infoUser.prenom_user}</strong>. Derniére connexion: {$smarty.session.infoUser.datetime_last_connected} </div>
 	        {/if}
 	    {else}
         	<div class="home">
             	<table border="0" cellpadding="0" cellspacing="0">
                 	<tr>
-                    	<td><a href="index.php" class="std"><img src="css/images/home.png" border="0" style="margin-top: -3px;"" /></a></td>
+                    	<td><a href="index.php" class="std"><img src="css/images/ico_42x42/menu_tb.png" border="0" style="margin-top: -3px;"" /></a></td>
                         <td><a href="index.php" class="std">&nbsp;&nbsp;Accueil</a></td>
                     </tr>
                 </table>

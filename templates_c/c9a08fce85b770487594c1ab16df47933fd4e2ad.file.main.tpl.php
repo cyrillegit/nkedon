@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-31 09:41:58
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-14 13:01:17
          compiled from ".\templates\historiques\main.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5932551426835ec483-58637777%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c9a08fce85b770487594c1ab16df47933fd4e2ad' => 
     array (
       0 => '.\\templates\\historiques\\main.tpl',
-      1 => 1427794916,
+      1 => 1429016471,
       2 => 'file',
     ),
   ),
@@ -53,9 +53,9 @@ $(document).ready (function ()
                 <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="historiques.php?sub=historiques_factures" style="color:white;"><div class="btn_histo_facture"></div><div style="text-align: center; margin: 15px;">Historiques des factures d'achats</div></a></li>
                 <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="historiques.php?sub=historiques_factures_ventes" style="color:white;"><div class="btn_histo_facture"></div><div style="text-align: center; margin: 15px;">Historiques des factures de ventes</div></a></li>
                 <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="historiques.php?sub=historiques_journal" style="color:white;"><div class="btn_histo_facture"></div><div style="text-align: center; margin: 15px;">Historiques des journaux</div></a></li><br/>
-                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=historique_inventaires" style="color:white;"><div class="btn_histo_synthese"></div><div style="text-align: center; margin: 15px;">Historiques des inventaires</div></a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="historiques.php?sub=historiques_inventaires" style="color:white;"><div class="btn_histo_synthese"></div><div style="text-align: center; margin: 15px;">Historiques des inventaires</div></a></li>
                 <?php if ($_SESSION['infoUser']['id_type_user']<=4){?>
-                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="administration_magasin.php?sub=statistiques" style="color:white;"><div class="btn_statistique"></div><div style="text-align: center; margin: 15px;">Afficher les statistiques</div></a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="statistiques.php?sub=main" style="color:white;"><div class="btn_statistique"></div><div style="text-align: center; margin: 15px;">Afficher les statistiques</div></a></li>
                 <?php }?>              
             </ul>
         </div>

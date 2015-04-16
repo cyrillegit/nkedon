@@ -4,13 +4,14 @@
 /**
 	Rafraîchissement du tableau des des factures groupées pour mois.
 */
-function RefreshTableHistoriquesFacture()
+function RefreshTableHistoriquesFacture( date_histo_facture )
 {
+    var param = "date_histo_facture="+date_histo_facture;
 	var responseText = $.ajax({
 			type	: "POST",
 			url		: "ajax/infos/historiques/GetTableauHistoriquesFactures.php",
 			async	: false,
-			data	: "",
+			data	: param,
 			success	: function (msg){}
 	}).responseText;
 
@@ -23,7 +24,7 @@ function RefreshTableHistoriquesFacture()
 */
 $(document).ready (function ()
 {
-    RefreshTableHistoriquesFacture ();
+    RefreshTableHistoriquesFacture ("");
 
     $("#date_histo_facture").datepicker({
         beforeShow:function(input) {
@@ -37,7 +38,8 @@ $(document).ready (function ()
     $("#date_histo_facture").change (function ()
     {
         var date_histo_facture = $("#date_histo_facture").val();
-        RefreshTableHistoriqueFacture( date_histo_facture );
+     //   alert( date_histo_facture );
+        RefreshTableHistoriquesFacture( date_histo_facture );
     });
 });
 

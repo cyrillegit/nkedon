@@ -18,8 +18,9 @@
 	*	- Synth�se g�n�ralis�e.
 	* 
 	**********************************************************************/
-	
-	@session_start ();
+
+    @session_start();
+
 	define ("CRLF", "<br />");
 	define ("CLASS_DB", "1");
 	header ("Content-type: text/html; character=UTF-8");
@@ -54,10 +55,10 @@
 		{
 			setlocale(LC_TIME, "fr_FR.UTF-8");
 
-			 $hostname = "localhost";
-			 $dbname = "nkedon_db";
-			 $username = "root";
-			 $password = "";
+			 $hostname = DB_HOST;
+			 $dbname = DB_NAME;
+			 $username = DB_USER;
+			 $password = DB_PASSWORD;
 			 try
 			 {
 			 	$connectionString = "mysql:host=".$hostname.";dbname=".$dbname;
@@ -721,6 +722,25 @@
         }
 
         /**
+         * Fonction getAllProduitsFacturesVentesByInventaire
+         * -------------------
+         * Retourne les produits des facture de ventes par inventaire
+         *
+         * @return array
+         */
+        public function getAllProduitsFacturesVentesByInventaire ( $id )
+        {
+            $this->Sql = "SELECT *, SUM(v.quantite_vendue) AS quantite_vendue
+                            FROM t_ventes AS v
+                            JOIN t_factures_ventes AS fv ON v.id_facture_vente = fv.idt_factures_ventes
+                            JOIN t_produits AS p ON v.id_produit = p.idt_produits
+                            WHERE fv.id_inventaire = $id
+                            GROUP BY v.id_produit
+                            ORDER BY fv.date_facture";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+        /**
          * Fonction getAllProduitsVendusByInventaire
          * -------------------
          * Retourne les produits vendus par inventaire
@@ -735,7 +755,7 @@
                             JOIN t_produits AS p ON o.id_produit = p.idt_produits
                             WHERE j.id_inventaire = $id
                             GROUP BY p.idt_produits
-                            ORDER BY j.idt_journal";
+                            ORDER BY j.date_journal";
             $res = $this->FetchAllRows();
             return $res;
         }
@@ -756,7 +776,7 @@
                             JOIN t_produits AS p ON a.id_produit = p.idt_produits
                             WHERE f.id_inventaire = $id
                             GROUP BY p.idt_produits
-                            ORDER BY f.idt_factures";
+                            ORDER BY f.date_facture";
             $res = $this->FetchAllRows();
             return $res;
         }
@@ -794,6 +814,42 @@
 			$res = $this->FetchAllRows();
 			return $res;
 		}
+
+        /**
+         * Fonction getAllFacturesByDate
+         * -------------------
+         * Retourne les factures en fonction de la date
+         * remplacer les arguments manquants par ""
+         * exemple : getAllFacturesByDate("","",2015) retourne les factures a partir de 2015
+         *
+         * @return array
+         */
+        public function getAllFacturesByDate ($jour, $mois, $annee )
+        {
+            if( $annee != "" ) {
+                if( $mois != "" ){
+                    if( $jour != "" ){
+                        $date_debut = $annee."-".$mois."-".$jour;
+                    }else{
+                        $date_debut = $annee."-".$mois."-01";
+                    }
+                }else{
+                    $date_debut = $annee."-01-01";
+                }
+
+                $sql_where = "WHERE fa.date_facture >= '$date_debut'";
+            }else {
+                $sql_where = "";
+            }
+
+            $this->Sql = "SELECT *
+							FROM t_factures AS fa
+							JOIN t_fournisseurs AS fo ON fa.id_fournisseur = fo.idt_fournisseurs
+							".$sql_where."
+							ORDER BY fa.idt_factures";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
 
         /**
          * Fonction getAllFacturesVentes
@@ -903,7 +959,7 @@
 		 */
 		public function getAllAchatsInventaire( $id )
 		{
-			$this->Sql = "SELECT *, SUM(a.quantite_achat) AS quantite_achat
+			$this->Sql = "SELECT *, SUM(a.quantite_achat) AS quantite_achetee
 							FROM t_produits AS p
 							LEFT JOIN t_achats AS a ON p.idt_produits = a.id_produit
 							JOIN t_factures AS f ON a.id_facture = f.idt_factures
@@ -2115,6 +2171,23 @@
         public function getAllInventaires()
         {
             $this->Sql = "SELECT * FROM t_inventaires ORDER BY idt_inventaires";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getAllInventaires
+         * -------------------
+         * Retourne tous les inventaires
+         *
+         * @return Array
+         */
+        public function getInfosInventairesUneAnnee()
+        {
+            $this->Sql = "SELECT *
+                          FROM t_inventaires AS i
+                          ORDER BY i.date_inventaire DESC
+                          LIMIT 12";
             $res = $this->FetchAllRows();
             return $res;
         }

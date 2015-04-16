@@ -27,16 +27,59 @@
 	$User = new User();
 	$db = new Database ();
 	$db->beginTransaction ();
+    $logout = true;
 	
 	header ("Content-type: text/html; charset=UTF-8");
 	if (isset($_GET['logout']))
 	{
-		unset($_SESSION['login']);
-		unset($_SESSION['password']);
-		unset($_SESSION['infoUser']);
-	//	@session_destroy();
-	   
-	   header ("Location: index.php");
+        if( $_GET["logout"] == "disconnect" ){
+
+            $ok = true;
+            $sql1 = "DELETE FROM t_produits_operations";
+            $sql2 = "DELETE FROM t_produits_factures";
+            $sql3 = "DELETE FROM t_produits_ventes";
+            $ok &= $db->Execute( $sql1 );
+            $ok &= $db->Execute( $sql2 );
+            $ok &= $db->Execute( $sql3 );
+
+            if( $ok )
+            {
+                $db->commit ();
+                // On r�cup�re donc toutes les informations utiles ici.
+                $_SESSION["wasConnected"] = true;
+                $db->fixEncodingArray($_SESSION);
+            }
+            else
+            {
+                $db->rollBack();
+            }
+
+//            $logout = true;
+//            header("Location: index.php");
+
+            unset($_SESSION['login']);
+            unset($_SESSION['password']);
+            unset($_SESSION['connected']);
+            @session_destroy();
+            $wasDisconnected = true;
+
+        //    $tpl_index->display('notLogged.tpl');
+            header("Location: index.php");
+
+        }else {
+            $produits = $db->getAllOperationsJournal();
+
+            if (count($produits) <= 0) {
+                unset($_SESSION['login']);
+                unset($_SESSION['password']);
+                unset($_SESSION['infoUser']);
+                //	@session_destroy();
+                $logout = true;
+                header("Location: index.php");
+            } else {
+                $logout = false;
+            }
+        }
 	}
 
 	// Modification des locales pour le site Internet.
@@ -51,9 +94,10 @@
 	{
 		unset($_SESSION['login']);
 		unset($_SESSION['password']);
-	//	unset($_SESSION['infoUser']);
+		unset($_SESSION['connected']);
 		@session_destroy();
 		$wasDisconnected = true;
+
 		$tpl_index->display('notLogged.tpl');
 	}
 	else
@@ -83,6 +127,27 @@
 			}
 		}
 		$_SESSION["infoUser"]["datetime_last_connected"] = SQLDateTimeToFrenchDateTime( $_SESSION["infoUser"]["datetime_last_connected"] );
-		$tpl_index->display('index.tpl');	
+
+        if( $logout == true ) {
+            $tpl_index->display('index.tpl');
+        }else{
+            $montant_operation = 0;
+            $nb_produits = 0;
+            $id_journal = 0;
+            $commentaire = "";
+
+            $produits_operation = $db->getAllProduitsOperationsJournal();
+            foreach( $produits_operation as $po ){
+                $nb_produits++;
+                $montant_operation += $po["quantite_vendue"] * $po["prix_vente"];
+            }
+
+            $tpl_index->assign( "id_journal", $id_journal);
+            $tpl_index->assign( "commentaire", $commentaire );
+            $tpl_index->assign("nb_produits", $nb_produits);
+            $tpl_index->assign( "montant_journal", number_format( $montant_operation, 2, ',', ' ') );
+            $tpl_index->display('administration_magasin/gestion_journal/edit_operations_journal.tpl');
+        }
+
 	}
 ?>
