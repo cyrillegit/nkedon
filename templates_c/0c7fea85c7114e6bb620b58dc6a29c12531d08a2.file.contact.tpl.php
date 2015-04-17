@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-04-07 22:48:49
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-16 13:53:19
          compiled from ".\templates\contact\contact.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1043952fbbe95486398-72333348%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0c7fea85c7114e6bb620b58dc6a29c12531d08a2' => 
     array (
       0 => '.\\templates\\contact\\contact.tpl',
-      1 => 1427648842,
+      1 => 1429192392,
       2 => 'file',
     ),
   ),
@@ -146,7 +146,11 @@ $(document).ready (function ()
 
     <div style="clear: both;">&nbsp;</div>
     <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='contact.php';"></div>
-    <a href="administration_magasin.php?sub=backupdb" style="color:white;">Backup DB.</a>
+    <div class="" style="background: none;">
+        <a href="http://www.intelness.com" target="_blank">
+            <img src="assets/images/intelness_logo.png" border="0" style="margin-top: -5px;" >
+        </a>
+    </div>
 </div>
 
 <?php echo $_smarty_tpl->getSubTemplate ("common/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

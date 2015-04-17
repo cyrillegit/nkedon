@@ -12,52 +12,19 @@
 $db = new Database ();
 
 isset( $_POST ["annee"] ) ? $annee = addslashes(htmlspecialchars($_POST ["annee"])) : $annee = "";
+isset( $_POST ["date_histo_inventaire"] ) ? $date_histo_inventaire = addslashes(htmlspecialchars($_POST ["date_histo_inventaire"])) : $date_histo_inventaire = "";
 // get the type of the current user
 $id_type_user = $_SESSION["infoUser"]["idt_types_users"];
 
-$recaps = $db->getAllInventairesAnnee( $annee );
-//if( COUNT($recaps) > 0 )
-//{
-//    foreach ( $recaps as &$recap )
-//    {
-//        $operationInventaire = $db->getAllAchatsInventaire( $recap["idt_inventaires"] );
-//        var_dump( $operationInventaire );
-//        $recap["operations_associees"] = $operationInventaire;
-//    }
-//}
+if(  $date_histo_inventaire == "" ) {
+    $recaps = $db->getAllInventairesAnnee( "", "", $annee );
+}else{
+    $mois = explode( "/", $date_histo_inventaire )[1];
+    $jour = explode( "/", $date_histo_inventaire )[0];
+    $recaps = $db->getAllInventairesAnnee( $jour, $mois, $annee );
+}
 
-//    $ventes_totales = 0;
-//    $achats_totales = 0;
-//    $montant_en_stock = 0;
-//    $benefice_brut = 0;
-//    $montant_charges_diverses = 0;
-//    $fonds_especes = 0;
-//    $patrimoine = 0;
-//    $benefice_net = 0;
-//    $ecart = 0;
-//
-//    foreach ($r["operations_associees"] as $info)
-//    {
-//        if( $info["achat"] == NULL ) $info["achat"] = 0;
-//        $ventes_totales += ($info["stock_initial"] + $info["achat"] - $info["stock_physique"]) * $info["prix_vente"];
-//        $achats_totales += $info["achat"] * $info["prix_achat"];
-//        $montant_en_stock += $info["stock_physique"] * $info["prix_vente"];
-//        $benefice_brut += ($info["prix_vente"] - $info["prix_achat"]) * ($info["stock_initial"] + $info["achat"] - $info["stock_physique"]);
-//    }
-//
-//    $montant_charges_diverses = $recap["ration"] + $recap["dette_fournisseur"] + $recap["depenses_diverses"] + $recap["avaries"] + $recap["credit_client"];
-//    $fonds_especes = $recap["fonds"];
-//    $patrimoine = $fonds_especes + $montant_en_stock + $recap["capsules"];
-//    $benefice_net = $benefice_brut - $montant_charges_diverses;
-//    $ecart = $ventes_totales - $recap["recettes_percues"] - $fonds_especes;
-//    $solde = $montant_charges_diverses - $ecart;
-//    $ration = $recap["ration"];
-//    $dette_fournisseur = $recap["dette_fournisseur"];
-//    $depenses_diverses = $recap["depenses_diverses"];
-//    $avaries = $recap["avaries"];
-//    $credit_client = $recap["credit_client"];
-//    $capsules = $recap["capsules"];
-    ?>
+?>
     <script language="javascript">
         $(document).ready (function ()
         {

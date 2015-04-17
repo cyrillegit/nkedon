@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chart caption="Evolution des opérations de ventes" subcaption="du mois courant" lineThickness="3" formatNumberScale="0" anchorRadius="2" divLineAlpha="20" numvdivlines="5" chartRightMargin="35" bgColor="14" bgAngle="270" bgAlpha="0" alternateHGridAlpha="5" divLineColor="CC3300" divLineIsDashed="1" showAlternateHGridColor="1" alternateHGridColor="CC3300" shadowAlpha="90" legendPosition="BOTTOM" labelStep="0" showValues="0" canvasBgAlpha="0" legendBgAlpha="0" bgImage="" bgImageAlpha="100" yAxisName="Montant (FCFA)">
+<chart caption="Evolution des opérations de ventes" subcaption="des 12 derniers mois" lineThickness="3" formatNumberScale="0" anchorRadius="2" divLineAlpha="20" numvdivlines="5" chartRightMargin="35" bgColor="14" bgAngle="270" bgAlpha="0" alternateHGridAlpha="5" divLineColor="CC3300" divLineIsDashed="1" showAlternateHGridColor="1" alternateHGridColor="CC3300" shadowAlpha="90" legendPosition="BOTTOM" labelStep="0" showValues="0" canvasBgAlpha="0" legendBgAlpha="0" bgImage="" bgImageAlpha="100" yAxisName="Montant (FCFA)">
  <categories/>
  <dataset seriesName="Ventes mensuelles" color="00FF00"/>
  <styles>

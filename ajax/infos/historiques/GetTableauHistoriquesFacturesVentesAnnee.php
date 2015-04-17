@@ -12,9 +12,15 @@
 $db = new Database ();
 
 isset( $_POST ["annee"] ) ? $annee = addslashes(htmlspecialchars($_POST ["annee"])) : $annee = "";
-//$ok &= isNumber($annee);
+isset( $_POST ["date_histo_facture"] ) ? $date_histo_facture = addslashes(htmlspecialchars($_POST ["date_histo_facture"])) : $date_histo_facture = "";
 
-$factures = $db->getAllFacturesVentesByAnnee( $annee );
+if(  $date_histo_facture == "" ) {
+    $factures = $db->getAllFacturesVentesByAnnee( $annee );
+}else{
+    $mois = explode( "/", $date_histo_facture )[1];
+
+    $factures = $db->getAllFacturesVentesByDate("", $mois, $annee );
+}
 
 if( COUNT($factures) > 0 )
 {

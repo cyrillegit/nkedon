@@ -781,6 +781,84 @@
             return $res;
         }
 
+        /**
+         * Fonction getAllProduitsAchetesLastYear
+         * -------------------
+         * Retourne les produits achetes pendant les 12 derniers mois
+         *
+         * @return array
+         */
+        public function getAllProduitsAchetesLastYear ( )
+        {
+            $date_debut = getLocalTimeOneYearAgo();
+            $date_fin = setLocalTime();
+
+            $sql_where = " WHERE f.date_insertion_facture BETWEEN '$date_debut' AND '$date_fin' ";
+
+            $this->Sql = "SELECT *, SUM(a.quantite_achat) AS quantite_achetee
+                            FROM t_factures AS f
+                            JOIN t_achats AS a ON f.idt_factures = a.id_facture
+                            JOIN t_produits AS p ON a.id_produit = p.idt_produits
+                            ".$sql_where."
+                            GROUP BY p.idt_produits
+                            ORDER BY f.date_facture";
+
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getAllProduitsVenudusLastYear
+         * -------------------
+         * Retourne les produits vendus pendant les 12 derniers mois
+         *
+         * @return array
+         */
+        public function getAllProduitsVenudusLastYear ( )
+        {
+            $date_debut = getLocalTimeOneYearAgo();
+            $date_fin = setLocalTime();
+
+            $sql_where = " WHERE fv.date_facture BETWEEN '$date_debut' AND '$date_fin' ";
+
+            $this->Sql = "SELECT *, SUM(v.quantite_vendue) AS quantite_vendue
+                            FROM t_factures_ventes AS fv
+                            JOIN t_ventes AS v ON fv.idt_factures_ventes = v.id_facture_vente
+                            JOIN t_produits AS p ON v.id_produit = p.idt_produits
+                            ".$sql_where."
+                            GROUP BY p.idt_produits
+                            ORDER BY fv.date_facture";
+
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getAllProduitsOperationsJournalLastYear
+         * -------------------
+         * Retourne les produits vendus a partir du journal pendant les 12 derniers mois
+         *
+         * @return array
+         */
+        public function getAllProduitsOperationsJournalLastYear ( )
+        {
+            $date_debut = getLocalTimeOneYearAgo();
+            $date_fin = setLocalTime();
+
+            $sql_where = " WHERE j.date_journal BETWEEN '$date_debut' AND '$date_fin' ";
+
+            $this->Sql = "SELECT *, SUM(o.quantite_vendue) AS quantite_vendue
+                            FROM t_journal AS j
+                            JOIN t_operations AS o ON j.idt_journal = o.id_journal
+                            JOIN t_produits AS p ON o.id_produit = p.idt_produits
+                            ".$sql_where."
+                            GROUP BY p.idt_produits
+                            ORDER BY j.date_journal";
+
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
 		/**
 		 * Fonction getAutoCompleteProduits
 		 * -------------------
@@ -827,6 +905,7 @@
         public function getAllFacturesByDate ($jour, $mois, $annee )
         {
             if( $annee != "" ) {
+                $date_fin = $annee."-12-31";
                 if( $mois != "" ){
                     if( $jour != "" ){
                         $date_debut = $annee."-".$mois."-".$jour;
@@ -837,7 +916,8 @@
                     $date_debut = $annee."-01-01";
                 }
 
-                $sql_where = "WHERE fa.date_facture >= '$date_debut'";
+            //    $sql_where = "WHERE fa.date_facture >= '$date_debut'";
+                $sql_where = "WHERE fa.date_facture BETWEEN '$date_debut' AND '$date_fin'";
             }else {
                 $sql_where = "";
             }
@@ -851,6 +931,78 @@
             return $res;
         }
 
+        /**
+         * Fonction getAllJournalByDate
+         * -------------------
+         * Retourne les factures en fonction de la date
+         * remplacer les arguments manquants par ""
+         * exemple : getAllJournalByDate("","",2015) retourne les factures a partir de 2015
+         *
+         * @return array
+         */
+        public function getAllJournalByDate ($jour, $mois, $annee )
+        {
+            if( $annee != "" ) {
+                $date_fin = $annee."-12-31";
+                if( $mois != "" ){
+                    if( $jour != "" ){
+                        $date_debut = $annee."-".$mois."-".$jour;
+                    }else{
+                        $date_debut = $annee."-".$mois."-01";
+                    }
+                }else{
+                    $date_debut = $annee."-01-01";
+                }
+
+                $sql_where = "WHERE j.date_journal BETWEEN '$date_debut' AND '$date_fin'";
+            }else {
+                $sql_where = "";
+            }
+
+            $this->Sql = "SELECT *
+							FROM t_journal AS j
+							".$sql_where."
+							ORDER BY j.idt_journal";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getAllFacturesVentesByDate
+         * -------------------
+         * Retourne les factures en fonction de la date
+         * remplacer les arguments manquants par ""
+         * exemple : getAllFacturesVentesByDate("","",2015) retourne les factures a partir de 2015
+         *
+         * @return array
+         */
+        public function getAllFacturesVentesByDate ($jour, $mois, $annee )
+        {
+            if( $annee != "" ) {
+                $date_fin = $annee."-12-31";
+                if( $mois != "" ){
+                    if( $jour != "" ){
+                        $date_debut = $annee."-".$mois."-".$jour;
+                    }else{
+                        $date_debut = $annee."-".$mois."-01";
+                    }
+                }else{
+                    $date_debut = $annee."-01-01";
+                }
+
+                //    $sql_where = "WHERE fa.date_facture >= '$date_debut'";
+                $sql_where = "WHERE fv.date_facture BETWEEN '$date_debut' AND '$date_fin'";
+            }else {
+                $sql_where = "";
+            }
+
+            $this->Sql = "SELECT *
+							FROM t_factures_ventes AS fv
+							".$sql_where."
+							ORDER BY fv.idt_factures_ventes";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
         /**
          * Fonction getAllFacturesVentes
          * -------------------
@@ -1380,21 +1532,31 @@
 		}
 
         /**
-         * Fonction getAllFacturesByMoisAnnee
+         * Fonction getAllFacturesByJourMoisAnnee
          * -------------------
          * Retourne les factures correspondant a un mois et une annee precise
          *
          * @return array
          */
-        public function getAllFacturesByMoisAnnee( $mois, $annee )
+        public function getAllFacturesByJourMoisAnnee( $jour, $mois, $annee )
         {
             if( $annee != "" ) {
-                $date_debut = $annee."-".$mois."-01 00:00:00";
-                $date_fin = $annee."-".$mois."-31 23:59:59";
-                $sql_where = "WHERE date_facture BETWEEN '$date_debut' AND '$date_fin'";
+                $date_fin = $annee."-12-31";
+                if( $mois != "" ){
+                    if( $jour != "" ){
+                        $date_debut = $annee."-".$mois."-".$jour;
+                    }else{
+                        $date_debut = $annee."-".$mois."-01";
+                    }
+                }else{
+                    $date_debut = $annee."-01-01";
+                }
+
+                $sql_where = "WHERE fa.date_facture BETWEEN '$date_debut' AND '$date_fin'";
             }else {
                 $sql_where = "";
             }
+
             $this->Sql = "SELECT *
 							FROM t_factures AS fa
 							JOIN t_fournisseurs AS f ON fa.id_fournisseur = f.idt_fournisseurs
@@ -1412,12 +1574,21 @@
          *
          * @return array
          */
-        public function getAllFacturesVentesByMoisAnnee( $mois, $annee )
+        public function getAllFacturesVentesByMoisAnnee( $jour, $mois, $annee )
         {
             if( $annee != "" ) {
-                $date_debut = $annee."-".$mois."-01 00:00:00";
-                $date_fin = $annee."-".$mois."-31 23:59:59";
-                $sql_where = "WHERE fv.date_facture BETWEEN '$date_debut' AND '$date_fin'";
+                $date_fin = $annee."-12-31";
+                if( $mois != "" ){
+                    if( $jour != "" ){
+                        $date_debut = $annee."-".$mois."-".$jour;
+                    }else{
+                        $date_debut = $annee."-".$mois."-01";
+                    }
+                }else{
+                    $date_debut = $annee."-01-01";
+                }
+
+                $sql_where = "WHERE fa.date_facture BETWEEN '$date_debut' AND '$date_fin'";
             }else {
                 $sql_where = "";
             }
@@ -2247,11 +2418,20 @@
          *
          * @return array
          */
-        public function getAllJournalByMoisAnnee( $mois, $annee )
+        public function getAllJournalByMoisAnnee( $jour, $mois, $annee )
         {
             if( $annee != "" ) {
-                $date_debut = $annee."-".$mois."-01";
-                $date_fin = $annee."-".$mois."-31";
+                $date_fin = $annee."-12-31";
+                if( $mois != "" ){
+                    if( $jour != "" ){
+                        $date_debut = $annee."-".$mois."-".$jour;
+                    }else{
+                        $date_debut = $annee."-".$mois."-01";
+                    }
+                }else{
+                    $date_debut = $annee."-01-01";
+                }
+
                 $sql_where = "WHERE j.date_journal BETWEEN '$date_debut' AND '$date_fin'";
             }else {
                 $sql_where = "";
@@ -2272,11 +2452,20 @@
          *
          * @return array
          */
-        public function getAllInventairesAnnee( $annee )
+        public function getAllInventairesAnnee( $jour, $mois, $annee )
         {
             if( $annee != "" ) {
-                $date_debut = $annee."-01-01";
                 $date_fin = $annee."-12-31";
+                if( $mois != "" ){
+                    if( $jour != "" ){
+                        $date_debut = $annee."-".$mois."-".$jour;
+                    }else{
+                        $date_debut = $annee."-".$mois."-01";
+                    }
+                }else{
+                    $date_debut = $annee."-01-01";
+                }
+
                 $sql_where = "WHERE i.date_inventaire BETWEEN '$date_debut' AND '$date_fin'";
             }else {
                 $sql_where = "";

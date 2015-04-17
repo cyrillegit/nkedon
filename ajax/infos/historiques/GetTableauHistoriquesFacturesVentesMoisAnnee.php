@@ -13,12 +13,20 @@ $db = new Database ();
 
 isset( $_POST ["annee"] ) ? $annee = addslashes(htmlspecialchars($_POST ["annee"])) : $annee = "";
 isset( $_POST ["mois"] ) ? $mois = addslashes(htmlspecialchars($_POST ["mois"])) : $mois = "";
+isset( $_POST ["date_histo_facture"] ) ? $date_histo_facture = addslashes(htmlspecialchars($_POST ["date_histo_facture"])) : $date_histo_facture = "";
 // get the type of the current user
 $id_type_user = $_SESSION["infoUser"]["idt_types_users"];
 // unset deletion mode
 unset( $_SESSION["delete"] );
 
-$histo_factures = $db->getAllFacturesVentesByMoisAnnee( $mois, $annee );
+if(  $date_histo_facture == "" ) {
+    $histo_factures = $db->getAllFacturesVentesByMoisAnnee( "", $mois, $annee );
+}else{
+    $jour = explode( "/", $date_histo_facture )[0];
+
+    $histo_factures = $db->getAllFacturesVentesByMoisAnnee( $jour, $mois, $annee );
+}
+
 if( COUNT($histo_factures) > 0 )
 {
     foreach ( $histo_factures as &$facture ) 

@@ -4,9 +4,9 @@
 /**
 	Rafraîchissement du tableau des des journaux groupées pour mois.
 */
-function RefreshTableHistoriquesInventairesAnnee( annee )
+function RefreshTableHistoriquesInventairesAnnee( date_histo_inventaire, annee )
 {
-    var param = "annee="+annee;
+    var param = "date_histo_inventaire="+date_histo_inventaire+"&annee="+annee;
 	var responseText = $.ajax({
 			type	: "POST",
 			url		: "ajax/infos/historiques/GetTableauHistoriquesInventairesAnnee.php",
@@ -39,7 +39,7 @@ $(document).ready (function ()
 {
     var annee = getUrlParameter("annee");
 
-    RefreshTableHistoriquesInventairesAnnee( annee );
+    RefreshTableHistoriquesInventairesAnnee( "", annee );
 
     $("#date_histo_inventaire").datepicker({
         beforeShow:function(input) {
@@ -52,8 +52,9 @@ $(document).ready (function ()
 
     $("#date_histo_inventaire").change (function ()
     {
-        var date_histo_journal = $("#date_histo_journal").val();
-        RefreshTableHistoriqueFacture( date_histo_journal );
+        var annee = getUrlParameter("annee");
+        var date_histo_inventaire = $("#date_histo_inventaire").val();
+        RefreshTableHistoriquesInventairesAnnee( date_histo_inventaire, annee );
     });
 });
 

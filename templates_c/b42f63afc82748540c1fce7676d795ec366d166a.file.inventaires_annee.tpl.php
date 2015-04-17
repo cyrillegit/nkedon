@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-29 12:03:36
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-16 13:21:24
          compiled from ".\templates\historiques\historiques_inventaires\inventaires_annee.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:214635517e191e206a6-87497676%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b42f63afc82748540c1fce7676d795ec366d166a' => 
     array (
       0 => '.\\templates\\historiques\\historiques_inventaires\\inventaires_annee.tpl',
-      1 => 1427628661,
+      1 => 1429190170,
       2 => 'file',
     ),
   ),
@@ -31,9 +31,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /**
 	Rafraîchissement du tableau des des journaux groupées pour mois.
 */
-function RefreshTableHistoriquesInventairesAnnee( annee )
+function RefreshTableHistoriquesInventairesAnnee( date_histo_inventaire, annee )
 {
-    var param = "annee="+annee;
+    var param = "date_histo_inventaire="+date_histo_inventaire+"&annee="+annee;
 	var responseText = $.ajax({
 			type	: "POST",
 			url		: "ajax/infos/historiques/GetTableauHistoriquesInventairesAnnee.php",
@@ -66,7 +66,7 @@ $(document).ready (function ()
 {
     var annee = getUrlParameter("annee");
 
-    RefreshTableHistoriquesInventairesAnnee( annee );
+    RefreshTableHistoriquesInventairesAnnee( "", annee );
 
     $("#date_histo_inventaire").datepicker({
         beforeShow:function(input) {
@@ -79,8 +79,9 @@ $(document).ready (function ()
 
     $("#date_histo_inventaire").change (function ()
     {
-        var date_histo_journal = $("#date_histo_journal").val();
-        RefreshTableHistoriqueFacture( date_histo_journal );
+        var annee = getUrlParameter("annee");
+        var date_histo_inventaire = $("#date_histo_inventaire").val();
+        RefreshTableHistoriquesInventairesAnnee( date_histo_inventaire, annee );
     });
 });
 

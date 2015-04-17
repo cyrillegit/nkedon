@@ -4,13 +4,14 @@
 /**
 	Rafraîchissement du tableau des des journaux groupées pour mois.
 */
-function RefreshTableHistoriqueJournal()
+function RefreshTableHistoriqueJournal( date_histo_journal )
 {
+    var param = "date_histo_journal="+date_histo_journal;
 	var responseText = $.ajax({
 			type	: "POST",
 			url		: "ajax/infos/historiques/GetTableauHistoriquesJournal.php",
 			async	: false,
-			data	: "",
+			data	: param,
 			success	: function (msg){}
 	}).responseText;
 
@@ -23,7 +24,7 @@ function RefreshTableHistoriqueJournal()
 */
 $(document).ready (function ()
 {
-    RefreshTableHistoriqueJournal ();
+    RefreshTableHistoriqueJournal ("");
 
     $("#date_histo_journal").datepicker({
         beforeShow:function(input) {

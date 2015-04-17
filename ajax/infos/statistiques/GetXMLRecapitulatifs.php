@@ -20,7 +20,7 @@ $writer->startDocument('1.0','UTF-8');
 $writer->setIndent(4);
 $writer->startElement('chart');
 $writer->writeAttribute('caption', 'Courbes des progressions');
-$writer->writeAttribute('subcaption', 'des six derniéres synthéses');
+$writer->writeAttribute('subcaption', 'des 12 derniéres synthéses');
 $writer->writeAttribute('lineThickness', '3');
 $writer->writeAttribute('formatNumberScale', '0');
 $writer->writeAttribute('anchorRadius', '2');

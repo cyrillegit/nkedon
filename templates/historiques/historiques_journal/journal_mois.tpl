@@ -4,9 +4,9 @@
 /**
 	Rafraîchissement du tableau des des journaux groupées pour mois.
 */
-function RefreshTableHistoriquesJournalMoisAnnee( mois, annee )
+function RefreshTableHistoriquesJournalMoisAnnee( date_histo_journal, mois, annee )
 {
-    var param = "mois="+mois+"&annee="+annee;
+    var param = "date_histo_journal="+date_histo_journal+"&mois="+mois+"&annee="+annee;
 	var responseText = $.ajax({
 			type	: "POST",
 			url		: "ajax/infos/historiques/GetTableauHistoriquesJournalMoisAnnee.php",
@@ -40,7 +40,7 @@ $(document).ready (function ()
     var annee = getUrlParameter("annee");
     var mois = getUrlParameter("mois");
 
-    RefreshTableHistoriquesJournalMoisAnnee( mois, annee );
+    RefreshTableHistoriquesJournalMoisAnnee( "", mois, annee );
 
     $("#date_histo_journal").datepicker({
         beforeShow:function(input) {
@@ -53,8 +53,11 @@ $(document).ready (function ()
 
     $("#date_histo_journal").change (function ()
     {
+        var annee = getUrlParameter("annee");
+        var mois = getUrlParameter("mois");
+
         var date_histo_journal = $("#date_histo_journal").val();
-        RefreshTableHistoriqueFacture( date_histo_journal );
+        RefreshTableHistoriquesJournalMoisAnnee( date_histo_journal, mois, annee );
     });
 });
 

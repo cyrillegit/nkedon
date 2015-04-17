@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-04-16 08:44:20
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-16 16:22:00
          compiled from ".\templates\historiques\historiques_factures\historiques_factures.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:27111551422d25e9805-36566934%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '957312092d4172157f166ce60be3971645a15115' => 
     array (
       0 => '.\\templates\\historiques\\historiques_factures\\historiques_factures.tpl',
-      1 => 1429173857,
+      1 => 1429180403,
       2 => 'file',
     ),
   ),
@@ -60,7 +60,6 @@ $(document).ready (function ()
     $("#date_histo_facture").change (function ()
     {
         var date_histo_facture = $("#date_histo_facture").val();
-     //   alert( date_histo_facture );
         RefreshTableHistoriquesFacture( date_histo_facture );
     });
 });

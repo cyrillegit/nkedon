@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-04-14 14:16:35
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-16 14:35:08
          compiled from ".\templates\statistiques\main.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:40695524eb3fe5d6f5-61463523%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5d8c9df5c56e16e9d0ee56e89167159985ce7737' => 
     array (
       0 => '.\\templates\\statistiques\\main.tpl',
-      1 => 1429020993,
+      1 => 1429192999,
       2 => 'file',
     ),
   ),
@@ -53,7 +53,10 @@ $(document).ready (function ()
                 <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="statistiques.php?sub=stats_fournisseurs_factures" style="color:white;"><div class="btn_statistique"></div><div style="text-align: center; margin: 15px;">Factures par fournisseurs</div></a></li><br/>
                 <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="statistiques.php?sub=stats_factures_achats" style="color:white;"><div class="btn_statistique"></div><div style="text-align: center; margin: 15px;">Factures d'achats <br/> du mois courant</div></a></li>
                 <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="statistiques.php?sub=stats_factures_ventes" style="color:white;"><div class="btn_statistique"></div><div style="text-align: center; margin: 15px;">Factures de ventes du mois courant</div></a></li>
-                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="statistiques.php?sub=stats_operations_journal" style="color:white;"><div class="btn_statistique"></div><div style="text-align: center; margin: 15px;">Journaux <br/> du mois courant</div></a></li><br/>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="statistiques.php?sub=stats_operations_journal" style="color:white;"><div class="btn_statistique"></div><div style="text-align: center; margin: 15px;">Journaux <br/> du mois courant </div></a></li><br/>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="statistiques.php?sub=stats_factures_achats_annee" style="color:white;"><div class="btn_statistique"></div><div style="text-align: center; margin: 15px;">Factures d'achats <br/> 12 mois</div></a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="statistiques.php?sub=stats_factures_ventes_annee" style="color:white;"><div class="btn_statistique"></div><div style="text-align: center; margin: 15px;">Factures de ventes <br/> 12 mois</div></a></li>
+                <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="statistiques.php?sub=stats_operations_journal_annee" style="color:white;"><div class="btn_statistique"></div><div style="text-align: center; margin: 15px;">Journaux <br/> 12 mois</div></a></li><br/>
                 <li class="button hvr-buzz-out hvr-bounce-to-right "><a href="statistiques.php?sub=stats_recapitulatifs" style="color:white;"><div class="btn_statistique"></div><div style="text-align: center; margin: 15px;">Evolution des recapitulatifs</div></a></li>
             </ul>
         </div>

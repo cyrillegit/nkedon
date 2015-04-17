@@ -12,9 +12,14 @@
 $db = new Database ();
 
 isset( $_POST ["annee"] ) ? $annee = addslashes(htmlspecialchars($_POST ["annee"])) : $annee = "";
-//$ok &= isNumber($annee);
+isset( $_POST ["date_histo_journal"] ) ? $date_histo_journal = addslashes(htmlspecialchars($_POST ["date_histo_journal"])) : $date_histo_journal = "";
 
-$journal = $db->getAllJournalByAnnee( $annee );
+if(  $date_histo_journal == "" ) {
+    $journal = $db->getAllJournalByAnnee( $annee );
+}else{
+    $mois = explode( "/", $date_histo_journal )[1];
+    $journal = $db->getAllJournalByDate("", $mois, $annee );
+}
 
 if( COUNT($journal) > 0 )
 {

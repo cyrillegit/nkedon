@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-28 11:02:44
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-16 13:00:58
          compiled from ".\templates\historiques\historiques_journal\historiques_journal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11898551684910a9163-12692371%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'adedca381b80799c99bd8e78f728f695404fbc82' => 
     array (
       0 => '.\\templates\\historiques\\historiques_journal\\historiques_journal.tpl',
-      1 => 1427540530,
+      1 => 1429187857,
       2 => 'file',
     ),
   ),
@@ -26,13 +26,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /**
 	Rafraîchissement du tableau des des journaux groupées pour mois.
 */
-function RefreshTableHistoriqueJournal()
+function RefreshTableHistoriqueJournal( date_histo_journal )
 {
+    var param = "date_histo_journal="+date_histo_journal;
 	var responseText = $.ajax({
 			type	: "POST",
 			url		: "ajax/infos/historiques/GetTableauHistoriquesJournal.php",
 			async	: false,
-			data	: "",
+			data	: param,
 			success	: function (msg){}
 	}).responseText;
 
@@ -45,7 +46,7 @@ function RefreshTableHistoriqueJournal()
 */
 $(document).ready (function ()
 {
-    RefreshTableHistoriqueJournal ();
+    RefreshTableHistoriqueJournal ("");
 
     $("#date_histo_journal").datepicker({
         beforeShow:function(input) {

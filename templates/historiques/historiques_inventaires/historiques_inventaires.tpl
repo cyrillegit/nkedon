@@ -4,13 +4,14 @@
 /**
 	Rafraîchissement du tableau des inventaires
 */
-function RefreshTableHistoriquesInventaires()
+function RefreshTableHistoriquesInventaires( date_histo_inventaire )
 {
+    var param = "date_histo_inventaire="+date_histo_inventaire;
 	var responseText = $.ajax({
 			type	: "POST",
 			url		: "ajax/infos/historiques/GetTableauHistoriquesInventaires.php",
 			async	: false,
-			data	: "",
+			data	: param,
 			success	: function (msg){}
 	}).responseText;
 	$("#tableau_historiques_inventaires").empty ().html (responseText);
@@ -22,9 +23,9 @@ function RefreshTableHistoriquesInventaires()
 */
 $(document).ready (function ()
 {
-    RefreshTableHistoriquesInventaires ();
+    RefreshTableHistoriquesInventaires ("");
 
-    $("#date_histo_synthese").datepicker({
+    $("#date_histo_inventaire").datepicker({
         beforeShow:function(input) {
             $(input).css({
                 "position": "relative",
@@ -33,10 +34,10 @@ $(document).ready (function ()
         }
     });
 
-    $("#date_histo_synthese").change (function ()
+    $("#date_histo_inventaire").change (function ()
     {
-        var date_histo_synthese = $("#date_histo_synthese").val();
-        RefreshTableHistoriquesInventaires ();
+        var date_histo_inventaire = $("#date_histo_inventaire").val();
+        RefreshTableHistoriquesInventaires ( date_histo_inventaire );
     });
 });
 
@@ -64,7 +65,7 @@ $(document).ready (function ()
                 </td>
 
                 <td>
-                <div style="margin-left:20px; margin-right: 20px; float: right;">Afficher les historiques des inventaires à partir de:  <input type="text" name="date_histo_synthese" id="date_histo_synthese" value=""/>&nbsp;</div>
+                <div style="margin-left:20px; margin-right: 20px; float: right;">Afficher les historiques des inventaires à partir de:  <input type="text" name="date_histo_inventaire" id="date_histo_inventaire" value=""/>&nbsp;</div>
 
                 </td>
             </tr>

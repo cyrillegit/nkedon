@@ -11,7 +11,14 @@
 @session_start();
 $db = new Database ();
 
-$inventaires = $db->getAllInventaires();
+isset( $_POST ["date_histo_inventaire"] ) ? $date_histo_inventaire = addslashes(htmlspecialchars($_POST ["date_histo_inventaire"])) : $date_histo_inventaire = "";
+
+if( $date_histo_inventaire == "" ) {
+    $inventaires = $db->getAllInventaires();
+}else{
+    $annee = explode( "/", date_histo_inventaire )[2];
+    $inventaires = $db->getAllInventairesAnnee( "", "", $annee );
+}
 
 if( COUNT($inventaires) > 0 )
 {

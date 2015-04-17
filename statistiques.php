@@ -70,6 +70,18 @@
             {
                 $target = "stats_operations_journal";
             }
+            else if( $target == "stats_factures_ventes_annee" )
+            {
+                $target = "stats_factures_ventes_annee";
+            }
+            else if( $target == "stats_factures_achats_annee" )
+            {
+                $target = "stats_factures_achats_annee";
+            }
+            else if( $target == "stats_operations_journal_annee" )
+            {
+                $target = "stats_operations_journal_annee";
+            }
             else if( $target == "stats_recapitulatifs" )
             {
                 $target = "stats_recapitulatifs";

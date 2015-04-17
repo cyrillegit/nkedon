@@ -11,8 +11,15 @@
 @session_start();
 $db = new Database ();
 
-$journal = $db->getAllJournal();
-//$histo_factures = $db->getHistoriquesFacturesByDate( FrenchDateToSQLDate( $date_histo_facture ), $id_groupe );
+isset( $_POST ["date_histo_journal"] ) ? $date_histo_journal = addslashes(htmlspecialchars($_POST ["date_histo_journal"])) : $date_histo_journal = "";
+
+if( $date_histo_journal == "" ) {
+    $journal = $db->getAllJournal();
+}else{
+    $annee = explode( "/", $date_histo_journal )[2];
+    $journal = $db->getAllJournalByDate("", "", $annee );
+}
+
 if( COUNT($journal) > 0 )
 {
     foreach ( $journal as &$j )

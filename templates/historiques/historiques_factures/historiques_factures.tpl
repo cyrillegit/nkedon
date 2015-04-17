@@ -38,7 +38,6 @@ $(document).ready (function ()
     $("#date_histo_facture").change (function ()
     {
         var date_histo_facture = $("#date_histo_facture").val();
-     //   alert( date_histo_facture );
         RefreshTableHistoriquesFacture( date_histo_facture );
     });
 });

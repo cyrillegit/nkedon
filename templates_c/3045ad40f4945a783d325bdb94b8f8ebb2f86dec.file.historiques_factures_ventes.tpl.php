@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-31 09:54:20
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-16 10:38:33
          compiled from ".\templates\historiques\historiques_factures\historiques_factures_ventes.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9895551a6eccc8d6f4-71084502%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3045ad40f4945a783d325bdb94b8f8ebb2f86dec' => 
     array (
       0 => '.\\templates\\historiques\\historiques_factures\\historiques_factures_ventes.tpl',
-      1 => 1427795575,
+      1 => 1429180476,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_551a6eccd0e468_41914187',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_551a6eccd0e468_41914187')) {function content_551a6eccd0e468_41914187($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("common/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -26,13 +26,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /**
 	Rafraîchissement du tableau des des factures groupées pour mois.
 */
-function RefreshTableHistoriquesFactureVente()
+function RefreshTableHistoriquesFactureVente( date_histo_facture )
 {
+    var param = "date_histo_facture="+date_histo_facture;
 	var responseText = $.ajax({
 			type	: "POST",
 			url		: "ajax/infos/historiques/GetTableauHistoriquesFacturesVentes.php",
 			async	: false,
-			data	: "",
+			data	: param,
 			success	: function (msg){}
 	}).responseText;
 
@@ -45,7 +46,7 @@ function RefreshTableHistoriquesFactureVente()
 */
 $(document).ready (function ()
 {
-    RefreshTableHistoriquesFactureVente ();
+    RefreshTableHistoriquesFactureVente ("");
 
     $("#date_histo_facture").datepicker({
         beforeShow:function(input) {
@@ -59,7 +60,7 @@ $(document).ready (function ()
     $("#date_histo_facture").change (function ()
     {
         var date_histo_facture = $("#date_histo_facture").val();
-        RefreshTableHistoriqueFacture( date_histo_facture );
+        RefreshTableHistoriquesFactureVente( date_histo_facture );
     });
 });
 

@@ -16,9 +16,11 @@
     class SyntheseInventaire extends Database
     {
         protected $id_inventaire;
+        protected $suffix;
 
         function SyntheseInventaire( $id ){
             $this->id_inventaire = $id;
+            $this->suffix = str_replace("-", "", explode(" ", setLocalTime())[0]);
             parent::__construct();
         }
 
@@ -258,7 +260,7 @@
 
             $directory = $this->getDirectory();
 
-            $file_inventaire = "inventaire_".str_replace("-", "", explode(" ", setLocalTime())[0]);
+            $file_inventaire = "inventaire_".$this->suffix;
             $filename = $directory."/".$file_inventaire;
 
             if(file_exists($filename.".html"))

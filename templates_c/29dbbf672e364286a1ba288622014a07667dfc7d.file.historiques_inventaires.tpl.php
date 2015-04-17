@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-29 14:11:46
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-16 13:20:03
          compiled from ".\templates\historiques\historiques_inventaires\historiques_inventaires.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:284405517d80ba4a536-28978642%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '29dbbf672e364286a1ba288622014a07667dfc7d' => 
     array (
       0 => '.\\templates\\historiques\\historiques_inventaires\\historiques_inventaires.tpl',
-      1 => 1427638303,
+      1 => 1429189508,
       2 => 'file',
     ),
   ),
@@ -26,13 +26,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /**
 	Rafraîchissement du tableau des inventaires
 */
-function RefreshTableHistoriquesInventaires()
+function RefreshTableHistoriquesInventaires( date_histo_inventaire )
 {
+    var param = "date_histo_inventaire="+date_histo_inventaire;
 	var responseText = $.ajax({
 			type	: "POST",
 			url		: "ajax/infos/historiques/GetTableauHistoriquesInventaires.php",
 			async	: false,
-			data	: "",
+			data	: param,
 			success	: function (msg){}
 	}).responseText;
 	$("#tableau_historiques_inventaires").empty ().html (responseText);
@@ -44,9 +45,9 @@ function RefreshTableHistoriquesInventaires()
 */
 $(document).ready (function ()
 {
-    RefreshTableHistoriquesInventaires ();
+    RefreshTableHistoriquesInventaires ("");
 
-    $("#date_histo_synthese").datepicker({
+    $("#date_histo_inventaire").datepicker({
         beforeShow:function(input) {
             $(input).css({
                 "position": "relative",
@@ -55,10 +56,10 @@ $(document).ready (function ()
         }
     });
 
-    $("#date_histo_synthese").change (function ()
+    $("#date_histo_inventaire").change (function ()
     {
-        var date_histo_synthese = $("#date_histo_synthese").val();
-        RefreshTableHistoriquesInventaires ();
+        var date_histo_inventaire = $("#date_histo_inventaire").val();
+        RefreshTableHistoriquesInventaires ( date_histo_inventaire );
     });
 });
 
@@ -86,7 +87,7 @@ $(document).ready (function ()
                 </td>
 
                 <td>
-                <div style="margin-left:20px; margin-right: 20px; float: right;">Afficher les historiques des inventaires à partir de:  <input type="text" name="date_histo_synthese" id="date_histo_synthese" value=""/>&nbsp;</div>
+                <div style="margin-left:20px; margin-right: 20px; float: right;">Afficher les historiques des inventaires à partir de:  <input type="text" name="date_histo_inventaire" id="date_histo_inventaire" value=""/>&nbsp;</div>
 
                 </td>
             </tr>

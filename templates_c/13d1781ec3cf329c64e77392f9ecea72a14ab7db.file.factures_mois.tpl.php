@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-31 15:54:21
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-16 09:55:11
          compiled from ".\templates\historiques\historiques_factures\factures_mois.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:32750551468fc1a1e02-60262559%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '13d1781ec3cf329c64e77392f9ecea72a14ab7db' => 
     array (
       0 => '.\\templates\\historiques\\historiques_factures\\factures_mois.tpl',
-      1 => 1427817258,
+      1 => 1429177439,
       2 => 'file',
     ),
   ),
@@ -31,9 +31,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /**
 	Rafraîchissement du tableau des des factures groupées pour mois.
 */
-function RefreshTableHistoriquesFactureMoisAnnee( mois, annee )
+function RefreshTableHistoriquesFactureMoisAnnee( date_histo_facture, mois, annee )
 {
-    var param = "mois="+mois+"&annee="+annee;
+    var param = "date_histo_facture="+date_histo_facture+"&mois="+mois+"&annee="+annee;
 	var responseText = $.ajax({
 			type	: "POST",
 			url		: "ajax/infos/historiques/GetTableauHistoriquesFacturesMoisAnnee.php",
@@ -67,7 +67,7 @@ $(document).ready (function ()
     var annee = getUrlParameter("annee");
     var mois = getUrlParameter("mois");
 
-    RefreshTableHistoriquesFactureMoisAnnee( mois, annee );
+    RefreshTableHistoriquesFactureMoisAnnee( "", mois, annee );
 
     $("#date_histo_facture").datepicker({
         beforeShow:function(input) {
@@ -80,8 +80,11 @@ $(document).ready (function ()
 
     $("#date_histo_facture").change (function ()
     {
+        var annee = getUrlParameter("annee");
+        var mois = getUrlParameter("mois");
+
         var date_histo_facture = $("#date_histo_facture").val();
-        RefreshTableHistoriqueFacture( date_histo_facture );
+        RefreshTableHistoriquesFactureMoisAnnee( date_histo_facture, mois, annee );
     });
 });
 

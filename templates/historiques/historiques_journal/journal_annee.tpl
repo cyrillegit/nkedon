@@ -4,9 +4,9 @@
 /**
 	Rafraîchissement du tableau des des factures groupées pour mois.
 */
-function RefreshTableHistoriquesJournalAnnee( annee )
+function RefreshTableHistoriquesJournalAnnee( date_histo_journal, annee )
 {
-    var param = "annee="+annee;
+    var param = "date_histo_journal="+date_histo_journal+"&annee="+annee;
 	var responseText = $.ajax({
 			type	: "POST",
 			url		: "ajax/infos/historiques/GetTableauHistoriquesJournalAnnee.php",
@@ -37,7 +37,7 @@ function getUrlParameter(sParam)
 */
 $(document).ready (function ()
 {
-    RefreshTableHistoriquesJournalAnnee( getUrlParameter("annee") );
+    RefreshTableHistoriquesJournalAnnee( "", getUrlParameter("annee") );
 
     $("#date_histo_journal").datepicker({
         beforeShow:function(input) {
@@ -51,7 +51,7 @@ $(document).ready (function ()
     $("#date_histo_journal").change (function ()
     {
         var date_histo_journal = $("#date_histo_journal").val();
-        RefreshTableHistoriquesJournalAnnee( date_histo_journal );
+        RefreshTableHistoriquesJournalAnnee( date_histo_journal, getUrlParameter("annee") );
     });
 });
 

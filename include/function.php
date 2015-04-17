@@ -577,6 +577,18 @@
 		$date->setTimezone(new DateTimeZone('Africa/Douala'));
 		return $date->format('Y-m-d H:i:s');
 	}
+
+    /**
+     * Retourne la date et l'heure presente de Douala
+     */
+    //*
+    function getLocalTimeOneYearAgo(){
+        $date = new DateTime();
+        $date->setTimezone(new DateTimeZone('UTC'));
+        $date->setTimezone(new DateTimeZone('Africa/Douala'));
+        $new_date = $date->sub( new DateInterval("P1Y"));
+        return $new_date->format('Y-m-d H:i:s');
+    }
 	
 	/**
 	* retourne la date time reellement inserée en DB
@@ -871,6 +883,28 @@
 		}
 		return $new_date;
 	}
+
+    /**
+     * Fonction getDateFromDatetime
+     * ----------------------------
+     * Transforme la date 2010-11-15 12:25:58 en 15/11/2010
+     */
+    //*
+    function getMonthYearFromDatetime ($date)
+    {
+        $date_split = explode(" ", $date);
+
+        if($date_split[0] != "0000-00-00")
+        {
+            $arr = explode ("-", $date_split[0]);
+            $new_date = $arr [1]."/".$arr [0];
+        }
+        else
+        {
+            $new_date = "";
+        }
+        return $new_date;
+    }
 
     /**
      * Fonction getYearFromDate

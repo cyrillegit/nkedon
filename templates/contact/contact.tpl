@@ -124,7 +124,11 @@ $(document).ready (function ()
 
     <div style="clear: both;">&nbsp;</div>
     <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='contact.php';"></div>
-    <a href="administration_magasin.php?sub=backupdb" style="color:white;">Backup DB.</a>
+    <div class="" style="background: none;">
+        <a href="http://www.intelness.com" target="_blank">
+            <img src="assets/images/intelness_logo.png" border="0" style="margin-top: -5px;" >
+        </a>
+    </div>
 </div>
 
 {include file="common/footer.tpl"}

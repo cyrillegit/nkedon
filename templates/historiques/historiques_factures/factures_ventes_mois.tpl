@@ -4,9 +4,9 @@
 /**
 	Rafraîchissement du tableau des des factures groupées pour mois.
 */
-function RefreshTableHistoriquesFactureVentesMoisAnnee( mois, annee )
+function RefreshTableHistoriquesFactureVentesMoisAnnee( date_histo_facture, mois, annee )
 {
-    var param = "mois="+mois+"&annee="+annee;
+    var param = "date_histo_facture="+date_histo_facture+"&mois="+mois+"&annee="+annee;
 	var responseText = $.ajax({
 			type	: "POST",
 			url		: "ajax/infos/historiques/GetTableauHistoriquesFacturesVentesMoisAnnee.php",
@@ -40,7 +40,7 @@ $(document).ready (function ()
     var annee = getUrlParameter("annee");
     var mois = getUrlParameter("mois");
 
-    RefreshTableHistoriquesFactureVentesMoisAnnee( mois, annee );
+    RefreshTableHistoriquesFactureVentesMoisAnnee( "", mois, annee );
 
     $("#date_histo_facture").datepicker({
         beforeShow:function(input) {
@@ -54,7 +54,9 @@ $(document).ready (function ()
     $("#date_histo_facture").change (function ()
     {
         var date_histo_facture = $("#date_histo_facture").val();
-        RefreshTableHistoriqueFacture( date_histo_facture );
+        var annee = getUrlParameter("annee");
+        var mois = getUrlParameter("mois");
+        RefreshTableHistoriquesFactureVentesMoisAnnee( date_histo_facture, mois, annee );
     });
 });
 
