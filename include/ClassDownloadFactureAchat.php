@@ -157,7 +157,7 @@
             $mpdf = new mPDF('win-1252', 'A4', '', '', 5, 5, 5, 5, 10, 10);
             $mpdf->SetDisplayMode('fullpage');
             $mpdf->WriteHTML( $htmlContent );
-            $mpdf->Output();
+            $mpdf->Output( $this->getFilename().'.pdf','D');
         }
 
         function  getDirectory(){
@@ -170,17 +170,8 @@
             return $directory;
         }
 
-        function getFilename( $id_facture ){
-
-            $directory = $this->getDirectory();
-            $file = "facture_achat_".$id_facture."_".str_replace("-", "", explode(" ", setLocalTime())[0]);
-            $filename = $directory."/".$file;
-
-            if(file_exists($filename.".html"))
-            {
-                unlink($filename.".html");
-            }
-            return $filename;
+        function getFilename( ){
+            return "facture_achat_".str_replace("-", "", explode(" ", setLocalTime())[0])."_".str_replace(":", "", explode(" ", setLocalTime())[1]);
         }
 
         /**

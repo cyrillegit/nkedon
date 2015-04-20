@@ -82,12 +82,24 @@
                 $id_journal = $_GET["id_journal"];
                 $montant_operation = 0;
                 $nb_produits = 0;
+                $_SESSION["journal"] = true;
+
+                // check unicity of the journal per day
+                $infoAllJournal = $db->getAllJournal();
+                $date_now = explode(" ", setLocalTime() )[0];
+                foreach ( $infoAllJournal as $info )
+                {
+                    $date = explode( " ", $info["date_journal"] )[0];
+                    if( $date == $date_now )
+                    {
+                        unset( $_SESSION ["numero"] );
+                        $_SESSION ["numero"] = 1;
+                        $_SESSION["journal"] = false;
+                    }
+                }
 
                 if( $id_journal != 0 )
                 {
-//                    $nb_operations = $db->getNbOperationsInDB ();
-//                    if(!isset($nb_operations)) $nb_operations = 0;
-
                     $produits_operation = $db->getAllProduitsOperationsJournal();
                     foreach( $produits_operation as $po ){
                         $nb_produits++;
@@ -106,11 +118,20 @@
 //                        $db->rollBack();
 //                    }
                 }
-
                 $tpl_index->assign("nb_produits", $nb_produits);
                 $tpl_index->assign( "montant_journal", number_format( $montant_operation, 2, ',', ' ') );
 
                 $target = "gestion_journal/edit_operations_journal";
+            }
+            else if( $target == "result_journal" )
+            {
+                $id_journal = $db->getMaxIdJournal();
+                $infosJournal = $db->getInfosJournalById( $id_journal );
+                $nb_produits = count( $infosJournal );
+
+                $tpl_index->assign("nb_produits", $nb_produits);
+
+                $target = "gestion_journal/result_journal";
             }
 			else if( $target == "edit_facture" )
 			{
@@ -149,9 +170,21 @@
 
 				$target = "gestion_factures/edit_facture";
 			}
+            else if( $target == "result_facture_achat" )
+            {
+                $id_facture = $db->getMaxIdFactureAchat();
+                $infosFacture = $db->getInfosFactureAchatById( $id_facture );
+                $nb_produits = count( $infosFacture );
+
+                $tpl_index->assign("nb_produits", $nb_produits);
+
+                $tpl_index->assign( "nb_produits", $nb_produits );
+                $target = "gestion_factures/result_facture_achat";
+            }
             else if( $target == "edit_facture_vente" )
             {
                 $id_facture = $_GET["id_facture"];
+                $nb_produits = 0;
 
                 if( $id_facture != 0 )
                 {
@@ -176,10 +209,22 @@
                     }
                 }
 
+                $tpl_index->assign( "nb_produits", $nb_produits );
                 $tpl_index->assign( "montant_facture", number_format( $montant_facture, 2, ',', ' ') );
                 $tpl_index->assign( "id_facture", $id_facture );
 
                 $target = "gestion_factures/edit_facture_vente";
+            }
+            else if( $target == "result_facture_vente" )
+            {
+                $id_facture = $db->getMaxIdFactureVente();
+                $infosFacture = $db->getInfosFactureVenteyId( $id_facture );
+                $nb_produits = count( $infosFacture );
+
+                $tpl_index->assign("nb_produits", $nb_produits);
+
+                $tpl_index->assign( "nb_produits", $nb_produits );
+                $target = "gestion_factures/result_facture_vente";
             }
             else if( $target == "edit_historique_facture_achat" )
             {
@@ -274,6 +319,7 @@
                     $numero_facture = $produits[0]["numero_facture"];
                     $date_facture = SQLDateToFrenchDate($produits[0]["date_facture"]);
                     $commentaire = $produits[0]["commentaire"];
+                    $nom_client = $produits[0]["nom_client"];
 
                     // si on est en mode suppression, on ne reinitialise pas la table tampon courante
                     if( !isset($_SESSION["delete"])) {
@@ -322,6 +368,7 @@
                 $tpl_index->assign( "numero_facture", $numero_facture );
                 $tpl_index->assign( "date_facture", $date_facture );
                 $tpl_index->assign( "commentaire", $commentaire );
+                $tpl_index->assign( "nom_client", $nom_client );
 
                 $target = "gestion_factures/edit_facture_vente";
             }
@@ -330,6 +377,7 @@
                 $okFacture = true;
                 $nb_produits = 0;
                 $montant_journal = 0;
+                $_SESSION["journal"] = true;
 
                 if(isset($_GET["id_journal"])) {
                     $id_journal = $_GET["id_journal"];
@@ -404,17 +452,21 @@
                     $numero_facture = $produits[0]["numero_facture"];
                     $date_facture = SQLDateToFrenchDate($produits[0]["date_facture"]);
                     $commentaire = $produits[0]["commentaire"];
+                    $nom_client = $produits[0]["nom_client"];
                 }
 
                 $produits_factures = $db->getAllProduitsOperationsVentesFacture();
 
                 foreach ($produits_factures as $pf) {
+                    $nb_produits++;
                     $montant_facture += $pf["quantite_vendue"] * $pf["prix_vente"];
                 }
 
                 $tpl_index->assign( "id_facture", $id_facture );
+                $tpl_index->assign( "nb_produits", $nb_produits );
                 $tpl_index->assign( "numero_facture", $numero_facture );
                 $tpl_index->assign( "commentaire", $commentaire );
+                $tpl_index->assign( "nom_client", $nom_client );
                 $tpl_index->assign( "date_facture", $date_facture );
                 $tpl_index->assign( "montant_facture", number_format( $montant_facture, 2, ',', ' ') );
 
@@ -437,10 +489,12 @@
                 $produits_operations = $db->getProduitsOperations();
 
                 foreach ($produits_operations as $po) {
+                    $nb_produits++;
                     $montant_journal += $po["quantite_vendue"] * $po["prix_vente"];
                 }
 
                 $tpl_index->assign( "id_journal", $id_journal);
+                $tpl_index->assign( "nb_produits", $nb_produits);
                 $tpl_index->assign( "commentaire", $commentaire );
                 $tpl_index->assign( "date_journal", $date_journal );
                 $tpl_index->assign( "montant_journal", number_format( $montant_journal, 2, ',', ' ') );

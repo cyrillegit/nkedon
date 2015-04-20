@@ -28,12 +28,12 @@
 
 	function slideSwitch() 
 	{
-	    var $active = $('#slideshow IMG.active');
+	    var $active = $('#slideshow div.active');
 
-	    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+	    if ( $active.length == 0 ) $active = $('#slideshow div:last');
 
 	    var $next =  $active.next().length ? $active.next()
-	        : $('#slideshow IMG:first');
+	        : $('#slideshow div:first');
 
 	    $active.addClass('last-active');
 	        
@@ -50,7 +50,7 @@
         RefreshXMLVentesJournal();
 
 		$(function() {
-		//    setInterval( "slideSwitch()", 5000 );
+		    setInterval( "slideSwitch()", 5000 );
 
             $('#container').highcharts({
                 chart: {
@@ -129,26 +129,28 @@
 	</div>
 	<div id="main">
         <div id="mainCenter">
-        	{*<div class="blocInfoBis" style="width: 970px;">*}
-            	{*<div class="titre"><b><i>Gestion du magasin et de la production par NKEDON</i></b></div>*}
-				{*<hr/>*}
-              	{*<div id="slideshow">*}
-    				{*<img src="assets/images/slideshow_images/img1.jpg" alt="" class="active" />*}
-    				{*<img src="assets/images/slideshow_images/img2.jpg" alt="" />*}
-    				{*<img src="assets/images/slideshow_images/img3.jpg" alt="" />*}
-				{*</div>*}
-            {*</div>			*}
-            <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                    <td>
-                        <div id="chartContainerAchats"></div>
-                    </td>
+        	<div class="blocInfoBis" style="width: 970px;">
+            	<div class="titre"><b><i>Gestion du magasin et de la production par NKEDON</i></b></div>
+				<hr/>
+              	<div id="slideshow">
+    				<div><img src="assets/images/slideshow_images/img1.jpg" alt="" class="active" /></div>
 
-                    <td>
-                        <div id="chartContainerVentes"></div>
-                    </td>
-                </tr>
-            </table>
+                    <div><img src="assets/images/slideshow_images/img2.jpg" alt="" /></div>
+
+                    <div><img src="assets/images/slideshow_images/img3.jpg" alt="" /></div>
+				</div>
+            </div>
+            {*<table width="100%" border="0" cellpadding="0" cellspacing="0">*}
+                {*<tr>*}
+                    {*<td>*}
+                        {*<div id="chartContainerAchats"></div>*}
+                    {*</td>*}
+
+                    {*<td>*}
+                        {*<div id="chartContainerVentes"></div>*}
+                    {*</td>*}
+                {*</tr>*}
+            {*</table>*}
 		</div>
 	</div>
 </div>

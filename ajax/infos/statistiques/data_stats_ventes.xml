@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chart caption="Evolution des ventes" subcaption="du mois courant" lineThickness="3" formatNumberScale="0" anchorRadius="2" divLineAlpha="20" numvdivlines="5" chartRightMargin="35" bgColor="14" bgAngle="270" bgAlpha="0" alternateHGridAlpha="5" divLineColor="CC3300" divLineIsDashed="1" showAlternateHGridColor="1" alternateHGridColor="CC3300" shadowAlpha="90" legendPosition="BOTTOM" labelStep="0" showValues="0" canvasBgAlpha="0" legendBgAlpha="0" bgImage="" bgImageAlpha="100">
- <categories/>
- <dataset seriesName="Ventes mensuelles" color="00FF00"/>
+ <categories>
+  <category label="20/04/2015"/>
+ </categories>
+ <dataset seriesName="Ventes mensuelles" color="00FF00">
+  <set value="56600"/>
+ </dataset>
  <styles>
   <definition>
    <style type="font" name="CaptionFont" size="12"/>

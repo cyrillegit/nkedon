@@ -60,9 +60,6 @@ $(document).ready (function ()
         resetInputs();
         $('html, body').animate({ scrollTop: 0 }, 'slow');
         $("#editProduitFacture").show("slow");
-
-//		update_content ("ajax/popups/edit_produit_facture.php", "popup", "id_produit_facture=0");
-//		ShowPopupHeight (550);
 	});
 
 	$("#date_fabrication").datepicker({
@@ -200,7 +197,7 @@ $(document).ready (function ()
 				{	
 					ShowSuccess ("La facture (<strong>" + $("#numero_facture").val () + "</strong>) a bien été enregistrée.");
 					$.modal.close ();					
-					document.location.href="administration_magasin.php?sub=edit_facture&status=register";
+					document.location.href="administration_magasin.php?sub=result_facture_achat&status=register";
 				}
 				else
 				{
@@ -445,12 +442,14 @@ $(document).ready (function ()
 <hr size="1" style="margin-top: 5px; margin-top: 80px;" />
 <div style="float: left; text-align: left; margin-left: 200px;"><span class="champObligatoire">*</span> : Champs obligatoires.</div>
 <div style="float: right; text-align: right; margin-right: 200px;">
-    <table border="0" cellspacing="0" cellpadding="0" align="right">
-        <tr>
-            <td><div id="btnAnnuler"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
-            <td>&nbsp;</td>
-            <td><div id="btnValider"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOK" height="30" /></div></td>
-        </tr>
-    </table>        
+    {if $nb_produits neq 0 }
+        <table border="0" cellspacing="0" cellpadding="0" align="right">
+            <tr>
+                <td><div id="btnAnnuler"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
+                <td>&nbsp;</td>
+                <td><div id="btnValider"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOK" height="30" /></div></td>
+            </tr>
+        </table>
+    {/if}
 </div>
 {include file='common/footer.tpl'}

@@ -36,6 +36,7 @@
                     $date_facture = SQLDateToFrenchDate($infosFactureVente[0]["date_facture"]);
                     $nom_prenom_user = $infosFactureVente[0]["nom_user"] . " " . $infosFactureVente[0]["prenom_user"];
                     $commentaire = trim(stripslashes(htmlentities($infosFactureVente[0]["commentaire"])));
+                    $nom_client = $infosFactureVente[0]["nom_client"];
 
                     $htmlHead = "<!DOCTYPE html>
                                 <html>
@@ -48,7 +49,7 @@
                                     </style>
                                     <head>
                                         <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />
-                                        <title>Facture d'achat</title>
+                                        <title>Facture de vente</title>
                                     </head>
                                     <body>
                                         <div class=\"\" style=\"background: none;\">
@@ -64,6 +65,9 @@
                                             <tr>
                                             </tr>
                                                 <td class=\"\">Enregistrée par : <br/><strong>$nom_prenom_user</strong></td>
+                                            </tr>
+                                            </tr>
+                                                <td class=\"\">Nom du client : <br/><strong>$nom_client</strong></td>
                                             </tr>
                                         </table>
                                         <hr size=\"1\" style=\"margin-top: 10px;\" />
@@ -134,7 +138,7 @@
             $mpdf = new mPDF('win-1252', 'A4', '', '', 5, 5, 5, 5, 10, 10);
             $mpdf->SetDisplayMode('fullpage');
             $mpdf->WriteHTML( $htmlContent );
-            $mpdf->Output();
+            $mpdf->Output( $this->getFilename().'.pdf','D');
         }
 
         function  getDirectory(){
@@ -147,17 +151,8 @@
             return $directory;
         }
 
-        function getFilename( $id_facture ){
-
-            $directory = $this->getDirectory();
-            $file = "facture_achat_".$id_facture."_".str_replace("-", "", explode(" ", setLocalTime())[0]);
-            $filename = $directory."/".$file;
-
-            if(file_exists($filename.".html"))
-            {
-                unlink($filename.".html");
-            }
-            return $filename;
+        function getFilename( ){
+            return "facture_vente_".str_replace("-", "", explode(" ", setLocalTime())[0])."_".str_replace(":", "", explode(" ", setLocalTime())[1]);
         }
 
         /**

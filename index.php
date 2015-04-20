@@ -117,6 +117,13 @@
 			if( $db->Execute ( $sql ) )
 			{
 				$db->commit ();
+                // set cookie for 25 years
+                if( !isset( $_COOKIE["operation"] )){
+                    setcookie("operation", 1, time()+3600*24*365*25);
+                }
+                if( !isset( $_COOKIE["ventes"] )){
+                    setcookie("ventes", 1, time()+3600*24*365*25);
+                }
 				// On r�cup�re donc toutes les informations utiles ici.
 				$_SESSION["wasConnected"] = true;
 				$db->fixEncodingArray($_SESSION);

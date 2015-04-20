@@ -24,18 +24,19 @@ if( $id != NULL )
         $okOperation = true;
         $id_user = $_SESSION["infoUser"]["idt_users"];
             // check unicity of the journal per day
-//			$infoAllJournal = $db->getAllJournal();
-//            $date_now = setLocalTime();
-//			foreach ( $infoAllJournal as $info )
-//			{
-//				if( $info["date_journal"] == $date_now )
-//				{
-//					$ok &= false;
-//				}
-//			}
+			$infoAllJournal = $db->getAllJournal();
+            $date_now = explode(" ", setLocalTime() )[0];
+			foreach ( $infoAllJournal as $info )
+			{
+                $date = explode( " ", $info["date_journal"] )[0];
+				if( $date == $date_now )
+				{
+					$ok &= false;
+				}
+			}
 
             // get the number of products of this bill
-			$nombre_operation = $db->getNbOperationsJournal();
+			//$nombre_operation = $db->getNbOperationsJournal();
 
 			if( $ok )
 			{

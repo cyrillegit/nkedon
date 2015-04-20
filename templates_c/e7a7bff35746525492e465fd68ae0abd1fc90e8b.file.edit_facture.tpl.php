@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-31 17:15:14
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-20 15:33:00
          compiled from ".\templates\administration_magasin\gestion_factures\edit_facture.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2141652ebd4f06be6f3-26729779%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e7a7bff35746525492e465fd68ae0abd1fc90e8b' => 
     array (
       0 => '.\\templates\\administration_magasin\\gestion_factures\\edit_facture.tpl',
-      1 => 1427822110,
+      1 => 1429543899,
       2 => 'file',
     ),
   ),
@@ -95,9 +95,6 @@ $(document).ready (function ()
         resetInputs();
         $('html, body').animate({ scrollTop: 0 }, 'slow');
         $("#editProduitFacture").show("slow");
-
-//		update_content ("ajax/popups/edit_produit_facture.php", "popup", "id_produit_facture=0");
-//		ShowPopupHeight (550);
 	});
 
 	$("#date_fabrication").datepicker({
@@ -235,7 +232,7 @@ $(document).ready (function ()
 				{	
 					ShowSuccess ("La facture (<strong>" + $("#numero_facture").val () + "</strong>) a bien été enregistrée.");
 					$.modal.close ();					
-					document.location.href="administration_magasin.php?sub=edit_facture&status=register";
+					document.location.href="administration_magasin.php?sub=result_facture_achat&status=register";
 				}
 				else
 				{
@@ -499,13 +496,15 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 <hr size="1" style="margin-top: 5px; margin-top: 80px;" />
 <div style="float: left; text-align: left; margin-left: 200px;"><span class="champObligatoire">*</span> : Champs obligatoires.</div>
 <div style="float: right; text-align: right; margin-right: 200px;">
-    <table border="0" cellspacing="0" cellpadding="0" align="right">
-        <tr>
-            <td><div id="btnAnnuler"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
-            <td>&nbsp;</td>
-            <td><div id="btnValider"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOK" height="30" /></div></td>
-        </tr>
-    </table>        
+    <?php if ($_smarty_tpl->tpl_vars['nb_produits']->value!=0){?>
+        <table border="0" cellspacing="0" cellpadding="0" align="right">
+            <tr>
+                <td><div id="btnAnnuler"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
+                <td>&nbsp;</td>
+                <td><div id="btnValider"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOK" height="30" /></div></td>
+            </tr>
+        </table>
+    <?php }?>
 </div>
 <?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>

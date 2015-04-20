@@ -12,7 +12,7 @@
 $db = new Database ();
 
 //$datas = $db->getAllHistoriquesSyntheses ();
-$datasVentes = $db->getAllProduitsVendusByInventaire( 7 );
+$datasVentes = $db->getAllProduitsVendusByInventaire( 0 );
 foreach ( $datasVentes as $data )
 {
     $date = getDateFromDatetime( $data["date_journal"] );

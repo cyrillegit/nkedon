@@ -486,9 +486,51 @@
 			$this->Sql = "SELECT MAX(idt_inventaires) AS id_inventaire FROM t_inventaires";
 			$res = $this->FetchRow();
 			return $res ["id_inventaire"];
-		}				
+		}
 
-		/**
+        /**
+         * Fonction getMaxIdJournal
+         * -------------------
+         * Retourne le dernier journal enregistré
+         *
+         * @return int
+         */
+        public function getMaxIdJournal ()
+        {
+            $this->Sql = "SELECT MAX(idt_journal) AS id_journal FROM t_journal";
+            $res = $this->FetchRow();
+            return $res ["id_journal"];
+        }
+
+        /**
+         * Fonction getMaxIdFactureAchat
+         * -------------------
+         * Retourne la derniere facture c'achat enregistrée
+         *
+         * @return int
+         */
+        public function getMaxIdFactureAchat ()
+        {
+            $this->Sql = "SELECT MAX(idt_factures) AS id_facture FROM t_factures";
+            $res = $this->FetchRow();
+            return $res ["id_facture"];
+        }
+
+        /**
+         * Fonction getMaxIdFactureVente
+         * -------------------
+         * Retourne la derniere facture ce vente enregistrée
+         *
+         * @return int
+         */
+        public function getMaxIdFactureVente ()
+        {
+            $this->Sql = "SELECT MAX(idt_factures_ventes) AS id_facture FROM t_factures_ventes";
+            $res = $this->FetchRow();
+            return $res ["id_facture"];
+        }
+
+        /**
 		 * Fonction getInfoTypeUser
 		 * -------------------
 		 * Retourne les types d'utilisateurs en base de donn�es qui ne sont pas "Administrateur" ou "Super Administrateur".
@@ -1271,22 +1313,23 @@
 			return $res;
 		}	
 
-		/**
-		 * Fonction getInfosFacture
-		 * -------------------
-		 * Retourne les informations d'une facture
-		 *
-		 * @return array
-		 */
-		public function getInfosFacture ($id)
-		{
-			$this->Sql = "SELECT * 
-							FROM t_factures AS fa
-							JOIN t_fournisseurs AS fo ON fa.id_fournisseur = fo.idt_fournisseurs
-							WHERE fa.idt_factures = $id";
-			$res = $this->FetchAllRows();
-			return $res;
-		}			
+//		/**
+//		 * Fonction getInfosFactureAchatById
+//		 * -------------------
+//		 * Retourne les informations d'une facture
+//		 *
+//		 * @return array
+//		 */
+//		public function getInfosFactureAchatById ($id)
+//		{
+//			$this->Sql = "SELECT *
+//							FROM t_factures AS fa
+//							JOIN t_fournisseurs AS fo ON fa.id_fournisseur = fo.idt_fournisseurs
+//							JOIN t_users AS u ON fa.id_user = u.idt_users
+//							WHERE fa.idt_factures = $id";
+//			$res = $this->FetchAllRows();
+//			return $res;
+//		}
 
 		/**
 		 * Fonction getInfoProduit
@@ -1588,7 +1631,7 @@
                     $date_debut = $annee."-01-01";
                 }
 
-                $sql_where = "WHERE fa.date_facture BETWEEN '$date_debut' AND '$date_fin'";
+                $sql_where = "WHERE fv.date_facture BETWEEN '$date_debut' AND '$date_fin'";
             }else {
                 $sql_where = "";
             }

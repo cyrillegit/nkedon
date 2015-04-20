@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-04-07 22:03:42
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-20 15:00:32
          compiled from ".\templates\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:78352eba7b1662c86-76128190%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '749422d4cfc3eb5677cf499730392b6accd4d1c7' => 
     array (
       0 => '.\\templates\\index.tpl',
-      1 => 1428444220,
+      1 => 1429542028,
       2 => 'file',
     ),
   ),
@@ -50,12 +50,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 	function slideSwitch() 
 	{
-	    var $active = $('#slideshow IMG.active');
+	    var $active = $('#slideshow div.active');
 
-	    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+	    if ( $active.length == 0 ) $active = $('#slideshow div:last');
 
 	    var $next =  $active.next().length ? $active.next()
-	        : $('#slideshow IMG:first');
+	        : $('#slideshow div:first');
 
 	    $active.addClass('last-active');
 	        
@@ -72,7 +72,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         RefreshXMLVentesJournal();
 
 		$(function() {
-		//    setInterval( "slideSwitch()", 5000 );
+		    setInterval( "slideSwitch()", 5000 );
 
             $('#container').highcharts({
                 chart: {
@@ -151,26 +151,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	</div>
 	<div id="main">
         <div id="mainCenter">
-        	
-            	
-				
-              	
-    				
-    				
-    				
-				
-            
-            <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                    <td>
-                        <div id="chartContainerAchats"></div>
-                    </td>
+        	<div class="blocInfoBis" style="width: 970px;">
+            	<div class="titre"><b><i>Gestion du magasin et de la production par NKEDON</i></b></div>
+				<hr/>
+              	<div id="slideshow">
+    				<div><img src="assets/images/slideshow_images/img1.jpg" alt="" class="active" /></div>
 
-                    <td>
-                        <div id="chartContainerVentes"></div>
-                    </td>
-                </tr>
-            </table>
+                    <div><img src="assets/images/slideshow_images/img2.jpg" alt="" /></div>
+
+                    <div><img src="assets/images/slideshow_images/img3.jpg" alt="" /></div>
+				</div>
+            </div>
+            
+                
+                    
+                        
+                    
+
+                    
+                        
+                    
+                
+            
 		</div>
 	</div>
 </div>

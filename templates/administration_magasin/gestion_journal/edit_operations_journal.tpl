@@ -68,9 +68,6 @@ $(document).ready (function ()
         resetInputs();
         $('html, body').animate({ scrollTop: 0 }, 'slow');
         $("#editOperationJournal").show("slow");
-
-//		update_content ("ajax/popups/edit_produit_facture.php", "popup", "id_produit_facture=0");
-//		ShowPopupHeight (550);
 	});
 
     $("#btnAnnulerOperation").click (function ()
@@ -153,7 +150,7 @@ $(document).ready (function ()
             {
                 ShowSuccess ("Le journal a bien été enregistrée.");
                 $.modal.close ();
-                document.location.href="administration_magasin.php?sub=edit_operations_journal&status=register";
+                document.location.href="administration_magasin.php?sub=result_journal&status=register";
             }
             else
             {
@@ -218,6 +215,14 @@ $(document).ready (function ()
         <b>Le journal a bien été enregistrée.</b>
         <div></div>
     </div>
+    {if isset($smarty.session.journal)}
+        {if !$smarty.session.journal}
+            <div class="bloc_alerts" id="alert_journal" style="display: block;">
+                <b>Attention!.</b><br/>
+                <div>Il n'est plus possible de réaliser un journal pour ce jour.</div>
+            </div>
+        {/if}
+    {/if}
 	<div class="bloc_title">
         <div class="alerte">&nbsp;</div><br/>
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
@@ -240,8 +245,12 @@ $(document).ready (function ()
                     Actuellement <font color="black"><b>{$nb_produits}</b></font> opérations enregistrées pour le journal.
                     </td>
                     <td>
-                    <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addOperation"></div></div>
-                    <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter une opération :&nbsp;</div>
+                        {if isset($smarty.session.journal)}
+                            {if $smarty.session.journal}
+                                <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addOperation"></div></div>
+                                <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter une opération :&nbsp;</div>
+                            {/if}
+                        {/if}
                     </td>
                 </tr>
             </table>
@@ -347,12 +356,18 @@ $(document).ready (function ()
 <hr size="1" style="margin-top: 15px;" />
 <div style="float: left; text-align: left; margin-left: 200px;"><span class="champObligatoire">*</span> : Champs obligatoires.</div>
 <div style="float: right; text-align: right; margin-right: 200px;">
-    <table border="0" cellspacing="0" cellpadding="0" align="right">
-        <tr>
-            <td><div id="btnAnnuler"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
-            <td>&nbsp;</td>
-            <td><div id="btnValider"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOK" height="30" /></div></td>
-        </tr>
-    </table>        
+    {if isset($smarty.session.journal)}
+        {if $smarty.session.journal}
+            {if $nb_produits neq 0 }
+                <table border="0" cellspacing="0" cellpadding="0" align="right">
+                    <tr>
+                        <td><div id="btnAnnuler"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
+                        <td>&nbsp;</td>
+                        <td><div id="btnValider"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOK" height="30" /></div></td>
+                    </tr>
+                </table>
+            {/if}
+        {/if}
+    {/if}
 </div>
 {include file='common/footer.tpl'}

@@ -32,13 +32,11 @@ if( $id != NULL )
             // check if the product exists
             ($id_produit != NULL ) ? $ok &= true : $ok &= false;
 			$ok &= isNumber( $quantite_vendue );
-            isset( $_SESSION ["numero"] ) ? $numero = $_SESSION ["numero"]: $numero = 1;
+            isset( $_COOKIE["operation"] ) ? $numero_operation = $_COOKIE["operation"]: $numero_operation = 1;
+            setcookie("operation", $numero_operation + 1 );
 
 			if( $ok )
 			{
-                // generate a unique number for this operation
-                $numero_operation = getDateWithUnderscrore(setLocalTime())."-".$numero;
-
 				$sql = "INSERT INTO t_produits_operations
 							(id_produit,
 							 quantite_vendue,

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-28 11:39:53
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-20 09:58:24
          compiled from ".\templates\historiques\historiques_journal\journal_mois.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:25689551693096c9292-12974631%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c515d40f99136b1780750ce9edd7f2e339a7da20' => 
     array (
       0 => '.\\templates\\historiques\\historiques_journal\\journal_mois.tpl',
-      1 => 1427541435,
+      1 => 1429188860,
       2 => 'file',
     ),
   ),
@@ -15,14 +15,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_55169309771144_61572231',
   'variables' => 
   array (
     'nb_journal' => 0,
     'mois_annee' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_55169309771144_61572231',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_55169309771144_61572231')) {function content_55169309771144_61572231($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("common/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -31,9 +31,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /**
 	Rafraîchissement du tableau des des journaux groupées pour mois.
 */
-function RefreshTableHistoriquesJournalMoisAnnee( mois, annee )
+function RefreshTableHistoriquesJournalMoisAnnee( date_histo_journal, mois, annee )
 {
-    var param = "mois="+mois+"&annee="+annee;
+    var param = "date_histo_journal="+date_histo_journal+"&mois="+mois+"&annee="+annee;
 	var responseText = $.ajax({
 			type	: "POST",
 			url		: "ajax/infos/historiques/GetTableauHistoriquesJournalMoisAnnee.php",
@@ -67,7 +67,7 @@ $(document).ready (function ()
     var annee = getUrlParameter("annee");
     var mois = getUrlParameter("mois");
 
-    RefreshTableHistoriquesJournalMoisAnnee( mois, annee );
+    RefreshTableHistoriquesJournalMoisAnnee( "", mois, annee );
 
     $("#date_histo_journal").datepicker({
         beforeShow:function(input) {
@@ -80,8 +80,11 @@ $(document).ready (function ()
 
     $("#date_histo_journal").change (function ()
     {
+        var annee = getUrlParameter("annee");
+        var mois = getUrlParameter("mois");
+
         var date_histo_journal = $("#date_histo_journal").val();
-        RefreshTableHistoriqueFacture( date_histo_journal );
+        RefreshTableHistoriquesJournalMoisAnnee( date_histo_journal, mois, annee );
     });
 });
 

@@ -16,7 +16,8 @@ isset( $_POST ["id_facture"] ) ? $id = $_POST ["id_facture"] : $id = NULL;
 
 if( $id != NULL )
 {
-   isset( $_POST ["commentaire"] ) ? $commentaire = addslashes(htmlspecialchars($_POST ["commentaire"])) : $commentaire = "";
+    isset( $_POST ["commentaire"] ) ? $commentaire = addslashes(htmlspecialchars($_POST ["commentaire"])) : $commentaire = "";
+    isset( $_POST ["nom_client"] ) ? $nom_client = addslashes(htmlspecialchars($_POST ["nom_client"])) : $nom_client = "";
     $id_user = $_SESSION["infoUser"]["idt_users"];
 	//Mode création (post:insert)
 	if( $id == 0 )
@@ -24,7 +25,8 @@ if( $id != NULL )
 		$ok = true;
         $okFacture = true;
         $date_facture = setLocalTime();
-        $numero_facture = "0";
+        isset( $_COOKIE["ventes"] ) ? $numero_facture = $_COOKIE["ventes"]: $numero_facture = 1;
+        setcookie("ventes", $numero_facture + 1 );
 
 			if( $ok )
 			{
@@ -36,12 +38,14 @@ if( $id != NULL )
 							 date_facture,
 							 commentaire,
 							 id_inventaire,
-							 id_user)
+							 id_user,
+							 nom_client)
 				VALUES ('$numero_facture',
 						'$date_facture',
 						'$commentaire',
 						0,
-						'$id_user')";
+						'$id_user',
+						'$nom_client')";
 
 				if( $db->Execute ( $sql ) )
 				{
@@ -119,7 +123,8 @@ if( $id != NULL )
 						SET numero_facture = '$numero_facture',
 							date_facture = '$date_facture',
 							commentaire = '$commentaire',
-							id_user = '$id_user'
+							id_user = '$id_user',
+							nom_client = '$nom_client'
 						WHERE idt_factures_ventes = '$id'";
 
 					if( $db->Execute ( $sql ) )

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-04-16 07:12:43
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-20 13:14:57
          compiled from ".\templates\administration_magasin\gestion_journal\edit_operations_journal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:314005512eaa12d5d97-08631238%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd88cdcc1bd965e095563e9e2aba8361f36e5d1c4' => 
     array (
       0 => '.\\templates\\administration_magasin\\gestion_journal\\edit_operations_journal.tpl',
-      1 => 1429168355,
+      1 => 1429535688,
       2 => 'file',
     ),
   ),
@@ -97,9 +97,6 @@ $(document).ready (function ()
         resetInputs();
         $('html, body').animate({ scrollTop: 0 }, 'slow');
         $("#editOperationJournal").show("slow");
-
-//		update_content ("ajax/popups/edit_produit_facture.php", "popup", "id_produit_facture=0");
-//		ShowPopupHeight (550);
 	});
 
     $("#btnAnnulerOperation").click (function ()
@@ -182,7 +179,7 @@ $(document).ready (function ()
             {
                 ShowSuccess ("Le journal a bien été enregistrée.");
                 $.modal.close ();
-                document.location.href="administration_magasin.php?sub=edit_operations_journal&status=register";
+                document.location.href="administration_magasin.php?sub=result_journal&status=register";
             }
             else
             {
@@ -247,6 +244,14 @@ $(document).ready (function ()
         <b>Le journal a bien été enregistrée.</b>
         <div></div>
     </div>
+    <?php if (isset($_SESSION['journal'])){?>
+        <?php if (!$_SESSION['journal']){?>
+            <div class="bloc_alerts" id="alert_journal" style="display: block;">
+                <b>Attention!.</b><br/>
+                <div>Il n'est plus possible de réaliser un journal pour ce jour.</div>
+            </div>
+        <?php }?>
+    <?php }?>
 	<div class="bloc_title">
         <div class="alerte">&nbsp;</div><br/>
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
@@ -271,8 +276,12 @@ $(document).ready (function ()
 </b></font> opérations enregistrées pour le journal.
                     </td>
                     <td>
-                    <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addOperation"></div></div>
-                    <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter une opération :&nbsp;</div>
+                        <?php if (isset($_SESSION['journal'])){?>
+                            <?php if ($_SESSION['journal']){?>
+                                <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addOperation"></div></div>
+                                <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter une opération :&nbsp;</div>
+                            <?php }?>
+                        <?php }?>
                     </td>
                 </tr>
             </table>
@@ -382,13 +391,19 @@ $(document).ready (function ()
 <hr size="1" style="margin-top: 15px;" />
 <div style="float: left; text-align: left; margin-left: 200px;"><span class="champObligatoire">*</span> : Champs obligatoires.</div>
 <div style="float: right; text-align: right; margin-right: 200px;">
-    <table border="0" cellspacing="0" cellpadding="0" align="right">
-        <tr>
-            <td><div id="btnAnnuler"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
-            <td>&nbsp;</td>
-            <td><div id="btnValider"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOK" height="30" /></div></td>
-        </tr>
-    </table>        
+    <?php if (isset($_SESSION['journal'])){?>
+        <?php if ($_SESSION['journal']){?>
+            <?php if ($_smarty_tpl->tpl_vars['nb_produits']->value!=0){?>
+                <table border="0" cellspacing="0" cellpadding="0" align="right">
+                    <tr>
+                        <td><div id="btnAnnuler"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>
+                        <td>&nbsp;</td>
+                        <td><div id="btnValider"><img src="css/images/boutons/btn_valider.png" class="" style="cursor: pointer;" width="110" id="btnOK" height="30" /></div></td>
+                    </tr>
+                </table>
+            <?php }?>
+        <?php }?>
+    <?php }?>
 </div>
 <?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>

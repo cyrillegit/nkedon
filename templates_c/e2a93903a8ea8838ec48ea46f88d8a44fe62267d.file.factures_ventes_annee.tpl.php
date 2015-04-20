@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-31 10:06:55
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-20 14:29:44
          compiled from ".\templates\historiques\historiques_factures\factures_ventes_annee.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:22293551a7040e238c2-14407672%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e2a93903a8ea8838ec48ea46f88d8a44fe62267d' => 
     array (
       0 => '.\\templates\\historiques\\historiques_factures\\factures_ventes_annee.tpl',
-      1 => 1427796403,
+      1 => 1429180963,
       2 => 'file',
     ),
   ),
@@ -30,9 +30,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /**
 	Rafraîchissement du tableau des des factures groupées pour mois.
 */
-function RefreshTableHistoriquesFactureVenteAnnee( annee )
+function RefreshTableHistoriquesFactureVenteAnnee( date_histo_facture, annee )
 {
-    var param = "annee="+annee;
+    var param = "date_histo_facture="+date_histo_facture+"&annee="+annee;
 	var responseText = $.ajax({
 			type	: "POST",
 			url		: "ajax/infos/historiques/GetTableauHistoriquesFacturesVentesAnnee.php",
@@ -63,7 +63,7 @@ function getUrlParameter(sParam)
 */
 $(document).ready (function ()
 {
-    RefreshTableHistoriquesFactureVenteAnnee( getUrlParameter("annee") );
+    RefreshTableHistoriquesFactureVenteAnnee( "", getUrlParameter("annee") );
 
     $("#date_histo_facture").datepicker({
         beforeShow:function(input) {
@@ -77,7 +77,7 @@ $(document).ready (function ()
     $("#date_histo_facture").change (function ()
     {
         var date_histo_facture = $("#date_histo_facture").val();
-        RefreshTableHistoriqueFacture( date_histo_facture );
+        RefreshTableHistoriquesFactureVenteAnnee( date_histo_facture, getUrlParameter("annee") );
     });
 });
 

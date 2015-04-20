@@ -1,8 +1,8 @@
 <?php
 /**
-	Fichier GetTableauHistoriquesFactures.php
+	Fichier GetTableauJournal.php
 	-----------------------------------
-	Ce fichier crée un tableau contenant les informations des factures en base de données.
+	Ce fichier crée un tableau contenant les informations d'un journal en base de données.
 */
 @require_once("../../../config/config.php");
 @require_once("../../../include/function.php");
@@ -11,30 +11,13 @@
 @session_start();
 $db = new Database ();
 
-isset( $_POST ["annee"] ) ? $annee = addslashes(htmlspecialchars($_POST ["annee"])) : $annee = "";
-isset( $_POST ["mois"] ) ? $mois = addslashes(htmlspecialchars($_POST ["mois"])) : $mois = "";
-isset( $_POST ["date_histo_journal"] ) ? $date_histo_journal = addslashes(htmlspecialchars($_POST ["date_histo_journal"])) : $date_histo_journal = "";
 // get the type of the current user
 $id_type_user = $_SESSION["infoUser"]["idt_types_users"];
 // unset deletion mode
 unset( $_SESSION["delete"] );
 
-if(  $date_histo_journal == "" ) {
-    $histo_journal = $db->getAllJournalByMoisAnnee( "", $mois, $annee );
-}else{
-    $jour = explode( "/", $date_histo_facture )[0];
-
-    $histo_journal = $db->getAllJournalByMoisAnnee( $jour, $mois, $annee );
-}
-
-if( COUNT($histo_journal) > 0 )
-{
-    foreach ( $histo_journal as &$journal )
-    {
-        $operationJournal = $db->getAllHistoriquesOperationsByJournal( $journal["idt_journal"] );
-        $journal["operations_associees"] = $operationJournal;
-    }
-}
+$id_journal = $db->getMaxIdJournal();
+$infosJournal = $db->getInfosJournalById( $id_journal );
 
 ?>
 <script language="javascript">
@@ -97,10 +80,8 @@ $(document).ready (function ()
         }
     </style>
 <?php
-    if( count( $histo_journal ) > 0)
+    if( count( $infosJournal ) > 0)
     {
-        foreach( $histo_journal as $obj )
-        {
             $montant_journal = 0;
 ?>
             <div class="hvr-bounce-to-right" style="width: 100%; margin-bottom: 10px;">
@@ -110,12 +91,12 @@ $(document).ready (function ()
                         <tr>
                             <td>
                                 <tr class="blocInfoBis">
-                                    <td class="blocTitreId">Enregistrée le : <br/><strong><?php  echo SQLDateTimeToFrenchDateTime( $obj["date_journal"] ); ?></strong></td>
-                                    <td class="blocTitreId">Enregistrée par : <br/><strong><?php  echo $obj["nom_user"]."  ".$obj["prenom_user"]; ?></strong></td>
+                                    <td class="blocTitreId">Enregistrée le : <br/><strong><?php  echo SQLDateTimeToFrenchDateTime( $infosJournal[0]["date_journal"] ); ?></strong></td>
+                                    <td class="blocTitreId">Enregistrée par : <br/><strong><?php  echo $infosJournal[0]["nom_user"]."  ".$infosJournal[0]["prenom_user"]; ?></strong></td>
                                     <td class="blocTitreId">Commentaire : </strong></td>
                                     <td class="blocTitreId" colspan="2" >
                                         <textarea style="height: 50px; width: 100%;" readonly="readonly">
-                                            <?php  echo $obj["commentaire"]; ?>
+                                            <?php  echo $infosJournal[0]["commentaire"]; ?>
                                         </textarea>
                                     </td>
                                 </tr>
@@ -129,7 +110,7 @@ $(document).ready (function ()
                                 </tr>
                                 <tr height="5px;"></tr>
                                 <?php
-                                foreach ( $obj["operations_associees"] as $value )
+                                foreach ( $infosJournal as $value )
                                 {
                                     $montant_journal += $value["quantite_vendue"] * $value["prix_vente"];
                                 ?>
@@ -145,8 +126,8 @@ $(document).ready (function ()
                                 ?>
                                 
                                 <tr>    
-                                    <td align="left" valign="middle"><a class="download_links" id_journal="<?=$obj["idt_journal"]; ?>"><img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez le journal</a></td>
-                                    <td class="blocTitre"><?php  if( $id_type_user <= 2 ){; ?><a class="edit_links" id_journal="<?=$obj["idt_journal"]; ?>"><img src="assets/images/edit.png" alt="" width="16" height="16" /> Modifier le journal</a><?php  } ?></td>
+                                    <td align="left" valign="middle"><a class="download_links" id_journal="<?=$infosJournal[0]["idt_journal"]; ?>"><img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez le journal</a></td>
+                                    <td class="blocTitre"><?php  if( $id_type_user <= 2 ){; ?><a class="edit_links" id_journal="<?=$infosJournal[0]["idt_journal"]; ?>"><img src="assets/images/edit.png" alt="" width="16" height="16" /> Modifier le journal</a><?php  } ?></td>
                                     <td class="blocTitre"></td>
                                     <td class="blocTitre">Montant du journal : </td>
                                     <td class="blocTitre"><?php echo number_format($montant_journal, 2, ',', ' ');?> FCFA</td>
@@ -158,6 +139,5 @@ $(document).ready (function ()
             </div>
         <br />    
 <?php
-        }
     }
 ?>

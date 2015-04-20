@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-31 10:19:11
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-20 14:29:48
          compiled from ".\templates\historiques\historiques_factures\factures_ventes_mois.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11004551a747366a7e5-44278230%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd632d00546f05ea90cf80045eb21d301fda120e9' => 
     array (
       0 => '.\\templates\\historiques\\historiques_factures\\factures_ventes_mois.tpl',
-      1 => 1427797139,
+      1 => 1429181300,
       2 => 'file',
     ),
   ),
@@ -31,9 +31,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /**
 	Rafraîchissement du tableau des des factures groupées pour mois.
 */
-function RefreshTableHistoriquesFactureVentesMoisAnnee( mois, annee )
+function RefreshTableHistoriquesFactureVentesMoisAnnee( date_histo_facture, mois, annee )
 {
-    var param = "mois="+mois+"&annee="+annee;
+    var param = "date_histo_facture="+date_histo_facture+"&mois="+mois+"&annee="+annee;
 	var responseText = $.ajax({
 			type	: "POST",
 			url		: "ajax/infos/historiques/GetTableauHistoriquesFacturesVentesMoisAnnee.php",
@@ -67,7 +67,7 @@ $(document).ready (function ()
     var annee = getUrlParameter("annee");
     var mois = getUrlParameter("mois");
 
-    RefreshTableHistoriquesFactureVentesMoisAnnee( mois, annee );
+    RefreshTableHistoriquesFactureVentesMoisAnnee( "", mois, annee );
 
     $("#date_histo_facture").datepicker({
         beforeShow:function(input) {
@@ -81,7 +81,9 @@ $(document).ready (function ()
     $("#date_histo_facture").change (function ()
     {
         var date_histo_facture = $("#date_histo_facture").val();
-        RefreshTableHistoriqueFacture( date_histo_facture );
+        var annee = getUrlParameter("annee");
+        var mois = getUrlParameter("mois");
+        RefreshTableHistoriquesFactureVentesMoisAnnee( date_histo_facture, mois, annee );
     });
 });
 

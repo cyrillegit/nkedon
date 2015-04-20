@@ -26,8 +26,6 @@ $(document).ready (function ()
 
 	$("#addFacture").click (function ()
 	{
-	//	update_content ("ajax/popups/edit_facture.php", "popup", "id_facture=0");
-	//	ShowPopupHeight (550);
      document.location.href="administration_magasin.php?sub=edit_facture&id_facture=0";
 	});
 });

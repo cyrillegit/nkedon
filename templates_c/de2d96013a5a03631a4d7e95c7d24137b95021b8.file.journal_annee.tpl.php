@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-03-28 11:05:23
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-20 09:58:21
          compiled from ".\templates\historiques\historiques_journal\journal_annee.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1440655168a57d65fb8-09158079%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'de2d96013a5a03631a4d7e95c7d24137b95021b8' => 
     array (
       0 => '.\\templates\\historiques\\historiques_journal\\journal_annee.tpl',
-      1 => 1427540617,
+      1 => 1429188589,
       2 => 'file',
     ),
   ),
@@ -30,9 +30,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /**
 	Rafraîchissement du tableau des des factures groupées pour mois.
 */
-function RefreshTableHistoriquesJournalAnnee( annee )
+function RefreshTableHistoriquesJournalAnnee( date_histo_journal, annee )
 {
-    var param = "annee="+annee;
+    var param = "date_histo_journal="+date_histo_journal+"&annee="+annee;
 	var responseText = $.ajax({
 			type	: "POST",
 			url		: "ajax/infos/historiques/GetTableauHistoriquesJournalAnnee.php",
@@ -63,7 +63,7 @@ function getUrlParameter(sParam)
 */
 $(document).ready (function ()
 {
-    RefreshTableHistoriquesJournalAnnee( getUrlParameter("annee") );
+    RefreshTableHistoriquesJournalAnnee( "", getUrlParameter("annee") );
 
     $("#date_histo_journal").datepicker({
         beforeShow:function(input) {
@@ -77,7 +77,7 @@ $(document).ready (function ()
     $("#date_histo_journal").change (function ()
     {
         var date_histo_journal = $("#date_histo_journal").val();
-        RefreshTableHistoriquesJournalAnnee( date_histo_journal );
+        RefreshTableHistoriquesJournalAnnee( date_histo_journal, getUrlParameter("annee") );
     });
 });
 
