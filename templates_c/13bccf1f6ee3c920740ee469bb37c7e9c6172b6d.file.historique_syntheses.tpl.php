@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.14, created on 2015-03-17 09:49:29
-         compiled from ".\templates\administration_magasin\gestion_magasin\historiques_inventaires.tpl" */ ?>
+         compiled from ".\templates\magasin\gestion_magasin\historiques_inventaires.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:203052ebaf5fc4fd71-66558753%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '13bccf1f6ee3c920740ee469bb37c7e9c6172b6d' => 
     array (
-      0 => '.\\templates\\administration_magasin\\gestion_magasin\\historiques_inventaires.tpl',
+      0 => '.\\templates\\magasin\\gestion_magasin\\historiques_inventaires.tpl',
       1 => 1426526077,
       2 => 'file',
     ),
@@ -35,7 +35,7 @@ function RefreshTableHistoriqueSynthese(date_histo_synthese)
     var param = "date_histo_synthese="+date_histo_synthese;
 	var responseText = $.ajax({
 			type	: "POST",
-			url		: "ajax/infos/administration_magasin/GetTableauHistoriqueSyntheses.php",
+			url		: "ajax/infos/magasin/GetTableauHistoriqueSyntheses.php",
 			async	: false,
 			data	: param,
 			success	: function (msg){}
@@ -103,7 +103,7 @@ $(document).ready (function ()
     <div id="tableau_histo_syntheses"></div>
 
     <div style="clear: both;">&nbsp;</div>
-    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='administration_magasin.php';"></div>
+    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='../magasin.php';"></div>
 </div>
 
 <?php echo $_smarty_tpl->getSubTemplate ("common/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

@@ -7,7 +7,7 @@ function RefreshXMLGraphesProgressions()
 {
     var responseText = $.ajax({
             type    : "POST",
-            url     : "ajax/infos/administration_magasin/statistiques/GetXMLVentesJournal.php",
+            url     : "ajax/infos/magasin/statistiques/GetXMLVentesJournal.php",
             async   : false,
             data    : "",
             success : function (msg){}

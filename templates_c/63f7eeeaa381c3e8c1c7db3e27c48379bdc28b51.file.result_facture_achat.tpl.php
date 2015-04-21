@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.14, created on 2015-04-20 12:54:41
-         compiled from ".\templates\administration_magasin\gestion_factures\result_facture_achat.tpl" */ ?>
+         compiled from ".\templates\magasin\gestion_factures\result_facture_achat.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:108155534f0a4299b27-55575863%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '63f7eeeaa381c3e8c1c7db3e27c48379bdc28b51' => 
     array (
-      0 => '.\\templates\\administration_magasin\\gestion_factures\\result_facture_achat.tpl',
+      0 => '.\\templates\\magasin\\gestion_factures\\result_facture_achat.tpl',
       1 => 1429534478,
       2 => 'file',
     ),
@@ -34,7 +34,7 @@ function RefreshTableFactureAchat ()
 {
     var responseText = $.ajax({
         type	: "POST",
-        url		: "ajax/infos/administration_magasin/GetTableauFactureAchat.php",
+        url		: "ajax/infos/magasin/GetTableauFactureAchat.php",
         async	: false,
         data	: "",
         success	: function (msg){}
@@ -112,7 +112,7 @@ $(document).ready (function ()
     <div id="tableau_facture"></div>
 
     <div style="clear: both;">&nbsp;</div>
-    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='administration_magasin.php?sub=edit_facture';"></div>
+    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='../magasin.php';"></div>
 </div>
 
 <?php echo $_smarty_tpl->getSubTemplate ("common/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.14, created on 2015-04-20 13:15:30
-         compiled from ".\templates\administration_magasin\gestion_journal\result_journal.tpl" */ ?>
+         compiled from ".\templates\magasin\gestion_journal\result_journal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:228555534d2cb397ad4-56211967%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8f2713a83971c286acbea99410aba8e6809a0d95' => 
     array (
-      0 => '.\\templates\\administration_magasin\\gestion_journal\\result_journal.tpl',
+      0 => '.\\templates\\magasin\\gestion_journal\\result_journal.tpl',
       1 => 1429533237,
       2 => 'file',
     ),
@@ -32,7 +32,7 @@ function RefreshTableOperationsJournal ()
 {
 	var responseText = $.ajax({
 			type	: "POST",
-			url		: "ajax/infos/administration_magasin/GetTableauJournal.php",
+			url		: "ajax/infos/magasin/GetTableauJournal.php",
 			async	: false,
 			data	: "",
 			success	: function (msg){}

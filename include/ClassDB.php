@@ -511,7 +511,7 @@
          */
         public function getMaxIdFactureAchat ()
         {
-            $this->Sql = "SELECT MAX(idt_factures) AS id_facture FROM t_factures";
+            $this->Sql = "SELECT MAX(idt_factures_achats) AS id_facture FROM t_factures_achats";
             $res = $this->FetchRow();
             return $res ["id_facture"];
         }
@@ -596,7 +596,7 @@
 		 */
 		public function getNbFacturesInDB ()
 		{
-			$this->Sql = "SELECT COUNT(*) AS nb_factures FROM t_factures";
+			$this->Sql = "SELECT COUNT(*) AS nb_factures FROM t_factures_achats";
 			$res = $this->FetchRow();
 			return $res ["nb_factures"];
 		}
@@ -698,8 +698,8 @@
 		{
 			$this->Sql = "SELECT *, SUM(quantite_achat) AS quantite_achetee
                             FROM t_achats AS a
-                            JOIN t_factures AS f
-                            ON a.id_facture = f.idt_factures
+                            JOIN t_factures_achats AS f
+                            ON a.id_facture = f.idt_factures_achats
                             WHERE f.id_inventaire = 0
                             GROUP BY a.id_produit";
 			$res = $this->FetchAllRows();
@@ -717,8 +717,8 @@
         {
             $this->Sql = "SELECT *, SUM(quantite_achat) AS quantite_achetee
                             FROM t_achats AS a
-                            JOIN t_factures AS f
-                            ON a.id_facture = f.idt_factures
+                            JOIN t_factures_achats AS f
+                            ON a.id_facture = f.idt_factures_achats
                             WHERE f.id_inventaire = $id_inventaire AND a.id_produit = $id_produits
                             GROUP BY a.id_produit";
             $res = $this->FetchRow();
@@ -813,8 +813,8 @@
         public function getAllProduitsAchetesByInventaire ( $id )
         {
             $this->Sql = "SELECT *, SUM(a.quantite_achat) AS quantite_achetee
-                            FROM t_factures AS f
-                            JOIN t_achats AS a ON f.idt_factures = a.id_facture
+                            FROM t_factures_achats AS f
+                            JOIN t_achats AS a ON f.idt_factures_achats = a.id_facture
                             JOIN t_produits AS p ON a.id_produit = p.idt_produits
                             WHERE f.id_inventaire = $id
                             GROUP BY p.idt_produits
@@ -838,8 +838,8 @@
             $sql_where = " WHERE f.date_insertion_facture BETWEEN '$date_debut' AND '$date_fin' ";
 
             $this->Sql = "SELECT *, SUM(a.quantite_achat) AS quantite_achetee
-                            FROM t_factures AS f
-                            JOIN t_achats AS a ON f.idt_factures = a.id_facture
+                            FROM t_factures_achats AS f
+                            JOIN t_achats AS a ON f.idt_factures_achats = a.id_facture
                             JOIN t_produits AS p ON a.id_produit = p.idt_produits
                             ".$sql_where."
                             GROUP BY p.idt_produits
@@ -928,23 +928,23 @@
 		public function getAllFactures ()
 		{
 			$this->Sql = "SELECT * 
-							FROM t_factures AS fa
+							FROM t_factures_achats AS fa
 							JOIN t_fournisseurs AS fo ON fa.id_fournisseur = fo.idt_fournisseurs
-							ORDER BY fa.idt_factures";
+							ORDER BY fa.idt_factures_achats";
 			$res = $this->FetchAllRows();
 			return $res;
 		}
 
         /**
-         * Fonction getAllFacturesByDate
+         * Fonction getAllFacturesAchatsByDate
          * -------------------
          * Retourne les factures en fonction de la date
          * remplacer les arguments manquants par ""
-         * exemple : getAllFacturesByDate("","",2015) retourne les factures a partir de 2015
+         * exemple : getAllFacturesAchatsByDate("","",2015) retourne les factures a partir de 2015
          *
          * @return array
          */
-        public function getAllFacturesByDate ($jour, $mois, $annee )
+        public function getAllFacturesAchatsByDate ($jour, $mois, $annee )
         {
             if( $annee != "" ) {
                 $date_fin = $annee."-12-31";
@@ -965,10 +965,10 @@
             }
 
             $this->Sql = "SELECT *
-							FROM t_factures AS fa
+							FROM t_factures_achats AS fa
 							JOIN t_fournisseurs AS fo ON fa.id_fournisseur = fo.idt_fournisseurs
 							".$sql_where."
-							ORDER BY fa.idt_factures";
+							ORDER BY fa.idt_factures_achats";
             $res = $this->FetchAllRows();
             return $res;
         }
@@ -1078,9 +1078,9 @@
                 $sql_where = "";
             }
             $this->Sql = "SELECT *
-							FROM t_factures AS fa
+							FROM t_factures_achats AS fa
 							".$sql_where."
-							ORDER BY fa.idt_factures";
+							ORDER BY fa.idt_factures_achats";
             $res = $this->FetchAllRows();
             return $res;
         }
@@ -1156,7 +1156,7 @@
 			$this->Sql = "SELECT *, SUM(a.quantite_achat) AS quantite_achetee
 							FROM t_produits AS p
 							LEFT JOIN t_achats AS a ON p.idt_produits = a.id_produit
-							JOIN t_factures AS f ON a.id_facture = f.idt_factures
+							JOIN t_factures_achats AS f ON a.id_facture = f.idt_factures_achats
 							WHERE f.id_inventaire = $id
 							GROUP BY p.idt_produits";
 			$res = $this->FetchAllRows();
@@ -1174,9 +1174,9 @@
 		{
 			$this->Sql = "SELECT * 
 							FROM t_achats AS a
-							JOIN t_factures AS f ON a.id_facture = f.idt_factures
+							JOIN t_factures_achats AS f ON a.id_facture = f.idt_factures_achats
 							JOIN t_produits AS p ON a.id_produit = p.idt_produits
-							WHERE idt_factures = $id
+							WHERE idt_factures_achats = $id
 							ORDER BY p.nom_produit";
 			$res = $this->FetchAllRows();
 			return $res;
@@ -1193,9 +1193,9 @@
         {
             $this->Sql = "SELECT *
 							FROM t_achats AS a
-							JOIN t_factures AS f ON a.id_facture = f.idt_factures
+							JOIN t_factures_achats AS f ON a.id_facture = f.idt_factures_achats
 							JOIN t_produits AS p ON a.id_produit = p.idt_produits
-							WHERE f.idt_factures = $id
+							WHERE f.idt_factures_achats = $id
 							ORDER BY a.idt_achats";
             $res = $this->FetchAllRows();
             return $res;
@@ -1247,9 +1247,9 @@
 		 */
 		public function getAllFournisseurs ()
 		{
-			$this->Sql = "SELECT COUNT(fo.idt_fournisseurs) AS nb_factures, fo.idt_fournisseurs, fa.idt_factures, fo.nom_fournisseur, fo.adresse_fournisseur, fo.telephone_fournisseur, fo.date_insertion, MAX(fa.date_insertion_facture) AS date_insertion_facture
+			$this->Sql = "SELECT COUNT(fo.idt_fournisseurs) AS nb_factures, fo.idt_fournisseurs, fa.idt_factures_achats, fo.nom_fournisseur, fo.adresse_fournisseur, fo.telephone_fournisseur, fo.date_insertion, MAX(fa.date_insertion_facture) AS date_insertion_facture
 							FROM t_fournisseurs AS fo
-							LEFT JOIN t_factures AS fa ON fo.idt_fournisseurs = fa.id_fournisseur
+							LEFT JOIN t_factures_achats AS fa ON fo.idt_fournisseurs = fa.id_fournisseur
 							GROUP BY fo.idt_fournisseurs";
 			$res = $this->FetchAllRows();
 			return $res;
@@ -1323,10 +1323,10 @@
 //		public function getInfosFactureAchatById ($id)
 //		{
 //			$this->Sql = "SELECT *
-//							FROM t_factures AS fa
+//							FROM t_factures_achats AS fa
 //							JOIN t_fournisseurs AS fo ON fa.id_fournisseur = fo.idt_fournisseurs
 //							JOIN t_users AS u ON fa.id_user = u.idt_users
-//							WHERE fa.idt_factures = $id";
+//							WHERE fa.idt_factures_achats = $id";
 //			$res = $this->FetchAllRows();
 //			return $res;
 //		}
@@ -1453,13 +1453,13 @@
 		/**
 		 * Fonction getTableFactures
 		 * -------------------
-		 * Retourne tous les elements de la table t_factures
+		 * Retourne tous les elements de la table t_factures_achats
 		 *
 		 * @return array
 		 */
 		public function getTableFactures()
 		{
-			$this->Sql = "SELECT * FROM t_factures";
+			$this->Sql = "SELECT * FROM t_factures_achats";
 			$res = $this->FetchAllRows();
 			return $res;
 		}
@@ -1575,13 +1575,13 @@
 		}
 
         /**
-         * Fonction getAllFacturesByJourMoisAnnee
+         * Fonction getAllFacturesAchatsByJourMoisAnnee
          * -------------------
          * Retourne les factures correspondant a un mois et une annee precise
          *
          * @return array
          */
-        public function getAllFacturesByJourMoisAnnee( $jour, $mois, $annee )
+        public function getAllFacturesAchatsByJourMoisAnnee( $jour, $mois, $annee )
         {
             if( $annee != "" ) {
                 $date_fin = $annee."-12-31";
@@ -1601,11 +1601,11 @@
             }
 
             $this->Sql = "SELECT *
-							FROM t_factures AS fa
+							FROM t_factures_achats AS fa
 							JOIN t_fournisseurs AS f ON fa.id_fournisseur = f.idt_fournisseurs
 							JOIN t_users AS u ON fa.id_user = u.idt_users
 							".$sql_where."
-							ORDER BY fa.idt_factures DESC";
+							ORDER BY fa.idt_factures_achats DESC";
             $res = $this->FetchAllRows();
             return $res;
         }
@@ -1661,9 +1661,9 @@
                 $sql_where = "";
             }
             $this->Sql = "SELECT COUNT(*) AS nb
-							FROM t_factures AS fa
+							FROM t_factures_achats AS fa
 							".$sql_where."
-							ORDER BY fa.idt_factures";
+							ORDER BY fa.idt_factures_achats";
             $res = $this->FetchRow();
             return $res ["nb"];
         }
@@ -1979,9 +1979,9 @@
 		 */
 		public function getAllNumberFacturesFournisseurCurrent()
 		{
-			$this->Sql = "SELECT COUNT(fa.idt_factures) AS nb_factures , fa.date_facture, fo.nom_fournisseur
+			$this->Sql = "SELECT COUNT(fa.idt_factures_achats) AS nb_factures , fa.date_facture, fo.nom_fournisseur
 							FROM t_fournisseurs AS fo
-							LEFT JOIN t_factures AS fa ON fa.id_fournisseur = fo.idt_fournisseurs
+							LEFT JOIN t_factures_achats AS fa ON fa.id_fournisseur = fo.idt_fournisseurs
 							GROUP BY fo.idt_fournisseurs";
 			$res = $this->FetchAllRows();
 			return $res;
@@ -2021,7 +2021,7 @@
 			$this->Sql = "SELECT *
 							FROM t_produits AS p
 							JOIN t_achats AS a ON p.idt_produits = a.id_produit
-							JOIN t_factures AS fa ON a.id_facture = fa.idt_factures
+							JOIN t_factures_achats AS fa ON a.id_facture = fa.idt_factures_achats
 							JOIN t_fournisseurs AS fo ON fa.id_fournisseur = fo.idt_fournisseurs
 							".$sql_where;
 
@@ -2140,12 +2140,12 @@
         public function getInfosFactureAchatById( $id )
         {
             $this->Sql = "SELECT *
-                            FROM t_factures AS f
-                            JOIN t_achats AS a ON a.id_facture = f.idt_factures
+                            FROM t_factures_achats AS f
+                            JOIN t_achats AS a ON a.id_facture = f.idt_factures_achats
                             JOIN t_fournisseurs AS fo ON fo.idt_fournisseurs = f.id_fournisseur
                             JOIN t_users AS u ON f.id_user = u.idt_users
                             JOIN t_produits AS p ON a.id_produit = p.idt_produits
-                            WHERE f.idt_factures = $id";
+                            WHERE f.idt_factures_achats = $id";
             $res = $this->FetchAllRows();
             return $res;
         }
@@ -2236,7 +2236,7 @@
 		{			
 			$this->Sql = "SELECT SUM(ha.quantite_achat) AS quantite_achat, SUM(p.stock_initial) AS stock_initial, SUM(p.stock_physique) AS stock_physique
 							FROM t_achats AS ha
-							JOIN t_factures AS hf ON ha.id_facture = hf.idt_factures
+							JOIN t_factures_achats AS hf ON ha.id_facture = hf.idt_factures_achats
 							JOIN t_produits AS p ON ha.id_produit = p.idt_produits
 							WHERE hf.date_facture >= '$date_fin' AND hf.date_facture <= '$date_debut'";
 

@@ -13,13 +13,14 @@
   <category label="01/2015"/>
   <category label="02/2015"/>
   <category label="03/2015"/>
+  <category label="04/2015"/>
  </categories>
  <dataset seriesName="Achats mensuelles" color="000000">
   <set value="229082596"/>
   <set value="26448653"/>
   <set value="22706894"/>
   <set value="1829620"/>
-  <set value="6660708"/>
+  <set value="6661508"/>
   <set value="2600076"/>
   <set value="1448475"/>
   <set value="314009"/>
@@ -27,6 +28,7 @@
   <set value="61986"/>
   <set value="202972"/>
   <set value="1596"/>
+  <set value="3087"/>
  </dataset>
  <styles>
   <definition>

@@ -82,7 +82,7 @@ $(document).ready (function ()
 				{	
 					ShowSuccess ("Le produit (<strong>" + $("#nom_produit").val () + "</strong>) a bien été enregistré dans la facture.");
 					$.modal.close ();					
-					document.location.href="administration_magasin.php?sub=produits_facture";
+					document.location.href="../../magasin.php";
 				}
 				else
 				{

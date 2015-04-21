@@ -89,7 +89,7 @@ $(document).ready (function ()
 				{	
 					ShowSuccess ("La facture (<strong>" + $("#numero_facture").val () + "</strong>) a bien été enregistrée.");
 					$.modal.close ();					
-					document.location.href="administration_magasin.php?sub=factures";
+					document.location.href="../../magasin.php";
 				}
 				else
 				{

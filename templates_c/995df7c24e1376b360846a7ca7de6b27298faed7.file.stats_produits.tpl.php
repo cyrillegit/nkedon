@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.14, created on 2015-04-07 19:48:54
-         compiled from ".\templates\administration_magasin\statistiques\stats_produits.tpl" */ ?>
+         compiled from ".\templates\magasin\statistiques\stats_produits.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:135355308defb15e4b0-78890336%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '995df7c24e1376b360846a7ca7de6b27298faed7' => 
     array (
-      0 => '.\\templates\\administration_magasin\\statistiques\\stats_produits.tpl',
+      0 => '.\\templates\\magasin\\statistiques\\stats_produits.tpl',
       1 => 1426526077,
       2 => 'file',
     ),
@@ -35,7 +35,7 @@ function RefreshTableDatePeremptionProduits( time_peremption )
     var param = "time_peremption="+time_peremption;
 	var responseText = $.ajax({
 			type	: "POST",
-			url		: "ajax/infos/administration_magasin/GetTableauDatePeremptionProduits.php",
+			url		: "ajax/infos/magasin/GetTableauDatePeremptionProduits.php",
 			async	: false,
 			data	: param,
 			success	: function (msg){}
@@ -104,7 +104,7 @@ $(document).ready (function ()
     <div id="tableau_produits_peremption"></div>
 
     <div style="clear: both;">&nbsp;</div>
-    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='administration_magasin.php?sub=statistiques';"></div>
+    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='../magasin.php';"></div>
 </div>
 
 <?php echo $_smarty_tpl->getSubTemplate ("common/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

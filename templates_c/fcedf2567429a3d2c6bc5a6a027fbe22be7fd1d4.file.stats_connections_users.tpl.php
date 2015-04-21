@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.14, created on 2014-02-13 22:26:57
-         compiled from ".\templates\administration_magasin\statistiques\stats_connections_users.tpl" */ ?>
+         compiled from ".\templates\magasin\statistiques\stats_connections_users.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:117252fd2437bbdd96-56747861%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'fcedf2567429a3d2c6bc5a6a027fbe22be7fd1d4' => 
     array (
-      0 => '.\\templates\\administration_magasin\\statistiques\\stats_connections_users.tpl',
+      0 => '.\\templates\\magasin\\statistiques\\stats_connections_users.tpl',
       1 => 1392323789,
       2 => 'file',
     ),
@@ -29,7 +29,7 @@ function RefreshXMLConnectionsUsers ()
 {
     var responseText = $.ajax({
             type    : "POST",
-            url     : "ajax/infos/administration_magasin/statistiques/GetXMLConnectionsUsers.php",
+            url     : "ajax/infos/magasin/statistiques/GetXMLConnectionsUsers.php",
             async   : false,
             data    : "",
             success : function (msg){}
@@ -63,7 +63,7 @@ $(document).ready (function ()
     <div id="chartContainer"></div>
     </div>
     <div style="clear: both;">&nbsp;</div>
-    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='administration_magasin.php?sub=statistiques';"></div>
+    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='../magasin.php';"></div>
 </div>
 <?php echo $_smarty_tpl->getSubTemplate ("common/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>

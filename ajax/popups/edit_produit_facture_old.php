@@ -54,7 +54,7 @@ $(document).ready (function ()
 					
 					ShowSuccess ("La quantité du produit a bien été enregistré.");
 					$.modal.close ();					
-					document.location.href="administration_magasin.php?sub=edit_facture&id=0";
+					document.location.href="../../magasin.php";
 				}
 				else
 				{

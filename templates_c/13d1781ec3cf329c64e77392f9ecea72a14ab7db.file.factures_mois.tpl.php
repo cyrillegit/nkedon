@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.14, created on 2015-04-16 09:55:11
-         compiled from ".\templates\historiques\historiques_factures\factures_mois.tpl" */ ?>
+         compiled from ".\templates\historiques\historiques_factures\factures_achats_mois.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:32750551468fc1a1e02-60262559%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '13d1781ec3cf329c64e77392f9ecea72a14ab7db' => 
     array (
-      0 => '.\\templates\\historiques\\historiques_factures\\factures_mois.tpl',
+      0 => '.\\templates\\historiques\\historiques_factures\\factures_achats_mois.tpl',
       1 => 1429177439,
       2 => 'file',
     ),

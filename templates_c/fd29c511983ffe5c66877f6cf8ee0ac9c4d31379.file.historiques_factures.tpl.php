@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.14, created on 2014-07-16 21:01:09
-         compiled from ".\templates\administration_magasin\gestion_magasin\historiques_journal.tpl" */ ?>
+         compiled from ".\templates\magasin\gestion_magasin\historiques_journal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4961531c6de0ceb624-48460298%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'fd29c511983ffe5c66877f6cf8ee0ac9c4d31379' => 
     array (
-      0 => '.\\templates\\administration_magasin\\gestion_magasin\\historiques_journal.tpl',
+      0 => '.\\templates\\magasin\\gestion_magasin\\historiques_journal.tpl',
       1 => 1405544454,
       2 => 'file',
     ),
@@ -35,7 +35,7 @@ function RefreshTableHistoriqueFacture(date_histo_facture)
     var param = "date_histo_facture="+date_histo_facture;
 	var responseText = $.ajax({
 			type	: "POST",
-			url		: "ajax/infos/administration_magasin/GetTableauHistoriquesFactures.php",
+			url		: "ajax/infos/magasin/GetTableauHistoriquesFactures.php",
 			async	: false,
 			data	: param,
 			success	: function (msg){}
@@ -103,7 +103,7 @@ $(document).ready (function ()
     <div id="tableau_histo_factures"></div>
 
     <div style="clear: both;">&nbsp;</div>
-    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='administration_magasin.php?sub=groupes_factures';"></div>
+    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='../magasin.php';"></div>
 </div>
 
 <?php echo $_smarty_tpl->getSubTemplate ("common/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.14, created on 2015-04-07 17:29:04
-         compiled from ".\templates\administration_magasin\statistiques\stats_fournisseurs_factures.tpl" */ ?>
+         compiled from ".\templates\magasin\statistiques\stats_fournisseurs_factures.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:918052fd4606f26ee9-56942019%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e599af075c6e312c57bc28615dbef5d9f1294a2b' => 
     array (
-      0 => '.\\templates\\administration_magasin\\statistiques\\stats_fournisseurs_factures.tpl',
+      0 => '.\\templates\\magasin\\statistiques\\stats_fournisseurs_factures.tpl',
       1 => 1426526077,
       2 => 'file',
     ),
@@ -29,7 +29,7 @@ function RefreshXMLFacturesFournisseur()
 {
     var responseText = $.ajax({
             type    : "POST",
-            url     : "ajax/infos/administration_magasin/statistiques/GetXMLFacturesFournisseur.php",
+            url     : "ajax/infos/magasin/statistiques/GetXMLFacturesFournisseur.php",
             async   : false,
             data    : "",
             success : function (msg){}
@@ -63,7 +63,7 @@ $(document).ready (function ()
     <div id="chartContainer"></div>
     </div>
     <div style="clear: both;">&nbsp;</div>
-    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='administration_magasin.php?sub=statistiques';"></div>
+    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='../magasin.php';"></div>
 </div>
 <?php echo $_smarty_tpl->getSubTemplate ("common/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>

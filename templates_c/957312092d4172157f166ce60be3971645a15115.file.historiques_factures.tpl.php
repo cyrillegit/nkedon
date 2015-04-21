@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.14, created on 2015-04-16 16:22:00
-         compiled from ".\templates\historiques\historiques_factures\historiques_factures.tpl" */ ?>
+         compiled from ".\templates\historiques\historiques_factures\historiques_factures_achats.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:27111551422d25e9805-36566934%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '957312092d4172157f166ce60be3971645a15115' => 
     array (
-      0 => '.\\templates\\historiques\\historiques_factures\\historiques_factures.tpl',
+      0 => '.\\templates\\historiques\\historiques_factures\\historiques_factures_achats.tpl',
       1 => 1429180403,
       2 => 'file',
     ),

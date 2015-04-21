@@ -56,7 +56,7 @@ $(document).ready (function ()
 				{	
 					ShowSuccess ("Le produit (<strong>" + $("#nom_produit").val () + "</strong>) a bien été enregistré.");
 					$.modal.close ();					
-					document.location.href="administration_magasin.php?sub=inventaire";
+					document.location.href="../../magasin.php";
 				}
 				else
 				{

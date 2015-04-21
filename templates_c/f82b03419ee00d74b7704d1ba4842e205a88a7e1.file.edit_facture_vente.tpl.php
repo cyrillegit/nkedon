@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.14, created on 2015-04-20 15:24:20
-         compiled from ".\templates\administration_magasin\gestion_factures\edit_facture_vente.tpl" */ ?>
+         compiled from ".\templates\magasin\gestion_factures\edit_facture_vente.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1827755194d8571d986-99279011%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f82b03419ee00d74b7704d1ba4842e205a88a7e1' => 
     array (
-      0 => '.\\templates\\administration_magasin\\gestion_factures\\edit_facture_vente.tpl',
+      0 => '.\\templates\\magasin\\gestion_factures\\edit_facture_vente.tpl',
       1 => 1429543456,
       2 => 'file',
     ),
@@ -36,7 +36,7 @@ function RefreshTableProduitsFactureVente ()
 {
 	var responseText = $.ajax({
 			type	: "POST",
-			url		: "ajax/infos/administration_magasin/GetTableauProduitsFactureVente.php",
+			url		: "ajax/infos/magasin/GetTableauProduitsFactureVente.php",
 			async	: false,
 			data	: "",
 			success	: function (msg){}
@@ -158,7 +158,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le produit (<strong>" + $("#nom_produit").val () + "</strong>) a bien été enregistré dans la facture.");
                     $.modal.close ();
-                    document.location.href="administration_magasin.php?sub=facture_vente";
+                    document.location.href="../magasin.php";
                 }
                 else
                 {
@@ -197,7 +197,7 @@ $(document).ready (function ()
 				{	
 					ShowSuccess ("La facture (<strong>" + $("#numero_facture").val () + "</strong>) a bien été enregistrée.");
 					$.modal.close ();					
-					document.location.href="administration_magasin.php?sub=result_facture_vente&status=register";
+					document.location.href="../magasin.php";
 				}
 				else
 				{

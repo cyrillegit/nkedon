@@ -83,7 +83,7 @@
                     $target = "historiques_journal/historiques_journal";
                 }
 			}
-            else if( $target == "historiques_factures" )
+            else if( $target == "historiques_factures_achats" )
             {
                 if(isset($_GET["annee"])) {
                     $annee = $_GET["annee"];
@@ -101,15 +101,15 @@
 
                                 $tpl_index->assign("nb_factures", $nb_factures );
                                 $tpl_index->assign("mois_annee", getLitterateMonth( $mois )." ".$annee);
-                                $target = "historiques_factures/factures_mois";
+                                $target = "historiques_factures/factures_achats_mois";
                             }
                         }else{
                             $tpl_index->assign("annee", $annee);
-                            $target = "historiques_factures/factures_annee";
+                            $target = "historiques_factures/factures_achats_annee";
                         }
                     }
                 }else{
-                    $target = "historiques_factures/historiques_factures";
+                    $target = "historiques_factures/historiques_factures_achats";
                 }
             }
             else if( $target == "historiques_factures_ventes" )

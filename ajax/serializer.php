@@ -62,9 +62,9 @@ else
 			{
 				include ("Serializer/edit_fournisseur.php");
 			}
-			else if ($_POST ["target"] == "factures")
+			else if ($_POST ["target"] == "facture_achat")
 			{
-				include ("Serializer/edit_facture.php");
+				include ("Serializer/edit_facture_achat.php");
 			}						
 			else if ($_POST ["target"] == "compte_utilisateur")
 			{

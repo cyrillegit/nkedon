@@ -108,7 +108,7 @@ $(document).ready (function ()
 				{	
 					ShowSuccess ("Le recapitulatif fait par (<strong>" + $("#nom_caissier").val () + "</strong>) a bien été enregistré.");
 					$.modal.close ();					
-					document.location.href="administration_magasin.php?sub=recapitulatif_inventaire";
+					document.location.href="../../magasin.php";
 				}
 				else
 				{

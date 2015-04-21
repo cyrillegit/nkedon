@@ -28,12 +28,12 @@
 
 	function slideSwitch() 
 	{
-	    var $active = $('#slideshow div.active');
+	    var $active = $('#slideshow IMG.active');
 
-	    if ( $active.length == 0 ) $active = $('#slideshow div:last');
+	    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
 
 	    var $next =  $active.next().length ? $active.next()
-	        : $('#slideshow div:first');
+	        : $('#slideshow IMG:first');
 
 	    $active.addClass('last-active');
 	        
@@ -133,11 +133,11 @@
             	<div class="titre"><b><i>Gestion du magasin et de la production par NKEDON</i></b></div>
 				<hr/>
               	<div id="slideshow">
-    				<div><img src="assets/images/slideshow_images/img1.jpg" alt="" class="active" /></div>
+    				<img src="assets/images/slideshow_images/img1.jpg" alt="" class="active" />
 
-                    <div><img src="assets/images/slideshow_images/img2.jpg" alt="" /></div>
+                    <img src="assets/images/slideshow_images/img2.jpg" alt="" />
 
-                    <div><img src="assets/images/slideshow_images/img3.jpg" alt="" /></div>
+                    <img src="assets/images/slideshow_images/img3.jpg" alt="" />
 				</div>
             </div>
             {*<table width="100%" border="0" cellpadding="0" cellspacing="0">*}

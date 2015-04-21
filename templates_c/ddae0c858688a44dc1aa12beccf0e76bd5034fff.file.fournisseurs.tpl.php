@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.14, created on 2015-03-26 22:54:08
-         compiled from ".\templates\administration_magasin\gestion_fournisseurs\fournisseurs.tpl" */ ?>
+         compiled from ".\templates\magasin\gestion_fournisseurs\fournisseurs.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1767152ebaf57636ca0-42910577%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ddae0c858688a44dc1aa12beccf0e76bd5034fff' => 
     array (
-      0 => '.\\templates\\administration_magasin\\gestion_fournisseurs\\fournisseurs.tpl',
+      0 => '.\\templates\\magasin\\gestion_fournisseurs\\fournisseurs.tpl',
       1 => 1427410446,
       2 => 'file',
     ),
@@ -34,7 +34,7 @@ function RefreshTableFournisseurs ()
 {
 	var responseText = $.ajax({
 			type	: "POST",
-			url		: "ajax/infos/administration_magasin/GetTableauFournisseurs.php",
+			url		: "ajax/infos/magasin/GetTableauFournisseurs.php",
 			async	: false,
 			data	: "",
 			success	: function (msg){}
@@ -116,7 +116,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le produit (<strong>" + $("#nom_fournisseur").val () + "</strong>) a bien été enregistré.");
                     $.modal.close ();
-                    document.location.href="administration_magasin.php?sub=fournisseurs";
+                    document.location.href="../magasin.php";
                 }
                 else
                 {
@@ -231,7 +231,7 @@ $(document).ready (function ()
     <div id="tableau_fournisseurs"></div>
 
     <div style="clear: both;">&nbsp;</div>
-    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='administration_magasin.php';"></div>
+    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='../magasin.php';"></div>
 </div>
 
 <?php echo $_smarty_tpl->getSubTemplate ("common/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

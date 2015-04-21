@@ -153,7 +153,7 @@
             $tpl_index->assign( "commentaire", $commentaire );
             $tpl_index->assign("nb_produits", $nb_produits);
             $tpl_index->assign( "montant_journal", number_format( $montant_operation, 2, ',', ' ') );
-            $tpl_index->display('administration_magasin/gestion_journal/edit_operations_journal.tpl');
+            $tpl_index->display('magasin/gestion_journal/edit_operations_journal.tpl');
         }
 
 	}

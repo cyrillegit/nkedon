@@ -69,7 +69,7 @@ $(document).ready (function ()
 				{	
 					ShowSuccess ("Le produit (<strong>" + $("#nom_fournisseur").val () + "</strong>) a bien été enregistré.");
 					$.modal.close ();					
-					document.location.href="administration_magasin.php?sub=fournisseurs";
+					document.location.href="../../magasin.php";
 				}
 				else
 				{

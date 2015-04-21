@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.14, created on 2015-03-26 14:48:34
-         compiled from ".\templates\administration_magasin\gestion_magasin\generate_synthese.tpl" */ ?>
+         compiled from ".\templates\magasin\gestion_magasin\generate_synthese.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2750552ebec823a1dd1-31378644%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c444731ac674871a88c38b67c762332dfe40d234' => 
     array (
-      0 => '.\\templates\\administration_magasin\\gestion_magasin\\generate_synthese.tpl',
+      0 => '.\\templates\\magasin\\gestion_magasin\\generate_synthese.tpl',
       1 => 1427381191,
       2 => 'file',
     ),
@@ -35,7 +35,7 @@ function RefreshTableGenerateSynthese(date_histo_synthese)
     var param = "date_histo_synthese="+date_histo_synthese;
 	var responseText = $.ajax({
 			type	: "POST",
-			url		: "ajax/infos/administration_magasin/GetTableauGenerateSynthese.php",
+			url		: "ajax/infos/magasin/GetTableauGenerateSynthese.php",
 			async	: false,
 			data	: param,
 			success	: function (msg){}
@@ -53,7 +53,7 @@ $(document).ready (function ()
 
    $('#histoSynthese').click(function() 
     {
-        document.location.href="administration_magasin.php?sub=historiques_syntheses";
+        document.location.href="../magasin.php";
     });
 //*
     $(".links").each (function ()
@@ -106,7 +106,7 @@ $(document).ready (function ()
     <div id="tableau_generate_synthese"></div>
 
     <div style="clear: both;">&nbsp;</div>
-    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='administration_magasin.php';"></div>
+    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='../magasin.php';"></div>
 </div>
 
 <?php echo $_smarty_tpl->getSubTemplate ("common/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

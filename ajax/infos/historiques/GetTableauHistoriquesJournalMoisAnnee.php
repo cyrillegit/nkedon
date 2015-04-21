@@ -1,6 +1,6 @@
 <?php
 /**
-	Fichier GetTableauHistoriquesFactures.php
+	Fichier GetTableauHistoriquesFacturesAchats.php
 	-----------------------------------
 	Ce fichier crée un tableau contenant les informations des factures en base de données.
 */

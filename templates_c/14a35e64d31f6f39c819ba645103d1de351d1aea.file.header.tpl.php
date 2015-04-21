@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-04-14 17:19:21
+<?php /* Smarty version Smarty-3.1.14, created on 2015-04-21 13:23:41
          compiled from ".\templates\common\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:399652eba7b1708760-69883461%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '14a35e64d31f6f39c819ba645103d1de351d1aea' => 
     array (
       0 => '.\\templates\\common\\header.tpl',
-      1 => 1429031952,
+      1 => 1429621739,
       2 => 'file',
     ),
   ),
@@ -783,23 +783,23 @@ $(document).ready (function ()
 				      </ul>
 				   </li>
 				   <?php }?>
-				   <li class='has-sub'><a href="administration_magasin.php"><span>Magasin</span></a>
+				   <li class='has-sub'><a href="magasin.php"><span>Magasin</span></a>
 				      <ul>
-				         <li class='has-sub'><a href="administration_magasin.php?sub=produits"><span>Ajouter / Modifer un produit</span></a></li>
-                          <li class='has-sub'><a href="administration_magasin.php?sub=fournisseurs"><span>Ajouter / modifier un fournisseur</span></a></li>
-				         <li class='has-sub'><a href="administration_magasin.php?sub=edit_facture"><span>Enregistrer une facture d'achat</span></a></li>
-                          <li class='has-sub'><a href="administration_magasin.php?sub=edit_facture_vente"><span>Etablir une facture de vente</span></a></li>
-                          <li class='has-sub'><a href="administration_magasin.php?sub=edit_operations_journal"><span>Réaliser le journal</span></a></li>
-				         <li class='has-sub'><a href="administration_magasin.php?sub=inventaire"><span>Réaliser l'inventaire du magasin</span></a></li>
+				         <li class='has-sub'><a href="magasin.php?sub=produits"><span>Ajouter / Modifer un produit</span></a></li>
+                          <li class='has-sub'><a href="magasin.php?sub=fournisseurs"><span>Ajouter / modifier un fournisseur</span></a></li>
+				         <li class='has-sub'><a href="magasin.php?sub=edit_facture_achat"><span>Enregistrer une facture d'achat</span></a></li>
+                          <li class='has-sub'><a href="magasin.php?sub=edit_facture_vente"><span>Etablir une facture de vente</span></a></li>
+                          <li class='has-sub'><a href="magasin.php?sub=edit_operations_journal"><span>Réaliser le journal</span></a></li>
+				         <li class='has-sub'><a href="magasin.php?sub=inventaire"><span>Réaliser l'inventaire du magasin</span></a></li>
 				      </ul>
 				   </li>
 
-				   <li class='has-sub'><a href="administration_production.php"><span>Production</span></a>
+				   <li class='has-sub'><a href="production.php"><span>Production</span></a>
 				   </li>
                     <?php if ($_SESSION['infoUser']['id_type_user']<=5){?>
                         <li class='has-sub'><a href="historiques.php"><span>Historiques</span></a>
                             <ul>
-                                <li class="has-sub"><a href="historiques.php?sub=historiques_factures"><span>Historiques des factures d'achats</span></a></li>
+                                <li class="has-sub"><a href="historiques.php?sub=historiques_factures_achats"><span>Historiques des factures d'achats</span></a></li>
                                 <li class="has-sub"><a href="historiques.php?sub=historiques_factures_ventes"><span>Historiques des factures de ventes</span></a></li>
                                 <li class='has-sub'><a href="historiques.php?sub=historiques_journal"><span>Historiques des journaux</span></a></li>
                                 <li class='has-sub'><a href="historiques.php?sub=historiques_inventaires"><span>Historiques des inventaires</span></a></li>

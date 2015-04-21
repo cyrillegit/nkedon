@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.14, created on 2015-03-26 22:50:08
-         compiled from ".\templates\administration_magasin\gestion_produits\produits.tpl" */ ?>
+         compiled from ".\templates\magasin\gestion_produits\produits.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1206552ebaf4c5b8346-00584196%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '79b691200654f1704fad2fb1ee7d8c71ab6ea40c' => 
     array (
-      0 => '.\\templates\\administration_magasin\\gestion_produits\\produits.tpl',
+      0 => '.\\templates\\magasin\\gestion_produits\\produits.tpl',
       1 => 1427410205,
       2 => 'file',
     ),
@@ -34,7 +34,7 @@ function RefreshTableProduits ()
 {
 	var responseText = $.ajax({
 			type	: "POST",
-			url		: "ajax/infos/administration_magasin/GetTableauProduits.php",
+			url		: "ajax/infos/magasin/GetTableauProduits.php",
 			async	: false,
 			data	: "",
 			success	: function (msg){}
@@ -116,7 +116,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le produit (<strong>" + $("#nom_produit").val () + "</strong>) a bien été enregistré.");
                     $.modal.close ();
-                    document.location.href="administration_magasin.php?sub=produits";
+                    document.location.href="../magasin.php";
                 }
                 else
                 {
@@ -228,7 +228,7 @@ $(document).ready (function ()
     <div id="tableau_produits"></div>
 
     <div style="clear: both;">&nbsp;</div>
-    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='administration_magasin.php';"></div>
+    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='../magasin.php';"></div>
 </div>
 
 <?php echo $_smarty_tpl->getSubTemplate ("common/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

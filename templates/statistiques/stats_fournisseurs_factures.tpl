@@ -7,7 +7,7 @@ function RefreshXMLFacturesFournisseur()
 {
     var responseText = $.ajax({
             type    : "POST",
-            url     : "ajax/infos/administration_magasin/statistiques/GetXMLFacturesFournisseur.php",
+            url     : "ajax/infos/magasin/statistiques/GetXMLFacturesFournisseur.php",
             async   : false,
             data    : "",
             success : function (msg){}
