@@ -2,154 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="624981b3-8f83-4c5b-a3cf-c77a5949c79f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/159b4c7131ca66c54b746b5bf057d934ed71ebd0.file.factures_achats_annee.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/371750c8d2a28efa940879720f251214a4cb8b2e.file.edit_facture.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/4d031b202d3229c260a95b38e1239a49067a7858.file.edit_facture_vente.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/63b3b7ccf108060308676522044d694a21e42db5.file.historiques_factures_achats.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/7a16748481525cff978ccf721c08f56f18ba69c0.file.main.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/8dbe5f2b9e9134a05c61f10d4ee4257eeb08243c.file.inventaire.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/9685c43de77b5a37b95171f99bd4c81dab118a57.file.edit_operations_journal.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/ac08af2b29abd23ac8718399e816809410eb7689.file.main.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/b3fdc884393198e5a3955dd2f1b2b3b1b449b183.file.factures_achats_mois.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/dc7badc0802d2300f1851ef7c54f158f5bdb4ed1.file.edit_facture_achat.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/ef6f702a9b71f4946f7b04a1ecafc88561288fa5.file.produits.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates_c/f3791394098f846d5eb35f5dcab9a71ec61f7e89.file.fournisseurs.tpl.php" />
-      <change type="DELETED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\gestion_factures\factures.tpl" afterPath="" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\administration_magasin.php" afterPath="$PROJECT_DIR$/magasin.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\administration_production.php" afterPath="$PROJECT_DIR$/production.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\Serializer\edit_facture.php" afterPath="$PROJECT_DIR$/ajax/Serializer/edit_facture_achat.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\GetTableauAnnulerSynthese.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/GetTableauAnnulerSynthese.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\GetTableauDatePeremptionProduits.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/GetTableauDatePeremptionProduits.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\GetTableauFactureAchat.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/GetTableauFactureAchat.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\GetTableauFactureVente.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/GetTableauFactureVente.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\GetTableauFactures.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/GetTableauFactures.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\GetTableauFournisseurs.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/GetTableauFournisseurs.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\GetTableauGenerateSynthese.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/GetTableauGenerateSynthese.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\GetTableauHistoriqueSyntheses.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/GetTableauHistoriqueSyntheses.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\GetTableauHistoriquesFactures.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/GetTableauHistoriquesFactures.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\GetTableauJournal.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/GetTableauJournal.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\GetTableauProduits.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/GetTableauProduits.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\GetTableauProduitsFacture.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/GetTableauProduitsFacture.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\GetTableauProduitsFactureVente.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/GetTableauProduitsFactureVente.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\GetTableauProduitsForInventaire.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/GetTableauProduitsForInventaire.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\GetTableauProduitsOperation.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/GetTableauProduitsOperation.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\GetTableauRecapitulatifInventaire.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/GetTableauRecapitulatifInventaire.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\getTableauProduitsAchetes.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/getTableauProduitsAchetes.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\getTableauProduitsAchetesForEdit.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/getTableauProduitsAchetesForEdit.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\statistiques\GetXMLConnectionsUsers.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/statistiques/GetXMLConnectionsUsers.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\statistiques\GetXMLFacturesArchiveesFournisseur.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/statistiques/GetXMLFacturesArchiveesFournisseur.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\statistiques\GetXMLFacturesFournisseur.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/statistiques/GetXMLFacturesFournisseur.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\statistiques\GetXMLGraphesProgressions.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/statistiques/GetXMLGraphesProgressions.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\statistiques\GetXMLProduitsAchetesVendus.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/statistiques/GetXMLProduitsAchetesVendus.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\statistiques\GetXMLUsersTypesUsers.php" afterPath="$PROJECT_DIR$/ajax/infos/magasin/statistiques/GetXMLUsersTypesUsers.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\statistiques\data_stats_connections_users.xml" afterPath="$PROJECT_DIR$/ajax/infos/magasin/statistiques/data_stats_connections_users.xml" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\statistiques\data_stats_courbes_progressions.xml" afterPath="$PROJECT_DIR$/ajax/infos/magasin/statistiques/data_stats_courbes_progressions.xml" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\statistiques\data_stats_factures_fournisseurs.xml" afterPath="$PROJECT_DIR$/ajax/infos/magasin/statistiques/data_stats_factures_fournisseurs.xml" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\statistiques\data_stats_produits_achetes_vendus.xml" afterPath="$PROJECT_DIR$/ajax/infos/magasin/statistiques/data_stats_produits_achetes_vendus.xml" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\administration_magasin\statistiques\data_stats_users_types_users.xml" afterPath="$PROJECT_DIR$/ajax/infos/magasin/statistiques/data_stats_users_types_users.xml" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\historiques\GetTableauHistoriquesFactures.php" afterPath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesAchats.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\historiques\GetTableauHistoriquesFacturesAnnee.php" afterPath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesAchatsAnnee.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\ajax\infos\historiques\GetTableauHistoriquesFacturesMoisAnnee.php" afterPath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesAchatsMoisAnnee.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\_notes\dwsync.xml" afterPath="$PROJECT_DIR$/templates/magasin/_notes/dwsync.xml" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\gestion_factures\edit_facture.tpl" afterPath="$PROJECT_DIR$/templates/magasin/gestion_factures/edit_facture_achat.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\gestion_factures\edit_facture_vente.tpl" afterPath="$PROJECT_DIR$/templates/magasin/gestion_factures/edit_facture_vente.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\gestion_factures\result_facture_achat.tpl" afterPath="$PROJECT_DIR$/templates/magasin/gestion_factures/result_facture_achat.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\gestion_factures\result_facture_vente.tpl" afterPath="$PROJECT_DIR$/templates/magasin/gestion_factures/result_facture_vente.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\gestion_fournisseurs\fournisseurs.tpl" afterPath="$PROJECT_DIR$/templates/magasin/gestion_fournisseurs/fournisseurs.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\gestion_journal\edit_operations_journal.tpl" afterPath="$PROJECT_DIR$/templates/magasin/gestion_journal/edit_operations_journal.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\gestion_journal\result_journal.tpl" afterPath="$PROJECT_DIR$/templates/magasin/gestion_journal/result_journal.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\gestion_magasin\backup_db.tpl" afterPath="$PROJECT_DIR$/templates/magasin/gestion_magasin/backup_db.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\gestion_magasin\generate_synthese.tpl" afterPath="$PROJECT_DIR$/templates/magasin/gestion_magasin/generate_synthese.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\gestion_magasin\historique_syntheses.tpl" afterPath="$PROJECT_DIR$/templates/magasin/gestion_magasin/historique_syntheses.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\gestion_magasin\historiques_factures.tpl" afterPath="$PROJECT_DIR$/templates/magasin/gestion_magasin/historiques_factures.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\gestion_magasin\inventaire.tpl" afterPath="$PROJECT_DIR$/templates/magasin/gestion_magasin/inventaire.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\gestion_magasin\recapitulatif_inventaire.tpl" afterPath="$PROJECT_DIR$/templates/magasin/gestion_magasin/recapitulatif_inventaire.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\gestion_produits\produits.tpl" afterPath="$PROJECT_DIR$/templates/magasin/gestion_produits/produits.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\index.php" afterPath="$PROJECT_DIR$/templates/magasin/index.php" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\main.tpl" afterPath="$PROJECT_DIR$/templates/magasin/main.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\statistiques\statistiques.tpl" afterPath="$PROJECT_DIR$/templates/magasin/statistiques/statistiques.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\statistiques\stats_connections_users.tpl" afterPath="$PROJECT_DIR$/templates/magasin/statistiques/stats_connections_users.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\statistiques\stats_fournisseurs_factures.tpl" afterPath="$PROJECT_DIR$/templates/magasin/statistiques/stats_fournisseurs_factures.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\statistiques\stats_fournisseurs_factures_archivees.tpl" afterPath="$PROJECT_DIR$/templates/magasin/statistiques/stats_fournisseurs_factures_archivees.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\statistiques\stats_graphes_progression.tpl" afterPath="$PROJECT_DIR$/templates/magasin/statistiques/stats_graphes_progression.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\statistiques\stats_produits.tpl" afterPath="$PROJECT_DIR$/templates/magasin/statistiques/stats_produits.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\statistiques\stats_produits_achetes_vendus.tpl" afterPath="$PROJECT_DIR$/templates/magasin/statistiques/stats_produits_achetes_vendus.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_magasin\statistiques\stats_users_types_users.tpl" afterPath="$PROJECT_DIR$/templates/magasin/statistiques/stats_users_types_users.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\administration_production\main.tpl" afterPath="$PROJECT_DIR$/templates/production/main.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\historiques\historiques_factures\factures_annee.tpl" afterPath="$PROJECT_DIR$/templates/historiques/historiques_factures/factures_achats_annee.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\historiques\historiques_factures\factures_mois.tpl" afterPath="$PROJECT_DIR$/templates/historiques/historiques_factures/factures_achats_mois.tpl" />
-      <change type="MOVED" beforePath="C:\wamp\www\nkedon\templates\historiques\historiques_factures\historiques_factures.tpl" afterPath="$PROJECT_DIR$/templates/historiques/historiques_factures/historiques_factures_achats.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/0057fb38afcb59aecaa55fa6f6e866babcc5067d.file.inventaire.tpl.php" afterPath="$PROJECT_DIR$/templates_c/0057fb38afcb59aecaa55fa6f6e866babcc5067d.file.inventaire.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/017ea203869b1ad0feb61689e6632571bc8ba908.file.factures_annee.tpl.php" afterPath="$PROJECT_DIR$/templates_c/017ea203869b1ad0feb61689e6632571bc8ba908.file.factures_annee.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/058c042157d9e822968fde4d7a1ab55bf74c30f4.file.stats_fournisseurs_factures_mois.tpl.php" afterPath="$PROJECT_DIR$/templates_c/058c042157d9e822968fde4d7a1ab55bf74c30f4.file.stats_fournisseurs_factures_mois.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/13bccf1f6ee3c920740ee469bb37c7e9c6172b6d.file.historique_syntheses.tpl.php" afterPath="$PROJECT_DIR$/templates_c/13bccf1f6ee3c920740ee469bb37c7e9c6172b6d.file.historique_syntheses.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/13d1781ec3cf329c64e77392f9ecea72a14ab7db.file.factures_mois.tpl.php" afterPath="$PROJECT_DIR$/templates_c/13d1781ec3cf329c64e77392f9ecea72a14ab7db.file.factures_mois.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/14a35e64d31f6f39c819ba645103d1de351d1aea.file.header.tpl.php" afterPath="$PROJECT_DIR$/templates_c/14a35e64d31f6f39c819ba645103d1de351d1aea.file.header.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/41693a93465e8bcd65826eb2b2ee7e4b3f30fb52.file.stats_produits_achetes_vendus.tpl.php" afterPath="$PROJECT_DIR$/templates_c/41693a93465e8bcd65826eb2b2ee7e4b3f30fb52.file.stats_produits_achetes_vendus.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/41af896802b69e63e390a356d0a4f4cc8464c36a.file.stats_fournisseurs_factures_archivees.tpl.php" afterPath="$PROJECT_DIR$/templates_c/41af896802b69e63e390a356d0a4f4cc8464c36a.file.stats_fournisseurs_factures_archivees.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/46c338152dca3381b417b580f69b7698b1380d9e.file.stats_users_types_users.tpl.php" afterPath="$PROJECT_DIR$/templates_c/46c338152dca3381b417b580f69b7698b1380d9e.file.stats_users_types_users.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/4a3111e710f84888bd8197f69537e9b5b9f325a4.file.main.tpl.php" afterPath="$PROJECT_DIR$/templates_c/4a3111e710f84888bd8197f69537e9b5b9f325a4.file.main.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/5a7a56bc5b4ac828f502c52d462c367128b4298b.file.stats_graphes_progression.tpl.php" afterPath="$PROJECT_DIR$/templates_c/5a7a56bc5b4ac828f502c52d462c367128b4298b.file.stats_graphes_progression.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/63f7eeeaa381c3e8c1c7db3e27c48379bdc28b51.file.result_facture_achat.tpl.php" afterPath="$PROJECT_DIR$/templates_c/63f7eeeaa381c3e8c1c7db3e27c48379bdc28b51.file.result_facture_achat.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/6d4b5bc2e6a5bcd5203e8e58945a6fea4f9e87a6.file.factures.tpl.php" afterPath="$PROJECT_DIR$/templates_c/6d4b5bc2e6a5bcd5203e8e58945a6fea4f9e87a6.file.factures.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/749422d4cfc3eb5677cf499730392b6accd4d1c7.file.index.tpl.php" afterPath="$PROJECT_DIR$/templates_c/749422d4cfc3eb5677cf499730392b6accd4d1c7.file.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/79b691200654f1704fad2fb1ee7d8c71ab6ea40c.file.produits.tpl.php" afterPath="$PROJECT_DIR$/templates_c/79b691200654f1704fad2fb1ee7d8c71ab6ea40c.file.produits.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/82a8f209c361b03000a594e6e0f3649d713137fa.file.operations_journal.tpl.php" afterPath="$PROJECT_DIR$/templates_c/82a8f209c361b03000a594e6e0f3649d713137fa.file.operations_journal.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/8f2713a83971c286acbea99410aba8e6809a0d95.file.result_journal.tpl.php" afterPath="$PROJECT_DIR$/templates_c/8f2713a83971c286acbea99410aba8e6809a0d95.file.result_journal.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/90621457dbaa28f2a5a65daeb9bf15841db408d0.file.journal.tpl.php" afterPath="$PROJECT_DIR$/templates_c/90621457dbaa28f2a5a65daeb9bf15841db408d0.file.journal.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/957312092d4172157f166ce60be3971645a15115.file.historiques_factures.tpl.php" afterPath="$PROJECT_DIR$/templates_c/957312092d4172157f166ce60be3971645a15115.file.historiques_factures.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/995df7c24e1376b360846a7ca7de6b27298faed7.file.stats_produits.tpl.php" afterPath="$PROJECT_DIR$/templates_c/995df7c24e1376b360846a7ca7de6b27298faed7.file.stats_produits.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/ClassDB.php" afterPath="$PROJECT_DIR$/include/ClassDB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesVentesMoisAnnee.php" afterPath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesVentesMoisAnnee.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesInventaires.php" afterPath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesInventaires.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesJournal.php" afterPath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesJournal.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesJournalAnnee.php" afterPath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesJournalAnnee.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesJournalMoisAnnee.php" afterPath="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesJournalMoisAnnee.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/a6334d06c0bd039e04c3bca76454a4450c946262.file.stats_users_types_users.tpl.php" afterPath="$PROJECT_DIR$/templates_c/a6334d06c0bd039e04c3bca76454a4450c946262.file.stats_users_types_users.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/add27fecf6aae09f1dcb7bc78f45ea31006d9fde.file.main.tpl.php" afterPath="$PROJECT_DIR$/templates_c/add27fecf6aae09f1dcb7bc78f45ea31006d9fde.file.main.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/b0de3e8550b3468ead5669b7ac3d1fe52db8b172.file.groupes_factures.tpl.php" afterPath="$PROJECT_DIR$/templates_c/b0de3e8550b3468ead5669b7ac3d1fe52db8b172.file.groupes_factures.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/b117cfb6dfd3aad4c88e00071495fe8660a38cd9.file.result_facture_vente.tpl.php" afterPath="$PROJECT_DIR$/templates_c/b117cfb6dfd3aad4c88e00071495fe8660a38cd9.file.result_facture_vente.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/c26d85fee2ba5c78e893eabc910ed136668884cf.file.statistiques.tpl.php" afterPath="$PROJECT_DIR$/templates_c/c26d85fee2ba5c78e893eabc910ed136668884cf.file.statistiques.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/c444731ac674871a88c38b67c762332dfe40d234.file.generate_synthese.tpl.php" afterPath="$PROJECT_DIR$/templates_c/c444731ac674871a88c38b67c762332dfe40d234.file.generate_synthese.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/c9a08fce85b770487594c1ab16df47933fd4e2ad.file.main.tpl.php" afterPath="$PROJECT_DIR$/templates_c/c9a08fce85b770487594c1ab16df47933fd4e2ad.file.main.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/popups/consult_produit.php" afterPath="$PROJECT_DIR$/ajax/popups/consult_produit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/d88cdcc1bd965e095563e9e2aba8361f36e5d1c4.file.edit_operations_journal.tpl.php" afterPath="$PROJECT_DIR$/templates_c/d88cdcc1bd965e095563e9e2aba8361f36e5d1c4.file.edit_operations_journal.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/da264ccb1d36b4fccd8207355d67450fe32081ba.file.stats_connections_users.tpl.php" afterPath="$PROJECT_DIR$/templates_c/da264ccb1d36b4fccd8207355d67450fe32081ba.file.stats_connections_users.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/statistiques/data_stats_factures_achats.xml" afterPath="$PROJECT_DIR$/ajax/infos/statistiques/data_stats_factures_achats.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/statistiques/data_stats_factures_achats_annee.xml" afterPath="$PROJECT_DIR$/ajax/infos/statistiques/data_stats_factures_achats_annee.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/infos/statistiques/data_stats_operations_journal.xml" afterPath="$PROJECT_DIR$/ajax/infos/statistiques/data_stats_operations_journal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/ddae0c858688a44dc1aa12beccf0e76bd5034fff.file.fournisseurs.tpl.php" afterPath="$PROJECT_DIR$/templates_c/ddae0c858688a44dc1aa12beccf0e76bd5034fff.file.fournisseurs.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/e599af075c6e312c57bc28615dbef5d9f1294a2b.file.stats_fournisseurs_factures.tpl.php" afterPath="$PROJECT_DIR$/templates_c/e599af075c6e312c57bc28615dbef5d9f1294a2b.file.stats_fournisseurs_factures.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/e7a7bff35746525492e465fd68ae0abd1fc90e8b.file.edit_facture.tpl.php" afterPath="$PROJECT_DIR$/templates_c/e7a7bff35746525492e465fd68ae0abd1fc90e8b.file.edit_facture.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/e87cc5c3952e078b19863ada84abac90e08e4ac2.file.recapitulatif_inventaire.tpl.php" afterPath="$PROJECT_DIR$/templates_c/e87cc5c3952e078b19863ada84abac90e08e4ac2.file.recapitulatif_inventaire.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/popups/edit_achat_produit.php" afterPath="$PROJECT_DIR$/ajax/popups/edit_achat_produit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/popups/edit_facture.php" afterPath="$PROJECT_DIR$/ajax/popups/edit_facture.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/popups/edit_fournisseur.php" afterPath="$PROJECT_DIR$/ajax/popups/edit_fournisseur.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/popups/edit_operation.php" afterPath="$PROJECT_DIR$/ajax/popups/edit_operation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/popups/edit_produit.php" afterPath="$PROJECT_DIR$/ajax/popups/edit_produit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/popups/edit_produit_facture.php" afterPath="$PROJECT_DIR$/ajax/popups/edit_produit_facture.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/popups/edit_produit_facture_old.php" afterPath="$PROJECT_DIR$/ajax/popups/edit_produit_facture_old.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/popups/edit_produit_inventaire.php" afterPath="$PROJECT_DIR$/ajax/popups/edit_produit_inventaire.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/f552ac384055cfc90c54734ec5b9e2df5f71f58d.file.historiques_syntheses.tpl.php" afterPath="$PROJECT_DIR$/templates_c/f552ac384055cfc90c54734ec5b9e2df5f71f58d.file.historiques_syntheses.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/f82b03419ee00d74b7704d1ba4842e205a88a7e1.file.edit_facture_vente.tpl.php" afterPath="$PROJECT_DIR$/templates_c/f82b03419ee00d74b7704d1ba4842e205a88a7e1.file.edit_facture_vente.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/fcedf2567429a3d2c6bc5a6a027fbe22be7fd1d4.file.stats_connections_users.tpl.php" afterPath="$PROJECT_DIR$/templates_c/fcedf2567429a3d2c6bc5a6a027fbe22be7fd1d4.file.stats_connections_users.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates_c/fd29c511983ffe5c66877f6cf8ee0ac9c4d31379.file.historiques_factures.tpl.php" afterPath="$PROJECT_DIR$/templates_c/fd29c511983ffe5c66877f6cf8ee0ac9c4d31379.file.historiques_factures.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/common/header.tpl" afterPath="$PROJECT_DIR$/templates/common/header.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/historiques.php" afterPath="$PROJECT_DIR$/historiques.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.tpl" afterPath="$PROJECT_DIR$/templates/index.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/historiques/main.tpl" afterPath="$PROJECT_DIR$/templates/historiques/main.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/popups/recapitulatif_inventaire.php" afterPath="$PROJECT_DIR$/ajax/popups/recapitulatif_inventaire.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/serializer.php" afterPath="$PROJECT_DIR$/ajax/serializer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/historiques/statistiques/stats_connections_users.tpl" afterPath="$PROJECT_DIR$/templates/historiques/statistiques/stats_connections_users.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/historiques/statistiques/stats_fournisseurs_factures.tpl" afterPath="$PROJECT_DIR$/templates/historiques/statistiques/stats_fournisseurs_factures.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/statistiques/stats_fournisseurs_factures.tpl" afterPath="$PROJECT_DIR$/templates/statistiques/stats_fournisseurs_factures.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/historiques/statistiques/stats_fournisseurs_factures_archivees.tpl" afterPath="$PROJECT_DIR$/templates/historiques/statistiques/stats_fournisseurs_factures_archivees.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/historiques/statistiques/stats_graphes_progression.tpl" afterPath="$PROJECT_DIR$/templates/historiques/statistiques/stats_graphes_progression.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/statistiques/stats_graphes_progression.tpl" afterPath="$PROJECT_DIR$/templates/statistiques/stats_graphes_progression.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/historiques/statistiques/stats_produits.tpl" afterPath="$PROJECT_DIR$/templates/historiques/statistiques/stats_produits.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/historiques/statistiques/stats_produits_achetes_vendus.tpl" afterPath="$PROJECT_DIR$/templates/historiques/statistiques/stats_produits_achetes_vendus.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/historiques/statistiques/stats_users_types_users.tpl" afterPath="$PROJECT_DIR$/templates/historiques/statistiques/stats_users_types_users.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Nkedon.iws" />
@@ -174,7 +27,20 @@
     <favorites_list name="Nkedon" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7139423" vertical-offset="0" max-vertical-offset="832">
+              <caret line="89" column="2" selection-start-line="89" selection-start-column="2" selection-end-line="89" selection-end-column="2" />
+              <folding>
+                <element signature="e#775#800#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -187,7 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/statistiques/main.tpl" />
         <option value="$PROJECT_DIR$/statistiques.php" />
         <option value="$PROJECT_DIR$/templates/statistiques/stats_factures_achats_annee.tpl" />
         <option value="$PROJECT_DIR$/include/function.php" />
@@ -238,6 +103,7 @@
         <option value="$PROJECT_DIR$/include/ClassDB.php" />
         <option value="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesAchatsMoisAnnee.php" />
         <option value="$PROJECT_DIR$/ajax/infos/historiques/GetTableauHistoriquesFacturesAchatsAnnee.php" />
+        <option value="$PROJECT_DIR$/config/config.php" />
       </list>
     </option>
   </component>
@@ -297,6 +163,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -315,9 +182,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nkedon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nkedon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -362,15 +242,15 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="1">
@@ -507,7 +387,13 @@
       <option name="project" value="LOCAL" />
       <updated>1429544406451</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="change factures into factures_achats">
+      <created>1429627234689</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1429627234689</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -520,20 +406,20 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29453126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18828125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -553,9 +439,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16484375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -582,7 +468,8 @@
     <MESSAGE value="gestion de la deconnexion avec la validation du journal, et du tri des factures par date" />
     <MESSAGE value="gestion du tri par date" />
     <MESSAGE value="coorection du bug de la gestion des journaux ( 1 jour = 1 journal), &#10;afficher une facture apres la creation, &#10;mettre une case &quot;nom du client&quot; dans les factures de ventes" />
-    <option name="LAST_COMMIT_MESSAGE" value="coorection du bug de la gestion des journaux ( 1 jour = 1 journal), &#10;afficher une facture apres la creation, &#10;mettre une case &quot;nom du client&quot; dans les factures de ventes" />
+    <MESSAGE value="change factures into factures_achats" />
+    <option name="LAST_COMMIT_MESSAGE" value="change factures into factures_achats" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -591,13 +478,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/statistiques/stats_recapitulatifs.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/download.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3058">
@@ -945,6 +825,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32356533" vertical-offset="34209" max-vertical-offset="55682">
           <caret line="1583" column="59" selection-start-line="1583" selection-start-column="24" selection-end-line="1583" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7139423" vertical-offset="0" max-vertical-offset="832">
+          <caret line="89" column="2" selection-start-line="89" selection-start-column="2" selection-end-line="89" selection-end-column="2" />
+          <folding>
+            <element signature="e#775#800#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

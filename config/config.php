@@ -19,72 +19,72 @@
 	
 	**************************************************************** */
     define('DB_HOST', 'localhost');
-    define('DB_NAME', 'nkedon_db_dev');
+    define('DB_NAME', 'nkedon_db');
     define('DB_USER','admin');
     define('DB_PASSWORD','nkwetsou');
 
-    class Configuration
-	{
-		private $cfg = null;
-		static private $myself;
-
-		private function __construct()
-		{
-			$path_root = $_SERVER ["DOCUMENT_ROOT"];
-
-			$ProductionEnvironment = (($_SERVER["SERVER_NAME"] != "127.0.0.1"));
-			$Local = $_SERVER['SERVER_NAME'] == "127.0.0.1";
-
-			$TestEnvironment = false;
-			$prefix = ($ProductionEnvironment ? "nkedon/" : "/nkedon/");
-			$this->cfg = array(
-				// ------------------------------------------------------------------------------------- //
-				'common_host'				=> 'localhost',
-				'common_dbname'				=> 'nkedon_db',
-				'common_user'				=> $Local || !$ProductionEnvironment ? 'root' : 'root',
-				'common_password'			=> $Local || !$ProductionEnvironment ? '' : '',
-				// ------------------------------------------------------------------------------------- //
-				'host' 						=> 'localhost',
-				'dbname'	 				=> 'nkedon_db',
-				'user' 						=> $Local || !$ProductionEnvironment ? 'root' : 'root',
-				'password'					=> $Local || !$ProductionEnvironment ? '' : '',
-				// ------------------------------------------------------------------------------------- //
-
-				'VersionSite'				=> "1.0",
-				'ProductionEnvironment'		=> $ProductionEnvironment,
-				'IsLocal'					=> $Local,
-				'TestEnvironment'			=> $TestEnvironment,
-				'SIGNATURE'					=> "NKEDON",						// Nom du logiciel. Pour s'assurer du bon serveur.
-				'admin_mail'				=> 'developpement@intelness.com',
-				'documents_root'			=> $path_root . $prefix .'Documents/',
-				'absolute_path_root'		=> $path_root,
-				'path_root'					=> $path_root . $prefix .'',
-				'UploadsPath'				=> $path_root . $prefix . 'Documents/uploads/',
-				// La variable http_home permet de savoir sur quel serveur on est, celui de production ou celui de d�veloppement, cette partie est tr�s importante.
-				'http_home'					=> "http://".$_SERVER ["SERVER_NAME"].($ProductionEnvironment ? "/nkedon/" : "/nkedon/"),
-				'use_mail_system'			=> false,
-				'RowsToDeleteIfMax'			=> 100,
-				'MaxRowsAllowedInWebAccessLog'	=> 10000,
-				'ActivateEmailerLog'		=> false
-			);
-		}
-
-		public static function getValue($key, $canFail = false)
-		{
-			if (array_key_exists($key, self::$myself->cfg))
-				return self::$myself->cfg[$key];
-			else{
-				if ($canFail)
-					return NULL;
-			}
-		}
-
-		public static function initialize()
-		{
-			self::$myself = new Configuration();
-		}
-	}
-
-	Configuration::initialize();
+//    class Configuration
+//	{
+//		private $cfg = null;
+//		static private $myself;
+//
+//		private function __construct()
+//		{
+//			$path_root = $_SERVER ["DOCUMENT_ROOT"];
+//
+//			$ProductionEnvironment = (($_SERVER["SERVER_NAME"] != "127.0.0.1"));
+//			$Local = $_SERVER['SERVER_NAME'] == "127.0.0.1";
+//
+//			$TestEnvironment = false;
+//			$prefix = ($ProductionEnvironment ? "nkedon/" : "/nkedon/");
+//			$this->cfg = array(
+//				// ------------------------------------------------------------------------------------- //
+//				'common_host'				=> 'localhost',
+//				'common_dbname'				=> 'nkedon_db',
+//				'common_user'				=> $Local || !$ProductionEnvironment ? 'root' : 'root',
+//				'common_password'			=> $Local || !$ProductionEnvironment ? '' : '',
+//				// ------------------------------------------------------------------------------------- //
+//				'host' 						=> 'localhost',
+//				'dbname'	 				=> 'nkedon_db',
+//				'user' 						=> $Local || !$ProductionEnvironment ? 'root' : 'root',
+//				'password'					=> $Local || !$ProductionEnvironment ? '' : '',
+//				// ------------------------------------------------------------------------------------- //
+//
+//				'VersionSite'				=> "1.0",
+//				'ProductionEnvironment'		=> $ProductionEnvironment,
+//				'IsLocal'					=> $Local,
+//				'TestEnvironment'			=> $TestEnvironment,
+//				'SIGNATURE'					=> "NKEDON",						// Nom du logiciel. Pour s'assurer du bon serveur.
+//				'admin_mail'				=> 'developpement@intelness.com',
+//				'documents_root'			=> $path_root . $prefix .'Documents/',
+//				'absolute_path_root'		=> $path_root,
+//				'path_root'					=> $path_root . $prefix .'',
+//				'UploadsPath'				=> $path_root . $prefix . 'Documents/uploads/',
+//				// La variable http_home permet de savoir sur quel serveur on est, celui de production ou celui de d�veloppement, cette partie est tr�s importante.
+//				'http_home'					=> "http://".$_SERVER ["SERVER_NAME"].($ProductionEnvironment ? "/nkedon/" : "/nkedon/"),
+//				'use_mail_system'			=> false,
+//				'RowsToDeleteIfMax'			=> 100,
+//				'MaxRowsAllowedInWebAccessLog'	=> 10000,
+//				'ActivateEmailerLog'		=> false
+//			);
+//		}
+//
+//		public static function getValue($key, $canFail = false)
+//		{
+//			if (array_key_exists($key, self::$myself->cfg))
+//				return self::$myself->cfg[$key];
+//			else{
+//				if ($canFail)
+//					return NULL;
+//			}
+//		}
+//
+//		public static function initialize()
+//		{
+//			self::$myself = new Configuration();
+//		}
+//	}
+//
+//	Configuration::initialize();
 
 ?>
