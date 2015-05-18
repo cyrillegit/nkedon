@@ -111,7 +111,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le produit (<strong>" + $("#nom_produit").val () + "</strong>) a bien été enregistré dans la facture.");
                     $.modal.close ();
-                    document.location.href="../../../magasin.php";
+                    document.location.href="magasin.php?sub=operation_journal";
                 }
                 else
                 {
@@ -150,7 +150,7 @@ $(document).ready (function ()
             {
                 ShowSuccess ("Le journal a bien été enregistrée.");
                 $.modal.close ();
-                document.location.href="magasin.php?sub=edit_operations_journal";
+                document.location.href="magasin.php?sub=result_journal";
             }
             else
             {

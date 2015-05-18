@@ -103,8 +103,17 @@
                 }
 
             }
-            else if( $target == "edit_historique_facture_achat" )
+            else if( $target == "ecarts" )
             {
+                isset($_GET ["id_inventaire"]) ? $id_inventaire = addslashes(htmlspecialchars($_GET ["id_inventaire"])) : $id_inventaire = "";
+                if( $id_inventaire != "" ){
+                    $inventaire = $db->getRecapitulatifInventaire( $id_inventaire );
+                    $ecartspath = $inventaire["ecartspath"];
+                    $content = readfile( $ecartspath );
+                    echo $content;
+                }else{
+                    echo "fichier d'ecarts introuvable";
+                }
 
             }
             else if( $target == "statistiques" )

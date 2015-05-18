@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-04-21 14:16:05
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-18 17:18:13
          compiled from ".\templates\magasin\gestion_journal\edit_operations_journal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:90255365ba5a993d3-61646901%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9685c43de77b5a37b95171f99bd4c81dab118a57' => 
     array (
       0 => '.\\templates\\magasin\\gestion_journal\\edit_operations_journal.tpl',
-      1 => 1429620143,
+      1 => 1431969486,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_55365ba5c0ef50_23209106',
   'variables' => 
   array (
     'nb_produits' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'id_journal' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_55365ba5c0ef50_23209106',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_55365ba5c0ef50_23209106')) {function content_55365ba5c0ef50_23209106($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -140,7 +140,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le produit (<strong>" + $("#nom_produit").val () + "</strong>) a bien été enregistré dans la facture.");
                     $.modal.close ();
-                    document.location.href="../../../magasin.php";
+                    document.location.href="magasin.php?sub=operation_journal";
                 }
                 else
                 {
@@ -179,7 +179,7 @@ $(document).ready (function ()
             {
                 ShowSuccess ("Le journal a bien été enregistrée.");
                 $.modal.close ();
-                document.location.href="../../../magasin.php";
+                document.location.href="magasin.php?sub=result_journal";
             }
             else
             {

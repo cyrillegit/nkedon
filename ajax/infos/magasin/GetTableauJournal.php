@@ -38,7 +38,7 @@ $(document).ready (function ()
     {
         $(this).click (function ()
         {
-            document.location.href="administration_magasin.php?sub=edit_historique_journal&id_journal="+$(this).attr("id_journal");
+            document.location.href="magasin.php?sub=edit_historique_journal&id_journal="+$(this).attr("id_journal");
         });
     });
 });

@@ -64,28 +64,25 @@
                                             background-image: url(\"css/images/bg_bloc_alertes.png\");
                                             background-repeat: repeat;
                                         }
+                                        .title{
+                                            font-size: xx-large;
+                                        }
                                     </style>
                                     <head>
                                         <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />
                                         <title>Synthèse de l'inventaire</title>
                                     </head>
                                     <body>
-                                        <div class=\"\" style=\"background: none;\">
-                                            <img src=\"nkedon_logo.png\" border=\"0\" style=\"margin-top: -5px;\" width=\"275\" height=\"120\">
-                                        </div>
-                                        <br/><br/>
                                         <table class=\"\" width=\"100%\">
                                             <tr>
-                                                <td class=\"\"><br/><strong></strong></td>
-                                                <td class=\"\"><br/><strong></strong></td>
-                                            </tr>
-                                            <tr>
+                                                <td>
+                                                    <div class=\"\" style=\"background: none;\">
+                                                        <img src=\"nkedon_logo.png\" border=\"0\" style=\"margin-top: -5px;\" width=\"275\" height=\"120\">
+                                                    </div>
+                                                </td>
+                                                <td class=\"title\"><br/><strong>Synthèse de l'inventaire mensuel</strong></td>
                                                 <td class=\"\">Date inventaire: <br/><strong>$date_inventaire</strong></td>
-                                                <td class=\"\"><br/><strong></strong></td>
-                                            </tr>
-                                            <tr>
                                                 <td class=\"\">Caissier : <br/><strong>$caissier</strong></td>
-                                                <td class=\"\"></td>
                                             </tr>
                                         </table>
                                         <hr size=\"1\" style=\"margin-top: 10px;\" />
@@ -267,28 +264,25 @@
                                         {
                                             background-color: green;
                                         }
+                                        .title{
+                                            font-size: xx-large;
+                                        }
                                     </style>
                                     <head>
                                         <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />
                                         <title>Synthèse de l'inventaire</title>
                                     </head>
                                     <body>
-                                        <div class=\"\" style=\"background: none;\">
-                                            <img src=\"nkedon_logo.png\" border=\"0\" style=\"margin-top: -5px;\" width=\"275\" height=\"120\">
-                                        </div>
-                                        <br/><br/>
                                         <table class=\"\" width=\"100%\">
                                             <tr>
-                                                <td class=\"\"><br/><strong></strong></td>
-                                                <td class=\"\"><br/><strong></strong></td>
-                                            </tr>
-                                            <tr>
+                                                <td>
+                                                    <div class=\"\" style=\"background: none;\">
+                                                        <img src=\"nkedon_logo.png\" border=\"0\" style=\"margin-top: -5px;\" width=\"275\" height=\"120\">
+                                                    </div>
+                                                </td>
+                                                <td class=\"title\"><br/><strong>Fichier des écarts de ventes</strong></td>
                                                 <td class=\"\">Date inventaire: <br/><strong>$date_inventaire</strong></td>
-                                                <td class=\"\"><br/><strong></strong></td>
-                                            </tr>
-                                            <tr>
                                                 <td class=\"\">Caissier : <br/><strong>$caissier</strong></td>
-                                                <td class=\"\"></td>
                                             </tr>
                                         </table>
                                         <hr size=\"1\" style=\"margin-top: 10px;\" />

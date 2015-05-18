@@ -155,25 +155,19 @@ if($id != NULL)
 //									'$capsules',
 //									'$solde')";
 
+
             if( $db->Execute ( $sql ) )
             {
-                if( $db->Execute ( $sql ) )
-                {
-                    $_SESSION["synthese"] = "synthse";
-                    $db->commit ();
-                    echo "({'result': 'SUCCESS'})";
-                }
-                else
-                {
-                    $db->rollBack();
-                    echo "({'result': 'Une erreur est survenue lors de la mise à jour du journal et des factures'})";
-                }
+                $_SESSION["synthese"] = "synthse";
+                $db->commit ();
+                echo "({'result': 'SUCCESS'})";
             }
             else
             {
                 $db->rollBack();
-                echo "({'result': 'Une erreur est survenue en base de données...'})";
+                echo "({'result': 'Une erreur est survenue lors de la mise à jour du journal et des factures'})";
             }
+
 		}
 		else
 		{

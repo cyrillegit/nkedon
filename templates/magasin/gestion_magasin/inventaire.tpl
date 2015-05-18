@@ -102,7 +102,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le produit (<strong>" + $("#nom_produit").val () + "</strong>) a bien été enregistré.");
                     $.modal.close ();
-                    document.location.href="../../../magasin.php";
+                    document.location.href="magasin.php?sub=inventaire";
                 }
                 else
                 {
@@ -207,6 +207,7 @@ $(document).ready (function ()
 
         if (ok)
         {
+            $("#divBtn").hide();
             var param = $("#form_popup_inventaire").serialize ();
 
             var responseText = Serialize (param);
@@ -348,7 +349,7 @@ $(document).ready (function ()
         </div>
         <hr size="1" style="margin-top: 25px;" />
         <div style="float: left; text-align: left;"><span class="champObligatoire">*</span> : Champs obligatoires.</div>
-        <div style="float: right; text-align: right; padding-bottom: 10px;">
+        <div id="divBtn" style="float: right; text-align: right; padding-bottom: 10px;">
             <table border="0" cellspacing="0" cellpadding="0" align="right">
                 <tr>
                     <td><div id="btnAnnulerInventaire"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>

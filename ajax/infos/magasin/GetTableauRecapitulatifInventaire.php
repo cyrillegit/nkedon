@@ -57,6 +57,14 @@ $(document).ready (function ()
             '_blank'
         );
     });
+
+    $('#download_ecart').click(function()
+    {
+        window.open(
+            'downloads.php?sub=ecarts&id_inventaire='+$(this).attr("id_inventaire"),
+            '_blank'
+        );
+    });
 });
 </script>
 <?php
@@ -122,6 +130,11 @@ $(document).ready (function ()
                                 <td align="left" valign="middle">
                                     <a id="download_link" id_inventaire="<?=$recap["idt_inventaires"]; ?>">
                                         <img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez la synthèse</a>
+                                </td>
+                                <td align="left" valign="middle">
+                                    <a id="download_ecart" id_inventaire="<?=$recap["idt_inventaires"]; ?>">
+                                        <img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> <span style="color: red;">Téléchargez le fichier des écarts</span>
+                                    </a>
                                 </td>
                             </tr>
                         </table>

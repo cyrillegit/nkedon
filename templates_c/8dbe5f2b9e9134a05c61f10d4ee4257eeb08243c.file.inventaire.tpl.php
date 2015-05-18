@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-05-18 14:43:17
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-18 19:58:09
          compiled from ".\templates\magasin\gestion_magasin\inventaire.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:130975536464987a226-85192870%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8dbe5f2b9e9134a05c61f10d4ee4257eeb08243c' => 
     array (
       0 => '.\\templates\\magasin\\gestion_magasin\\inventaire.tpl',
-      1 => 1431960177,
+      1 => 1431979076,
       2 => 'file',
     ),
   ),
@@ -128,7 +128,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le produit (<strong>" + $("#nom_produit").val () + "</strong>) a bien été enregistré.");
                     $.modal.close ();
-                    document.location.href="../../../magasin.php";
+                    document.location.href="magasin.php?sub=inventaire";
                 }
                 else
                 {
@@ -233,6 +233,7 @@ $(document).ready (function ()
 
         if (ok)
         {
+            $("#divBtn").hide();
             var param = $("#form_popup_inventaire").serialize ();
 
             var responseText = Serialize (param);
@@ -244,7 +245,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le recapitulatif fait par (<strong>" + $("#nom_caissier").val () + "</strong>) a bien été enregistré.");
                     $.modal.close ();
-                    document.location.href="../../magasin.php?sub=synthese_inventaire";
+                    document.location.href="magasin.php?sub=synthese_inventaire";
                 }
                 else
                 {
@@ -375,7 +376,7 @@ $(document).ready (function ()
         </div>
         <hr size="1" style="margin-top: 25px;" />
         <div style="float: left; text-align: left;"><span class="champObligatoire">*</span> : Champs obligatoires.</div>
-        <div style="float: right; text-align: right; padding-bottom: 10px;">
+        <div id="divBtn" style="float: right; text-align: right; padding-bottom: 10px;">
             <table border="0" cellspacing="0" cellpadding="0" align="right">
                 <tr>
                     <td><div id="btnAnnulerInventaire"><img src="css/images/boutons/btn_annuler.png" class="" style="cursor: pointer;" width="110" height="30" /></div></td>

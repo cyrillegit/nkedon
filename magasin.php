@@ -563,11 +563,15 @@
                             SET id_inventaire = '$id_inventaire'
                             WHERE id_inventaire = 0";
 
-                    $sql2 = "UPDATE t_factures
+                    $sql2 = "UPDATE t_factures_achats
                             SET id_inventaire = '$id_inventaire'
                             WHERE id_inventaire = 0";
 
-                    if( $db->Execute ( $sql1 ) && $db->Execute ( $sql2 ) )
+                    $sql3 = "UPDATE t_factures_ventes
+                            SET id_inventaire = '$id_inventaire'
+                            WHERE id_inventaire = 0";
+
+                    if( $db->Execute ( $sql1 ) && $db->Execute ( $sql2 ) && $db->Execute ( $sql3 ) )
                     {
                         $db->commit ();
                     }
@@ -586,8 +590,7 @@
                     //    $html->buildPdf( $htmlContent );
                         $html->storeHtml( $htmlContent, $inventaire_filename );
                         $html->storeHtml( $htmlEcarts, $ecarts_filename );
-                    //    echo $htmlContent;
-                    //    echo $filename;
+
 
                         /**
                          * Instantiate Backup_Database and perform backup
@@ -622,16 +625,13 @@
                         }
 
                         $filepath_inventaire = $inventaire_filename.".html";
-                        $sql = "UPDATE t_inventaires
-                            SET filepath = '$filepath_inventaire'
-                            WHERE idt_inventaires = $id_inventaire";
-
                         $filepath_ecarts = $ecarts_filename.".html";
-                        $sql1 = "UPDATE t_inventaires
-                            SET ecartspath = '$filepath_ecarts'
+                        $sql = "UPDATE t_inventaires
+                            SET filepath = '$filepath_inventaire',
+                                ecartspath = '$filepath_ecarts'
                             WHERE idt_inventaires = $id_inventaire";
 
-                        if($db->Execute ( $sql ) && $db->Execute ( $sql1 )){
+                        if($db->Execute ( $sql ) ){
                             $db->commit();
                         }else{
                             $db->rollBack();
@@ -639,7 +639,7 @@
                     }else{
 
                     }
-                //    echo $htmlContent;
+
                     $target = "gestion_magasin/recapitulatif_inventaire";
                 }
                 else

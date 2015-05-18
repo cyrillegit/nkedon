@@ -38,6 +38,17 @@ if(  $date_histo_inventaire == "" ) {
                     );
                 });
             });
+
+            $(".download_ecarts").each (function ()
+            {
+                $(this).click (function ()
+                {
+                    window.open(
+                        'downloads.php?sub=ecarts&id_inventaire='+$(this).attr("id_inventaire"),
+                        '_blank'
+                    );
+                });
+            });
         });
     </script>
     <style type="text/css">
@@ -150,6 +161,11 @@ if( count( $recaps ) > 0)
                                     <td align="left" valign="middle">
                                         <a class="download_links" id_inventaire="<?=$recap["idt_inventaires"]; ?>">
                                             <img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez la synthèse
+                                        </a>
+                                    </td>
+                                    <td align="left" valign="middle">
+                                        <a class="download_ecarts" id_inventaire="<?=$recap["idt_inventaires"]; ?>">
+                                            <img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> <span style="color: red;">Téléchargez le fichier des écarts</span>
                                         </a>
                                     </td>
                                 </tr>
