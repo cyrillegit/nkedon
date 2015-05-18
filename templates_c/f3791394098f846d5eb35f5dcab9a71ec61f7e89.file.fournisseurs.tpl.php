@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-04-21 12:44:12
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-18 15:07:29
          compiled from ".\templates\magasin\gestion_fournisseurs\fournisseurs.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:308965536461c02d271-83814984%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f3791394098f846d5eb35f5dcab9a71ec61f7e89' => 
     array (
       0 => '.\\templates\\magasin\\gestion_fournisseurs\\fournisseurs.tpl',
-      1 => 1429620143,
+      1 => 1431960994,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5536461c143443_79204952',
   'variables' => 
   array (
     'nb_fournisseurs' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5536461c143443_79204952',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5536461c143443_79204952')) {function content_5536461c143443_79204952($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("common/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -63,8 +63,6 @@ $(document).ready (function ()
 	{
         resetInputs();
         $("#editFournisseur").show("slow");
-//		update_content ("ajax/popups/edit_fournisseur.php", "popup", "id_fournisseur=0");
-//		ShowPopupHeight (550);
 	});
 
     $("#btnAnnuler").click (function ()
@@ -116,7 +114,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le produit (<strong>" + $("#nom_fournisseur").val () + "</strong>) a bien été enregistré.");
                     $.modal.close ();
-                    document.location.href="../../../magasin.php";
+                    document.location.href="magasin.php?sub=fournisseurs";
                 }
                 else
                 {

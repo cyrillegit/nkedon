@@ -137,7 +137,12 @@
 		    {
 		        if ($time < $unit) continue;
 		        $numberOfUnits = floor($time / $unit);
-		        return $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
+                if( $text == "mois" ){
+                    return $numberOfUnits.' '.$text;
+                }else{
+                    return $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
+                }
+
 		    }
 		}
 		else

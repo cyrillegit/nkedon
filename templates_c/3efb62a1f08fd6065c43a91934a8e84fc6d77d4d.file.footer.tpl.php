@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-04-16 13:24:50
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-17 22:29:02
          compiled from ".\templates\common\footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2397352eba7b19b89e7-98980603%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3efb62a1f08fd6065c43a91934a8e84fc6d77d4d' => 
     array (
       0 => '.\\templates\\common\\footer.tpl',
-      1 => 1429190687,
+      1 => 1431901658,
       2 => 'file',
     ),
   ),
@@ -29,7 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div id="footer">
     <div class="foot_top"></div>
     <div class="foot_body">
-        <div class="foot_text_right">Design & Developpement by <a href="http://www.intelness.com" target="_blank" class="std">intelness</a>. Copyright 2013 - <?php echo smarty_modifier_date_format(time(),"%Y");?>
+        <div class="foot_text_right">Design & Development by <a href="http://www.intelness.com" target="_blank" class="std">intelness</a>. Copyright 2013 - <?php echo smarty_modifier_date_format(time(),"%Y");?>
 . <strong><span style="color: #000;">Version : </span></strong> <strong style="color:#F00;">2.0.</strong></div>
     </div>
     <div class="foot_bottom"></div>

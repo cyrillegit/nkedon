@@ -125,8 +125,6 @@ $(document).ready (function ()
 	{
         resetInputs();
         $("#editInventaire").show("slow");
-//		update_content ("ajax/popups/inventaire.php", "popup", "id_recapitulatif=1");
-//		ShowPopupHeight (550);
 	});
 
     $("#btnAnnulerInventaire").click (function ()
@@ -220,7 +218,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le recapitulatif fait par (<strong>" + $("#nom_caissier").val () + "</strong>) a bien été enregistré.");
                     $.modal.close ();
-                    document.location.href="../../../magasin.php";
+                    document.location.href="magasin.php?sub=synthese_inventaire";
                 }
                 else
                 {

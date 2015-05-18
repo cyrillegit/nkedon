@@ -37,8 +37,6 @@ $(document).ready (function ()
 	{
         resetInputs();
         $("#editFournisseur").show("slow");
-//		update_content ("ajax/popups/edit_fournisseur.php", "popup", "id_fournisseur=0");
-//		ShowPopupHeight (550);
 	});
 
     $("#btnAnnuler").click (function ()
@@ -90,7 +88,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le produit (<strong>" + $("#nom_fournisseur").val () + "</strong>) a bien été enregistré.");
                     $.modal.close ();
-                    document.location.href="../../../magasin.php";
+                    document.location.href="magasin.php?sub=fournisseurs";
                 }
                 else
                 {

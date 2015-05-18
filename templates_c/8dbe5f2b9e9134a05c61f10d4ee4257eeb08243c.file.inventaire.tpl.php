@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-04-21 12:44:57
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-18 14:43:17
          compiled from ".\templates\magasin\gestion_magasin\inventaire.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:130975536464987a226-85192870%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8dbe5f2b9e9134a05c61f10d4ee4257eeb08243c' => 
     array (
       0 => '.\\templates\\magasin\\gestion_magasin\\inventaire.tpl',
-      1 => 1429620143,
+      1 => 1431960177,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_55364649946c87_35162480',
   'variables' => 
   array (
     'nb_produits' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_55364649946c87_35162480',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_55364649946c87_35162480')) {function content_55364649946c87_35162480($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("common/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -151,8 +151,6 @@ $(document).ready (function ()
 	{
         resetInputs();
         $("#editInventaire").show("slow");
-//		update_content ("ajax/popups/inventaire.php", "popup", "id_recapitulatif=1");
-//		ShowPopupHeight (550);
 	});
 
     $("#btnAnnulerInventaire").click (function ()
@@ -246,7 +244,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le recapitulatif fait par (<strong>" + $("#nom_caissier").val () + "</strong>) a bien été enregistré.");
                     $.modal.close ();
-                    document.location.href="../../../magasin.php";
+                    document.location.href="../../magasin.php?sub=synthese_inventaire";
                 }
                 else
                 {

@@ -10,9 +10,8 @@
 $db = new Database ();
 $db->beginTransaction ();
 
-isset( $_POST ["id_produit_facture"] ) ? $id = $_POST ["id_produit_facture"] : $id = NULL;
-//echo "({'result': 'SUCCESS'})";
-//print_r( "print anything" );
+isset( $_POST ["id_produit_achat"] ) ? $id = $_POST ["id_produit_achat"] : $id = NULL;
+
 if( $id != NULL )
 {
 	isset( $_POST ["nom_produit_search"] ) ? $nom_produit = strtoupper(addslashes(htmlspecialchars($_POST ["nom_produit_search"]))) : $nom_produit = "";
@@ -60,7 +59,7 @@ if( $id != NULL )
 				$date_fabrication = FrenchDateToSQLDate( $date_fabrication );
 				$date_peremption = FrenchDateToSQLDate( $date_peremption );
 
-				$sql = "INSERT INTO t_produits_factures
+				$sql = "INSERT INTO t_produits_achats
 							(id_produit,
 							 quantite_achat,
 							 date_fabrication,
@@ -127,7 +126,7 @@ if( $id != NULL )
 				$date_fabrication = FrenchDateToSQLDate( $date_fabrication );
 				$date_peremption = FrenchDateToSQLDate( $date_peremption );
 
-				$sql = "UPDATE t_produits_factures
+				$sql = "UPDATE t_produits_achats
 						SET id_produit = '$id_produit',
 							quantite_achat = '$quantite_achat',
 							date_fabrication = '$date_fabrication',

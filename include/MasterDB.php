@@ -21,16 +21,19 @@ class MasterDB extends PDO
 	{
 		$this->Connection = array ();
 		$this->Sql = "";
-		
+        $hostname = DB_HOST;
+        $dbname = DB_NAME;
+        $username = DB_USER;
+        $password = DB_PASSWORD;
 		try 
 		{
-			$connectionString = "mysql:host=".Configuration::getValue('common_host').";dbname=".Configuration::getValue('common_dbname');
-			
-			parent::__construct(
-				$connectionString,
-				Configuration::getValue('common_user'),
-				Configuration::getValue('common_password')
-			);
+            $connectionString = "mysql:host=".$hostname.";dbname=".$dbname;
+
+            parent::__construct(
+                $connectionString,
+                $username,
+                $password
+            );
 		}
 		catch (PDOException $dbex) {
 			echo 'Impossible de vous connecter à la base de données centrale du BackOffice.';

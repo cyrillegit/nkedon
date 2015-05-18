@@ -150,7 +150,7 @@ $(document).ready (function ()
             {
                 ShowSuccess ("Le journal a bien été enregistrée.");
                 $.modal.close ();
-                document.location.href="../../../magasin.php";
+                document.location.href="magasin.php?sub=edit_operations_journal";
             }
             else
             {

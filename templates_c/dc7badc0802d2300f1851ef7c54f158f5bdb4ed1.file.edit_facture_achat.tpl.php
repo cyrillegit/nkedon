@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-04-21 13:04:50
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-18 16:38:30
          compiled from ".\templates\magasin\gestion_factures\edit_facture_achat.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:67055536484d157fe2-29331447%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dc7badc0802d2300f1851ef7c54f158f5bdb4ed1' => 
     array (
       0 => '.\\templates\\magasin\\gestion_factures\\edit_facture_achat.tpl',
-      1 => 1429621022,
+      1 => 1431967045,
       2 => 'file',
     ),
   ),
@@ -165,7 +165,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le produit (<strong>" + $("#nom_produit").val () + "</strong>) a bien été enregistré dans la facture.");
                     $.modal.close ();
-                    document.location.href="../../../magasin.php";
+                    document.location.href="magasin.php?sub=produits_achats";
                 }
                 else
                 {
@@ -232,7 +232,7 @@ $(document).ready (function ()
 				{	
 					ShowSuccess ("La facture (<strong>" + $("#numero_facture").val () + "</strong>) a bien été enregistrée.");
 					$.modal.close ();					
-					document.location.href="../../../magasin.php";
+					document.location.href="magasin.php?sub=result_facture_achat";
 				}
 				else
 				{
@@ -381,7 +381,7 @@ $(document).ready (function ()
                         </tr>
                     </table>
                     <input type="hidden" id="target" name="target" value="produits_facture" />
-                    <input type="hidden" id="id_produit_facture" name="id_produit_facture" value="0" />
+                    <input type="hidden" id="id_produit_achat" name="id_produit_achat" value="0" />
                 </form>
             </div>
             <hr size="1" style="margin-top: 50px;" />

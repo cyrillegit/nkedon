@@ -69,12 +69,12 @@
 
 				if( $ok )
 				{
-					$tpl_index->assign ("message", $db->fixEncoding("La suppression de l'utilisateur a bien �t� r�alis�e."));
+					$tpl_index->assign ("message", $db->fixEncoding("La suppression de l'utilisateur a bien été réalisée."));
 					$tpl_index->assign ("error", 0);
 				}
 				else
 				{
-					$tpl_index->assign ("message", $db->fixEncoding("La suppression de l'utilisateur a �chou�e."));
+					$tpl_index->assign ("message", $db->fixEncoding("La suppression de l'utilisateur a échouée."));
 					$tpl_index->assign ("error", 1);
 				}					
 		}
@@ -84,12 +84,12 @@
 			$ok &= $db->Execute ( $sql );
 			if( $ok )
 			{
-				$tpl_index->assign ("message", $db->fixEncoding("La suppression du profil utilisateur a bien �t� r�alis�e."));
+				$tpl_index->assign ("message", $db->fixEncoding("La suppression du profil utilisateur a bien été réalisée."));
 				$tpl_index->assign ("error", 0);
 			}
 			else
 			{
-				$tpl_index->assign ("message", $db->fixEncoding("La suppression du profil utilisateur a �chou�e."));
+				$tpl_index->assign ("message", $db->fixEncoding("La suppression du profil utilisateur a échouée."));
 				$tpl_index->assign ("error", 1);
 			}
 		}
@@ -114,12 +114,12 @@
 			$ok &= $db->Execute ( $sql );
 			if( $ok )
 			{
-				$tpl_index->assign ("message", $db->fixEncoding("La suppression du fournisseur a bien �t� r�alis�e."));
+				$tpl_index->assign ("message", $db->fixEncoding("La suppression du fournisseur a bien été réalisée."));
 				$tpl_index->assign ("error", 0);
 			}
 			else
 			{
-				$tpl_index->assign ("message", $db->fixEncoding("La suppression du fournisseur a �chou�e."));
+				$tpl_index->assign ("message", $db->fixEncoding("La suppression du fournisseur a échouée."));
 				$tpl_index->assign ("error", 1);
 			}
 		}
@@ -129,12 +129,12 @@
 			$ok &= $db->Execute ( $sql );
 			if( $ok )
 			{
-				$tpl_index->assign ("message", $db->fixEncoding("La suppression du produit achet� a bien �t� r�alis�e."));
+				$tpl_index->assign ("message", $db->fixEncoding("La suppression du produit acheté a bien été réalisée."));
 				$tpl_index->assign ("error", 0);
 			}
 			else
 			{
-				$tpl_index->assign ("message", $db->fixEncoding("La suppression du produit achet� a �chou�e."));
+				$tpl_index->assign ("message", $db->fixEncoding("La suppression du produit acheté a échouée."));
 				$tpl_index->assign ("error", 1);
 			}
 		}	
@@ -158,7 +158,7 @@
 		}			
 		else if($_GET ["target"] == "produit_facture")
 		{
-			$sql = "DELETE FROM t_produits_factures WHERE idt_produits_factures = $id";
+			$sql = "DELETE FROM t_produits_achats WHERE idt_produits_achats = $id";
 			$ok &= $db->Execute ( $sql );
 			if( $ok )
 			{
@@ -168,7 +168,7 @@
 			}
 			else
 			{
-				$tpl_index->assign ("message", $db->fixEncoding("La suppression du produit dans la facture a �chou�e."));
+				$tpl_index->assign ("message", $db->fixEncoding("La suppression du produit dans la facture a échouée."));
 				$tpl_index->assign ("error", 1);
 			}
 		}
@@ -190,7 +190,7 @@
         }
 		else if($_GET ["target"] == "delete_produits_facture")
 		{
-			$sql = "DELETE FROM t_produits_factures";
+			$sql = "DELETE FROM t_produits_achats";
 			$ok &= $db->Execute ( $sql );
 			if( $ok )
 			{

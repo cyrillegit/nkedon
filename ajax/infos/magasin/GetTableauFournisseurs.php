@@ -63,7 +63,7 @@ $(document).ready (function ()
                     <td align="center"><span class="floatAndMarginLeft"><?php echo $obj["nom_fournisseur"]; ?></span></td>
                     <td align="center"><span class="floatAndMarginLeft"><?php echo $obj["adresse_fournisseur"]; ?></span></td>
                     <td align="center"><span class="floatAndMarginLeft"><?php echo $obj["telephone_fournisseur"]; ?></span></td>
-                    <td align="center"><span class="floatAndMarginLeft"><?php if( $obj["idt_factures"] != NULL ) echo $obj["nb_factures"]; else echo 0 ;?></span></td>
+                    <td align="center"><span class="floatAndMarginLeft"><?php if( $obj["idt_factures_achats"] != NULL ) echo $obj["nb_factures"]; else echo 0 ;?></span></td>
                     <td align="center"><span class="floatAndMarginLeft"><?php echo SQLDateTimeToFrenchDateTime( $obj["date_insertion"] ); ?></span></td>
                     <td align="center"><span class="floatAndMarginLeft"><?php echo getElaspedDateTime( $obj["date_insertion_facture"], setLocalTime() ); ?></span></td>
                     <td align="center">

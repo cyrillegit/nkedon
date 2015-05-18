@@ -36,7 +36,7 @@
 
             $ok = true;
             $sql1 = "DELETE FROM t_produits_operations";
-            $sql2 = "DELETE FROM t_produits_factures";
+            $sql2 = "DELETE FROM t_produits_achats";
             $sql3 = "DELETE FROM t_produits_ventes";
             $ok &= $db->Execute( $sql1 );
             $ok &= $db->Execute( $sql2 );
@@ -104,7 +104,7 @@
 	{
 		if( !$_SESSION["wasConnected"] )
 		{
-			$master = new MasterDB ();
+		//	$master = new MasterDB ();
 			$datetime_last_connected = setLocalTime();
 			$nombre_connexion = $_SESSION["infoUser"]["nombre_connexion"] + 1;
 			$id_user = $_SESSION["infoUser"]["idt_users"] ;

@@ -28,9 +28,6 @@ $(document).ready (function ()
 
             $('html, body').animate({ scrollTop: 0 }, 'slow');
             $("#editProduitFacture").show("slow");
-
-//			update_content ("ajax/popups/edit_produit_facture.php", "popup", "id_produit_facture=" + $(this).attr ("id_produit_facture"));
-//			ShowPopupHeight (550);
 		});
 	});
 });

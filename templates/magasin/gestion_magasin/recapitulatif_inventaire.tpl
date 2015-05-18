@@ -91,7 +91,7 @@ $(document).ready (function ()
     {
         var didConfirm = confirm("Vous êtes sur le point de générer la synthèse de l'inventaire. \n cet action est irréversible");
       if (didConfirm == true) {
-          document.location.href="../../../magasin.php";
+          document.location.href="magasin.php?sub=recapitulatif_inventaire";
       }
     });
 

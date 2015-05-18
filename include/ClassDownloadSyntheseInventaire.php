@@ -24,6 +24,10 @@
             parent::__construct();
         }
 
+        /**
+         * this function is to generate an html file of the overview of the inventory
+         * @return string : html string
+         */
         function buildHtml(){
             $htmlContent = "";
             $montant_achat_inventaire = 0;
@@ -225,8 +229,152 @@
             return $htmlContent;
         }
 
-        function  buildPdf( $htmlContent ){
-            $filename = $this->getFilename();
+        /**
+         * this function is to compute the gap between the quantity sold according to
+         * the journal and the quantity sold according to stock physique manually counted
+         *
+         * @return string : html string
+         */
+        function buildHtmlEcarts(){
+            $i = 0;
+
+            $id_invenatire = $this->id_inventaire;
+
+            if ( $id_invenatire != "") {
+                $inventaire = $this->getRecapitulatifInventaire( $id_invenatire );
+                $produits = $this->getAllProduits();
+
+                if (count($inventaire) > 0) {
+
+                    $date_inventaire = SQLDateToFrenchDate($inventaire["date_inventaire"]);
+                    $caissier = $inventaire["nom_user"] . " " . $inventaire["prenom_user"];
+                    $commentaire = trim(stripslashes(htmlentities($inventaire["commentaire"])));
+
+
+                    $htmlHead = "<!DOCTYPE html>
+                                <html>
+                                    <style type=\"text/css\">
+                                        .blocInfoBis
+                                        {
+                                            background-image: url(\"css/images/bg_bloc_alertes.png\");
+                                            background-repeat: repeat;
+                                        }
+                                        .red_bg
+                                        {
+                                            background-color: red;
+                                        }
+                                        .green_bg
+                                        {
+                                            background-color: green;
+                                        }
+                                    </style>
+                                    <head>
+                                        <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />
+                                        <title>Synthèse de l'inventaire</title>
+                                    </head>
+                                    <body>
+                                        <div class=\"\" style=\"background: none;\">
+                                            <img src=\"nkedon_logo.png\" border=\"0\" style=\"margin-top: -5px;\" width=\"275\" height=\"120\">
+                                        </div>
+                                        <br/><br/>
+                                        <table class=\"\" width=\"100%\">
+                                            <tr>
+                                                <td class=\"\"><br/><strong></strong></td>
+                                                <td class=\"\"><br/><strong></strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class=\"\">Date inventaire: <br/><strong>$date_inventaire</strong></td>
+                                                <td class=\"\"><br/><strong></strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class=\"\">Caissier : <br/><strong>$caissier</strong></td>
+                                                <td class=\"\"></td>
+                                            </tr>
+                                        </table>
+                                        <hr size=\"1\" style=\"margin-top: 10px;\" />
+                                        <table rules=\"all\" cellspacing=\"3\" cellpadding=\"3\" class=\"\" width=\"100%\" style='border: 1px solid #313131;'>
+                                            <tr>
+                                                <td>
+                                                    <tr class=\"blocInfoBis\">
+                                                        <td class=\"\">Nom produit </td>
+                                                        <td class=\"\">Quantité en stock des entrées</td>
+                                                        <td class=\"\">Stock physique</td>
+                                                        <td class=\"\">Quantité réelle vendue</td>
+                                                        <td class=\"\">Quantité vendue du journal</td>
+                                                        <td class=\"\">Ecarts </td>
+                                                    </tr>
+                                                    <tr height=\"5px;\"></tr>";
+
+                    $htmlBody = "";
+
+                    foreach ($produits as $value) {
+                        $i++;
+                        // recupere les infos sur chaque produit liées a cet inventaire
+                        $dataJournal = $this->getInfosProduitJournalByInventaire( $value["idt_produits"], $id_invenatire );
+                        $dataAchat = $this->getInfosProduitAcheteByInventaire( $value["idt_produits"], $id_invenatire );
+                        $dataVente = $this->getInfosProduitVenduByInventaire( $value["idt_produits"], $id_invenatire );
+
+                        $nom_produit = $value["nom_produit"];
+                        $stock_initial = $value["stock_initial"];
+                        $stock_physique = $value["stock_physique"];
+                        $quantite_achetee = $dataAchat["quantite_achetee"];
+
+                        $quantite_vendue = $dataVente["quantite_vente"];
+
+
+                        $quantite_stock_entree = $stock_initial + $quantite_achetee;
+                        $quantite_reelle_vendue = $quantite_stock_entree - $stock_physique;
+
+                        $quantite_journal = 0;
+                        if(  $dataJournal ){
+                            $quantite_journal = $dataJournal["qte_vendue"];
+                        }
+
+                        $ecarts = $quantite_journal - ( $stock_initial + $quantite_achetee - $stock_physique );
+
+                        $htmlBody .= "<tr class=\"blocInfoBis\">
+                                        <td class=\"\">$nom_produit</td>
+                                        <td class=\"\">$quantite_stock_entree</td>
+                                        <td class=\"\">$stock_physique</td>
+                                        <td class=\"\">$quantite_reelle_vendue</td>
+                                        <td class=\"\">$quantite_journal</td>";
+                        if( $ecarts < 0 ){
+                            $htmlBody .= "<td class=\"red_bg\">$ecarts</td>";
+                        }elseif( $ecarts > 0 ){
+                            $htmlBody .= "<td class=\"green_bg\">$ecarts</td>";
+                        }else{
+                            $htmlBody .= "<td class=\"\">$ecarts</td>";
+                        }
+
+                        $htmlBody .= "</tr>";
+                    }
+
+                    $user = $_SESSION["infoUser"]["nom_user"]." ".$_SESSION["infoUser"]["prenom_user"];
+
+                    $htmlFoot = "</td>
+                                        </tr>
+                                    </table><br/><br/>
+
+                                    <div style='border: 1px solid #000000;'><strong>Commentaire : </strong><br/>$commentaire</div>
+                                    <br/>
+                                    <div>
+                                        Inventaire de <strong>".$i."</strong> produits <br />
+                                        Réalisé par ".$user." le ".setLocalTime()." <br />
+                                    </div>
+                                </body>
+                          </html>";
+                    $htmlContent = $htmlHead . $htmlBody . $htmlFoot;
+                } else {
+                    $htmlContent = "Facture not found. Facture introuvable";
+                }
+            } else {
+                $htmlContent = "File not found. Impossible de téléchatger le fichier";
+            }
+            return $htmlContent;
+        }
+
+
+        function  buildPdf( $htmlContent, $filename ){
             /**
              * list of arguments in order
              *  - mode : string
@@ -243,7 +391,7 @@
             $mpdf = new mPDF('win-1252', 'A4', '', '', 5, 5, 5, 5, 10, 10);
             $mpdf->SetDisplayMode('fullpage');
             $mpdf->WriteHTML( $htmlContent );
-            $mpdf->Output( "synthese.pdf", 'D');
+            $mpdf->Output( $filename.".pdf", 'D');
         }
 
         function  getDirectory(){
@@ -256,11 +404,11 @@
             return $directory;
         }
 
-        function getFilename(){
+        function getFilename( $file ){
 
             $directory = $this->getDirectory();
 
-            $file_inventaire = "inventaire_".$this->suffix;
+            $file_inventaire = $file.$this->suffix;
             $filename = $directory."/".$file_inventaire;
 
             if(file_exists($filename.".html"))
@@ -274,11 +422,10 @@
          * enregistre la facture sous format html
          *
          * @param $htmlContent contenu du fichier html
+         * $filename nom du fichier
          */
-        function  storeHtml( $htmlContent ){
+        function  storeHtml( $htmlContent, $filename ){
 
-            $filename = $this->getFilename();
-            echo "the filename : ".$filename;
             $file = fopen($filename.".html",'a');
             fseek($file, 0);
             fputs($file, $htmlContent);

@@ -19,7 +19,7 @@
 	
 	**************************************************************** */
     define('DB_HOST', 'localhost');
-    define('DB_NAME', 'nkedon_db');
+    define('DB_NAME', 'nkedon_db_dev');
     define('DB_USER','admin');
     define('DB_PASSWORD','nkwetsou');
 

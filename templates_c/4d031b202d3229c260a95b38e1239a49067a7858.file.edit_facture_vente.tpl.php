@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-04-21 12:43:59
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-18 17:09:22
          compiled from ".\templates\magasin\gestion_factures\edit_facture_vente.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:214915536460fd299b4-51759515%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4d031b202d3229c260a95b38e1239a49067a7858' => 
     array (
       0 => '.\\templates\\magasin\\gestion_factures\\edit_facture_vente.tpl',
-      1 => 1429620142,
+      1 => 1431968942,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5536460fe23853_65968121',
   'variables' => 
   array (
     'nb_produits' => 0,
@@ -24,8 +26,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'commentaire' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5536460fe23853_65968121',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5536460fe23853_65968121')) {function content_5536460fe23853_65968121($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -158,7 +158,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le produit (<strong>" + $("#nom_produit").val () + "</strong>) a bien été enregistré dans la facture.");
                     $.modal.close ();
-                    document.location.href="../../../magasin.php";
+                    document.location.href="magasin.php?sub=facture_vente";
                 }
                 else
                 {
@@ -197,7 +197,7 @@ $(document).ready (function ()
 				{	
 					ShowSuccess ("La facture (<strong>" + $("#numero_facture").val () + "</strong>) a bien été enregistrée.");
 					$.modal.close ();					
-					document.location.href="../../../magasin.php";
+					document.location.href="magasin.php?sub=result_facture_vente";
 				}
 				else
 				{

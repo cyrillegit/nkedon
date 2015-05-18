@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chart caption="Evolution des achats" subcaption="des 12 derniers mois" lineThickness="3" formatNumberScale="0" anchorRadius="2" divLineAlpha="20" numvdivlines="5" chartRightMargin="35" bgColor="0000FF" bgAngle="270" bgAlpha="0" alternateHGridAlpha="5" divLineColor="CC3300" divLineIsDashed="0" shadowAlpha="90" legendPosition="BOTTOM" labelStep="0" showValues="0" canvasBgAlpha="0" legendBgAlpha="0" bgImage="" bgImageAlpha="100" yAxisName="Montant (FCFA)">
  <categories>
-  <category label="04/2014"/>
   <category label="05/2014"/>
   <category label="06/2014"/>
   <category label="07/2014"/>
@@ -16,18 +15,17 @@
   <category label="04/2015"/>
  </categories>
  <dataset seriesName="Achats mensuelles" color="000000">
-  <set value="229082596"/>
-  <set value="26448653"/>
-  <set value="22706894"/>
-  <set value="1829620"/>
-  <set value="6661508"/>
-  <set value="2600076"/>
-  <set value="1448475"/>
+  <set value="226448819"/>
+  <set value="28760779"/>
+  <set value="4758072"/>
+  <set value="6744360"/>
+  <set value="2653308"/>
+  <set value="1750695"/>
   <set value="314009"/>
   <set value="475200"/>
   <set value="61986"/>
   <set value="202972"/>
-  <set value="1596"/>
+  <set value="19096"/>
   <set value="3087"/>
  </dataset>
  <styles>

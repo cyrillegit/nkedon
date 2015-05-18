@@ -34,7 +34,7 @@ function RefreshProduitsByFacture(id_facture)
     var param = "id_facture="+id_facture;
     var responseText = $.ajax({
             type    : "POST",
-            url     : "ajax/infos/administration_magasin/GetProduitsByFacture.php",
+            url     : "ajax/infos/magasin/GetProduitsByFacture.php",
             async   : false,
             data    : param,
             success : function (msg){}
@@ -56,7 +56,7 @@ $(document).ready (function ()
             nom_fournisseur = $(this).attr ("nom_fournisseur");
             date_facture = $(this).attr ("date_facture");
             RefreshProduitsByFacture( id_facture );
-            document.location.href="administration_magasin.php?sub=edit_facture&id_facture="+id_facture+"&numero_facture="+numero_facture+"&id_fournisseur="+id_fournisseur+"&nom_fournisseur="+nom_fournisseur+"&date_facture="+date_facture;
+            document.location.href="magasin.php?sub=edit_facture&id_facture="+id_facture+"&numero_facture="+numero_facture+"&id_fournisseur="+id_fournisseur+"&nom_fournisseur="+nom_fournisseur+"&date_facture="+date_facture;
 		});
 	});
 

@@ -39,7 +39,7 @@ $(document).ready (function ()
         $(this).click (function ()
         {
             var id_facture = $(this).attr("id_facture");
-            document.location.href="administration_magasin.php?sub=edit_historique_facture_vente&id_facture_vente="+$(this).attr("id_facture");
+            document.location.href="magasin.php?sub=edit_historique_facture_vente&id_facture_vente="+$(this).attr("id_facture");
         });
     });
 });

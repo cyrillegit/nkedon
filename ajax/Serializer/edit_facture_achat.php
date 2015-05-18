@@ -110,7 +110,7 @@ if( $id != NULL )
 
 					if($okFacture)
 					{
-						$sql = "DELETE FROM t_produits_factures";
+						$sql = "DELETE FROM t_produits_achats";
 
 						if($db->Execute($sql))
 						{
@@ -180,7 +180,7 @@ if( $id != NULL )
 							date_insertion_facture = '$date_insertion_facture',
 							id_user = '$id_user',
 							commentaire = '$commentaire'
-						WHERE idt_factures = '$id'";
+						WHERE idt_factures_achats = '$id'";
 
 				if( $db->Execute ( $sql ) )
 				{
@@ -218,7 +218,7 @@ if( $id != NULL )
 
 						if( $okFacture )
 						{
-							$sql = "DELETE FROM t_produits_factures";
+							$sql = "DELETE FROM t_produits_achats";
 
 							if($db->Execute($sql))
 							{

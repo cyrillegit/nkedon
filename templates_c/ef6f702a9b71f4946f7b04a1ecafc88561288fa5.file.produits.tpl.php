@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-04-21 12:45:23
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-18 14:52:07
          compiled from ".\templates\magasin\gestion_produits\produits.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:365855364663720378-76962376%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ef6f702a9b71f4946f7b04a1ecafc88561288fa5' => 
     array (
       0 => '.\\templates\\magasin\\gestion_produits\\produits.tpl',
-      1 => 1429620143,
+      1 => 1431960699,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5536466380e410_93738112',
   'variables' => 
   array (
     'nb_produits' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5536466380e410_93738112',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5536466380e410_93738112')) {function content_5536466380e410_93738112($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("common/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -116,7 +116,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le produit (<strong>" + $("#nom_produit").val () + "</strong>) a bien été enregistré.");
                     $.modal.close ();
-                    document.location.href="../../../magasin.php";
+                    document.location.href="magasin.php?sub=produits";
                 }
                 else
                 {

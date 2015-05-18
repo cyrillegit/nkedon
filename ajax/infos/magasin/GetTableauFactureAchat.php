@@ -39,7 +39,7 @@ $(document).ready (function ()
         $(this).click (function ()
         {
             var id_facture = $(this).attr("id_facture");
-            document.location.href="administration_magasin.php?sub=edit_historique_facture_achat&id_facture_achat="+$(this).attr("id_facture");
+            document.location.href="magasin.php?sub=edit_historique_facture_achat&id_facture_achat="+$(this).attr("id_facture");
         });
     });
 });
@@ -127,8 +127,8 @@ $(document).ready (function ()
                                 ?>
                                 
                                 <tr>    
-                                    <td align="left" valign="middle"><a class="download_links" id_facture="<?=$factures[0]["idt_factures"]; ?>"><img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez la facture</a></td>
-                                    <td class="blocTitre"><?php  if( $id_type_user <= 2 ){; ?><a class="edit_links" id_facture="<?=$factures[0]["idt_factures"]; ?>"><img src="assets/images/edit.png" alt="" width="16" height="16" /> Modifier la facture</a><?php  } ?></td>
+                                    <td align="left" valign="middle"><a class="download_links" id_facture="<?=$factures[0]["idt_factures_achats"]; ?>"><img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez la facture</a></td>
+                                    <td class="blocTitre"><?php  if( $id_type_user <= 2 ){; ?><a class="edit_links" id_facture="<?=$factures[0]["idt_factures_achats"]; ?>"><img src="assets/images/edit.png" alt="" width="16" height="16" /> Modifier la facture</a><?php  } ?></td>
                                     <td class="blocTitre">Montant de la facture : </td>
                                     <td class="blocTitre"><?php echo number_format($prix_total_facture, 2, ',', ' ');?> FCFA</td>
                                     <td class="blocTitreId" colspan="2" >

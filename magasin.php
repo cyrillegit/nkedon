@@ -138,8 +138,8 @@
 				$id_facture = $_GET["id_facture"];
                 $nb_produits = 0;
 				
-				if( $id_facture != 0 )
-				{
+//				if( $id_facture != 0 )
+//				{
 					$produits_factures = $db->getAllProduitsOperationsFacture();
                     $montant_facture = 0;
 
@@ -147,19 +147,19 @@
                         $nb_produits++;
                         $montant_facture += $pf["quantite_achat"] * $pf["prix_achat"];
                     }
-				}
-				else
-				{
-					$sql = "DELETE FROM t_produits_factures";
-					if( $db->Execute( $sql ))
-					{
-						$db->commit ();
-					}
-					else
-					{
-						$db->rollBack();
-					}
-				}
+//				}
+//				else
+//				{
+//					$sql = "DELETE FROM t_produits_achats";
+//					if( $db->Execute( $sql ))
+//					{
+//						$db->commit ();
+//					}
+//					else
+//					{
+//						$db->rollBack();
+//					}
+//				}
 
 				$fournisseurs = $db->getAllFournisseurs ();
 
@@ -186,8 +186,8 @@
                 $id_facture = $_GET["id_facture"];
                 $nb_produits = 0;
 
-                if( $id_facture != 0 )
-                {
+//                if( $id_facture != 0 )
+//                {
                     $produits_factures = $db->getAllProduitsOperationsVentesFacture();
                     $montant_facture = 0;
 
@@ -195,19 +195,19 @@
                         $nb_produits++;
                         $montant_facture += $pf["quantite_vendue"] * $pf["prix_vente"];
                     }
-                }
-                else
-                {
-                    $sql = "DELETE FROM t_produits_ventes";
-                    if( $db->Execute( $sql ))
-                    {
-                        $db->commit ();
-                    }
-                    else
-                    {
-                        $db->rollBack();
-                    }
-                }
+//                }
+//                else
+//                {
+//                    $sql = "DELETE FROM t_produits_ventes";
+//                    if( $db->Execute( $sql ))
+//                    {
+//                        $db->commit ();
+//                    }
+//                    else
+//                    {
+//                        $db->rollBack();
+//                    }
+//                }
 
                 $tpl_index->assign( "nb_produits", $nb_produits );
                 $tpl_index->assign( "montant_facture", number_format( $montant_facture, 2, ',', ' ') );
@@ -245,7 +245,7 @@
                     // si on est en mode suppression, on ne reinitialise pas la table tampon courante
                     if( !isset($_SESSION["delete"])) {
 
-                        $sql = "DELETE FROM t_produits_factures";
+                        $sql = "DELETE FROM t_produits_achats";
                         if ($db->Execute($sql)) {
                             foreach ($produits as $info) {
                                 $id_produit = $info["id_produit"];
@@ -255,7 +255,7 @@
                             //    $id_fournisseur = $info["id_fournisseur"];
 
 
-                                $sql = "INSERT INTO t_produits_factures
+                                $sql = "INSERT INTO t_produits_achats
                                                 (id_produit,
                                                  quantite_achat,
                                                  date_fabrication,
@@ -511,7 +511,7 @@
 			{
 				$target = "gestion_magasin/recapitulatif_inventaire";
 			}
-			else if( $target == "produits_facture" )
+			else if( $target == "produits_achats" )
 			{
                 $nb_produits = 0;
                 $montant_facture = 0;
@@ -580,9 +580,12 @@
                     if( $ok ){
                         $html = new SyntheseInventaire( $id_inventaire );
                         $htmlContent = $html->buildHtml();
+                        $htmlEcarts = $html->buildHtmlEcarts();
+                        $inventaire_filename = $html->getFilename("inventaire");
+                        $ecarts_filename = $html->getFilename("ecarts");
                     //    $html->buildPdf( $htmlContent );
-                        $html->storeHtml( $htmlContent );
-                        $filename = $html->getFilename();
+                        $html->storeHtml( $htmlContent, $inventaire_filename );
+                        $html->storeHtml( $htmlEcarts, $ecarts_filename );
                     //    echo $htmlContent;
                     //    echo $filename;
 
@@ -618,12 +621,17 @@
                             }
                         }
 
-                        $filepath = $filename.".html";
+                        $filepath_inventaire = $inventaire_filename.".html";
                         $sql = "UPDATE t_inventaires
-                            SET filepath = '$filepath'
+                            SET filepath = '$filepath_inventaire'
                             WHERE idt_inventaires = $id_inventaire";
 
-                        if($db->Execute ( $sql )){
+                        $filepath_ecarts = $ecarts_filename.".html";
+                        $sql1 = "UPDATE t_inventaires
+                            SET ecartspath = '$filepath_ecarts'
+                            WHERE idt_inventaires = $id_inventaire";
+
+                        if($db->Execute ( $sql ) && $db->Execute ( $sql1 )){
                             $db->commit();
                         }else{
                             $db->rollBack();

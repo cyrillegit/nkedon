@@ -130,7 +130,7 @@ $(document).ready (function ()
                 {
                     ShowSuccess ("Le produit (<strong>" + $("#nom_produit").val () + "</strong>) a bien été enregistré dans la facture.");
                     $.modal.close ();
-                    document.location.href="../../../magasin.php";
+                    document.location.href="magasin.php?sub=produits_achats";
                 }
                 else
                 {
@@ -197,7 +197,7 @@ $(document).ready (function ()
 				{	
 					ShowSuccess ("La facture (<strong>" + $("#numero_facture").val () + "</strong>) a bien été enregistrée.");
 					$.modal.close ();					
-					document.location.href="../../../magasin.php";
+					document.location.href="magasin.php?sub=result_facture_achat";
 				}
 				else
 				{
@@ -344,7 +344,7 @@ $(document).ready (function ()
                         </tr>
                     </table>
                     <input type="hidden" id="target" name="target" value="produits_facture" />
-                    <input type="hidden" id="id_produit_facture" name="id_produit_facture" value="0" />
+                    <input type="hidden" id="id_produit_achat" name="id_produit_achat" value="0" />
                 </form>
             </div>
             <hr size="1" style="margin-top: 50px;" />

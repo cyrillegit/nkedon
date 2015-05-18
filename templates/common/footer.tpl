@@ -2,7 +2,7 @@
 <div id="footer">
     <div class="foot_top"></div>
     <div class="foot_body">
-        <div class="foot_text_right">Design & Developpement by <a href="http://www.intelness.com" target="_blank" class="std">intelness</a>. Copyright 2013 - {$smarty.now|date_format:"%Y"}. <strong><span style="color: #000;">Version : </span></strong> <strong style="color:#F00;">2.0.</strong></div>
+        <div class="foot_text_right">Design & Development by <a href="http://www.intelness.com" target="_blank" class="std">intelness</a>. Copyright 2013 - {$smarty.now|date_format:"%Y"}. <strong><span style="color: #000;">Version : </span></strong> <strong style="color:#F00;">2.0.</strong></div>
     </div>
     <div class="foot_bottom"></div>
 </div>

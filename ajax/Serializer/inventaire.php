@@ -62,7 +62,8 @@ if($id != NULL)
 						 recettes_percues,
 						 date_inventaire,
 						 commentaire,
-						 filepath)
+						 filepath,
+						 ecartspath)
 			VALUES ('$id_user',
 					'$ration',
 					'$dette_fournisseur',
@@ -74,6 +75,7 @@ if($id != NULL)
 					'$recettes_percues',
 					'$date_inventaire',
 					'$commentaire',
+					'',
 					'')";
 //			//	$db->commit ();
 //

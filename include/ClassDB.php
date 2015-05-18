@@ -455,7 +455,7 @@
 		 */
 		public function getNbProduitsDistintsAchetes ()
 		{
-			$this->Sql = "SELECT COUNT(*) AS nb_produits FROM t_produits_factures";
+			$this->Sql = "SELECT COUNT(*) AS nb_produits FROM t_produits_achats";
 			$res = $this->FetchRow();
 			return $res ["nb_produits"];
 		}
@@ -1264,7 +1264,7 @@
 		 */
 		public function getAllProduitsAchetes ()
 		{
-			$this->Sql = "SELECT * FROM t_produits_factures";
+			$this->Sql = "SELECT * FROM t_produits_achats";
 			$res = $this->FetchAllRows();
 			return $res;
 		}
@@ -1308,7 +1308,7 @@
 		{
 			$this->Sql = "SELECT * 
 							FROM t_produits AS p
-							JOIN t_produits_factures AS ef ON ef.id_produit = p.idt_produits";
+							JOIN t_produits_achats AS ef ON ef.id_produit = p.idt_produits";
 			$res = $this->FetchAllRows();
 			return $res;
 		}	
@@ -1415,7 +1415,7 @@
 		public function getInfoProduitAchete ( $id )
 		{
 			$this->Sql = "SELECT *
-							FROM `t_produits_factures` AS ef
+							FROM `t_produits_achats` AS ef
 							JOIN t_produits AS p ON ef.id_produit = p.idt_produits
 							WHERE idt_produits_factures ='$id'";
 			$res = $this->FetchRow();
@@ -1727,7 +1727,7 @@
 		public function getAllProduitsFacture()
 		{
 			$this->Sql = "SELECT * 
-							FROM t_produits_factures AS pf
+							FROM t_produits_achats AS pf
 							JOIN t_produits AS p ON pf.id_produit = p.idt_produits
 							ORDER BY pf.idt_produits_factures DESC";
 
@@ -1763,7 +1763,7 @@
 		public function getInfoProduitFacture( $id )
 		{
 			$this->Sql = "SELECT * 
-							FROM t_produits_factures AS pf
+							FROM t_produits_achats AS pf
 							JOIN t_produits AS p ON pf.id_produit = p.idt_produits
 							WHERE pf.idt_produits_factures = $id";
 
@@ -1826,7 +1826,7 @@
 		 */
 		public function getPrixTotalProduitsFacture()
 		{
-			$this->Sql = "SELECT SUM(prix_total_produits) AS prix_total_produits FROM t_produits_factures";
+			$this->Sql = "SELECT SUM(prix_total_produits) AS prix_total_produits FROM t_produits_achats";
 			$res = $this->FetchRow();
 			return $res[0];
 		}		
@@ -1854,7 +1854,7 @@
 		 */
 		public function getNbProduitsInFacture ()
 		{
-			$this->Sql = "SELECT COUNT(*) AS nb_produits FROM t_produits_factures";
+			$this->Sql = "SELECT COUNT(*) AS nb_produits FROM t_produits_achats";
 			$res = $this->FetchRow();
 			return $res ["nb_produits"];
 		}
@@ -2320,7 +2320,7 @@
         public function getAllProduitsOperationsFacture()
         {
             $this->Sql = "SELECT *
-                                FROM t_produits_factures AS pf
+                                FROM t_produits_achats AS pf
                                 JOIN t_produits AS p
                                 ON p.idt_produits = pf.id_produit";
             $res = $this->FetchAllRows();
@@ -2536,6 +2536,24 @@
                                 JOIN t_produits AS p ON o.id_produit = p.idt_produits
                                 WHERE o.id_journal = $id";
             $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getInfosProduitByInventaire
+         * -------------------
+         * Retourne les infos d'un produit pour un inventaire donné
+         *
+         * @return array
+         */
+        public function getInfosProduitJournalByInventaire ( $id_produit, $id_inventaire )
+        {
+            $this->Sql = "SELECT *, SUM(o.quantite_vendue) AS qte_vendue
+                                FROM t_journal AS j
+                                JOIN t_operations AS o ON j.idt_journal = o.id_journal
+                                WHERE j.id_inventaire = $id_inventaire AND o.id_produit = $id_produit
+                                GROUP BY o.id_produit";
+            $res = $this->FetchRow();
             return $res;
         }
 	}
