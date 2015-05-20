@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-05-18 17:34:11
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-19 09:10:27
          compiled from ".\templates\magasin\gestion_magasin\recapitulatif_inventaire.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:15377555a229326b966-70455225%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f59660d30b91c5190fd40df7b78d507e47658def' => 
     array (
       0 => '.\\templates\\magasin\\gestion_magasin\\recapitulatif_inventaire.tpl',
-      1 => 1431961425,
+      1 => 1432026171,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_555a2293340b24_50761615',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_555a2293340b24_50761615')) {function content_555a2293340b24_50761615($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("common/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -190,7 +190,7 @@ $(document).ready (function ()
     </div>
 
     <div style="clear: both;">&nbsp;</div>
-    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='../../../magasin.php';"></div>
+    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='magasin.php';"></div>
 </div>
 
 <?php echo $_smarty_tpl->getSubTemplate ("common/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

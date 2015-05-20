@@ -44,17 +44,17 @@
 
                 if (count($inventaire) > 0) {
 
-                    $ration = $inventaire["ration"];
-                    $dette_fournisseur = $inventaire["dette_fournisseur"];
+                    $ration = number_format( $inventaire["ration"], 2, ",", " ");
+                    $dette_fournisseur = number_format( $inventaire["dette_fournisseur"], 2, ",", " ");
                     $date_inventaire = SQLDateToFrenchDate($inventaire["date_inventaire"]);
                     $caissier = $inventaire["nom_user"] . " " . $inventaire["prenom_user"];
                     $commentaire = trim(stripslashes(htmlentities($inventaire["commentaire"])));
-                    $depenses_diverses = $inventaire["depenses_diverses"];
-                    $avaries = $inventaire["avaries"];
-                    $credit_client = $inventaire["credit_client"];
-                    $fonds = $inventaire["fonds"];
-                    $capsules = $inventaire["capsules"];
-                    $recettes_percues = $inventaire["recettes_percues"];
+                    $depenses_diverses = number_format( $inventaire["depenses_diverses"], 2, ",", " ");
+                    $avaries = number_format( $inventaire["avaries"], 2, ",", " ");
+                    $credit_client = number_format( $inventaire["credit_client"], 2, ",", " ");
+                    $fonds = number_format( $inventaire["fonds"], 2, ",", " ");
+                    $capsules = number_format( $inventaire["capsules"], 2, ",", " ");
+                    $recettes_percues = number_format($inventaire["recettes_percues"], 2, ",", " ");
 
                     $htmlHead = "<!DOCTYPE html>
                                 <html>
@@ -70,7 +70,7 @@
                                     </style>
                                     <head>
                                         <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />
-                                        <title>Synthèse de l'inventaire</title>
+                                        <title>Synthèse de l'inventaire mensuel</title>
                                     </head>
                                     <body>
                                         <table class=\"\" width=\"100%\">
@@ -114,12 +114,14 @@
                         $nom_produit = $value["nom_produit"];
                         $stock_initial = $value["stock_initial"];
                         $stock_physique = $value["stock_physique"];
-                        $quantite_achetee = $dataAchat["quantite_achetee"];
+                    //    $quantite_achetee = $dataAchat["quantite_achetee"];
+                        if( $dataAchat["quantite_achetee"] ) $quantite_achetee = $dataAchat["quantite_achetee"]; else $quantite_achetee = 0;
                         $prix_achat = number_format($value["prix_achat"], 2, ",", " ");
                         $montant_achat = number_format($quantite_achetee * $value["prix_achat"], 2, ",", " ");
                         $montant_achat_inventaire += $quantite_achetee * $value["prix_achat"];
-                        $quantite_vendue = $dataVente["quantite_vente"];
-                        $prix_vente = $value["prix_vente"];
+                    //    $quantite_vendue = $dataVente["quantite_vente"];
+                        if( $dataVente["quantite_vente"] ) $quantite_vendue = $dataVente["quantite_vente"]; else $quantite_vendue = 0;
+                        $prix_vente = number_format($value["prix_vente"], 2, ",", " ");
                         $montant_vente = number_format($quantite_vendue * $value["prix_vente"], 2, ",", " ");
                         $montant_vente_inventaire += $quantite_vendue * $value["prix_vente"];
 
@@ -146,10 +148,11 @@
                     $charges_totles = $ration+ $dette_fournisseur + $depenses_diverses + $avaries + $credit_client;
                     $user = $_SESSION["infoUser"]["nom_user"]." ".$_SESSION["infoUser"]["prenom_user"];
 
-                    $patrimoine = $fonds + $montant_stock + $capsules;
-                    $benefice_net = $benefice_brut - $charges_totles;
-                    $ecart = $montant_vente_inventaire - $recettes_percues - $fonds;
-                    $solde = $charges_totles - $ecart;
+                    $benefice_brut = number_format( $benefice_brut, 2, ",", " ");
+                    $patrimoine = number_format( $fonds + $montant_stock + $capsules, 2, ",", " ");
+                    $benefice_net = number_format( $benefice_brut - $charges_totles, 2, ",", " ");
+                    $ecart = number_format( $montant_vente_inventaire - $recettes_percues - $fonds, 2, ",", " ");
+                    $solde = number_format( $charges_totles - $ecart, 2, ",", " ");
 
                                     $htmlFoot = "</td>
                                         </tr>
@@ -167,10 +170,10 @@
                                             </tr>
                                             <tr class=\"blocInfoBis\">
                                                 <td class=\"\">$ration <span style='float: right; margin-right: 5px;'>FCFA</span></td>
-                                                <td class=\"\">$dette_fournisseur <span style='float: right; margin-right: 5px;'>FCFA</span></td>
+                                                <td class=\"\">$dette_fournisseur<span style='float: right; margin-right: 5px;'>FCFA</span></td>
                                                 <td class=\"\">$depenses_diverses <span style='float: right; margin-right: 5px;'>FCFA</span></td>
                                                 <td class=\"\">$avaries <span style='float: right; margin-right: 5px;'>FCFA</span></td>
-                                                <td class=\"\">$credit_client <span style='float: right; margin-right: 5px;'>FCFA</span></td>
+                                                <td class=\"\">$credit_client<span style='float: right; margin-right: 5px;'>FCFA</span></td>
                                                 <td class=\"\">$fonds <span style='float: right; margin-right: 5px;'>FCFA</span></td>
                                                 <td class=\"\">$capsules <span style='float: right; margin-right: 5px;'>FCFA</span></td>
                                                 <td class=\"\">$recettes_percues <span style='float: right; margin-right: 5px;'>FCFA</span></td>
@@ -270,7 +273,7 @@
                                     </style>
                                     <head>
                                         <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />
-                                        <title>Synthèse de l'inventaire</title>
+                                        <title>Fichier des ecarts de ventes</title>
                                     </head>
                                     <body>
                                         <table class=\"\" width=\"100%\">

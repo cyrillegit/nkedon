@@ -168,7 +168,7 @@ $(document).ready (function ()
     </div>
 
     <div style="clear: both;">&nbsp;</div>
-    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='../../../magasin.php';"></div>
+    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='magasin.php';"></div>
 </div>
 
 {include file="common/footer.tpl"}

@@ -602,78 +602,6 @@
 		}
 
 		/**
-		 * Fonction getNbHistoriqueSyntheseInDB
-		 * -------------------
-		 * Retourne le nombre d'historique de syntheses en base de donn�es.
-		 *
-		 * @return int
-		 */
-		public function getNbHistoriqueSyntheseInDB ()
-		{
-			$this->Sql = "SELECT COUNT(*) AS nb_histo_syntheses FROM t_historiques_syntheses";
-			$res = $this->FetchRow();
-			return $res ["nb_histo_syntheses"];
-		}
-
-		/**
-		 * Fonction getNbHistoriquesFacturesInDB
-		 * -------------------
-		 * Retourne le nombre d'historique de factures en base de donn�es.
-		 *
-		 * @return int
-		 */
-		public function getNbHistoriquesFacturesInDB ()
-		{
-			$this->Sql = "SELECT COUNT(*) AS nb_histo_factures FROM t_historiques_factures";
-			$res = $this->FetchRow();
-			return $res ["nb_histo_factures"];
-		}	
-
-		/**
-		 * Fonction getNbHistoriquesFacturesByGroupInDB
-		 * -------------------
-		 * Retourne le nombre d'historique de factures par groupe en base de donn�es.
-		 *
-		 * @return int
-		 */
-		public function getNbHistoriquesFacturesByGroupInDB ( $id )
-		{
-			$this->Sql = "SELECT COUNT(*) AS nb_histo_factures FROM t_historiques_factures WHERE id_groupes_factures = $id";
-			$res = $this->FetchRow();
-			return $res ["nb_histo_factures"];
-		}	
-
-		/**
-		 * Fonction getNbGroupesFacturesInDB
-		 * -------------------
-		 * Retourne le nombre de groupe de factures en base de donn�es.
-		 *
-		 * @return int
-		 */
-		public function getNbGroupesFacturesInDB ()
-		{
-			$this->Sql = "SELECT COUNT(*) AS nb_groupes_factures FROM t_groupes_factures";
-			$res = $this->FetchRow();
-			return $res ["nb_groupes_factures"];
-		}								
-
-		/**
-		 * Fonction getNbFacturesInGroupe
-		 * -------------------
-		 * Retourne le nombre de factures dans un groupe.
-		 *
-		 * @return int
-		 */
-		public function getNbFacturesInGroupe ( $id )
-		{
-			$this->Sql = "SELECT COUNT(*) AS nb_factures_synthese
-							FROM t_historiques_factures AS hf
-							WHERE hf.id_groupes_factures = $id";
-			$res = $this->FetchRow();
-			return $res ["nb_factures_synthese"];
-		}
-
-		/**
 		 * Fonction getAllProduits
 		 * -------------------
 		 * Retourne les produits pr�sents en base de donn�es
@@ -682,7 +610,7 @@
 		 */
 		public function getAllProduits ()
 		{
-			$this->Sql = "SELECT * FROM t_produits";
+			$this->Sql = "SELECT * FROM t_produits ORDER BY nom_produit";
 			$res = $this->FetchAllRows();
 			return $res;
 		}
@@ -1520,59 +1448,6 @@
 			return $res;
 		}
 
-		/**
-		 * Fonction getHistoriqueSynthese
-		 * -------------------
-		 * Retourne l'historique des synthese
-		 *
-		 * @return array
-		 */
-		public function getHistoriqueSynthese()
-		{
-			$this->Sql = "SELECT * 
-							FROM t_historiques_syntheses AS hs
-							JOIN t_users AS u ON hs.id_user = u.idt_users
-							ORDER BY hs.date_inventaire DESC";
-
-			$res = $this->FetchAllRows();
-			return $res;
-		}	
-
-		/**
-		 * Fonction getHistoriqueSyntheseById
-		 * -------------------
-		 * Retourne l'historique des synthese par id
-		 *
-		 * @return array
-		 */
-		public function getHistoriqueSyntheseById( $id )
-		{
-			$this->Sql = "SELECT * 
-							FROM t_historiques_syntheses AS hs
-							JOIN t_users AS u ON hs.id_user = u.idt_users
-							WHERE hs.idt_historiques_syntheses = $id";
-
-			$res = $this->FetchAllRows();
-			return $res;
-		}		
-
-		/**
-		 * Fonction getHistoriqueSyntheseByDate
-		 * -------------------
-		 * Retourne l'historique des synthese
-		 *
-		 * @return array
-		 */
-		public function getHistoriqueSyntheseByDate($date_histo_synthese)
-		{
-			$this->Sql = "SELECT * 
-							FROM t_historiques_syntheses AS hs
-							JOIN t_users AS u ON hs.id_user = u.idt_users
-							WHERE hs.date_inventaire >= '$date_histo_synthese'";
-
-			$res = $this->FetchAllRows();
-			return $res;
-		}
 
         /**
          * Fonction getAllFacturesAchatsByJourMoisAnnee
@@ -1877,49 +1752,6 @@
 		}
 
 		/**
-		 * Fonction getLastInsertedIdInHistoriquesSyntheses
-		 * -------------------
-		 * Retourne le dernier id de la table t_historiques_syntheses.
-		 *
-		 * @return int
-		 */
-		public function getLastInsertedIdInHistoriquesSyntheses ()
-		{
-			$this->Sql = "SELECT MAX( idt_historiques_syntheses ) AS id FROM t_historiques_syntheses";
-			$res = $this->FetchRow();
-			return $res ["id"];
-		}
-
-		/**
-		 * Fonction getLastInsertedIdInGroupesFactures
-		 * -------------------
-		 * Retourne le dernier id de la table t_groupes_factures.
-		 *
-		 * @return int
-		 */
-		public function getLastInsertedIdInGroupesFactures ()
-		{
-			$this->Sql = "SELECT MAX( idt_groupes_factures ) AS id FROM t_groupes_factures";
-			$res = $this->FetchRow();
-			return $res ["id"];
-		}
-
-
-		/**
-		 * Fonction getLastInsertedIdInHistoriquesFactures
-		 * -------------------
-		 * Retourne le dernier id de la table t_historiques_factures.
-		 *
-		 * @return int
-		 */
-		public function getLastInsertedIdInHistoriquesFactures ()
-		{
-			$this->Sql = "SELECT MAX( idt_historiques_factures ) AS id FROM t_historiques_factures";
-			$res = $this->FetchRow();
-			return $res ["id"];
-		}
-
-		/**
 		 * Fonction getAllNumberUsersByTypesUSers
 		 * -------------------
 		 * Retourne le nombre d'users par types de comptes
@@ -1954,23 +1786,6 @@
 		}
 
 		/**
-		 * Fonction getAllNumberFacturesFournisseur
-		 * -------------------
-		 * Retourne les infos de tous les factures et fournisseurs
-		 *
-		 * @return array
-		 */
-		public function getAllNumberFacturesFournisseur()
-		{
-			$this->Sql = "SELECT COUNT(fa.idt_historiques_factures) AS nb_factures , fa.date_facture, fo.nom_fournisseur
-							FROM t_fournisseurs AS fo
-							LEFT JOIN t_historiques_factures AS fa ON fa.id_fournisseur = fo.idt_fournisseurs
-							GROUP BY fo.idt_fournisseurs";
-			$res = $this->FetchAllRows();
-			return $res;
-		}
-
-		/**
 		 * Fonction getAllNumberFacturesFournisseurCurrent
 		 * -------------------
 		 * Retourne les infos de tous les factures courantes et fournisseurs
@@ -1983,23 +1798,6 @@
 							FROM t_fournisseurs AS fo
 							LEFT JOIN t_factures_achats AS fa ON fa.id_fournisseur = fo.idt_fournisseurs
 							GROUP BY fo.idt_fournisseurs";
-			$res = $this->FetchAllRows();
-			return $res;
-		}		
-
-		/**
-		 * Fonction getAllHistoriquesSyntheses
-		 * -------------------
-		 * Retourne les infos de l'historiques de syntheses
-		 *
-		 * @return array
-		 */
-		public function getAllHistoriquesSyntheses()
-		{
-			$this->Sql = "SELECT *
-							FROM t_historiques_syntheses
-							ORDER BY date_inventaire
-							LIMIT 0, 6";
 			$res = $this->FetchAllRows();
 			return $res;
 		}
@@ -2076,22 +1874,6 @@
 			$this->Sql = "SELECT *
 							FROM t_achats AS a
 							WHERE a.id_facture = $id";
-			$res = $this->FetchAllRows();
-			return $res;
-		}
-
-		/**
-		 * Fonction getHistoriquesFactures
-		 * -------------------
-		 * Retourne l'historique des factures
-		 *
-		 * @return array
-		 */
-		public function getHistoriquesFactures()
-		{
-			$this->Sql = "SELECT * 
-							FROM t_historiques_factures AS hf
-							JOIN t_fournisseurs AS f ON hf.id_fournisseur = f.idt_fournisseurs";
 			$res = $this->FetchAllRows();
 			return $res;
 		}
@@ -2189,43 +1971,6 @@
         }
 
 		/**
-		 * Fonction getAllquantiteProduitsAchetesByPeriode
-		 * -------------------
-		 * Retourne les quantit�s de produits achet�s
-		 *
-		 * @return array
-		 */
-		public function getAllquantiteProduitsAchetesByPeriode( $date_debut, $date_fin )
-		{			
-			$this->Sql = "SELECT SUM(ha.quantite_achat) AS quantite_achat
-							FROM t_historiques_achats AS ha
-							JOIN t_historiques_factures AS hf ON ha.id_facture = hf.idt_historiques_factures
-							WHERE hf.date_facture >= '$date_fin' AND hf.date_facture <='$date_debut'";
-
-			$res = $this->FetchAllRows();
-			return $res;
-		}
-
-		/**
-		 * Fonction getAllHistoriqueQuantiteProduitsByPeriode
-		 * -------------------
-		 * Retourne les quantit�s de produits vendus
-		 *
-		 * @return array
-		 */
-		public function getAllHistoriqueQuantiteProduitsByPeriode( $date_debut, $date_fin )
-		{			
-			$this->Sql = "SELECT SUM(ha.quantite_achat) AS quantite_achat, SUM(p.stock_initial) AS stock_initial, SUM(p.stock_physique) AS stock_physique
-							FROM t_historiques_achats AS ha
-							JOIN t_historiques_factures AS hf ON ha.id_facture = hf.idt_historiques_factures
-							JOIN t_produits AS p ON ha.id_produit = p.idt_produits
-							WHERE hf.date_facture >= '$date_fin' AND hf.date_facture <= '$date_debut'";
-
-			$res = $this->FetchRow();
-			return $res;
-		}
-
-		/**
 		 * Fonction getAllCurrentQuantiteProduitsByPeriode
 		 * -------------------
 		 * Retourne les quantit�s de produits vendus
@@ -2241,21 +1986,6 @@
 							WHERE hf.date_facture >= '$date_fin' AND hf.date_facture <= '$date_debut'";
 
 			$res = $this->FetchRow();
-			return $res;
-		}	
-
-		/**
-		 * Fonction getHistoriquesFactures
-		 * -------------------
-		 * Retourne les groupes de factures
-		 *
-		 * @return array
-		 */
-		public function getGroupesFactures()
-		{
-			$this->Sql = "SELECT * 
-							FROM t_groupes_factures";
-			$res = $this->FetchAllRows();
 			return $res;
 		}
 
@@ -2517,7 +2247,7 @@
                                     FROM t_inventaires AS i
                                     JOIN t_users AS u ON i.id_user = u.idt_users
                                     ".$sql_where."
-                                    ORDER BY i.idt_inventaires";
+                                    ORDER BY i.idt_inventaires DESC";
             $res = $this->FetchAllRows();
             return $res;
         }

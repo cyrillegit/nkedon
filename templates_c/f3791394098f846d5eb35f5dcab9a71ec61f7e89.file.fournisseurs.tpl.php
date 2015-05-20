@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-05-18 15:07:29
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-19 09:08:16
          compiled from ".\templates\magasin\gestion_fournisseurs\fournisseurs.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:308965536461c02d271-83814984%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f3791394098f846d5eb35f5dcab9a71ec61f7e89' => 
     array (
       0 => '.\\templates\\magasin\\gestion_fournisseurs\\fournisseurs.tpl',
-      1 => 1431960994,
+      1 => 1432026334,
       2 => 'file',
     ),
   ),
@@ -229,7 +229,7 @@ $(document).ready (function ()
     <div id="tableau_fournisseurs"></div>
 
     <div style="clear: both;">&nbsp;</div>
-    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='../../../magasin.php';"></div>
+    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='magasin.php';"></div>
 </div>
 
 <?php echo $_smarty_tpl->getSubTemplate ("common/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

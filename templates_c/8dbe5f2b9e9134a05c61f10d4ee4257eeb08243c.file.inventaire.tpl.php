@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-05-18 19:58:09
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-19 09:03:29
          compiled from ".\templates\magasin\gestion_magasin\inventaire.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:130975536464987a226-85192870%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8dbe5f2b9e9134a05c61f10d4ee4257eeb08243c' => 
     array (
       0 => '.\\templates\\magasin\\gestion_magasin\\inventaire.tpl',
-      1 => 1431979076,
+      1 => 1432026206,
       2 => 'file',
     ),
   ),
@@ -444,7 +444,7 @@ $(document).ready (function ()
     <div id="tableau_produits"></div>
 
     <div style="clear: both;">&nbsp;</div>
-    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='../../../magasin.php';"></div>
+    <div class="btn_precedent"style="float: right;" onclick="javascript:document.location.href='magasin.php';"></div>
 </div>
 
 <?php echo $_smarty_tpl->getSubTemplate ("common/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

@@ -774,6 +774,16 @@ $(document).ready (function ()
 				   </li>
 
 				   <li class='has-sub'><a href="production.php"><span>Production</span></a>
+                       <ul>
+                           <li class='has-sub'><a href="production.php?sub=matieres_premieres"><span>Ajouter / Modifer une matiére première</span></a></li>
+                           <li class='has-sub'><a href="production.php?sub=portions_journalieres"><span>Ajouter / Modifer une portion journaliére</span></a></li>
+                           <li class='has-sub'><a href="production.php?sub=produits_confectionnes"><span>Ajouter / Modifer un produit confectionné</span></a></li>
+                           <li class='has-sub'><a href="production.php?sub=fournisseurs"><span>Ajouter / modifier un fournisseur</span></a></li>
+                           <li class='has-sub'><a href="production.php?sub=factures_achats"><span>Enregistrer une facture d'achat</span></a></li>
+                           <li class='has-sub'><a href="production.php?sub=factures_ventes"><span>Etablir une facture de vente</span></a></li>
+                           <li class='has-sub'><a href="production.php?sub=operations_journal"><span>Réaliser le journal</span></a></li>
+                           <li class='has-sub'><a href="production.php?sub=inventaire"><span>Réaliser l'inventaire du magasin</span></a></li>
+                       </ul>
 				   </li>
                     {if $smarty.session.infoUser.id_type_user <= 5}
                         <li class='has-sub'><a href="historiques.php"><span>Historiques</span></a>

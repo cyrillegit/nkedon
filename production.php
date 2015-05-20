@@ -45,18 +45,6 @@
 	}
 	else
 	{
-		/*
-		$sql = "DELETE FROM t_produits_factures";
-
-		if($db->Execute($sql))
-		{
-			$db->commit ();
-		}
-		else
-		{
-			$db->rollBack();
-		}
-	//*/	
 		$infos = array ();
 		$target = $_GET ["sub"];
 
@@ -66,13 +54,62 @@
 		}
 		else
 		{
-			if( $target == "produits" )
+			if( $target == "matieres_premieres" )
 			{
 				$nb_produits = $db->getNbProduitsInDB ();
 				$tpl_index->assign("nb_produits", $nb_produits);
 
 				$target = "gestion_produits/produits";
-			}			
+			}
+            else if( $target == "portions_journalieres" )
+            {
+                $nb_fournisseurs = $db->getNbFournisseursInDB ();
+                $tpl_index->assign("nb_fournisseurs", $nb_fournisseurs);
+
+                $target = "gestion_fournisseurs/fournisseurs";
+            }
+            else if( $target == "produits_confectionnes" )
+            {
+                $nb_fournisseurs = $db->getNbFournisseursInDB ();
+                $tpl_index->assign("nb_fournisseurs", $nb_fournisseurs);
+
+                $target = "gestion_fournisseurs/fournisseurs";
+            }
+            else if( $target == "fournisseurs" )
+            {
+                $nb_fournisseurs = $db->getNbFournisseursInDB ();
+                $tpl_index->assign("nb_fournisseurs", $nb_fournisseurs);
+
+                $target = "gestion_fournisseurs/fournisseurs";
+            }
+            else if( $target == "factures_achats" )
+            {
+                $nb_fournisseurs = $db->getNbFournisseursInDB ();
+                $tpl_index->assign("nb_fournisseurs", $nb_fournisseurs);
+
+                $target = "gestion_fournisseurs/fournisseurs";
+            }
+            else if( $target == "factures_ventes" )
+            {
+                $nb_fournisseurs = $db->getNbFournisseursInDB ();
+                $tpl_index->assign("nb_fournisseurs", $nb_fournisseurs);
+
+                $target = "gestion_fournisseurs/fournisseurs";
+            }
+            else if( $target == "operations_journal" )
+            {
+                $nb_fournisseurs = $db->getNbFournisseursInDB ();
+                $tpl_index->assign("nb_fournisseurs", $nb_fournisseurs);
+
+                $target = "gestion_fournisseurs/fournisseurs";
+            }
+            else if( $target == "inventaire" )
+            {
+                $nb_fournisseurs = $db->getNbFournisseursInDB ();
+                $tpl_index->assign("nb_fournisseurs", $nb_fournisseurs);
+
+                $target = "gestion_fournisseurs/fournisseurs";
+            }
 			else
 			{
 				$target = "main";
