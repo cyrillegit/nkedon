@@ -252,6 +252,21 @@
                 $tpl_index->assign ("error", 1);
             }
         }
+        else if ( $_GET ["target"] == "matiere_premiere" )
+        {
+            $sql = "DELETE FROM t_matieres_premieres WHERE idt_matieres_premieres = $id";
+            $ok &= $db->Execute ( $sql );
+            if( $ok )
+            {
+                $tpl_index->assign ("message", $db->fixEncoding("La suppression de la matiere premiere a bien été réalisée."));
+                $tpl_index->assign ("error", 0);
+            }
+            else
+            {
+                $tpl_index->assign ("message", $db->fixEncoding("La suppression de la matiere premiere a échouée."));
+                $tpl_index->assign ("error", 1);
+            }
+        }
 		else
 		{
 

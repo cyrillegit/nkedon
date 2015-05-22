@@ -56,10 +56,10 @@
 		{
 			if( $target == "matieres_premieres" )
 			{
-				$nb_produits = $db->getNbProduitsInDB ();
-				$tpl_index->assign("nb_produits", $nb_produits);
+				$nb_matieres_premieres = $db->getNbMatieresPremieresInDB();
+				$tpl_index->assign("nb_matieres_premieres", $nb_matieres_premieres);
 
-				$target = "gestion_produits/produits";
+				$target = "gestion_produits/matieres_premieres";
 			}
             else if( $target == "portions_journalieres" )
             {

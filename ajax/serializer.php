@@ -114,6 +114,10 @@ else
             {
                 include ("Serializer/edit_journal.php");
             }
+            else if ($_POST ["target"] == "matieres_premieres")
+            {
+                include ("Serializer/edit_matiere_premiere.php");
+            }
 			else
 			{
 				echo "({'result': 'FAILED', 'message': 'La cible (\'<strong>".$_POST ["target"]."</strong>\') est inconnue.'})";

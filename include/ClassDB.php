@@ -2286,5 +2286,33 @@
             $res = $this->FetchRow();
             return $res;
         }
+
+        /**
+         * Fonction getAllMatieresPremieres
+         * -------------------
+         * Retourne les matieres premieres pr�sentes en base de donn�es
+         *
+         * @return array
+         */
+        public function getAllMatieresPremieres ()
+        {
+            $this->Sql = "SELECT * FROM t_matieres_premieres ORDER BY nom_matiere_premiere";
+            $res = $this->FetchAllRows();
+            return $res;
+        }
+
+        /**
+         * Fonction getNbMatieresPremieresInDB
+         * -------------------
+         * Retourne le nombre de type de matieres premieres présentes en base de données.
+         *
+         * @return int
+         */
+        public function getNbMatieresPremieresInDB ()
+        {
+            $this->Sql = "SELECT COUNT(*) AS nb FROM t_matieres_premieres";
+            $res = $this->FetchRow();
+            return $res ["nb"];
+        }
 	}
 ?>
