@@ -113,8 +113,8 @@ $(document).ready (function ()
 <div id="Content">
     <div class="success" id="succes_register" style="display: block;">
         <b>La synthèse de l'inventaire a été réalisée avec succès.
-            </br> Vous pouvez télécharger le fichier pdf.
-            </br> Vous pouvez aussi consulter cette syntèse dans l'historique des inventaires.
+            </br> Vous pouvez télécharger le fichier de synthèse .
+            </br> Vous pouvez aussi consulter cette synthèse dans l'historique des inventaires.
         </b>
         <div></div>
     </div>

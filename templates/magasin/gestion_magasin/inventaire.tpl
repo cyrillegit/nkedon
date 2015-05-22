@@ -54,6 +54,7 @@ function resetInputs(){
     fetchAllUsers();
 
     $("#warnings_popup").css("display", "none");
+
 }
 
 /**
@@ -63,6 +64,8 @@ $(document).ready (function ()
 {
     $("#editInventaire").hide();
     $("#editStockPhysique").hide();
+ //   $("#processing").hide();
+    $("#processing").css("display", "none");
     fetchAllUsers();
 	RefreshTableProduits ();
 
@@ -137,9 +140,9 @@ $(document).ready (function ()
     $("#btnValiderInventaire").click (function ()
     {
         var ok = false;
-        if ( $("#user_select").val () == "" )
+        if ( $("#user_select").val () == "0" )
         {
-            ShowPopupError  ("Veuillez saisir le nom du caissier.");
+            ShowPopupError  ("Veuillez choisir le nom du caissier.");
 
             $("#user_select").focus ();
             ok = false;
@@ -207,28 +210,32 @@ $(document).ready (function ()
 
         if (ok)
         {
-            $("#divBtn").hide();
-            var param = $("#form_popup_inventaire").serialize ();
+            var didConfirm = confirm("Vous êtes sur le point de valider l'inventaire.\n Cette opération est irréversible.\n Voulez-vous continuer? ");
+            if (didConfirm == true) {
 
-            var responseText = Serialize (param);
+                $('html, body').animate({ scrollTop: 0 }, 'slow');
+                $("#editInventaire").hide("slow");
+                $("#processing").show("slow");
 
-            if (responseText != "")
-            {
-                response = eval (responseText);
-                if (response.result == "SUCCESS")
-                {
-                    ShowSuccess ("Le recapitulatif fait par (<strong>" + $("#nom_caissier").val () + "</strong>) a bien été enregistré.");
-                    $.modal.close ();
-                    document.location.href="magasin.php?sub=synthese_inventaire";
+                var param = $("#form_popup_inventaire").serialize();
+
+                var responseText = Serialize(param);
+
+                if (responseText != "") {
+                    response = eval(responseText);
+                    if (response.result == "SUCCESS") {
+
+                        ShowSuccess("Le recapitulatif fait par (<strong>" + $("#nom_caissier").val() + "</strong>) a bien été enregistré.");
+
+                        document.location.href="magasin.php?sub=synthese_inventaire";
+                    }
+                    else {
+                        ShowPopupError(response.result);
+                    }
                 }
-                else
-                {
-                    ShowPopupError  (response.result);
+                else {
+                    ShowPopupError("Une erreur est survenue.");
                 }
-            }
-            else
-            {
-                ShowPopupError  ("Une erreur est survenue.");
             }
         }
         else
@@ -240,6 +247,13 @@ $(document).ready (function ()
 </script>
 {/literal}
 <div id="Content">
+    <div class="processing" id="processing" style="display: block;">
+        <b>La synthèse de l'inventaire est entrain d'être générée .
+            </br> Veuillez patienter ...
+        </b>
+        <div></div>
+    </div>
+
     <div class="bloc_title">
         <div class="alerte">&nbsp;</div><br/>
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
@@ -261,8 +275,8 @@ $(document).ready (function ()
                 </td>
                 <td>
                 {if $smarty.session.infoUser.id_type_user <= 5}
-                <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_valider" id="addInventaire"></div></div>
-                <div id="msgInventaire" style="margin-left:20px; margin-right: 20px; float: right;">Pour valider l'inventaire :&nbsp;</div>
+                <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addInventaire"></div></div>
+                <div id="msgInventaire" style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter le recapitulatif de l'inventaire :&nbsp;</div>
                 {/if}
                 </td>
             </tr>

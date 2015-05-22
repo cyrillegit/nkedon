@@ -30,9 +30,6 @@ $(document).ready (function ()
             $("#msgInventaire").hide();
             $('html, body').animate({ scrollTop: 0 }, 'slow');
             $("#editStockPhysique").show("slow");
-
-//			update_content ("ajax/popups/edit_produit_inventaire.php", "popup", "id_produit=" + $(this).attr ("id_produit"));
-//			ShowPopupHeight (550);
 		});
 	});
 

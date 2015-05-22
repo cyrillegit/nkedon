@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-05-19 09:03:29
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-22 10:19:48
          compiled from ".\templates\magasin\gestion_magasin\inventaire.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:130975536464987a226-85192870%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8dbe5f2b9e9134a05c61f10d4ee4257eeb08243c' => 
     array (
       0 => '.\\templates\\magasin\\gestion_magasin\\inventaire.tpl',
-      1 => 1432026206,
+      1 => 1432289980,
       2 => 'file',
     ),
   ),
@@ -80,6 +80,7 @@ function resetInputs(){
     fetchAllUsers();
 
     $("#warnings_popup").css("display", "none");
+
 }
 
 /**
@@ -89,6 +90,8 @@ $(document).ready (function ()
 {
     $("#editInventaire").hide();
     $("#editStockPhysique").hide();
+ //   $("#processing").hide();
+    $("#processing").css("display", "none");
     fetchAllUsers();
 	RefreshTableProduits ();
 
@@ -163,9 +166,9 @@ $(document).ready (function ()
     $("#btnValiderInventaire").click (function ()
     {
         var ok = false;
-        if ( $("#user_select").val () == "" )
+        if ( $("#user_select").val () == "0" )
         {
-            ShowPopupError  ("Veuillez saisir le nom du caissier.");
+            ShowPopupError  ("Veuillez choisir le nom du caissier.");
 
             $("#user_select").focus ();
             ok = false;
@@ -233,28 +236,40 @@ $(document).ready (function ()
 
         if (ok)
         {
-            $("#divBtn").hide();
-            var param = $("#form_popup_inventaire").serialize ();
+            var didConfirm = confirm("Vous êtes sur le point de valider l'inventaire.\n Cette opération est irréversible.\n Voulez-vous continuer? ");
+            if (didConfirm == true) {
+                
+                $('html, body').animate({ scrollTop: 0 }, 'slow');
+                $("#editInventaire").hide("slow");
+                $("#processing").show("slow");
+            //    $("#divBtn").hide();
 
-            var responseText = Serialize (param);
+            //    $.blockUI({message: '<h4 style="font-size:10px;margin:10px 0;">Veuillez patienter ...</h4><img src="assets/images/progress.gif" /><br/><br/>'});
 
-            if (responseText != "")
-            {
-                response = eval (responseText);
-                if (response.result == "SUCCESS")
-                {
-                    ShowSuccess ("Le recapitulatif fait par (<strong>" + $("#nom_caissier").val () + "</strong>) a bien été enregistré.");
-                    $.modal.close ();
-                    document.location.href="magasin.php?sub=synthese_inventaire";
+                var param = $("#form_popup_inventaire").serialize();
+
+                var responseText = Serialize(param);
+
+                if (responseText != "") {
+                    response = eval(responseText);
+                    if (response.result == "SUCCESS") {
+
+                        ShowSuccess("Le recapitulatif fait par (<strong>" + $("#nom_caissier").val() + "</strong>) a bien été enregistré.");
+                        //    $.modal.close ();
+                            document.location.href="magasin.php?sub=synthese_inventaire";
+                        //    $.unblockUI ();
+                    }
+                    else {
+                        $.unblockUI();
+
+                        ShowPopupError(response.result);
+                    }
                 }
-                else
-                {
-                    ShowPopupError  (response.result);
+                else {
+                    $.unblockUI();
+
+                    ShowPopupError("Une erreur est survenue.");
                 }
-            }
-            else
-            {
-                ShowPopupError  ("Une erreur est survenue.");
             }
         }
         else
@@ -266,6 +281,13 @@ $(document).ready (function ()
 </script>
 
 <div id="Content">
+    <div class="processing" id="processing" style="display: block;">
+        <b>La synthèse de l'inventaire est entrain d'être générée .
+            </br> Veuillez patienter ...
+        </b>
+        <div></div>
+    </div>
+
     <div class="bloc_title">
         <div class="alerte">&nbsp;</div><br/>
         <div style="width: 990px; height: 51px; border-bottom: 1px solid #fff; float:left;">
@@ -288,8 +310,8 @@ $(document).ready (function ()
                 </td>
                 <td>
                 <?php if ($_SESSION['infoUser']['id_type_user']<=5){?>
-                <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_valider" id="addInventaire"></div></div>
-                <div id="msgInventaire" style="margin-left:20px; margin-right: 20px; float: right;">Pour valider l'inventaire :&nbsp;</div>
+                <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addInventaire"></div></div>
+                <div id="msgInventaire" style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter le recapitulatif de l'inventaire :&nbsp;</div>
                 <?php }?>
                 </td>
             </tr>

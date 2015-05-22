@@ -21,7 +21,7 @@
 <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 <script type="text/javascript" src="assets/js/gmap3.min.js"></script>
 
-{*<script type="text/javascript" src="assets/js/jquery.confirm.js"></script>*}
+<script type="text/javascript" src="assets/js/jquery.confirm.js"></script>
 {*<script type="text/javascript" src="assets/js/jquery-1.7.1.min.js"></script>*}
 {*<script type="text/javascript" src="assets/js/jquery.autocomplete.js"></script>*}
 {*<script type="text/javascript" src="assets/js/jquery-ui.custom.min.js"></script>*}
