@@ -6,7 +6,7 @@ function RefreshTableProduitsFacture ()
 {
 	var responseText = $.ajax({
 			type	: "POST",
-			url		: "ajax/infos/magasin/GetTableauProduitsFacture.php",
+			url		: "ajax/infos/magasin/GetTableauProduitsFactureAchat.php",
 			async	: false,
 			data	: "",
 			success	: function (msg){}

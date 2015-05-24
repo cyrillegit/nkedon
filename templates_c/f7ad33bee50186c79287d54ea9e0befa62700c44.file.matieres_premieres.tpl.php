@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-05-22 15:44:30
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-24 12:18:45
          compiled from ".\templates\production\gestion_produits\matieres_premieres.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2924555f2f4f165990-73753576%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7ad33bee50186c79287d54ea9e0befa62700c44' => 
     array (
       0 => '.\\templates\\production\\gestion_produits\\matieres_premieres.tpl',
-      1 => 1432309467,
+      1 => 1432469921,
       2 => 'file',
     ),
   ),
@@ -44,12 +44,25 @@ function RefreshTableMatieresPremieres ()
 	UpdateTSorter ();
 }
 
+/**
+ * reset the inputs
+ */
 function resetInputs(){
     $("#nom_matiere_premiere").val("");
     $("#prix_achat").val("");
     $("#quantite").val("");
 
     $("#warnings_popup").css("display", "none");
+}
+
+function ShowBtnAddMatierePremiere( status ){
+    if( status ){
+        $("#addMatierePremiere").show("slow");
+        $("#msgAddMatierePremiere").show("slow");
+    }else{
+        $("#addMatierePremiere").hide("slow");
+        $("#msgAddMatierePremiere").hide("slow");
+    }
 }
 /**
 	jQuery init.
@@ -63,12 +76,14 @@ $(document).ready (function ()
 	{
         resetInputs();
         $("#editMatierePremiere").show("slow");
+        ShowBtnAddMatierePremiere( false );
 	});
 
     $("#btnAnnuler").click (function ()
     {
         resetInputs();
         $("#editMatierePremiere").hide("slow");
+        ShowBtnAddMatierePremiere( true );
     });
 
     $("#btnValider").click (function ()
@@ -157,7 +172,7 @@ $(document).ready (function ()
                 <td>
                 <?php if ($_SESSION['infoUser']['id_type_user']<=3){?>
                 <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addMatierePremiere"></div></div>
-                <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter une matiére prémière :&nbsp;</div>
+                <div style="margin-left:20px; margin-right: 20px; float: right;" id="msgAddMatierePremiere">Pour ajouter une matiére prémière :&nbsp;</div>
                 <?php }?>
                 </td>
             </tr>

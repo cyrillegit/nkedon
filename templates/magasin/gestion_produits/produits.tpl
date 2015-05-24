@@ -25,6 +25,19 @@ function resetInputs(){
 
     $("#warnings_popup").css("display", "none");
 }
+
+/**
+ *  show or hide the add button
+ */
+function ShowBtnAddProduit( status ){
+    if( status ){
+        $("#addProduit").show("slow");
+        $("#msgAddProduit").show("slow");
+    }else{
+        $("#addProduit").hide("slow");
+        $("#msgAddProduit").hide("slow");
+    }
+}
 /**
 	jQuery init.
 */
@@ -37,15 +50,14 @@ $(document).ready (function ()
 	{
         resetInputs();
         $("#editProduit").show("slow");
-
-//		update_content ("ajax/popups/edit_produit.php", "popup", "id_produit=0");
-//		ShowPopupHeight (550);
+        ShowBtnAddProduit( false );
 	});
 
     $("#btnAnnuler").click (function ()
     {
         resetInputs();
         $("#editProduit").hide("slow");
+        ShowBtnAddProduit( true );
     });
 
     $("#btnValider").click (function ()
@@ -133,7 +145,7 @@ $(document).ready (function ()
                 <td>
                 {if $smarty.session.infoUser.id_type_user <= 3}
                 <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addProduit"></div></div>
-                <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter un produit :&nbsp;</div>
+                <div style="margin-left:20px; margin-right: 20px; float: right;" id="msgAddProduit">Pour ajouter un produit :&nbsp;</div>
                 {/if}
                 </td>
             </tr>

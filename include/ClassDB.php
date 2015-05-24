@@ -1593,18 +1593,18 @@
         }
 
 		/**
-		 * Fonction getAllProduitsFacture
+		 * Fonction getAllProduitsFactureAchats
 		 * -------------------
 		 * Retourne les produits contenus dans une facture
 		 *
 		 * @return array
 		 */
-		public function getAllProduitsFacture()
+		public function getAllProduitsFactureAchats()
 		{
 			$this->Sql = "SELECT * 
-							FROM t_produits_achats AS pf
-							JOIN t_produits AS p ON pf.id_produit = p.idt_produits
-							ORDER BY pf.idt_produits_factures DESC";
+							FROM t_produits_achats AS pa
+							JOIN t_produits AS p ON pa.id_produit = p.idt_produits
+							ORDER BY pa.idt_produits_achats DESC";
 
 			$res = $this->FetchAllRows();
 			return $res;

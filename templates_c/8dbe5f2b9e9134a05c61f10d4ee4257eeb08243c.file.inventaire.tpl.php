@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-05-22 10:19:48
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-24 11:24:50
          compiled from ".\templates\magasin\gestion_magasin\inventaire.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:130975536464987a226-85192870%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8dbe5f2b9e9134a05c61f10d4ee4257eeb08243c' => 
     array (
       0 => '.\\templates\\magasin\\gestion_magasin\\inventaire.tpl',
-      1 => 1432289980,
+      1 => 1432466683,
       2 => 'file',
     ),
   ),
@@ -146,14 +146,16 @@ $(document).ready (function ()
         else
         {
         }
-        $("#msgInventaire").show();
-        $("#addInventaire").show();
+        $("#msgInventaire").show("slow");
+        $("#addInventaire").show("slow");
     });
 
 	$("#addInventaire").click (function ()
 	{
         resetInputs();
         $("#editInventaire").show("slow");
+        $("#addInventaire").hide("slow");
+        $("#msgInventaire").hide("slow");
 	});
 
     $("#btnAnnulerInventaire").click (function ()
@@ -161,6 +163,8 @@ $(document).ready (function ()
         // On ferme la boîte de dialogue affichée juste avant.
         resetInputs();
         $("#editInventaire").hide("slow");
+        $("#addInventaire").show("slow");
+        $("#msgInventaire").show("slow");
     });
 
     $("#btnValiderInventaire").click (function ()
@@ -238,13 +242,10 @@ $(document).ready (function ()
         {
             var didConfirm = confirm("Vous êtes sur le point de valider l'inventaire.\n Cette opération est irréversible.\n Voulez-vous continuer? ");
             if (didConfirm == true) {
-                
+
                 $('html, body').animate({ scrollTop: 0 }, 'slow');
                 $("#editInventaire").hide("slow");
                 $("#processing").show("slow");
-            //    $("#divBtn").hide();
-
-            //    $.blockUI({message: '<h4 style="font-size:10px;margin:10px 0;">Veuillez patienter ...</h4><img src="assets/images/progress.gif" /><br/><br/>'});
 
                 var param = $("#form_popup_inventaire").serialize();
 
@@ -255,19 +256,14 @@ $(document).ready (function ()
                     if (response.result == "SUCCESS") {
 
                         ShowSuccess("Le recapitulatif fait par (<strong>" + $("#nom_caissier").val() + "</strong>) a bien été enregistré.");
-                        //    $.modal.close ();
-                            document.location.href="magasin.php?sub=synthese_inventaire";
-                        //    $.unblockUI ();
+
+                        document.location.href="magasin.php?sub=synthese_inventaire";
                     }
                     else {
-                        $.unblockUI();
-
                         ShowPopupError(response.result);
                     }
                 }
                 else {
-                    $.unblockUI();
-
                     ShowPopupError("Une erreur est survenue.");
                 }
             }

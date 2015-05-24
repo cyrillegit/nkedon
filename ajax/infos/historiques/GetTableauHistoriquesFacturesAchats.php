@@ -70,6 +70,10 @@ $(document).ready (function ()
                 <?php
                 }
             }
+        }else{
+            ?>
+            <li style="color: #ffffff;">Aucune facture d'achat enregistrée</li>
+        <?php
         }
         ?>
         </ul>

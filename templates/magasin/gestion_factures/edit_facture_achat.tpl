@@ -6,12 +6,12 @@ function RefreshTableProduitsFacture ()
 {
 	var responseText = $.ajax({
 			type	: "POST",
-			url		: "ajax/infos/magasin/GetTableauProduitsFacture.php",
+			url		: "ajax/infos/magasin/GetTableauProduitsFactureAchat.php",
 			async	: false,
 			data	: "",
 			success	: function (msg){}
 	}).responseText;
-	$("#tableau_produits_facture").empty ().html (responseText);
+	$("#tableau_produits_facture_achats").empty ().html (responseText);
 
 	UpdateTSorter ();
 }
@@ -49,6 +49,19 @@ function resetInputs(){
     $("#succes_register").css("display", "none");
 }
 
+/**
+ *  show or hide the add button
+ */
+function ShowBtnAddFactureAchat( status ){
+    if( status ){
+        $("#addProduitFacture").show("slow");
+        $("#msgAddProduitFacture").show("slow");
+    }else{
+        $("#addProduitFacture").hide("slow");
+        $("#msgAddProduitFacture").hide("slow");
+    }
+}
+
 $(document).ready (function ()
 {
     setRegisterPopup();
@@ -60,6 +73,7 @@ $(document).ready (function ()
         resetInputs();
         $('html, body').animate({ scrollTop: 0 }, 'slow');
         $("#editProduitFacture").show("slow");
+        ShowBtnAddFactureAchat( false );
 	});
 
 	$("#date_fabrication").datepicker({
@@ -93,6 +107,7 @@ $(document).ready (function ()
     {
         resetInputs();
         $("#editProduitFacture").hide('slow');
+        ShowBtnAddFactureAchat( true );
     });
 
     $("#btnValiderProduit").click (function ()
@@ -290,7 +305,7 @@ $(document).ready (function ()
                     </td>
                     <td>
                     <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addProduitFacture"></div></div>
-                    <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter un produit dans la facture :&nbsp;</div>
+                    <div style="margin-left:20px; margin-right: 20px; float: right;" id="msgAddProduitFacture">Pour ajouter un produit dans la facture :&nbsp;</div>
                     </td>
                 </tr>
             </table>
@@ -361,7 +376,7 @@ $(document).ready (function ()
             <hr size="5" style="margin-top: 50px; background-color: #ff0000;" />
         </div>
 
-		<div id="tableau_produits_facture"></div>
+		<div id="tableau_produits_facture_achats"></div>
 
     <form name="form_popup" id="form_popup" method="post">
 		<table style="float:left;" cellspacing="2" cellpadding="5">

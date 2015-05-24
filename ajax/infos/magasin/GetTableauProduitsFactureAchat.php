@@ -1,6 +1,6 @@
 <?php
 /**
-	Fichier GetTableauProduitsFacture.php
+	Fichier GetTableauProduitsFactureAchat.php
 	-----------------------------------
 	Ce fichier crée un tableau contenant les informations des produits d'une facture en.
 */
@@ -11,7 +11,7 @@
 @session_start();
 $db = new Database ();
 
-$datas = $db->getAllProduitsFacture ();
+$datas = $db->getAllProduitsFactureAchats ();
 ?>
 <script language="javascript">
 $(document).ready (function ()
@@ -20,7 +20,7 @@ $(document).ready (function ()
 	{
 		$(this).click (function ()
 		{
-            $("#id_produit_facture").val($(this).attr("id_produit_facture"));
+            $("#id_produit_achat").val($(this).attr("id_produit_achat"));
             $("#nom_produit_search").val($(this).attr ("nom_produit"));
             $("#quantite_achat").val($(this).attr ("quantite_achat"));
             $("#date_fabrication").val( $(this).attr ("date_fabrication") );
@@ -66,8 +66,8 @@ $(document).ready (function ()
                     <td align="center"><span class='floatAndMarginLeft'><?php echo SQLDateToFrenchDate( $obj["date_peremption"] ); ?></span></td>
                     <td align="center">
                     <?php if($_SESSION ["infoUser"]["idt_types_users"] <= 4){?>
-                        <img src="css/images/edit.png" title="modifier" border="0" class="edit_produit_facture" style="cursor: pointer;" id_produit_facture="<?=$obj ["idt_produits_factures"]; ?>" nom_produit="<?=$obj ["nom_produit"]; ?>" quantite_achat="<?=$obj ["quantite_achat"]; ?>" date_fabrication="<?= SQLDateToFrenchDate( $obj ["date_fabrication"] ); ?>" date_peremption="<?= SQLDateToFrenchDate( $obj ["date_peremption"] ); ?>" />
-                        <a class="delete_link" title="supprimer" url="delete.php?target=produit_facture&id=<?=$obj["idt_produits_factures"]; ?>"><img src="css/images/delete.png" border="0" /></a>
+                        <img src="css/images/edit.png" title="modifier" border="0" class="edit_produit_facture" style="cursor: pointer;" id_produit_achat="<?=$obj ["idt_produits_achats"]; ?>" nom_produit="<?=$obj ["nom_produit"]; ?>" quantite_achat="<?=$obj ["quantite_achat"]; ?>" date_fabrication="<?= SQLDateToFrenchDate( $obj ["date_fabrication"] ); ?>" date_peremption="<?= SQLDateToFrenchDate( $obj ["date_peremption"] ); ?>" />
+                        <a class="delete_link" title="supprimer" url="delete.php?target=produit_facture&id=<?=$obj["idt_produits_achats"]; ?>"><img src="css/images/delete.png" border="0" /></a>
                     <?php }?>
                     </td>
                 </tr>

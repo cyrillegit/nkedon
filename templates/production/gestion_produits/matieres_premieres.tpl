@@ -18,12 +18,28 @@ function RefreshTableMatieresPremieres ()
 	UpdateTSorter ();
 }
 
+/**
+ * reset the inputs
+ */
 function resetInputs(){
     $("#nom_matiere_premiere").val("");
     $("#prix_achat").val("");
     $("#quantite").val("");
 
     $("#warnings_popup").css("display", "none");
+}
+
+/**
+ *  show or hide the add button
+ */
+function ShowBtnAddMatierePremiere( status ){
+    if( status ){
+        $("#addMatierePremiere").show("slow");
+        $("#msgAddMatierePremiere").show("slow");
+    }else{
+        $("#addMatierePremiere").hide("slow");
+        $("#msgAddMatierePremiere").hide("slow");
+    }
 }
 /**
 	jQuery init.
@@ -37,12 +53,14 @@ $(document).ready (function ()
 	{
         resetInputs();
         $("#editMatierePremiere").show("slow");
+        ShowBtnAddMatierePremiere( false );
 	});
 
     $("#btnAnnuler").click (function ()
     {
         resetInputs();
         $("#editMatierePremiere").hide("slow");
+        ShowBtnAddMatierePremiere( true );
     });
 
     $("#btnValider").click (function ()
@@ -130,7 +148,7 @@ $(document).ready (function ()
                 <td>
                 {if $smarty.session.infoUser.id_type_user <= 3}
                 <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addMatierePremiere"></div></div>
-                <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter une matiére prémière :&nbsp;</div>
+                <div style="margin-left:20px; margin-right: 20px; float: right;" id="msgAddMatierePremiere">Pour ajouter une matiére prémière :&nbsp;</div>
                 {/if}
                 </td>
             </tr>

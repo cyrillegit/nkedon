@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-05-19 09:08:16
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-24 12:27:46
          compiled from ".\templates\magasin\gestion_fournisseurs\fournisseurs.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:308965536461c02d271-83814984%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f3791394098f846d5eb35f5dcab9a71ec61f7e89' => 
     array (
       0 => '.\\templates\\magasin\\gestion_fournisseurs\\fournisseurs.tpl',
-      1 => 1432026334,
+      1 => 1432470462,
       2 => 'file',
     ),
   ),
@@ -51,6 +51,19 @@ function resetInputs(){
 
     $("#warnings_popup").css("display", "none");
 }
+
+/**
+ *  show or hide the add button
+ */
+function ShowBtnAddFournisseur( status ){
+    if( status ){
+        $("#addFournisseur").show("slow");
+        $("#msgAddFournisseur").show("slow");
+    }else{
+        $("#addFournisseur").hide("slow");
+        $("#msgAddFournisseur").hide("slow");
+    }
+}
 /**
 	jQuery init.
 */
@@ -63,6 +76,7 @@ $(document).ready (function ()
 	{
         resetInputs();
         $("#editFournisseur").show("slow");
+        ShowBtnAddFournisseur( false );
 	});
 
     $("#btnAnnuler").click (function ()
@@ -70,6 +84,7 @@ $(document).ready (function ()
         // On ferme la boîte de dialogue affichée juste avant.
         resetInputs();
         $("#editFournisseur").hide("slow");
+        ShowBtnAddFournisseur( true );
     });
 
     $("#btnValider").click (function ()
@@ -162,7 +177,7 @@ $(document).ready (function ()
 <?php $_tmp3=ob_get_clean();?><?php ob_start();?><?php echo $_SESSION['infoUser']['id_type_user']==4;?>
 <?php $_tmp4=ob_get_clean();?><?php if ($_tmp1||$_tmp2||$_tmp3||$_tmp4){?>
                 <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addFournisseur"></div></div>
-                <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter un fournisseur :&nbsp;</div>
+                <div style="margin-left:20px; margin-right: 20px; float: right;" id="msgAddFournisseur">Pour ajouter un fournisseur :&nbsp;</div>
                 <?php }?>
                 </td>
             </tr>

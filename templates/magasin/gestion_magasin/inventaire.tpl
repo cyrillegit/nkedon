@@ -120,14 +120,16 @@ $(document).ready (function ()
         else
         {
         }
-        $("#msgInventaire").show();
-        $("#addInventaire").show();
+        $("#msgInventaire").show("slow");
+        $("#addInventaire").show("slow");
     });
 
 	$("#addInventaire").click (function ()
 	{
         resetInputs();
         $("#editInventaire").show("slow");
+        $("#addInventaire").hide("slow");
+        $("#msgInventaire").hide("slow");
 	});
 
     $("#btnAnnulerInventaire").click (function ()
@@ -135,6 +137,8 @@ $(document).ready (function ()
         // On ferme la boîte de dialogue affichée juste avant.
         resetInputs();
         $("#editInventaire").hide("slow");
+        $("#addInventaire").show("slow");
+        $("#msgInventaire").show("slow");
     });
 
     $("#btnValiderInventaire").click (function ()

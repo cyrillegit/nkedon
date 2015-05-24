@@ -25,6 +25,19 @@ function resetInputs(){
 
     $("#warnings_popup").css("display", "none");
 }
+
+/**
+ *  show or hide the add button
+ */
+function ShowBtnAddFournisseur( status ){
+    if( status ){
+        $("#addFournisseur").show("slow");
+        $("#msgAddFournisseur").show("slow");
+    }else{
+        $("#addFournisseur").hide("slow");
+        $("#msgAddFournisseur").hide("slow");
+    }
+}
 /**
 	jQuery init.
 */
@@ -37,6 +50,7 @@ $(document).ready (function ()
 	{
         resetInputs();
         $("#editFournisseur").show("slow");
+        ShowBtnAddFournisseur( false );
 	});
 
     $("#btnAnnuler").click (function ()
@@ -44,6 +58,7 @@ $(document).ready (function ()
         // On ferme la boîte de dialogue affichée juste avant.
         resetInputs();
         $("#editFournisseur").hide("slow");
+        ShowBtnAddFournisseur( true );
     });
 
     $("#btnValider").click (function ()
@@ -131,7 +146,7 @@ $(document).ready (function ()
                 <td>
                 {if {$smarty.session.infoUser.id_type_user eq 1} or {$smarty.session.infoUser.id_type_user eq 2} or {$smarty.session.infoUser.id_type_user eq 3} or {$smarty.session.infoUser.id_type_user eq 4}}
                 <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addFournisseur"></div></div>
-                <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter un fournisseur :&nbsp;</div>
+                <div style="margin-left:20px; margin-right: 20px; float: right;" id="msgAddFournisseur">Pour ajouter un fournisseur :&nbsp;</div>
                 {/if}
                 </td>
             </tr>

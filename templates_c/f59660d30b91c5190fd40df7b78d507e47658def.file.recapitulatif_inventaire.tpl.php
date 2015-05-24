@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-05-19 09:10:27
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-24 11:46:42
          compiled from ".\templates\magasin\gestion_magasin\recapitulatif_inventaire.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:15377555a229326b966-70455225%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f59660d30b91c5190fd40df7b78d507e47658def' => 
     array (
       0 => '.\\templates\\magasin\\gestion_magasin\\recapitulatif_inventaire.tpl',
-      1 => 1432026171,
+      1 => 1432290172,
       2 => 'file',
     ),
   ),
@@ -135,8 +135,8 @@ $(document).ready (function ()
 <div id="Content">
     <div class="success" id="succes_register" style="display: block;">
         <b>La synthèse de l'inventaire a été réalisée avec succès.
-            </br> Vous pouvez télécharger le fichier pdf.
-            </br> Vous pouvez aussi consulter cette syntèse dans l'historique des inventaires.
+            </br> Vous pouvez télécharger le fichier de synthèse .
+            </br> Vous pouvez aussi consulter cette synthèse dans l'historique des inventaires.
         </b>
         <div></div>
     </div>

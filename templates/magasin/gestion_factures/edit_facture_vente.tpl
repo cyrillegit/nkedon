@@ -47,6 +47,19 @@ function resetInputs(){
     $("#succes_register").css("display", "none");
 }
 
+/**
+ *  show or hide the add button
+ */
+function showBtnAddFactureVente( status ){
+    if( status ){
+        $("#addProduitFacture").show("slow");
+        $("#msgAddProduitFacture").show("slow");
+    }else{
+        $("#addProduitFacture").hide("slow");
+        $("#msgAddProduitFacture").hide("slow");
+    }
+}
+
 $(document).ready (function ()
 {
     setRegisterPopup();
@@ -58,7 +71,8 @@ $(document).ready (function ()
         resetInputs();
         $('html, body').animate({ scrollTop: 0 }, 'slow');
         $("#editProduitFacture").show("slow");
-	});
+        showBtnAddFactureVente( false );
+});
 
 	$("#date_fabrication").datepicker({
 	    beforeShow:function(input) {
@@ -91,6 +105,7 @@ $(document).ready (function ()
     {
         resetInputs();
         $("#editProduitFacture").hide('slow');
+        showBtnAddFactureVente( true );
     });
 
     $("#btnValiderProduit").click (function ()
@@ -255,7 +270,7 @@ $(document).ready (function ()
                     </td>
                     <td>
                     <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addProduitFacture"></div></div>
-                    <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter un produit dans la facture :&nbsp;</div>
+                    <div style="margin-left:20px; margin-right: 20px; float: right;" id="msgAddProduitFacture">Pour ajouter un produit dans la facture :&nbsp;</div>
                     </td>
                 </tr>
             </table>

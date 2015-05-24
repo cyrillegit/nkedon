@@ -71,6 +71,10 @@ $(document).ready (function ()
                 <?php
                 }
             }
+        }else{
+            ?>
+            <li style="color: #ffffff;">Aucune facture de vente enregistrée</li>
+        <?php
         }
         ?>
         </ul>

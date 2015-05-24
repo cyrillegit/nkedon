@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-05-19 09:07:52
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-24 12:25:01
          compiled from ".\templates\magasin\gestion_produits\produits.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:365855364663720378-76962376%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ef6f702a9b71f4946f7b04a1ecafc88561288fa5' => 
     array (
       0 => '.\\templates\\magasin\\gestion_produits\\produits.tpl',
-      1 => 1432026308,
+      1 => 1432470297,
       2 => 'file',
     ),
   ),
@@ -51,6 +51,19 @@ function resetInputs(){
 
     $("#warnings_popup").css("display", "none");
 }
+
+/**
+ *  show or hide the add button
+ */
+function ShowBtnAddProduit( status ){
+    if( status ){
+        $("#addProduit").show("slow");
+        $("#msgAddProduit").show("slow");
+    }else{
+        $("#addProduit").hide("slow");
+        $("#msgAddProduit").hide("slow");
+    }
+}
 /**
 	jQuery init.
 */
@@ -63,15 +76,14 @@ $(document).ready (function ()
 	{
         resetInputs();
         $("#editProduit").show("slow");
-
-//		update_content ("ajax/popups/edit_produit.php", "popup", "id_produit=0");
-//		ShowPopupHeight (550);
+        ShowBtnAddProduit( false );
 	});
 
     $("#btnAnnuler").click (function ()
     {
         resetInputs();
         $("#editProduit").hide("slow");
+        ShowBtnAddProduit( true );
     });
 
     $("#btnValider").click (function ()
@@ -160,7 +172,7 @@ $(document).ready (function ()
                 <td>
                 <?php if ($_SESSION['infoUser']['id_type_user']<=3){?>
                 <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addProduit"></div></div>
-                <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter un produit :&nbsp;</div>
+                <div style="margin-left:20px; margin-right: 20px; float: right;" id="msgAddProduit">Pour ajouter un produit :&nbsp;</div>
                 <?php }?>
                 </td>
             </tr>

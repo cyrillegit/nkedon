@@ -101,7 +101,7 @@ $(document).ready (function ()
     if( count( $histo_factures ) > 0)
     {
         $count = 0;
-        foreach( $histo_factures as $obj ) 
+        foreach( $histo_factures as $obj )
         {
             $count++;
             $prix_total_facture = 0;
@@ -114,7 +114,7 @@ $(document).ready (function ()
                             <td>
                                 <tr class="blocInfoBis">
                                     <td class="blocTitreId">Numéro facture : <br/><strong><?php  echo $obj["numero_facture"]; ?></strong></td>
-                                    <td class="blocTitreId">Nom fournisseur : <br/><strong><?php  echo $obj["nom_fournisseur"]; ?></strong></td>  
+                                    <td class="blocTitreId">Nom fournisseur : <br/><strong><?php  echo $obj["nom_fournisseur"]; ?></strong></td>
                                     <td class="blocTitreId">Date facture : <br/><strong><?php  echo SQLDateToFrenchDate( $obj["date_facture"] ); ?></strong></td>
                                     <td class="blocTitreId">Enregistrée le : <br/><strong><?php  echo SQLDateTimeToFrenchDateTime( $obj["date_insertion_facture"] ); ?></strong></td>
                                     <td class="blocTitreId">Enregistrée par : <br/><strong><?php  echo $obj["nom_user"]."  ".$obj["prenom_user"]; ?></strong></td>
@@ -126,12 +126,12 @@ $(document).ready (function ()
                                     <td class="blocTitre">Quantité achétée </td>
                                     <td class="blocTitre">Prix d'achat (FCFA)</td>
                                     <td class="blocTitre">Montant de l'achat (FCFA)</td>
-                                    <td class="blocTitre">Date fabrication </td>  
+                                    <td class="blocTitre">Date fabrication </td>
                                     <td class="blocTitre">Date péremption </strong></td>
                                 </tr>
                                 <tr height="5px;"></tr>
                                 <?php
-                                foreach ( $obj["produits_associes"] as $value ) 
+                                foreach ( $obj["produits_associes"] as $value )
                                 {
                                     $prix_total_facture += $value["quantite_achat"] * $value["prix_achat"];
                                 ?>
@@ -140,14 +140,14 @@ $(document).ready (function ()
                                     <td class="blocValue"><?php  echo $value["quantite_achat"]; ?></td>
                                     <td class="blocValue"><?php  echo number_format($value["prix_achat"], 2, ',', ' '); ?></td>
                                     <td class="blocValue"><?php  echo number_format($value["quantite_achat"] * $value["prix_achat"], 2, ',', ' '); ?></td>
-                                    <td class="blocValue"><?php  echo SQLDateToFrenchDate( $value["date_fabrication"] ); ?></td>  
+                                    <td class="blocValue"><?php  echo SQLDateToFrenchDate( $value["date_fabrication"] ); ?></td>
                                     <td class="blocValue"><?php  echo SQLDateToFrenchDate( $value["date_peremption"] ); ?></td>
                                 </tr>
                                 <?php
                                 }
                                 ?>
-                                
-                                <tr>    
+
+                                <tr>
                                     <td align="left" valign="middle"><a class="download_links" id_facture="<?=$obj["idt_factures_achats"]; ?>"><img src="assets/images/arrow_down.png" alt="" width="16" height="16" /> Téléchargez la facture</a></td>
                                     <td class="blocTitre"><?php  if( $id_type_user <= 2 ){; ?><a class="edit_links" id_facture="<?=$obj["idt_factures_achats"]; ?>"><img src="assets/images/edit.png" alt="" width="16" height="16" /> Modifier la facture</a><?php  } ?></td>
                                     <td class="blocTitre">Montant de la facture : </td>
@@ -157,13 +157,13 @@ $(document).ready (function ()
                                             <?php  echo trim(stripslashes(htmlentities($obj["commentaire"]))); ?>
                                         </textarea>
                                     </td>
-                                </tr>                                                                                                                                  
+                                </tr>
                             </td>
                         </tr>
                     </table>
                 </form>
             </div>
-        <br />    
+        <br />
 <?php
         }
     }

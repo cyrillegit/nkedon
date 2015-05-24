@@ -71,6 +71,10 @@ $(document).ready (function ()
                 <?php
                 }
             }
+        }else{
+            ?>
+            <li style="color: #ffffff;">Aucun journal enregistré</li>
+        <?php
         }
         ?>
         </ul>

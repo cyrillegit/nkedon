@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-05-18 17:09:22
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-24 12:48:38
          compiled from ".\templates\magasin\gestion_factures\edit_facture_vente.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:214915536460fd299b4-51759515%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4d031b202d3229c260a95b38e1239a49067a7858' => 
     array (
       0 => '.\\templates\\magasin\\gestion_factures\\edit_facture_vente.tpl',
-      1 => 1431968942,
+      1 => 1432471714,
       2 => 'file',
     ),
   ),
@@ -77,6 +77,19 @@ function resetInputs(){
     $("#succes_register").css("display", "none");
 }
 
+/**
+ *  show or hide the add button
+ */
+function showBtnAddFactureVente( status ){
+    if( status ){
+        $("#addProduitFacture").show("slow");
+        $("#msgAddProduitFacture").show("slow");
+    }else{
+        $("#addProduitFacture").hide("slow");
+        $("#msgAddProduitFacture").hide("slow");
+    }
+}
+
 $(document).ready (function ()
 {
     setRegisterPopup();
@@ -88,7 +101,8 @@ $(document).ready (function ()
         resetInputs();
         $('html, body').animate({ scrollTop: 0 }, 'slow');
         $("#editProduitFacture").show("slow");
-	});
+        showBtnAddFactureVente( false );
+});
 
 	$("#date_fabrication").datepicker({
 	    beforeShow:function(input) {
@@ -121,6 +135,7 @@ $(document).ready (function ()
     {
         resetInputs();
         $("#editProduitFacture").hide('slow');
+        showBtnAddFactureVente( true );
     });
 
     $("#btnValiderProduit").click (function ()
@@ -287,7 +302,7 @@ $(document).ready (function ()
                     </td>
                     <td>
                     <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addProduitFacture"></div></div>
-                    <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter un produit dans la facture :&nbsp;</div>
+                    <div style="margin-left:20px; margin-right: 20px; float: right;" id="msgAddProduitFacture">Pour ajouter un produit dans la facture :&nbsp;</div>
                     </td>
                 </tr>
             </table>

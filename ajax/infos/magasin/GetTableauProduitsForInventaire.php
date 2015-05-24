@@ -26,8 +26,8 @@ $(document).ready (function ()
             $("#nom_produit").val($(this).attr("nom_produit"));
             $("#stock_physique").val($(this).attr ("stock_physique"));
 
-            $("#addInventaire").hide();
-            $("#msgInventaire").hide();
+            $("#addInventaire").hide("slow");
+            $("#msgInventaire").hide("slow");
             $('html, body').animate({ scrollTop: 0 }, 'slow');
             $("#editStockPhysique").show("slow");
 		});

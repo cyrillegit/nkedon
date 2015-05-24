@@ -56,6 +56,19 @@ function confirmLogout(){
     }
 }
 
+/**
+ *  show or hide the add button
+ */
+function showBtnAddJournal( status ){
+    if( status ){
+        $("#addOperation").show("slow");
+        $("#msgAddOperation").show("slow");
+    }else{
+        $("#addOperation").hide("slow");
+        $("#msgAddOperation").hide("slow");
+    }
+}
+
 $(document).ready (function ()
 {
     confirmLogout();
@@ -68,12 +81,14 @@ $(document).ready (function ()
         resetInputs();
         $('html, body').animate({ scrollTop: 0 }, 'slow');
         $("#editOperationJournal").show("slow");
+        showBtnAddJournal( false );
 	});
 
     $("#btnAnnulerOperation").click (function ()
     {
         resetInputs();
         $("#editOperationJournal").hide('slow');
+        showBtnAddJournal( true );
     });
 
     $("#btnValiderOperation").click (function ()
@@ -248,7 +263,7 @@ $(document).ready (function ()
                         {if isset($smarty.session.journal)}
                             {if $smarty.session.journal}
                                 <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addOperation"></div></div>
-                                <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter une opération :&nbsp;</div>
+                                <div style="margin-left:20px; margin-right: 20px; float: right;" id="msgAddOperation">Pour ajouter une opération :&nbsp;</div>
                             {/if}
                         {/if}
                     </td>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2015-05-18 17:18:13
+<?php /* Smarty version Smarty-3.1.14, created on 2015-05-24 12:53:40
          compiled from ".\templates\magasin\gestion_journal\edit_operations_journal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:90255365ba5a993d3-61646901%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9685c43de77b5a37b95171f99bd4c81dab118a57' => 
     array (
       0 => '.\\templates\\magasin\\gestion_journal\\edit_operations_journal.tpl',
-      1 => 1431969486,
+      1 => 1432472016,
       2 => 'file',
     ),
   ),
@@ -85,6 +85,19 @@ function confirmLogout(){
     }
 }
 
+/**
+ *  show or hide the add button
+ */
+function showBtnAddJournal( status ){
+    if( status ){
+        $("#addOperation").show("slow");
+        $("#msgAddOperation").show("slow");
+    }else{
+        $("#addOperation").hide("slow");
+        $("#msgAddOperation").hide("slow");
+    }
+}
+
 $(document).ready (function ()
 {
     confirmLogout();
@@ -97,12 +110,14 @@ $(document).ready (function ()
         resetInputs();
         $('html, body').animate({ scrollTop: 0 }, 'slow');
         $("#editOperationJournal").show("slow");
+        showBtnAddJournal( false );
 	});
 
     $("#btnAnnulerOperation").click (function ()
     {
         resetInputs();
         $("#editOperationJournal").hide('slow');
+        showBtnAddJournal( true );
     });
 
     $("#btnValiderOperation").click (function ()
@@ -279,7 +294,7 @@ $(document).ready (function ()
                         <?php if (isset($_SESSION['journal'])){?>
                             <?php if ($_SESSION['journal']){?>
                                 <div style="float: right; margin-top: 10px; margin-right: 15px;"><div class="btn_ajouter" id="addOperation"></div></div>
-                                <div style="margin-left:20px; margin-right: 20px; float: right;">Pour ajouter une opération :&nbsp;</div>
+                                <div style="margin-left:20px; margin-right: 20px; float: right;" id="msgAddOperation">Pour ajouter une opération :&nbsp;</div>
                             <?php }?>
                         <?php }?>
                     </td>
